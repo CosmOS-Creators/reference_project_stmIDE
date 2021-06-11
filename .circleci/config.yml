@@ -11,10 +11,10 @@ jobs:
           command: 'apt-get update && apt-get install -y sudo && rm -rf /var/lib/apt/lists/*'
       - run:
           name: Installing GCC
-          command: 'sudo apt-get install -y gcc-arm-none-eabi'
+          command: 'sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi'
       - run:
           name: Install needed utilities
-          command: 'sudo apt-get install -y make git'
+          command: 'sudo apt-get update && sudo apt-get install -y make git'
       - checkout
       - run: git submodule sync
       - run: git submodule update --init
