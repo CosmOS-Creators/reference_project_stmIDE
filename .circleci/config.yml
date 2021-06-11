@@ -8,7 +8,7 @@ jobs:
     steps:
       - run:
           name: Installing GCC
-          command: 'apt-get install -y gcc-arm-none-eabi'
+          command: 'sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi'
       - run:
           name: Install needed utilities
           command: 'sudo apt-get install -y make git'
