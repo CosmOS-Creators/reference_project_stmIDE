@@ -6,18 +6,18 @@ jobs:
     docker:
       - image: "debian:stretch"
     steps:
-      - checkout
-      - run: git submodule sync
-      - run: git submodule update --init
       - run:
           name: Installing SUDO
           command: 'apt-get update && apt-get install -y sudo && rm -rf /var/lib/apt/lists/*'
       - run:
           name: Installing GCC
-          command: 'apt-get update && apt-get install -y gcc-arm-none-eabi'
+          command: 'apt-get install -y gcc-arm-none-eabi'
       - run:
-          name: Install MAKE
-          command: 'apt-get update && sudo apt-get install -y make'
+          name: Install needed utilities
+          command: 'sudo apt-get install -y make git'
+      - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
       - run:
           name: Building CM4 image
           working_directory: ./reference_project_stmIDE/Cosmos/stm32h755_integration/build/CM4/makefiles
