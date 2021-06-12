@@ -15,8 +15,8 @@ jobs:
       - run:
           name: Install needed utilities
           command: 'sudo apt-get update && sudo apt-get install -y make git'
-      - checkout
-        path: ~/reference_project_stmIDE
+      - checkout:
+          path: ~/reference_project_stmIDE
       - run: git submodule sync
       - run: git submodule update --init
       - run:
