@@ -20,9 +20,6 @@ jobs:
     docker:
       - image: "florianl21/cosmos-build-image:0.0.2"
     steps:
-      - run:
-          name: Installing pip packages
-          command: 'pip3 install jinja2'
       - checkout
       - run: git submodule sync
       - run: git submodule update --init
@@ -38,6 +35,9 @@ jobs:
     steps:
       - attach_workspace:
           at: /root/project
+      - run:
+          name: Installing pip packages
+          command: 'pip3 install jinja2'
       - run:
           name: Generate code from configuration
           command: 'python3 /root/project/Cosmos/customBox/generator/generator.py -w=Cosmos/generated/customBox/configuration/workspace.json'
