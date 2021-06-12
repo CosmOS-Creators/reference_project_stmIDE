@@ -63,6 +63,9 @@
 ********************************************************************************/
 #define MAX_SCHEDULABLES_ON_ONE_CORE                 (BitWidthType)4        /* Maximal number of configurated schedulables on one core  */
 
+#define SCHEDULABLE_NUM_CORE_0                       (BitWidthType)4        /* Number of configurated schedulables for the core CM7 */
+#define SCHEDULABLE_NUM_CORE_1                       (BitWidthType)4        /* Number of configurated schedulables for the core CM4 */
+
 #define SCHEDULABLE_TASK_0_PROGRAM_0_CORE_0_ID              (BitWidthType)0    /* Task Idle_CM7 schedulable identificator */
 #define SCHEDULABLE_TASK_1_PROGRAM_0_CORE_0_ID              (BitWidthType)1    /* Task sysJobs_CM7 schedulable identificator */
 #define SCHEDULABLE_TASK_0_PROGRAM_1_CORE_0_ID              (BitWidthType)2    /* Task Task_0_Core_0_Handler schedulable identificator */
