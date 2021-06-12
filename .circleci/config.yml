@@ -4,7 +4,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: "florianl21/cosmos-build-image:0.0.1"
+      - image: "florianl21/cosmos-build-image:0.0.2"
     environment:
       PYTHONPATH: "/root/project/Cosmos/customBox/generator:/root/project/Cosmos/customBox"
     steps:
