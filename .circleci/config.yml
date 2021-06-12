@@ -15,15 +15,20 @@ jobs:
       - run:
           name: Install needed utilities
           command: 'sudo apt-get update && sudo apt-get install -y make git'
-      - checkout:
-          path: ~/reference_project_stmIDE
-            - git submodule sync --recursive
-            - git submodule update --recursive --init
+      - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
+      - run:
+          name: List dirs
+          command: 'ls -d */'
+      - run:
+          name: Check path
+          command: 'sudo test -d "/root/project/Cosmos/stm32h755_integration/build/CM4/makefiles" && echo "Found/Exists" || echo "Does not exist"'
       - run:
           name: Building CM4 image
-          working_directory: ~/reference_project_stmIDE/Cosmos/stm32h755_integration/build/CM4/makefiles
+          working_directory: ~/root/project/Cosmos/stm32h755_integration/build/CM4/makefiles
           command: 'make'
       - run:
           name: Building CM7 image
-          working_directory: ~/reference_project_stmIDE/Cosmos/stm32h755_integration/build/CM7/makefiles
+          working_directory: ~/root/project/Cosmos/stm32h755_integration/build/CM7/makefiles
           command: 'make'
