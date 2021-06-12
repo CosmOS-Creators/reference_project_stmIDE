@@ -7,12 +7,18 @@ jobs:
     environment:
       PYTHONPATH: "/root/project/Cosmos/customBox/generator:/root/project/Cosmos/customBox"
     steps:
-      - run:
-          name: Installing pip packages
-          command: 'pip3 install jinja2'
       - checkout
       - run: git submodule sync
       - run: git submodule update --init
+      - restore_cache:
+          key: python-requirements-{{ checksum "/root/project/Cosmos/customBox/generator/requirements.txt" }}
+      - run:
+          name: Installing pip packages
+          command: 'pip3 install -r /root/project/Cosmos/customBox/generator/requirements.txt'
+      - save_cache:
+          key: python-requirements-{{ checksum "/root/project/Cosmos/customBox/generator/requirements.txt" }}
+          paths:
+            - "/usr/lib/python3.8/site-packages"
       - run:
           name: Generate code from configuration
           command: 'python3 /root/project/Cosmos/customBox/generator/generator.py -w=Cosmos/generated/customBox/configuration/workspace.json'
