@@ -52,7 +52,6 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-.vscode
 
 *.pyc
 .pyc

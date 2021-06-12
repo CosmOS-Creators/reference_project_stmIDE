@@ -1,0 +1,141 @@
+{
+	"version": "2.0.0",
+    "tasks": [
+		{
+			"type": "shell",
+			"label": "Compile",
+			"options": {
+				"cwd": "${workspaceFolder}/Cosmos/stm32h755_integration/build/${input:Core}/makefiles"
+			},
+			"command": "make -j${input:core_num}",
+			"group": "build"
+		},
+		{
+			"type": "shell",
+			"label": "Compile and flash",
+			"options": {
+				"cwd": "${workspaceFolder}/Cosmos/stm32h755_integration/build/${input:Core}/makefiles"
+			},
+			"command": "make flash",
+			"group": "build"
+		},
+		{
+			"type": "shell",
+			"label": "Clean",
+			"options": {
+				"cwd": "${workspaceFolder}/Cosmos/stm32h755_integration/build/${input:Core}/makefiles"
+			},
+			"command": "make clean",
+			"group": "build"
+		},
+		{
+			"type": "shell",
+			"label": "Clean compile",
+			"dependsOn": [
+				"Clean",
+				"Compile"
+			],
+			"dependsOrder": "sequence",
+			"group": "build",
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"type": "shell",
+			"label": "GetCores",
+			"command": "SET CORE_NUM=(python -c \"import multiprocessing as mp; print(int(mp.cpu_count() * 1.5))\")",
+			"group": "build"
+		},
+		{
+			"type": "shell",
+			"label": "Compile and flash both cores",
+			"dependsOn": [
+				"Compile and flash M7",
+				"Compile and flash M4"
+			],
+			"dependsOrder": "sequence",
+			"group": "build"
+		},
+		{
+			"type": "shell",
+			"label": "Compile and flash via openocd",
+			"command": "openocd",
+			"args": [
+				"-f",
+				"\"C:/Program Files/OpenOCD-0.10.0-13/scripts/board/st_nucleo_h755zi.cfg\"",
+				"-c",
+				"\"program stm32h755_integration/build/${input:Core}/bin/${input:Core}core.elf verify reset exit\""
+			],
+			"dependsOn": [
+				"Compile"
+			],
+			"group": "build"
+		},
+		{
+			"type": "shell",
+			"label": "Compile M7",
+			"options": {
+				"cwd": "${workspaceFolder}/Cosmos/stm32h755_integration/build/CM7/makefiles"
+			},
+			"command": "make"
+		},
+		{
+			"type": "shell",
+			"label": "Compile M4",
+			"options": {
+				"cwd": "${workspaceFolder}/Cosmos/stm32h755_integration/build/CM4/makefiles"
+			},
+			"command": "make"
+		},
+		{
+			"type": "shell",
+			"label": "Compile and flash M4",
+			"options": {
+				"cwd": "${workspaceFolder}/Cosmos/stm32h755_integration/build/CM4/makefiles"
+			},
+			"command": "make flash",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "Compile and flash M7",
+			"options": {
+				"cwd": "${workspaceFolder}/Cosmos/stm32h755_integration/build/CM7/makefiles"
+			},
+			"command": "make flash",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "Run generator",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"command": "python",
+			"args": [
+				"${workspaceFolder}/Cosmos/customBox/generator/generator.py",
+				"-w=Cosmos/customBox/configuration/generated/workspace.json"
+			],
+			"problemMatcher": []
+		}
+	],
+	"inputs": [
+        {
+            "id": "Core",
+            "description": "Choose core:",
+            "default": "CM4",
+			"type": "pickString",
+			"options": [
+				"CM4",
+				"CM7"
+			]
+		},
+		{
+            "id": "core_num",
+            "description": "Choose number of cores:",
+            "default": "",
+			"type": "promptString"
+        }
+    ]
+}

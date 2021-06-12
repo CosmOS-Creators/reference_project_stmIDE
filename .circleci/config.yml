@@ -5,19 +5,24 @@ jobs:
   build:
     docker:
       - image: "ubuntu:latest"
+    environment:
+      PYTHONPATH: "/root/project/Cosmos/customBox/generator:/root/project/Cosmos/customBox"
     steps:
       - run:
           name: Installing SUDO
           command: 'apt-get update && apt-get install -y sudo && rm -rf /var/lib/apt/lists/*'
       - run:
-          name: Installing GCC
-          command: 'sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi'
+          name: Installing Dependencies
+          command: 'sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi make git python3 python3-pip'
       - run:
-          name: Install needed utilities
-          command: 'sudo apt-get update && sudo apt-get install -y make git'
+          name: Installing pip packages
+          command: 'pip3 install jinja2'
       - checkout
       - run: git submodule sync
       - run: git submodule update --init
+      - run:
+          name: Generate code from configuration
+          command: 'python3 /root/project/Cosmos/customBox/generator/generator.py -w=Cosmos/customBox/configuration/generated/workspace.json'
       - run:
           name: Building CM4 image
           command: 'cd /root/project/Cosmos/stm32h755_integration/build/CM4/makefiles && make'
