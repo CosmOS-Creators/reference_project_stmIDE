@@ -21,9 +21,9 @@ jobs:
       - run: git submodule update --init
       - run:
           name: Building CM4 image
-          working_directory: ~/reference_project_stmIDE/Cosmos/Cosmos/stm32h755_integration/build/CM4/makefiles
+          working_directory: ~/reference_project_stmIDE/Cosmos/stm32h755_integration/build/CM4/makefiles
           command: 'make'
       - run:
           name: Building CM7 image
-          working_directory: ~/reference_project_stmIDE/Cosmos/Cosmos/stm32h755_integration/build/CM7/makefiles
+          working_directory: ~/reference_project_stmIDE/Cosmos/stm32h755_integration/build/CM7/makefiles
           command: 'make'
