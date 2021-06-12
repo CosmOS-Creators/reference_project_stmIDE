@@ -37,7 +37,7 @@ jobs:
       PYTHONPATH: "/root/project/Cosmos/customBox/generator:/root/project/Cosmos/customBox"
     steps:
       - attach_workspace:
-          at: project
+          at: /root/project
       - run:
           name: Generate code from configuration
           command: 'python3 /root/project/Cosmos/customBox/generator/generator.py -w=Cosmos/generated/customBox/configuration/workspace.json'
@@ -50,7 +50,7 @@ jobs:
       - image: "florianl21/cosmos-build-image:0.0.2"
     steps:
       - attach_workspace:
-          at: project
+          at: /root/project
       - run:
           name: Building CM4 image
           command: 'cd /root/project/Cosmos/generated/build/CM4/makefiles && make -j24'
@@ -63,7 +63,7 @@ jobs:
       - image: "florianl21/cosmos-build-image:0.0.2"
     steps:
       - attach_workspace:
-          at: project
+          at: /root/project
       - run:
           name: Building CM7 image
           command: 'cd /root/project/Cosmos/generated/build/CM7/makefiles && make -j24'
