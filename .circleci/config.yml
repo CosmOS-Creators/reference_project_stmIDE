@@ -17,8 +17,8 @@ jobs:
           command: 'sudo apt-get update && sudo apt-get install -y make git'
       - checkout:
           path: ~/reference_project_stmIDE
-      - run: git submodule sync
-      - run: git submodule update --init
+            - git submodule sync --recursive
+            - git submodule update --recursive --init
       - run:
           name: Building CM4 image
           working_directory: ~/reference_project_stmIDE/Cosmos/stm32h755_integration/build/CM4/makefiles
