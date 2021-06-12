@@ -56,5 +56,8 @@ dkms.conf
 *.pyc
 .pyc
 
+# STM IDE temp project files
 CM4/Debug
 CM7/Debug
+CM4/.settings
+CM7/.settings

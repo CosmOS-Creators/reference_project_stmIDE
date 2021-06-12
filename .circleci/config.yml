@@ -25,7 +25,7 @@ jobs:
           command: 'python3 /root/project/Cosmos/customBox/generator/generator.py -w=Cosmos/customBox/configuration/generated/workspace.json'
       - run:
           name: Building CM4 image
-          command: 'cd /root/project/Cosmos/stm32h755_integration/build/CM4/makefiles && make'
+          command: 'cd /root/project/Cosmos/stm32h755_integration/build/CM4/makefiles && make -j24'
       - run:
           name: Building CM7 image
-          command: 'cd /root/project/Cosmos/stm32h755_integration/build/CM7/makefiles && make'
+          command: 'cd /root/project/Cosmos/stm32h755_integration/build/CM7/makefiles && make -j24'
