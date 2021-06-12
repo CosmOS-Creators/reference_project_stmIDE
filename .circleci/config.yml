@@ -15,20 +15,15 @@ jobs:
       - run:
           name: Install needed utilities
           command: 'sudo apt-get update && sudo apt-get install -y make git'
-      - add_ssh_keys:
-          fingerprints:
-            - "ef:81:a2:28:cf:8a:97:5c:46:24:c0:24:2c:5a:4b:29"
-            - "7b:60:f6:1f:71:2d:88:fe:f3:b4:a3:b0:77:c0:03:a6"
-            - "04:14:0c:e9:ae:a0:1e:96:ca:17:43:a0:2a:fd:de:57"
-            - "d5:8f:08:65:a8:99:31:0d:4f:15:3a:9f:17:27:74:3a"
       - checkout
+        path: ~/reference_project_stmIDE
       - run: git submodule sync
       - run: git submodule update --init
       - run:
           name: Building CM4 image
-          working_directory: ./root/project/Cosmos/Cosmos/stm32h755_integration/build/CM4/makefiles
+          working_directory: ~/reference_project_stmIDE/Cosmos/Cosmos/stm32h755_integration/build/CM4/makefiles
           command: 'make'
       - run:
           name: Building CM7 image
-          working_directory: ./root/project/Cosmos/Cosmos/stm32h755_integration/build/CM7/makefiles
+          working_directory: ~/reference_project_stmIDE/Cosmos/Cosmos/stm32h755_integration/build/CM7/makefiles
           command: 'make'
