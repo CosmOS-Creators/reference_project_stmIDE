@@ -54,11 +54,11 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
@@ -74,8 +74,24 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysJobs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/thread/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/buffer/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/core/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/permission/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/program/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/schedulable/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/task/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/stm32h755_integration/CIL/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/applicationLayer/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/application/inc"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.otherflags.1363755636" name="Other flags" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.otherflags" useByScannerDiscovery="true" valueType="stringList">
 									<listOptionValue builtIn="false" value="-ffixed-r9"/>
@@ -101,11 +117,11 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
@@ -121,8 +137,24 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysJobs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/thread/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/buffer/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/core/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/permission/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/program/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/schedulable/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/task/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/stm32h755_integration/CIL/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/applicationLayer/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/application/inc"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1300342197" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -159,8 +191,9 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/stm32h755_integration/CIL"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/applicationLayer"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/application"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/core"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/generated/core"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -215,11 +248,11 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
@@ -235,8 +268,24 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysJobs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/thread/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/buffer/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/core/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/permission/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/program/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/schedulable/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/task/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/stm32h755_integration/CIL/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/applicationLayer/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/application/inc"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1479473456" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -258,11 +307,11 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
@@ -278,8 +327,24 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysJobs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/thread/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/buffer/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/core/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/permission/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/program/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/schedulable/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/task/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/stm32h755_integration/CIL/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/applicationLayer/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/application/inc"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.787906339" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -312,8 +377,9 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/stm32h755_integration/CIL"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/applicationLayer"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/application"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/core"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/generated/core"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

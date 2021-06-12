@@ -36,9 +36,9 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Common</locationURI>
 		</link>
 		<link>
-			<name>Cosmos/applicationLayer</name>
+			<name>Cosmos/application</name>
 			<type>2</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Cosmos/applicationLayer</locationURI>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Cosmos/application</locationURI>
 		</link>
 		<link>
 			<name>Cosmos/core</name>
@@ -159,6 +159,11 @@
 			<name>Cosmos/stm32h755_integration/CIL</name>
 			<type>2</type>
     		<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Cosmos/stm32h755_integration/CIL</locationURI>
+		</link>
+		<link>
+			<name>Cosmos/generated/core</name>
+			<type>2</type>
+    		<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Cosmos/generated/core</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
