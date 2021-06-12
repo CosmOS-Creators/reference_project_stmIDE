@@ -28,6 +28,8 @@ jobs:
       - run: git submodule update --init
       - persist_to_workspace:
           root: project
+          paths:
+            - ./*
   generate:
     docker:
       - image: "florianl21/cosmos-build-image:0.0.2"
@@ -41,6 +43,8 @@ jobs:
           command: 'python3 /root/project/Cosmos/customBox/generator/generator.py -w=Cosmos/generated/customBox/configuration/workspace.json'
       - persist_to_workspace:
           root: project
+          paths:
+            - ./*
   build_CM4:
     docker:
       - image: "florianl21/cosmos-build-image:0.0.2"
@@ -52,6 +56,8 @@ jobs:
           command: 'cd /root/project/Cosmos/generated/build/CM4/makefiles && make -j24'
       - persist_to_workspace:
           root: project
+          paths:
+            - ./*
   build_CM7:
     docker:
       - image: "florianl21/cosmos-build-image:0.0.2"
@@ -63,3 +69,5 @@ jobs:
           command: 'cd /root/project/Cosmos/generated/build/CM7/makefiles && make -j24'
       - persist_to_workspace:
           root: project
+          paths:
+            - ./*
