@@ -41,23 +41,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  18 .ARM.attributes 0000002e  00000000  00000000  00050410  2**0
                   CONTENTS, READONLY
- 19 .debug_line   00021af9  00000000  00000000  0005043e  2**0
+ 19 .debug_line   00021b39  00000000  00000000  0005043e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 20 .debug_info   000313ce  00000000  00000000  00071f37  2**0
+ 20 .debug_info   000313ce  00000000  00000000  00071f77  2**0
                   CONTENTS, READONLY, DEBUGGING
- 21 .debug_abbrev 00006ae8  00000000  00000000  000a3305  2**0
+ 21 .debug_abbrev 00006ae8  00000000  00000000  000a3345  2**0
                   CONTENTS, READONLY, DEBUGGING
- 22 .debug_aranges 00001390  00000000  00000000  000a9df0  2**3
+ 22 .debug_aranges 00001390  00000000  00000000  000a9e30  2**3
                   CONTENTS, READONLY, DEBUGGING
- 23 .debug_str    0018d4c3  00000000  00000000  000ab180  2**0
+ 23 .debug_str    0018d4cd  00000000  00000000  000ab1c0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 24 .debug_ranges 00000f78  00000000  00000000  00238648  2**3
+ 24 .debug_ranges 00000f78  00000000  00000000  00238690  2**3
                   CONTENTS, READONLY, DEBUGGING
- 25 .debug_macro  000406b2  00000000  00000000  002395c0  2**0
+ 25 .debug_macro  000406b2  00000000  00000000  00239608  2**0
                   CONTENTS, READONLY, DEBUGGING
- 26 .comment      00000079  00000000  00000000  00279c72  2**0
+ 26 .comment      00000079  00000000  00000000  00279cba  2**0
                   CONTENTS, READONLY
- 27 .debug_frame  00004168  00000000  00000000  00279cec  2**2
+ 27 .debug_frame  00004168  00000000  00000000  00279d34  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .os_section_funcs:
@@ -1281,7 +1281,7 @@ __OS_FUNC_SECTION CosmOS_OsVariableType * os_getOsVar(void)
  8101288:	46bd      	mov	sp, r7
  810128a:	f85d 7b04 	ldr.w	r7, [sp], #4
  810128e:	4770      	bx	lr
- 8101290:	38008020 	.word	0x38008020
+ 8101290:	380080cc 	.word	0x380080cc
 
 08101294 <os_start>:
 {

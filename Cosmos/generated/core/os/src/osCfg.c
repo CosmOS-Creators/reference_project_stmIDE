@@ -5,13 +5,13 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file programCfg.c
+** @file osCfg.c
 *********************************************************************************
-<!--                  programCfg Unit Local Group Definition                  -->
+<!--                    osCfg Unit Local Group Definition                     -->
 *********************************************************************************	
-** @defgroup Local_programCfg Local
-** @ingroup programCfg_unit 
-** @brief programCfg locals
+** @defgroup Local_osCfg Local
+** @ingroup osCfg_unit 
+** @brief osCfg locals
 ** @details lorem 
 ********************************************************************************/
 /********************************************************************************
@@ -21,9 +21,12 @@
 **                            Include Files | Start                            **
 ********************************************************************************/
 /* CORE interfaces */
-#include "programCfg.h"
-#include "threadCfg.h"
-#include "taskCfg.h"
+#include "osCfg.h"
+#include "coreCfg.h"
+#include "bufferCfg.h"
+#include "bufferDoubleCfg.h"
+#include "routeCfg.h"
+#include "sysJobsCfg.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -33,15 +36,15 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Macros_programCfg_c Macros
-  * @ingroup Local_programCfg
+  * @defgroup Macros_osCfg_c Macros
+  * @ingroup Local_osCfg
   * @{    
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}  
-  * Macros_programCfg_c  
+  * Macros_osCfg_c  
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -52,52 +55,21 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_programCfg_c Variables  
-  * @ingroup Local_programCfg
+  * @defgroup Variables_osCfg_c Variables  
+  * @ingroup Local_osCfg
   * @{    
 ********************************************************************************/
 /* @cond S */
 __SEC_START(__OS_CONST_SECTION_START)
 /* @endcond*/
-const CosmOS_ProgramConfigurationType ProgramsCore0CfgConst[PROGRAM_CORE_0_NUM] __OS_CONST_SECTION
+const CosmOS_OsConfigurationType OsCfg __OS_CONST_SECTION
 IS_INITIALIZED_TO
-{
-		{
-        CORE_0_ID,                                      /* const BitWidthType coreId                            */
-        TASK_PROGRAM_0_CORE_0_NUM,                      /* const BitWidthType numberOfTasks                     */
-        THREAD_PROGRAM_0_CORE_0_NUM,                      /* const BitWidthType numberOfThreads                     */
-        PROGRAM_0_CORE_0_SIZE,                      /* const BitWidthType programMemorySize                     */
-        PROGRAM_0_CORE_0_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
-        PROGRAM_0_CORE_0_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
-    },
-		{
-        CORE_0_ID,                                      /* const BitWidthType coreId                            */
-        TASK_PROGRAM_1_CORE_0_NUM,                      /* const BitWidthType numberOfTasks                     */
-        THREAD_PROGRAM_1_CORE_0_NUM,                      /* const BitWidthType numberOfThreads                     */
-        PROGRAM_1_CORE_0_SIZE,                      /* const BitWidthType programMemorySize                     */
-        PROGRAM_1_CORE_0_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
-        PROGRAM_1_CORE_0_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
-    },
-};
-const CosmOS_ProgramConfigurationType ProgramsCore1CfgConst[PROGRAM_CORE_1_NUM] __OS_CONST_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        CORE_1_ID,                                      /* const BitWidthType coreId                            */
-        TASK_PROGRAM_0_CORE_1_NUM,                      /* const BitWidthType numberOfTasks                     */
-        THREAD_PROGRAM_0_CORE_1_NUM,                      /* const BitWidthType numberOfThreads                     */
-        PROGRAM_0_CORE_1_SIZE,                      /* const BitWidthType programMemorySize                     */
-        PROGRAM_0_CORE_1_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
-        PROGRAM_0_CORE_1_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
-    },
-		{
-        CORE_1_ID,                                      /* const BitWidthType coreId                            */
-        TASK_PROGRAM_1_CORE_1_NUM,                      /* const BitWidthType numberOfTasks                     */
-        THREAD_PROGRAM_1_CORE_1_NUM,                      /* const BitWidthType numberOfThreads                     */
-        PROGRAM_1_CORE_1_SIZE,                      /* const BitWidthType programMemorySize                     */
-        PROGRAM_1_CORE_1_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
-        PROGRAM_1_CORE_1_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
-    },
+{                       /* osCfg                                        */
+    CoresCfgConst,      /* const CosmOS_CoreConfigurationType * cores      */
+    CORE_NUM,           /* const BitWidthType numberOfCores             */
+    BuffersCfgConst,    /* const CosmOS_BufferConfigurationType * buffers  */
+    BUFFER_NUM,         /* const BitWidthType numberOfBuffers           */
+    &RoutesConstCfg,    /* const CosmOS_RoutesConfigurationType route     */
 };
 /* @cond S */
 __SEC_STOP(__OS_CONST_SECTION_STOP)
@@ -106,33 +78,13 @@ __SEC_STOP(__OS_CONST_SECTION_STOP)
 /* @cond S */
 __SEC_START(__OS_VAR_SECTION_START)
 /* @endcond*/
-CosmOS_ProgramVariableType ProgramsCore0Var[PROGRAM_CORE_0_NUM] __OS_VAR_SECTION
+CosmOS_OsVariableType OsVar __OS_VAR_SECTION
 IS_INITIALIZED_TO
-{
-		{
-        &ProgramsCore0CfgConst[PROGRAM_0_CORE_0_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
-        TasksProgram0Core0Var,                          /* CosmOS_TaskVariableType * taskVars                                */
-        ThreadsProgram0Core0Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    },
-		{
-        &ProgramsCore0CfgConst[PROGRAM_1_CORE_0_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
-        TasksProgram1Core0Var,                          /* CosmOS_TaskVariableType * taskVars                                */
-        ThreadsProgram1Core0Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    },
-};
-CosmOS_ProgramVariableType ProgramsCore1Var[PROGRAM_CORE_1_NUM] __OS_VAR_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        &ProgramsCore1CfgConst[PROGRAM_0_CORE_1_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
-        TasksProgram0Core1Var,                          /* CosmOS_TaskVariableType * taskVars                                */
-        ThreadsProgram0Core1Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    },
-		{
-        &ProgramsCore1CfgConst[PROGRAM_1_CORE_1_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
-        TasksProgram1Core1Var,                          /* CosmOS_TaskVariableType * taskVars                                */
-        ThreadsProgram1Core1Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    },
+{                       /* osVar                                                      */
+    &OsCfg,             /* const CosmOS_OsConfigurationType * cfg                     */
+    CoresVar,           /* CosmOS_CoreVariableType * coreVars                         */   
+    BuffersVar,         /* CosmOS_BufferVariableType * bufferVars                     */
+    BuffersDoubleVar,   /* CosmOS_BufferDoubleVariableType * const bufferDoubleVars   */
 };
 /* @cond S */
 __SEC_STOP(__OS_VAR_SECTION_STOP)
@@ -141,7 +93,7 @@ __SEC_STOP(__OS_VAR_SECTION_STOP)
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}  
-  * Variables_programCfg_c  
+  * Variables_osCfg_c  
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -152,47 +104,47 @@ __SEC_STOP(__OS_VAR_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_programCfg_c API's  
-  * @ingroup Local_programCfg
+  * @defgroup Apis_osCfg_c API's  
+  * @ingroup Local_osCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_programCfg_c Getters  
-  * @ingroup Apis_programCfg_c                                            
+  * @addtogroup Getters_osCfg_c Getters  
+  * @ingroup Apis_osCfg_c                                            
   * @{                                                                           
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}       
-  * Getters_programCfg_c
+  * Getters_osCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_programCfg_c Setters  
-  * @ingroup Apis_programCfg_c                                            
+  * @addtogroup Setters_osCfg_c Setters  
+  * @ingroup Apis_osCfg_c                                            
   * @{                                                                           
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}    
-  * Setters_programCfg_c   
+  * Setters_osCfg_c   
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_programCfg_c General  
-  * @ingroup Apis_programCfg_c                                            
+  * @addtogroup General_osCfg_c General  
+  * @ingroup Apis_osCfg_c                                            
   * @{                                                                           
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * General_programCfg_c  
+  * General_osCfg_c  
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **

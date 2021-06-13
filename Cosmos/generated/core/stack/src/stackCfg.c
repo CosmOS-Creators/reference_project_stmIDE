@@ -1,6 +1,6 @@
 /********************************************************************************
 **                                                                             **
-**                       GENERATED FILE BY COSMOS CustomBox                    **
+**                       GENERATED FILE BY CosmOS CustomBox                    **
 **                                                                             **
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
