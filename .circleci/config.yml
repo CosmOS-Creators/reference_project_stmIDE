@@ -20,13 +20,19 @@ jobs:
           paths:
             - "/usr/lib/python3.8/site-packages"
       - run:
+          name: Building CM4 image with generated files on master
+          command: 'cd /root/project/Cosmos/generated/build/CM4/makefiles && make -j24'
+      - run:
+          name: Building CM7 image with generated files on master
+          command: 'cd /root/project/Cosmos/generated/build/CM7/makefiles && make -j24'
+      - run:
           name: Generate code from configuration
           command: 'python3 /root/project/Cosmos/customBox/generator/generator.py -w=Cosmos/generated/customBox/configuration/workspace.json'
       - run:
-          name: Building CM4 image
+          name: Building CM4 image with newly generated files
           command: 'cd /root/project/Cosmos/generated/build/CM4/makefiles && make -j24'
       - run:
-          name: Building CM7 image
+          name: Building CM7 image with newly generated files
           command: 'cd /root/project/Cosmos/generated/build/CM7/makefiles && make -j24'
       - store_artifacts:
           path: /root/project/Cosmos/generated/build/CM4/bin/CM4.elf
