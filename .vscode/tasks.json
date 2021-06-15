@@ -8,7 +8,10 @@
 				"cwd": "${workspaceFolder}/Cosmos/generated/build/${input:Core}/makefiles"
 			},
 			"command": "make -j${input:core_num}",
-			"group": "build"
+			"group": "build",
+			"problemMatcher": [
+				"$gcc"
+			]
 		},
 		{
 			"type": "shell",
@@ -147,7 +150,7 @@
 		{
             "id": "core_num",
             "description": "Choose number of cores:",
-            "default": "",
+            "default": "7",
 			"type": "promptString"
         }
     ]

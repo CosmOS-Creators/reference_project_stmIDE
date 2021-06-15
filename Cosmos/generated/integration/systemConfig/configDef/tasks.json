@@ -1,0 +1,248 @@
+{
+    "version": "1.0.0",
+
+    "attributes": {
+        "TaskName": {
+            "label": "Name of the task",
+            "type": "string",
+            "validation": "^[A-Za-z][A-Za-z0-9_]*$"
+        },
+        "wcet": {
+            "label": "Worst case execution time",
+            "type": "int",
+            "min": 0,
+            "max": 2048
+        },
+        "period": {
+            "label": "Scheduling period",
+            "type": "int",
+            "min": 0,
+            "max": 2048
+        },
+        "floatingPoint": {
+            "label": "Enable floating point for this task",
+            "type": "bool"
+        },
+        "isIdle": {
+            "label": "Is the task an idle task",
+            "type": "bool"
+        },
+        "isSysJob": {
+            "label": "Is the task a sys job task",
+            "type": "bool"
+        },
+        "stackSize": {
+            "label": "stack size of the task",
+            "type": "int",
+            "min": 0,
+            "max": 2048
+        }
+    },
+
+    "elements": {
+        "task_0":
+        [
+            {
+                "parentReference": "programs/program_0"
+            },
+            {
+                "target": "TaskName",
+                "value": "Idle_CM7"
+            },
+            {
+                "target": "wcet",
+                "value": 0
+            },
+            {
+                "target": "period",
+                "value": 0
+            },
+            {
+                "target": "floatingPoint",
+                "value": false
+            },
+            {
+                "target": "isIdle",
+                "value": true
+            },
+            {
+                "target": "isSysJob",
+                "value": false
+            },
+            {
+                "target": "stackSize",
+                "value": 1024
+            }
+        ],
+        "task_1":
+        [
+            {
+                "parentReference": "programs/program_0"
+            },
+            {
+                "target": "TaskName",
+                "value": "sysJobs_CM7"
+            },
+            {
+                "target": "wcet",
+                "value": 5
+            },
+            {
+                "target": "period",
+                "value": 100
+            },
+            {
+                "target": "floatingPoint",
+                "value": false
+            },
+            {
+                "target": "isIdle",
+                "value": false
+            },
+            {
+                "target": "isSysJob",
+                "value": true
+            },
+            {
+                "target": "stackSize",
+                "value": 256
+            }
+        ],
+        "task_2":
+        [
+            {
+                "parentReference": "programs/program_1"
+            },
+            {
+                "target": "TaskName",
+                "value": "Task_0_Core_0_Handler"
+            },
+            {
+                "target": "wcet",
+                "value": 5
+            },
+            {
+                "target": "period",
+                "value": 50
+            },
+            {
+                "target": "floatingPoint",
+                "value": false
+            },
+            {
+                "target": "isIdle",
+                "value": false
+            },
+            {
+                "target": "isSysJob",
+                "value": false
+            },
+            {
+                "target": "stackSize",
+                "value": 1024
+            }
+        ],
+        "task_3":
+        [
+            {
+                "parentReference": "programs/program_2"
+            },
+            {
+                "target": "TaskName",
+                "value": "Idle_CM4"
+            },
+            {
+                "target": "wcet",
+                "value": 0
+            },
+            {
+                "target": "period",
+                "value": 0
+            },
+            {
+                "target": "floatingPoint",
+                "value": false
+            },
+            {
+                "target": "isIdle",
+                "value": true
+            },
+            {
+                "target": "isSysJob",
+                "value": false
+            },
+            {
+                "target": "stackSize",
+                "value": 1024
+            }
+        ],
+        "task_4":
+        [
+            {
+                "parentReference": "programs/program_2"
+            },
+            {
+                "target": "TaskName",
+                "value": "sysJobs_CM4"
+            },
+            {
+                "target": "wcet",
+                "value": 5
+            },
+            {
+                "target": "period",
+                "value": 100
+            },
+            {
+                "target": "floatingPoint",
+                "value": false
+            },
+            {
+                "target": "isIdle",
+                "value": false
+            },
+            {
+                "target": "isSysJob",
+                "value": true
+            },
+            {
+                "target": "stackSize",
+                "value": 256
+            }
+        ],
+        "task_5":
+        [
+            {
+                "parentReference": "programs/program_3"
+            },
+            {
+                "target": "TaskName",
+                "value": "Task_0_Core_1_Handler"
+            },
+            {
+                "target": "wcet",
+                "value": 5
+            },
+            {
+                "target": "period",
+                "value": 50
+            },
+            {
+                "target": "floatingPoint",
+                "value": false
+            },
+            {
+                "target": "isIdle",
+                "value": false
+            },
+            {
+                "target": "isSysJob",
+                "value": false
+            },
+            {
+                "target": "stackSize",
+                "value": 1024
+            }
+        ]
+    }
+}

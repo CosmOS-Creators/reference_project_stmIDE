@@ -1,0 +1,9 @@
+{
+    "groupt1": {
+        "width": "25%",
+        "elements":[
+        {"target": "programs/ProgramName"},
+        {"target": "cores/CoreName"}
+    ]
+}
+}
