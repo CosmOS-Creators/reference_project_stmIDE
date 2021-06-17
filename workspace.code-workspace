@@ -7,10 +7,26 @@
 	"settings": {
 		"python.analysis.extraPaths": [
 			"./Cosmos/customBox/generator",
-			"./Cosmos/customBox"
+			"./Cosmos/customBox",
+			"./Cosmos/customBox/newGenerator"
 		],
 		"terminal.integrated.env.windows": {
 			"PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/Cosmos/customBox/generator;${workspaceFolder}/Cosmos/customBox"
+		},
+        "editor.detectIndentation": false,
+		"editor.insertSpaces": false,
+		"files.insertFinalNewline": true,
+		"files.trimFinalNewlines": true,
+		"files.trimTrailingWhitespace": true,
+		"[cpp]": {
+			"editor.tabSize": 2
+		},
+		"[python]": {
+			"editor.tabSize": 4
+		},
+		"[markdown]": {
+			"editor.tabSize": 2,
+			"editor.insertSpaces": true,
 		}
 	},
 }
