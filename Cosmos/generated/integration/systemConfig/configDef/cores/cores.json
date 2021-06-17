@@ -1,0 +1,68 @@
+{
+    "version": "1.0.0",
+
+    "attributes": {
+        "CoreName": {
+            "label": "Core Name",
+            "type": "string",
+            "validation": "^[A-Za-z0-9]+$"
+        },
+        "bootOs": {
+            "label": "Boot OS",
+            "type": "bool"
+        },
+        "memory": {
+			"inherit": "memories/memory",
+            "label": "Memory location"
+        },
+        "unmapped_size": {
+            "label": "Boot OS",
+            "type": "int",
+            "min": 0,
+            "max": 2048
+        }
+    },
+
+    "elements": {
+        "core_0":
+        [
+            {
+                "target": "CoreName",
+                "value": "CM7"
+            },
+            {
+                "target": "bootOs",
+                "value": false
+            },
+            {
+                "target": "memory",
+                "targetNameOverwrite": "unmapped_memory",
+                "value": "DTCM"
+            },
+            {
+                "target": "unmapped_size",
+                "value": 2048
+            }
+        ],
+        "core_1":
+        [
+            {
+                "target": "CoreName",
+                "value": "CM4"
+            },
+            {
+                "target": "bootOs",
+                "value": true
+            },
+            {
+                "target": "memory",
+                "targetNameOverwrite": "unmapped_memory",
+                "value": "SRAM1"
+            },
+            {
+                "target": "unmapped_size",
+                "value": 2048
+            }
+        ]
+    }
+}

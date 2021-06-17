@@ -1,0 +1,105 @@
+{
+    "version": "1.0.0",
+
+    "attributes": {
+        "executionTick": {
+            "label": "",
+            "type": "int",
+            "min": 0,
+            "max": 2048
+        }
+    },
+
+    "elements": {
+        "element_0":
+        [
+            {
+                "parentReference": "schedulers/scheduler_0",
+                "name": "scheduler"
+            },
+            {
+                "parentReference": "tasks/task_2",
+                "name": "task"
+            },
+            {
+                "target": "executionTick",
+                "value": 0
+            }
+        ],
+        "element_1":
+        [
+            {
+                "parentReference": "schedulers/scheduler_0",
+                "name": "scheduler"
+            },
+            {
+                "parentReference": "tasks/task_1",
+                "name": "task"
+            },
+            {
+                "target": "executionTick",
+                "value": 45
+            }
+        ],
+        "element_2":
+        [
+            {
+                "parentReference": "schedulers/scheduler_0",
+                "name": "scheduler"
+            },
+            {
+                "parentReference": "tasks/task_2",
+                "name": "task"
+            },
+            {
+                "target": "executionTick",
+                "value": 50
+            }
+        ],
+        "element_3":
+        [
+            {
+                "parentReference": "schedulers/scheduler_1",
+                "name": "scheduler"
+            },
+            {
+                "parentReference": "tasks/task_5",
+                "name": "task"
+            },
+            {
+                "target": "executionTick",
+                "value": 0
+            }
+        ],
+        "element_4":
+        [
+            {
+                "parentReference": "schedulers/scheduler_1",
+                "name": "scheduler"
+            },
+            {
+                "parentReference": "tasks/task_4",
+                "name": "task"
+            },
+            {
+                "target": "executionTick",
+                "value": 45
+            }
+        ],
+        "element_5":
+        [
+            {
+                "parentReference": "schedulers/scheduler_1",
+                "name": "scheduler"
+            },
+            {
+                "parentReference": "tasks/task_5",
+                "name": "task"
+            },
+            {
+                "target": "executionTick",
+                "value": 50
+            }
+        ]
+    }
+}

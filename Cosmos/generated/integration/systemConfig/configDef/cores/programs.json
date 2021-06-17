@@ -14,9 +14,8 @@
             "max": 2048
         },
         "memory": {
-            "label": "Memory location of the program",
-            "type": "string",
-            "validation": "^(DTCM|SRAM1)$"
+            "inherit": "memories/memory",
+            "label": "Memory location of the Program"
         }
     },
 
@@ -24,7 +23,8 @@
         "program_0":
         [
             {
-                "parentReference": "cores/core0"
+                "parentReference": "cores/core_0",
+                "name": "core"
             },
             {
                 "target": "ProgramName",
@@ -42,7 +42,8 @@
         "program_1":
         [
             {
-                "parentReference": "cores/core0"
+                "parentReference": "cores/core_0",
+                "name": "core"
             },
             {
                 "target": "ProgramName",
@@ -60,7 +61,8 @@
         "program_2":
         [
             {
-                "parentReference": "cores/core1"
+                "parentReference": "cores/core_1",
+                "name": "core"
             },
             {
                 "target": "ProgramName",
@@ -78,7 +80,8 @@
         "program_3":
         [
             {
-                "parentReference": "cores/core1"
+                "parentReference": "cores/core_1",
+                "name": "core"
             },
             {
                 "target": "ProgramName",

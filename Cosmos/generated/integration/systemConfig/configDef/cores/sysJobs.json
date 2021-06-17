@@ -1,0 +1,49 @@
+{
+    "version": "1.0.0",
+
+    "attributes": {
+        "hyperTick": {
+            "label": "",
+            "type": "int",
+            "min": 0,
+            "max": 2048
+        },
+        "tbd": {
+            "label": "TODO: Finish the definition of sysjobs",
+            "type": "bool"
+        }
+    },
+
+    "elements": {
+        "sysJob_0":
+        [
+            {
+                "parentReference": "cores/core_0",
+                "name": "core"
+            },
+            {
+                "target": "hyperTick",
+                "value": 1
+            },
+            {
+                "target": "tbd",
+                "value": true
+            }
+        ],
+        "sysJob_1":
+        [
+            {
+                "parentReference": "cores/core_1",
+                "name": "core"
+            },
+            {
+                "target": "hyperTick",
+                "value": 1
+            },
+            {
+                "target": "tbd",
+                "value": true
+            }
+        ]
+    }
+}

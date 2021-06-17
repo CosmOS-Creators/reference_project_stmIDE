@@ -24,18 +24,22 @@ If accessing an attribute from outside of a file it's required to state the conf
 
 Every element in the attribute property should define the following properties:
 
+* inherit (optional/can be omitted):
+    If defined all configuration of the target attribute will be taken over to this attribute. If a property was defined on this level it will overwrite the setting of the attribute which it inherits in case it already existed before.
 * label:
     A descriptive user friendly name of the attribute (might even be used to display the string in the UI)
 * tooltip (optional/can be omitted):
     A description to describe to the user what this field in the UI is doing (maybe can be used as a comment field for hidden entries too)
 * type:
-  * Type of the attribute valid types are:
+  * Type of the attribute. Valid types are:
     * string
     * bool
     * int
     * float
-    * list
-    * hex -> (COMMENT: not sure if the other way around might be easier?) in json this should be always an int but in a UI this should always be displayed as a hex number in the form of 0xHHHH
+    * referenceList
+    * stringList
+    * selection
+    * hex -> in json and the UI this should be always a string in the form of 0xHHHH
     * slider
 * min (optional/can be omitted; default: empty):
     only relevant if type is int, float or slider
@@ -43,7 +47,7 @@ Every element in the attribute property should define the following properties:
     only relevant if type is int, float or slider
 * step (optional/can be omitted; default: empty):
     only relevant if type is slider. The type of the value could be inferred from this property. For example if step is a full number type would be int, if step would be a float the value would also be float
-* elements (optional/can be omitted if an element is not of type list):
+* elements (optional/can be omitted if an element is not of type selection):
   * two possibilities:
     * A list of strings that will be shown in a dropdown as the options to be able to choose from
     * A string which refers to a config file for example `cores/coreName` would show all elements defined in the cores.json file in the elements list using the value of their coreName attribute instance as the displayed option label in the dropdown
@@ -56,6 +60,9 @@ Every element in the attribute property should define the following properties:
     * Validation is considered active if the value represents a valid regex. In this case every pending change of the value property should be validated against this regex and only be written if the regex matches
 * hidden (optional/can be omitted; default: false):
     If true attribute instances of this attribute definition will not show up in the UI. This is useful for some helper "variables" that are only used by some logic and are not of interest for the user
+* placeholder (optional/can be omitted; default: false):
+    If true it signals that the value for an attribute instance of this would be populated by a script at a later point.
+
 
 ### Description of elements property
 
@@ -65,8 +72,12 @@ Every item in this list (attribute instance) should be a dictionary with the fol
 
 * target:
     An ID of an attribute which is instantiated. If the attribute was defined within the same file simply list it's name. If it was defined in another file it has to be prefixed by the filename without the file extension. For example: `cores/bootOs`
+* targetNameOverwrite (optional/can be omitted; default: empty):
+    If specified the attribute instance that the target property is pointing to will get this name instead of the targets name
 * value:
-    stores the current value of the attribute instance
+    stores the current value of the attribute instance.
+    If type is a list, a list of links is expected. The links should point to an element in the form of `core/core_0`
+    If placeholder is set to true this property has to be omitted.
 * enabled (optional/can be omitted; default: true):
   * Defines if this element can be edited through the UI. If omitted true is assumed. Can operate in two ways:
     * If the value of this property is a boolean it is enabled if true or disabled/read-only if false
@@ -74,6 +85,9 @@ Every item in this list (attribute instance) should be a dictionary with the fol
 Special element properties:
 * parentReference:
     A parentReference is a special property that does not have to be defined. It points to an id of another element which it is the child of.
+* name(only in combination with parentReference):
+    If an element is a parent reference and a name property is present a reference to the parent will be added to the current element where the key is set to the value of the name property.
+
 
 ## <a name="dependency-expressions"></a>Dependency expressions
 

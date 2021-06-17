@@ -1,0 +1,91 @@
+{
+    "version": "1.0.0",
+
+    "attributes": {
+        "hyperTick": {
+            "label": "Hyper tick of this scheduler",
+            "type": "int",
+            "min": 0,
+            "max": 2048
+        },
+        "sync": {
+            "label": "synchronization",
+            "type": "bool"
+        },
+        "syncTicks": {
+            "label": "",
+            "type": "int",
+            "min": 0,
+            "max": 2048
+        },
+        "firstSyncTaskStartTick": {
+            "label": "",
+            "type": "int",
+            "min": 0,
+            "max": 2048
+        },
+        "preemptTick": {
+            "label": "",
+            "type": "int",
+            "min": 0,
+            "max": 2048
+        }
+    },
+
+    "elements": {
+        "scheduler_0":
+        [
+            {
+                "parentReference": "cores/core_0",
+                "name": "core"
+            },
+            {
+                "target": "hyperTick",
+                "value": 100
+            },
+            {
+                "target": "sync",
+                "value": false
+            },
+            {
+                "target": "syncTicks",
+                "value": 0
+            },
+            {
+                "target": "firstSyncTaskStartTick",
+                "value": 0
+            },
+            {
+                "target": "preemptTick",
+                "value": 1
+            }
+        ],
+        "scheduler_1":
+        [
+            {
+                "parentReference": "cores/core_1",
+                "name": "core"
+            },
+            {
+                "target": "hyperTick",
+                "value": 100
+            },
+            {
+                "target": "sync",
+                "value": false
+            },
+            {
+                "target": "syncTicks",
+                "value": 0
+            },
+            {
+                "target": "firstSyncTaskStartTick",
+                "value": 0
+            },
+            {
+                "target": "preemptTick",
+                "value": 1
+            }
+        ]
+    }
+}

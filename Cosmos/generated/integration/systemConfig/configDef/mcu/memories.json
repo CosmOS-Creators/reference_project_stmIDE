@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+
+    "attributes": {
+        "memory": {
+            "label": "Memory location",
+            "type": "selection",
+            "elements": [
+                "DTCM",
+                "SRAM1"
+            ]
+        }
+    },
+
+    "elements": {
+    }
+}

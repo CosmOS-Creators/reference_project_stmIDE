@@ -27,10 +27,11 @@
         "thread_0":
         [
             {
-                "parentReference": "programs/program_0"
+                "parentReference": "programs/program_0",
+                "name": "program"
             },
             {
-                "target": "TaskName",
+                "target": "ThreadName",
                 "value": "IdleThread_CM7"
             },
             {
@@ -49,10 +50,11 @@
         "thread_1":
         [
             {
-                "parentReference": "programs/program_2"
+                "parentReference": "programs/program_2",
+                "name": "program"
             },
             {
-                "target": "TaskName",
+                "target": "ThreadName",
                 "value": "IdleThread_CM4"
             },
             {

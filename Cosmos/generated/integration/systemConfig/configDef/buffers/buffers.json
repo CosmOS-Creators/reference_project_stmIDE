@@ -1,0 +1,118 @@
+{
+	"version": "1.0.0",
+
+	"attributes": {
+		"name": {
+			"label": "Name of the buffer",
+			"type": "string",
+			"validation": "^[A-Za-z][A-Za-z0-9_]+$"
+		},
+		"size": {
+			"label": "Buffer size",
+			"type": "int",
+			"min": 0,
+			"max": 1024
+		},
+		"isDoubleBuffer": {
+			"label": "",
+			"type": "bool"
+		},
+		"tasksReadPermissions": {
+			"label": "List of tasks which have read access to this buffer",
+			"type": "referenceList"
+		},
+		"tasksWritePermissions": {
+			"label": "List of tasks which have write access to this buffer",
+			"type": "referenceList"
+		},
+		"threadsReadPermissions": {
+			"label": "List of threads which have read access to this buffer",
+			"type": "referenceList"
+		},
+		"threadsWritePermissions": {
+			"label": "List of threads which have write access to this buffer",
+			"type": "referenceList"
+		}
+	},
+
+	"elements": {
+		"buffer_0":
+		[
+			{
+				"target": "name",
+				"value": "x_core_buffer_0"
+			},
+			{
+				"target": "size",
+				"value": 32
+			},
+			{
+				"target": "isDoubleBuffer",
+				"value": true
+			},
+			{
+				"target": "tasksReadPermissions",
+				"value": [
+					"tasks/task_3"
+				]
+			},
+			{
+				"target": "tasksWritePermissions",
+				"value": [
+					"tasks/task_0"
+				]
+			},
+			{
+				"target": "threadsReadPermissions",
+				"value": [
+					"threads/thread_1"
+				]
+			},
+			{
+				"target": "threadsWritePermissions",
+				"value": [
+					"threads/thread_0"
+				]
+			}
+		],
+		"buffer_1":
+		[
+			{
+				"target": "name",
+				"value": "x_core_buffer_1"
+			},
+			{
+				"target": "size",
+				"value": 32
+			},
+			{
+				"target": "isDoubleBuffer",
+				"value": true
+			},
+			{
+				"target": "tasksReadPermissions",
+				"value": [
+					"tasks/task_3"
+				]
+			},
+			{
+				"target": "tasksWritePermissions",
+				"value": [
+					"tasks/task_0"
+				]
+			},
+			{
+				"target": "threadsReadPermissions",
+				"value": [
+					"threads/thread_1"
+				]
+			},
+			{
+				"target": "threadsWritePermissions",
+				"value": [
+					"threads/thread_0"
+				]
+			}
+		]
+	}
+}

@@ -36,14 +36,22 @@
             "type": "int",
             "min": 0,
             "max": 2048
+        },
+		"TaskID": {
+			"placeholder": true,
+            "type": "int"
         }
     },
 
     "elements": {
         "task_0":
         [
+			{
+                "target": "TaskID"
+            },
             {
-                "parentReference": "programs/program_0"
+                "parentReference": "programs/program_0",
+                "name": "program"
             },
             {
                 "target": "TaskName",
@@ -76,8 +84,12 @@
         ],
         "task_1":
         [
+			{
+                "target": "TaskID"
+            },
             {
-                "parentReference": "programs/program_0"
+                "parentReference": "programs/program_0",
+                "name": "program"
             },
             {
                 "target": "TaskName",
@@ -110,8 +122,12 @@
         ],
         "task_2":
         [
+			{
+                "target": "TaskID"
+            },
             {
-                "parentReference": "programs/program_1"
+                "parentReference": "programs/program_1",
+                "name": "program"
             },
             {
                 "target": "TaskName",
@@ -144,8 +160,12 @@
         ],
         "task_3":
         [
+			{
+                "target": "TaskID"
+            },
             {
-                "parentReference": "programs/program_2"
+                "parentReference": "programs/program_2",
+                "name": "program"
             },
             {
                 "target": "TaskName",
@@ -178,8 +198,12 @@
         ],
         "task_4":
         [
+			{
+                "target": "TaskID"
+            },
             {
-                "parentReference": "programs/program_2"
+                "parentReference": "programs/program_2",
+                "name": "program"
             },
             {
                 "target": "TaskName",
@@ -212,8 +236,12 @@
         ],
         "task_5":
         [
+			{
+                "target": "TaskID"
+            },
             {
-                "parentReference": "programs/program_3"
+                "parentReference": "programs/program_3",
+                "name": "program"
             },
             {
                 "target": "TaskName",
