@@ -29,7 +29,7 @@ A2L=arm-none-eabi-addr2line
 ##					    PROJECT DIRECTORIES					    ##
 ##################################################################
 ROOT		 		= 	../../../../../..
-MCU 				=  	stm32h755_integration_HAL
+MCU 				=  	stm32h755_integration
 OS 					= 	$(ROOT)/Cosmos
 OS_CORE		 		= 	$(ROOT)/Cosmos/core
 OS_GENERATED_CORE	= 	$(ROOT)/Cosmos/generated/core
@@ -83,7 +83,7 @@ CSOURCES =  	$(M7_SRC) 						\
 				$(OS_SRC_IL) 					\
 				$(OS_SRC_APP) 					\
 				$(SHARED_DRIVERS_SRC) 			\
-				$(COMMON_SRC) 
+				$(COMMON_SRC)
 ##################################################################
 ##					   C++ SOURCES FILES PATHS					##
 ##################################################################
@@ -93,14 +93,14 @@ CXXSOURCES = 	$(M7_SRC_CPP) 					\
 				$(OS_SRC_CPP) 					\
 				$(OS_SRC_APP_CPP) 				\
 				$(SHARED_DRIVERS_SRC_CPP)		\
-				$(COMMON_SRC_CPP)  	
+				$(COMMON_SRC_CPP)
 ##################################################################
 ##					   LINKER SCRIPT PATH						##
 ##################################################################
 LDSCRIPT=$(M7_CORE)/STM32H755ZITX_FLASH.ld
 ##################################################################
 ##					    HEADER FILES PATHS					    ##
-##################################################################	
+##################################################################
 INCLUDE_DIRS	 =	$(M7_CORE)/Core/Inc								\
 					$(M7_CORE)/Drivers/STM32H7xx_HAL_Driver/Inc		\
 					$(SHARED_DRIVERS)/STM32H7xx_HAL_Driver/Inc		\
@@ -160,11 +160,11 @@ OBJECTS+=$(addsuffix .o,$(addprefix $(OBJECT_DIR)/,$(notdir $(basename $(CXXSOUR
 ##					      FLAGS CONFIG					        ##
 ##################################################################
 MCFLAGS= -mcpu=cortex-m7 -mthumb -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -MMD -MP -MF --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -g3 -ffixed-r9
-OPTIMIZE = -O0 
+OPTIMIZE = -O0
 DEFS= -D CORE_CM7=1 -D STM32H755xx=1 -D USE_HAL_DRIVER=1 -D ARCH_32BIT -D ADDR_32BIT
 CFLAGS=-c $(MCFLAGS) $(DEFS) $(OPTIMIZE) $(addprefix -I,$(INCLUDE_DIRS)) -std=gnu11
 CXXFLAGS=-c $(MCFLAGS) $(DEFS) $(OPTIMIZE) $(addprefix -I,$(INCLUDE_DIRS)) -std=c++14
-CXXFLAGS+=-U__STRICT_ANSI__ 
+CXXFLAGS+=-U__STRICT_ANSI__
 LDFLAGS =-T $(LDSCRIPT) $(MCFLAGS) $(ARCH_FLAGS) $(LTO_FLAGS) $(DEBUG_FLAGS) --specs=nosys.specs -Wl,-Map=$(MAP_FILE) -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 ##################################################################
 ##					    OUTPUT FILES PATHS					    ##
