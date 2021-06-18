@@ -10,7 +10,8 @@
             "request": "launch",
             "program": "${workspaceFolder}/Cosmos/customBox/newGenerator/ConfigParser.py",
             "args": [
-                "${workspaceFolder}/Cosmos/generated/integration/systemConfig/configDef"
+                "${workspaceFolder}/Cosmos/generated/integration/systemConfig/configDef",
+				"${workspaceFolder}/Cosmos/stm32h755_integration/newConfiguration"
             ],
             "console": "integratedTerminal"
         }

@@ -1,100 +1,100 @@
 {
-    "version": "1.0.0",
+	"version": "1.0.0",
 
-    "attributes": {
-        "ProgramName": {
-            "label": "Name of the program",
-            "type": "string",
-            "validation": "^[A-Za-z][A-Za-z0-9_]*$"
-        },
-        "size": {
-            "label": "?",
-            "type": "int",
-            "min": 0,
-            "max": 2048
-        },
-        "memory": {
-            "inherit": "memories/memory",
-            "label": "Memory location of the Program"
-        }
-    },
+	"attributes": {
+		"ProgramName": {
+			"label": "Name of the program",
+			"type": "string",
+			"validation": "^[A-Za-z][A-Za-z0-9_]*$"
+		},
+		"size": {
+			"label": "?",
+			"type": "int",
+			"min": 0,
+			"max": 2048
+		},
+		"memory": {
+			"inherit": "memories/memory",
+			"label": "Memory location of the Program"
+		}
+	},
 
-    "elements": {
-        "program_0":
-        [
-            {
-                "parentReference": "cores/core_0",
-                "name": "core"
-            },
-            {
-                "target": "ProgramName",
-                "value": "default_CM7"
-            },
-            {
-                "target": "size",
-                "value": 1024
-            },
-            {
-                "target": "memory",
-                "value": "DTCM"
-            }
-        ],
-        "program_1":
-        [
-            {
-                "parentReference": "cores/core_0",
-                "name": "core"
-            },
-            {
-                "target": "ProgramName",
-                "value": "blinking_led_CM7"
-            },
-            {
-                "target": "size",
-                "value": 1024
-            },
-            {
-                "target": "memory",
-                "value": "DTCM"
-            }
-        ],
-        "program_2":
-        [
-            {
-                "parentReference": "cores/core_1",
-                "name": "core"
-            },
-            {
-                "target": "ProgramName",
-                "value": "default_CM4"
-            },
-            {
-                "target": "size",
-                "value": 1024
-            },
-            {
-                "target": "memory",
-                "value": "SRAM1"
-            }
-        ],
-        "program_3":
-        [
-            {
-                "parentReference": "cores/core_1",
-                "name": "core"
-            },
-            {
-                "target": "ProgramName",
-                "value": "blinking_led_CM4"
-            },
-            {
-                "target": "size",
-                "value": 1024
-            },
-            {
-                "target": "memory",
-                "value": "SRAM1"
-            }
-        ]
-    }
+	"elements": {
+		"program_0":
+		[
+			{
+				"parentReference": "cores/core_0",
+				"name": "core"
+			},
+			{
+				"target": "ProgramName",
+				"value": "default_CM7"
+			},
+			{
+				"target": "size",
+				"value": 1024
+			},
+			{
+				"target": "memory",
+				"value": "DTCM"
+			}
+		],
+		"program_1":
+		[
+			{
+				"parentReference": "cores/core_0",
+				"name": "core"
+			},
+			{
+				"target": "ProgramName",
+				"value": "blinking_led_CM7"
+			},
+			{
+				"target": "size",
+				"value": 1024
+			},
+			{
+				"target": "memory",
+				"value": "DTCM"
+			}
+		],
+		"program_2":
+		[
+			{
+				"parentReference": "cores/core_1",
+				"name": "core"
+			},
+			{
+				"target": "ProgramName",
+				"value": "default_CM4"
+			},
+			{
+				"target": "size",
+				"value": 1024
+			},
+			{
+				"target": "memory",
+				"value": "SRAM1"
+			}
+		],
+		"program_3":
+		[
+			{
+				"parentReference": "cores/core_1",
+				"name": "core"
+			},
+			{
+				"target": "ProgramName",
+				"value": "blinking_led_CM4"
+			},
+			{
+				"target": "size",
+				"value": 1024
+			},
+			{
+				"target": "memory",
+				"value": "SRAM1"
+			}
+		]
+	}
 }

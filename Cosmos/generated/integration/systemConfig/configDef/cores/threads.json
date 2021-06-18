@@ -1,74 +1,74 @@
 {
-    "version": "1.0.0",
+	"version": "1.0.0",
 
-    "attributes": {
-        "ThreadName": {
-            "label": "Name of the thread",
-            "type": "string",
-            "validation": "^[A-Za-z][A-Za-z0-9_]*$"
-        },
-        "floatingPoint": {
-            "label": "Enable floating point for this thread",
-            "type": "bool"
-        },
-        "isIdle": {
-            "label": "Is the thread an idle thread",
-            "type": "bool"
-        },
-        "stackSize": {
-            "label": "Stack size of the thread",
-            "type": "int",
-            "min": 0,
-            "max": 2048
-        }
-    },
+	"attributes": {
+		"ThreadName": {
+			"label": "Name of the thread",
+			"type": "string",
+			"validation": "^[A-Za-z][A-Za-z0-9_]*$"
+		},
+		"floatingPoint": {
+			"label": "Enable floating point for this thread",
+			"type": "bool"
+		},
+		"isIdle": {
+			"label": "Is the thread an idle thread",
+			"type": "bool"
+		},
+		"stackSize": {
+			"label": "Stack size of the thread",
+			"type": "int",
+			"min": 0,
+			"max": 2048
+		}
+	},
 
-    "elements": {
-        "thread_0":
-        [
-            {
-                "parentReference": "programs/program_0",
-                "name": "program"
-            },
-            {
-                "target": "ThreadName",
-                "value": "IdleThread_CM7"
-            },
-            {
-                "target": "floatingPoint",
-                "value": true
-            },
-            {
-                "target": "isIdle",
-                "value": true
-            },
-            {
-                "target": "stackSize",
-                "value": 1024
-            }
-        ],
-        "thread_1":
-        [
-            {
-                "parentReference": "programs/program_2",
-                "name": "program"
-            },
-            {
-                "target": "ThreadName",
-                "value": "IdleThread_CM4"
-            },
-            {
-                "target": "floatingPoint",
-                "value": false
-            },
-            {
-                "target": "isIdle",
-                "value": true
-            },
-            {
-                "target": "stackSize",
-                "value": 1024
-            }
-        ]
-    }
+	"elements": {
+		"thread_0":
+		[
+			{
+				"parentReference": "programs/program_0",
+				"name": "program"
+			},
+			{
+				"target": "ThreadName",
+				"value": "IdleThread_CM7"
+			},
+			{
+				"target": "floatingPoint",
+				"value": true
+			},
+			{
+				"target": "isIdle",
+				"value": true
+			},
+			{
+				"target": "stackSize",
+				"value": 1024
+			}
+		],
+		"thread_1":
+		[
+			{
+				"parentReference": "programs/program_2",
+				"name": "program"
+			},
+			{
+				"target": "ThreadName",
+				"value": "IdleThread_CM4"
+			},
+			{
+				"target": "floatingPoint",
+				"value": false
+			},
+			{
+				"target": "isIdle",
+				"value": true
+			},
+			{
+				"target": "stackSize",
+				"value": 1024
+			}
+		]
+	}
 }

@@ -76,7 +76,8 @@ Every item in this list (attribute instance) should be a dictionary with the fol
     If specified the attribute instance that the target property is pointing to will get this name instead of the targets name
 * value:
     stores the current value of the attribute instance.
-    If type is a list, a list of links is expected. The links should point to an element in the form of `core/core_0`
+    If type is a list, a list of links or list of strings is expected depending on the list type.
+    For referenceList the links should point to an element in the form of `core/core_0`
     If placeholder is set to true this property has to be omitted.
 * enabled (optional/can be omitted; default: true):
   * Defines if this element can be edited through the UI. If omitted true is assumed. Can operate in two ways:

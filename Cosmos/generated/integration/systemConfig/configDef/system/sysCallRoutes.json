@@ -1,0 +1,267 @@
+{
+	"version": "1.0.0",
+
+	"attributes": {
+		"name": {
+			"label": "Name of the routed function",
+			"type": "string",
+			"validation": "^[A-Za-z][A-Za-z0-9_]*$"
+		},
+		"api_header": {
+			"label": "Name of the routed function",
+			"type": "string",
+			"validation": "^[A-Za-z][A-Za-z0-9_]*\\.[A-Za-z]+$"
+		},
+		"sysCall": {
+			"label": "Name of the syscall",
+			"type": "string",
+			"validation": "^[A-Za-z][A-Za-z0-9_]*$"
+		},
+		"user_visible": {
+			"label": "",
+			"type": "bool"
+		},
+		"is_mapped_to_entity": {
+			"label": "",
+			"type": "bool"
+		},
+		"args": {
+			"label": "Function arguments",
+			"type": "stringList"
+		},
+		"return_type": {
+			"label": "Type of the returned value",
+			"type": "string",
+			"validation": "^[A-Za-z][A-Za-z0-9_]*$"
+		}
+	},
+
+	"elements": {
+		"route_0":
+		[
+			{
+				"target": "name",
+				"value": "buffer_readArray"
+			},
+			{
+				"target": "api_header",
+				"value": "buffer.h"
+			},
+			{
+				"target": "sysCall",
+				"value": "sysCalls_readWrite"
+			},
+			{
+				"target": "user_visible",
+				"value": true
+			},
+			{
+				"target": "is_mapped_to_entity",
+				"value": true
+			},
+			{
+				"target": "args",
+				"value": [
+					"arrayPointer",
+					"size"
+				]
+			},
+			{
+				"target": "return_type",
+				"value": "CosmOS_BufferStateType"
+			}
+		],
+		"route_1":
+		[
+			{
+				"target": "name",
+				"value": "buffer_writeArray"
+			},
+			{
+				"target": "api_header",
+				"value": "buffer.h"
+			},
+			{
+				"target": "sysCall",
+				"value": "sysCalls_readWrite"
+			},
+			{
+				"target": "user_visible",
+				"value": true
+			},
+			{
+				"target": "is_mapped_to_entity",
+				"value": true
+			},
+			{
+				"target": "args",
+				"value": [
+					"arrayPointer",
+					"size"
+				]
+			},
+			{
+				"target": "return_type",
+				"value": "CosmOS_BufferStateType"
+			}
+		],
+		"route_2":
+		[
+			{
+				"target": "name",
+				"value": "deviceIO_togglePin"
+			},
+			{
+				"target": "api_header",
+				"value": "deviceIO.h"
+			},
+			{
+				"target": "sysCall",
+				"value": "sysCalls_readWrite"
+			},
+			{
+				"target": "user_visible",
+				"value": true
+			},
+			{
+				"target": "is_mapped_to_entity",
+				"value": false
+			},
+			{
+				"target": "args",
+				"value": [
+					"gpio",
+					"pin"
+				]
+			},
+			{
+				"target": "return_type",
+				"value": "void"
+			}
+		],
+		"route_3":
+		[
+			{
+				"target": "name",
+				"value": "osInit_init"
+			},
+			{
+				"target": "api_header",
+				"value": "osInit.h"
+			},
+			{
+				"target": "sysCall",
+				"value": "sysCalls_os"
+			},
+			{
+				"target": "user_visible",
+				"value": true
+			},
+			{
+				"target": "is_mapped_to_entity",
+				"value": false
+			},
+			{
+				"target": "args",
+				"value": []
+			},
+			{
+				"target": "return_type",
+				"value": "void"
+			}
+		],
+		"route_4":
+		[
+			{
+				"target": "name",
+				"value": "os_start"
+			},
+			{
+				"target": "api_header",
+				"value": "os.h"
+			},
+			{
+				"target": "sysCall",
+				"value": "sysCalls_os"
+			},
+			{
+				"target": "user_visible",
+				"value": true
+			},
+			{
+				"target": "is_mapped_to_entity",
+				"value": false
+			},
+			{
+				"target": "args",
+				"value": []
+			},
+			{
+				"target": "return_type",
+				"value": "void"
+			}
+		],
+		"route_5":
+		[
+			{
+				"target": "name",
+				"value": "schedulable_setExecutionStateToFinished"
+			},
+			{
+				"target": "api_header",
+				"value": "schedulable.h"
+			},
+			{
+				"target": "sysCall",
+				"value": "sysCalls_os"
+			},
+			{
+				"target": "user_visible",
+				"value": false
+			},
+			{
+				"target": "is_mapped_to_entity",
+				"value": false
+			},
+			{
+				"target": "args",
+				"value": []
+			},
+			{
+				"target": "return_type",
+				"value": "void"
+			}
+		],
+		"route_6":
+		[
+			{
+				"target": "name",
+				"value": "sysJobs_dispatcher"
+			},
+			{
+				"target": "api_header",
+				"value": "sysJobs.h"
+			},
+			{
+				"target": "sysCall",
+				"value": "sysCalls_os"
+			},
+			{
+				"target": "user_visible",
+				"value": false
+			},
+			{
+				"target": "is_mapped_to_entity",
+				"value": false
+			},
+			{
+				"target": "args",
+				"value": []
+			},
+			{
+				"target": "return_type",
+				"value": "void"
+			}
+		]
+	}
+}
