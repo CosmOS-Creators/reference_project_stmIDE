@@ -6,10 +6,6 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(BUILD_TESTS "1")
 
-set(MAP_FILE OFF)
-set(COVERAGE OFF)
-set(TESTS OFF)
-
 include(FetchContent)
 FetchContent_Declare(
   cpputest
@@ -17,7 +13,6 @@ FetchContent_Declare(
 )
 
 FetchContent_MakeAvailable(cpputest)
-
 
 add_definitions(
   -DARCH_32BIT
@@ -32,6 +27,10 @@ if(BUILD_TESTS)
     set(CTEST_BUILD_FLAGS "-k -j8")
     set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
     enable_testing()
+
+	add_compile_options("--coverage")
+	add_link_options("--coverage")
+
 else()
     set(CMAKE_C_COMPILER arm-none-eabi-gcc)
     set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
