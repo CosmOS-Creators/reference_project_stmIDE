@@ -1,5 +1,5 @@
 cmake -S . -B Cosmos/generated/build/tests
-cd /mnt/c/GIT/STM32/reference_project_stmIDE/Cosmos/generated/build/tests && make -j32 CPPUTEST_USE_GCOV=Y
+cd Cosmos/generated/build/tests && make -j32 CPPUTEST_USE_GCOV=Y
 ctest -V
 find . -type d -wholename "*/__/__/__/src*" > tmp.txt
 args="--capture"
