@@ -38,10 +38,10 @@ M4_CORE	 			= 	$(ROOT)/CM4
 M4_APP_LAYER		=	$(ROOT)/Cosmos/application
 SHARED_DRIVERS		= 	$(ROOT)/Drivers
 COMMON				= 	$(ROOT)/Common
-OBJECT_DIR	 		= 	$(ROOT)/Cosmos/generated/build/CM4/out/obj
-BIN_DIR		 		= 	$(ROOT)/Cosmos/generated/build/CM4/bin
-MAP_FILE			= 	$(ROOT)/Cosmos/generated/build/CM4/map/m4core.map
-DISASSEMBLY_DIR		=   $(ROOT)/Cosmos/generated/build/CM4/disassembly
+OBJECT_DIR	 		= 	$(ROOT)/Cosmos/generated/build/system/CM4/out/obj
+BIN_DIR		 		= 	$(ROOT)/Cosmos/generated/build/system/CM4/bin
+MAP_FILE			= 	$(ROOT)/Cosmos/generated/build/system/CM4/map/m4core.map
+DISASSEMBLY_DIR		=   $(ROOT)/Cosmos/generated/build/system/CM4/disassembly
 ##################################################################
 ##					     ASSEMBLY SOURCES					    ##
 ##################################################################

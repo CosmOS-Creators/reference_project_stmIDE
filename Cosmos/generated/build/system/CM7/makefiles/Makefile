@@ -38,10 +38,10 @@ M7_CORE	 			= 	$(ROOT)/CM7
 M7_APP_LAYER		=	$(ROOT)/Cosmos/application
 SHARED_DRIVERS		= 	$(ROOT)/Drivers
 COMMON				= 	$(ROOT)/Common
-OBJECT_DIR	 		= 	$(ROOT)/Cosmos/generated/build/CM7/out/obj
-BIN_DIR		 		= 	$(ROOT)/Cosmos/generated/build/CM7/bin
-MAP_FILE			= 	$(ROOT)/Cosmos/generated/build/CM7/map/m7core.map
-DISASSEMBLY_DIR		=   $(ROOT)/Cosmos/generated/build/CM7/disassembly
+OBJECT_DIR	 		= 	$(ROOT)/Cosmos/generated/build/system/CM7/out/obj
+BIN_DIR		 		= 	$(ROOT)/Cosmos/generated/build/system/CM7/bin
+MAP_FILE			= 	$(ROOT)/Cosmos/generated/build/system/CM7/map/m7core.map
+DISASSEMBLY_DIR		=   $(ROOT)/Cosmos/generated/build/system/CM7/disassembly
 ##################################################################
 ##					     ASSEMBLY SOURCES					    ##
 ##################################################################
