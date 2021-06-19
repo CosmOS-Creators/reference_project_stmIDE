@@ -11,7 +11,7 @@
 			"./Cosmos/customBox/newGenerator"
 		],
 		"terminal.integrated.env.windows": {
-			"PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/Cosmos/customBox/generator;${workspaceFolder}/Cosmos/customBox"
+			"PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/Cosmos/customBox/generator;${workspaceFolder}/Cosmos/customBox;${workspaceFolder}/Cosmos/customBox/newGenerator"
 		},
         "editor.detectIndentation": false,
 		"editor.insertSpaces": false,

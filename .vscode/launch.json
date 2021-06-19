@@ -8,9 +8,9 @@
             "name": "Debug Config parser",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/Cosmos/customBox/newGenerator/ConfigParser.py",
+            "program": "${workspaceFolder}/Cosmos/customBox/newGenerator/Parser/ConfigParser.py",
             "args": [
-                "${workspaceFolder}/Cosmos/generated/integration/systemConfig/configDef",
+                "${workspaceFolder}/Cosmos/configuration/systemDefinition",
 				"${workspaceFolder}/Cosmos/stm32h755_integration/newConfiguration"
             ],
             "console": "integratedTerminal"
