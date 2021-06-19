@@ -40,6 +40,8 @@ jobs:
       - store_test_results:
           path: /root/project/Cosmos/generated/build/tests/results
       - store_artifacts:
-          path: /root/project/Cosmos/generated/build/system//CM4/bin/CM4.elf
+          path: /root/project/Cosmos/generated/build/tests/results
+      - store_artifacts:
+          path: /root/project/Cosmos/generated/build/system/CM4/bin/CM4.elf
       - store_artifacts:
           path: /root/project/Cosmos/generated/build/system/CM7/bin/CM7.elf
