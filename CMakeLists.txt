@@ -8,11 +8,12 @@ set(BUILD_TESTS "1")
 
 include(FetchContent)
 FetchContent_Declare(
-  cpputest
-  URL https://github.com/cpputest/cpputest/releases/download/v3.8/cpputest-3.8.zip
+  googletest
+  URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip
 )
-
-FetchContent_MakeAvailable(cpputest)
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
 
 add_definitions(
   -DARCH_32BIT
@@ -20,14 +21,12 @@ add_definitions(
 )
 
 if(BUILD_TESTS)
-    include(CTest)
+	enable_testing()
     set(CMAKE_C_COMPILER "gcc")
     set(CMAKE_CXX_COMPILER "g++")
 
     set(CTEST_BUILD_FLAGS "-k -j8")
     set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
-    enable_testing()
-
 	add_compile_options("--coverage")
 	add_link_options("--coverage")
 
@@ -52,9 +51,13 @@ set(integration "${cosmos}/stm32h755_integration")
 FILE(GLOB_RECURSE coreIncludeDirs LIST_DIRECTORIES true ${core})
 list(FILTER coreIncludeDirs INCLUDE REGEX "^.*/inc$")
 
+FILE(GLOB_RECURSE mockIncludeDirs LIST_DIRECTORIES true ${core})
+list(FILTER mockIncludeDirs INCLUDE REGEX "^.*/mock.*")
+
 FILE(GLOB_RECURSE mockSources  "${core}/*.cpp")
 list(FILTER mockSources INCLUDE REGEX ".*mock.*" )
 
+include_directories(${mockIncludeDirs})
 include_directories(${coreIncludeDirs})
 include_directories("${cpputest_SOURCE_DIR}/include")
 include_directories("${drivers}/CMSIS/Include")
