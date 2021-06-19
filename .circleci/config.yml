@@ -34,6 +34,11 @@ jobs:
       - run:
           name: Building CM7 image with newly generated files
           command: 'cd /root/project/Cosmos/generated/build/system/CM7/makefiles && make -j24'
+      - run:
+          name: run unit tests
+          command: 'chmod +x /root/project/buildTests.sh && ./buildTests.sh'
+      - store_test_results:
+          path: /root/project/Cosmos/generated/build/tests/results
       - store_artifacts:
           path: /root/project/Cosmos/generated/build/system//CM4/bin/CM4.elf
       - store_artifacts:
