@@ -1,19 +1,29 @@
-{
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Debug Config parser",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/Cosmos/customBox/newGenerator/Parser/ConfigParser.py",
-            "args": [
-                "${workspaceFolder}/Cosmos/configuration/systemDefinition",
-				"${workspaceFolder}/Cosmos/stm32h755_integration/newConfiguration"
-            ],
-            "console": "integratedTerminal"
-        }
-    ]
-}
+	{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug Config parser",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/Cosmos/customBox/newGenerator/Parser/ConfigParser.py",
+			"args": [
+				"${workspaceFolder}/Cosmos/configuration/workspace.json"
+			],
+			"console": "integratedTerminal"
+		},
+		{
+			"name": "Debug Default config generator",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/Cosmos/customBox/newGenerator/DefaultConfig.py",
+			"args": [
+				"-c",
+				"${workspaceFolder}/Cosmos/configuration/workspace.json"
+			],
+			"console": "integratedTerminal"
+		}
+	]
+	}
