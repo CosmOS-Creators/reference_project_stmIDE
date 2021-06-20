@@ -27,7 +27,7 @@ jobs:
           command: 'cd /root/project/Cosmos/generated/build/system/CM7/makefiles && make -j24'
       - run:
           name: Check that default config and core config model are matching
-          command: 'python3 /root/project/Cosmos/customBox/newGenerator/DefaultConfig.py -c /root/project/Cosmos/generated/customBox/configuration/workspace.json'
+          command: 'python3 /root/project/Cosmos/customBox/newGenerator/DefaultConfig.py -c /root/project/Cosmos/configuration/workspace.json'
       - run:
           name: Generate code from configuration
           command: 'python3 /root/project/Cosmos/customBox/generator/generator.py -w=Cosmos/generated/customBox/configuration/workspace.json'
