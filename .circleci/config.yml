@@ -26,6 +26,9 @@ jobs:
           name: Building CM7 image with generated files on master
           command: 'cd /root/project/Cosmos/generated/build/CM7/makefiles && make -j24'
       - run:
+          name: Check that default config and core config model are matching
+          command: 'python3 /root/project/Cosmos/customBox/newGenerator/DefaultConfig.py -c /root/project/Cosmos/generated/customBox/configuration/workspace.json'
+      - run:
           name: Generate code from configuration
           command: 'python3 /root/project/Cosmos/customBox/generator/generator.py -w=Cosmos/generated/customBox/configuration/workspace.json'
       - run:
