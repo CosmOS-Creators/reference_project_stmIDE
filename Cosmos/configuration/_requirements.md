@@ -26,7 +26,7 @@ Every element in the attribute property should define the following properties:
 
 * inherit (optional/can be omitted):
     If defined all configuration of the target attribute will be taken over to this attribute. If a property was defined on this level it will overwrite the setting of the attribute which it inherits in case it already existed before.
-* label:
+* label (can be omitted for placeholder and hidden attributes):
     A descriptive user friendly name of the attribute (might even be used to display the string in the UI)
 * tooltip (optional/can be omitted):
     A description to describe to the user what this field in the UI is doing (maybe can be used as a comment field for hidden entries too)
@@ -42,10 +42,10 @@ Every element in the attribute property should define the following properties:
     * hex -> in json and the UI this should be always a string in the form of 0xHHHH
     * slider
 * min (optional/can be omitted; default: empty):
-    only relevant if type is int, float or slider
+    only relevant if type is int, float, hex or slider
 * max (optional/can be omitted; default: empty):
-    only relevant if type is int, float or slider
-* step (optional/can be omitted; default: empty):
+    only relevant if type is int, float, hex or slider
+* step (optional/can be omitted; default: 1):
     only relevant if type is slider. The type of the value could be inferred from this property. For example if step is a full number type would be int, if step would be a float the value would also be float
 * elements (optional/can be omitted if an element is not of type selection):
   * two possibilities:
