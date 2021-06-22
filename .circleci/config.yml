@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: "florianl21/cosmos-build-image:0.0.2"
+      - image: "florianl21/cosmos-build-image:0.0.3"
     environment:
       PYTHONPATH: "/root/project/Cosmos/customBox/generator:/root/project/Cosmos/customBox"
     steps:
@@ -34,7 +34,14 @@ jobs:
       - run:
           name: Building CM7 image with newly generated files
           command: 'cd /root/project/Cosmos/generated/build/system/CM7/makefiles && make -j24'
+      - run:
+          name: run unit tests
+          command: 'chmod +x /root/project/buildTests.sh && ./buildTests.sh'
+      - store_test_results:
+          path: /root/project/Cosmos/generated/build/tests/results
       - store_artifacts:
-          path: /root/project/Cosmos/generated/build/system//CM4/bin/CM4.elf
+          path: /root/project/Cosmos/generated/build/tests/results
+      - store_artifacts:
+          path: /root/project/Cosmos/generated/build/system/CM4/bin/CM4.elf
       - store_artifacts:
           path: /root/project/Cosmos/generated/build/system/CM7/bin/CM7.elf
