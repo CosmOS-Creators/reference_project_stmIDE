@@ -28,8 +28,8 @@
 			"editor.tabSize": 2,
 			"editor.insertSpaces": true,
 		},
-		"files.associations": {
-			"memory": "cpp"
+		"[bash]": {
+			"files.eol": "\n"
 		}
 	},
 }
