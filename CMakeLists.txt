@@ -4,6 +4,7 @@ project(CosmOS VERSION 1.0.0)
 
 set(CMAKE_CXX_STANDARD 11)
 
+set(BUILD_TESTS "1")
 
 include(FetchContent)
 FetchContent_Declare(
@@ -14,66 +15,51 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-
-# set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
-# set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
-# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_BINDIR})
-
 add_definitions(
   -DARCH_32BIT
   -DADDR_32BIT
 )
 
-# path setup
-set(mock "test/mock")
-set(test "test")
+if(BUILD_TESTS)
+	enable_testing()
+    set(CMAKE_C_COMPILER "gcc")
+    set(CMAKE_CXX_COMPILER "g++")
+
+    set(CTEST_BUILD_FLAGS "-k -j8")
+    set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
+	add_compile_options("--coverage")
+	add_link_options("--coverage")
+
+else()
+    set(CMAKE_C_COMPILER arm-none-eabi-gcc)
+    set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
+    set(OBJCOPY arm-none-eabi-objcopy)
+endif()
+
+set(sourceDirectory "src")
+set(unitTestSource "ut.cpp")
+set(unitTestDirectory "test/ut")
 
 set(workspace "${CMAKE_CURRENT_SOURCE_DIR}")
-set(Cosmos "${workspace}/Cosmos")
+set(cosmos "${workspace}/Cosmos")
 set(drivers "${workspace}/Drivers")
-set(core "${Cosmos}/core")
-set(application "${Cosmos}/application")
-set(generated "${Cosmos}/generated")
-set(integration "${Cosmos}/stm32h755_integration")
+set(core "${cosmos}/core")
+set(application "${cosmos}/application")
+set(generated "${cosmos}/generated")
+set(integration "${cosmos}/stm32h755_integration")
 
-message(STATUS "Workspace: ${workspace}")
-
-#core path
-FILE(GLOB_RECURSE core_os_Sources "${core}/os/src/*.c")
-# core includes
 FILE(GLOB_RECURSE coreIncludeDirs LIST_DIRECTORIES true ${core})
-list(FILTER coreIncludeDirs INCLUDE REGEX "^.*/inc$") # remove anything that does not have the inc folder at the last place of it's path
+list(FILTER coreIncludeDirs INCLUDE REGEX "^.*/inc$")
 
-add_library(UUT_os SHARED OBJECT "${core}/os/src/osInit.cpp" "${core}/memory/${mock}/memoryProtection_mock.cpp") # ${core_os_Sources}
+FILE(GLOB_RECURSE mockIncludeDirs LIST_DIRECTORIES true ${core})
+list(FILTER mockIncludeDirs INCLUDE REGEX "^.*/mock.*")
 
-# add_library(SystemMock_memory SHARED OBJECT )
+FILE(GLOB_RECURSE mockSources  "${core}/*.cpp")
+list(FILTER mockSources INCLUDE REGEX ".*mock.*" )
 
-target_link_libraries(
-  UUT_os
-  gtest_main
-  gmock_main
-)
+include_directories(${mockIncludeDirs})
+include_directories(${coreIncludeDirs})
+include_directories("${cpputest_SOURCE_DIR}/include")
+include_directories("${drivers}/CMSIS/Include")
 
-# target_link_libraries(
-#   UUT_os
-#   SystemMock_memory
-# )
-
-# target_include_directories( SystemMock_memory PUBLIC
-#   ${coreIncludeDirs}
-#   "${core}/memory/${mock}"
-# )
-
-set(customInc ${coreIncludeDirs})
-list(FILTER customInc EXCLUDE REGEX "memoryProtection.h")
-
-target_include_directories( UUT_os PUBLIC
-  ${customInc}
-  "${drivers}/CMSIS/Include"
-  "${core}/memory/${mock}"
-)
-
-
-enable_testing()
-
-add_subdirectory("${core}/os/test")
+add_subdirectory(Cosmos)
