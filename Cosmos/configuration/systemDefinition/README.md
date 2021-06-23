@@ -225,6 +225,10 @@ Special element properties:
   * Description:
 
     A parentReference is a special property that does not have to be defined. It points to the id of another element which it is the child of. When parsing, this target element will get a reference to this item as a property using the config name as a property name.
+    For example:
+    In config `cores.json` an element with the key `core_0` exits
+    In config `programs.json` an element with the name `program_0` has a parent reference to `cores/core_0`.
+    After parsing, an expression like this: `config.cores.core_0.programs` exists and would contain a reference to the config of `program_0`
 * name:
   * Mandatory: Never
   * Has to be omitted: If `parentReference` property was not defined
@@ -233,7 +237,11 @@ Special element properties:
   * Default value if omitted: `None`
   * Description:
 
-    If an element is a parent reference and a name property is present a reference to the parent will be added to the current element where the key is set to the value of the name property.
+    If an element is a parent reference and a name property is present, a reference to the parent will be added to the current element where the key is set to the value of the name property.
+    For example:
+    In config `cores.json` an element with the key `core_0` exits
+    In config `programs.json` an element with the name `program_0` has a parent reference to `cores/core_0` as well as a defined `name` property to the value `core`.
+    After parsing, an expression like this: `config.programs.core` exists and would point to a reference of the config of `core_0`
 
 ## <a name="dependency-expressions"></a>Dependency expressions
 
