@@ -1,24 +1,22 @@
-{
-	"paths": {
-		"templateDir": "{root}/Cosmos/customBox/newGenerator/templates",
-		"coreOutDir": "{root}/Cosmos/generated"
+[
+	{
+		"templates": [
+			"application/program"
+		],
+		"outputDir": "{testOutDir}/program",
+		"fileName": "{template}Cfg"
 	},
-	"generatedFiles": [
-		{
-			"templates": [
-				"program"
-			],
-			"outputDir": "{coreOutDir}/program",
-			"pattern": "c/h"
-		},
-		{
-			"templates": [
-				"program"
-			],
-			"outputDir": "{coreOutDir}/program",
-			"pattern": "c/h",
-			"iterator": "programs",
-			"target": "ProgramName"
+	{
+		"templates": [
+			"application/program"
+		],
+		"outputDir": "{testOutDir}/program",
+		"loop": "programs/ProgramName",
+		"fileName": "{target}_{template}",
+		"target": "program",
+		"pattern": {
+			"*.h": "inc",
+			"*.c": "src"
 		}
-	]
-}
+	}
+]

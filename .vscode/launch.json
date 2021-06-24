@@ -24,6 +24,16 @@
 				"${workspaceFolder}/Cosmos/configuration/workspace.json"
 			],
 			"console": "integratedTerminal"
+		},
+		{
+			"name": "Debug Generator",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/Cosmos/customBox/newGenerator/generator.py",
+			"args": [
+				"${workspaceFolder}/Cosmos/configuration/workspace.json"
+			],
+			"console": "integratedTerminal"
 		}
 	]
 	}

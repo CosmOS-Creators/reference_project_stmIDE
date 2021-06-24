@@ -2,6 +2,12 @@
 	"HWConfig": "{workspace}/Cosmos/stm32h755_integration/newConfiguration",
 	"CoreConfig": "{workspace}/Cosmos/configuration/systemDefinition",
 	"DefaultConfig": "{workspace}/Cosmos/customBox/defaultConfig",
+	"CoreDir": "{workspace}/Cosmos/core",
+	"GeneratorConfig": "{workspace}/Cosmos/configuration/FileGeneration.json",
+	"TemplateDir": [
+		"{workspace}/Cosmos/customBox/newGenerator/templates"
+	],
+	"testOutDir": "{workspace}/Cosmos/newGenerated",
     "config": [
 		"{CoreConfig}",
 		"{HWConfig}"
