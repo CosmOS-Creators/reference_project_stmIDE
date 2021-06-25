@@ -24,6 +24,14 @@
 			"min": 0,
 			"max": 2048,
 			"tooltip": "Stack size of the current thread"
+		},
+		"lowAddress": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"highAddress": {
+			"placeholder": true,
+			"type": "int"
 		}
 	},
 
@@ -49,6 +57,12 @@
 			{
 				"target": "stackSize",
 				"value": 1024
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		],
 		"thread_1":
@@ -72,6 +86,12 @@
 			{
 				"target": "stackSize",
 				"value": 1024
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		]
 	}

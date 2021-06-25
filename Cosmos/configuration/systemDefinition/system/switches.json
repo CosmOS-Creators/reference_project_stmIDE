@@ -5,8 +5,7 @@
 		"state": {
 			"label": "State of the switch",
 			"type": "bool",
-			"tooltip": "Return type of the routed function"
-
+			"tooltip": "Switch for the specific feature of operating system"
 		}
 	},
 

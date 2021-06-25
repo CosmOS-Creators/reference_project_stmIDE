@@ -1,0 +1,58 @@
+{
+	"version": "1.0.0",
+
+	"attributes": {
+		"stackSize": {
+			"label": "Stack size",
+			"type": "int",
+			"min": 0,
+			"max": 2048,
+			"tooltip": "Stack size of the current kernel"
+		},
+		"lowAddress": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"highAddress": {
+			"placeholder": true,
+			"type": "int"
+		}
+	},
+
+	"elements": {
+		"kernel_0":
+		[
+			{
+				"parentReference": "cores/core_0",
+				"name": "core"
+			},
+			{
+				"target": "stackSize",
+				"value": 1024
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
+			}
+		],
+		"kernel_1":
+		[
+			{
+				"parentReference": "cores/core_1",
+				"name": "core"
+			},
+			{
+				"target": "stackSize",
+				"value": 1024
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
+			}
+		]
+	}
+}

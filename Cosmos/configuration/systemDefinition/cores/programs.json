@@ -2,7 +2,7 @@
 	"version": "1.0.0",
 
 	"attributes": {
-		"ProgramName": {
+		"name": {
 			"label": "Name of the program",
 			"type": "string",
 			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
@@ -19,6 +19,14 @@
 			"inherit": "memories/:memory",
 			"label": "Memory location of the Program",
 			"tooltip": "Memory location of the Program, all the program data will be stored here"
+		},
+		"lowAddress": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"highAddress": {
+			"placeholder": true,
+			"type": "int"
 		}
 	},
 
@@ -30,7 +38,7 @@
 				"name": "core"
 			},
 			{
-				"target": "ProgramName",
+				"target": "name",
 				"value": "default_CM7"
 			},
 			{
@@ -40,6 +48,12 @@
 			{
 				"target": "memory",
 				"value": "DTCM"
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		],
 		"program_1":
@@ -49,7 +63,7 @@
 				"name": "core"
 			},
 			{
-				"target": "ProgramName",
+				"target": "name",
 				"value": "blinking_led_CM7"
 			},
 			{
@@ -59,6 +73,12 @@
 			{
 				"target": "memory",
 				"value": "DTCM"
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		],
 		"program_2":
@@ -68,7 +88,7 @@
 				"name": "core"
 			},
 			{
-				"target": "ProgramName",
+				"target": "name",
 				"value": "default_CM4"
 			},
 			{
@@ -78,6 +98,12 @@
 			{
 				"target": "memory",
 				"value": "SRAM1"
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		],
 		"program_3":
@@ -87,7 +113,7 @@
 				"name": "core"
 			},
 			{
-				"target": "ProgramName",
+				"target": "name",
 				"value": "blinking_led_CM4"
 			},
 			{
@@ -97,6 +123,12 @@
 			{
 				"target": "memory",
 				"value": "SRAM1"
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		]
 	}
