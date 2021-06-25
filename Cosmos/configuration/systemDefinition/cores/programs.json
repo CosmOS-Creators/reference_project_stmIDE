@@ -16,7 +16,7 @@
 			"tooltip": "Size of the program data memory"
 		},
 		"memory": {
-			"inherit": "memories/memory",
+			"inherit": "memories/:memory",
 			"label": "Memory location of the Program",
 			"tooltip": "Memory location of the Program, all the program data will be stored here"
 		}

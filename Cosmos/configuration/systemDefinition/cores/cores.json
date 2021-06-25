@@ -19,7 +19,7 @@
 			"tooltip": "Runs current core the CosmOS operating system?"
 		},
 		"memory": {
-			"inherit": "memories/name",
+			"inherit": "memories/:name",
 			"label": "Unmapped data memory",
 			"tooltip": "Unmapped data stored in specific memory section, this section is available before the MPU is active"
 		},
