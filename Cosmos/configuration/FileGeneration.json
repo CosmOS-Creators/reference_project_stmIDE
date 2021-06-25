@@ -15,7 +15,7 @@
 			"application/program"
 		],
 		"outputDir": "{testOutDir}/program",
-		"loop": "programs/ProgramName",
+		"loop": "programs/:ProgramName",
 		"fileName": "{target}_{template}",
 		"target": "program",
 		"pattern": {
