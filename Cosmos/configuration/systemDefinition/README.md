@@ -35,7 +35,7 @@ Every json file has the following property located at the root level:
     Every entry in the dictionary holds the attributes for one element. Every element in that dict represents a UI element definition that can be reused (think of it as a class and it's usage as an instance)
     The dictionary key of the element will be used as a unique ID of this attribute property.
     Attribute property IDs have to be unique only inside of one file.
-    If accessing an attribute from outside of a file it is required to state the config class before the ID. For example `cores/name` will refer to the name attribute inside the core.json file while `tasks/name` will will refer to the name attribute inside the tasks.json file.
+    If accessing an attribute from outside of a file it is required to state the config class before the ID. For example `cores/:name` will refer to the name attribute inside the core.json file while `tasks/:name` will will refer to the name attribute inside the tasks.json file.
 
 #### Properties in an attribute element
 
@@ -77,17 +77,18 @@ Every element in the attribute property should define the following properties:
   * Description:
 
     This property will define the type of an attribute. Possible options are:
-    | Type         | Default value if placeholder | `value` property has to be of type | Note                                           |
-    |--------------|------------------------------|------------------------------------|------------------------------------------------|
-    | string       | `""`                         | string                             |                                                |
-    | bool         | `false`                      | boolean                            |                                                |
-    | int          | `0`                          | number                             |                                                |
-    | float        | `0`                          | number                             |                                                |
-    | referenceList| `[]`                         | list                               |                                                |
-    | stringList   | `[]`                         | list                               |                                                |
-    | selection    | `""`                         | string                             |                                                |
-    | hex          | `""`                         | string in the format of `0xHHH`.   | Will be parsed to an int by the config parsers |
-    | slider       | `0`                          | number                             |                                                |
+    | Type            | Default value if placeholder | `value` property has to be of type | Note                                           |
+    |-----------------|------------------------------|------------------------------------|------------------------------------------------|
+    | string          | `""`                         | string                             |                                                |
+    | bool            | `false`                      | boolean                            |                                                |
+    | int             | `0`                          | number                             |                                                |
+    | float           | `0`                          | number                             |                                                |
+    | referenceList   | `[]`                         | list                               |                                                |
+    | stringList      | `[]`                         | list                               |                                                |
+    | selection       | `""`                         | string                             |                                                |
+    | hex             | `""`                         | string in the format of `0xHHH`.   | Will be parsed to an int by the config parsers |
+    | slider          | `0`                          | number                             |                                                |
+    | parentReference | `None`                       | string                             |                                                |
 * min:
   * Mandatory: Never
   * Has to be omitted: If `type` property is not one of: `int`, `float`, `slider`, `hex`
@@ -119,13 +120,13 @@ Every element in the attribute property should define the following properties:
   * Mandatory: If `type` property is `selection`
   * Has to be omitted: Always except when `type` property is `selection`
   * Value type: `list` or `string`
-  * Example value: `["CM4", "CM7"]` or `core/name`
+  * Example value: `["CM4", "CM7"]` or `core/:name`
   * Default value if omitted: `None`
   * Description:
 
     The behavior of this property changes depending on the type of it's value:
     * A list of strings that will be shown in a dropdown as the options to be able to choose from
-    * A string which refers to a config file for example `cores/name` would show all elements defined in the `cores.json` file in the elements list using the value of their `name` attribute instance as the displayed option label in the dropdown
+    * A string which refers to a config file for example `cores/:name` would show all elements defined in the `cores.json` file in the elements list using the value of their `name` attribute instance as the displayed option label in the dropdown
 * validation:
   * Mandatory: Never
   * Has to be omitted: If `type` property is not `string`
@@ -140,7 +141,7 @@ Every element in the attribute property should define the following properties:
     * If the regex expression provided was valid validation is considered active. In this case every pending change of the value property should be validated against this regex and only be written if the regex matches. If targeted by a [dependency expression](#dependency-expressions) it will evaluate to true if validation passed and false otherwise.
 * hidden:
   * Mandatory: Never
-  * Has to be omitted: Never
+  * Has to be omitted: If `type` is `parentReference`
   * Value type: `boolean`
   * Example value: `true`
   * Default value if omitted: `false`
@@ -149,7 +150,7 @@ Every element in the attribute property should define the following properties:
     If true attribute instances of this attribute definition will not show up in the UI. This is useful for some helper "variables" that are only used by some logic and are not of interest for the user
 * placeholder:
   * Mandatory: Never
-  * Has to be omitted: Never
+  * Has to be omitted: If `type` is `parentReference`
   * Value type: `boolean`
   * Example value: `true`
   * Default value if omitted: `false`
@@ -178,7 +179,7 @@ Every item in the elements list (attribute instance) should be a dictionary with
   * Mandatory: Always except if `parentReference` property is defined
   * Has to be omitted: Never except when `parentReference` property is defined
   * Value type: `string`
-  * Example value: `cores/name` or just `name` if the attribute definition is within the same file
+  * Example value: `cores/:name` or just `name` if the attribute definition is within the same file
   * Default value if omitted: `None`
   * Description:
 
@@ -192,7 +193,7 @@ Every item in the elements list (attribute instance) should be a dictionary with
   * Description:
 
     If specified the attribute instance that the target property is pointing to will get this name instead of the targets name.
-    For example if `target` is set to `cores/name` but `targetNameOverwrite` was defined to `coreName` the name property can be accessed inside the object model by `core_0.coreName` but still instantiates the same `cores/name` attribute definition and all it's validations etc.
+    For example if `target` is set to `cores/:name` but `targetNameOverwrite` was defined to `coreName` the name property can be accessed inside the object model by `core_0.coreName` but still instantiates the same `cores/:name` attribute definition and all it's validations etc.
 * value:
   * Mandatory: Always unless the targeted attribute definition has `placeholder` defined as true
   * Has to be omitted: If targeted attribute definition has `placeholder` == true
@@ -208,40 +209,21 @@ Every item in the elements list (attribute instance) should be a dictionary with
   * Mandatory: Never
   * Has to be omitted: if the targeted attribute is `hidden` or is a `placeholder`
   * Value type: `string` or `bool`
-  * Example value: `true` or `core0/name`
+  * Example value: `true` or `core0:name` or `cores/core0:name`
   * Default value if omitted: `true`
   * Description:
 
     Defines if this element can be edited through the UI. Can operate in two ways:
     * If the value of this property is a boolean it is enabled if true or disabled/read-only if false
     * If the value is a string the attributes enabled state is determined by evaluating the given [dependency expression](#dependency-expressions)
-Special element properties:
-* parentReference:
-  * Mandatory: Never
-  * Has to be omitted: if any of the above properties are defined
-  * Value type: `string`
-  * Example value: `cores/core_0`
-  * Default value if omitted: `None`
-  * Description:
-
-    A parentReference is a special property that does not have to be defined. It points to the id of another element which it is the child of. When parsing, this target element will get a reference to this item as a property using the config name as a property name.
-    For example:
-    In config `cores.json` an element with the key `core_0` exits
-    In config `programs.json` an element with the name `program_0` has a parent reference to `cores/core_0`.
-    After parsing, an expression like this: `config.cores.core_0.programs` exists and would contain a reference to the config of `program_0`
-* name:
-  * Mandatory: Never
-  * Has to be omitted: If `parentReference` property was not defined
-  * Value type: `string`
-  * Example value: `core`
-  * Default value if omitted: `None`
-  * Description:
-
-    If an element is a parent reference and a name property is present, a reference to the parent will be added to the current element where the key is set to the value of the name property.
-    For example:
-    In config `cores.json` an element with the key `core_0` exits
-    In config `programs.json` an element with the name `program_0` has a parent reference to `cores/core_0` as well as a defined `name` property to the value `core`.
-    After parsing, an expression like this: `config.programs.core` exists and would point to a reference of the config of `core_0`
+Special notes for the parentReference attribute type:
+  A parentReference is a special property. It points to the id of another element which it is the child of. When parsing, this target element will get a reference to this item as a property using the config name as a property name.
+  If the type of an attribute is set to parentReference the value of the `value` property will be used as the link to that parent.
+  For example:
+  In config `cores.json` an element with the key `core_0` exits
+  In config `programs.json` an element with the name `program_0` has a parent reference to `cores/core_0` and the target name of that attribute definition is `core`.
+  After parsing, an expression like this: `config.cores.core_0.programs` exists and would contain a reference to the config of `program_0`
+  additionally an expression like this: `config.programs.core` exists and would point to a reference of the config of `core_0`
 
 ## <a name="dependency-expressions"></a>Dependency expressions
 
@@ -251,4 +233,4 @@ Wording:
 
 * target: defines which other element to target, should be an existing element ID; If the given target is a boolean the state of the boolean will be evaluated. If the target is some other type it's validity will be used instead
 * operator - negator: `!` negates a target
-A dependency expression might look something like this: `core0/name` or this `!core0/bootOs`
+A dependency expression might look something like this: `core0:name` or this `!cores/core0:bootOs`

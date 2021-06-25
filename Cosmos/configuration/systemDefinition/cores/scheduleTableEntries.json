@@ -7,6 +7,12 @@
 			"type": "int",
 			"min": 0,
 			"max": 2048
+		},
+		"scheduler": {
+			"type": "parentReference"
+		},
+		"task": {
+			"type": "parentReference"
 		}
 	},
 
@@ -14,12 +20,12 @@
 		"element_0":
 		[
 			{
-				"parentReference": "schedulers/scheduler_0",
-				"name": "scheduler"
+				"target": "scheduler",
+				"value": "schedulers/scheduler_0"
 			},
 			{
-				"parentReference": "tasks/task_2",
-				"name": "task"
+				"target": "task",
+				"value": "tasks/task_2"
 			},
 			{
 				"target": "executionTick",
@@ -29,12 +35,12 @@
 		"element_1":
 		[
 			{
-				"parentReference": "schedulers/scheduler_0",
-				"name": "scheduler"
+				"target": "scheduler",
+				"value": "schedulers/scheduler_0"
 			},
 			{
-				"parentReference": "tasks/task_1",
-				"name": "task"
+				"target": "task",
+				"value": "tasks/task_1"
 			},
 			{
 				"target": "executionTick",
@@ -44,12 +50,12 @@
 		"element_2":
 		[
 			{
-				"parentReference": "schedulers/scheduler_0",
-				"name": "scheduler"
+				"target": "scheduler",
+				"value": "schedulers/scheduler_0"
 			},
 			{
-				"parentReference": "tasks/task_2",
-				"name": "task"
+				"target": "task",
+				"value": "tasks/task_2"
 			},
 			{
 				"target": "executionTick",
@@ -59,12 +65,12 @@
 		"element_3":
 		[
 			{
-				"parentReference": "schedulers/scheduler_1",
-				"name": "scheduler"
+				"target": "scheduler",
+				"value": "schedulers/scheduler_1"
 			},
 			{
-				"parentReference": "tasks/task_5",
-				"name": "task"
+				"target": "task",
+				"value": "tasks/task_5"
 			},
 			{
 				"target": "executionTick",
@@ -74,12 +80,12 @@
 		"element_4":
 		[
 			{
-				"parentReference": "schedulers/scheduler_1",
-				"name": "scheduler"
+				"target": "scheduler",
+				"value": "schedulers/scheduler_1"
 			},
 			{
-				"parentReference": "tasks/task_4",
-				"name": "task"
+				"target": "task",
+				"value": "tasks/task_4"
 			},
 			{
 				"target": "executionTick",
@@ -89,12 +95,12 @@
 		"element_5":
 		[
 			{
-				"parentReference": "schedulers/scheduler_1",
-				"name": "scheduler"
+				"target": "scheduler",
+				"value": "schedulers/scheduler_1"
 			},
 			{
-				"parentReference": "tasks/task_5",
-				"name": "task"
+				"target": "task",
+				"value": "tasks/task_5"
 			},
 			{
 				"target": "executionTick",

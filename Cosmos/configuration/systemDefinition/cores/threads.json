@@ -32,6 +32,9 @@
 		"highAddress": {
 			"placeholder": true,
 			"type": "int"
+		},
+		"program": {
+			"type": "parentReference"
 		}
 	},
 
@@ -39,8 +42,8 @@
 		"thread_0":
 		[
 			{
-				"parentReference": "programs/program_0",
-				"name": "program"
+				"target": "program",
+				"value": "programs/program_0"
 			},
 			{
 				"target": "name",
@@ -68,8 +71,8 @@
 		"thread_1":
 		[
 			{
-				"parentReference": "programs/program_2",
-				"name": "program"
+				"target": "program",
+				"value": "programs/program_2"
 			},
 			{
 				"target": "name",

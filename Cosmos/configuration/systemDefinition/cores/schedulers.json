@@ -34,6 +34,9 @@
 			"min": 0,
 			"max": 2048,
 			"tooltip": "Preempt period for the threads"
+		},
+		"core": {
+			"type": "parentReference"
 		}
 	},
 
@@ -41,8 +44,8 @@
 		"scheduler_0":
 		[
 			{
-				"parentReference": "cores/core_0",
-				"name": "core"
+				"target": "core",
+				"value": "cores/core_0"
 			},
 			{
 				"target": "hyperTick",
@@ -68,8 +71,8 @@
 		"scheduler_1":
 		[
 			{
-				"parentReference": "cores/core_1",
-				"name": "core"
+				"target": "core",
+				"value": "cores/core_1"
 			},
 			{
 				"target": "hyperTick",

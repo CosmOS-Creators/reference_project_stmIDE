@@ -47,6 +47,9 @@
 		"taskId": {
 			"placeholder": true,
 			"type": "int"
+		},
+		"program": {
+			"type": "parentReference"
 		}
 	},
 
@@ -57,8 +60,8 @@
 				"target": "taskId"
 			},
 			{
-				"parentReference": "programs/program_0",
-				"name": "program"
+				"target": "program",
+				"value": "programs/program_0"
 			},
 			{
 				"target": "name",
@@ -95,8 +98,8 @@
 				"target": "taskId"
 			},
 			{
-				"parentReference": "programs/program_0",
-				"name": "program"
+				"target": "program",
+				"value": "programs/program_0"
 			},
 			{
 				"target": "name",
@@ -133,8 +136,8 @@
 				"target": "taskId"
 			},
 			{
-				"parentReference": "programs/program_1",
-				"name": "program"
+				"target": "program",
+				"value": "programs/program_1"
 			},
 			{
 				"target": "name",
@@ -171,8 +174,8 @@
 				"target": "taskId"
 			},
 			{
-				"parentReference": "programs/program_2",
-				"name": "program"
+				"target": "program",
+				"value": "programs/program_2"
 			},
 			{
 				"target": "name",
@@ -209,8 +212,8 @@
 				"target": "taskId"
 			},
 			{
-				"parentReference": "programs/program_2",
-				"name": "program"
+				"target": "program",
+				"value": "programs/program_2"
 			},
 			{
 				"target": "name",
@@ -247,8 +250,8 @@
 				"target": "taskId"
 			},
 			{
-				"parentReference": "programs/program_3",
-				"name": "program"
+				"target": "program",
+				"value": "programs/program_3"
 			},
 			{
 				"target": "name",
