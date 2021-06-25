@@ -2,19 +2,22 @@
 	"version": "1.0.0",
 
 	"attributes": {
-		"hyperTick": {
+		"periodMultiplicator": {
 			"label": "",
 			"type": "int",
 			"min": 0,
-			"max": 2048
+			"max": 2048,
+			"tooltip": "Multiplicator of the sysJob task period for the current group, this group will be triggered with period multiplicator*period of sysJob task"
 		},
 		"handlers": {
 			"label": "",
-			"type": "referenceList"
+			"type": "referenceList",
+			"tooltip": "API names, be aware that the name must be the same as defined in header file"
 		},
-		"api_headers": {
+		"apiHeaders": {
 			"label": "API header files",
-			"type": "stringList"
+			"type": "stringList",
+			"tooltip": "API headers providing definitions of sysJobs used in the current group"
 		}
 	},
 
@@ -26,17 +29,17 @@
 				"name": "core"
 			},
 			{
-				"target": "hyperTick",
+				"target": "periodMultiplicator",
 				"value": 1
 			},
 			{
 				"target": "handlers",
 				"value": [
-					"sysJobsCfg/sysJob_0"
+					"sysJobsList/sysJob_0"
 				]
 			},
 			{
-				"target": "api_headers",
+				"target": "apiHeaders",
 				"value": [
 					"CILuart.h"
 				]
@@ -49,17 +52,17 @@
 				"name": "core"
 			},
 			{
-				"target": "hyperTick",
+				"target": "periodMultiplicator",
 				"value": 1
 			},
 			{
 				"target": "handlers",
 				"value": [
-					"sysJobsCfg/sysJob_0"
+					"sysJobsList/sysJob_0"
 				]
 			},
 			{
-				"target": "api_headers",
+				"target": "apiHeaders",
 				"value": [
 					"CILuart.h"
 				]

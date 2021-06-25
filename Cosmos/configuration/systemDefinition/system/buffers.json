@@ -5,33 +5,40 @@
 		"name": {
 			"label": "Name of the buffer",
 			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]+$"
+			"validation": "^[A-Za-z][A-Za-z0-9_]+$",
+			"tooltip": "Name of the current buffer"
 		},
 		"size": {
 			"label": "Buffer size",
 			"type": "int",
 			"min": 0,
-			"max": 1024
+			"max": 1024,
+			"tooltip": "Size of the current buffer in bytes"
 		},
 		"isDoubleBuffer": {
-			"label": "",
-			"type": "bool"
+			"label": "Double buffer",
+			"type": "bool",
+			"tooltip": "If true, two buffers will be created to handle user/os data access"
 		},
 		"tasksReadPermissions": {
 			"label": "List of tasks which have read access to this buffer",
-			"type": "referenceList"
+			"type": "referenceList",
+			"tooltip": "All tasks in this list can read data from this buffer"
 		},
 		"tasksWritePermissions": {
 			"label": "List of tasks which have write access to this buffer",
-			"type": "referenceList"
+			"type": "referenceList",
+			"tooltip": "All tasks in this list can write data to this buffer"
 		},
 		"threadsReadPermissions": {
 			"label": "List of threads which have read access to this buffer",
-			"type": "referenceList"
+			"type": "referenceList",
+			"tooltip": "All threads in this list can read data from this buffer"
 		},
 		"threadsWritePermissions": {
 			"label": "List of threads which have write access to this buffer",
-			"type": "referenceList"
+			"type": "referenceList",
+			"tooltip": "All threads in this list can write data to this buffer"
 		}
 	},
 

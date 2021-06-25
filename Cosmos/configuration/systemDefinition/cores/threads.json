@@ -2,24 +2,28 @@
 	"version": "1.0.0",
 
 	"attributes": {
-		"ThreadName": {
+		"name": {
 			"label": "Name of the thread",
 			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*$"
+			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
+			"tooltip": "Name of the thread, be aware that the thread name is used also as a function name"
 		},
 		"floatingPoint": {
-			"label": "Enable floating point for this thread",
-			"type": "bool"
+			"label": "Floating point",
+			"type": "bool",
+			"tooltip": "Enable floating point for the current thread"
 		},
 		"isIdle": {
-			"label": "Is the thread an idle thread",
-			"type": "bool"
+			"label": "Is thread idle",
+			"type": "bool",
+			"tooltip": "Is the thread idle"
 		},
 		"stackSize": {
-			"label": "Stack size of the thread",
+			"label": "Stack size",
 			"type": "int",
 			"min": 0,
-			"max": 2048
+			"max": 2048,
+			"tooltip": "Stack size of the current thread"
 		}
 	},
 
@@ -31,7 +35,7 @@
 				"name": "program"
 			},
 			{
-				"target": "ThreadName",
+				"target": "name",
 				"value": "IdleThread_CM7"
 			},
 			{
@@ -54,7 +58,7 @@
 				"name": "program"
 			},
 			{
-				"target": "ThreadName",
+				"target": "name",
 				"value": "IdleThread_CM4"
 			},
 			{

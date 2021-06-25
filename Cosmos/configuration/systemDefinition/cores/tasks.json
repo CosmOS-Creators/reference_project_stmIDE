@@ -2,42 +2,49 @@
 	"version": "1.0.0",
 
 	"attributes": {
-		"TaskName": {
+		"name": {
 			"label": "Name of the task",
 			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*$"
+			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
+			"tooltip": "Name of the task, be aware that the task name is used also as a function name"
 		},
 		"wcet": {
 			"label": "Worst case execution time",
 			"type": "int",
 			"min": 0,
-			"max": 2048
+			"max": 2048,
+			"tooltip": "Worst case execution time in ticks"
 		},
 		"period": {
 			"label": "Scheduling period",
 			"type": "int",
 			"min": 0,
-			"max": 2048
+			"max": 2048,
+			"tooltip": "Scheduling period in ticks"
 		},
 		"floatingPoint": {
-			"label": "Enable floating point for this task",
-			"type": "bool"
+			"label": "Floating point",
+			"type": "bool",
+			"tooltip": "Enable floating point for the current thread"
 		},
 		"isIdle": {
 			"label": "Is the task an idle task",
-			"type": "bool"
+			"type": "bool",
+			"tooltip": "Is the task an idle task"
 		},
 		"isSysJob": {
-			"label": "Is the task a sys job task",
-			"type": "bool"
+			"label": "Is the task a sysJob wrapper",
+			"type": "bool",
+			"tooltip": "Is the task a sysJob wrapper"
 		},
 		"stackSize": {
 			"label": "stack size of the task",
 			"type": "int",
 			"min": 0,
-			"max": 2048
+			"max": 2048,
+			"tooltip": "Stack size of the current task"
 		},
-		"TaskID": {
+		"taskId": {
 			"placeholder": true,
 			"type": "int"
 		}
@@ -47,14 +54,14 @@
 		"task_0":
 		[
 			{
-				"target": "TaskID"
+				"target": "taskId"
 			},
 			{
 				"parentReference": "programs/program_0",
 				"name": "program"
 			},
 			{
-				"target": "TaskName",
+				"target": "name",
 				"value": "Idle_CM7"
 			},
 			{
@@ -85,14 +92,14 @@
 		"task_1":
 		[
 			{
-				"target": "TaskID"
+				"target": "taskId"
 			},
 			{
 				"parentReference": "programs/program_0",
 				"name": "program"
 			},
 			{
-				"target": "TaskName",
+				"target": "name",
 				"value": "sysJobs_CM7"
 			},
 			{
@@ -123,14 +130,14 @@
 		"task_2":
 		[
 			{
-				"target": "TaskID"
+				"target": "taskId"
 			},
 			{
 				"parentReference": "programs/program_1",
 				"name": "program"
 			},
 			{
-				"target": "TaskName",
+				"target": "name",
 				"value": "Task_0_Core_0_Handler"
 			},
 			{
@@ -161,14 +168,14 @@
 		"task_3":
 		[
 			{
-				"target": "TaskID"
+				"target": "taskId"
 			},
 			{
 				"parentReference": "programs/program_2",
 				"name": "program"
 			},
 			{
-				"target": "TaskName",
+				"target": "name",
 				"value": "Idle_CM4"
 			},
 			{
@@ -199,14 +206,14 @@
 		"task_4":
 		[
 			{
-				"target": "TaskID"
+				"target": "taskId"
 			},
 			{
 				"parentReference": "programs/program_2",
 				"name": "program"
 			},
 			{
-				"target": "TaskName",
+				"target": "name",
 				"value": "sysJobs_CM4"
 			},
 			{
@@ -237,14 +244,14 @@
 		"task_5":
 		[
 			{
-				"target": "TaskID"
+				"target": "taskId"
 			},
 			{
 				"parentReference": "programs/program_3",
 				"name": "program"
 			},
 			{
-				"target": "TaskName",
+				"target": "name",
 				"value": "Task_0_Core_1_Handler"
 			},
 			{

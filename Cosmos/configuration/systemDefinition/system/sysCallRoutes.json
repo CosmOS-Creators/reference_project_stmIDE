@@ -5,34 +5,41 @@
 		"name": {
 			"label": "Name of the routed function",
 			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*$"
+			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
+			"tooltip": "Name of the routed function to the sysCall, be aware that routed function args and return type must be compliant with sysCall"
 		},
-		"api_header": {
-			"label": "Name of the routed function",
+		"apiHeader": {
+			"label": "API header with routed function definition",
 			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*\\.[A-Za-z]+$"
+			"validation": "^[A-Za-z][A-Za-z0-9_]*\\.[A-Za-z]+$",
+			"tooltip": "API header with routed function definition is included in the routes configuration"
 		},
 		"sysCall": {
-			"label": "Name of the syscall",
+			"label": "Name of the sysCall",
 			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*$"
+			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
+			"tooltip": "Name of the sysCall used to interface with your routed function"
 		},
-		"user_visible": {
-			"label": "",
-			"type": "bool"
+		"userVisible": {
+			"label": "Visible for application layer",
+			"type": "bool",
+			"tooltip": "Should be this route generated as CosmOS API for the usage in application layer?"
 		},
-		"is_mapped_to_entity": {
-			"label": "",
-			"type": "bool"
+		"isMappedToEntity": {
+			"label": "Is route mapped to entity",
+			"type": "bool",
+			"tooltip": "Is this route mapped also to entity for instance buffer"
 		},
 		"args": {
 			"label": "Function arguments",
-			"type": "stringList"
+			"type": "stringList",
+			"tooltip": "Arguments of the routed function in the correct order"
 		},
-		"return_type": {
+		"returnType": {
 			"label": "Type of the returned value",
 			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*$"
+			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
+			"tooltip": "Return type of the routed function"
 		}
 	},
 
@@ -44,7 +51,7 @@
 				"value": "buffer_readArray"
 			},
 			{
-				"target": "api_header",
+				"target": "apiHeader",
 				"value": "buffer.h"
 			},
 			{
@@ -52,11 +59,11 @@
 				"value": "sysCalls_readWrite"
 			},
 			{
-				"target": "user_visible",
+				"target": "userVisible",
 				"value": true
 			},
 			{
-				"target": "is_mapped_to_entity",
+				"target": "isMappedToEntity",
 				"value": true
 			},
 			{
@@ -67,7 +74,7 @@
 				]
 			},
 			{
-				"target": "return_type",
+				"target": "returnType",
 				"value": "CosmOS_BufferStateType"
 			}
 		],
@@ -78,7 +85,7 @@
 				"value": "buffer_writeArray"
 			},
 			{
-				"target": "api_header",
+				"target": "apiHeader",
 				"value": "buffer.h"
 			},
 			{
@@ -86,11 +93,11 @@
 				"value": "sysCalls_readWrite"
 			},
 			{
-				"target": "user_visible",
+				"target": "userVisible",
 				"value": true
 			},
 			{
-				"target": "is_mapped_to_entity",
+				"target": "isMappedToEntity",
 				"value": true
 			},
 			{
@@ -101,7 +108,7 @@
 				]
 			},
 			{
-				"target": "return_type",
+				"target": "returnType",
 				"value": "CosmOS_BufferStateType"
 			}
 		],
@@ -112,7 +119,7 @@
 				"value": "deviceIO_togglePin"
 			},
 			{
-				"target": "api_header",
+				"target": "apiHeader",
 				"value": "deviceIO.h"
 			},
 			{
@@ -120,11 +127,11 @@
 				"value": "sysCalls_readWrite"
 			},
 			{
-				"target": "user_visible",
+				"target": "userVisible",
 				"value": true
 			},
 			{
-				"target": "is_mapped_to_entity",
+				"target": "isMappedToEntity",
 				"value": false
 			},
 			{
@@ -135,7 +142,7 @@
 				]
 			},
 			{
-				"target": "return_type",
+				"target": "returnType",
 				"value": "void"
 			}
 		],
@@ -146,7 +153,7 @@
 				"value": "osInit_init"
 			},
 			{
-				"target": "api_header",
+				"target": "apiHeader",
 				"value": "osInit.h"
 			},
 			{
@@ -154,11 +161,11 @@
 				"value": "sysCalls_os"
 			},
 			{
-				"target": "user_visible",
+				"target": "userVisible",
 				"value": true
 			},
 			{
-				"target": "is_mapped_to_entity",
+				"target": "isMappedToEntity",
 				"value": false
 			},
 			{
@@ -166,7 +173,7 @@
 				"value": []
 			},
 			{
-				"target": "return_type",
+				"target": "returnType",
 				"value": "void"
 			}
 		],
@@ -177,7 +184,7 @@
 				"value": "os_start"
 			},
 			{
-				"target": "api_header",
+				"target": "apiHeader",
 				"value": "os.h"
 			},
 			{
@@ -185,11 +192,11 @@
 				"value": "sysCalls_os"
 			},
 			{
-				"target": "user_visible",
+				"target": "userVisible",
 				"value": true
 			},
 			{
-				"target": "is_mapped_to_entity",
+				"target": "isMappedToEntity",
 				"value": false
 			},
 			{
@@ -197,7 +204,7 @@
 				"value": []
 			},
 			{
-				"target": "return_type",
+				"target": "returnType",
 				"value": "void"
 			}
 		],
@@ -208,7 +215,7 @@
 				"value": "schedulable_setExecutionStateToFinished"
 			},
 			{
-				"target": "api_header",
+				"target": "apiHeader",
 				"value": "schedulable.h"
 			},
 			{
@@ -216,11 +223,11 @@
 				"value": "sysCalls_os"
 			},
 			{
-				"target": "user_visible",
+				"target": "userVisible",
 				"value": false
 			},
 			{
-				"target": "is_mapped_to_entity",
+				"target": "isMappedToEntity",
 				"value": false
 			},
 			{
@@ -228,7 +235,7 @@
 				"value": []
 			},
 			{
-				"target": "return_type",
+				"target": "returnType",
 				"value": "void"
 			}
 		],
@@ -239,7 +246,7 @@
 				"value": "sysJobs_dispatcher"
 			},
 			{
-				"target": "api_header",
+				"target": "apiHeader",
 				"value": "sysJobs.h"
 			},
 			{
@@ -247,11 +254,11 @@
 				"value": "sysCalls_os"
 			},
 			{
-				"target": "user_visible",
+				"target": "userVisible",
 				"value": false
 			},
 			{
-				"target": "is_mapped_to_entity",
+				"target": "isMappedToEntity",
 				"value": false
 			},
 			{
@@ -259,7 +266,7 @@
 				"value": []
 			},
 			{
-				"target": "return_type",
+				"target": "returnType",
 				"value": "void"
 			}
 		]

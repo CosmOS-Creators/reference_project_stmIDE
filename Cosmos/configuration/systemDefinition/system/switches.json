@@ -4,7 +4,9 @@
 	"attributes": {
 		"state": {
 			"label": "State of the switch",
-			"type": "bool"
+			"type": "bool",
+			"tooltip": "Return type of the routed function"
+
 		}
 	},
 

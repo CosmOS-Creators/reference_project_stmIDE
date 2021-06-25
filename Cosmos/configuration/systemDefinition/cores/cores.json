@@ -5,21 +5,30 @@
 		"CoreName": {
 			"label": "Core Name",
 			"type": "string",
-			"validation": "^[A-Za-z0-9]+$"
+			"validation": "^[A-Za-z0-9]+$",
+			"tooltip": "Current core name"
 		},
 		"bootOs": {
 			"label": "Boot OS",
-			"type": "bool"
+			"type": "bool",
+			"tooltip": "Will current core boot the operating system?"
+		},
+		"isCosmos": {
+			"label": "Is CosmOS core",
+			"type": "bool",
+			"tooltip": "Runs current core the CosmOS operating system?"
 		},
 		"memory": {
-			"inherit": "memories/memory",
-			"label": "Memory location"
+			"inherit": "memories/name",
+			"label": "Unmapped data memory",
+			"tooltip": "Unmapped data stored in specific memory section, this section is available before the MPU is active"
 		},
 		"unmapped_size": {
-			"label": "Boot OS",
+			"label": "Unmapped data section size",
 			"type": "int",
 			"min": 0,
-			"max": 2048
+			"max": 2048,
+			"tooltip": "Size of the unmapped data section"
 		}
 	},
 
@@ -33,6 +42,10 @@
 			{
 				"target": "bootOs",
 				"value": false
+			},
+			{
+				"target": "isCosmos",
+				"value": true
 			},
 			{
 				"target": "memory",
@@ -52,6 +65,10 @@
 			},
 			{
 				"target": "bootOs",
+				"value": true
+			},
+			{
+				"target": "isCosmos",
 				"value": true
 			},
 			{

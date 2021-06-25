@@ -5,17 +5,20 @@
 		"ProgramName": {
 			"label": "Name of the program",
 			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*$"
+			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
+			"tooltip": "Please be aware that name is used also as file name in the application layer for the source and header file"
 		},
 		"size": {
-			"label": "?",
+			"label": "Size of the program memory",
 			"type": "int",
 			"min": 0,
-			"max": 2048
+			"max": 2048,
+			"tooltip": "Size of the program data memory"
 		},
 		"memory": {
 			"inherit": "memories/memory",
-			"label": "Memory location of the Program"
+			"label": "Memory location of the Program",
+			"tooltip": "Memory location of the Program, all the program data will be stored here"
 		}
 	},
 
