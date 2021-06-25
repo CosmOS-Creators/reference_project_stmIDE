@@ -4,19 +4,8 @@
 			"application/program"
 		],
 		"outputDir": "{testOutDir}/program",
-		"fileName": "{template}Cfg",
-		"pattern": {
-			".h": "inc",
-			".c": "src"
-		}
-	},
-	{
-		"templates": [
-			"application/program"
-		],
-		"outputDir": "{testOutDir}/program",
-		"loop": "programs/:ProgramName",
-		"fileName": "{target}_{template}",
+		"loop": "programs/:name",
+		"fileName": "{target}",
 		"target": "program",
 		"pattern": {
 			".h": "inc",
