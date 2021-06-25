@@ -4,7 +4,11 @@
 			"application/program"
 		],
 		"outputDir": "{testOutDir}/program",
-		"fileName": "{template}Cfg"
+		"fileName": "{template}Cfg",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
 	},
 	{
 		"templates": [
@@ -15,8 +19,8 @@
 		"fileName": "{target}_{template}",
 		"target": "program",
 		"pattern": {
-			"*.h": "inc",
-			"*.c": "src"
+			".h": "inc",
+			".c": "src"
 		}
 	}
 ]
