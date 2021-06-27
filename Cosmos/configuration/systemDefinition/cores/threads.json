@@ -25,6 +25,10 @@
 			"max": 2048,
 			"tooltip": "Stack size of the current thread"
 		},
+		"uniqueId": {
+			"placeholder": true,
+			"type": "int"
+		},
 		"lowAddress": {
 			"placeholder": true,
 			"type": "int"
@@ -41,6 +45,9 @@
 	"elements": {
 		"thread_0":
 		[
+			{
+				"target": "uniqueId"
+			},
 			{
 				"target": "program",
 				"value": "programs/program_0"
@@ -70,6 +77,9 @@
 		],
 		"thread_1":
 		[
+			{
+				"target": "uniqueId"
+			},
 			{
 				"target": "program",
 				"value": "programs/program_2"

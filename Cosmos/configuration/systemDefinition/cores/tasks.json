@@ -44,7 +44,7 @@
 			"max": 2048,
 			"tooltip": "Stack size of the current task"
 		},
-		"taskId": {
+		"uniqueId": {
 			"placeholder": true,
 			"type": "int"
 		},
@@ -65,7 +65,7 @@
 		"task_0":
 		[
 			{
-				"target": "taskId"
+				"target": "uniqueId"
 			},
 			{
 				"target": "program",
@@ -109,7 +109,7 @@
 		"task_1":
 		[
 			{
-				"target": "taskId"
+				"target": "uniqueId"
 			},
 			{
 				"target": "program",
@@ -153,7 +153,7 @@
 		"task_2":
 		[
 			{
-				"target": "taskId"
+				"target": "uniqueId"
 			},
 			{
 				"target": "program",
@@ -197,7 +197,7 @@
 		"task_3":
 		[
 			{
-				"target": "taskId"
+				"target": "uniqueId"
 			},
 			{
 				"target": "program",
@@ -241,7 +241,7 @@
 		"task_4":
 		[
 			{
-				"target": "taskId"
+				"target": "uniqueId"
 			},
 			{
 				"target": "program",
@@ -285,7 +285,7 @@
 		"task_5":
 		[
 			{
-				"target": "taskId"
+				"target": "uniqueId"
 			},
 			{
 				"target": "program",
