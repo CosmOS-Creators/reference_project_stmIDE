@@ -50,6 +50,14 @@
 		},
 		"program": {
 			"type": "parentReference"
+		},
+		"lowAddress": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"highAddress": {
+			"placeholder": true,
+			"type": "int"
 		}
 	},
 
@@ -90,6 +98,12 @@
 			{
 				"target": "stackSize",
 				"value": 1024
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		],
 		"task_1":
@@ -128,6 +142,12 @@
 			{
 				"target": "stackSize",
 				"value": 256
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		],
 		"task_2":
@@ -166,6 +186,12 @@
 			{
 				"target": "stackSize",
 				"value": 1024
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		],
 		"task_3":
@@ -204,6 +230,12 @@
 			{
 				"target": "stackSize",
 				"value": 1024
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		],
 		"task_4":
@@ -242,6 +274,12 @@
 			{
 				"target": "stackSize",
 				"value": 256
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		],
 		"task_5":
@@ -280,6 +318,12 @@
 			{
 				"target": "stackSize",
 				"value": 1024
+			},
+			{
+				"target": "lowAddress"
+			},
+			{
+				"target": "highAddress"
 			}
 		]
 	}

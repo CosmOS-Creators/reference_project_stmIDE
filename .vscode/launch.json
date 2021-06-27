@@ -20,7 +20,7 @@
 			"request": "launch",
 			"program": "${workspaceFolder}/Cosmos/customBox/newGenerator/DefaultConfig.py",
 			"args": [
-				"-c",
+				"-g",
 				"${workspaceFolder}/Cosmos/configuration/workspace.json"
 			],
 			"console": "integratedTerminal"

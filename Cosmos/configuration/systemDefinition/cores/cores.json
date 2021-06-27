@@ -18,17 +18,27 @@
 			"type": "bool",
 			"tooltip": "Runs current core the CosmOS operating system?"
 		},
-		"memory": {
-			"inherit": "memories/:name",
-			"label": "Unmapped data memory",
-			"tooltip": "Unmapped data stored in specific memory section, this section is available before the MPU is active"
+		"unmappedDataMemory": {
+			"inherit": "memories/:memory",
+			"label": "Memory location of the unmapped data"
 		},
-		"unmapped_size": {
+		"unmappedDataSize": {
 			"label": "Unmapped data section size",
 			"type": "int",
 			"min": 0,
 			"max": 2048,
 			"tooltip": "Size of the unmapped data section"
+		},
+		"unmappedDataLowAddress": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"unmappedDataHighAddress": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"cpu": {
+			"type": "parentReference"
 		}
 	},
 
@@ -48,13 +58,22 @@
 				"value": true
 			},
 			{
-				"target": "memory",
-				"targetNameOverwrite": "unmapped_memory",
+				"target": "unmappedDataMemory",
 				"value": "DTCM"
 			},
 			{
-				"target": "unmapped_size",
+				"target": "unmappedDataSize",
 				"value": 2048
+			},
+			{
+				"target": "unmappedDataLowAddress"
+			},
+			{
+				"target": "unmappedDataHighAddress"
+			},
+			{
+				"target": "cpu",
+				"value": "cpu/CM7"
 			}
 		],
 		"core_1":
@@ -72,13 +91,22 @@
 				"value": true
 			},
 			{
-				"target": "memory",
-				"targetNameOverwrite": "unmapped_memory",
+				"target": "unmappedDataMemory",
 				"value": "SRAM1"
 			},
 			{
-				"target": "unmapped_size",
+				"target": "unmappedDataSize",
 				"value": 2048
+			},
+			{
+				"target": "unmappedDataLowAddress"
+			},
+			{
+				"target": "unmappedDataHighAddress"
+			},
+			{
+				"target": "cpu",
+				"value": "cpu/CM4"
 			}
 		]
 	}
