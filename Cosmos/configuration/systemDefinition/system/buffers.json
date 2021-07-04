@@ -23,12 +23,20 @@
 		"readPermissions": {
 			"label": "List of schedulables which have read access to this buffer",
 			"type": "referenceList",
-			"tooltip": "All schedulables in this list can read data from this buffer"
+			"tooltip": "All schedulables in this list can read data from this buffer",
+			"elements" : [
+				"threads/:name",
+				"tasks/:name"
+			]
 		},
 		"writePermissions": {
 			"label": "List of schedulables which have write access to this buffer",
 			"type": "referenceList",
-			"tooltip": "All schedulables in this list can write data to this buffer"
+			"tooltip": "All schedulables in this list can write data to this buffer",
+			"elements" : [
+				"threads/:name",
+				"tasks/:name"
+			]
 		},
 		"compressedReadPermission": {
 			"placeholder": true,

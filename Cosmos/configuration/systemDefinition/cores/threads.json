@@ -29,6 +29,9 @@
 			"placeholder": true,
 			"type": "int"
 		},
+		"program": {
+			"type": "parentReference"
+		},
 		"lowAddress": {
 			"placeholder": true,
 			"type": "int"
@@ -37,8 +40,9 @@
 			"placeholder": true,
 			"type": "int"
 		},
-		"program": {
-			"type": "parentReference"
+		"threadId": {
+			"placeholder": true,
+			"type": "int"
 		}
 	},
 
@@ -73,6 +77,9 @@
 			},
 			{
 				"target": "highAddress"
+			},
+			{
+				"target": "threadId"
 			}
 		],
 		"thread_1":
@@ -105,6 +112,9 @@
 			},
 			{
 				"target": "highAddress"
+			},
+			{
+				"target": "threadId"
 			}
 		]
 	}

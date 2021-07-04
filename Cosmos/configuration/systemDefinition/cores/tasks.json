@@ -58,6 +58,10 @@
 		"highAddress": {
 			"placeholder": true,
 			"type": "int"
+		},
+		"taskId": {
+			"placeholder": true,
+			"type": "int"
 		}
 	},
 
@@ -104,6 +108,9 @@
 			},
 			{
 				"target": "highAddress"
+			},
+			{
+				"target": "taskId"
 			}
 		],
 		"task_1":
@@ -148,6 +155,9 @@
 			},
 			{
 				"target": "highAddress"
+			},
+			{
+				"target": "taskId"
 			}
 		],
 		"task_2":
@@ -192,6 +202,9 @@
 			},
 			{
 				"target": "highAddress"
+			},
+			{
+				"target": "taskId"
 			}
 		],
 		"task_3":
@@ -236,6 +249,9 @@
 			},
 			{
 				"target": "highAddress"
+			},
+			{
+				"target": "taskId"
 			}
 		],
 		"task_4":
@@ -280,6 +296,9 @@
 			},
 			{
 				"target": "highAddress"
+			},
+			{
+				"target": "taskId"
 			}
 		],
 		"task_5":
@@ -324,6 +343,9 @@
 			},
 			{
 				"target": "highAddress"
+			},
+			{
+				"target": "taskId"
 			}
 		]
 	}

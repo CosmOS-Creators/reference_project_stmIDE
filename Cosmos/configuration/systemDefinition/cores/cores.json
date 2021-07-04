@@ -39,6 +39,14 @@
 		},
 		"cpu": {
 			"type": "parentReference"
+		},
+		"coreId": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"corePrograms": {
+			"placeholder": true,
+			"type": "referenceList"
 		}
 	},
 
@@ -74,6 +82,12 @@
 			{
 				"target": "cpu",
 				"value": "cpu/CM7"
+			},
+			{
+				"target": "coreId"
+			},
+			{
+				"target": "corePrograms"
 			}
 		],
 		"core_1":
@@ -107,6 +121,12 @@
 			{
 				"target": "cpu",
 				"value": "cpu/CM4"
+			},
+			{
+				"target": "coreId"
+			},
+			{
+				"target": "corePrograms"
 			}
 		]
 	}
