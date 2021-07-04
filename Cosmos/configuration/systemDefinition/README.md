@@ -118,15 +118,24 @@ Every element in the attribute property should define the following properties:
     Only relevant if type is slider. The type of the value could be inferred from this property. For example if step is a full number type would be int, if step would be a float the value would also be float. This property would define how much granularity a slider has.
 * elements:
   * Mandatory: If `type` property is `selection`
-  * Has to be omitted: Always except when `type` property is `selection`
+  * Has to be omitted: Always except when `type` property is `selection` or `referenceList`
   * Value type: `list` or `string`
-  * Example value: `["CM4", "CM7"]` or `core/:name`
+  * Example value: `["CM4", "CM7"]` or `core/:name` or `["core/:name"]` for `referenceList` types
   * Default value if omitted: `None`
   * Description:
 
+    For attributes of type `selection`:
     The behavior of this property changes depending on the type of it's value:
     * A list of strings that will be shown in a dropdown as the options to be able to choose from
     * A string which refers to a config file for example `cores/:name` would show all elements defined in the `cores.json` file in the elements list using the value of their `name` attribute instance as the displayed option label in the dropdown
+
+    For attributes of type `referenceList`:
+    If the elements key is not present attribute instances are hidden from the UI.
+    If the elements key was defined:
+    * Always has to be of type list containing links in the form of `core/:name`
+    * A UI list element will be shown to provide the user with the choice to add as many items of the matching types as desired. The provided attribute from the link will be used as labels for the elements
+    * When populating an attribute of this type a sanity check will be made to check that the new value does match with the defined elements.
+
 * validation:
   * Mandatory: Never
   * Has to be omitted: If `type` property is not `string`
