@@ -224,5 +224,49 @@
 		"pattern": {
 			".h": "inc"
 		}
+	},
+	{
+		"templates": [
+			"core/stack/stackCfg"
+		],
+		"outputDir": "{testOutDir}/stack",
+		"fileName": "stackCfg",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/scheduler/schedulerCfg"
+		],
+		"outputDir": "{testOutDir}/scheduler",
+		"fileName": "schedulerCfg",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/scheduler/schedulerScheduleTableCfg"
+		],
+		"outputDir": "{testOutDir}/scheduler",
+		"fileName": "schedulerScheduleTableCfg",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/scheduler/schedulerThreadListCfg"
+		],
+		"outputDir": "{testOutDir}/scheduler",
+		"fileName": "schedulerThreadListCfg",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
 	}
 ]
