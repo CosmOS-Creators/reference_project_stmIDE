@@ -47,6 +47,26 @@
 		"corePrograms": {
 			"placeholder": true,
 			"type": "referenceList"
+		},
+		"coreSysJobGroups": {
+			"placeholder": true,
+			"type": "referenceList"
+		},
+		"coreSysJobHyperTick": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"coreScheduler": {
+			"placeholder": true,
+			"type": "referenceList"
+		},
+		"coreNumberOfThreads": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"coreNumberOfTasks": {
+			"placeholder": true,
+			"type": "int"
 		}
 	},
 
@@ -88,6 +108,21 @@
 			},
 			{
 				"target": "corePrograms"
+			},
+			{
+				"target": "coreSysJobGroups"
+			},
+			{
+				"target": "coreSysJobHyperTick"
+			},
+			{
+				"target": "coreScheduler"
+			},
+			{
+				"target": "coreNumberOfThreads"
+			},
+			{
+				"target": "coreNumberOfTasks"
 			}
 		],
 		"core_1":
@@ -127,6 +162,21 @@
 			},
 			{
 				"target": "corePrograms"
+			},
+			{
+				"target": "coreSysJobGroups"
+			},
+			{
+				"target": "coreSysJobHyperTick"
+			},
+			{
+				"target": "coreScheduler"
+			},
+			{
+				"target": "coreNumberOfThreads"
+			},
+			{
+				"target": "coreNumberOfTasks"
 			}
 		]
 	}

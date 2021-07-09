@@ -53,6 +53,14 @@
 		"compressedWritePermissionInverted": {
 			"placeholder": true,
 			"type": "referenceList"
+		},
+		"bufferId": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"doubleBufferId": {
+			"placeholder": true,
+			"type": "int"
 		}
 	},
 
@@ -96,6 +104,12 @@
 			},
 			{
 				"target": "compressedWritePermissionInverted"
+			},
+			{
+				"target": "bufferId"
+			},
+			{
+				"target": "doubleBufferId"
 			}
 		],
 		"buffer_1":
@@ -110,7 +124,7 @@
 			},
 			{
 				"target": "isDoubleBuffer",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "readPermissions",
@@ -137,6 +151,12 @@
 			},
 			{
 				"target": "compressedWritePermissionInverted"
+			},
+			{
+				"target": "bufferId"
+			},
+			{
+				"target": "doubleBufferId"
 			}
 		]
 	}

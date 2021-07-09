@@ -11,5 +11,188 @@
 			".h": "inc",
 			".c": "src"
 		}
+	},
+	{
+		"templates": [
+			"core/thread/threadCfg"
+		],
+		"outputDir": "{testOutDir}/thread",
+		"fileName": "threadCfg",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/task/taskCfg"
+		],
+		"outputDir": "{testOutDir}/task",
+		"fileName": "taskCfg",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/sysJobs/sysJobsCfg"
+		],
+		"outputDir": "{testOutDir}/sysJobs",
+		"fileName": "sysJobsCfg",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsTasks"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsTasks",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsThreads"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsThreads",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsSysJobs"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsSysJobs",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsStacks"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsStacks",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsScheduleTables"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsScheduleTables",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsSchedulerThreadLists"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsSchedulerThreadLists",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsSchedulers"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsSchedulers",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsSchedulables"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsSchedulables",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsRoutes"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsRoutes",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsPrograms"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsPrograms",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsPermissions"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsPermissions",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsOsBoot"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsOsBoot",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsBuffersDouble"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsBuffersDouble",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsBuffers"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsBuffers",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/sysDefs/sysDefsBarriers"
+		],
+		"outputDir": "{testOutDir}/sysDefs",
+		"fileName": "sysDefsBarriers",
+		"pattern": {
+			".h": "inc"
+		}
 	}
 ]

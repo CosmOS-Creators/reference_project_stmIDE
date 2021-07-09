@@ -2,7 +2,7 @@
 	"version": "1.0.0",
 
 	"attributes": {
-		"name": {
+		"routedFuncName": {
 			"label": "Name of the routed function",
 			"type": "string",
 			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
@@ -47,7 +47,7 @@
 		"route_0":
 		[
 			{
-				"target": "name",
+				"target": "routedFuncName",
 				"value": "buffer_readArray"
 			},
 			{
@@ -81,7 +81,7 @@
 		"route_1":
 		[
 			{
-				"target": "name",
+				"target": "routedFuncName",
 				"value": "buffer_writeArray"
 			},
 			{
@@ -115,7 +115,7 @@
 		"route_2":
 		[
 			{
-				"target": "name",
+				"target": "routedFuncName",
 				"value": "deviceIO_togglePin"
 			},
 			{
@@ -149,7 +149,7 @@
 		"route_3":
 		[
 			{
-				"target": "name",
+				"target": "routedFuncName",
 				"value": "osInit_init"
 			},
 			{
@@ -180,7 +180,7 @@
 		"route_4":
 		[
 			{
-				"target": "name",
+				"target": "routedFuncName",
 				"value": "os_start"
 			},
 			{
@@ -211,7 +211,7 @@
 		"route_5":
 		[
 			{
-				"target": "name",
+				"target": "routedFuncName",
 				"value": "schedulable_setExecutionStateToFinished"
 			},
 			{
@@ -242,7 +242,7 @@
 		"route_6":
 		[
 			{
-				"target": "name",
+				"target": "routedFuncName",
 				"value": "sysJobs_dispatcher"
 			},
 			{

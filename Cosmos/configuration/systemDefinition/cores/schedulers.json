@@ -28,6 +28,13 @@
 			"max": 2048,
 			"hidden": true
 		},
+		"lastToFistTaskTicks": {
+			"label": "",
+			"type": "int",
+			"min": 0,
+			"max": 2048,
+			"hidden": true
+		},
 		"preemptTick": {
 			"label": "Preempt period",
 			"type": "int",
@@ -37,6 +44,10 @@
 		},
 		"core": {
 			"type": "parentReference"
+		},
+		"table": {
+			"placeholder": true,
+			"type": "referenceList"
 		}
 	},
 
@@ -64,8 +75,15 @@
 				"value": 0
 			},
 			{
+				"target": "lastToFistTaskTicks",
+				"value": 45
+			},
+			{
 				"target": "preemptTick",
 				"value": 1
+			},
+			{
+				"target": "table"
 			}
 		],
 		"scheduler_1":
@@ -91,8 +109,15 @@
 				"value": 0
 			},
 			{
+				"target": "lastToFistTaskTicks",
+				"value": 45
+			},
+			{
 				"target": "preemptTick",
 				"value": 1
+			},
+			{
+				"target": "table"
 			}
 		]
 	}

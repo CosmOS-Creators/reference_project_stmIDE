@@ -1,0 +1,33 @@
+{
+	"version": "1.0.0",
+
+	"attributes": {
+		"maxSchedulablesOnOneCore": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"buffersNum": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"doubleBuffersNum": {
+			"placeholder": true,
+			"type": "int"
+		}
+	},
+
+	"elements": {
+		"os":
+		[
+			{
+				"target": "maxSchedulablesOnOneCore"
+			},
+			{
+				"target": "buffersNum"
+			},
+			{
+				"target": "doubleBuffersNum"
+			}
+		]
+	}
+}
