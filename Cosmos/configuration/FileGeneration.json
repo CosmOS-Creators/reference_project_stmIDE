@@ -194,5 +194,35 @@
 		"pattern": {
 			".h": "inc"
 		}
+	},
+	{
+		"templates": [
+			"core/switch/switchMemoryProtection"
+		],
+		"outputDir": "{testOutDir}/switch",
+		"fileName": "switchMemoryProtection",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/switch/switchScheduler"
+		],
+		"outputDir": "{testOutDir}/switch",
+		"fileName": "switchScheduler",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/switch/switchSchedulerSync"
+		],
+		"outputDir": "{testOutDir}/switch",
+		"fileName": "switchSchedulerSync",
+		"pattern": {
+			".h": "inc"
+		}
 	}
 ]
