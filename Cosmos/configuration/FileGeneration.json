@@ -3,7 +3,7 @@
 		"templates": [
 			"application/program"
 		],
-		"outputDir": "{testOutDir}/application/program",
+		"outputDir": "{ApplicationGenDir}",
 		"loop": "programs/:name",
 		"fileName": "{target}",
 		"target": "program",
@@ -16,7 +16,7 @@
 		"templates": [
 			"core/thread/thread"
 		],
-		"outputDir": "{testOutDir}/core/thread",
+		"outputDir": "{CoreGeneratedDir}/thread",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -27,7 +27,7 @@
 		"templates": [
 			"core/task/task"
 		],
-		"outputDir": "{testOutDir}/core/task",
+		"outputDir": "{CoreGeneratedDir}/task",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -38,7 +38,7 @@
         "templates": [
             "core/sysDefs/sysDefs"
         ],
-        "outputDir": "{testOutDir}/core/sysDefs",
+        "outputDir": "{CoreGeneratedDir}/sysDefs",
         "fileName": "{template}",
         "pattern": {
             ".h": "inc"
@@ -48,7 +48,7 @@
 		"templates": [
 			"core/switch/switch"
 		],
-		"outputDir": "{testOutDir}/core/switch",
+		"outputDir": "{CoreGeneratedDir}/switch",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc"
@@ -58,7 +58,7 @@
 		"templates": [
 			"core/stack/stack"
 		],
-		"outputDir": "{testOutDir}/core/stack",
+		"outputDir": "{CoreGeneratedDir}/stack",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -69,7 +69,7 @@
 		"templates": [
 			"core/scheduler/scheduler"
 		],
-		"outputDir": "{testOutDir}/core/scheduler",
+		"outputDir": "{CoreGeneratedDir}/scheduler",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -80,7 +80,7 @@
 		"templates": [
 			"core/schedulable/schedulable"
 		],
-		"outputDir": "{testOutDir}/core/schedulable",
+		"outputDir": "{CoreGeneratedDir}/schedulable",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -91,7 +91,7 @@
 		"templates": [
 			"core/route/route"
 		],
-		"outputDir": "{testOutDir}/core/route",
+		"outputDir": "{CoreGeneratedDir}/route",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -102,7 +102,7 @@
 		"templates": [
 			"core/program/program"
 		],
-		"outputDir": "{testOutDir}/core/program",
+		"outputDir": "{CoreGeneratedDir}/program",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -113,7 +113,7 @@
 		"templates": [
 			"core/permission/permission"
 		],
-		"outputDir": "{testOutDir}/core/permission",
+		"outputDir": "{CoreGeneratedDir}/permission",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -124,7 +124,7 @@
 		"templates": [
 			"core/os/os"
 		],
-		"outputDir": "{testOutDir}/core/os",
+		"outputDir": "{CoreGeneratedDir}/os",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -135,7 +135,7 @@
 		"templates": [
 			"core/memory/memory"
 		],
-		"outputDir": "{testOutDir}/core/memory",
+		"outputDir": "{CoreGeneratedDir}/memory",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -146,7 +146,7 @@
 		"templates": [
 			"core/cosmosApi/cosmosApi"
 		],
-		"outputDir": "{testOutDir}/core/cosmosApi",
+		"outputDir": "{CoreGeneratedDir}/cosmosApi",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -157,7 +157,7 @@
 		"templates": [
 			"core/core/core"
 		],
-		"outputDir": "{testOutDir}/core/core",
+		"outputDir": "{CoreGeneratedDir}/core",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
@@ -168,7 +168,7 @@
 		"templates": [
 			"core/buffer/buffer"
 		],
-		"outputDir": "{testOutDir}/core/buffer",
+		"outputDir": "{CoreGeneratedDir}/buffer",
 		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
