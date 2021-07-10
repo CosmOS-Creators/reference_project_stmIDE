@@ -3,7 +3,7 @@
 		"templates": [
 			"application/program"
 		],
-		"outputDir": "{testOutDir}/program",
+		"outputDir": "{testOutDir}/application/program",
 		"loop": "programs/:name",
 		"fileName": "{target}",
 		"target": "program",
@@ -14,10 +14,10 @@
 	},
 	{
 		"templates": [
-			"core/thread/threadCfg"
+			"core/thread/thread"
 		],
-		"outputDir": "{testOutDir}/thread",
-		"fileName": "threadCfg",
+		"outputDir": "{testOutDir}/core/thread",
+		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
 			".c": "src"
@@ -25,10 +25,41 @@
 	},
 	{
 		"templates": [
-			"core/task/taskCfg"
+			"core/task/task"
 		],
-		"outputDir": "{testOutDir}/task",
-		"fileName": "taskCfg",
+		"outputDir": "{testOutDir}/core/task",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+        "templates": [
+            "core/sysDefs/sysDefs"
+        ],
+        "outputDir": "{testOutDir}/core/sysDefs",
+        "fileName": "{template}",
+        "pattern": {
+            ".h": "inc"
+        }
+    },
+	{
+		"templates": [
+			"core/switch/switch"
+		],
+		"outputDir": "{testOutDir}/core/switch",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/stack/stack"
+		],
+		"outputDir": "{testOutDir}/core/stack",
+		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
 			".c": "src"
@@ -36,10 +67,10 @@
 	},
 	{
 		"templates": [
-			"core/sysJobs/sysJobsCfg"
+			"core/scheduler/scheduler"
 		],
-		"outputDir": "{testOutDir}/sysJobs",
-		"fileName": "sysJobsCfg",
+		"outputDir": "{testOutDir}/core/scheduler",
+		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
 			".c": "src"
@@ -47,190 +78,10 @@
 	},
 	{
 		"templates": [
-			"core/sysDefs/sysDefsTasks"
+			"core/schedulable/schedulable"
 		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsTasks",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsThreads"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsThreads",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsSysJobs"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsSysJobs",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsStacks"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsStacks",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsScheduleTables"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsScheduleTables",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsSchedulerThreadLists"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsSchedulerThreadLists",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsSchedulers"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsSchedulers",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsSchedulables"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsSchedulables",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsRoutes"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsRoutes",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsPrograms"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsPrograms",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsPermissions"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsPermissions",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsOsBoot"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsOsBoot",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsBuffersDouble"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsBuffersDouble",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsBuffers"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsBuffers",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/sysDefs/sysDefsBarriers"
-		],
-		"outputDir": "{testOutDir}/sysDefs",
-		"fileName": "sysDefsBarriers",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/switch/switchMemoryProtection"
-		],
-		"outputDir": "{testOutDir}/switch",
-		"fileName": "switchMemoryProtection",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/switch/switchScheduler"
-		],
-		"outputDir": "{testOutDir}/switch",
-		"fileName": "switchScheduler",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/switch/switchSchedulerSync"
-		],
-		"outputDir": "{testOutDir}/switch",
-		"fileName": "switchSchedulerSync",
-		"pattern": {
-			".h": "inc"
-		}
-	},
-	{
-		"templates": [
-			"core/stack/stackCfg"
-		],
-		"outputDir": "{testOutDir}/stack",
-		"fileName": "stackCfg",
+		"outputDir": "{testOutDir}/core/schedulable",
+		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
 			".c": "src"
@@ -238,10 +89,10 @@
 	},
 	{
 		"templates": [
-			"core/scheduler/schedulerCfg"
+			"core/route/route"
 		],
-		"outputDir": "{testOutDir}/scheduler",
-		"fileName": "schedulerCfg",
+		"outputDir": "{testOutDir}/core/route",
+		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
 			".c": "src"
@@ -249,10 +100,10 @@
 	},
 	{
 		"templates": [
-			"core/scheduler/schedulerScheduleTableCfg"
+			"core/program/program"
 		],
-		"outputDir": "{testOutDir}/scheduler",
-		"fileName": "schedulerScheduleTableCfg",
+		"outputDir": "{testOutDir}/core/program",
+		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
 			".c": "src"
@@ -260,10 +111,65 @@
 	},
 	{
 		"templates": [
-			"core/scheduler/schedulerThreadListCfg"
+			"core/permission/permission"
 		],
-		"outputDir": "{testOutDir}/scheduler",
-		"fileName": "schedulerThreadListCfg",
+		"outputDir": "{testOutDir}/core/permission",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/os/os"
+		],
+		"outputDir": "{testOutDir}/core/os",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/memory/memory"
+		],
+		"outputDir": "{testOutDir}/core/memory",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/cosmosApi/cosmosApi"
+		],
+		"outputDir": "{testOutDir}/core/cosmosApi",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/core/core"
+		],
+		"outputDir": "{testOutDir}/core/core",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/buffer/buffer"
+		],
+		"outputDir": "{testOutDir}/core/buffer",
+		"fileName": "{template}",
 		"pattern": {
 			".h": "inc",
 			".c": "src"
