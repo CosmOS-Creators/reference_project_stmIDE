@@ -8,11 +8,11 @@
 ** @file schedulerScheduleTableCfg.c
 *********************************************************************************
 <!--         schedulerScheduleTableCfg Unit Local Group Definition            -->
-*********************************************************************************	
+*********************************************************************************
 ** @defgroup Local_schedulerScheduleTableCfg Local
-** @ingroup schedulerScheduleTableCfg_unit 
+** @ingroup schedulerScheduleTableCfg_unit
 ** @brief schedulerScheduleTableCfg locals
-** @details lorem 
+** @details lorem
 ********************************************************************************/
 /********************************************************************************
 **                           START OF THE SOURCE FILE                          **
@@ -34,13 +34,13 @@
   * *************************************************************************//**
   * @defgroup Macros_schedulerScheduleTableCfg_c Macros
   * @ingroup Local_schedulerScheduleTableCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Macros_schedulerScheduleTableCfg_c  
+  * @}
+  * Macros_schedulerScheduleTableCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -51,15 +51,15 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_schedulerScheduleTableCfg_c Variables  
+  * @defgroup Variables_schedulerScheduleTableCfg_c Variables
   * @ingroup Local_schedulerScheduleTableCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /* @cond S */
 __SEC_START(__OS_CONST_SECTION_START)
 /* @endcond*/
-const CosmOS_ScheduleTableConfigurationType ScheduleTableScheduler0CfgConst[SCHEDULETABLE_SCHEDULER_0_ELEMENT_NUM] __OS_CONST_SECTION 
-IS_INITIALIZED_TO 
+const CosmOS_ScheduleTableConfigurationType ScheduleTableScheduler0CfgConst[SCHEDULETABLE_SCHEDULER_0_ELEMENT_NUM] __OS_CONST_SECTION
+IS_INITIALIZED_TO
 {
 		{                                                           /* ScheduleTableScheduler0CfgConst element 0        */
         TASK_0_SCHEDULER_0_EXECUTION_TICK_0,                    /* const bitWidth startTime                         */
@@ -74,8 +74,8 @@ IS_INITIALIZED_TO
         &TasksProgram1Core0Var[TASK_0_PROGRAM_1_CORE_0_ID],     /* CosmOS_TaskVariableType * taskVar                */
     },
 };
-const CosmOS_ScheduleTableConfigurationType ScheduleTableScheduler1CfgConst[SCHEDULETABLE_SCHEDULER_1_ELEMENT_NUM] __OS_CONST_SECTION 
-IS_INITIALIZED_TO 
+const CosmOS_ScheduleTableConfigurationType ScheduleTableScheduler1CfgConst[SCHEDULETABLE_SCHEDULER_1_ELEMENT_NUM] __OS_CONST_SECTION
+IS_INITIALIZED_TO
 {
 		{                                                           /* ScheduleTableScheduler1CfgConst element 0        */
         TASK_0_SCHEDULER_1_EXECUTION_TICK_0,                    /* const bitWidth startTime                         */
@@ -93,8 +93,8 @@ IS_INITIALIZED_TO
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Variables_schedulerScheduleTableCfg_c  
+  * @}
+  * Variables_schedulerScheduleTableCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -105,47 +105,47 @@ IS_INITIALIZED_TO
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_schedulerScheduleTableCfg_c API's  
+  * @defgroup Apis_schedulerScheduleTableCfg_c API's
   * @ingroup Local_schedulerScheduleTableCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_schedulerScheduleTableCfg_c Getters  
-  * @ingroup Apis_schedulerScheduleTableCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}       
-  * Getters_schedulerScheduleTableCfg_c
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup Setters_schedulerScheduleTableCfg_c Setters  
-  * @ingroup Apis_schedulerScheduleTableCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}    
-  * Setters_schedulerScheduleTableCfg_c   
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup General_schedulerScheduleTableCfg_c General  
-  * @ingroup Apis_schedulerScheduleTableCfg_c                                            
-  * @{                                                                           
+  * @addtogroup Getters_schedulerScheduleTableCfg_c Getters
+  * @ingroup Apis_schedulerScheduleTableCfg_c
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * General_schedulerScheduleTableCfg_c  
+  * Getters_schedulerScheduleTableCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup Setters_schedulerScheduleTableCfg_c Setters
+  * @ingroup Apis_schedulerScheduleTableCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * Setters_schedulerScheduleTableCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup General_schedulerScheduleTableCfg_c General
+  * @ingroup Apis_schedulerScheduleTableCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * General_schedulerScheduleTableCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **

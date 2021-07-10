@@ -8,11 +8,11 @@
 ** @file schedulableCfg.c
 *********************************************************************************
 <!--                schedulableCfg Unit Local Group Definition                -->
-*********************************************************************************	
+*********************************************************************************
 ** @defgroup Local_schedulableCfg Local
-** @ingroup schedulableCfg_unit 
+** @ingroup schedulableCfg_unit
 ** @brief schedulableCfg locals
-** @details lorem 
+** @details lorem
 ********************************************************************************/
 /********************************************************************************
 **                           START OF THE SOURCE FILE                          **
@@ -35,13 +35,13 @@
   * *************************************************************************//**
   * @defgroup Macros_schedulableCfg_c Macros
   * @ingroup Local_schedulableCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Macros_schedulableCfg_c  
+  * @}
+  * Macros_schedulableCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -52,9 +52,9 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_schedulableCfg_c Variables  
+  * @defgroup Variables_schedulableCfg_c Variables
   * @ingroup Local_schedulableCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /* @cond S */
 __SEC_START(__OS_CONST_SECTION_START)
@@ -87,7 +87,7 @@ IS_INITIALIZED_TO
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
         wrapped_Task_0_Core_0_Handler,                                        /* const CosmOS_HandlerType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
-        SCHEDULABLE_3_UNIQUE_ID,                                          /* const BitWidthType id                                         */
+        SCHEDULABLE_2_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_0_PROGRAM_1_CORE_0_ID,                                   /* const BitWidthType instanceId                                                */
         PROGRAM_1_CORE_0_ID,                                          /* const BitWidthType programId                                         */
         CORE_0_ID,                                                    /* const BitWidthType coreId                                            */
@@ -97,7 +97,7 @@ IS_INITIALIZED_TO
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
         wrapped_Idle_CM4,                                        /* const CosmOS_HandlerType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
-        SCHEDULABLE_4_UNIQUE_ID,                                          /* const BitWidthType id                                         */
+        SCHEDULABLE_3_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_0_PROGRAM_0_CORE_1_ID,                                   /* const BitWidthType instanceId                                                */
         PROGRAM_0_CORE_1_ID,                                          /* const BitWidthType programId                                         */
         CORE_1_ID,                                                    /* const BitWidthType coreId                                            */
@@ -107,7 +107,7 @@ IS_INITIALIZED_TO
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
         wrapped_sysJobs_CM4,                                        /* const CosmOS_HandlerType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
-        SCHEDULABLE_5_UNIQUE_ID,                                          /* const BitWidthType id                                         */
+        SCHEDULABLE_4_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_1_PROGRAM_0_CORE_1_ID,                                   /* const BitWidthType instanceId                                                */
         PROGRAM_0_CORE_1_ID,                                          /* const BitWidthType programId                                         */
         CORE_1_ID,                                                    /* const BitWidthType coreId                                            */
@@ -117,7 +117,7 @@ IS_INITIALIZED_TO
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
         wrapped_Task_0_Core_1_Handler,                                        /* const CosmOS_HandlerType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
-        SCHEDULABLE_7_UNIQUE_ID,                                          /* const BitWidthType id                                         */
+        SCHEDULABLE_5_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_0_PROGRAM_1_CORE_1_ID,                                   /* const BitWidthType instanceId                                                */
         PROGRAM_1_CORE_1_ID,                                          /* const BitWidthType programId                                         */
         CORE_1_ID,                                                    /* const BitWidthType coreId                                            */
@@ -132,7 +132,7 @@ IS_INITIALIZED_TO
         SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
         wrapped_IdleThread_CM7,                                        /* const CosmOS_HandlerType handler                            */
         True,                                                             /* const CosmOS_BooleanType fp                                              */
-        SCHEDULABLE_2_UNIQUE_ID,                                          /* const BitWidthType id                                         */
+        SCHEDULABLE_6_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         THREAD_0_PROGRAM_0_CORE_0_ID,                                     /* const BitWidthType instanceId                                                    */
         PROGRAM_0_CORE_0_ID,                                              /* const BitWidthType programId                                             */
         CORE_0_ID,                                                        /* const BitWidthType coreId                                                */
@@ -142,7 +142,7 @@ IS_INITIALIZED_TO
         SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
         wrapped_IdleThread_CM4,                                        /* const CosmOS_HandlerType handler                            */
         False,                                                             /* const CosmOS_BooleanType fp                                              */
-        SCHEDULABLE_6_UNIQUE_ID,                                          /* const BitWidthType id                                         */
+        SCHEDULABLE_7_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         THREAD_0_PROGRAM_0_CORE_1_ID,                                     /* const BitWidthType instanceId                                                    */
         PROGRAM_0_CORE_1_ID,                                              /* const BitWidthType programId                                             */
         CORE_1_ID,                                                        /* const BitWidthType coreId                                                */
@@ -210,8 +210,8 @@ __SEC_STOP(__OS_VAR_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Variables_schedulableCfg_c  
+  * @}
+  * Variables_schedulableCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -222,47 +222,47 @@ __SEC_STOP(__OS_VAR_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_schedulableCfg_c API's  
+  * @defgroup Apis_schedulableCfg_c API's
   * @ingroup Local_schedulableCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_schedulableCfg_c Getters  
-  * @ingroup Apis_schedulableCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}       
-  * Getters_schedulableCfg_c
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup Setters_schedulableCfg_c Setters  
-  * @ingroup Apis_schedulableCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}    
-  * Setters_schedulableCfg_c   
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup General_schedulableCfg_c General  
-  * @ingroup Apis_schedulableCfg_c                                            
-  * @{                                                                           
+  * @addtogroup Getters_schedulableCfg_c Getters
+  * @ingroup Apis_schedulableCfg_c
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * General_schedulableCfg_c  
+  * Getters_schedulableCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup Setters_schedulableCfg_c Setters
+  * @ingroup Apis_schedulableCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * Setters_schedulableCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup General_schedulableCfg_c General
+  * @ingroup Apis_schedulableCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * General_schedulableCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
@@ -271,54 +271,6 @@ __SEC_STOP(__OS_VAR_SECTION_STOP)
 **                        Function Definitions | Start                         **
 ********************************************************************************/
 
-void wrapped_Idle_CM7(void)
-{
-    Idle_CM7();
-    for(;;);
-};
-void wrapped_sysJobs_CM7(void)
-{
-    sysCalls_os(SYSCALL_SYSJOBS_DISPATCHER);
-    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
-    for(;;);
-};
-void wrapped_Task_0_Core_0_Handler(void)
-{
-    Task_0_Core_0_Handler();
-    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
-    for(;;);
-};
-void wrapped_Idle_CM4(void)
-{
-    Idle_CM4();
-    for(;;);
-};
-void wrapped_sysJobs_CM4(void)
-{
-    sysCalls_os(SYSCALL_SYSJOBS_DISPATCHER);
-    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
-    for(;;);
-};
-void wrapped_Task_0_Core_1_Handler(void)
-{
-    Task_0_Core_1_Handler();
-    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
-    for(;;);
-};
-void wrapped_IdleThread_CM7(void)
-{
-    while ( 1 )
-    {
-        IdleThread_CM7();
-    }
-};
-void wrapped_IdleThread_CM4(void)
-{
-    while ( 1 )
-    {
-        IdleThread_CM4();
-    }
-};
 /********************************************************************************
 **                        Function Definitions | Stop                          **
 ********************************************************************************/
