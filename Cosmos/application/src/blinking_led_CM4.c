@@ -33,6 +33,8 @@
 ********************************************************************************/
 /* Task in the program blinking_led_CM4 */
 extern void Task_0_Core_1_Handler(void);
+
+/* Threads in the program blinking_led_CM4 */
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -66,9 +68,9 @@ int counter_cm4 __BLINKING_LED_CM4_INIT_SECTION = 0;
 __SEC_STOP(__BLINKING_LED_CM4_INIT_SECTION_STOP)
 
 /********************************************************************************
-** Task ID macro = TASK_0_PROGRAM__CORE__ID
-** Program ID macro = PROGRAM__CORE__ID
-** WCET macro = TASK_0_PROGRAM__CORE__WCET
+** Task ID macro = TASK_0_PROGRAM_1_CORE_1_ID
+** Program ID macro = PROGRAM_1_CORE_1_ID
+** WCET macro = TASK_0_PROGRAM_1_CORE_1_WCET
 ** Period of task in ticks = 50
 ********************************************************************************/
 void Task_0_Core_1_Handler(void)
@@ -91,6 +93,7 @@ else
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
+
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **
 ********************************************************************************/

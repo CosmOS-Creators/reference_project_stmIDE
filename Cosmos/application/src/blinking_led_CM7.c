@@ -33,6 +33,8 @@
 ********************************************************************************/
 /* Task in the program blinking_led_CM7 */
 extern void Task_0_Core_0_Handler(void);
+
+/* Threads in the program blinking_led_CM7 */
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -67,9 +69,9 @@ float __BLINKING_LED_CM7_INIT_SECTION floatTestTask = 0;
 __SEC_STOP(__BLINKING_LED_CM7_INIT_SECTION_STOP)
 
 /********************************************************************************
-** Task ID macro = TASK_0_PROGRAM__CORE__ID
-** Program ID macro = PROGRAM__CORE__ID
-** WCET macro = TASK_0_PROGRAM__CORE__WCET
+** Task ID macro = TASK_0_PROGRAM_1_CORE_0_ID
+** Program ID macro = PROGRAM_1_CORE_0_ID
+** WCET macro = TASK_0_PROGRAM_1_CORE_0_WCET
 ** Period of task in ticks = 50
 ********************************************************************************/
 void Task_0_Core_0_Handler(void)
@@ -93,6 +95,7 @@ __asm volatile ("VMUL.F32 s0, s0, s1"); //testing FPU context switch
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
+
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **
 ********************************************************************************/
