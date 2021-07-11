@@ -7,9 +7,8 @@
 	"ApplicationGenDir": "{workspace}/Cosmos/application",
 	"GeneratorConfig": "{workspace}/Cosmos/configuration/FileGeneration.json",
 	"TemplateDir": [
-		"{workspace}/Cosmos/customBox/newGenerator/templates"
+		"{workspace}/Cosmos/customBox/python/Generator/templates"
 	],
-	"testOutDir": "{workspace}/Cosmos/newGenerated",
     "config": [
 		"{CoreConfig}",
 		"{HWConfig}"
