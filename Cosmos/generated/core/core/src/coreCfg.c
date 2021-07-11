@@ -59,9 +59,9 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_CoreConfigurationType CoresCfgConst[CORE_NUM] __OS_CONST_SECTION
+const CosmOS_CoreConfigurationType CoresCfgConst[CORE_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{                                               /* CoresCfgConst[CORE_0_ID]                         */
@@ -76,13 +76,13 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__OS_VAR_SECTION_START)
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_CoreVariableType CoresVar[CORE_NUM] __OS_VAR_SECTION
+CosmOS_CoreVariableType CoresVar[CORE_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
 		{                                               /* CoresVar[CORE_0_ID]                                  */
@@ -107,7 +107,7 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_VAR_SECTION_STOP)
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

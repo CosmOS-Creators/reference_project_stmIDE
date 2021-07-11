@@ -58,9 +58,9 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_SchedulerConfigurationType SchedulersCfgConst[SCHEDULER_NUM] __OS_CONST_SECTION
+const CosmOS_SchedulerConfigurationType SchedulersCfgConst[SCHEDULER_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{                                                           /* SchedulersCfgConst[SCHEDULER_CORE_0_ID]           */
@@ -89,13 +89,13 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__OS_VAR_SECTION_START)
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_SchedulerVariableType SchedulersVar[SCHEDULER_NUM] __OS_VAR_SECTION
+CosmOS_SchedulerVariableType SchedulersVar[SCHEDULER_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
 		{                                                   /* SchedulersCfgConst[SCHEDULER_CORE_0_ID]          */
@@ -118,7 +118,7 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_VAR_SECTION_STOP)
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

@@ -56,48 +56,48 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_VAR_SECTION_START)
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-unsigned char buffer0Arr[BUFFER_0_SIZE] __OS_VAR_SECTION;
-unsigned char buffer1Arr[BUFFER_1_SIZE] __OS_VAR_SECTION;
-unsigned char buffer2Arr[BUFFER_2_SIZE] __OS_VAR_SECTION;
+unsigned char buffer0Arr[BUFFER_0_SIZE] __OS_VARS_SECTION;
+unsigned char buffer1Arr[BUFFER_1_SIZE] __OS_VARS_SECTION;
+unsigned char buffer2Arr[BUFFER_2_SIZE] __OS_VARS_SECTION;
 /* @cond S */
-__SEC_STOP(__OS_VAR_SECTION_STOP)
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_BufferConfigurationType BuffersCfgConst[BUFFER_NUM] __OS_CONST_SECTION
+const CosmOS_BufferConfigurationType BuffersCfgConst[BUFFER_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
         buffer0Arr,
         BUFFER_0_ID,
         BUFFER_0_SIZE,
-        PermissionsBuffer0ReadCfgConst,
-        PermissionsBuffer0WriteCfgConst,
+        &PermissionsBuffer0ReadCfgConst,
+        &PermissionsBuffer0WriteCfgConst,
     },
 		{
         buffer1Arr,
         BUFFER_1_ID,
         BUFFER_1_SIZE,
-        PermissionsBuffer1ReadCfgConst,
-        PermissionsBuffer1WriteCfgConst,
+        &PermissionsBuffer1ReadCfgConst,
+        &PermissionsBuffer1WriteCfgConst,
     },
 		{
         buffer2Arr,
         BUFFER_2_ID,
         BUFFER_2_SIZE,
-        PermissionsBuffer2ReadCfgConst,
-        PermissionsBuffer2WriteCfgConst,
+        &PermissionsBuffer2ReadCfgConst,
+        &PermissionsBuffer2WriteCfgConst,
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 
-CosmOS_BufferVariableType BuffersVar[BUFFER_NUM] __OS_VAR_SECTION
+CosmOS_BufferVariableType BuffersVar[BUFFER_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
 		{
@@ -120,7 +120,7 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_VAR_SECTION_STOP)
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

@@ -56,58 +56,58 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_ThreadConfigurationType ThreadsProgram0Core0CfgConst[THREAD_PROGRAM_0_CORE_0_NUM] __OS_CONST_SECTION
+const CosmOS_ThreadConfigurationType ThreadsProgram0Core0CfgConst[THREAD_PROGRAM_0_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
         0,       /* const BitWidthType dummy                 */
     },
 };
-const CosmOS_ThreadConfigurationType ThreadsProgram1Core0CfgConst[THREAD_PROGRAM_1_CORE_0_NUM] __OS_CONST_SECTION
+const CosmOS_ThreadConfigurationType ThreadsProgram1Core0CfgConst[THREAD_PROGRAM_1_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 };
-const CosmOS_ThreadConfigurationType ThreadsProgram0Core1CfgConst[THREAD_PROGRAM_0_CORE_1_NUM] __OS_CONST_SECTION
+const CosmOS_ThreadConfigurationType ThreadsProgram0Core1CfgConst[THREAD_PROGRAM_0_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
         0,       /* const BitWidthType dummy                 */
     },
 };
-const CosmOS_ThreadConfigurationType ThreadsProgram1Core1CfgConst[THREAD_PROGRAM_1_CORE_1_NUM] __OS_CONST_SECTION
+const CosmOS_ThreadConfigurationType ThreadsProgram1Core1CfgConst[THREAD_PROGRAM_1_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__OS_VAR_SECTION_START)
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_ThreadVariableType ThreadsProgram0Core0Var[THREAD_PROGRAM_0_CORE_0_NUM] __OS_VAR_SECTION
+CosmOS_ThreadVariableType ThreadsProgram0Core0Var[THREAD_PROGRAM_0_CORE_0_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
 		{
-        &ThreadsProgram0Core0CfgConst[THREAD_0_PROGRAM__CORE__ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
+        &ThreadsProgram0Core0CfgConst[THREAD_0_PROGRAM_0_CORE_0_ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
     },
 };
-CosmOS_ThreadVariableType ThreadsProgram1Core0Var[THREAD_PROGRAM_1_CORE_0_NUM] __OS_VAR_SECTION
+CosmOS_ThreadVariableType ThreadsProgram1Core0Var[THREAD_PROGRAM_1_CORE_0_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
 };
-CosmOS_ThreadVariableType ThreadsProgram0Core1Var[THREAD_PROGRAM_0_CORE_1_NUM] __OS_VAR_SECTION
+CosmOS_ThreadVariableType ThreadsProgram0Core1Var[THREAD_PROGRAM_0_CORE_1_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
 		{
-        &ThreadsProgram0Core1CfgConst[THREAD_0_PROGRAM__CORE__ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
+        &ThreadsProgram0Core1CfgConst[THREAD_0_PROGRAM_0_CORE_1_ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
     },
 };
-CosmOS_ThreadVariableType ThreadsProgram1Core1Var[THREAD_PROGRAM_1_CORE_1_NUM] __OS_VAR_SECTION
+CosmOS_ThreadVariableType ThreadsProgram1Core1Var[THREAD_PROGRAM_1_CORE_1_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
 };

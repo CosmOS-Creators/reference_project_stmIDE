@@ -56,9 +56,9 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_ScheduleTableConfigurationType ScheduleTableScheduler0CfgConst[SCHEDULETABLE_SCHEDULER_0_ELEMENT_NUM] __OS_CONST_SECTION
+const CosmOS_ScheduleTableConfigurationType ScheduleTableScheduler0CfgConst[SCHEDULETABLE_SCHEDULER_0_ELEMENT_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{                                                           /* ScheduleTableScheduler0CfgConst element 0        */
@@ -74,7 +74,7 @@ IS_INITIALIZED_TO
         &TasksProgram1Core0Var[TASK_0_PROGRAM_1_CORE_0_ID],     /* CosmOS_TaskVariableType * taskVar                */
     },
 };
-const CosmOS_ScheduleTableConfigurationType ScheduleTableScheduler1CfgConst[SCHEDULETABLE_SCHEDULER_1_ELEMENT_NUM] __OS_CONST_SECTION
+const CosmOS_ScheduleTableConfigurationType ScheduleTableScheduler1CfgConst[SCHEDULETABLE_SCHEDULER_1_ELEMENT_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{                                                           /* ScheduleTableScheduler1CfgConst element 0        */

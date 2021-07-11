@@ -63,9 +63,9 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_GenericVoidType RoutesFuncConst[ROUTES_FUNC_NUM] __OS_CONST_SECTION
+const CosmOS_GenericVoidType RoutesFuncConst[ROUTES_FUNC_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		(CosmOS_GenericVoidType)buffer_readArray,
@@ -77,7 +77,7 @@ IS_INITIALIZED_TO
 		(CosmOS_GenericVoidType)sysJobs_dispatcher,
 };
 
-const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONST_SECTION
+const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		BUFFER_READARRAY,
@@ -93,7 +93,7 @@ IS_INITIALIZED_TO
 		SYSJOBS_DISPATCHER,
 };
 
-const BitWidthType RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONST_SECTION
+const BitWidthType RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		BUFFER_0_ID,
@@ -109,7 +109,7 @@ IS_INITIALIZED_TO
 		ROUTES_ID_TO_ENTITY_DUMMY,
 };
 
-const CosmOS_RoutesConfigurationType RoutesConstCfg __OS_CONST_SECTION
+const CosmOS_RoutesConfigurationType RoutesConstCfg __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
     RoutesFuncConst,        /* const CosmOS_GenericVoidType * routeFunc               */
@@ -117,7 +117,7 @@ IS_INITIALIZED_TO
     RoutesIdToEntityConst,  /* const BitWidthType * routeIdToEntity                */
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

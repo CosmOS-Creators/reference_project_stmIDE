@@ -55,9 +55,9 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_VAR_SECTION_START)
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_BarrierVariableType BarriersCore0Var[BARRIERS_NUM] __OS_VAR_SECTION
+CosmOS_BarrierVariableType BarriersCore0Var[BARRIERS_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
     {                 /* BarriersCore0Var[OS_INIT_ID]                     */
@@ -73,7 +73,7 @@ IS_INITIALIZED_TO
         BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState                */
     },
 };
-CosmOS_BarrierVariableType BarriersCore1Var[BARRIERS_NUM] __OS_VAR_SECTION
+CosmOS_BarrierVariableType BarriersCore1Var[BARRIERS_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
     {                 /* BarriersCore1Var[OS_INIT_ID]                     */
@@ -90,7 +90,7 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_VAR_SECTION_STOP)
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

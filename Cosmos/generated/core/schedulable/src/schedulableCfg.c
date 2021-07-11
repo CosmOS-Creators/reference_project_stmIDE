@@ -57,9 +57,9 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_SchedulableConfigurationType TasksSchedulablesCfgConst[TASK_NUM] __OS_CONST_SECTION
+const CosmOS_SchedulableConfigurationType TasksSchedulablesCfgConst[TASK_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
@@ -124,7 +124,7 @@ IS_INITIALIZED_TO
     },
 };
 
-const CosmOS_SchedulableConfigurationType ThreadsSchedulablesCfgConst[THREAD_NUM] __OS_CONST_SECTION
+const CosmOS_SchedulableConfigurationType ThreadsSchedulablesCfgConst[THREAD_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
@@ -149,13 +149,13 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__OS_VAR_SECTION_START)
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_SchedulableVariableType TasksSchedulablesVar[TASK_NUM] __OS_VAR_SECTION
+CosmOS_SchedulableVariableType TasksSchedulablesVar[TASK_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
 		{
@@ -190,7 +190,7 @@ IS_INITIALIZED_TO
     },
 };
 
-CosmOS_SchedulableVariableType ThreadsSchedulablesVar[THREAD_NUM] __OS_VAR_SECTION
+CosmOS_SchedulableVariableType ThreadsSchedulablesVar[THREAD_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
 		{
@@ -205,7 +205,7 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_VAR_SECTION_STOP)
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
@@ -271,6 +271,54 @@ __SEC_STOP(__OS_VAR_SECTION_STOP)
 **                        Function Definitions | Start                         **
 ********************************************************************************/
 
+void wrapped_Idle_CM7(void)
+{
+    Idle_CM7();
+    for(;;);
+};
+void wrapped_sysJobs_CM7(void)
+{
+    sysCalls_os(SYSCALL_SYSJOBS_DISPATCHER);
+    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    for(;;);
+};
+void wrapped_Task_0_Core_0_Handler(void)
+{
+    Task_0_Core_0_Handler();
+    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    for(;;);
+};
+void wrapped_Idle_CM4(void)
+{
+    Idle_CM4();
+    for(;;);
+};
+void wrapped_sysJobs_CM4(void)
+{
+    sysCalls_os(SYSCALL_SYSJOBS_DISPATCHER);
+    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    for(;;);
+};
+void wrapped_Task_0_Core_1_Handler(void)
+{
+    Task_0_Core_1_Handler();
+    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    for(;;);
+};
+void wrapped_IdleThread_CM7(void)
+{
+    while ( 1 )
+    {
+        IdleThread_CM7();
+    }
+};
+void wrapped_IdleThread_CM4(void)
+{
+    while ( 1 )
+    {
+        IdleThread_CM4();
+    }
+};
 /********************************************************************************
 **                        Function Definitions | Stop                          **
 ********************************************************************************/

@@ -60,9 +60,9 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_OsConfigurationType OsCfg __OS_CONST_SECTION
+const CosmOS_OsConfigurationType OsCfg __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {                       /* osCfg                                        */
     CoresCfgConst,      /* const CosmOS_CoreConfigurationType * cores      */
@@ -72,13 +72,13 @@ IS_INITIALIZED_TO
     &RoutesConstCfg,    /* const CosmOS_RoutesConfigurationType route     */
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__OS_VAR_SECTION_START)
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_OsVariableType OsVar __OS_VAR_SECTION
+CosmOS_OsVariableType OsVar __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {                       /* osVar                                                      */
     &OsCfg,             /* const CosmOS_OsConfigurationType * cfg                     */
@@ -87,7 +87,7 @@ IS_INITIALIZED_TO
     BuffersDoubleVar,   /* CosmOS_BufferDoubleVariableType * const bufferDoubleVars   */
 };
 /* @cond S */
-__SEC_STOP(__OS_VAR_SECTION_STOP)
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

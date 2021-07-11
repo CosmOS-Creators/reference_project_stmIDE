@@ -5,7 +5,7 @@
 			"type": "shell",
 			"label": "Compile",
 			"options": {
-				"cwd": "${workspaceFolder}/Cosmos/generated/build/${input:Core}/makefiles"
+				"cwd": "${workspaceFolder}/Cosmos/generated/build/system/${input:Core}/makefiles"
 			},
 			"command": "make -j${input:core_num}",
 			"group": "build",
@@ -17,7 +17,7 @@
 			"type": "shell",
 			"label": "Compile and flash",
 			"options": {
-				"cwd": "${workspaceFolder}/Cosmos/generated/build/${input:Core}/makefiles"
+				"cwd": "${workspaceFolder}/Cosmos/generated/build/system/${input:Core}/makefiles"
 			},
 			"command": "make flash",
 			"group": "build"
@@ -26,7 +26,7 @@
 			"type": "shell",
 			"label": "Clean",
 			"options": {
-				"cwd": "${workspaceFolder}/Cosmos/generated/build/${input:Core}/makefiles"
+				"cwd": "${workspaceFolder}/Cosmos/generated/build/system/${input:Core}/makefiles"
 			},
 			"command": "make clean",
 			"group": "build"
@@ -68,7 +68,7 @@
 				"-f",
 				"\"C:/Program Files/OpenOCD-0.10.0-13/scripts/board/st_nucleo_h755zi.cfg\"",
 				"-c",
-				"\"program generated/build/${input:Core}/bin/${input:Core}core.elf verify reset exit\""
+				"\"program generated/build/system/${input:Core}/bin/${input:Core}core.elf verify reset exit\""
 			],
 			"dependsOn": [
 				"Compile"
@@ -79,7 +79,7 @@
 			"type": "shell",
 			"label": "Compile M7",
 			"options": {
-				"cwd": "${workspaceFolder}/Cosmos/generated/build/CM7/makefiles"
+				"cwd": "${workspaceFolder}/Cosmos/generated/build/system/CM7/makefiles"
 			},
 			"command": "make"
 		},
@@ -87,7 +87,7 @@
 			"type": "shell",
 			"label": "Compile M4",
 			"options": {
-				"cwd": "${workspaceFolder}/Cosmos/generated/build/CM4/makefiles"
+				"cwd": "${workspaceFolder}/Cosmos/generated/build/system/CM4/makefiles"
 			},
 			"command": "make"
 		},
@@ -95,7 +95,7 @@
 			"type": "shell",
 			"label": "Compile and flash M4",
 			"options": {
-				"cwd": "${workspaceFolder}/Cosmos/generated/build/CM4/makefiles"
+				"cwd": "${workspaceFolder}/Cosmos/generated/build/system/CM4/makefiles"
 			},
 			"command": "make flash",
 			"problemMatcher": []
@@ -104,7 +104,7 @@
 			"type": "shell",
 			"label": "Compile and flash M7",
 			"options": {
-				"cwd": "${workspaceFolder}/Cosmos/generated/build/CM7/makefiles"
+				"cwd": "${workspaceFolder}/Cosmos/generated/build/system/CM7/makefiles"
 			},
 			"command": "make flash",
 			"problemMatcher": []

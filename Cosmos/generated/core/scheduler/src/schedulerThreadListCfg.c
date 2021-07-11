@@ -56,16 +56,16 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_ThreadListConfigurationType SchedulerThreadListScheduler0CfgConst[SCHEDULERTHREADLIST_SCHEDULER_0_ELEMENT_NUM] __OS_CONST_SECTION
+const CosmOS_ThreadListConfigurationType SchedulerThreadListScheduler0CfgConst[SCHEDULERTHREADLIST_SCHEDULER_0_ELEMENT_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
         &ThreadsProgram0Core0Var[THREAD_0_PROGRAM_0_CORE_0_ID],   /* CosmOS_ThreadVariableType * thread                  */
     },
 };
-const CosmOS_ThreadListConfigurationType SchedulerThreadListScheduler1CfgConst[SCHEDULERTHREADLIST_SCHEDULER_1_ELEMENT_NUM] __OS_CONST_SECTION
+const CosmOS_ThreadListConfigurationType SchedulerThreadListScheduler1CfgConst[SCHEDULERTHREADLIST_SCHEDULER_1_ELEMENT_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
@@ -73,7 +73,7 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

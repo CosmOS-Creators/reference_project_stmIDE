@@ -14,6 +14,15 @@
 	},
 	{
 		"templates": [
+			"linker/gnu/arm/linker"
+		],
+		"outputDir": "{CoreGeneratedDir}/linker",
+		"loop": "cores/:CoreName",
+		"fileName": "{target}",
+		"target": "core"
+	},
+	{
+		"templates": [
 			"core/thread/thread"
 		],
 		"outputDir": "{CoreGeneratedDir}/thread",
@@ -42,6 +51,17 @@
         "fileName": "{template}",
         "pattern": {
             ".h": "inc"
+        }
+    },
+	{
+        "templates": [
+            "core/sysJobs/sysJobs"
+        ],
+        "outputDir": "{CoreGeneratedDir}/sysJobs",
+        "fileName": "{template}",
+        "pattern": {
+            ".h": "inc",
+			".c": "src"
         }
     },
 	{

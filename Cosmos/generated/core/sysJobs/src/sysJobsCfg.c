@@ -8,13 +8,13 @@
 ** @file sysJobsCfg.c
 *********************************************************************************
 <!--                   sysJobsCfg Unit Local Group Definition                 -->
-*********************************************************************************	
+*********************************************************************************
 ** @defgroup Local_sysJobsCfg Local
-** @ingroup sysJobsCfg_unit 
+** @ingroup sysJobsCfg_unit
 ** @brief sysJobsCfg locals
-** @details lorem 
-********************************************************************************/ 
-/********************************************************************************  
+** @details lorem
+********************************************************************************/
+/********************************************************************************
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /********************************************************************************
@@ -23,6 +23,7 @@
 /* CORE interfaces */
 #include "sysJobsCfg.h"
 /* GENERATED interfaces */
+#include "CILuart.h"
 #include "CILuart.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
@@ -35,13 +36,13 @@
   * *************************************************************************//**
   * @defgroup Macros_sysJobsCfg Macros
   * @ingroup Local_sysJobsCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Macros_sysJobsCfg  
+  * @}
+  * Macros_sysJobsCfg
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -52,24 +53,24 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_sysJobsCfg Variables  
+  * @defgroup Variables_sysJobsCfg Variables
   * @ingroup Local_sysJobsCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_GenericVoidType SysJobsHandlersGroup0Core0Const[SYSJOBS_HANDLERS_GROUP_0_CORE_0_NUM] __OS_CONST_SECTION
+const CosmOS_GenericVoidType SysJobsHandlersGroup0Core0Const[SYSJOBS_HANDLERS_GROUP_0_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
     (CosmOS_GenericVoidType)CILuart_sysJob,
 };
-const CosmOS_GenericVoidType SysJobsHandlersGroup0Core1Const[SYSJOBS_HANDLERS_GROUP_0_CORE_1_NUM] __OS_CONST_SECTION
+const CosmOS_GenericVoidType SysJobsHandlersGroup0Core1Const[SYSJOBS_HANDLERS_GROUP_0_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
     (CosmOS_GenericVoidType)CILuart_sysJob,
 };
-const CosmOS_SysJobsGroupConfigurationType SysJobsGroupsCore0ConstCfg[SYSJOBS_GROUPS_CORE_0_NUM] __OS_CONST_SECTION
+const CosmOS_SysJobsGroupConfigurationType SysJobsGroupsCore0ConstCfg[SYSJOBS_GROUPS_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
     {
@@ -78,7 +79,7 @@ IS_INITIALIZED_TO
         SYSJOBS_GROUP_0_CORE_0_TICK_MULTIPLICATOR,      /* const BitWidthType tickMultiplicator             */
     },
 };
-const CosmOS_SysJobsGroupConfigurationType SysJobsGroupsCore1ConstCfg[SYSJOBS_GROUPS_CORE_1_NUM] __OS_CONST_SECTION
+const CosmOS_SysJobsGroupConfigurationType SysJobsGroupsCore1ConstCfg[SYSJOBS_GROUPS_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
     {
@@ -87,7 +88,7 @@ IS_INITIALIZED_TO
         SYSJOBS_GROUP_0_CORE_1_TICK_MULTIPLICATOR,      /* const BitWidthType tickMultiplicator             */
     },
 };
-const CosmOS_SysJobsConfigurationType SysJobsConstCfg[CORE_NUM] __OS_CONST_SECTION
+const CosmOS_SysJobsConfigurationType SysJobsConstCfg[CORE_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
     {
@@ -102,14 +103,14 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__OS_VAR_SECTION_START)
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_SysJobsVariableType SysJobsVar[CORE_NUM] __OS_VAR_SECTION 
-IS_INITIALIZED_TO 
+CosmOS_SysJobsVariableType SysJobsVar[CORE_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO
 {
     {
         &SysJobsConstCfg[CORE_0_ID],    /* const CosmOS_SysJobsConfigurationType * const cfg  */
@@ -121,13 +122,13 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_VAR_SECTION_STOP)
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Variables_sysJobsCfg  
+  * @}
+  * Variables_sysJobsCfg
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -138,47 +139,47 @@ __SEC_STOP(__OS_VAR_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_sysJobsCfg_c API's  
+  * @defgroup Apis_sysJobsCfg_c API's
   * @ingroup Local_sysJobsCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_sysJobsCfg_c Getters  
-  * @ingroup Apis_sysJobsCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}       
-  * Getters_sysJobsCfg_c
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup Setters_sysJobsCfg_c Setters  
-  * @ingroup Apis_sysJobsCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}    
-  * Setters_sysJobsCfg_c   
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup General_sysJobsCfg_c General  
-  * @ingroup Apis_sysJobsCfg_c                                            
-  * @{                                                                           
+  * @addtogroup Getters_sysJobsCfg_c Getters
+  * @ingroup Apis_sysJobsCfg_c
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * General_sysJobsCfg_c  
+  * Getters_sysJobsCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup Setters_sysJobsCfg_c Setters
+  * @ingroup Apis_sysJobsCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * Setters_sysJobsCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup General_sysJobsCfg_c General
+  * @ingroup Apis_sysJobsCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * General_sysJobsCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
