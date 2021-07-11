@@ -29,7 +29,7 @@
 			"name": "Debug Generator",
 			"type": "python",
 			"request": "launch",
-			"program": "${workspaceFolder}/Cosmos/customBox/python/generator/generator.py",
+			"program": "${workspaceFolder}/Cosmos/customBox/python/ConfigurationGenerator.py",
 			"args": [
 				"${workspaceFolder}/Cosmos/configuration/workspace.json"
 			],
