@@ -5,7 +5,7 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file default_CM7.c
+** @file blinking_led_CM4.c
 *********************************************************************************
 <!--                           Version Information                            -->
 *********************************************************************************
@@ -17,56 +17,82 @@
 ** @warning Modifying user sections comments can lead to removing user code
 **          during generating of the new CosmOS configuration
 ********************************************************************************/
-#include "default_CM7.h"
+#include "blinking_led_CM4.h"
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
-** start_name =default_CM7_includeFiles
+** start_name =blinking_led_CM4_includeFiles
 ********************************************************************************/
 #include "stm32h7xx_hal.h"
-#include "default_CM7.h"
+#include "blinking_led_CM4.h"
 /********************************************************************************
-** stop_name =default_CM7_includeFiles
+** stop_name =blinking_led_CM4_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Start                         **
 ********************************************************************************/
-/* Task in the program default_CM7 */
+/* Task in the program blinking_led_CM4 */
+extern void Task_0_Core_1_Handler(void);
 
-/* Threads in the program default_CM7 */
+/* Threads in the program blinking_led_CM4 */
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
 /********************************************************************************
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
-__SEC_START(__DEFAULT_CM7_NOINIT_SECTION_START)
-// If your compiler does not support pragmas use __DEFAULT_CM7_NOINIT__SECTION
+__SEC_START(__BLINKING_LED_CM4_NOINIT_SECTION_START)
+// If your compiler does not support pragmas use __BLINKING_LED_CM4_NOINIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =default_CM7_noInit
+** start_name =blinking_led_CM4_noInit
 ********************************************************************************/
 
 /********************************************************************************
-** stop_name =default_CM7_noInit
+** stop_name =blinking_led_CM4_noInit
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
-__SEC_STOP(__DEFAULT_CM7_NOINIT_SECTION_STOP)
+__SEC_STOP(__BLINKING_LED_CM4_NOINIT_SECTION_STOP)
 
-__SEC_START(__DEFAULT_CM7_INIT_SECTION_START)
-// If your compiler does not support pragmas use __DEFAULT_CM7_INIT_SECTION
+__SEC_START(__BLINKING_LED_CM4_INIT_SECTION_START)
+// If your compiler does not support pragmas use __BLINKING_LED_CM4_INIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =default_CM7_init
+** start_name =blinking_led_CM4_init
 ********************************************************************************/
-int __DEFAULT_CM7_INIT_SECTION counter_IdleThread_CM7 = 0;
-float __DEFAULT_CM7_INIT_SECTION floatTest = 0;
+int counter_cm4 __BLINKING_LED_CM4_INIT_SECTION = 0;
 /********************************************************************************
-** stop_name =default_CM7_init
+** stop_name =blinking_led_CM4_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
-__SEC_STOP(__DEFAULT_CM7_INIT_SECTION_STOP)
+__SEC_STOP(__BLINKING_LED_CM4_INIT_SECTION_STOP)
 
+/********************************************************************************
+** Task ID macro = TASK_0_PROGRAM_1_CORE_1_ID
+** Program ID macro = PROGRAM_1_CORE_1_ID
+** WCET macro = TASK_0_PROGRAM_1_CORE_1_WCET
+** Period of task in ticks = 50
+********************************************************************************/
+void Task_0_Core_1_Handler(void)
+{
+/********************************************************************************
+** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
+** start_name =Task_0_Core_1_Handler
+********************************************************************************/
+if (counter_cm4 > 100)
+{
+    counter_cm4 = 0;
+    cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
+}
+else
+{
+    counter_cm4++;
+}
+/********************************************************************************
+** stop_name =Task_0_Core_1_Handler
+** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
+********************************************************************************/
+};
 
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **

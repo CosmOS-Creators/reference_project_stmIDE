@@ -41,7 +41,7 @@
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 __SEC_START(__DEFAULT_CM4_NOINIT_SECTION_START)
-// If your compiler does not support pragmas use __DEFAULT_CM4_NOINIT__SECTION
+// If your compiler does not support pragmas use __DEFAULT_CM4_NOINIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =default_CM4_noInit

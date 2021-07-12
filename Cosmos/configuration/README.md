@@ -18,7 +18,7 @@ Consider the following example:
 {
   "Cosmos": "{workspace}/Cosmos",
   "CoreConfig": "{Cosmos}/configuration/systemDefinition",
-  "HWConfig": "{Cosmos}/stm32h755_integration/newConfiguration",
+  "HWConfig": "{Cosmos}/stm32h755_integration/configuration",
   "config": [
     "{CoreConfig}",
     "{HWConfig}"
@@ -28,7 +28,7 @@ Consider the following example:
 
 Using the example above the workspace parser would return an object containing a property for every key in the config file.
 Calling `workspace.CoreConfig` in python would return something like `C:\Files\Projects\Cosmos_reference_project\Cosmos` assuming that workspace is the name of the workspace object that was returned by the workspace parser.
-`workspace.config` would return something along the lines of: `[".../Cosmos_reference_project/Cosmos/configuration/systemDefinition", ".../Cosmos_reference_project/Cosmos/stm32h755_integration/newConfiguration"]`.
+`workspace.config` would return something along the lines of: `[".../Cosmos_reference_project/Cosmos/configuration/systemDefinition", ".../Cosmos_reference_project/Cosmos/stm32h755_integration/configuration"]`.
 The workspace parser also provides methods for making sure that certain properties exist inside the json and also for checking whether the given paths exist, are valid files or even prompt it to create the paths if they do not exist yet.
 This can be done using the following methods of the workspace object:
 
