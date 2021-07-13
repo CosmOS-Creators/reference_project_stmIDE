@@ -40,19 +40,19 @@
 		},
 		"compressedReadPermission": {
 			"placeholder": true,
-			"type": "referenceList"
+			"type": "stringList"
 		},
 		"compressedWritePermission": {
 			"placeholder": true,
-			"type": "referenceList"
+			"type": "stringList"
 		},
 		"compressedReadPermissionInverted": {
 			"placeholder": true,
-			"type": "referenceList"
+			"type": "stringList"
 		},
 		"compressedWritePermissionInverted": {
 			"placeholder": true,
-			"type": "referenceList"
+			"type": "stringList"
 		},
 		"bufferId": {
 			"placeholder": true,

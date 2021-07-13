@@ -1,182 +1,114 @@
 {
 	"version": "1.0.0",
-
-	"attributes": {
-		"CoreName": {
-			"label": "Core Name",
-			"type": "string",
-			"validation": "^[A-Za-z0-9]+$",
-			"tooltip": "Current core name"
-		},
-		"bootOs": {
-			"label": "Boot OS",
-			"type": "bool",
-			"tooltip": "Will current core boot the operating system?"
-		},
-		"isCosmos": {
-			"label": "Is CosmOS core",
-			"type": "bool",
-			"tooltip": "Runs current core the CosmOS operating system?"
-		},
-		"unmappedDataMemory": {
-			"inherit": "memories/:memory",
-			"label": "Memory location of the unmapped data"
-		},
-		"unmappedDataSize": {
-			"label": "Unmapped data section size",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"tooltip": "Size of the unmapped data section"
-		},
-		"unmappedDataLowAddress": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"unmappedDataHighAddress": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"cpu": {
-			"type": "parentReference"
-		},
-		"coreId": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"corePrograms": {
-			"placeholder": true,
-			"type": "referenceList"
-		},
-		"coreSysJobGroups": {
-			"placeholder": true,
-			"type": "referenceList"
-		},
-		"coreSysJobHyperTick": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"coreScheduler": {
-			"placeholder": true,
-			"type": "referenceList"
-		},
-		"coreNumberOfThreads": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"coreNumberOfTasks": {
-			"placeholder": true,
-			"type": "int"
-		}
-	},
+	"attributes": {},
 
 	"elements": {
 		"core_0":
 		[
 			{
-				"target": "CoreName",
+				"target": "coresAttributes/:CoreName",
 				"value": "CM7"
 			},
 			{
-				"target": "bootOs",
+				"target": "coresAttributes/:bootOs",
 				"value": false
 			},
 			{
-				"target": "isCosmos",
+				"target": "coresAttributes/:isCosmos",
 				"value": true
 			},
 			{
-				"target": "unmappedDataMemory",
+				"target": "coresAttributes/:unmappedDataMemory",
 				"value": "DTCM"
 			},
 			{
-				"target": "unmappedDataSize",
+				"target": "coresAttributes/:unmappedDataSize",
 				"value": 2048
 			},
 			{
-				"target": "unmappedDataLowAddress"
+				"target": "coresAttributes/:unmappedDataLowAddress"
 			},
 			{
-				"target": "unmappedDataHighAddress"
+				"target": "coresAttributes/:unmappedDataHighAddress"
 			},
 			{
-				"target": "cpu",
+				"target": "coresAttributes/:cpu",
 				"value": "cpu/CM7"
 			},
 			{
-				"target": "coreId"
+				"target": "coresAttributes/:coreId"
 			},
 			{
-				"target": "corePrograms"
+				"target": "coresAttributes/:corePrograms"
 			},
 			{
-				"target": "coreSysJobGroups"
+				"target": "coresAttributes/:coreSysJobGroups"
 			},
 			{
-				"target": "coreSysJobHyperTick"
+				"target": "coresAttributes/:coreSysJobHyperTick"
 			},
 			{
-				"target": "coreScheduler"
+				"target": "coresAttributes/:coreScheduler"
 			},
 			{
-				"target": "coreNumberOfThreads"
+				"target": "coresAttributes/:coreNumberOfThreads"
 			},
 			{
-				"target": "coreNumberOfTasks"
+				"target": "coresAttributes/:coreNumberOfTasks"
 			}
 		],
 		"core_1":
 		[
 			{
-				"target": "CoreName",
+				"target": "coresAttributes/:CoreName",
 				"value": "CM4"
 			},
 			{
-				"target": "bootOs",
+				"target": "coresAttributes/:bootOs",
 				"value": true
 			},
 			{
-				"target": "isCosmos",
+				"target": "coresAttributes/:isCosmos",
 				"value": true
 			},
 			{
-				"target": "unmappedDataMemory",
+				"target": "coresAttributes/:unmappedDataMemory",
 				"value": "SRAM1"
 			},
 			{
-				"target": "unmappedDataSize",
+				"target": "coresAttributes/:unmappedDataSize",
 				"value": 2048
 			},
 			{
-				"target": "unmappedDataLowAddress"
+				"target": "coresAttributes/:unmappedDataLowAddress"
 			},
 			{
-				"target": "unmappedDataHighAddress"
+				"target": "coresAttributes/:unmappedDataHighAddress"
 			},
 			{
-				"target": "cpu",
+				"target": "coresAttributes/:cpu",
 				"value": "cpu/CM4"
 			},
 			{
-				"target": "coreId"
+				"target": "coresAttributes/:coreId"
 			},
 			{
-				"target": "corePrograms"
+				"target": "coresAttributes/:corePrograms"
 			},
 			{
-				"target": "coreSysJobGroups"
+				"target": "coresAttributes/:coreSysJobGroups"
 			},
 			{
-				"target": "coreSysJobHyperTick"
+				"target": "coresAttributes/:coreSysJobHyperTick"
 			},
 			{
-				"target": "coreScheduler"
+				"target": "coresAttributes/:coreScheduler"
 			},
 			{
-				"target": "coreNumberOfThreads"
+				"target": "coresAttributes/:coreNumberOfThreads"
 			},
 			{
-				"target": "coreNumberOfTasks"
+				"target": "coresAttributes/:coreNumberOfTasks"
 			}
 		]
 	}

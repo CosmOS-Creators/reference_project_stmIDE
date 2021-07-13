@@ -5,6 +5,14 @@
 		"schedulableNum": {
 			"placeholder": true,
 			"type": "int"
+		},
+		"buffersNum": {
+			"placeholder": true,
+			"type": "int"
+		},
+		"doubleBuffersNum": {
+			"placeholder": true,
+			"type": "int"
 		}
 	},
 
@@ -13,6 +21,12 @@
 		[
 			{
 				"target": "schedulableNum"
+			},
+			{
+				"target": "buffersNum"
+			},
+			{
+				"target": "doubleBuffersNum"
 			}
 		]
 	}

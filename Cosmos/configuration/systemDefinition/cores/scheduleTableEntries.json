@@ -13,6 +13,10 @@
 		},
 		"task": {
 			"type": "parentReference"
+		},
+		"entryId": {
+			"placeholder": true,
+			"type": "int"
 		}
 	},
 
@@ -30,6 +34,9 @@
 			{
 				"target": "executionTick",
 				"value": 0
+			},
+			{
+				"target": "entryId"
 			}
 		],
 		"element_1":
@@ -45,6 +52,9 @@
 			{
 				"target": "executionTick",
 				"value": 45
+			},
+			{
+				"target": "entryId"
 			}
 		],
 		"element_2":
@@ -60,6 +70,9 @@
 			{
 				"target": "executionTick",
 				"value": 50
+			},
+			{
+				"target": "entryId"
 			}
 		],
 		"element_3":
@@ -75,6 +88,9 @@
 			{
 				"target": "executionTick",
 				"value": 0
+			},
+			{
+				"target": "entryId"
 			}
 		],
 		"element_4":
@@ -90,6 +106,9 @@
 			{
 				"target": "executionTick",
 				"value": 45
+			},
+			{
+				"target": "entryId"
 			}
 		],
 		"element_5":
@@ -105,6 +124,9 @@
 			{
 				"target": "executionTick",
 				"value": 50
+			},
+			{
+				"target": "entryId"
 			}
 		]
 	}
