@@ -6,7 +6,7 @@
 	],
 	"settings": {
 		"python.testing.pytestArgs": [
-			"--junitxml=./tests/results.xml"
+			"./Cosmos/customBox/python"
 		],
 		"python.testing.unittestEnabled": false,
 		"python.testing.nosetestsEnabled": false,
