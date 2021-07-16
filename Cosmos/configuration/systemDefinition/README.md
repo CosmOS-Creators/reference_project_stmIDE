@@ -185,8 +185,8 @@ Every json file has the following property located at the root level:
 Every item in the elements list (attribute instance) should be a dictionary with the following properties:
 
 * target:
-  * Mandatory: Always except if `parentReference` property is defined
-  * Has to be omitted: Never except when `parentReference` property is defined
+  * Mandatory: Always
+  * Has to be omitted: Never
   * Value type: `string`
   * Example value: `cores/:name` or just `name` if the attribute definition is within the same file
   * Default value if omitted: `None`

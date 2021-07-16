@@ -5,6 +5,12 @@
 		}
 	],
 	"settings": {
+		"python.testing.pytestArgs": [
+			"--junitxml=./tests/results.xml"
+		],
+		"python.testing.unittestEnabled": false,
+		"python.testing.nosetestsEnabled": false,
+		"python.testing.pytestEnabled": true,
 		"python.analysis.extraPaths": [
 			"./Cosmos/customBox/generator",
 			"./Cosmos/customBox",
