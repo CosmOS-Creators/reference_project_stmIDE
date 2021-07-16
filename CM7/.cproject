@@ -91,7 +91,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/stm32h755_integration/CIL/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/application/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/application/inc"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.otherflags.405728967" name="Other flags" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.otherflags" useByScannerDiscovery="true" valueType="stringList">
 									<listOptionValue builtIn="false" value="-ffixed-r9"/>
@@ -154,7 +154,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/stm32h755_integration/CIL/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/application/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/application/inc"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.996346146" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -219,7 +219,7 @@
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Common"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/application"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/generated/application"/>
 						<entry excluding="stack/test|core/test|memory/test|os/test|_testing" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/generated/core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/stm32h755_integration"/>
@@ -315,7 +315,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/stm32h755_integration/CIL/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/application/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/application/inc"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1667135795" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -374,7 +374,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/stm32h755_integration/CIL/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/application/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/application/inc"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1779378648" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -407,7 +407,7 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/stm32h755_integration"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/application"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/generated/application"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/generated/core"/>
 					</sourceEntries>

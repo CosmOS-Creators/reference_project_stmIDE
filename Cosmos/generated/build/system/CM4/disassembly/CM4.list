@@ -41,23 +41,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  18 .ARM.attributes 0000002e  00000000  00000000  00051810  2**0
                   CONTENTS, READONLY
- 19 .debug_line   0002215c  00000000  00000000  0005183e  2**0
+ 19 .debug_line   000221ac  00000000  00000000  0005183e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 20 .debug_info   0003123b  00000000  00000000  0007399a  2**0
+ 20 .debug_info   0003123b  00000000  00000000  000739ea  2**0
                   CONTENTS, READONLY, DEBUGGING
- 21 .debug_abbrev 00006a8a  00000000  00000000  000a4bd5  2**0
+ 21 .debug_abbrev 00006a8a  00000000  00000000  000a4c25  2**0
                   CONTENTS, READONLY, DEBUGGING
- 22 .debug_aranges 00001380  00000000  00000000  000ab660  2**3
+ 22 .debug_aranges 00001380  00000000  00000000  000ab6b0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 23 .debug_str    0018d351  00000000  00000000  000ac9e0  2**0
+ 23 .debug_str    0018d379  00000000  00000000  000aca30  2**0
                   CONTENTS, READONLY, DEBUGGING
- 24 .debug_ranges 00000f58  00000000  00000000  00239d38  2**3
+ 24 .debug_ranges 00000f58  00000000  00000000  00239db0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 25 .debug_macro  000406cc  00000000  00000000  0023ac90  2**0
+ 25 .debug_macro  000406cc  00000000  00000000  0023ad08  2**0
                   CONTENTS, READONLY, DEBUGGING
- 26 .comment      00000079  00000000  00000000  0027b35c  2**0
+ 26 .comment      00000079  00000000  00000000  0027b3d4  2**0
                   CONTENTS, READONLY
- 27 .debug_frame  00004110  00000000  00000000  0027b3d8  2**2
+ 27 .debug_frame  00004110  00000000  00000000  0027b450  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .os_section_funcs:
@@ -98,7 +98,7 @@ __OS_FUNC_SECTION CosmOS_BufferStateType buffer_readArray(BitWidthType id, void 
   * @return CosmOS_CoreVariableType *
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_CoreVariableType * CILcore_getCoreVar(void)
-{    
+{
     uint32_t result;
     __asm volatile ("MOV %[resultVariable], R9":  [resultVariable] "=r" (result) );
  8100ed0:	464b      	mov	r3, r9
@@ -111,7 +111,7 @@ __STATIC_FORCEINLINE CosmOS_CoreVariableType * CILcore_getCoreVar(void)
  8100eda:	61fb      	str	r3, [r7, #28]
  8100edc:	68fb      	ldr	r3, [r7, #12]
  8100ede:	61bb      	str	r3, [r7, #24]
-  * 
+  *
   * @return CosmOS_BufferVariableType *
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_BufferVariableType * os_getOsBufferVar(CosmOS_OsVariableType * osVar, BitWidthType bufferId)
@@ -127,7 +127,7 @@ __STATIC_FORCEINLINE CosmOS_BufferVariableType * os_getOsBufferVar(CosmOS_OsVari
  8100eea:	637b      	str	r3, [r7, #52]	; 0x34
  8100eec:	6b7b      	ldr	r3, [r7, #52]	; 0x34
  8100eee:	623b      	str	r3, [r7, #32]
-  * 
+  *
   * @return CosmOS_PermissionsConfigurationType *
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_PermissionsConfigurationType * buffer_getBufferReadPermission(CosmOS_BufferVariableType * bufferVar)
@@ -156,7 +156,7 @@ __STATIC_FORCEINLINE CosmOS_PermissionsConfigurationType * buffer_getBufferReadP
  8100f10:	e022      	b.n	8100f58 <buffer_readArray+0xa8>
  8100f12:	6b7b      	ldr	r3, [r7, #52]	; 0x34
  8100f14:	613b      	str	r3, [r7, #16]
-  * 
+  *
   * @return CosmOS_BufferStateType
 ********************************************************************************/
 __STATIC_FORCEINLINE BitWidthType buffer_getFullCellsNum(CosmOS_BufferVariableType * bufferVar)
@@ -309,7 +309,7 @@ __OS_FUNC_SECTION CosmOS_BufferStateType buffer_writeArray(BitWidthType id, void
  8100fc4:	e027      	b.n	8101016 <buffer_writeArray+0xb2>
  8100fc6:	6b7b      	ldr	r3, [r7, #52]	; 0x34
  8100fc8:	613b      	str	r3, [r7, #16]
-  * 
+  *
   * @return CosmOS_BufferStateType
 ********************************************************************************/
 __STATIC_FORCEINLINE BitWidthType buffer_getEmptyCellsNum(CosmOS_BufferVariableType * bufferVar)
@@ -439,7 +439,7 @@ __STATIC_FORCEINLINE BitWidthType buffer_getEmptyCellsNum(CosmOS_BufferVariableT
  8101072:	609a      	str	r2, [r3, #8]
  8101074:	687b      	ldr	r3, [r7, #4]
  8101076:	613b      	str	r3, [r7, #16]
-  * 
+  *
   * @return CosmOS_BufferStateType
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_BufferStateType buffer_isEmpty(CosmOS_BufferVariableType * bufferVar)
@@ -513,7 +513,7 @@ __STATIC_FORCEINLINE CosmOS_BufferStateType buffer_isEmpty(CosmOS_BufferVariable
  81010e6:	605a      	str	r2, [r3, #4]
  81010e8:	687b      	ldr	r3, [r7, #4]
  81010ea:	613b      	str	r3, [r7, #16]
-  * 
+  *
   * @return CosmOS_BufferStateType
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_BufferStateType buffer_isFull(CosmOS_BufferVariableType * bufferVar)
@@ -567,7 +567,7 @@ __OS_FUNC_SECTION CosmOS_BufferStateType bufferDouble_readArray(BitWidthType id,
  8101126:	623b      	str	r3, [r7, #32]
  8101128:	68fb      	ldr	r3, [r7, #12]
  810112a:	61fb      	str	r3, [r7, #28]
-  * 
+  *
   * @return CosmOS_BufferDoubleVariableType *
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_BufferDoubleVariableType * os_getOsBufferDoubleVar(CosmOS_OsVariableType * osVar, BitWidthType bufferDoubleId)
@@ -600,7 +600,7 @@ __STATIC_FORCEINLINE CosmOS_BufferDoubleVariableType * os_getOsBufferDoubleVar(C
  8101148:	e015      	b.n	8101176 <bufferDouble_readArray+0x66>
  810114a:	6afb      	ldr	r3, [r7, #44]	; 0x2c
  810114c:	61bb      	str	r3, [r7, #24]
-  * 
+  *
   * @return CosmOS_BufferVariableType *
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_BufferVariableType * bufferDouble_getBufferDoubleUserBuffer(CosmOS_BufferDoubleVariableType * bufferDoubleVar)
@@ -800,7 +800,7 @@ __OS_FUNC_SECTION void core_setSchedulableIntoCurrentContext(CosmOS_CoreVariable
  810124c:	6039      	str	r1, [r7, #0]
  810124e:	683b      	ldr	r3, [r7, #0]
  8101250:	60fb      	str	r3, [r7, #12]
-  * 
+  *
   * @return BitWidthType
 ********************************************************************************/
 __STATIC_FORCEINLINE BitWidthType schedulable_getProgramId(CosmOS_SchedulableVariableType * schedulable)
@@ -820,7 +820,7 @@ __STATIC_FORCEINLINE BitWidthType schedulable_getProgramId(CosmOS_SchedulableVar
  810125c:	617b      	str	r3, [r7, #20]
  810125e:	6afb      	ldr	r3, [r7, #44]	; 0x2c
  8101260:	613b      	str	r3, [r7, #16]
-  * 
+  *
   * @return CosmOS_ProgramVariableType *
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_ProgramVariableType * core_getCoreProgramVar(CosmOS_CoreVariableType * core, BitWidthType programIterator)
@@ -834,13 +834,13 @@ __STATIC_FORCEINLINE CosmOS_ProgramVariableType * core_getCoreProgramVar(CosmOS_
  810126c:	4413      	add	r3, r2
  810126e:	009b      	lsls	r3, r3, #2
  8101270:	440b      	add	r3, r1
-    programVar = core_getCoreProgramVar( coreVar, programId ); 
+    programVar = core_getCoreProgramVar( coreVar, programId );
  8101272:	62bb      	str	r3, [r7, #40]	; 0x28
  8101274:	687b      	ldr	r3, [r7, #4]
  8101276:	61fb      	str	r3, [r7, #28]
  8101278:	6abb      	ldr	r3, [r7, #40]	; 0x28
  810127a:	61bb      	str	r3, [r7, #24]
-  * 
+  *
   * @return none
 ********************************************************************************/
 __STATIC_FORCEINLINE void core_setCoreProgramInExecution(CosmOS_CoreVariableType * core, CosmOS_ProgramVariableType * programInExecutionParam)
@@ -855,7 +855,7 @@ __STATIC_FORCEINLINE void core_setCoreProgramInExecution(CosmOS_CoreVariableType
  8101286:	627b      	str	r3, [r7, #36]	; 0x24
  8101288:	683b      	ldr	r3, [r7, #0]
  810128a:	623b      	str	r3, [r7, #32]
-  * 
+  *
   * @return none
 ********************************************************************************/
 __STATIC_FORCEINLINE void core_setCoreSchedulableInExecution(CosmOS_CoreVariableType * core, CosmOS_SchedulableVariableType * schedulableInExecutionParam)
@@ -909,7 +909,7 @@ __OS_FUNC_SECTION void coreSync_getBarrier(CosmOS_CoreVariableType * coreVar, Bi
  81012c0:	633b      	str	r3, [r7, #48]	; 0x30
  81012c2:	f04f 33aa 	mov.w	r3, #2863311530	; 0xaaaaaaaa
  81012c6:	62fb      	str	r3, [r7, #44]	; 0x2c
-  * 
+  *
   * @return none
 ********************************************************************************/
 __STATIC_FORCEINLINE void coreSync_setBarrierState(CosmOS_BarrierVariableType * barrier, CosmOS_BarrierStateType barrierStateParam)
@@ -974,7 +974,7 @@ __STATIC_FORCEINLINE void coreSync_setBarrierState(CosmOS_BarrierVariableType * 
     {
         barrierState = coreSync_getBarrierState( barrierVar );
  8101318:	60fb      	str	r3, [r7, #12]
-        
+
         if ( ( barrierState IS_EQUAL_TO BARRIER_STATE_ENUM__REACHED ) )
  810131a:	68fb      	ldr	r3, [r7, #12]
  810131c:	f1b3 3faa 	cmp.w	r3, #2863311530	; 0xaaaaaaaa
@@ -1051,7 +1051,7 @@ __OS_FUNC_SECTION void coreSync_reactivateBarrier(CosmOS_CoreVariableType * core
     }
     else
     {
-      
+
     }
 }
  8101388:	bf00      	nop
@@ -1093,7 +1093,7 @@ __OS_FUNC_SECTION void coreSync_reactivateBarrier(CosmOS_CoreVariableType * core
 __SEC_START(__OS_FUNC_SECTION_START)
 /* @endcond*/
 __OS_FUNC_SECTION void deviceIO_togglePin(BitWidthType id, void *GPIOx, BitWidthType GPIO_Pin)
-{    
+{
  81013ba:	b580      	push	{r7, lr}
  81013bc:	b084      	sub	sp, #16
  81013be:	af00      	add	r7, sp, #0
@@ -1162,7 +1162,7 @@ __OS_FUNC_SECTION void memoryProtection_setMemoryProtection(CosmOS_CoreVariableT
  810140a:	4413      	add	r3, r2
  810140c:	009b      	lsls	r3, r3, #2
  810140e:	440b      	add	r3, r1
-    programVar = core_getCoreProgramVar( core, programId ); 
+    programVar = core_getCoreProgramVar( core, programId );
  8101410:	653b      	str	r3, [r7, #80]	; 0x50
  8101412:	683b      	ldr	r3, [r7, #0]
  8101414:	61bb      	str	r3, [r7, #24]
@@ -1177,7 +1177,7 @@ __OS_FUNC_SECTION void memoryProtection_setMemoryProtection(CosmOS_CoreVariableT
  8101420:	62fb      	str	r3, [r7, #44]	; 0x2c
  8101422:	6afb      	ldr	r3, [r7, #44]	; 0x2c
  8101424:	62bb      	str	r3, [r7, #40]	; 0x28
-  * 
+  *
   * @return AddressType
 ********************************************************************************/
 __STATIC_FORCEINLINE AddressType stack_getStackLowAddress(CosmOS_StackConfigurationType * stack)
@@ -1189,7 +1189,7 @@ __STATIC_FORCEINLINE AddressType stack_getStackLowAddress(CosmOS_StackConfigurat
  810142a:	627b      	str	r3, [r7, #36]	; 0x24
  810142c:	6afb      	ldr	r3, [r7, #44]	; 0x2c
  810142e:	623b      	str	r3, [r7, #32]
-  * 
+  *
   * @return AddressType
 ********************************************************************************/
 __STATIC_FORCEINLINE AddressType stack_getStackHighAddress(CosmOS_StackConfigurationType * stack)
@@ -1209,7 +1209,7 @@ __STATIC_FORCEINLINE AddressType stack_getStackHighAddress(CosmOS_StackConfigura
  8101442:	64bb      	str	r3, [r7, #72]	; 0x48
  8101444:	6cbb      	ldr	r3, [r7, #72]	; 0x48
  8101446:	647b      	str	r3, [r7, #68]	; 0x44
-  * 
+  *
   * @return BitWidthType
 ********************************************************************************/
 __STATIC_FORCEINLINE BitWidthType program_getProgramMemorySize(CosmOS_ProgramVariableType * program)
@@ -1222,7 +1222,7 @@ __STATIC_FORCEINLINE BitWidthType program_getProgramMemorySize(CosmOS_ProgramVar
  810144e:	643b      	str	r3, [r7, #64]	; 0x40
  8101450:	6cbb      	ldr	r3, [r7, #72]	; 0x48
  8101452:	63fb      	str	r3, [r7, #60]	; 0x3c
-  * 
+  *
   * @return BitWidthType
 ********************************************************************************/
 __STATIC_FORCEINLINE BitWidthType program_getProgramMemoryLowAddress(CosmOS_ProgramVariableType * program)
@@ -1235,7 +1235,7 @@ __STATIC_FORCEINLINE BitWidthType program_getProgramMemoryLowAddress(CosmOS_Prog
  810145a:	63bb      	str	r3, [r7, #56]	; 0x38
  810145c:	6cbb      	ldr	r3, [r7, #72]	; 0x48
  810145e:	637b      	str	r3, [r7, #52]	; 0x34
-  * 
+  *
   * @return BitWidthType
 ********************************************************************************/
 __STATIC_FORCEINLINE BitWidthType program_getProgramMemoryHighAddress(CosmOS_ProgramVariableType * program)
@@ -1461,7 +1461,7 @@ __OS_FUNC_SECTION void schedulable_setExecutionStateToFinished(void)
  8101584:	60fb      	str	r3, [r7, #12]
  8101586:	2302      	movs	r3, #2
  8101588:	72fb      	strb	r3, [r7, #11]
-  * 
+  *
   * @return CosmOS_SchedulableStateType
 ********************************************************************************/
 __STATIC_FORCEINLINE void schedulable_setState(CosmOS_SchedulableVariableType * schedulable, CosmOS_SchedulableStateType stateParam)
@@ -1496,7 +1496,7 @@ StackPointerType * stackPointerRetVal,BitWidthType * timerTicks)
  81015a6:	603b      	str	r3, [r7, #0]
  81015a8:	68fb      	ldr	r3, [r7, #12]
  81015aa:	613b      	str	r3, [r7, #16]
-  * 
+  *
   * @return BitWidthType
 ********************************************************************************/
 __STATIC_FORCEINLINE BitWidthType scheduler_getSchedulerThreadListIterator(CosmOS_SchedulerVariableType * scheduler)
@@ -1534,7 +1534,7 @@ __STATIC_FORCEINLINE BitWidthType scheduler_getSchedulerThreadListIterator(CosmO
  81015d2:	623b      	str	r3, [r7, #32]
  81015d4:	6c7b      	ldr	r3, [r7, #68]	; 0x44
  81015d6:	61fb      	str	r3, [r7, #28]
-  * 
+  *
   * @return CosmOS_ThreadVariableType *
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_ThreadVariableType * scheduler_getSchedulerThreadListThreadVar(CosmOS_SchedulerVariableType * scheduler, BitWidthType threadListIterator)
@@ -1552,7 +1552,7 @@ __STATIC_FORCEINLINE CosmOS_ThreadVariableType * scheduler_getSchedulerThreadLis
  81015e6:	63fb      	str	r3, [r7, #60]	; 0x3c
  81015e8:	6bfb      	ldr	r3, [r7, #60]	; 0x3c
  81015ea:	627b      	str	r3, [r7, #36]	; 0x24
-  * 
+  *
   * @return CosmOS_SchedulableVariableType *
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_SchedulableVariableType * thread_getThreadSchedulable(CosmOS_ThreadVariableType * thread)
@@ -1587,7 +1587,7 @@ __STATIC_FORCEINLINE CosmOS_SchedulableVariableType * thread_getThreadSchedulabl
  8101618:	633b      	str	r3, [r7, #48]	; 0x30
  810161a:	6c7b      	ldr	r3, [r7, #68]	; 0x44
  810161c:	62fb      	str	r3, [r7, #44]	; 0x2c
-  * 
+  *
   * @return none
 ********************************************************************************/
 __STATIC_FORCEINLINE void scheduler_setSchedulerThreadListIterator(CosmOS_SchedulerVariableType * scheduler, BitWidthType threadListIteratorParam)
@@ -1646,7 +1646,7 @@ StackPointerType * stackPointerRetVal,BitWidthType * timerTicks, BitWidthType st
  810165c:	61fb      	str	r3, [r7, #28]
  810165e:	69fb      	ldr	r3, [r7, #28]
  8101660:	61bb      	str	r3, [r7, #24]
-  * 
+  *
   * @return CosmOS_SchedulableVariableType *
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_SchedulableVariableType * task_getTaskSchedulable(CosmOS_TaskVariableType * task)
@@ -1826,7 +1826,7 @@ __OS_FUNC_SECTION StackPointerType scheduler_scheduleNextInstance(StackPointerTy
  8101792:	67bb      	str	r3, [r7, #120]	; 0x78
  8101794:	687b      	ldr	r3, [r7, #4]
  8101796:	677b      	str	r3, [r7, #116]	; 0x74
-  * 
+  *
   * @return none
 ********************************************************************************/
 __STATIC_FORCEINLINE void schedulable_setStackPointer(CosmOS_SchedulableVariableType * schedulable, StackPointerType stackPointerParam)
@@ -1941,7 +1941,7 @@ __STATIC_FORCEINLINE void schedulable_setStackPointer(CosmOS_SchedulableVariable
  810185e:	601a      	str	r2, [r3, #0]
 }
  8101860:	bf00      	nop
-    {   
+    {
         scheduler_classicSchedulingCore(schedulerVar,&schedulableVar,&stackPointerRetVal,&timerTicks, &scheduleTableIterator, scheduleTableElementsNum);
 
         schedulerState = SCHEDULER_STATE_ENUM__TASK_EXECUTED_IN_WCET_CHECK;
@@ -1986,7 +1986,7 @@ __STATIC_FORCEINLINE void schedulable_setStackPointer(CosmOS_SchedulableVariable
  81018a4:	62bb      	str	r3, [r7, #40]	; 0x28
  81018a6:	f897 30cb 	ldrb.w	r3, [r7, #203]	; 0xcb
  81018aa:	f887 3027 	strb.w	r3, [r7, #39]	; 0x27
-  * 
+  *
   * @return none
 ********************************************************************************/
 __STATIC_FORCEINLINE void scheduler_setSchedulerState(CosmOS_SchedulerVariableType * scheduler, CosmOS_SchedulerStateType schedulerStateParam)
@@ -2003,7 +2003,7 @@ __STATIC_FORCEINLINE void scheduler_setSchedulerState(CosmOS_SchedulerVariableTy
  81018b8:	2300      	movs	r3, #0
  81018ba:	f8c7 30a8 	str.w	r3, [r7, #168]	; 0xa8
 
-    currentTick = ( ( currentTick + timerTicks ) % hyperTick ); 
+    currentTick = ( ( currentTick + timerTicks ) % hyperTick );
  81018be:	69ba      	ldr	r2, [r7, #24]
  81018c0:	f8d7 30b4 	ldr.w	r3, [r7, #180]	; 0xb4
  81018c4:	4413      	add	r3, r2
@@ -2235,7 +2235,7 @@ __OS_FUNC_SECTION void scheduler_start(void)
  8101a62:	601a      	str	r2, [r3, #0]
 }
  8101a64:	bf00      	nop
-    {   
+    {
         scheduler_classicSchedulingCore(schedulerVar,&schedulableVar,&stackPointerRetVal,&timerTicks, &scheduleTableIterator, scheduleTableElementsNum);
 
         schedulerState = SCHEDULER_STATE_ENUM__TASK_EXECUTED_IN_WCET_CHECK;
@@ -2350,7 +2350,7 @@ __OS_FUNC_SECTION CosmOS_SchedulerSyncStateType schedulerSync_sync(CosmOS_Schedu
  8101b1e:	60b9      	str	r1, [r7, #8]
  8101b20:	607a      	str	r2, [r7, #4]
  8101b22:	603b      	str	r3, [r7, #0]
-    
+
     CosmOS_BooleanType syncInitState;
 
     CosmOS_SchedulerSyncStateType schedulerState = SCHEDULER_SYNC_STATE_ENUM__NOT_IN_SYNC;
@@ -2421,7 +2421,7 @@ __OS_FUNC_SECTION CosmOS_SchedulerSyncStateType schedulerSync_sync(CosmOS_Schedu
  8101b7e:	62bb      	str	r3, [r7, #40]	; 0x28
  8101b80:	6bfb      	ldr	r3, [r7, #60]	; 0x3c
  8101b82:	627b      	str	r3, [r7, #36]	; 0x24
-  * 
+  *
   * @return none
 ********************************************************************************/
 __STATIC_FORCEINLINE void scheduler_setSchedulerNextSyncTick(CosmOS_SchedulerVariableType * scheduler, BitWidthType paramNextSyncTick)
@@ -2436,7 +2436,7 @@ __STATIC_FORCEINLINE void scheduler_setSchedulerNextSyncTick(CosmOS_SchedulerVar
  8101b8e:	633b      	str	r3, [r7, #48]	; 0x30
  8101b90:	2301      	movs	r3, #1
  8101b92:	f887 302f 	strb.w	r3, [r7, #47]	; 0x2f
-  * 
+  *
   * @return none
 ********************************************************************************/
 __STATIC_FORCEINLINE void scheduler_setSchedulerSyncInitState(CosmOS_SchedulerVariableType * scheduler, CosmOS_BooleanType paramSyncInitState)
@@ -2668,8 +2668,8 @@ __OS_FUNC_SECTION void stackInit_init(CosmOS_CoreVariableType * coreVar)
  8101cb2:	613b      	str	r3, [r7, #16]
  8101cb4:	6cbb      	ldr	r3, [r7, #72]	; 0x48
  8101cb6:	60fb      	str	r3, [r7, #12]
-  * 
-  * @return CosmOS_ThreadVariableType * 
+  *
+  * @return CosmOS_ThreadVariableType *
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_ThreadVariableType * program_getProgramThread(CosmOS_ProgramVariableType * program, BitWidthType threadIterator)
 {
@@ -2679,7 +2679,7 @@ __STATIC_FORCEINLINE CosmOS_ThreadVariableType * program_getProgramThread(CosmOS
  8101cbc:	68fb      	ldr	r3, [r7, #12]
  8101cbe:	00db      	lsls	r3, r3, #3
  8101cc0:	4413      	add	r3, r2
-        {   
+        {
             CosmOS_SchedulableVariableType * schedulableVar;
 
 
@@ -2758,7 +2758,7 @@ __OS_FUNC_SECTION void sysCalls_os(BitWidthType id)
 __SEC_START(__OS_FUNC_SECTION_START)
 /* @endcond*/
 __OS_FUNC_SECTION BitWidthType sysCalls_readWrite(BitWidthType id, void * entity, BitWidthType size)
-{   
+{
  8101d22:	b580      	push	{r7, lr}
  8101d24:	b086      	sub	sp, #24
  8101d26:	af00      	add	r7, sp, #0
@@ -2809,7 +2809,7 @@ __OS_FUNC_SECTION void sysJobs_dispatcher(void)
  8101d58:	64bb      	str	r3, [r7, #72]	; 0x48
  8101d5a:	6cbb      	ldr	r3, [r7, #72]	; 0x48
  8101d5c:	62bb      	str	r3, [r7, #40]	; 0x28
-  * 
+  *
   * @return BitWidthType
 ********************************************************************************/
 __STATIC_FORCEINLINE BitWidthType sysJobs_getSysJobsCurrentTick(CosmOS_SysJobsVariableType * sysJobs)
@@ -2837,7 +2837,7 @@ __STATIC_FORCEINLINE BitWidthType sysJobs_getSysJobsCurrentTick(CosmOS_SysJobsVa
  8101d78:	623b      	str	r3, [r7, #32]
  8101d7a:	6d7b      	ldr	r3, [r7, #84]	; 0x54
  8101d7c:	61fb      	str	r3, [r7, #28]
-  * 
+  *
   * @return BitWidthType
 ********************************************************************************/
 __STATIC_FORCEINLINE BitWidthType sysJobs_getSysJobsGroupTickMultiplicator(CosmOS_SysJobsVariableType * sysJobs, BitWidthType groupId)
@@ -2853,7 +2853,7 @@ __STATIC_FORCEINLINE BitWidthType sysJobs_getSysJobsGroupTickMultiplicator(CosmO
  8101d8c:	009b      	lsls	r3, r3, #2
  8101d8e:	440b      	add	r3, r1
  8101d90:	689b      	ldr	r3, [r3, #8]
-    { 
+    {
         BitWidthType  groupTickMultiplicator;
 
 
@@ -2963,7 +2963,7 @@ __STATIC_FORCEINLINE BitWidthType sysJobs_getSysJobsGroupTickMultiplicator(CosmO
  8101e34:	60bb      	str	r3, [r7, #8]
  8101e36:	6c7b      	ldr	r3, [r7, #68]	; 0x44
  8101e38:	607b      	str	r3, [r7, #4]
-  * 
+  *
   * @return none
 ********************************************************************************/
 __STATIC_FORCEINLINE void sysJobs_setSysJobsCurrentTick(CosmOS_SysJobsVariableType * sysJobs, BitWidthType currentTickParam)
@@ -2988,7 +2988,7 @@ __STATIC_FORCEINLINE void sysJobs_setSysJobsCurrentTick(CosmOS_SysJobsVariableTy
 __SEC_START(__OS_FUNC_SECTION_START)
 /* @endcond*/
 __OS_FUNC_SECTION BitWidthType CILcore_getCoreId(void)
-{    
+{
  8101e4a:	b580      	push	{r7, lr}
  8101e4c:	af00      	add	r7, sp, #0
     return (HAL_GetCurrentCPUID() == CM7_CPUID) ? CORE_0_ID : CORE_1_ID;
@@ -3009,7 +3009,7 @@ __OS_FUNC_SECTION BitWidthType CILcore_getCoreId(void)
 __SEC_START(__OS_FUNC_SECTION_START)
 /* @endcond*/
 __OS_FUNC_SECTION void CILcore_setCoreVar(CosmOS_OsVariableType * osVar)
-{    
+{
  8101e62:	b580      	push	{r7, lr}
  8101e64:	b08a      	sub	sp, #40	; 0x28
  8101e66:	af00      	add	r7, sp, #0
@@ -3071,7 +3071,7 @@ __OS_FUNC_SECTION void CILcore_setCoreVar(CosmOS_OsVariableType * osVar)
 __SEC_START(__OS_FUNC_SECTION_START)
 /* @endcond*/
 __OS_FUNC_SECTION void CILGPIO_togglePin(void *GPIOx, BitWidthType GPIO_Pin)
-{    
+{
  8101eae:	b580      	push	{r7, lr}
  8101eb0:	b082      	sub	sp, #8
  8101eb2:	af00      	add	r7, sp, #0
@@ -3154,7 +3154,7 @@ __OS_FUNC_SECTION void CILmemoryProtection_init(void)
         MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
  8101f18:	2301      	movs	r3, #1
  8101f1a:	73fb      	strb	r3, [r7, #15]
-      
+
         HAL_MPU_ConfigRegion(&MPU_InitStruct);
  8101f1c:	463b      	mov	r3, r7
  8101f1e:	4618      	mov	r0, r3
@@ -3202,7 +3202,7 @@ __OS_FUNC_SECTION void CILmemoryProtection_init(void)
         MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
  8101f56:	2301      	movs	r3, #1
  8101f58:	73fb      	strb	r3, [r7, #15]
-      
+
         HAL_MPU_ConfigRegion(&MPU_InitStruct);
  8101f5a:	463b      	mov	r3, r7
  8101f5c:	4618      	mov	r0, r3
@@ -3544,7 +3544,7 @@ __OS_FUNC_SECTION void CILmemoryProtection_setStackOverflowProtection(AddressTyp
     MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
  8102160:	2301      	movs	r3, #1
  8102162:	75fb      	strb	r3, [r7, #23]
-  
+
     HAL_MPU_ConfigRegion(&MPU_InitStruct);
  8102164:	f107 0308 	add.w	r3, r7, #8
  8102168:	4618      	mov	r0, r3
@@ -3665,7 +3665,7 @@ __OS_FUNC_SECTION void CILmemoryProtection_setProgramMemoryProtection(AddressTyp
     MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
  8102218:	2301      	movs	r3, #1
  810221a:	75fb      	strb	r3, [r7, #23]
-  
+
     HAL_MPU_ConfigRegion(&MPU_InitStruct);
  810221c:	f107 0308 	add.w	r3, r7, #8
  8102220:	4618      	mov	r0, r3
@@ -3810,13 +3810,13 @@ __OS_FUNC_SECTION void CILsysCalls_dispatcher(BitWidthType *sp)
     CosmOS_OsVariableType * osVar;
     CosmOS_RoutesConfigurationType * routeVar;
 
-  
+
     uint8_t *pc = (uint8_t*)(sp[6]);
  81022e2:	687b      	ldr	r3, [r7, #4]
  81022e4:	3318      	adds	r3, #24
  81022e6:	681b      	ldr	r3, [r3, #0]
  81022e8:	633b      	str	r3, [r7, #48]	; 0x30
-    
+
     pc-=2;
  81022ea:	6b3b      	ldr	r3, [r7, #48]	; 0x30
  81022ec:	3b02      	subs	r3, #2
@@ -3846,7 +3846,7 @@ __OS_FUNC_SECTION void CILsysCalls_dispatcher(BitWidthType *sp)
  810230e:	6a7a      	ldr	r2, [r7, #36]	; 0x24
  8102310:	613a      	str	r2, [r7, #16]
  8102312:	60fb      	str	r3, [r7, #12]
-  * 
+  *
   * @return CosmOS_GenericVoidType
 ********************************************************************************/
 __STATIC_FORCEINLINE CosmOS_GenericVoidType route_getRoutesFunc(CosmOS_RoutesConfigurationType * route, BitWidthType callId)
@@ -3870,7 +3870,7 @@ __STATIC_FORCEINLINE CosmOS_GenericVoidType route_getRoutesFunc(CosmOS_RoutesCon
  8102330:	6a7a      	ldr	r2, [r7, #36]	; 0x24
  8102332:	61ba      	str	r2, [r7, #24]
  8102334:	617b      	str	r3, [r7, #20]
-  * 
+  *
   * @return BitWidthType
 ********************************************************************************/
 __STATIC_FORCEINLINE BitWidthType route_getRoutesEntityId(CosmOS_RoutesConfigurationType * route, BitWidthType callId)
@@ -4001,7 +4001,7 @@ __OS_FUNC_SECTION void CILsysTimer_setTicks(BitWidthType ticks, CosmOS_Scheduler
  81023c8:	af00      	add	r7, sp, #0
  81023ca:	6078      	str	r0, [r7, #4]
  81023cc:	6039      	str	r1, [r7, #0]
-    if( schedulersSyncState IS_NOT_EQUAL_TO SCHEDULER_SYNC_STATE_ENUM__IN_SYNC ) 
+    if( schedulersSyncState IS_NOT_EQUAL_TO SCHEDULER_SYNC_STATE_ENUM__IN_SYNC )
  81023ce:	683b      	ldr	r3, [r7, #0]
  81023d0:	f1b3 3faa 	cmp.w	r3, #2863311530	; 0xaaaaaaaa
  81023d4:	d010      	beq.n	81023f8 <CILsysTimer_setTicks+0x34>
@@ -4014,7 +4014,7 @@ __OS_FUNC_SECTION void CILsysTimer_setTicks(BitWidthType ticks, CosmOS_Scheduler
  81023dc:	689b      	ldr	r3, [r3, #8]
  81023de:	1ad3      	subs	r3, r2, r3
  81023e0:	60fb      	str	r3, [r7, #12]
-        
+
         SysTick->LOAD  = (uint32_t)(((ticks*TICKCOUNT)-delay) - 1UL);         /* set reload register */
  81023e2:	687b      	ldr	r3, [r7, #4]
  81023e4:	f242 7210 	movw	r2, #10000	; 0x2710
@@ -5120,7 +5120,7 @@ void wrapped_IdleThread_CM4(void)
 08102978 <PendSV_Handler>:
 /********************************************************************************
 **                        Function Definitions | Start                         **
-********************************************************************************/ 
+********************************************************************************/
 __NAKED void PendSV_Handler(void)
 {
     __asm volatile ("MRS R0,PSP");
@@ -5130,7 +5130,7 @@ __NAKED void PendSV_Handler(void)
 
     __asm volatile ("TST R14, #16");
  8102980:	f01e 0f10 	tst.w	lr, #16
-    __asm volatile ("IT EQ"); 
+    __asm volatile ("IT EQ");
  8102984:	bf08      	it	eq
     __asm volatile ("VSTMDBEQ R0!,{S16-S31}"); /* If fp is true save floating point registers on stack */
  8102986:	ed20 8a10 	vstmdbeq	r0!, {s16-s31}
@@ -5146,7 +5146,7 @@ __NAKED void PendSV_Handler(void)
  8102996:	e8b0 4df0 	ldmia.w	r0!, {r4, r5, r6, r7, r8, sl, fp, lr}
     __asm volatile ("TST R14, #16");
  810299a:	f01e 0f10 	tst.w	lr, #16
-    __asm volatile ("IT EQ"); 
+    __asm volatile ("IT EQ");
  810299e:	bf08      	it	eq
     __asm volatile ("VLDMIAEQ R0!,{S16-S31}"); /* If fp is true restore floating point registers on stack */
  81029a0:	ecb0 8a10 	vldmiaeq	r0!, {s16-s31}

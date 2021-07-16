@@ -3,7 +3,7 @@
 		"templates": [
 			"application/program"
 		],
-		"outputDir": "{ApplicationGenDir}",
+		"outputDir": "{ApplicationGeneratedDir}",
 		"loop": "programs/:name",
 		"fileName": "{target}",
 		"target": "program",
@@ -16,7 +16,7 @@
 		"templates": [
 			"linker/gnu/arm/linker"
 		],
-		"outputDir": "{CoreGeneratedDir}/linker",
+		"outputDir": "{LinkerGeneratedDir}",
 		"loop": "cores/:CoreName",
 		"fileName": "{target}",
 		"target": "core"
