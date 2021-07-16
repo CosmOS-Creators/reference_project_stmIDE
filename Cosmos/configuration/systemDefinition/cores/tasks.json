@@ -1,351 +1,289 @@
 {
 	"version": "1.0.0",
 
-	"attributes": {
-		"name": {
-			"label": "Name of the task",
-			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
-			"tooltip": "Name of the task, be aware that the task name is used also as a function name"
-		},
-		"wcet": {
-			"label": "Worst case execution time",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"tooltip": "Worst case execution time in ticks"
-		},
-		"period": {
-			"label": "Scheduling period",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"tooltip": "Scheduling period in ticks"
-		},
-		"floatingPoint": {
-			"label": "Floating point",
-			"type": "bool",
-			"tooltip": "Enable floating point for the current thread"
-		},
-		"isIdle": {
-			"label": "Is the task an idle task",
-			"type": "bool",
-			"tooltip": "Is the task an idle task"
-		},
-		"isSysJob": {
-			"label": "Is the task a sysJob wrapper",
-			"type": "bool",
-			"tooltip": "Is the task a sysJob wrapper"
-		},
-		"stackSize": {
-			"label": "stack size of the task",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"tooltip": "Stack size of the current task"
-		},
-		"uniqueId": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"program": {
-			"type": "parentReference"
-		},
-		"lowAddress": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"highAddress": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"taskId": {
-			"placeholder": true,
-			"type": "int"
-		}
-	},
+	"attributes": {},
 
 	"elements": {
 		"task_0":
 		[
 			{
-				"target": "uniqueId"
+				"target": "tasksAttributes/:uniqueId"
 			},
 			{
-				"target": "program",
+				"target": "tasksAttributes/:program",
 				"value": "programs/program_0"
 			},
 			{
-				"target": "name",
+				"target": "tasksAttributes/:name",
 				"value": "Idle_CM7"
 			},
 			{
-				"target": "wcet",
+				"target": "tasksAttributes/:wcet",
 				"value": 0
 			},
 			{
-				"target": "period",
+				"target": "tasksAttributes/:period",
 				"value": 0
 			},
 			{
-				"target": "floatingPoint",
+				"target": "tasksAttributes/:floatingPoint",
 				"value": false
 			},
 			{
-				"target": "isIdle",
+				"target": "tasksAttributes/:isIdle",
 				"value": true
 			},
 			{
-				"target": "isSysJob",
+				"target": "tasksAttributes/:isSysJob",
 				"value": false
 			},
 			{
-				"target": "stackSize",
+				"target": "tasksAttributes/:stackSize",
 				"value": 1024
 			},
 			{
-				"target": "lowAddress"
+				"target": "tasksAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "tasksAttributes/:highAddress"
 			},
 			{
-				"target": "taskId"
+				"target": "tasksAttributes/:taskId"
 			}
 		],
 		"task_1":
 		[
 			{
-				"target": "uniqueId"
+				"target": "tasksAttributes/:uniqueId"
 			},
 			{
-				"target": "program",
+				"target": "tasksAttributes/:program",
 				"value": "programs/program_0"
 			},
 			{
-				"target": "name",
+				"target": "tasksAttributes/:name",
 				"value": "sysJobs_CM7"
 			},
 			{
-				"target": "wcet",
+				"target": "tasksAttributes/:wcet",
 				"value": 5
 			},
 			{
-				"target": "period",
+				"target": "tasksAttributes/:period",
 				"value": 100
 			},
 			{
-				"target": "floatingPoint",
+				"target": "tasksAttributes/:floatingPoint",
 				"value": false
 			},
 			{
-				"target": "isIdle",
+				"target": "tasksAttributes/:isIdle",
 				"value": false
 			},
 			{
-				"target": "isSysJob",
+				"target": "tasksAttributes/:isSysJob",
 				"value": true
 			},
 			{
-				"target": "stackSize",
+				"target": "tasksAttributes/:stackSize",
 				"value": 256
 			},
 			{
-				"target": "lowAddress"
+				"target": "tasksAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "tasksAttributes/:highAddress"
 			},
 			{
-				"target": "taskId"
+				"target": "tasksAttributes/:taskId"
 			}
 		],
 		"task_2":
 		[
 			{
-				"target": "uniqueId"
+				"target": "tasksAttributes/:uniqueId"
 			},
 			{
-				"target": "program",
+				"target": "tasksAttributes/:program",
 				"value": "programs/program_1"
 			},
 			{
-				"target": "name",
+				"target": "tasksAttributes/:name",
 				"value": "Task_0_Core_0_Handler"
 			},
 			{
-				"target": "wcet",
+				"target": "tasksAttributes/:wcet",
 				"value": 5
 			},
 			{
-				"target": "period",
+				"target": "tasksAttributes/:period",
 				"value": 50
 			},
 			{
-				"target": "floatingPoint",
+				"target": "tasksAttributes/:floatingPoint",
 				"value": false
 			},
 			{
-				"target": "isIdle",
+				"target": "tasksAttributes/:isIdle",
 				"value": false
 			},
 			{
-				"target": "isSysJob",
+				"target": "tasksAttributes/:isSysJob",
 				"value": false
 			},
 			{
-				"target": "stackSize",
+				"target": "tasksAttributes/:stackSize",
 				"value": 1024
 			},
 			{
-				"target": "lowAddress"
+				"target": "tasksAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "tasksAttributes/:highAddress"
 			},
 			{
-				"target": "taskId"
+				"target": "tasksAttributes/:taskId"
 			}
 		],
 		"task_3":
 		[
 			{
-				"target": "uniqueId"
+				"target": "tasksAttributes/:uniqueId"
 			},
 			{
-				"target": "program",
+				"target": "tasksAttributes/:program",
 				"value": "programs/program_2"
 			},
 			{
-				"target": "name",
+				"target": "tasksAttributes/:name",
 				"value": "Idle_CM4"
 			},
 			{
-				"target": "wcet",
+				"target": "tasksAttributes/:wcet",
 				"value": 0
 			},
 			{
-				"target": "period",
+				"target": "tasksAttributes/:period",
 				"value": 0
 			},
 			{
-				"target": "floatingPoint",
+				"target": "tasksAttributes/:floatingPoint",
 				"value": false
 			},
 			{
-				"target": "isIdle",
+				"target": "tasksAttributes/:isIdle",
 				"value": true
 			},
 			{
-				"target": "isSysJob",
+				"target": "tasksAttributes/:isSysJob",
 				"value": false
 			},
 			{
-				"target": "stackSize",
+				"target": "tasksAttributes/:stackSize",
 				"value": 1024
 			},
 			{
-				"target": "lowAddress"
+				"target": "tasksAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "tasksAttributes/:highAddress"
 			},
 			{
-				"target": "taskId"
+				"target": "tasksAttributes/:taskId"
 			}
 		],
 		"task_4":
 		[
 			{
-				"target": "uniqueId"
+				"target": "tasksAttributes/:uniqueId"
 			},
 			{
-				"target": "program",
+				"target": "tasksAttributes/:program",
 				"value": "programs/program_2"
 			},
 			{
-				"target": "name",
+				"target": "tasksAttributes/:name",
 				"value": "sysJobs_CM4"
 			},
 			{
-				"target": "wcet",
+				"target": "tasksAttributes/:wcet",
 				"value": 5
 			},
 			{
-				"target": "period",
+				"target": "tasksAttributes/:period",
 				"value": 100
 			},
 			{
-				"target": "floatingPoint",
+				"target": "tasksAttributes/:floatingPoint",
 				"value": false
 			},
 			{
-				"target": "isIdle",
+				"target": "tasksAttributes/:isIdle",
 				"value": false
 			},
 			{
-				"target": "isSysJob",
+				"target": "tasksAttributes/:isSysJob",
 				"value": true
 			},
 			{
-				"target": "stackSize",
+				"target": "tasksAttributes/:stackSize",
 				"value": 256
 			},
 			{
-				"target": "lowAddress"
+				"target": "tasksAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "tasksAttributes/:highAddress"
 			},
 			{
-				"target": "taskId"
+				"target": "tasksAttributes/:taskId"
 			}
 		],
 		"task_5":
 		[
 			{
-				"target": "uniqueId"
+				"target": "tasksAttributes/:uniqueId"
 			},
 			{
-				"target": "program",
+				"target": "tasksAttributes/:program",
 				"value": "programs/program_3"
 			},
 			{
-				"target": "name",
+				"target": "tasksAttributes/:name",
 				"value": "Task_0_Core_1_Handler"
 			},
 			{
-				"target": "wcet",
+				"target": "tasksAttributes/:wcet",
 				"value": 5
 			},
 			{
-				"target": "period",
+				"target": "tasksAttributes/:period",
 				"value": 50
 			},
 			{
-				"target": "floatingPoint",
+				"target": "tasksAttributes/:floatingPoint",
 				"value": false
 			},
 			{
-				"target": "isIdle",
+				"target": "tasksAttributes/:isIdle",
 				"value": false
 			},
 			{
-				"target": "isSysJob",
+				"target": "tasksAttributes/:isSysJob",
 				"value": false
 			},
 			{
-				"target": "stackSize",
+				"target": "tasksAttributes/:stackSize",
 				"value": 1024
 			},
 			{
-				"target": "lowAddress"
+				"target": "tasksAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "tasksAttributes/:highAddress"
 			},
 			{
-				"target": "taskId"
+				"target": "tasksAttributes/:taskId"
 			}
 		]
 	}

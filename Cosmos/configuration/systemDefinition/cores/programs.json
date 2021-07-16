@@ -1,185 +1,143 @@
 {
 	"version": "1.0.0",
 
-	"attributes": {
-		"name": {
-			"label": "Name of the program",
-			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
-			"tooltip": "Please be aware that name is used also as file name in the application layer for the source and header file"
-		},
-		"size": {
-			"label": "Size of the program memory",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"tooltip": "Size of the program data memory"
-		},
-		"memory": {
-			"inherit": "memories/:memory",
-			"label": "Memory location of the Program",
-			"tooltip": "Memory location of the Program, all the program data will be stored here"
-		},
-		"lowAddress": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"highAddress": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"core": {
-			"type": "parentReference"
-		},
-		"programId": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"programThreads": {
-			"placeholder": true,
-			"type": "referenceList"
-		},
-		"programTasks": {
-			"placeholder": true,
-			"type": "referenceList"
-		}
-	},
+	"attributes": {},
 
 	"elements": {
 		"program_0":
 		[
 			{
-				"target": "core",
+				"target": "programsAttributes/:core",
 				"value": "cores/core_0"
 			},
 			{
-				"target": "name",
+				"target": "programsAttributes/:name",
 				"value": "default_CM7"
 			},
 			{
-				"target": "size",
+				"target": "programsAttributes/:size",
 				"value": 1024
 			},
 			{
-				"target": "memory",
+				"target": "programsAttributes/:memory",
 				"value": "DTCM"
 			},
 			{
-				"target": "lowAddress"
+				"target": "programsAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "programsAttributes/:highAddress"
 			},
 			{
-				"target": "programId"
+				"target": "programsAttributes/:programId"
 			},
 			{
-				"target": "programThreads"
+				"target": "programsAttributes/:programThreads"
 			},
 			{
-				"target": "programTasks"
+				"target": "programsAttributes/:programTasks"
 			}
 		],
 		"program_1":
 		[
 			{
-				"target": "core",
+				"target": "programsAttributes/:core",
 				"value": "cores/core_0"
 			},
 			{
-				"target": "name",
+				"target": "programsAttributes/:name",
 				"value": "blinking_led_CM7"
 			},
 			{
-				"target": "size",
+				"target": "programsAttributes/:size",
 				"value": 1024
 			},
 			{
-				"target": "memory",
+				"target": "programsAttributes/:memory",
 				"value": "DTCM"
 			},
 			{
-				"target": "lowAddress"
+				"target": "programsAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "programsAttributes/:highAddress"
 			},
 			{
-				"target": "programId"
+				"target": "programsAttributes/:programId"
 			},
 			{
-				"target": "programThreads"
+				"target": "programsAttributes/:programThreads"
 			},
 			{
-				"target": "programTasks"
+				"target": "programsAttributes/:programTasks"
 			}
 		],
 		"program_2":
 		[
 			{
-				"target": "core",
+				"target": "programsAttributes/:core",
 				"value": "cores/core_1"
 			},
 			{
-				"target": "name",
+				"target": "programsAttributes/:name",
 				"value": "default_CM4"
 			},
 			{
-				"target": "size",
+				"target": "programsAttributes/:size",
 				"value": 1024
 			},
 			{
-				"target": "memory",
+				"target": "programsAttributes/:memory",
 				"value": "SRAM1"
 			},
 			{
-				"target": "lowAddress"
+				"target": "programsAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "programsAttributes/:highAddress"
 			},
 			{
-				"target": "programId"
+				"target": "programsAttributes/:programId"
 			},
 			{
-				"target": "programThreads"
+				"target": "programsAttributes/:programThreads"
 			},
 			{
-				"target": "programTasks"
+				"target": "programsAttributes/:programTasks"
 			}
 		],
 		"program_3":
 		[
 			{
-				"target": "core",
+				"target": "programsAttributes/:core",
 				"value": "cores/core_1"
 			},
 			{
-				"target": "name",
+				"target": "programsAttributes/:name",
 				"value": "blinking_led_CM4"
 			},
 			{
-				"target": "size",
+				"target": "programsAttributes/:size",
 				"value": 1024
 			},
 			{
-				"target": "memory",
+				"target": "programsAttributes/:memory",
 				"value": "SRAM1"
 			},
 			{
-				"target": "lowAddress"
+				"target": "programsAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "programsAttributes/:highAddress"
 			},
 			{
-				"target": "programId"
+				"target": "programsAttributes/:programId"
 			},
 			{
-				"target": "programThreads"
+				"target": "programsAttributes/:programThreads"
 			},
 			{
-				"target": "programTasks"
+				"target": "programsAttributes/:programTasks"
 			}
 		]
 	}

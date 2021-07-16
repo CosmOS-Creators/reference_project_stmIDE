@@ -1,33 +1,27 @@
 {
 	"version": "1.0.0",
 
-	"attributes": {
-		"state": {
-			"label": "State of the switch",
-			"type": "bool",
-			"tooltip": "Switch for the specific feature of operating system"
-		}
-	},
+	"attributes": {},
 
 	"elements": {
 		"memoryProtection":
 		[
 			{
-				"target": "state",
+				"target": "switchesAttributes/:state",
 				"value": true
 			}
 		],
 		"coreSync":
 		[
 			{
-				"target": "state",
+				"target": "switchesAttributes/:state",
 				"value": false
 			}
 		],
 		"performanceScheduling":
 		[
 			{
-				"target": "state",
+				"target": "switchesAttributes/:state",
 				"value": true
 			}
 		]

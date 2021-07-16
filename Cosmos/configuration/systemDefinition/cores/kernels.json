@@ -1,60 +1,41 @@
 {
 	"version": "1.0.0",
 
-	"attributes": {
-		"stackSize": {
-			"label": "Stack size",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"tooltip": "Stack size of the current kernel"
-		},
-		"lowAddress": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"highAddress": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"core": {
-			"type": "parentReference"
-		}
-	},
+	"attributes": {},
 
 	"elements": {
 		"kernel_0":
 		[
 			{
-				"target": "core",
+				"target": "kernelsAttributes/:core",
 				"value": "cores/core_0"
 			},
 			{
-				"target": "stackSize",
+				"target": "kernelsAttributes/:stackSize",
 				"value": 1024
 			},
 			{
-				"target": "lowAddress"
+				"target": "kernelsAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "kernelsAttributes/:highAddress"
 			}
 		],
 		"kernel_1":
 		[
 			{
-				"target": "core",
+				"target": "kernelsAttributes/:core",
 				"value": "cores/core_1"
 			},
 			{
-				"target": "stackSize",
+				"target": "kernelsAttributes/:stackSize",
 				"value": 1024
 			},
 			{
-				"target": "lowAddress"
+				"target": "kernelsAttributes/:lowAddress"
 			},
 			{
-				"target": "highAddress"
+				"target": "kernelsAttributes/:highAddress"
 			}
 		]
 	}

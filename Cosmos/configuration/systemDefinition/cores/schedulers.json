@@ -1,123 +1,75 @@
 {
 	"version": "1.0.0",
 
-	"attributes": {
-		"hyperTick": {
-			"label": "Hyper tick of this scheduler",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"tooltip": "Hyper period for the current scheduler"
-		},
-		"sync": {
-			"label": "Synchronization",
-			"type": "bool",
-			"tooltip": "Synchronization of the all schedulers which have this feature enabled"
-		},
-		"syncTicks": {
-			"label": "",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"tooltip": "Synchronization period"
-		},
-		"firstSyncTaskStartTick": {
-			"label": "",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"hidden": true
-		},
-		"lastToFistTaskTicks": {
-			"label": "",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"hidden": true
-		},
-		"preemptTick": {
-			"label": "Preempt period",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"tooltip": "Preempt period for the threads"
-		},
-		"core": {
-			"type": "parentReference"
-		},
-		"table": {
-			"placeholder": true,
-			"type": "referenceList"
-		}
-	},
+	"attributes": {},
 
 	"elements": {
 		"scheduler_0":
 		[
 			{
-				"target": "core",
+				"target": "schedulersAttributes/:core",
 				"value": "cores/core_0"
 			},
 			{
-				"target": "hyperTick",
+				"target": "schedulersAttributes/:hyperTick",
 				"value": 100
 			},
 			{
-				"target": "sync",
+				"target": "schedulersAttributes/:sync",
 				"value": false
 			},
 			{
-				"target": "syncTicks",
+				"target": "schedulersAttributes/:syncTicks",
 				"value": 0
 			},
 			{
-				"target": "firstSyncTaskStartTick",
+				"target": "schedulersAttributes/:firstSyncTaskStartTick",
 				"value": 0
 			},
 			{
-				"target": "lastToFistTaskTicks",
+				"target": "schedulersAttributes/:lastToFistTaskTicks",
 				"value": 45
 			},
 			{
-				"target": "preemptTick",
+				"target": "schedulersAttributes/:preemptTick",
 				"value": 1
 			},
 			{
-				"target": "table"
+				"target": "schedulersAttributes/:table"
 			}
 		],
 		"scheduler_1":
 		[
 			{
-				"target": "core",
+				"target": "schedulersAttributes/:core",
 				"value": "cores/core_1"
 			},
 			{
-				"target": "hyperTick",
+				"target": "schedulersAttributes/:hyperTick",
 				"value": 100
 			},
 			{
-				"target": "sync",
+				"target": "schedulersAttributes/:sync",
 				"value": false
 			},
 			{
-				"target": "syncTicks",
+				"target": "schedulersAttributes/:syncTicks",
 				"value": 0
 			},
 			{
-				"target": "firstSyncTaskStartTick",
+				"target": "schedulersAttributes/:firstSyncTaskStartTick",
 				"value": 0
 			},
 			{
-				"target": "lastToFistTaskTicks",
+				"target": "schedulersAttributes/:lastToFistTaskTicks",
 				"value": 45
 			},
 			{
-				"target": "preemptTick",
+				"target": "schedulersAttributes/:preemptTick",
 				"value": 1
 			},
 			{
-				"target": "table"
+				"target": "schedulersAttributes/:table"
 			}
 		]
 	}

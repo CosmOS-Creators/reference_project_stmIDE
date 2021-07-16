@@ -1,32 +1,19 @@
 {
 	"version": "1.0.0",
 
-	"attributes": {
-		"schedulableNum": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"buffersNum": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"doubleBuffersNum": {
-			"placeholder": true,
-			"type": "int"
-		}
-	},
+	"attributes": {},
 
 	"elements": {
 		"os":
 		[
 			{
-				"target": "schedulableNum"
+				"target": "osAttributes/:schedulableNum"
 			},
 			{
-				"target": "buffersNum"
+				"target": "osAttributes/:buffersNum"
 			},
 			{
-				"target": "doubleBuffersNum"
+				"target": "osAttributes/:doubleBuffersNum"
 			}
 		]
 	}

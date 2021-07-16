@@ -1,162 +1,101 @@
 {
 	"version": "1.0.0",
 
-	"attributes": {
-		"name": {
-			"label": "Name of the buffer",
-			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]+$",
-			"tooltip": "Name of the current buffer"
-		},
-		"size": {
-			"label": "Buffer size",
-			"type": "int",
-			"min": 0,
-			"max": 1024,
-			"tooltip": "Size of the current buffer in bytes"
-		},
-		"isDoubleBuffer": {
-			"label": "Double buffer",
-			"type": "bool",
-			"tooltip": "If true, two buffers will be created to handle user/os data access"
-		},
-		"readPermissions": {
-			"label": "List of schedulables which have read access to this buffer",
-			"type": "referenceList",
-			"tooltip": "All schedulables in this list can read data from this buffer",
-			"elements" : [
-				"threads/:name",
-				"tasks/:name"
-			]
-		},
-		"writePermissions": {
-			"label": "List of schedulables which have write access to this buffer",
-			"type": "referenceList",
-			"tooltip": "All schedulables in this list can write data to this buffer",
-			"elements" : [
-				"threads/:name",
-				"tasks/:name"
-			]
-		},
-		"compressedReadPermission": {
-			"placeholder": true,
-			"type": "stringList"
-		},
-		"compressedWritePermission": {
-			"placeholder": true,
-			"type": "stringList"
-		},
-		"compressedReadPermissionInverted": {
-			"placeholder": true,
-			"type": "stringList"
-		},
-		"compressedWritePermissionInverted": {
-			"placeholder": true,
-			"type": "stringList"
-		},
-		"bufferId": {
-			"placeholder": true,
-			"type": "int"
-		},
-		"doubleBufferId": {
-			"placeholder": true,
-			"type": "int"
-		}
-	},
+	"attributes": {},
 
 	"elements": {
 		"buffer_0":
 		[
 			{
-				"target": "name",
+				"target": "buffersAttributes/:name",
 				"value": "x_core_buffer_0"
 			},
 			{
-				"target": "size",
+				"target": "buffersAttributes/:size",
 				"value": 32
 			},
 			{
-				"target": "isDoubleBuffer",
+				"target": "buffersAttributes/:isDoubleBuffer",
 				"value": true
 			},
 			{
-				"target": "readPermissions",
+				"target": "buffersAttributes/:readPermissions",
 				"value": [
 					"tasks/task_3",
 					"threads/thread_1"
 				]
 			},
 			{
-				"target": "writePermissions",
+				"target": "buffersAttributes/:writePermissions",
 				"value": [
 					"tasks/task_0",
 					"threads/thread_0"
 				]
 			},
 			{
-				"target": "compressedReadPermission"
+				"target": "buffersAttributes/:compressedReadPermission"
 			},
 			{
-				"target": "compressedWritePermission"
+				"target": "buffersAttributes/:compressedWritePermission"
 			},
 			{
-				"target": "compressedReadPermissionInverted"
+				"target": "buffersAttributes/:compressedReadPermissionInverted"
 			},
 			{
-				"target": "compressedWritePermissionInverted"
+				"target": "buffersAttributes/:compressedWritePermissionInverted"
 			},
 			{
-				"target": "bufferId"
+				"target": "buffersAttributes/:bufferId"
 			},
 			{
-				"target": "doubleBufferId"
+				"target": "buffersAttributes/:doubleBufferId"
 			}
 		],
 		"buffer_1":
 		[
 			{
-				"target": "name",
+				"target": "buffersAttributes/:name",
 				"value": "x_core_buffer_1"
 			},
 			{
-				"target": "size",
+				"target": "buffersAttributes/:size",
 				"value": 32
 			},
 			{
-				"target": "isDoubleBuffer",
+				"target": "buffersAttributes/:isDoubleBuffer",
 				"value": false
 			},
 			{
-				"target": "readPermissions",
+				"target": "buffersAttributes/:readPermissions",
 				"value": [
 					"tasks/task_3",
 					"threads/thread_1"
 				]
 			},
 			{
-				"target": "writePermissions",
+				"target": "buffersAttributes/:writePermissions",
 				"value": [
 					"tasks/task_0",
 					"threads/thread_0"
 				]
 			},
 			{
-				"target": "compressedReadPermission"
+				"target": "buffersAttributes/:compressedReadPermission"
 			},
 			{
-				"target": "compressedWritePermission"
+				"target": "buffersAttributes/:compressedWritePermission"
 			},
 			{
-				"target": "compressedReadPermissionInverted"
+				"target": "buffersAttributes/:compressedReadPermissionInverted"
 			},
 			{
-				"target": "compressedWritePermissionInverted"
+				"target": "buffersAttributes/:compressedWritePermissionInverted"
 			},
 			{
-				"target": "bufferId"
+				"target": "buffersAttributes/:bufferId"
 			},
 			{
-				"target": "doubleBufferId"
+				"target": "buffersAttributes/:doubleBufferId"
 			}
 		]
 	}

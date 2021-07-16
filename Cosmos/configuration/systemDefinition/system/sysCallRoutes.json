@@ -1,272 +1,232 @@
 {
 	"version": "1.0.0",
 
-	"attributes": {
-		"routedFuncName": {
-			"label": "Name of the routed function",
-			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
-			"tooltip": "Name of the routed function to the sysCall, be aware that routed function args and return type must be compliant with sysCall"
-		},
-		"apiHeader": {
-			"label": "API header with routed function definition",
-			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*\\.[A-Za-z]+$",
-			"tooltip": "API header with routed function definition is included in the routes configuration"
-		},
-		"sysCall": {
-			"label": "Name of the sysCall",
-			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
-			"tooltip": "Name of the sysCall used to interface with your routed function"
-		},
-		"userVisible": {
-			"label": "Visible for application layer",
-			"type": "bool",
-			"tooltip": "Should be this route generated as CosmOS API for the usage in application layer?"
-		},
-		"isMappedToEntity": {
-			"label": "Is route mapped to entity",
-			"type": "bool",
-			"tooltip": "Is this route mapped also to entity for instance buffer"
-		},
-		"args": {
-			"label": "Function arguments",
-			"type": "stringList",
-			"tooltip": "Arguments of the routed function in the correct order"
-		},
-		"returnType": {
-			"label": "Type of the returned value",
-			"type": "string",
-			"validation": "^[A-Za-z][A-Za-z0-9_]*$",
-			"tooltip": "Return type of the routed function"
-		}
-	},
+	"attributes": {},
 
 	"elements": {
 		"route_0":
 		[
 			{
-				"target": "routedFuncName",
+				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "buffer_readArray"
 			},
 			{
-				"target": "apiHeader",
+				"target": "sysCallRoutesAttributes/:apiHeader",
 				"value": "buffer.h"
 			},
 			{
-				"target": "sysCall",
+				"target": "sysCallRoutesAttributes/:sysCall",
 				"value": "sysCalls_readWrite"
 			},
 			{
-				"target": "userVisible",
+				"target": "sysCallRoutesAttributes/:userVisible",
 				"value": true
 			},
 			{
-				"target": "isMappedToEntity",
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
 				"value": true
 			},
 			{
-				"target": "args",
+				"target": "sysCallRoutesAttributes/:args",
 				"value": [
 					"arrayPointer",
 					"size"
 				]
 			},
 			{
-				"target": "returnType",
+				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "CosmOS_BufferStateType"
 			}
 		],
 		"route_1":
 		[
 			{
-				"target": "routedFuncName",
+				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "buffer_writeArray"
 			},
 			{
-				"target": "apiHeader",
+				"target": "sysCallRoutesAttributes/:apiHeader",
 				"value": "buffer.h"
 			},
 			{
-				"target": "sysCall",
+				"target": "sysCallRoutesAttributes/:sysCall",
 				"value": "sysCalls_readWrite"
 			},
 			{
-				"target": "userVisible",
+				"target": "sysCallRoutesAttributes/:userVisible",
 				"value": true
 			},
 			{
-				"target": "isMappedToEntity",
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
 				"value": true
 			},
 			{
-				"target": "args",
+				"target": "sysCallRoutesAttributes/:args",
 				"value": [
 					"arrayPointer",
 					"size"
 				]
 			},
 			{
-				"target": "returnType",
+				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "CosmOS_BufferStateType"
 			}
 		],
 		"route_2":
 		[
 			{
-				"target": "routedFuncName",
+				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "deviceIO_togglePin"
 			},
 			{
-				"target": "apiHeader",
+				"target": "sysCallRoutesAttributes/:apiHeader",
 				"value": "deviceIO.h"
 			},
 			{
-				"target": "sysCall",
+				"target": "sysCallRoutesAttributes/:sysCall",
 				"value": "sysCalls_readWrite"
 			},
 			{
-				"target": "userVisible",
+				"target": "sysCallRoutesAttributes/:userVisible",
 				"value": true
 			},
 			{
-				"target": "isMappedToEntity",
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
 				"value": false
 			},
 			{
-				"target": "args",
+				"target": "sysCallRoutesAttributes/:args",
 				"value": [
 					"gpio",
 					"pin"
 				]
 			},
 			{
-				"target": "returnType",
+				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
 			}
 		],
 		"route_3":
 		[
 			{
-				"target": "routedFuncName",
+				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "osInit_init"
 			},
 			{
-				"target": "apiHeader",
+				"target": "sysCallRoutesAttributes/:apiHeader",
 				"value": "osInit.h"
 			},
 			{
-				"target": "sysCall",
+				"target": "sysCallRoutesAttributes/:sysCall",
 				"value": "sysCalls_os"
 			},
 			{
-				"target": "userVisible",
+				"target": "sysCallRoutesAttributes/:userVisible",
 				"value": true
 			},
 			{
-				"target": "isMappedToEntity",
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
 				"value": false
 			},
 			{
-				"target": "args",
+				"target": "sysCallRoutesAttributes/:args",
 				"value": []
 			},
 			{
-				"target": "returnType",
+				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
 			}
 		],
 		"route_4":
 		[
 			{
-				"target": "routedFuncName",
+				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "os_start"
 			},
 			{
-				"target": "apiHeader",
+				"target": "sysCallRoutesAttributes/:apiHeader",
 				"value": "os.h"
 			},
 			{
-				"target": "sysCall",
+				"target": "sysCallRoutesAttributes/:sysCall",
 				"value": "sysCalls_os"
 			},
 			{
-				"target": "userVisible",
+				"target": "sysCallRoutesAttributes/:userVisible",
 				"value": true
 			},
 			{
-				"target": "isMappedToEntity",
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
 				"value": false
 			},
 			{
-				"target": "args",
+				"target": "sysCallRoutesAttributes/:args",
 				"value": []
 			},
 			{
-				"target": "returnType",
+				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
 			}
 		],
 		"route_5":
 		[
 			{
-				"target": "routedFuncName",
+				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "schedulable_setExecutionStateToFinished"
 			},
 			{
-				"target": "apiHeader",
+				"target": "sysCallRoutesAttributes/:apiHeader",
 				"value": "schedulable.h"
 			},
 			{
-				"target": "sysCall",
+				"target": "sysCallRoutesAttributes/:sysCall",
 				"value": "sysCalls_os"
 			},
 			{
-				"target": "userVisible",
+				"target": "sysCallRoutesAttributes/:userVisible",
 				"value": false
 			},
 			{
-				"target": "isMappedToEntity",
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
 				"value": false
 			},
 			{
-				"target": "args",
+				"target": "sysCallRoutesAttributes/:args",
 				"value": []
 			},
 			{
-				"target": "returnType",
+				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
 			}
 		],
 		"route_6":
 		[
 			{
-				"target": "routedFuncName",
+				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "sysJobs_dispatcher"
 			},
 			{
-				"target": "apiHeader",
+				"target": "sysCallRoutesAttributes/:apiHeader",
 				"value": "sysJobs.h"
 			},
 			{
-				"target": "sysCall",
+				"target": "sysCallRoutesAttributes/:sysCall",
 				"value": "sysCalls_os"
 			},
 			{
-				"target": "userVisible",
+				"target": "sysCallRoutesAttributes/:userVisible",
 				"value": false
 			},
 			{
-				"target": "isMappedToEntity",
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
 				"value": false
 			},
 			{
-				"target": "args",
+				"target": "sysCallRoutesAttributes/:args",
 				"value": []
 			},
 			{
-				"target": "returnType",
+				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
 			}
 		]

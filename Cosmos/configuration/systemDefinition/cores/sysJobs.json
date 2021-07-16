@@ -1,84 +1,59 @@
 {
 	"version": "1.0.0",
 
-	"attributes": {
-		"tickMultiplicator": {
-			"label": "",
-			"type": "int",
-			"min": 0,
-			"max": 2048,
-			"tooltip": "Multiplicator of the sysJob task tick for the current group, this group will be triggered with tick multiplicator*tick of sysJob task"
-		},
-		"handlers": {
-			"label": "",
-			"type": "string",
-			"tooltip": "API names, be aware that the name must be the same as defined in header file"
-		},
-		"apiHeaders": {
-			"label": "API header files",
-			"type": "string",
-			"tooltip": "API headers providing definitions of sysJobs used in the current group"
-		},
-		"core": {
-			"type": "parentReference"
-		},
-		"groupId": {
-			"placeholder": true,
-			"type": "int"
-		}
-	},
+	"attributes": {},
 
 	"elements": {
 		"sysJob_0":
 		[
 			{
-				"target": "core",
+				"target": "sysJobsAttributes/:core",
 				"value": "cores/core_0"
 			},
 			{
-				"target": "tickMultiplicator",
+				"target": "sysJobsAttributes/:tickMultiplicator",
 				"value": 1
 			},
 			{
-				"target": "handlers",
+				"target": "sysJobsAttributes/:handlers",
 				"value": [
 					"CILuart_sysJob"
 				]
 			},
 			{
-				"target": "apiHeaders",
+				"target": "sysJobsAttributes/:apiHeaders",
 				"value": [
 					"CILuart.h"
 				]
 			},
 			{
-				"target": "groupId"
+				"target": "sysJobsAttributes/:groupId"
 			}
 		],
 		"sysJob_1":
 		[
 			{
-				"target": "core",
+				"target": "sysJobsAttributes/:core",
 				"value": "cores/core_1"
 			},
 			{
-				"target": "tickMultiplicator",
+				"target": "sysJobsAttributes/:tickMultiplicator",
 				"value": 1
 			},
 			{
-				"target": "handlers",
+				"target": "sysJobsAttributes/:handlers",
 				"value": [
 					"CILuart_sysJob"
 				]
 			},
 			{
-				"target": "apiHeaders",
+				"target": "sysJobsAttributes/:apiHeaders",
 				"value": [
 					"CILuart.h"
 				]
 			},
 			{
-				"target": "groupId"
+				"target": "sysJobsAttributes/:groupId"
 			}
 		]
 	}
