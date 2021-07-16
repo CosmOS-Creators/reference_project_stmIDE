@@ -6,7 +6,10 @@
 	],
 	"settings": {
 		"python.testing.pytestArgs": [
-			"./Cosmos/customBox/python"
+			"./Cosmos/customBox/python",
+			"--cov=Cosmos/customBox/python",
+			"--cov-report=html:Cosmos/generated/test/python",
+			"--cov-branch"
 		],
 		"python.testing.unittestEnabled": false,
 		"python.testing.nosetestsEnabled": false,
