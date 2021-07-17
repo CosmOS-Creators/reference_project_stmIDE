@@ -2,9 +2,11 @@ version: 2.1
 
 jobs:
   build:
+    shell: /bin/sh -leo pipefail
     docker:
       - image: "florianl21/cosmos-build-image:0.0.3"
     environment:
+      BASH_ENV: /etc/profile
       PYTHONPATH: "/root/project/Cosmos/customBox/generator:/root/project/Cosmos/customBox"
       PYTHON_REQUIREMENTS: "/root/project/Cosmos/customBox/python/requirements.txt"
       CODE_GENERATOR: "/root/project/Cosmos/customBox/python/ConfigurationGenerator.py"
