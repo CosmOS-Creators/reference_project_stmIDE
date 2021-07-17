@@ -15,12 +15,12 @@ jobs:
       - run: git submodule sync
       - run: git submodule update --init
       - restore_cache:
-          key: python-requirements-{{ checksum /root/project/Cosmos/customBox/python/requirements.txt }}
+          key: python-requirements-{{ checksum "/root/project/Cosmos/customBox/python/requirements.txt" }}
       - run:
           name: Installing pip packages
           command: 'pip3 install -r /root/project/Cosmos/customBox/python/requirements.txt'
       - save_cache:
-          key: python-requirements-{{ checksum /root/project/Cosmos/customBox/python/requirements.txt }}
+          key: python-requirements-{{ checksum "/root/project/Cosmos/customBox/python/requirements.txt" }}
           paths:
             - "/usr/lib/python3.8/site-packages"
       - run:
