@@ -1,9 +1,12 @@
 [submodule "Cosmos/core"]
 	path = Cosmos/core
 	url = https://github.com/CosmOS-Creators/core
+	branch = master
 [submodule "Cosmos/customBox"]
 	path = Cosmos/customBox
 	url = https://github.com/CosmOS-Creators/customBox
+	branch = master
 [submodule "Cosmos/stm32h755_integration"]
 	path = Cosmos/stm32h755_integration
 	url = https://github.com/CosmOS-Creators/stm32h755_integration
+	branch = master
