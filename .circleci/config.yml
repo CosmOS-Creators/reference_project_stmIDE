@@ -43,7 +43,7 @@ jobs:
           command: 'chmod +x /root/project/buildTests.sh && ./buildTests.sh'
       - run:
           name: Run Python code unit tests
-          command: 'cd /root/project && pytest'
+          command: 'cd /root/project && python3 -m pytest'
       - store_test_results:
           path: /root/project/Cosmos/generated/build/tests/results
       - store_test_results:
