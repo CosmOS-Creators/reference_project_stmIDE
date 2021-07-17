@@ -6,45 +6,53 @@ jobs:
       - image: "florianl21/cosmos-build-image:0.0.3"
     environment:
       PYTHONPATH: "/root/project/Cosmos/customBox/generator:/root/project/Cosmos/customBox"
+      PYTHON_REQUIREMENTS: "/root/project/Cosmos/customBox/python/requirements.txt"
+      CODE_GENERATOR: "/root/project/Cosmos/customBox/python/ConfigurationGenerator.py"
+      PYTHON_TEST_RESULTS: "/root/project/Cosmos/generated/python/tests"
+      BUILD_OUTPUT_DIR: "/root/project/Cosmos/generated/build"
     steps:
       - checkout
       - run: git submodule sync
       - run: git submodule update --init
       - restore_cache:
-          key: python-requirements-{{ checksum "/root/project/Cosmos/customBox/generator/requirements.txt" }}
+          key: python-requirements-{{ checksum $PYTHON_REQUIREMENTS }}
       - run:
           name: Installing pip packages
-          command: 'pip3 install -r /root/project/Cosmos/customBox/generator/requirements.txt'
+          command: 'pip3 install -r $PYTHON_REQUIREMENTS'
       - save_cache:
-          key: python-requirements-{{ checksum "/root/project/Cosmos/customBox/generator/requirements.txt" }}
+          key: python-requirements-{{ checksum $PYTHON_REQUIREMENTS }}
           paths:
             - "/usr/lib/python3.8/site-packages"
       - run:
           name: Building CM4 image with generated files on master
-          command: 'cd /root/project/Cosmos/generated/build/system/CM4/makefiles && make -j24'
+          command: 'cd $BUILD_OUTPUT_DIR/system/CM4/makefiles && make -j24'
       - run:
           name: Building CM7 image with generated files on master
-          command: 'cd /root/project/Cosmos/generated/build/system/CM7/makefiles && make -j24'
-      - run:
-          name: Check that default config and core config model are matching
-          command: 'python3 /root/project/Cosmos/customBox/newGenerator/DefaultConfig.py -c /root/project/Cosmos/configuration/workspace.json'
+          command: 'cd $BUILD_OUTPUT_DIR/system/CM7/makefiles && make -j24'
       - run:
           name: Generate code from configuration
-          command: 'python3 /root/project/Cosmos/customBox/generator/generator.py -w=Cosmos/generated/customBox/configuration/workspace.json'
+          command: 'python3 $CODE_GENERATOR /root/project/Cosmos/configuration/workspace.json'
       - run:
           name: Building CM4 image with newly generated files
-          command: 'cd /root/project/Cosmos/generated/build/system/CM4/makefiles && make -j24'
+          command: 'cd $BUILD_OUTPUT_DIR/system/CM4/makefiles && make -j24'
       - run:
           name: Building CM7 image with newly generated files
-          command: 'cd /root/project/Cosmos/generated/build/system/CM7/makefiles && make -j24'
+          command: 'cd $BUILD_OUTPUT_DIR/system/CM7/makefiles && make -j24'
       - run:
-          name: run unit tests
+          name: Run C code unit tests
           command: 'chmod +x /root/project/buildTests.sh && ./buildTests.sh'
+      - run:
+          name: Run Python code unit tests
+          command: 'cd /root/project && pytest'
       - store_test_results:
-          path: /root/project/Cosmos/generated/build/tests/results
+          path: $BUILD_OUTPUT_DIR/tests/results
+      - store_test_results:
+          path: $PYTHON_TEST_RESULTS
       - store_artifacts:
-          path: /root/project/Cosmos/generated/build/tests/results
+          path: $PYTHON_TEST_RESULTS
       - store_artifacts:
-          path: /root/project/Cosmos/generated/build/system/CM4/bin/CM4.elf
+          path: $BUILD_OUTPUT_DIR/tests/results
       - store_artifacts:
-          path: /root/project/Cosmos/generated/build/system/CM7/bin/CM7.elf
+          path: $BUILD_OUTPUT_DIR/system/CM4/bin/CM4.elf
+      - store_artifacts:
+          path: $BUILD_OUTPUT_DIR/system/CM7/bin/CM7.elf

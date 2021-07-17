@@ -64,5 +64,5 @@ CM7/.settings
 
 build
 # unittest files
-Cosmos/generated/test/python
+Cosmos/generated/python/tests
 .coverage
