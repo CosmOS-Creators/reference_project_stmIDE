@@ -37,7 +37,7 @@ jobs:
           command: 'cd /root/project/Cosmos/generated/build/system/CM4/makefiles && make -j24'
       - run:
           name: Building CM7 image with newly generated files
-          command: 'cd $BUILD_OUTPUT_DIR}/system/CM7/makefiles && make -j24'
+          command: 'cd /root/project/Cosmos/generated/build/system/CM7/makefiles && make -j24'
       - run:
           name: Run C code unit tests
           command: 'chmod +x /root/project/buildTests.sh && ./buildTests.sh'
