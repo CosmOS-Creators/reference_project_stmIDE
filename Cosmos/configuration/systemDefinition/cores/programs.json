@@ -1,0 +1,144 @@
+{
+	"version": "1.0.0",
+
+	"attributes": {},
+
+	"elements": {
+		"program_0":
+		[
+			{
+				"target": "programsAttributes/:core",
+				"value": "cores/core_0"
+			},
+			{
+				"target": "programsAttributes/:name",
+				"value": "default_CM7"
+			},
+			{
+				"target": "programsAttributes/:size",
+				"value": 1024
+			},
+			{
+				"target": "programsAttributes/:memory",
+				"value": "DTCM"
+			},
+			{
+				"target": "programsAttributes/:lowAddress"
+			},
+			{
+				"target": "programsAttributes/:highAddress"
+			},
+			{
+				"target": "programsAttributes/:programId"
+			},
+			{
+				"target": "programsAttributes/:programThreads"
+			},
+			{
+				"target": "programsAttributes/:programTasks"
+			}
+		],
+		"program_1":
+		[
+			{
+				"target": "programsAttributes/:core",
+				"value": "cores/core_0"
+			},
+			{
+				"target": "programsAttributes/:name",
+				"value": "blinking_led_CM7"
+			},
+			{
+				"target": "programsAttributes/:size",
+				"value": 1024
+			},
+			{
+				"target": "programsAttributes/:memory",
+				"value": "DTCM"
+			},
+			{
+				"target": "programsAttributes/:lowAddress"
+			},
+			{
+				"target": "programsAttributes/:highAddress"
+			},
+			{
+				"target": "programsAttributes/:programId"
+			},
+			{
+				"target": "programsAttributes/:programThreads"
+			},
+			{
+				"target": "programsAttributes/:programTasks"
+			}
+		],
+		"program_2":
+		[
+			{
+				"target": "programsAttributes/:core",
+				"value": "cores/core_1"
+			},
+			{
+				"target": "programsAttributes/:name",
+				"value": "default_CM4"
+			},
+			{
+				"target": "programsAttributes/:size",
+				"value": 1024
+			},
+			{
+				"target": "programsAttributes/:memory",
+				"value": "SRAM1"
+			},
+			{
+				"target": "programsAttributes/:lowAddress"
+			},
+			{
+				"target": "programsAttributes/:highAddress"
+			},
+			{
+				"target": "programsAttributes/:programId"
+			},
+			{
+				"target": "programsAttributes/:programThreads"
+			},
+			{
+				"target": "programsAttributes/:programTasks"
+			}
+		],
+		"program_3":
+		[
+			{
+				"target": "programsAttributes/:core",
+				"value": "cores/core_1"
+			},
+			{
+				"target": "programsAttributes/:name",
+				"value": "blinking_led_CM4"
+			},
+			{
+				"target": "programsAttributes/:size",
+				"value": 1024
+			},
+			{
+				"target": "programsAttributes/:memory",
+				"value": "SRAM1"
+			},
+			{
+				"target": "programsAttributes/:lowAddress"
+			},
+			{
+				"target": "programsAttributes/:highAddress"
+			},
+			{
+				"target": "programsAttributes/:programId"
+			},
+			{
+				"target": "programsAttributes/:programThreads"
+			},
+			{
+				"target": "programsAttributes/:programTasks"
+			}
+		]
+	}
+}

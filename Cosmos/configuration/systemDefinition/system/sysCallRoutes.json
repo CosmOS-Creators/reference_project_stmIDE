@@ -1,0 +1,234 @@
+{
+	"version": "1.0.0",
+
+	"attributes": {},
+
+	"elements": {
+		"route_0":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "buffer_readArray"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "buffer.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_readWrite"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"arrayPointer",
+					"size"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_BufferStateType"
+			}
+		],
+		"route_1":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "buffer_writeArray"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "buffer.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_readWrite"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"arrayPointer",
+					"size"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_BufferStateType"
+			}
+		],
+		"route_2":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "deviceIO_togglePin"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "deviceIO.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_readWrite"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"gpio",
+					"pin"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
+		],
+		"route_3":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "osInit_init"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "osInit.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_os"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": []
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
+		],
+		"route_4":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "os_start"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "os.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_os"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": []
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
+		],
+		"route_5":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "schedulable_setExecutionStateToFinished"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "schedulable.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_os"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": []
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
+		],
+		"route_6":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "sysJobs_dispatcher"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "sysJobs.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_os"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": []
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
+		]
+	}
+}

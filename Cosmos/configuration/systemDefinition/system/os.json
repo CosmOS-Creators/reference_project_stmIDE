@@ -1,0 +1,20 @@
+{
+	"version": "1.0.0",
+
+	"attributes": {},
+
+	"elements": {
+		"os":
+		[
+			{
+				"target": "osAttributes/:schedulableNum"
+			},
+			{
+				"target": "osAttributes/:buffersNum"
+			},
+			{
+				"target": "osAttributes/:doubleBuffersNum"
+			}
+		]
+	}
+}

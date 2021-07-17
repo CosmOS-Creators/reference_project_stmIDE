@@ -8,13 +8,13 @@
 ** @file bufferDoubleCfg.c
 *********************************************************************************
 <!--                bufferDoubleCfg Unit Local Group Definition               -->
-*********************************************************************************	
+*********************************************************************************
 ** @defgroup Local_bufferDoubleCfg Local
-** @ingroup bufferDoubleCfg_unit 
+** @ingroup bufferDoubleCfg_unit
 ** @brief bufferDoubleCfg locals
-** @details lorem 
-********************************************************************************/ 
-/********************************************************************************  
+** @details lorem
+********************************************************************************/
+/********************************************************************************
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /********************************************************************************
@@ -34,13 +34,13 @@
   * *************************************************************************//**
   * @defgroup Macros_bufferDoubleCfg Macros
   * @ingroup Local_bufferDoubleCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Macros_bufferDoubleCfg  
+  * @}
+  * Macros_bufferDoubleCfg
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -51,14 +51,14 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_bufferDoubleCfg Variables  
+  * @defgroup Variables_bufferDoubleCfg Variables
   * @ingroup Local_bufferDoubleCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_BufferDoublePairConfigurationType BuffersDoublePair0Cfg[BUFFER_PAIR_NUM] __OS_CONST_SECTION
+const CosmOS_BufferDoublePairConfigurationType BuffersDoublePair0Cfg[BUFFER_PAIR_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
@@ -69,7 +69,7 @@ IS_INITIALIZED_TO
 		},
 };
 
-const CosmOS_BufferDoubleConfigurationType BuffersDoubleCfg[BUFFER_DOUBLE_NUM] __OS_CONST_SECTION
+const CosmOS_BufferDoubleConfigurationType BuffersDoubleCfg[BUFFER_DOUBLE_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
@@ -77,29 +77,29 @@ IS_INITIALIZED_TO
 		},
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__OS_VAR_SECTION_START)
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_BufferDoubleVariableType BuffersDoubleVar[BUFFER_DOUBLE_NUM] __OS_VAR_SECTION
+CosmOS_BufferDoubleVariableType BuffersDoubleVar[BUFFER_DOUBLE_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
 		{
 				&BuffersDoubleCfg[BUFFER_DOUBLE_0_ID],
 				BUFFER_PAIR_BUFFER_0_ID,
-				BUFFER_PAIR_BUFFER_0_ID,
+				BUFFER_PAIR_BUFFER_1_ID,
 		},
 };
 /* @cond S */
-__SEC_STOP(__OS_VAR_SECTION_STOP)
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Variables_bufferDoubleCfg  
+  * @}
+  * Variables_bufferDoubleCfg
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -110,47 +110,47 @@ __SEC_STOP(__OS_VAR_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_bufferDoubleCfg_c API's  
+  * @defgroup Apis_bufferDoubleCfg_c API's
   * @ingroup Local_bufferDoubleCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_bufferDoubleCfg_c Getters  
-  * @ingroup Apis_bufferDoubleCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}       
-  * Getters_bufferDoubleCfg_c
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup Setters_bufferDoubleCfg_c Setters  
-  * @ingroup Apis_bufferDoubleCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}    
-  * Setters_bufferDoubleCfg_c   
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup General_bufferDoubleCfg_c General  
-  * @ingroup Apis_bufferDoubleCfg_c                                            
-  * @{                                                                           
+  * @addtogroup Getters_bufferDoubleCfg_c Getters
+  * @ingroup Apis_bufferDoubleCfg_c
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * General_bufferDoubleCfg_c  
+  * Getters_bufferDoubleCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup Setters_bufferDoubleCfg_c Setters
+  * @ingroup Apis_bufferDoubleCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * Setters_bufferDoubleCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup General_bufferDoubleCfg_c General
+  * @ingroup Apis_bufferDoubleCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * General_bufferDoubleCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **

@@ -8,13 +8,13 @@
 ** @file routeCfg.c
 *********************************************************************************
 <!--                   routeCfg Unit Local Group Definition                  -->
-*********************************************************************************	
+*********************************************************************************
 ** @defgroup Local_routeCfg Local
-** @ingroup routeCfg_unit 
+** @ingroup routeCfg_unit
 ** @brief routeCfg locals
-** @details lorem 
-********************************************************************************/ 
-/********************************************************************************  
+** @details lorem
+********************************************************************************/
+/********************************************************************************
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /********************************************************************************
@@ -23,6 +23,7 @@
 /* CORE interfaces */
 #include "routeCfg.h"
 /* GENERATED interfaces */
+#include "buffer.h"
 #include "buffer.h"
 #include "deviceIO.h"
 #include "osInit.h"
@@ -40,13 +41,13 @@
   * *************************************************************************//**
   * @defgroup Macros_routeCfg Macros
   * @ingroup Local_routeCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Macros_routeCfg  
+  * @}
+  * Macros_routeCfg
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -57,14 +58,14 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_routeCfg Variables  
+  * @defgroup Variables_routeCfg Variables
   * @ingroup Local_routeCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_GenericVoidType RoutesFuncConst[ROUTES_FUNC_NUM] __OS_CONST_SECTION
+const CosmOS_GenericVoidType RoutesFuncConst[ROUTES_FUNC_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		(CosmOS_GenericVoidType)buffer_readArray,
@@ -76,12 +77,14 @@ IS_INITIALIZED_TO
 		(CosmOS_GenericVoidType)sysJobs_dispatcher,
 };
 
-const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONST_SECTION
+const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
-		BUFFER_READARRAY, 
+		BUFFER_READARRAY,
 		BUFFER_WRITEARRAY,
-		BUFFER_READARRAY, 
+		BUFFER_READARRAY,
+		BUFFER_WRITEARRAY,
+		BUFFER_READARRAY,
 		BUFFER_WRITEARRAY,
 		DEVICEIO_TOGGLEPIN,
 		OSINIT_INIT,
@@ -90,13 +93,15 @@ IS_INITIALIZED_TO
 		SYSJOBS_DISPATCHER,
 };
 
-const BitWidthType RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONST_SECTION
+const BitWidthType RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		BUFFER_0_ID,
 		BUFFER_0_ID,
 		BUFFER_1_ID,
 		BUFFER_1_ID,
+		BUFFER_2_ID,
+		BUFFER_2_ID,
 		ROUTES_ID_TO_ENTITY_DUMMY,
 		ROUTES_ID_TO_ENTITY_DUMMY,
 		ROUTES_ID_TO_ENTITY_DUMMY,
@@ -104,7 +109,7 @@ IS_INITIALIZED_TO
 		ROUTES_ID_TO_ENTITY_DUMMY,
 };
 
-const CosmOS_RoutesConfigurationType RoutesConstCfg __OS_CONST_SECTION
+const CosmOS_RoutesConfigurationType RoutesConstCfg __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
     RoutesFuncConst,        /* const CosmOS_GenericVoidType * routeFunc               */
@@ -112,13 +117,13 @@ IS_INITIALIZED_TO
     RoutesIdToEntityConst,  /* const BitWidthType * routeIdToEntity                */
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Variables_routeCfg  
+  * @}
+  * Variables_routeCfg
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -129,47 +134,47 @@ __SEC_STOP(__OS_CONST_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_routeCfg_c API's  
+  * @defgroup Apis_routeCfg_c API's
   * @ingroup Local_routeCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_routeCfg_c Getters  
-  * @ingroup Apis_routeCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}       
-  * Getters_routeCfg_c
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup Setters_routeCfg_c Setters  
-  * @ingroup Apis_routeCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}    
-  * Setters_routeCfg_c   
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup General_routeCfg_c General  
-  * @ingroup Apis_routeCfg_c                                            
-  * @{                                                                           
+  * @addtogroup Getters_routeCfg_c Getters
+  * @ingroup Apis_routeCfg_c
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * General_routeCfg_c  
+  * Getters_routeCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup Setters_routeCfg_c Setters
+  * @ingroup Apis_routeCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * Setters_routeCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup General_routeCfg_c General
+  * @ingroup Apis_routeCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * General_routeCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **

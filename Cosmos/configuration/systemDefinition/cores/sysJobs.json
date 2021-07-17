@@ -1,0 +1,60 @@
+{
+	"version": "1.0.0",
+
+	"attributes": {},
+
+	"elements": {
+		"sysJob_0":
+		[
+			{
+				"target": "sysJobsAttributes/:core",
+				"value": "cores/core_0"
+			},
+			{
+				"target": "sysJobsAttributes/:tickMultiplicator",
+				"value": 1
+			},
+			{
+				"target": "sysJobsAttributes/:handlers",
+				"value": [
+					"CILuart_sysJob"
+				]
+			},
+			{
+				"target": "sysJobsAttributes/:apiHeaders",
+				"value": [
+					"CILuart.h"
+				]
+			},
+			{
+				"target": "sysJobsAttributes/:groupId"
+			}
+		],
+		"sysJob_1":
+		[
+			{
+				"target": "sysJobsAttributes/:core",
+				"value": "cores/core_1"
+			},
+			{
+				"target": "sysJobsAttributes/:tickMultiplicator",
+				"value": 1
+			},
+			{
+				"target": "sysJobsAttributes/:handlers",
+				"value": [
+					"CILuart_sysJob"
+				]
+			},
+			{
+				"target": "sysJobsAttributes/:apiHeaders",
+				"value": [
+					"CILuart.h"
+				]
+			},
+			{
+				"target": "sysJobsAttributes/:groupId"
+			}
+		]
+	}
+}

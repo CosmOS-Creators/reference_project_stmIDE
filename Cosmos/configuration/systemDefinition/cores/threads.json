@@ -1,0 +1,78 @@
+{
+	"version": "1.0.0",
+
+	"attributes": {},
+
+	"elements": {
+		"thread_0":
+		[
+			{
+				"target": "threadsAttributes/:uniqueId"
+			},
+			{
+				"target": "threadsAttributes/:program",
+				"value": "programs/program_0"
+			},
+			{
+				"target": "threadsAttributes/:name",
+				"value": "IdleThread_CM7"
+			},
+			{
+				"target": "threadsAttributes/:floatingPoint",
+				"value": true
+			},
+			{
+				"target": "threadsAttributes/:isIdle",
+				"value": true
+			},
+			{
+				"target": "threadsAttributes/:stackSize",
+				"value": 1024
+			},
+			{
+				"target": "threadsAttributes/:lowAddress"
+			},
+			{
+				"target": "threadsAttributes/:highAddress"
+			},
+			{
+				"target": "threadsAttributes/:threadId"
+			}
+		],
+		"thread_1":
+		[
+			{
+				"target": "threadsAttributes/:uniqueId"
+			},
+			{
+				"target": "threadsAttributes/:program",
+				"value": "programs/program_2"
+			},
+			{
+				"target": "threadsAttributes/:name",
+				"value": "IdleThread_CM4"
+			},
+			{
+				"target": "threadsAttributes/:floatingPoint",
+				"value": false
+			},
+			{
+				"target": "threadsAttributes/:isIdle",
+				"value": true
+			},
+			{
+				"target": "threadsAttributes/:stackSize",
+				"value": 1024
+			},
+			{
+				"target": "threadsAttributes/:lowAddress"
+			},
+			{
+				"target": "threadsAttributes/:highAddress"
+			},
+			{
+				"target": "threadsAttributes/:threadId"
+			}
+		]
+	}
+}

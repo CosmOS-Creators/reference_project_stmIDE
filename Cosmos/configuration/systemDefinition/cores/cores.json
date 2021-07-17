@@ -1,0 +1,115 @@
+{
+	"version": "1.0.0",
+	"attributes": {},
+
+	"elements": {
+		"core_0":
+		[
+			{
+				"target": "coresAttributes/:CoreName",
+				"value": "CM7"
+			},
+			{
+				"target": "coresAttributes/:bootOs",
+				"value": false
+			},
+			{
+				"target": "coresAttributes/:isCosmos",
+				"value": true
+			},
+			{
+				"target": "coresAttributes/:unmappedDataMemory",
+				"value": "DTCM"
+			},
+			{
+				"target": "coresAttributes/:unmappedDataSize",
+				"value": 2048
+			},
+			{
+				"target": "coresAttributes/:unmappedDataLowAddress"
+			},
+			{
+				"target": "coresAttributes/:unmappedDataHighAddress"
+			},
+			{
+				"target": "coresAttributes/:cpu",
+				"value": "cpu/CM7"
+			},
+			{
+				"target": "coresAttributes/:coreId"
+			},
+			{
+				"target": "coresAttributes/:corePrograms"
+			},
+			{
+				"target": "coresAttributes/:coreSysJobGroups"
+			},
+			{
+				"target": "coresAttributes/:coreSysJobHyperTick"
+			},
+			{
+				"target": "coresAttributes/:coreScheduler"
+			},
+			{
+				"target": "coresAttributes/:coreNumberOfThreads"
+			},
+			{
+				"target": "coresAttributes/:coreNumberOfTasks"
+			}
+		],
+		"core_1":
+		[
+			{
+				"target": "coresAttributes/:CoreName",
+				"value": "CM4"
+			},
+			{
+				"target": "coresAttributes/:bootOs",
+				"value": true
+			},
+			{
+				"target": "coresAttributes/:isCosmos",
+				"value": true
+			},
+			{
+				"target": "coresAttributes/:unmappedDataMemory",
+				"value": "SRAM1"
+			},
+			{
+				"target": "coresAttributes/:unmappedDataSize",
+				"value": 2048
+			},
+			{
+				"target": "coresAttributes/:unmappedDataLowAddress"
+			},
+			{
+				"target": "coresAttributes/:unmappedDataHighAddress"
+			},
+			{
+				"target": "coresAttributes/:cpu",
+				"value": "cpu/CM4"
+			},
+			{
+				"target": "coresAttributes/:coreId"
+			},
+			{
+				"target": "coresAttributes/:corePrograms"
+			},
+			{
+				"target": "coresAttributes/:coreSysJobGroups"
+			},
+			{
+				"target": "coresAttributes/:coreSysJobHyperTick"
+			},
+			{
+				"target": "coresAttributes/:coreScheduler"
+			},
+			{
+				"target": "coresAttributes/:coreNumberOfThreads"
+			},
+			{
+				"target": "coresAttributes/:coreNumberOfTasks"
+			}
+		]
+	}
+}

@@ -8,11 +8,11 @@
 ** @file stackCfg.c
 *********************************************************************************
 <!--                   stackCfg Unit Local Group Definition                   -->
-*********************************************************************************	
+*********************************************************************************
 ** @defgroup Local_stackCfg Local
-** @ingroup stackCfg_unit 
+** @ingroup stackCfg_unit
 ** @brief stackCfg locals
-** @details lorem 
+** @details lorem
 ********************************************************************************/
 /********************************************************************************
 **                           START OF THE SOURCE FILE                          **
@@ -33,13 +33,13 @@
   * *************************************************************************//**
   * @defgroup Macros_stackCfg_c Macros
   * @ingroup Local_stackCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Macros_stackCfg_c  
+  * @}
+  * Macros_stackCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -50,29 +50,29 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_stackCfg_c Variables  
+  * @defgroup Variables_stackCfg_c Variables
   * @ingroup Local_stackCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_StackConfigurationType KernelsStacksCfgConst[KERNEL_NUM] __OS_CONST_SECTION 
+const CosmOS_StackConfigurationType KernelsStacksCfgConst[KERNEL_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{                                                     /* KernelsStacksCfgConst[STACK_KERNEL_0_CORE_0_ID]            */
         STACK_KERNEL_0_CORE_0_SIZE,                       /* const BitWidthType stackSize                               */
-        STACK_KERNEL_0_CORE_0_LOW_ADDRESS,                /* const AddressType stackLowAddress                          */   
-        STACK_KERNEL_0_CORE_0_HIGH_ADDRESS,               /* const AddressType stackHighAddress                         */  
-    },   
+        STACK_KERNEL_0_CORE_0_LOW_ADDRESS,                /* const AddressType stackLowAddress                          */
+        STACK_KERNEL_0_CORE_0_HIGH_ADDRESS,               /* const AddressType stackHighAddress                         */
+    },
 		{                                                     /* KernelsStacksCfgConst[STACK_KERNEL_0_CORE_1_ID]            */
         STACK_KERNEL_0_CORE_1_SIZE,                       /* const BitWidthType stackSize                               */
-        STACK_KERNEL_0_CORE_1_LOW_ADDRESS,                /* const AddressType stackLowAddress                          */   
-        STACK_KERNEL_0_CORE_1_HIGH_ADDRESS,               /* const AddressType stackHighAddress                         */  
-    },   
+        STACK_KERNEL_0_CORE_1_LOW_ADDRESS,                /* const AddressType stackLowAddress                          */
+        STACK_KERNEL_0_CORE_1_HIGH_ADDRESS,               /* const AddressType stackHighAddress                         */
+    },
 };
 
-const CosmOS_StackConfigurationType TasksStacksCfgConst[TASK_NUM] __OS_CONST_SECTION
+const CosmOS_StackConfigurationType TasksStacksCfgConst[TASK_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{                                                     /* TasksStacksCfgConst[STACK_TASK_0_PROGRAM_0_CORE_0_ID]      */
@@ -107,7 +107,7 @@ IS_INITIALIZED_TO
     },
 };
 
-const CosmOS_StackConfigurationType ThreadsStacksCfgConst[THREAD_NUM] __OS_CONST_SECTION 
+const CosmOS_StackConfigurationType ThreadsStacksCfgConst[THREAD_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{                                                     /* ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_0_CORE_0_ID]  */
@@ -122,13 +122,13 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Variables_stackCfg_c  
+  * @}
+  * Variables_stackCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -139,47 +139,47 @@ __SEC_STOP(__OS_CONST_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_stackCfg_c API's  
+  * @defgroup Apis_stackCfg_c API's
   * @ingroup Local_stackCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_stackCfg_c Getters  
-  * @ingroup Apis_stackCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}       
-  * Getters_stackCfg_c
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup Setters_stackCfg_c Setters  
-  * @ingroup Apis_stackCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}    
-  * Setters_stackCfg_c   
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup General_stackCfg_c General  
-  * @ingroup Apis_stackCfg_c                                            
-  * @{                                                                           
+  * @addtogroup Getters_stackCfg_c Getters
+  * @ingroup Apis_stackCfg_c
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * General_stackCfg_c  
+  * Getters_stackCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup Setters_stackCfg_c Setters
+  * @ingroup Apis_stackCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * Setters_stackCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup General_stackCfg_c General
+  * @ingroup Apis_stackCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * General_stackCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **

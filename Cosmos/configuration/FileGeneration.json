@@ -1,0 +1,198 @@
+[
+	{
+		"templates": [
+			"application/program"
+		],
+		"outputDir": "{ApplicationGeneratedDir}",
+		"loop": "programs/:name",
+		"fileName": "{target}",
+		"target": "program",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"linker/gnu/arm/linker"
+		],
+		"outputDir": "{LinkerGeneratedDir}",
+		"loop": "cores/:CoreName",
+		"fileName": "{target}",
+		"target": "core"
+	},
+	{
+		"templates": [
+			"core/thread/thread"
+		],
+		"outputDir": "{CoreGeneratedDir}/thread",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/task/task"
+		],
+		"outputDir": "{CoreGeneratedDir}/task",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+        "templates": [
+            "core/sysDefs/sysDefs"
+        ],
+        "outputDir": "{CoreGeneratedDir}/sysDefs",
+        "fileName": "{template}",
+        "pattern": {
+            ".h": "inc"
+        }
+    },
+	{
+        "templates": [
+            "core/sysJobs/sysJobs"
+        ],
+        "outputDir": "{CoreGeneratedDir}/sysJobs",
+        "fileName": "{template}",
+        "pattern": {
+            ".h": "inc",
+			".c": "src"
+        }
+    },
+	{
+		"templates": [
+			"core/switch/switch"
+		],
+		"outputDir": "{CoreGeneratedDir}/switch",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc"
+		}
+	},
+	{
+		"templates": [
+			"core/stack/stack"
+		],
+		"outputDir": "{CoreGeneratedDir}/stack",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/scheduler/scheduler"
+		],
+		"outputDir": "{CoreGeneratedDir}/scheduler",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/schedulable/schedulable"
+		],
+		"outputDir": "{CoreGeneratedDir}/schedulable",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/route/route"
+		],
+		"outputDir": "{CoreGeneratedDir}/route",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/program/program"
+		],
+		"outputDir": "{CoreGeneratedDir}/program",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/permission/permission"
+		],
+		"outputDir": "{CoreGeneratedDir}/permission",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/os/os"
+		],
+		"outputDir": "{CoreGeneratedDir}/os",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/memory/memory"
+		],
+		"outputDir": "{CoreGeneratedDir}/memory",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/cosmosApi/cosmosApi"
+		],
+		"outputDir": "{CoreGeneratedDir}/cosmosApi",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/core/core"
+		],
+		"outputDir": "{CoreGeneratedDir}/core",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
+			"core/buffer/buffer"
+		],
+		"outputDir": "{CoreGeneratedDir}/buffer",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	}
+]

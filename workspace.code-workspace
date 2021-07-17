@@ -5,13 +5,17 @@
 		}
 	],
 	"settings": {
+		"python.testing.pytestArgs": [],
+		"python.testing.unittestEnabled": false,
+		"python.testing.nosetestsEnabled": false,
+		"python.testing.pytestEnabled": true,
 		"python.analysis.extraPaths": [
 			"./Cosmos/customBox/generator",
 			"./Cosmos/customBox",
-			"./Cosmos/customBox/newGenerator"
+			"./Cosmos/customBox/python"
 		],
 		"terminal.integrated.env.windows": {
-			"PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/Cosmos/customBox/generator;${workspaceFolder}/Cosmos/customBox"
+			"PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/Cosmos/customBox/generator;${workspaceFolder}/Cosmos/customBox;${workspaceFolder}/Cosmos/customBox/python"
 		},
         "editor.detectIndentation": false,
 		"editor.insertSpaces": false,

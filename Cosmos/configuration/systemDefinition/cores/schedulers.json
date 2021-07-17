@@ -1,0 +1,76 @@
+{
+	"version": "1.0.0",
+
+	"attributes": {},
+
+	"elements": {
+		"scheduler_0":
+		[
+			{
+				"target": "schedulersAttributes/:core",
+				"value": "cores/core_0"
+			},
+			{
+				"target": "schedulersAttributes/:hyperTick",
+				"value": 100
+			},
+			{
+				"target": "schedulersAttributes/:sync",
+				"value": false
+			},
+			{
+				"target": "schedulersAttributes/:syncTicks",
+				"value": 0
+			},
+			{
+				"target": "schedulersAttributes/:firstSyncTaskStartTick",
+				"value": 0
+			},
+			{
+				"target": "schedulersAttributes/:lastToFistTaskTicks",
+				"value": 45
+			},
+			{
+				"target": "schedulersAttributes/:preemptTick",
+				"value": 1
+			},
+			{
+				"target": "schedulersAttributes/:table"
+			}
+		],
+		"scheduler_1":
+		[
+			{
+				"target": "schedulersAttributes/:core",
+				"value": "cores/core_1"
+			},
+			{
+				"target": "schedulersAttributes/:hyperTick",
+				"value": 100
+			},
+			{
+				"target": "schedulersAttributes/:sync",
+				"value": false
+			},
+			{
+				"target": "schedulersAttributes/:syncTicks",
+				"value": 0
+			},
+			{
+				"target": "schedulersAttributes/:firstSyncTaskStartTick",
+				"value": 0
+			},
+			{
+				"target": "schedulersAttributes/:lastToFistTaskTicks",
+				"value": 45
+			},
+			{
+				"target": "schedulersAttributes/:preemptTick",
+				"value": 1
+			},
+			{
+				"target": "schedulersAttributes/:table"
+			}
+		]
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"version": "1.0.0",
+
+	"attributes": {},
+
+	"elements": {
+		"kernel_0":
+		[
+			{
+				"target": "kernelsAttributes/:core",
+				"value": "cores/core_0"
+			},
+			{
+				"target": "kernelsAttributes/:stackSize",
+				"value": 1024
+			},
+			{
+				"target": "kernelsAttributes/:lowAddress"
+			},
+			{
+				"target": "kernelsAttributes/:highAddress"
+			}
+		],
+		"kernel_1":
+		[
+			{
+				"target": "kernelsAttributes/:core",
+				"value": "cores/core_1"
+			},
+			{
+				"target": "kernelsAttributes/:stackSize",
+				"value": 1024
+			},
+			{
+				"target": "kernelsAttributes/:lowAddress"
+			},
+			{
+				"target": "kernelsAttributes/:highAddress"
+			}
+		]
+	}
+}

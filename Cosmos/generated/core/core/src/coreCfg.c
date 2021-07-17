@@ -8,11 +8,11 @@
 ** @file coreCfg.c
 *********************************************************************************
 <!--                   coreCfg Unit Local Group Definition                    -->
-*********************************************************************************	
+*********************************************************************************
 ** @defgroup Local_coreCfg Local
-** @ingroup coreCfg_unit 
+** @ingroup coreCfg_unit
 ** @brief coreCfg locals
-** @details lorem 
+** @details lorem
 ********************************************************************************/
 /********************************************************************************
 **                           START OF THE SOURCE FILE                          **
@@ -37,13 +37,13 @@
   * *************************************************************************//**
   * @defgroup Macros_coreCfg_c Macros
   * @ingroup Local_coreCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Macros_coreCfg_c  
+  * @}
+  * Macros_coreCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -54,35 +54,35 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_coreCfg_c Variables  
+  * @defgroup Variables_coreCfg_c Variables
   * @ingroup Local_coreCfg
-  * @{    
+  * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONST_SECTION_START)
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_CoreConfigurationType CoresCfgConst[CORE_NUM] __OS_CONST_SECTION
+const CosmOS_CoreConfigurationType CoresCfgConst[CORE_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{                                               /* CoresCfgConst[CORE_0_ID]                         */
-        ProgramsCore0CfgConst,                      /* const CosmOS_ProgramConfigurationType * programs    */   
-        PROGRAM_CORE_0_NUM,                         /* const BitWidthType numberOfPrograms              */   
+        ProgramsCore0CfgConst,                      /* const CosmOS_ProgramConfigurationType * programs    */
+        PROGRAM_CORE_0_NUM,                         /* const BitWidthType numberOfPrograms              */
         &SchedulersCfgConst[SCHEDULER_CORE_0_ID],   /* CosmOS_SchedulerConfigurationType * scheduler       */
     },
 		{                                               /* CoresCfgConst[CORE_1_ID]                         */
-        ProgramsCore1CfgConst,                      /* const CosmOS_ProgramConfigurationType * programs    */   
-        PROGRAM_CORE_1_NUM,                         /* const BitWidthType numberOfPrograms              */   
+        ProgramsCore1CfgConst,                      /* const CosmOS_ProgramConfigurationType * programs    */
+        PROGRAM_CORE_1_NUM,                         /* const BitWidthType numberOfPrograms              */
         &SchedulersCfgConst[SCHEDULER_CORE_1_ID],   /* CosmOS_SchedulerConfigurationType * scheduler       */
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_CONST_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__OS_VAR_SECTION_START)
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_CoreVariableType CoresVar[CORE_NUM] __OS_VAR_SECTION 
+CosmOS_CoreVariableType CoresVar[CORE_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
 		{                                               /* CoresVar[CORE_0_ID]                                  */
@@ -107,13 +107,13 @@ IS_INITIALIZED_TO
     },
 };
 /* @cond S */
-__SEC_STOP(__OS_VAR_SECTION_STOP)
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}  
-  * Variables_coreCfg_c  
+  * @}
+  * Variables_coreCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -124,47 +124,47 @@ __SEC_STOP(__OS_VAR_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_coreCfg_c API's  
+  * @defgroup Apis_coreCfg_c API's
   * @ingroup Local_coreCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_coreCfg_c Getters  
-  * @ingroup Apis_coreCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}       
-  * Getters_coreCfg_c
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup Setters_coreCfg_c Setters  
-  * @ingroup Apis_coreCfg_c                                            
-  * @{                                                                           
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN STOP GROUP                                                         **
-  * *************************************************************************//**
-  * @}    
-  * Setters_coreCfg_c   
-********************************************************************************/
-/********************************************************************************
-  * DOXYGEN START GROUP                                                        **
-  * *************************************************************************//**
-  * @addtogroup General_coreCfg_c General  
-  * @ingroup Apis_coreCfg_c                                            
-  * @{                                                                           
+  * @addtogroup Getters_coreCfg_c Getters
+  * @ingroup Apis_coreCfg_c
+  * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * General_coreCfg_c  
+  * Getters_coreCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup Setters_coreCfg_c Setters
+  * @ingroup Apis_coreCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * Setters_coreCfg_c
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN START GROUP                                                        **
+  * *************************************************************************//**
+  * @addtogroup General_coreCfg_c General
+  * @ingroup Apis_coreCfg_c
+  * @{
+********************************************************************************/
+/********************************************************************************
+  * DOXYGEN STOP GROUP                                                         **
+  * *************************************************************************//**
+  * @}
+  * General_coreCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **

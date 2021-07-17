@@ -1,0 +1,46 @@
+	{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug Tests",
+			"type": "python",
+			"request": "test",
+			"console": "integratedTerminal",
+			"env": {"PYTEST_ADDOPTS": "--no-cov"}
+		},
+		{
+			"name": "Debug Config parser",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/Cosmos/customBox/python/Parser/ConfigParser.py",
+			"args": [
+				"${workspaceFolder}/Cosmos/configuration/workspace.json"
+			],
+			"console": "integratedTerminal"
+		},
+		{
+			"name": "Debug Default config generator",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/Cosmos/customBox/python/DefaultConfig.py",
+			"args": [
+				"-g",
+				"${workspaceFolder}/Cosmos/configuration/workspace.json"
+			],
+			"console": "integratedTerminal"
+		},
+		{
+			"name": "Debug Generator",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/Cosmos/customBox/python/ConfigurationGenerator.py",
+			"args": [
+				"${workspaceFolder}/Cosmos/configuration/workspace.json"
+			],
+			"console": "integratedTerminal"
+		}
+	]
+	}
