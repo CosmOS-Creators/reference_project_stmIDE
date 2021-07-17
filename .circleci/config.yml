@@ -17,29 +17,29 @@ jobs:
       - run: git submodule sync
       - run: git submodule update --init
       - restore_cache:
-          key: python-requirements-{{ checksum $PYTHON_REQUIREMENTS }}
+          key: python-requirements-{{ checksum ${PYTHON_REQUIREMENTS} }}
       - run:
           name: Installing pip packages
-          command: 'pip3 install -r $PYTHON_REQUIREMENTS'
+          command: 'pip3 install -r ${PYTHON_REQUIREMENTS}'
       - save_cache:
-          key: python-requirements-{{ checksum $PYTHON_REQUIREMENTS }}
+          key: python-requirements-{{ checksum ${PYTHON_REQUIREMENTS} }}
           paths:
             - "/usr/lib/python3.8/site-packages"
       - run:
           name: Building CM4 image with generated files on master
-          command: 'cd $BUILD_OUTPUT_DIR/system/CM4/makefiles && make -j24'
+          command: 'cd ${BUILD_OUTPUT_DIR}/system/CM4/makefiles && make -j24'
       - run:
           name: Building CM7 image with generated files on master
-          command: 'cd $BUILD_OUTPUT_DIR/system/CM7/makefiles && make -j24'
+          command: 'cd ${BUILD_OUTPUT_DIR}/system/CM7/makefiles && make -j24'
       - run:
           name: Generate code from configuration
-          command: 'python3 $CODE_GENERATOR /root/project/Cosmos/configuration/workspace.json'
+          command: 'python3 ${CODE_GENERATOR} /root/project/Cosmos/configuration/workspace.json'
       - run:
           name: Building CM4 image with newly generated files
-          command: 'cd $BUILD_OUTPUT_DIR/system/CM4/makefiles && make -j24'
+          command: 'cd ${BUILD_OUTPUT_DIR}/system/CM4/makefiles && make -j24'
       - run:
           name: Building CM7 image with newly generated files
-          command: 'cd $BUILD_OUTPUT_DIR/system/CM7/makefiles && make -j24'
+          command: 'cd $BUILD_OUTPUT_DIR}/system/CM7/makefiles && make -j24'
       - run:
           name: Run C code unit tests
           command: 'chmod +x /root/project/buildTests.sh && ./buildTests.sh'
@@ -47,14 +47,14 @@ jobs:
           name: Run Python code unit tests
           command: 'cd /root/project && pytest'
       - store_test_results:
-          path: $BUILD_OUTPUT_DIR/tests/results
+          path: ${BUILD_OUTPUT_DIR}/tests/results
       - store_test_results:
-          path: $PYTHON_TEST_RESULTS
+          path: ${PYTHON_TEST_RESULTS}
       - store_artifacts:
-          path: $PYTHON_TEST_RESULTS
+          path: ${PYTHON_TEST_RESULTS}
       - store_artifacts:
-          path: $BUILD_OUTPUT_DIR/tests/results
+          path: ${BUILD_OUTPUT_DIR}/tests/results
       - store_artifacts:
-          path: $BUILD_OUTPUT_DIR/system/CM4/bin/CM4.elf
+          path: ${BUILD_OUTPUT_DIR}/system/CM4/bin/CM4.elf
       - store_artifacts:
-          path: $BUILD_OUTPUT_DIR/system/CM7/bin/CM7.elf
+          path: ${BUILD_OUTPUT_DIR}/system/CM7/bin/CM7.elf
