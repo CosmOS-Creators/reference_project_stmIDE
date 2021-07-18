@@ -69,14 +69,16 @@
 				"target": "buffersAttributes/:readPermissions",
 				"value": [
 					"tasks/task_3",
-					"threads/thread_1"
+					"threads/thread_1",
+					"tasks/task_5"
 				]
 			},
 			{
 				"target": "buffersAttributes/:writePermissions",
 				"value": [
 					"tasks/task_0",
-					"threads/thread_0"
+					"threads/thread_0",
+					"tasks/task_5"
 				]
 			},
 			{

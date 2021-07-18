@@ -61,6 +61,7 @@ __SEC_START(__BLINKING_LED_CM4_INIT_SECTION_START)
 ** start_name =blinking_led_CM4_init
 ********************************************************************************/
 int counter_cm4 __BLINKING_LED_CM4_INIT_SECTION = 0;
+int bufferReader_cm4 __BLINKING_LED_CM4_INIT_SECTION = 0;
 /********************************************************************************
 ** stop_name =blinking_led_CM4_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -83,6 +84,11 @@ if (counter_cm4 > 100)
 {
     counter_cm4 = 0;
     cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
+
+	bufferReader_cm4 = 100;
+	cosmosApi_write_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
+	bufferReader_cm4 = 0;
+	cosmosApi_read_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
 }
 else
 {
