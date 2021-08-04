@@ -5,13 +5,13 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file routeCfg.c
+** @file spinlockCfg.c
 *********************************************************************************
-<!--                   routeCfg Unit Local Group Definition                  -->
+<!--                 spinlockCfg Unit Local Group Definition                  -->
 *********************************************************************************
-** @defgroup Local_routeCfg Local
-** @ingroup routeCfg_unit
-** @brief routeCfg locals
+** @defgroup Local_spinlockCfg Local
+** @ingroup spinlockCfg_unit
+** @brief spinlockCfg locals
 ** @details lorem
 ********************************************************************************/
 /********************************************************************************
@@ -21,18 +21,7 @@
 **                            Include Files | Start                            **
 ********************************************************************************/
 /* CORE interfaces */
-#include "routeCfg.h"
-/* GENERATED interfaces */
-#include "buffer.h"
-#include "buffer.h"
-#include "deviceIO.h"
-#include "osInit.h"
-#include "os.h"
-#include "schedulable.h"
-#include "sysJobs.h"
-#include "spinlock.h"
-#include "spinlock.h"
-#include "spinlock.h"
+#include "spinlockCfg.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -42,15 +31,15 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Macros_routeCfg Macros
-  * @ingroup Local_routeCfg
+  * @defgroup Macros_spinlockCfg Macros
+  * @ingroup Local_spinlockCfg
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Macros_routeCfg
+  * Macros_spinlockCfg
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -61,87 +50,33 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_routeCfg Variables
-  * @ingroup Local_routeCfg
+  * @defgroup Variables_spinlockCfg Variables
+  * @ingroup Local_spinlockCfg
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONSTS_SECTION_START)
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-const CosmOS_GenericVoidType RoutesFuncConst[ROUTES_FUNC_NUM] __OS_CONSTS_SECTION
+CosmOS_SpinlockVariableType SpinlocksVar[SPINLOCK_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
-		(CosmOS_GenericVoidType)buffer_readArray,
-		(CosmOS_GenericVoidType)buffer_writeArray,
-		(CosmOS_GenericVoidType)deviceIO_togglePin,
-		(CosmOS_GenericVoidType)osInit_init,
-		(CosmOS_GenericVoidType)os_start,
-		(CosmOS_GenericVoidType)schedulable_setExecutionStateToFinished,
-		(CosmOS_GenericVoidType)sysJobs_dispatcher,
-		(CosmOS_GenericVoidType)spinlock_getSpinlock,
-		(CosmOS_GenericVoidType)spinlock_trySpinlock,
-		(CosmOS_GenericVoidType)spinlock_releaseSpinlock,
-};
-
-const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
-		SPINLOCK_GETSPINLOCK,
-		SPINLOCK_TRYSPINLOCK,
-		SPINLOCK_RELEASESPINLOCK,
-		SPINLOCK_GETSPINLOCK,
-		SPINLOCK_TRYSPINLOCK,
-		SPINLOCK_RELEASESPINLOCK,
-		BUFFER_READARRAY,
-		BUFFER_WRITEARRAY,
-		BUFFER_READARRAY,
-		BUFFER_WRITEARRAY,
-		BUFFER_READARRAY,
-		BUFFER_WRITEARRAY,
-		DEVICEIO_TOGGLEPIN,
-		OSINIT_INIT,
-		OS_START,
-		SCHEDULABLE_SETEXECUTIONSTATETOFINISHED,
-		SYSJOBS_DISPATCHER,
-};
-
-const BitWidthType RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
-		SPINLOCK_0_ID,
-		SPINLOCK_0_ID,
-		SPINLOCK_0_ID,
-		SPINLOCK_1_ID,
-		SPINLOCK_1_ID,
-		SPINLOCK_1_ID,
-		BUFFER_0_ID,
-		BUFFER_0_ID,
-		BUFFER_1_ID,
-		BUFFER_1_ID,
-		BUFFER_2_ID,
-		BUFFER_2_ID,
-		ROUTES_ID_TO_ENTITY_DUMMY,
-		ROUTES_ID_TO_ENTITY_DUMMY,
-		ROUTES_ID_TO_ENTITY_DUMMY,
-		ROUTES_ID_TO_ENTITY_DUMMY,
-		ROUTES_ID_TO_ENTITY_DUMMY,
-};
-
-const CosmOS_RoutesConfigurationType RoutesConstCfg __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
-    RoutesFuncConst,        /* const CosmOS_GenericVoidType * routeFunc               */
-    RoutesIdToFuncConst,    /* const BitWidthType * routeIdToFunc                  */
-    RoutesIdToEntityConst,  /* const BitWidthType * routeIdToEntity                */
+	{
+        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
+        0,									/* BitWidthType lockedByCoreId                                  */
+    },
+	{
+        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
+        0,									/* BitWidthType lockedByCoreId                                  */
+    },
 };
 /* @cond S */
-__SEC_STOP(__OS_CONSTS_SECTION_STOP)
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Variables_routeCfg
+  * Variables_spinlockCfg
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -152,47 +87,47 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_routeCfg_c API's
-  * @ingroup Local_routeCfg
+  * @defgroup Apis_spinlockCfg_c API's
+  * @ingroup Local_spinlockCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_routeCfg_c Getters
-  * @ingroup Apis_routeCfg_c
+  * @addtogroup Getters_spinlockCfg_c Getters
+  * @ingroup Apis_spinlockCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Getters_routeCfg_c
+  * Getters_spinlockCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_routeCfg_c Setters
-  * @ingroup Apis_routeCfg_c
+  * @addtogroup Setters_spinlockCfg_c Setters
+  * @ingroup Apis_spinlockCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Setters_routeCfg_c
+  * Setters_spinlockCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_routeCfg_c General
-  * @ingroup Apis_routeCfg_c
+  * @addtogroup General_spinlockCfg_c General
+  * @ingroup Apis_spinlockCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * General_routeCfg_c
+  * General_spinlockCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **

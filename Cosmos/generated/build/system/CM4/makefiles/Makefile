@@ -115,6 +115,7 @@ INCLUDE_DIRS	 =	$(M4_CORE)/Core/Inc								\
 					$(OS_CORE)/memory/inc							\
 					$(OS_CORE)/deviceIO/inc							\
 					$(OS_CORE)/scheduler/inc						\
+					$(OS_CORE)/spinlock/inc							\
 					$(OS_CORE)/thread/inc							\
 					$(OS_CORE)/task/inc								\
 					$(OS_CORE)/stack/inc							\
@@ -133,6 +134,7 @@ INCLUDE_DIRS	 =	$(M4_CORE)/Core/Inc								\
 					$(OS_GENERATED_CORE)/sysDefs/inc				\
 					$(OS_GENERATED_CORE)/memory/inc					\
 					$(OS_GENERATED_CORE)/scheduler/inc				\
+					$(OS_GENERATED_CORE)/spinlock/inc				\
 					$(OS_GENERATED_CORE)/thread/inc					\
 					$(OS_GENERATED_CORE)/task/inc					\
 					$(OS_GENERATED_CORE)/stack/inc					\

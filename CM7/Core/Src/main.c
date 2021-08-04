@@ -164,6 +164,7 @@ Error_Handler();
 	NVIC_SetPriority(SVCall_IRQn,3);
   NVIC_SetPriority(PendSV_IRQn,4);
   NVIC_SetPriority (SysTick_IRQn, 0);         /* set Priority for Systick Interrupt */
+
     cosmosApi_boot();
 	cosmosApi_osInit_init();
 	cosmosApi_os_start();

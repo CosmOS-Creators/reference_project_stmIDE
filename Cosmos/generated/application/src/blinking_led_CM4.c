@@ -82,13 +82,24 @@ void Task_0_Core_1_Handler(void)
 ********************************************************************************/
 if (counter_cm4 > 100)
 {
-    counter_cm4 = 0;
-    cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
+    CosmOS_SpinlockStateType spinlockState;
+    CosmOS_BufferStateType bufferState;
+
 
 	bufferReader_cm4 = 100;
-	cosmosApi_write_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
+	bufferState = cosmosApi_write_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
+
 	bufferReader_cm4 = 0;
-	cosmosApi_read_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
+	bufferState = cosmosApi_read_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
+
+	spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
+	spinlockState = cosmosApi_get_spinlock_uart_buffer_read();
+
+	spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
+
+
+    counter_cm4 = 0;
+    cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
 }
 else
 {
