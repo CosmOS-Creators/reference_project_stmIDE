@@ -34,6 +34,17 @@
 	},
 	{
 		"templates": [
+			"core/spinlock/spinlock"
+		],
+		"outputDir": "{CoreGeneratedDir}/spinlock",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
 			"core/task/task"
 		],
 		"outputDir": "{CoreGeneratedDir}/task",

@@ -27,6 +27,7 @@
 #include "bufferDoubleCfg.h"
 #include "routeCfg.h"
 #include "sysJobsCfg.h"
+#include "spinlockCfg.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -70,6 +71,7 @@ IS_INITIALIZED_TO
     BuffersCfgConst,    /* const CosmOS_BufferConfigurationType * buffers  */
     BUFFER_NUM,         /* const BitWidthType numberOfBuffers           */
     &RoutesConstCfg,    /* const CosmOS_RoutesConfigurationType route     */
+	SPINLOCK_NUM,       /* const BitWidthType numberOfSpinlocks           */
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
@@ -85,6 +87,7 @@ IS_INITIALIZED_TO
     CoresVar,           /* CosmOS_CoreVariableType * coreVars                         */
     BuffersVar,         /* CosmOS_BufferVariableType * bufferVars                     */
     BuffersDoubleVar,   /* CosmOS_BufferDoubleVariableType * const bufferDoubleVars   */
+	SpinlocksVar,   		/* CosmOS_BufferDoubleVariableType * const spinlockVars       */
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)

@@ -68,11 +68,13 @@ IS_INITIALIZED_TO
         ProgramsCore0CfgConst,                      /* const CosmOS_ProgramConfigurationType * programs    */
         PROGRAM_CORE_0_NUM,                         /* const BitWidthType numberOfPrograms              */
         &SchedulersCfgConst[SCHEDULER_CORE_0_ID],   /* CosmOS_SchedulerConfigurationType * scheduler       */
+		CORE_0_ID,		 /* const BitWidthType coreId       */
     },
 		{                                               /* CoresCfgConst[CORE_1_ID]                         */
         ProgramsCore1CfgConst,                      /* const CosmOS_ProgramConfigurationType * programs    */
         PROGRAM_CORE_1_NUM,                         /* const BitWidthType numberOfPrograms              */
         &SchedulersCfgConst[SCHEDULER_CORE_1_ID],   /* CosmOS_SchedulerConfigurationType * scheduler       */
+		CORE_1_ID,		 /* const BitWidthType coreId       */
     },
 };
 /* @cond S */

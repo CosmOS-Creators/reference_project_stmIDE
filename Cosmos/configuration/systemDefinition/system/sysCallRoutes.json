@@ -229,6 +229,105 @@
 				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
 			}
+		],
+		"route_7":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "spinlock_getSpinlock"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "spinlock.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_readWrite"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"id"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_SpinlockStateType"
+			}
+		],
+		"route_8":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "spinlock_trySpinlock"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "spinlock.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_readWrite"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"id"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_SpinlockStateType"
+			}
+		],
+		"route_9":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "spinlock_releaseSpinlock"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "spinlock.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_readWrite"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"id"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_SpinlockStateType"
+			}
 		]
 	}
 }
