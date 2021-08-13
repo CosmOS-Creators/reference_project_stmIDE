@@ -84,6 +84,10 @@ if (counter > 100)
 {
     counter = 0;
     cosmosApi_deviceIO_togglePin(GPIOE, GPIO_PIN_1); //ORANGE LED
+
+	// cosmosApi_get_spinlock_uart_buffer_read();
+
+	// cosmosApi_release_spinlock_uart_buffer_read();
 }
 else
 {

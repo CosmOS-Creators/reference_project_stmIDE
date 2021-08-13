@@ -1,5 +1,41 @@
-../../../../../../Cosmos/generated/build/system/CM4/out/obj/system_stm32h7xx_dualcore_boot_cm4_cm7.o: \
- ../../../../../../Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
+../../../../../../Cosmos/generated/build/system/CM4/out/obj/CILmemoryProtection.o: \
+ ../../../../../../Cosmos/stm32h755_integration/CIL/src/CILmemoryProtection.c \
+ ../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILmemoryProtection.h \
+ ../../../../../../Cosmos/core/sysDefs/inc/sysDefs.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsStacks.h \
+ ../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesStd.h \
+ ../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesVar.h \
+ ../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesCfg.h \
+ ../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesBase.h \
+ ../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILstdTypes.h \
+ ../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILbaseTypes.h \
+ ../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILmacros.h \
+ ../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesMacros.h \
+ ../../../../../../Drivers/CMSIS/Include/cmsis_gcc.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsRoutes.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsBuffers.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsBarriers.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsBuffers.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsBuffersDouble.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsTasks.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsThreads.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsPrograms.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsPermissions.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSchedulers.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsScheduleTables.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSchedulables.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsCores.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsOsBoot.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSysJobs.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSchedulerThreadLists.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSpinlocks.h \
+ ../../../../../../Cosmos/generated/core/memory/inc/memoryMapping.h \
+ ../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILstdTypes.h \
+ ../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILcore.h \
+ ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
+ ../../../../../../CM4/Core/Inc/stm32h7xx_hal_conf.h \
+ ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
+ ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h \
  ../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h755xx.h \
  ../../../../../../Drivers/CMSIS/Include/core_cm4.h \
@@ -8,10 +44,6 @@
  ../../../../../../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../../../../../../Drivers/CMSIS/Include/mpu_armv7.h \
  ../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \
- ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
- ../../../../../../CM4/Core/Inc/stm32h7xx_hal_conf.h \
- ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
- ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h \
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
@@ -35,6 +67,78 @@
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
 
+../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILmemoryProtection.h:
+
+../../../../../../Cosmos/core/sysDefs/inc/sysDefs.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsStacks.h:
+
+../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesStd.h:
+
+../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesVar.h:
+
+../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesCfg.h:
+
+../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesBase.h:
+
+../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILstdTypes.h:
+
+../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILbaseTypes.h:
+
+../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILmacros.h:
+
+../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesMacros.h:
+
+../../../../../../Drivers/CMSIS/Include/cmsis_gcc.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsRoutes.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsBuffers.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsBarriers.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsBuffers.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsBuffersDouble.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsTasks.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsThreads.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsPrograms.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsPermissions.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSchedulers.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsScheduleTables.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSchedulables.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsCores.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsOsBoot.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSysJobs.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSchedulerThreadLists.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSpinlocks.h:
+
+../../../../../../Cosmos/generated/core/memory/inc/memoryMapping.h:
+
+../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILstdTypes.h:
+
+../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILcore.h:
+
+../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
+
+../../../../../../CM4/Core/Inc/stm32h7xx_hal_conf.h:
+
+../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
+
+../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h:
+
 ../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 
 ../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h755xx.h:
@@ -50,14 +154,6 @@
 ../../../../../../Drivers/CMSIS/Include/mpu_armv7.h:
 
 ../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h:
-
-../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
-
-../../../../../../CM4/Core/Inc/stm32h7xx_hal_conf.h:
-
-../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
-
-../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h:
 
 ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 
