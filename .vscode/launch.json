@@ -46,7 +46,7 @@
 			"name": "Debug python GUI",
 			"type": "python",
 			"request": "launch",
-			"program": "${workspaceFolder}/Cosmos/customBox/pythonGUI/UI.py",
+			"program": "${workspaceFolder}/Cosmos/customBox/python/CustomBox.py",
 			"args": [
 			],
 			"console": "integratedTerminal"
