@@ -134,6 +134,18 @@
 				"-w=Cosmos/generated/customBox/configuration/workspace.json"
 			],
 			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "Run python GUI",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"command": "python",
+			"args": [
+				"${workspaceFolder}/Cosmos/customBox/pythonGUI/UI.py"
+			],
+			"problemMatcher": []
 		}
 	],
 	"inputs": [

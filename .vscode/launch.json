@@ -41,6 +41,15 @@
 				"${workspaceFolder}/Cosmos/configuration/workspace.json"
 			],
 			"console": "integratedTerminal"
-		}
+		},
+		{
+			"name": "Debug python GUI",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/Cosmos/customBox/pythonGUI/UI.py",
+			"args": [
+			],
+			"console": "integratedTerminal"
+		},
 	]
 	}
