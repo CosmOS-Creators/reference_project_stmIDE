@@ -85,8 +85,8 @@ Every element in the attribute property should define the following properties:
     | float           | `0`                          | number                             |                                                |
     | referenceList   | `[]`                         | list                               |                                                |
     | stringList      | `[]`                         | list                               |                                                |
-    | selection       | `""`                         | string                             |                                                |
-    | hex             | `""`                         | string in the format of `0xHHH`.   | Will be parsed to an int by the config parsers |
+    | selection       | `None`                       | string                             |                                                |
+    | hex             | `0`                          | string in the format of `0xHHH`.   | Will be parsed to an int by the config parsers |
     | slider          | `0`                          | number                             |                                                |
     | parentReference | `None`                       | string                             |                                                |
 * min:
