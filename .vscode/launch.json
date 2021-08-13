@@ -48,6 +48,7 @@
 			"request": "launch",
 			"program": "${workspaceFolder}/Cosmos/customBox/python/CustomBox.py",
 			"args": [
+				"${workspaceFolder}/Cosmos/configuration/workspace.json"
 			],
 			"console": "integratedTerminal"
 		},
