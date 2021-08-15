@@ -1,6 +1,9 @@
 {
 	"version": "1.0.0",
 	"attributes": {},
+	"ui": {
+		"use_page": "cores"
+	},
 
 	"elements": {
 		"core_0":

@@ -3,6 +3,10 @@
 
 	"attributes": {},
 
+	"ui": {
+		"use_page": "sys_call_routes"
+	},
+
 	"elements": {
 		"route_0":
 		[

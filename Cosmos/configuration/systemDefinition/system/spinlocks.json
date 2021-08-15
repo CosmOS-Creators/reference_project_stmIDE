@@ -3,6 +3,10 @@
 
 	"attributes": {},
 
+	"ui": {
+		"use_page": "spinlocks"
+	},
+
 	"elements": {
 		"spinlock_0":
 		[

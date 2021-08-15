@@ -3,6 +3,10 @@
 
 	"attributes": {},
 
+	"ui": {
+		"use_page": "programs"
+	},
+
 	"elements": {
 		"program_0":
 		[

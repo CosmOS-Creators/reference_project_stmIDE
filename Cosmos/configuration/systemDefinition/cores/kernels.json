@@ -3,6 +3,10 @@
 
 	"attributes": {},
 
+	"ui": {
+		"use_page": "kernels"
+	},
+
 	"elements": {
 		"kernel_0":
 		[

@@ -3,6 +3,10 @@
 
 	"attributes": {},
 
+	"ui": {
+		"use_page": "tasks"
+	},
+
 	"elements": {
 		"task_0":
 		[

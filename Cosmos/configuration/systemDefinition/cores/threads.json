@@ -3,6 +3,10 @@
 
 	"attributes": {},
 
+	"ui": {
+		"use_page": "threads"
+	},
+
 	"elements": {
 		"thread_0":
 		[

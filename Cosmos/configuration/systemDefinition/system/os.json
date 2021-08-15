@@ -3,6 +3,10 @@
 
 	"attributes": {},
 
+	"ui": {
+		"use_page": "os"
+	},
+
 	"elements": {
 		"os":
 		[

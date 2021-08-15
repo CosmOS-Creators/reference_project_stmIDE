@@ -3,6 +3,10 @@
 
 	"attributes": {},
 
+	"ui": {
+		"use_page": "scheduler_entries"
+	},
+
 	"elements": {
 		"element_0":
 		[
