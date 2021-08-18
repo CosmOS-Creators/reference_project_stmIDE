@@ -64,6 +64,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/program/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>
@@ -129,6 +130,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/program/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>
@@ -292,6 +294,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/program/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>
@@ -353,6 +356,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/program/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>

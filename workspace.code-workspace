@@ -36,7 +36,8 @@
 			"files.eol": "\n"
 		},
 		"files.associations": {
-			"xtr1common": "c"
+			"xtr1common": "c",
+			"memory": "cpp"
 		}
 	},
 }
