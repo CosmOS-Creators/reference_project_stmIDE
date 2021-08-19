@@ -65,7 +65,7 @@ IS_INITIALIZED_TO
 		{
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_0_CORE_0_ID],       /* const CosmOS_StackConfigurationType * stack                 */
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
-        wrapped_Idle_CM7,                                        /* const CosmOS_HandlerType handler                            */
+        wrapped_Idle_CM7,                                        /* const CosmOS_GenericVoidType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
         SCHEDULABLE_0_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_0_PROGRAM_0_CORE_0_ID,                                   /* const BitWidthType instanceId                                                */
@@ -75,7 +75,7 @@ IS_INITIALIZED_TO
 		{
         &TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_0_ID],       /* const CosmOS_StackConfigurationType * stack                 */
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
-        wrapped_sysJobs_CM7,                                        /* const CosmOS_HandlerType handler                            */
+        wrapped_sysJobs_CM7,                                        /* const CosmOS_GenericVoidType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
         SCHEDULABLE_1_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_1_PROGRAM_0_CORE_0_ID,                                   /* const BitWidthType instanceId                                                */
@@ -85,7 +85,7 @@ IS_INITIALIZED_TO
 		{
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_1_CORE_0_ID],       /* const CosmOS_StackConfigurationType * stack                 */
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
-        wrapped_Task_0_Core_0_Handler,                                        /* const CosmOS_HandlerType handler                            */
+        wrapped_Task_0_Core_0_Handler,                                        /* const CosmOS_GenericVoidType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
         SCHEDULABLE_2_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_0_PROGRAM_1_CORE_0_ID,                                   /* const BitWidthType instanceId                                                */
@@ -95,7 +95,7 @@ IS_INITIALIZED_TO
 		{
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_0_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                 */
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
-        wrapped_Idle_CM4,                                        /* const CosmOS_HandlerType handler                            */
+        wrapped_Idle_CM4,                                        /* const CosmOS_GenericVoidType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
         SCHEDULABLE_3_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_0_PROGRAM_0_CORE_1_ID,                                   /* const BitWidthType instanceId                                                */
@@ -105,7 +105,7 @@ IS_INITIALIZED_TO
 		{
         &TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                 */
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
-        wrapped_sysJobs_CM4,                                        /* const CosmOS_HandlerType handler                            */
+        wrapped_sysJobs_CM4,                                        /* const CosmOS_GenericVoidType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
         SCHEDULABLE_4_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_1_PROGRAM_0_CORE_1_ID,                                   /* const BitWidthType instanceId                                                */
@@ -115,7 +115,7 @@ IS_INITIALIZED_TO
 		{
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_1_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                 */
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
-        wrapped_Task_0_Core_1_Handler,                                        /* const CosmOS_HandlerType handler                            */
+        wrapped_Task_0_Core_1_Handler,                                        /* const CosmOS_GenericVoidType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
         SCHEDULABLE_5_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_0_PROGRAM_1_CORE_1_ID,                                   /* const BitWidthType instanceId                                                */
@@ -130,7 +130,7 @@ IS_INITIALIZED_TO
 		{
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_0_CORE_0_ID],       /* const CosmOS_StackConfigurationType * stack                              */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
-        wrapped_IdleThread_CM7,                                        /* const CosmOS_HandlerType handler                            */
+        wrapped_IdleThread_CM7,                                        /* const CosmOS_GenericVoidType handler                            */
         True,                                                             /* const CosmOS_BooleanType fp                                              */
         SCHEDULABLE_6_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         THREAD_0_PROGRAM_0_CORE_0_ID,                                     /* const BitWidthType instanceId                                                    */
@@ -140,7 +140,7 @@ IS_INITIALIZED_TO
 		{
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_0_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                              */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
-        wrapped_IdleThread_CM4,                                        /* const CosmOS_HandlerType handler                            */
+        wrapped_IdleThread_CM4,                                        /* const CosmOS_GenericVoidType handler                            */
         False,                                                             /* const CosmOS_BooleanType fp                                              */
         SCHEDULABLE_7_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         THREAD_0_PROGRAM_0_CORE_1_ID,                                     /* const BitWidthType instanceId                                                    */

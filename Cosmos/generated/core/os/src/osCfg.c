@@ -28,6 +28,7 @@
 #include "routeCfg.h"
 #include "sysJobsCfg.h"
 #include "spinlockCfg.h"
+#include "userKernelPanicHook.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -72,6 +73,7 @@ IS_INITIALIZED_TO
     BUFFER_NUM,         /* const BitWidthType numberOfBuffers           */
     &RoutesConstCfg,    /* const CosmOS_RoutesConfigurationType route     */
 	SPINLOCK_NUM,       /* const BitWidthType numberOfSpinlocks           */
+	userKernelPanicHook,		/* const CosmOS_GenericVoidType kernelPanicHook   */
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
