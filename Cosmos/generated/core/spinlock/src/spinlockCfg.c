@@ -68,6 +68,18 @@ IS_INITIALIZED_TO
         SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
         0,									/* BitWidthType lockedByCoreId                                  */
     },
+	{
+        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
+        0,									/* BitWidthType lockedByCoreId                                  */
+    },
+	{
+        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
+        0,									/* BitWidthType lockedByCoreId                                  */
+    },
+	{
+        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
+        0,									/* BitWidthType lockedByCoreId                                  */
+    },
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)

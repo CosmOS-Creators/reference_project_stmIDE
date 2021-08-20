@@ -92,10 +92,10 @@ if (counter_cm4 > 100)
 	bufferReader_cm4 = 0;
 	bufferState = cosmosApi_read_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
 
-	spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
-	spinlockState = cosmosApi_get_spinlock_uart_buffer_read();
-
-	spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
+	//spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
+	//spinlockState = cosmosApi_get_spinlock_uart_buffer_read();
+//
+	//spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
 
 
     counter_cm4 = 0;
