@@ -332,6 +332,72 @@
 				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "CosmOS_SpinlockStateType"
 			}
+		],
+		"route_10":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "interrupt_disableInterrupts"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "interrupt.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_os"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"void"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
+		],
+		"route_11":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "interrupt_enableInterrupts"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "interrupt.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_os"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"void"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
 		]
 	}
 }

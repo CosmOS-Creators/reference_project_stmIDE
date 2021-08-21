@@ -77,6 +77,8 @@ IS_INITIALIZED_TO
         BUFFER_0_SIZE,
         &PermissionsBuffer0ReadCfgConst,
         &PermissionsBuffer0WriteCfgConst,
+		True,
+		2,
     },
 		{
         buffer1Arr,
@@ -84,6 +86,8 @@ IS_INITIALIZED_TO
         BUFFER_1_SIZE,
         &PermissionsBuffer1ReadCfgConst,
         &PermissionsBuffer1WriteCfgConst,
+		True,
+		3,
     },
 		{
         buffer2Arr,
@@ -91,6 +95,8 @@ IS_INITIALIZED_TO
         BUFFER_2_SIZE,
         &PermissionsBuffer2ReadCfgConst,
         &PermissionsBuffer2WriteCfgConst,
+		True,
+		4,
     },
 };
 /* @cond S */

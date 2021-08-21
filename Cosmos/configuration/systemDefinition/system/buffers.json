@@ -53,6 +53,12 @@
 			},
 			{
 				"target": "buffersAttributes/:doubleBufferId"
+			},
+			{
+				"target": "buffersAttributes/:spinlockId"
+			},
+			{
+				"target": "buffersAttributes/:isInterCore"
 			}
 		],
 		"buffer_1":
@@ -102,6 +108,12 @@
 			},
 			{
 				"target": "buffersAttributes/:doubleBufferId"
+			},
+			{
+				"target": "buffersAttributes/:spinlockId"
+			},
+			{
+				"target": "buffersAttributes/:isInterCore"
 			}
 		]
 	}

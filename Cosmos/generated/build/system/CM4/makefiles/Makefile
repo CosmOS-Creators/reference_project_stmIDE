@@ -120,6 +120,7 @@ INCLUDE_DIRS	 =	$(M4_CORE)/Core/Inc								\
 					$(OS_CORE)/task/inc								\
 					$(OS_CORE)/stack/inc							\
 					$(OS_CORE)/program/inc							\
+					$(OS_CORE)/interrupt/inc						\
 					$(OS_CORE)/core/inc								\
 					$(OS_CORE)/buffer/inc							\
 					$(OS_CORE)/sysCalls/inc							\
