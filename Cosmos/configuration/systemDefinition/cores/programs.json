@@ -19,6 +19,10 @@
 				"value": 1024
 			},
 			{
+				"target": "programsAttributes/:heapSize",
+				"value": 256
+			},
+			{
 				"target": "programsAttributes/:memory",
 				"value": "DTCM"
 			},
@@ -51,6 +55,10 @@
 			{
 				"target": "programsAttributes/:size",
 				"value": 1024
+			},
+			{
+				"target": "programsAttributes/:heapSize",
+				"value": 256
 			},
 			{
 				"target": "programsAttributes/:memory",
@@ -87,6 +95,10 @@
 				"value": 1024
 			},
 			{
+				"target": "programsAttributes/:heapSize",
+				"value": 256
+			},
+			{
 				"target": "programsAttributes/:memory",
 				"value": "SRAM1"
 			},
@@ -119,6 +131,10 @@
 			{
 				"target": "programsAttributes/:size",
 				"value": 1024
+			},
+			{
+				"target": "programsAttributes/:heapSize",
+				"value": 256
 			},
 			{
 				"target": "programsAttributes/:memory",
