@@ -1,15 +1,11 @@
 {
 	"version": "1.0.0",
-
 	"attributes": {},
-
 	"ui": {
 		"use_page": "kernels"
 	},
-
 	"elements": {
-		"kernel_0":
-		[
+		"kernel_0": [
 			{
 				"target": "kernelsAttributes/:core",
 				"value": "cores/core_0"
@@ -25,8 +21,7 @@
 				"target": "kernelsAttributes/:highAddress"
 			}
 		],
-		"kernel_1":
-		[
+		"kernel_1": [
 			{
 				"target": "kernelsAttributes/:core",
 				"value": "cores/core_1"

@@ -1,15 +1,11 @@
 {
 	"version": "1.0.0",
-
 	"attributes": {},
-
 	"ui": {
 		"use_page": "os"
 	},
-
 	"elements": {
-		"os":
-		[
+		"os": [
 			{
 				"target": "osAttributes/:schedulableNum"
 			},

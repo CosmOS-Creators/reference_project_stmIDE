@@ -1,15 +1,11 @@
 {
 	"version": "1.0.0",
-
 	"attributes": {},
-
 	"ui": {
 		"use_page": "sys_jobs"
 	},
-
 	"elements": {
-		"sysJob_0":
-		[
+		"sysJob_0": [
 			{
 				"target": "sysJobsAttributes/:core",
 				"value": "cores/core_0"
@@ -34,8 +30,7 @@
 				"target": "sysJobsAttributes/:groupId"
 			}
 		],
-		"sysJob_1":
-		[
+		"sysJob_1": [
 			{
 				"target": "sysJobsAttributes/:core",
 				"value": "cores/core_1"

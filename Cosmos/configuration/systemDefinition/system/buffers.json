@@ -1,15 +1,11 @@
 {
 	"version": "1.0.0",
-
 	"attributes": {},
-
 	"ui": {
 		"use_page": "buffers"
 	},
-
 	"elements": {
-		"buffer_0":
-		[
+		"buffer_0": [
 			{
 				"target": "buffersAttributes/:name",
 				"value": "x_core_buffer_0"
@@ -61,8 +57,7 @@
 				"target": "buffersAttributes/:isInterCore"
 			}
 		],
-		"buffer_1":
-		[
+		"buffer_1": [
 			{
 				"target": "buffersAttributes/:name",
 				"value": "x_core_buffer_1"

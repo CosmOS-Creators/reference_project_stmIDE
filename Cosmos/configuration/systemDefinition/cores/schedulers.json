@@ -1,15 +1,11 @@
 {
 	"version": "1.0.0",
-
 	"attributes": {},
-
 	"ui": {
 		"use_page": "schedulers"
 	},
-
 	"elements": {
-		"scheduler_0":
-		[
+		"scheduler_0": [
 			{
 				"target": "schedulersAttributes/:core",
 				"value": "cores/core_0"
@@ -42,8 +38,7 @@
 				"target": "schedulersAttributes/:table"
 			}
 		],
-		"scheduler_1":
-		[
+		"scheduler_1": [
 			{
 				"target": "schedulersAttributes/:core",
 				"value": "cores/core_1"

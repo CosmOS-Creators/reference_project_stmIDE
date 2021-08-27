@@ -1,15 +1,11 @@
 {
 	"version": "1.0.0",
-
 	"attributes": {},
-
 	"ui": {
 		"use_page": "spinlocks"
 	},
-
 	"elements": {
-		"spinlock_0":
-		[
+		"spinlock_0": [
 			{
 				"target": "spinlocksAttributes/:name",
 				"value": "uart_buffer_read"
@@ -18,8 +14,7 @@
 				"target": "spinlocksAttributes/:spinlockId"
 			}
 		],
-		"spinlock_1":
-		[
+		"spinlock_1": [
 			{
 				"target": "spinlocksAttributes/:name",
 				"value": "uart_buffer_write"

@@ -120,7 +120,7 @@ Every element in the attribute property should define the following properties:
   * Mandatory: If `type` property is `selection`
   * Has to be omitted: Always except when `type` property is `selection` or `referenceList`
   * Value type: `list` or `string`
-  * Example value: `["CM4", "CM7"]` or `core/:name` or `["core/:name"]` for `referenceList` types
+  * Example value: `["CM4", "CM7"]` or `cores/:name` or `["cores/:name"]` for `referenceList` types
   * Default value if omitted: `None`
   * Description:
 
@@ -132,7 +132,7 @@ Every element in the attribute property should define the following properties:
     For attributes of type `referenceList`:
     If the elements key is not present attribute instances are hidden from the UI.
     If the elements key was defined:
-    * Always has to be of type list containing links in the form of `core/:name`
+    * Always has to be of type list containing links in the form of `cores/:name`
     * A UI list element will be shown to provide the user with the choice to add as many items of the matching types as desired. The provided attribute from the link will be used as labels for the elements
     * When populating an attribute of this type a sanity check will be made to check that the new value does match with the defined elements.
 

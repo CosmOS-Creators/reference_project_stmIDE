@@ -1,29 +1,23 @@
 {
 	"version": "1.0.0",
-
 	"attributes": {},
-
 	"ui": {
 		"use_page": "switches"
 	},
-
 	"elements": {
-		"memoryProtection":
-		[
+		"memoryProtection": [
 			{
 				"target": "switchesAttributes/:state",
 				"value": true
 			}
 		],
-		"coreSync":
-		[
+		"coreSync": [
 			{
 				"target": "switchesAttributes/:state",
 				"value": false
 			}
 		],
-		"performanceScheduling":
-		[
+		"performanceScheduling": [
 			{
 				"target": "switchesAttributes/:state",
 				"value": true

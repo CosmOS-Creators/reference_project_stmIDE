@@ -1,15 +1,11 @@
 {
 	"version": "1.0.0",
-
 	"attributes": {},
-
 	"ui": {
 		"use_page": "threads"
 	},
-
 	"elements": {
-		"thread_0":
-		[
+		"thread_0": [
 			{
 				"target": "threadsAttributes/:uniqueId"
 			},
@@ -43,8 +39,7 @@
 				"target": "threadsAttributes/:threadId"
 			}
 		],
-		"thread_1":
-		[
+		"thread_1": [
 			{
 				"target": "threadsAttributes/:uniqueId"
 			},

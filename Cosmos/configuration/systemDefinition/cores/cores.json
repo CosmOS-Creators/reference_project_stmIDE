@@ -4,10 +4,8 @@
 	"ui": {
 		"use_page": "cores"
 	},
-
 	"elements": {
-		"core_0":
-		[
+		"core_0": [
 			{
 				"target": "coresAttributes/:CoreName",
 				"value": "CM7"
@@ -60,8 +58,7 @@
 				"target": "coresAttributes/:coreNumberOfTasks"
 			}
 		],
-		"core_1":
-		[
+		"core_1": [
 			{
 				"target": "coresAttributes/:CoreName",
 				"value": "CM4"
