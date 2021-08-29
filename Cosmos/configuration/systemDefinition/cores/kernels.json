@@ -1,5 +1,5 @@
 {
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"attributes": {},
 	"ui": {
 		"use_page": "kernels"
@@ -37,5 +37,6 @@
 				"target": "kernelsAttributes/:highAddress"
 			}
 		]
-	}
+	},
+	"checksum": -6337551425782844353
 }

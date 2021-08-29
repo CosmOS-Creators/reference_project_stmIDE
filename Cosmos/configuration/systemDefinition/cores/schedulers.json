@@ -1,5 +1,5 @@
 {
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"attributes": {},
 	"ui": {
 		"use_page": "schedulers"
@@ -71,5 +71,6 @@
 				"target": "schedulersAttributes/:table"
 			}
 		]
-	}
+	},
+	"checksum": -3467452995315554254
 }
