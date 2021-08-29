@@ -41,7 +41,10 @@
 ** userKernelPanicHook
 ** function is called during os kernel panic
 ********************************************************************************/
-void userKernelPanicHook(void)
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void userKernelPanicHook(void)
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
@@ -53,6 +56,9 @@ void userKernelPanicHook(void)
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **
 ********************************************************************************/

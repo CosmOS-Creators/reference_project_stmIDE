@@ -28,6 +28,7 @@
 		<nature>com.st.stm32cube.ide.mcu.MCUMultiCpuProjectNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
 	</natures>
 	<linkedResources>
 		<link>
@@ -36,14 +37,24 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Common</locationURI>
 		</link>
 		<link>
+			<name>Cosmos/core</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Cosmos/core</locationURI>
+		</link>
+		<link>
 			<name>Cosmos/generated/application</name>
 			<type>2</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Cosmos/generated/application</locationURI>
 		</link>
 		<link>
-			<name>Cosmos/core</name>
+			<name>Cosmos/generated/core</name>
 			<type>2</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Cosmos/core</locationURI>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Cosmos/generated/core</locationURI>
+		</link>
+		<link>
+			<name>Cosmos/stm32h755_integration/CIL</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Cosmos/stm32h755_integration/CIL</locationURI>
 		</link>
 		<link>
 			<name>Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal.c</name>
@@ -154,16 +165,6 @@
 			<name>Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c</locationURI>
-		</link>
-		<link>
-			<name>Cosmos/stm32h755_integration/CIL</name>
-			<type>2</type>
-    		<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Cosmos/stm32h755_integration/CIL</locationURI>
-		</link>
-		<link>
-			<name>Cosmos/generated/core</name>
-			<type>2</type>
-    		<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Cosmos/generated/core</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

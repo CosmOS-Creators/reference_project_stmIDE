@@ -270,55 +270,102 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /********************************************************************************
 **                        Function Definitions | Start                         **
 ********************************************************************************/
-
-void wrapped_Idle_CM7(void)
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void wrapped_Idle_CM7(void)
 {
     Idle_CM7();
     for(;;);
 };
-void wrapped_sysJobs_CM7(void)
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void wrapped_sysJobs_CM7(void)
 {
     sysCalls_os(SYSCALL_SYSJOBS_DISPATCHER);
     sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
     for(;;);
 };
-void wrapped_Task_0_Core_0_Handler(void)
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void wrapped_Task_0_Core_0_Handler(void)
 {
     Task_0_Core_0_Handler();
     sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
     for(;;);
 };
-void wrapped_Idle_CM4(void)
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void wrapped_Idle_CM4(void)
 {
     Idle_CM4();
     for(;;);
 };
-void wrapped_sysJobs_CM4(void)
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void wrapped_sysJobs_CM4(void)
 {
     sysCalls_os(SYSCALL_SYSJOBS_DISPATCHER);
     sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
     for(;;);
 };
-void wrapped_Task_0_Core_1_Handler(void)
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void wrapped_Task_0_Core_1_Handler(void)
 {
     Task_0_Core_1_Handler();
     sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
     for(;;);
 };
-void wrapped_IdleThread_CM7(void)
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void wrapped_IdleThread_CM7(void)
 {
     while ( 1 )
     {
         IdleThread_CM7();
     }
 };
-void wrapped_IdleThread_CM4(void)
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void wrapped_IdleThread_CM4(void)
 {
     while ( 1 )
     {
         IdleThread_CM4();
     }
 };
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
 /********************************************************************************
 **                        Function Definitions | Stop                          **
 ********************************************************************************/
