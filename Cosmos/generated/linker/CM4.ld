@@ -222,6 +222,7 @@ _flash_os_section_vars_start = LOADADDR(.os_section_vars);
   .data :
   {
     . = ALIGN(4);
+	_s_unprotected_section = .;          /* create a global symbol at data start */
     _sdata = .;        /* create a global symbol at data start */
     *(.data)           /* .data sections */
     *(.data*)          /* .data* sections */
@@ -245,6 +246,9 @@ _flash_os_section_vars_start = LOADADDR(.os_section_vars);
     . = ALIGN(4);
     _ebss = .;         /* define a global symbol at bss end */
     __bss_end__ = _ebss;
+	_e_unprotected_align_helper = .;        /* create a helper for log2 alignment */
+    . = ALIGN((0x2 << (LOG2CEIL (_e_unprotected_align_helper) - 1)));
+	_e_unprotected_section = .;          /* create a global symbol at data start */
   } >UNMAPPED_PARTITION_IN_SRAM1
 
   /* Remove information from the standard libraries */

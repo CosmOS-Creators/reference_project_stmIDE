@@ -394,6 +394,40 @@
 				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
 			}
+		],
+		"route_12":
+		[
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "memoryManager_sbrk"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "memoryManager.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_readWrite"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"incr",
+					"dummy"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "AddressType"
+			}
 		]
 	}
 }

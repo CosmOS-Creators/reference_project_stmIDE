@@ -37,7 +37,11 @@
 		},
 		"files.associations": {
 			"xtr1common": "c",
-			"memory": "cpp"
+			"memory": "cpp",
+			"cstdlib": "cpp",
+			"xutility": "cpp",
+			"types.h": "c",
+			"xmemory0": "c"
 		}
 	},
 }

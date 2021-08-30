@@ -90,6 +90,10 @@ if (counter > 100)
 	// cosmosApi_get_spinlock_uart_buffer_read();
 
 	// cosmosApi_release_spinlock_uart_buffer_read();
+
+	//int *integerPointer = new int(100);
+
+	//delete integerPointer;
 }
 else
 {

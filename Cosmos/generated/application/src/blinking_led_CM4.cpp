@@ -102,6 +102,10 @@ if (counter_cm4 > 100)
 
     counter_cm4 = 0;
     cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
+
+	int *integerPointer = new int(100);
+
+	delete integerPointer;
 }
 else
 {

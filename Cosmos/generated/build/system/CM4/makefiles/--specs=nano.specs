@@ -1,6 +1,6 @@
-../../../../../../Cosmos/generated/build/system/CM4/out/obj/memoryManager.o: \
- ../../../../../../Cosmos/core/memory/src/memoryManager.c \
- ../../../../../../Cosmos/core/memory/inc/memoryManager.h \
+../../../../../../Cosmos/generated/build/system/CM4/out/obj/default_CM7.o: \
+ ../../../../../../Cosmos/generated/application/src/default_CM7.cpp \
+ ../../../../../../Cosmos/generated/application/inc/default_CM7.h \
  ../../../../../../Cosmos/core/sysDefs/inc/sysDefs.h \
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsStacks.h \
  ../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesStd.h \
@@ -29,9 +29,12 @@
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSysJobs.h \
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSchedulerThreadLists.h \
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSpinlocks.h \
- ../../../../../../Cosmos/generated/core/memory/inc/memoryMapping.h
+ ../../../../../../Cosmos/generated/core/cosmosApi/inc/cosmosApi.h \
+ ../../../../../../Cosmos/core/sysCalls/inc/sysCalls.h \
+ ../../../../../../Cosmos/generated/core/memory/inc/memoryMapping.h \
+ ../../../../../../Cosmos/core/os/inc/osBoot.h
 
-../../../../../../Cosmos/core/memory/inc/memoryManager.h:
+../../../../../../Cosmos/generated/application/inc/default_CM7.h:
 
 ../../../../../../Cosmos/core/sysDefs/inc/sysDefs.h:
 
@@ -89,4 +92,10 @@
 
 ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSpinlocks.h:
 
+../../../../../../Cosmos/generated/core/cosmosApi/inc/cosmosApi.h:
+
+../../../../../../Cosmos/core/sysCalls/inc/sysCalls.h:
+
 ../../../../../../Cosmos/generated/core/memory/inc/memoryMapping.h:
+
+../../../../../../Cosmos/core/os/inc/osBoot.h:
