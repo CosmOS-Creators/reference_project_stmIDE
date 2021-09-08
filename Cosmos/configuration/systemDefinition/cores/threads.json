@@ -73,6 +73,76 @@
 			{
 				"target": "threadsAttributes/:threadId"
 			}
+		],
+		"thread_2":
+		[
+			{
+				"target": "threadsAttributes/:uniqueId"
+			},
+			{
+				"target": "threadsAttributes/:program",
+				"value": "programs/program_1"
+			},
+			{
+				"target": "threadsAttributes/:name",
+				"value": "Thread_Core_0"
+			},
+			{
+				"target": "threadsAttributes/:floatingPoint",
+				"value": true
+			},
+			{
+				"target": "threadsAttributes/:isIdle",
+				"value": false
+			},
+			{
+				"target": "threadsAttributes/:stackSize",
+				"value": 1024
+			},
+			{
+				"target": "threadsAttributes/:lowAddress"
+			},
+			{
+				"target": "threadsAttributes/:highAddress"
+			},
+			{
+				"target": "threadsAttributes/:threadId"
+			}
+		],
+		"thread_3":
+		[
+			{
+				"target": "threadsAttributes/:uniqueId"
+			},
+			{
+				"target": "threadsAttributes/:program",
+				"value": "programs/program_3"
+			},
+			{
+				"target": "threadsAttributes/:name",
+				"value": "Thread_Core_1"
+			},
+			{
+				"target": "threadsAttributes/:floatingPoint",
+				"value": true
+			},
+			{
+				"target": "threadsAttributes/:isIdle",
+				"value": false
+			},
+			{
+				"target": "threadsAttributes/:stackSize",
+				"value": 1024
+			},
+			{
+				"target": "threadsAttributes/:lowAddress"
+			},
+			{
+				"target": "threadsAttributes/:highAddress"
+			},
+			{
+				"target": "threadsAttributes/:threadId"
+			}
 		]
 	}
 }

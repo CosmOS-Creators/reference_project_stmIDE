@@ -147,6 +147,26 @@ IS_INITIALIZED_TO
         PROGRAM_0_CORE_1_ID,                                              /* const BitWidthType programId                                             */
         CORE_1_ID,                                                        /* const BitWidthType coreId                                                */
     },
+		{
+        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_0_ID],       /* const CosmOS_StackConfigurationType * stack                              */
+        SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
+        wrapped_Thread_Core_0,                                        /* const CosmOS_GenericVoidType handler                            */
+        True,                                                             /* const CosmOS_BooleanType fp                                              */
+        SCHEDULABLE_8_UNIQUE_ID,                                          /* const BitWidthType id                                         */
+        THREAD_0_PROGRAM_1_CORE_0_ID,                                     /* const BitWidthType instanceId                                                    */
+        PROGRAM_1_CORE_0_ID,                                              /* const BitWidthType programId                                             */
+        CORE_0_ID,                                                        /* const BitWidthType coreId                                                */
+    },
+		{
+        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                              */
+        SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
+        wrapped_Thread_Core_1,                                        /* const CosmOS_GenericVoidType handler                            */
+        True,                                                             /* const CosmOS_BooleanType fp                                              */
+        SCHEDULABLE_9_UNIQUE_ID,                                          /* const BitWidthType id                                         */
+        THREAD_0_PROGRAM_1_CORE_1_ID,                                     /* const BitWidthType instanceId                                                    */
+        PROGRAM_1_CORE_1_ID,                                              /* const BitWidthType programId                                             */
+        CORE_1_ID,                                                        /* const BitWidthType coreId                                                */
+    },
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
@@ -202,6 +222,16 @@ IS_INITIALIZED_TO
         &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_1_ID],       /* const CosmOS_SchedulableConfigurationType * const cfg                              */
         SCHEDULABLE_INSTANCE_ENUM__READY,                                /* CosmOS_SchedulableStateType state                            */
         STACK_THREAD_0_PROGRAM_0_CORE_1_HIGH_ADDRESS,                                        /* StackPointerType stackPointer                            */
+    },
+		{
+        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_0_ID],       /* const CosmOS_SchedulableConfigurationType * const cfg                              */
+        SCHEDULABLE_INSTANCE_ENUM__READY,                                /* CosmOS_SchedulableStateType state                            */
+        STACK_THREAD_0_PROGRAM_1_CORE_0_HIGH_ADDRESS,                                        /* StackPointerType stackPointer                            */
+    },
+		{
+        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],       /* const CosmOS_SchedulableConfigurationType * const cfg                              */
+        SCHEDULABLE_INSTANCE_ENUM__READY,                                /* CosmOS_SchedulableStateType state                            */
+        STACK_THREAD_0_PROGRAM_1_CORE_1_HIGH_ADDRESS,                                        /* StackPointerType stackPointer                            */
     },
 };
 /* @cond S */
@@ -356,11 +386,37 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
 /* @cond S */
 __SEC_START(__APPLICATION_FUNC_SECTION_START)
 /* @endcond*/
+__APPLICATION_FUNC_SECTION void wrapped_Thread_Core_0(void)
+{
+    while ( 1 )
+    {
+        Thread_Core_0();
+    }
+};
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
 __APPLICATION_FUNC_SECTION void wrapped_IdleThread_CM4(void)
 {
     while ( 1 )
     {
         IdleThread_CM4();
+    }
+};
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void wrapped_Thread_Core_1(void)
+{
+    while ( 1 )
+    {
+        Thread_Core_1();
     }
 };
 /* @cond S */

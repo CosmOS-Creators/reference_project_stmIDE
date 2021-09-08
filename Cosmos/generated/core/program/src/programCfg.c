@@ -125,13 +125,13 @@ IS_INITIALIZED_TO
         &ProgramsCore0CfgConst[PROGRAM_0_CORE_0_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
         TasksProgram0Core0Var,                          /* CosmOS_TaskVariableType * taskVars                                */
         ThreadsProgram0Core0Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    	PROGRAM_0_CORE_0_HEAP_LOW_ADDRESS,                      /* const AddressType currentHeapAddress                     */
+    	0,                      /* BitWidthType numberOfMallocVars                     */
 	},
 		{
         &ProgramsCore0CfgConst[PROGRAM_1_CORE_0_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
         TasksProgram1Core0Var,                          /* CosmOS_TaskVariableType * taskVars                                */
         ThreadsProgram1Core0Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    	PROGRAM_1_CORE_0_HEAP_LOW_ADDRESS,                      /* const AddressType currentHeapAddress                     */
+    	0,                      /* BitWidthType numberOfMallocVars                     */
 	},
 };
 CosmOS_ProgramVariableType ProgramsCore1Var[PROGRAM_CORE_1_NUM] __OS_VARS_SECTION
@@ -141,13 +141,13 @@ IS_INITIALIZED_TO
         &ProgramsCore1CfgConst[PROGRAM_0_CORE_1_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
         TasksProgram0Core1Var,                          /* CosmOS_TaskVariableType * taskVars                                */
         ThreadsProgram0Core1Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    	PROGRAM_0_CORE_1_HEAP_LOW_ADDRESS,                      /* const AddressType currentHeapAddress                     */
+    	0,                      /* BitWidthType numberOfMallocVars                     */
 	},
 		{
         &ProgramsCore1CfgConst[PROGRAM_1_CORE_1_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
         TasksProgram1Core1Var,                          /* CosmOS_TaskVariableType * taskVars                                */
         ThreadsProgram1Core1Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    	PROGRAM_1_CORE_1_HEAP_LOW_ADDRESS,                      /* const AddressType currentHeapAddress                     */
+    	0,                      /* BitWidthType numberOfMallocVars                     */
 	},
 };
 /* @cond S */
