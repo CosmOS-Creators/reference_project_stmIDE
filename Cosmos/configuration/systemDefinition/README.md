@@ -120,7 +120,7 @@ Every element in the attribute property should define the following properties:
   * Mandatory: If `type` property is `selection`
   * Has to be omitted: Always except when `type` property is `selection` or `referenceList`
   * Value type: `list` or `string`
-  * Example value: `["CM4", "CM7"]` or `cores/:name` or `["cores/:name"]` for `referenceList` types
+  * Example value: `["CM4", "CM7"]` if type is `selection` or `["cores/:name"]` for `referenceList` types
   * Default value if omitted: `None`
   * Description:
 
