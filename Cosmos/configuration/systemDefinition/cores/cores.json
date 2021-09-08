@@ -1,9 +1,5 @@
 {
 	"version": "1.1.0",
-	"attributes": {},
-	"ui": {
-		"use_page": "cores"
-	},
 	"elements": {
 		"core_0": [
 			{
@@ -112,5 +108,9 @@
 			}
 		]
 	},
-	"checksum": "97737e860331ab93c4d3714eaf834014"
+	"attributes": {},
+	"checksum": "97737e860331ab93c4d3714eaf834014",
+	"ui": {
+		"use_page": "cores"
+	}
 }

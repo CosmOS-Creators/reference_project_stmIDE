@@ -1,9 +1,5 @@
 {
 	"version": "1.1.0",
-	"attributes": {},
-	"ui": {
-		"use_page": "buffers"
-	},
 	"elements": {
 		"buffer_0": [
 			{
@@ -112,5 +108,9 @@
 			}
 		]
 	},
-	"checksum": "820acaaec12c0bd03409070349478eee"
+	"attributes": {},
+	"checksum": "820acaaec12c0bd03409070349478eee",
+	"ui": {
+		"use_page": "buffers"
+	}
 }

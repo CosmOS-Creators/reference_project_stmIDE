@@ -1,9 +1,5 @@
 {
 	"version": "1.1.0",
-	"attributes": {},
-	"ui": {
-		"use_page": "switches"
-	},
 	"elements": {
 		"memoryProtection": [
 			{
@@ -24,5 +20,9 @@
 			}
 		]
 	},
-	"checksum": "992396638a6e65be850355304bcedf9d"
+	"attributes": {},
+	"checksum": "992396638a6e65be850355304bcedf9d",
+	"ui": {
+		"use_page": "switches"
+	}
 }

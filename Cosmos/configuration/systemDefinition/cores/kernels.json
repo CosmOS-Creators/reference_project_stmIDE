@@ -1,9 +1,5 @@
 {
 	"version": "1.1.0",
-	"attributes": {},
-	"ui": {
-		"use_page": "kernels"
-	},
 	"elements": {
 		"kernel_0": [
 			{
@@ -38,5 +34,9 @@
 			}
 		]
 	},
-	"checksum": "77ef59ba022f3aec2f3a446489874684"
+	"attributes": {},
+	"checksum": "77ef59ba022f3aec2f3a446489874684",
+	"ui": {
+		"use_page": "kernels"
+	}
 }

@@ -1,9 +1,5 @@
 {
 	"version": "1.1.0",
-	"attributes": {},
-	"ui": {
-		"use_page": "programs"
-	},
 	"elements": {
 		"program_0": [
 			{
@@ -138,5 +134,9 @@
 			}
 		]
 	},
-	"checksum": "c8a51f5a8d199514072b6f9720f61c13"
+	"attributes": {},
+	"checksum": "c8a51f5a8d199514072b6f9720f61c13",
+	"ui": {
+		"use_page": "programs"
+	}
 }

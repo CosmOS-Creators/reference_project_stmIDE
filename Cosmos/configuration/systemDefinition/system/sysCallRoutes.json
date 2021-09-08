@@ -1,9 +1,5 @@
 {
 	"version": "1.1.0",
-	"attributes": {},
-	"ui": {
-		"use_page": "sys_call_routes"
-	},
 	"elements": {
 		"route_0": [
 			{
@@ -385,5 +381,9 @@
 			}
 		]
 	},
-	"checksum": "b06cc743c55129584a7a7c1611d10935"
+	"attributes": {},
+	"checksum": "b06cc743c55129584a7a7c1611d10935",
+	"ui": {
+		"use_page": "sys_call_routes"
+	}
 }

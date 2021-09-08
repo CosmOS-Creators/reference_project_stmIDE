@@ -1,9 +1,5 @@
 {
 	"version": "1.1.0",
-	"attributes": {},
-	"ui": {
-		"use_page": "threads"
-	},
 	"elements": {
 		"thread_0": [
 			{
@@ -74,5 +70,9 @@
 			}
 		]
 	},
-	"checksum": "7ef2a1805ce910ddd63cb02492604e8b"
+	"attributes": {},
+	"checksum": "7ef2a1805ce910ddd63cb02492604e8b",
+	"ui": {
+		"use_page": "threads"
+	}
 }
