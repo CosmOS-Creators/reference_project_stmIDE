@@ -69,6 +69,9 @@ IS_INITIALIZED_TO
         PROGRAM_0_CORE_0_SIZE,                      /* const BitWidthType programMemorySize                     */
         PROGRAM_0_CORE_0_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
         PROGRAM_0_CORE_0_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
+        PROGRAM_0_CORE_0_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
+        PROGRAM_0_CORE_0_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
+        PROGRAM_0_CORE_0_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
     },
 		{
         CORE_0_ID,                                      /* const BitWidthType coreId                            */
@@ -77,6 +80,9 @@ IS_INITIALIZED_TO
         PROGRAM_1_CORE_0_SIZE,                      /* const BitWidthType programMemorySize                     */
         PROGRAM_1_CORE_0_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
         PROGRAM_1_CORE_0_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
+        PROGRAM_1_CORE_0_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
+        PROGRAM_1_CORE_0_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
+        PROGRAM_1_CORE_0_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
     },
 };
 const CosmOS_ProgramConfigurationType ProgramsCore1CfgConst[PROGRAM_CORE_1_NUM] __OS_CONSTS_SECTION
@@ -89,6 +95,9 @@ IS_INITIALIZED_TO
         PROGRAM_0_CORE_1_SIZE,                      /* const BitWidthType programMemorySize                     */
         PROGRAM_0_CORE_1_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
         PROGRAM_0_CORE_1_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
+        PROGRAM_0_CORE_1_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
+        PROGRAM_0_CORE_1_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
+        PROGRAM_0_CORE_1_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
     },
 		{
         CORE_1_ID,                                      /* const BitWidthType coreId                            */
@@ -97,6 +106,9 @@ IS_INITIALIZED_TO
         PROGRAM_1_CORE_1_SIZE,                      /* const BitWidthType programMemorySize                     */
         PROGRAM_1_CORE_1_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
         PROGRAM_1_CORE_1_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
+        PROGRAM_1_CORE_1_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
+        PROGRAM_1_CORE_1_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
+        PROGRAM_1_CORE_1_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
     },
 };
 /* @cond S */

@@ -51,7 +51,7 @@
 ** DO NOT MODIFY THIS COMMENT !                 GENERATED SECTION | Start      **
 ** FUNCTION DECLARATION
 ********************************************************************************/
-void userKernelPanicHook(void);
+__APPLICATION_FUNC_SECTION void userKernelPanicHook(void);
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !         	    GENERATED SECTION | Stop       **
 ** FUNCTION DECLARATION
