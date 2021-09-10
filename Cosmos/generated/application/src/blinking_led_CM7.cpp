@@ -120,12 +120,12 @@ __APPLICATION_FUNC_SECTION void Thread_Core_0(void)
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =Thread_Core_0
 ********************************************************************************/
-	int * L = new int[10];
-	delete[] L;
+	//int * L = new int[10];
+	//delete[] L;
 
-	int *integerPointer = new int(100);
+	//int *integerPointer = new int(100);
 
-	delete integerPointer;
+	//delete integerPointer;
 /********************************************************************************
 ** stop_name =Thread_Core_0
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **

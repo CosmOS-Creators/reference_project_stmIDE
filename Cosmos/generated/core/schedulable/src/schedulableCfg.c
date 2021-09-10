@@ -316,8 +316,8 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION void wrapped_sysJobs_CM7(void)
 {
-    sysCalls_os(SYSCALL_SYSJOBS_DISPATCHER);
-    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    sysCalls_bitWidthType_ret_void(SYSCALL_SYSJOBS_DISPATCHER);
+    sysCalls_bitWidthType_ret_void(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
     for(;;);
 };
 /* @cond S */
@@ -329,7 +329,7 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START)
 __APPLICATION_FUNC_SECTION void wrapped_Task_0_Core_0_Handler(void)
 {
     Task_0_Core_0_Handler();
-    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    sysCalls_bitWidthType_ret_void(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
     for(;;);
 };
 /* @cond S */
@@ -351,8 +351,8 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION void wrapped_sysJobs_CM4(void)
 {
-    sysCalls_os(SYSCALL_SYSJOBS_DISPATCHER);
-    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    sysCalls_bitWidthType_ret_void(SYSCALL_SYSJOBS_DISPATCHER);
+    sysCalls_bitWidthType_ret_void(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
     for(;;);
 };
 /* @cond S */
@@ -364,7 +364,7 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START)
 __APPLICATION_FUNC_SECTION void wrapped_Task_0_Core_1_Handler(void)
 {
     Task_0_Core_1_Handler();
-    sysCalls_os(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    sysCalls_bitWidthType_ret_void(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
     for(;;);
 };
 /* @cond S */

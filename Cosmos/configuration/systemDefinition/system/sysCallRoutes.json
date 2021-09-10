@@ -16,7 +16,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_voidPtr_bitWidthType_ret_bitWidthType"
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -50,7 +50,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_voidPtr_bitWidthType_ret_bitWidthType"
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -84,7 +84,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_voidPtr_bitWidthType_ret_bitWidthType"
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -118,7 +118,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_os"
+				"value": "sysCalls_bitWidthType_ret_void"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -149,7 +149,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_os"
+				"value": "sysCalls_bitWidthType_ret_void"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -180,7 +180,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_os"
+				"value": "sysCalls_bitWidthType_ret_void"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -211,7 +211,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_os"
+				"value": "sysCalls_bitWidthType_ret_void"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -242,7 +242,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_voidPtr_bitWidthType_ret_bitWidthType"
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -275,7 +275,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_voidPtr_bitWidthType_ret_bitWidthType"
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -308,7 +308,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_voidPtr_bitWidthType_ret_bitWidthType"
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -341,7 +341,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_os"
+				"value": "sysCalls_bitWidthType_ret_void"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -353,9 +353,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:args",
-				"value": [
-					"void"
-				]
+				"value": []
 			},
 			{
 				"target": "sysCallRoutesAttributes/:returnType",
@@ -374,7 +372,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_os"
+				"value": "sysCalls_bitWidthType_ret_void"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
@@ -386,9 +384,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:args",
-				"value": [
-					"void"
-				]
+				"value": []
 			},
 			{
 				"target": "sysCallRoutesAttributes/:returnType",
