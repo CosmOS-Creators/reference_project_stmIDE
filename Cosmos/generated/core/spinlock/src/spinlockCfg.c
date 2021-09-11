@@ -62,23 +62,39 @@ IS_INITIALIZED_TO
 {
 	{
         SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
-        0,									/* BitWidthType lockedByCoreId                                  */
+        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
     },
 	{
         SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
-        0,									/* BitWidthType lockedByCoreId                                  */
+        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
     },
 	{
         SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
-        0,									/* BitWidthType lockedByCoreId                                  */
+        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
     },
 	{
         SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
-        0,									/* BitWidthType lockedByCoreId                                  */
+        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
     },
 	{
         SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
-        0,									/* BitWidthType lockedByCoreId                                  */
+        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
+    },
+	{
+        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
+        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
+    },
+	{
+        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
+        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
+    },
+	{
+        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
+        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
+    },
+	{
+        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
+        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
     },
 };
 /* @cond S */

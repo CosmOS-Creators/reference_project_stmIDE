@@ -64,12 +64,18 @@ IS_INITIALIZED_TO
 		{
         &ThreadsProgram0Core0Var[THREAD_0_PROGRAM_0_CORE_0_ID],   /* CosmOS_ThreadVariableType * thread                  */
     },
+		{
+        &ThreadsProgram1Core0Var[THREAD_0_PROGRAM_1_CORE_0_ID],   /* CosmOS_ThreadVariableType * thread                  */
+    },
 };
 const CosmOS_ThreadListConfigurationType SchedulerThreadListScheduler1CfgConst[SCHEDULERTHREADLIST_SCHEDULER_1_ELEMENT_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
         &ThreadsProgram0Core1Var[THREAD_0_PROGRAM_0_CORE_1_ID],   /* CosmOS_ThreadVariableType * thread                  */
+    },
+		{
+        &ThreadsProgram1Core1Var[THREAD_0_PROGRAM_1_CORE_1_ID],   /* CosmOS_ThreadVariableType * thread                  */
     },
 };
 /* @cond S */

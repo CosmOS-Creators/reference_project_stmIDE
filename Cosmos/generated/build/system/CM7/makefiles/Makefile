@@ -127,6 +127,7 @@ INCLUDE_DIRS	 =	$(M7_CORE)/Core/Inc								\
 					$(OS_CORE)/route/inc							\
 					$(OS_CORE)/cosmosAssert/inc						\
 					$(OS_CORE)/schedulable/inc						\
+					$(OS_CORE)/support/inc							\
 					$(OS_GENERATED_CORE)/os/inc						\
 					$(OS_GENERATED_CORE)/cosmosApi/inc				\
 					$(OS_GENERATED_CORE)/switch/inc					\
