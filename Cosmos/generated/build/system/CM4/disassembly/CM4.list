@@ -47,25 +47,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  21 .ARM.attributes 0000002e  00000000  00000000  00051874  2**0
                   CONTENTS, READONLY
- 22 .debug_line   00024a3b  00000000  00000000  000518a2  2**0
+ 22 .debug_line   00024a39  00000000  00000000  000518a2  2**0
                   CONTENTS, READONLY, DEBUGGING
- 23 .debug_info   0003770a  00000000  00000000  000762dd  2**0
+ 23 .debug_info   0003770d  00000000  00000000  000762db  2**0
                   CONTENTS, READONLY, DEBUGGING
- 24 .debug_abbrev 000073ea  00000000  00000000  000ad9e7  2**0
+ 24 .debug_abbrev 000073ea  00000000  00000000  000ad9e8  2**0
                   CONTENTS, READONLY, DEBUGGING
  25 .debug_aranges 00001500  00000000  00000000  000b4dd8  2**3
                   CONTENTS, READONLY, DEBUGGING
- 26 .debug_str    00191cf6  00000000  00000000  000b62d8  2**0
+ 26 .debug_str    001919ef  00000000  00000000  000b62d8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 27 .debug_ranges 00001098  00000000  00000000  00247fd0  2**3
+ 27 .debug_ranges 00001098  00000000  00000000  00247cc8  2**3
                   CONTENTS, READONLY, DEBUGGING
- 28 .debug_macro  00043e06  00000000  00000000  00249068  2**0
+ 28 .debug_macro  00043d84  00000000  00000000  00248d60  2**0
                   CONTENTS, READONLY, DEBUGGING
- 29 .comment      00000079  00000000  00000000  0028ce6e  2**0
+ 29 .comment      00000079  00000000  00000000  0028cae4  2**0
                   CONTENTS, READONLY
- 30 .debug_frame  00004618  00000000  00000000  0028cee8  2**2
+ 30 .debug_frame  00004618  00000000  00000000  0028cb60  2**2
                   CONTENTS, READONLY, DEBUGGING
- 31 .stabstr      00000076  00000000  00000000  00291500  2**0
+ 31 .stabstr      00000076  00000000  00000000  00291178  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .os_section_funcs:
@@ -8476,8 +8476,8 @@ void TIM2_IRQHandler(void)
   *
   * @return CosmOS_MallocVariableType *
 ********************************************************************************/
-CosmOS_MallocVariableType * malloc_varAlloc( AddressType nextAvailableAddress, AddressType priorMallocAddress,\
-											AddressType nextMallocAddress, BitWidthType size )
+static CosmOS_MallocVariableType * malloc_varAlloc( AddressType nextAvailableAddress, AddressType priorMallocAddress,\
+													AddressType nextMallocAddress, BitWidthType size )
 {
  81040dc:	b480      	push	{r7}
  81040de:	b087      	sub	sp, #28
@@ -8522,18 +8522,18 @@ CosmOS_MallocVariableType * malloc_varAlloc( AddressType nextAvailableAddress, A
   *
   * @return void *
 ********************************************************************************/
-void* malloc( size_t size )
+void *malloc(size_t size)
 {
  8104118:	b580      	push	{r7, lr}
  810411a:	b094      	sub	sp, #80	; 0x50
  810411c:	af00      	add	r7, sp, #0
  810411e:	6078      	str	r0, [r7, #4]
-    CosmOS_CoreVariableType * coreVar;
-	CosmOS_ProgramVariableType * programVar;
-	CosmOS_MallocVariableType * currentMallocVar,
-							  * newMallocVar;
+	CosmOS_ProgramVariableType *programVar;
+	CosmOS_MallocVariableType *currentMallocVar,
+								*newMallocVar;
 
-    coreVar = core_getCoreVar();
+
+	coreVar = core_getCoreVar();
  8104120:	f7fd f8ee 	bl	8101300 <core_getCoreVar>
  8104124:	6438      	str	r0, [r7, #64]	; 0x40
  8104126:	6c3b      	ldr	r3, [r7, #64]	; 0x40
@@ -8542,7 +8542,7 @@ void* malloc( size_t size )
  810412a:	68fb      	ldr	r3, [r7, #12]
  810412c:	689b      	ldr	r3, [r3, #8]
 
-    programVar = core_getCoreProgramInExecution( coreVar );
+	programVar = core_getCoreProgramInExecution(coreVar);
  810412e:	63fb      	str	r3, [r7, #60]	; 0x3c
  8104130:	6bfb      	ldr	r3, [r7, #60]	; 0x3c
  8104132:	613b      	str	r3, [r7, #16]
@@ -8551,7 +8551,7 @@ void* malloc( size_t size )
  8104136:	681b      	ldr	r3, [r3, #0]
  8104138:	69db      	ldr	r3, [r3, #28]
 
-	heapLowAddress = program_getProgramHeapLowAddress( programVar );
+	heapLowAddress = program_getProgramHeapLowAddress(programVar);
  810413a:	63bb      	str	r3, [r7, #56]	; 0x38
  810413c:	6bfb      	ldr	r3, [r7, #60]	; 0x3c
  810413e:	617b      	str	r3, [r7, #20]
@@ -8559,48 +8559,48 @@ void* malloc( size_t size )
  8104140:	697b      	ldr	r3, [r7, #20]
  8104142:	681b      	ldr	r3, [r3, #0]
  8104144:	6a1b      	ldr	r3, [r3, #32]
-	heapHighAddress = program_getProgramHeapHighAddress( programVar );
+	heapHighAddress = program_getProgramHeapHighAddress(programVar);
  8104146:	637b      	str	r3, [r7, #52]	; 0x34
+ 8104148:	6bfb      	ldr	r3, [r7, #60]	; 0x3c
+ 810414a:	61bb      	str	r3, [r7, #24]
+    return (program->cfg->programHeapGetSpinlockRouteId);
+ 810414c:	69bb      	ldr	r3, [r7, #24]
+ 810414e:	681b      	ldr	r3, [r3, #0]
+ 8104150:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+
+	getSpinlockRouteId = program_getProgramHeapGetSpinlockRouteId(programVar);
+ 8104152:	633b      	str	r3, [r7, #48]	; 0x30
+ 8104154:	6bfb      	ldr	r3, [r7, #60]	; 0x3c
+ 8104156:	61fb      	str	r3, [r7, #28]
+    return (program->cfg->programHeapReleaseSpinlockRouteId);
+ 8104158:	69fb      	ldr	r3, [r7, #28]
+ 810415a:	681b      	ldr	r3, [r3, #0]
+ 810415c:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+	releaseSpinlockRouteId = program_getProgramHeapReleaseSpinlockRouteId(programVar);
+ 810415e:	62fb      	str	r3, [r7, #44]	; 0x2c
 
 	allocated = False;
- 8104148:	2300      	movs	r3, #0
- 810414a:	f887 304b 	strb.w	r3, [r7, #75]	; 0x4b
+ 8104160:	2300      	movs	r3, #0
+ 8104162:	f887 304b 	strb.w	r3, [r7, #75]	; 0x4b
 	lastItem = False;
- 810414e:	2300      	movs	r3, #0
- 8104150:	f887 304a 	strb.w	r3, [r7, #74]	; 0x4a
+ 8104166:	2300      	movs	r3, #0
+ 8104168:	f887 304a 	strb.w	r3, [r7, #74]	; 0x4a
 	currentMallocVar = (CosmOS_MallocVariableType *)heapLowAddress;
- 8104154:	6bbb      	ldr	r3, [r7, #56]	; 0x38
- 8104156:	647b      	str	r3, [r7, #68]	; 0x44
+ 810416c:	6bbb      	ldr	r3, [r7, #56]	; 0x38
+ 810416e:	647b      	str	r3, [r7, #68]	; 0x44
 	returnAddress = (AddressType)NULL;
- 8104158:	2300      	movs	r3, #0
- 810415a:	64fb      	str	r3, [r7, #76]	; 0x4c
- 810415c:	6bfb      	ldr	r3, [r7, #60]	; 0x3c
- 810415e:	61bb      	str	r3, [r7, #24]
-    return (program->cfg->programHeapGetSpinlockRouteId);
- 8104160:	69bb      	ldr	r3, [r7, #24]
- 8104162:	681b      	ldr	r3, [r3, #0]
- 8104164:	6a5b      	ldr	r3, [r3, #36]	; 0x24
-
-	getSpinlockRouteId = program_getProgramHeapGetSpinlockRouteId( programVar );
- 8104166:	633b      	str	r3, [r7, #48]	; 0x30
- 8104168:	6bfb      	ldr	r3, [r7, #60]	; 0x3c
- 810416a:	61fb      	str	r3, [r7, #28]
-    return (program->cfg->programHeapReleaseSpinlockRouteId);
- 810416c:	69fb      	ldr	r3, [r7, #28]
- 810416e:	681b      	ldr	r3, [r3, #0]
- 8104170:	6a9b      	ldr	r3, [r3, #40]	; 0x28
-	releaseSpinlockRouteId = program_getProgramHeapReleaseSpinlockRouteId( programVar );
- 8104172:	62fb      	str	r3, [r7, #44]	; 0x2c
+ 8104170:	2300      	movs	r3, #0
+ 8104172:	64fb      	str	r3, [r7, #76]	; 0x4c
 
 	spinlockState = (CosmOS_SpinlockStateType)sysCalls_bitWidthType_ret_bitWidthType(getSpinlockRouteId);
  8104174:	6b38      	ldr	r0, [r7, #48]	; 0x30
  8104176:	f7fe f806 	bl	8102186 <sysCalls_bitWidthType_ret_bitWidthType>
  810417a:	62b8      	str	r0, [r7, #40]	; 0x28
 
-	while ( IS_NOT( lastItem ) __OR IS_NOT( allocated ) )
+	while (IS_NOT(lastItem) __OR IS_NOT(allocated))
  810417c:	e049      	b.n	8104212 <malloc+0xfa>
 	{
-		if ( currentMallocVar->next IS_NOT_EQUAL_TO NULL )
+		if (currentMallocVar->next IS_NOT_EQUAL_TO NULL)
  810417e:	6c7b      	ldr	r3, [r7, #68]	; 0x44
  8104180:	685b      	ldr	r3, [r3, #4]
  8104182:	2b00      	cmp	r3, #0
@@ -8612,7 +8612,7 @@ void* malloc( size_t size )
  810418a:	6c7b      	ldr	r3, [r7, #68]	; 0x44
  810418c:	4413      	add	r3, r2
  810418e:	627b      	str	r3, [r7, #36]	; 0x24
-			if ( size < ( (AddressType)currentMallocVar->next - nextAvailableAddress ) )
+			if (size < ((AddressType)currentMallocVar->next - nextAvailableAddress))
  8104190:	6c7b      	ldr	r3, [r7, #68]	; 0x44
  8104192:	685b      	ldr	r3, [r3, #4]
  8104194:	461a      	mov	r2, r3
@@ -8622,19 +8622,19 @@ void* malloc( size_t size )
  810419c:	429a      	cmp	r2, r3
  810419e:	d216      	bcs.n	81041ce <malloc+0xb6>
 			{
-				newMallocVar = malloc_varAlloc( nextAvailableAddress, \
+				newMallocVar = malloc_varAlloc(nextAvailableAddress,
  81041a0:	6c79      	ldr	r1, [r7, #68]	; 0x44
-												(AddressType)currentMallocVar,\
+												(AddressType)currentMallocVar,
 												(AddressType)currentMallocVar->next,
  81041a2:	6c7b      	ldr	r3, [r7, #68]	; 0x44
  81041a4:	685b      	ldr	r3, [r3, #4]
-				newMallocVar = malloc_varAlloc( nextAvailableAddress, \
+				newMallocVar = malloc_varAlloc(nextAvailableAddress,
  81041a6:	461a      	mov	r2, r3
  81041a8:	687b      	ldr	r3, [r7, #4]
  81041aa:	6a78      	ldr	r0, [r7, #36]	; 0x24
  81041ac:	f7ff ff96 	bl	81040dc <malloc_varAlloc>
  81041b0:	6238      	str	r0, [r7, #32]
-												size );
+												size);
 
 				((CosmOS_MallocVariableType *)currentMallocVar->next)->prior = newMallocVar;
  81041b2:	6c7b      	ldr	r3, [r7, #68]	; 0x44
@@ -8646,11 +8646,11 @@ void* malloc( size_t size )
  81041bc:	6a3a      	ldr	r2, [r7, #32]
  81041be:	605a      	str	r2, [r3, #4]
 
-				returnAddress = (AddressType)newMallocVar + \
+				returnAddress = (AddressType)newMallocVar +
  81041c0:	6a3b      	ldr	r3, [r7, #32]
  81041c2:	330c      	adds	r3, #12
  81041c4:	64fb      	str	r3, [r7, #76]	; 0x4c
-								(AddressType)ALIGN(sizeof(CosmOS_MallocVariableType),sizeof(AddressType));
+								(AddressType)ALIGN(sizeof(CosmOS_MallocVariableType), sizeof(AddressType));
 				allocated = True;
  81041c6:	2301      	movs	r3, #1
  81041c8:	f887 304b 	strb.w	r3, [r7, #75]	; 0x4b
@@ -8673,7 +8673,7 @@ void* malloc( size_t size )
  81041da:	6c7b      	ldr	r3, [r7, #68]	; 0x44
  81041dc:	4413      	add	r3, r2
  81041de:	627b      	str	r3, [r7, #36]	; 0x24
-			if ( size < ( heapHighAddress - nextAvailableAddress ) )
+			if (size < (heapHighAddress - nextAvailableAddress))
  81041e0:	6b7a      	ldr	r2, [r7, #52]	; 0x34
  81041e2:	6a7b      	ldr	r3, [r7, #36]	; 0x24
  81041e4:	1ad3      	subs	r3, r2, r3
@@ -8681,27 +8681,27 @@ void* malloc( size_t size )
  81041e8:	429a      	cmp	r2, r3
  81041ea:	d20f      	bcs.n	810420c <malloc+0xf4>
 			{
-				newMallocVar = malloc_varAlloc( nextAvailableAddress, \
+				newMallocVar = malloc_varAlloc(nextAvailableAddress,
  81041ec:	6c79      	ldr	r1, [r7, #68]	; 0x44
  81041ee:	687b      	ldr	r3, [r7, #4]
  81041f0:	2200      	movs	r2, #0
  81041f2:	6a78      	ldr	r0, [r7, #36]	; 0x24
  81041f4:	f7ff ff72 	bl	81040dc <malloc_varAlloc>
  81041f8:	6238      	str	r0, [r7, #32]
-												(AddressType)currentMallocVar,\
+												(AddressType)currentMallocVar,
 												(AddressType)NULL,
-												size );
+												size);
 
 				currentMallocVar->next = newMallocVar;
  81041fa:	6c7b      	ldr	r3, [r7, #68]	; 0x44
  81041fc:	6a3a      	ldr	r2, [r7, #32]
  81041fe:	605a      	str	r2, [r3, #4]
 
-				returnAddress = (AddressType)newMallocVar + \
+				returnAddress = (AddressType)newMallocVar +
  8104200:	6a3b      	ldr	r3, [r7, #32]
  8104202:	330c      	adds	r3, #12
  8104204:	64fb      	str	r3, [r7, #76]	; 0x4c
-								(AddressType)ALIGN(sizeof(CosmOS_MallocVariableType),sizeof(AddressType));
+								(AddressType)ALIGN(sizeof(CosmOS_MallocVariableType), sizeof(AddressType));
 				allocated = True;
  8104206:	2301      	movs	r3, #1
  8104208:	f887 304b 	strb.w	r3, [r7, #75]	; 0x4b
@@ -8709,7 +8709,7 @@ void* malloc( size_t size )
 			lastItem = True;
  810420c:	2301      	movs	r3, #1
  810420e:	f887 304a 	strb.w	r3, [r7, #74]	; 0x4a
-	while ( IS_NOT( lastItem ) __OR IS_NOT( allocated ) )
+	while (IS_NOT(lastItem) __OR IS_NOT(allocated))
  8104212:	f897 304a 	ldrb.w	r3, [r7, #74]	; 0x4a
  8104216:	2b00      	cmp	r3, #0
  8104218:	d0b1      	beq.n	810417e <malloc+0x66>
@@ -8739,25 +8739,25 @@ void* malloc( size_t size )
   *
   * @return none
 ********************************************************************************/
-void free( void* ptr )
+void free(void *ptr)
 {
  8104234:	b580      	push	{r7, lr}
  8104236:	b08c      	sub	sp, #48	; 0x30
  8104238:	af00      	add	r7, sp, #0
  810423a:	6078      	str	r0, [r7, #4]
 
-	CosmOS_CoreVariableType * coreVar;
-	CosmOS_ProgramVariableType * programVar;
+	CosmOS_CoreVariableType *coreVar;
+	CosmOS_ProgramVariableType *programVar;
 
-	CosmOS_MallocVariableType * mallocVarToFree = \
-	(CosmOS_MallocVariableType *)((AddressType)ptr - ALIGN(sizeof(CosmOS_MallocVariableType),sizeof(AddressType)));
+	CosmOS_MallocVariableType *mallocVarToFree =
+	(CosmOS_MallocVariableType *)((AddressType)ptr - ALIGN(sizeof(CosmOS_MallocVariableType), sizeof(AddressType)));
  810423c:	687b      	ldr	r3, [r7, #4]
  810423e:	3b0c      	subs	r3, #12
-	CosmOS_MallocVariableType * mallocVarToFree = \
+	CosmOS_MallocVariableType *mallocVarToFree =
  8104240:	62fb      	str	r3, [r7, #44]	; 0x2c
 
 
-    coreVar = core_getCoreVar();
+	coreVar = core_getCoreVar();
  8104242:	f7fd f85d 	bl	8101300 <core_getCoreVar>
  8104246:	62b8      	str	r0, [r7, #40]	; 0x28
  8104248:	6abb      	ldr	r3, [r7, #40]	; 0x28
@@ -8765,7 +8765,7 @@ void free( void* ptr )
  810424c:	68fb      	ldr	r3, [r7, #12]
  810424e:	689b      	ldr	r3, [r3, #8]
 
-    programVar = core_getCoreProgramInExecution( coreVar );
+	programVar = core_getCoreProgramInExecution(coreVar);
  8104250:	627b      	str	r3, [r7, #36]	; 0x24
  8104252:	6a7b      	ldr	r3, [r7, #36]	; 0x24
  8104254:	613b      	str	r3, [r7, #16]
@@ -8774,7 +8774,7 @@ void free( void* ptr )
  8104258:	681b      	ldr	r3, [r3, #0]
  810425a:	6a5b      	ldr	r3, [r3, #36]	; 0x24
 
-	getSpinlockRouteId = program_getProgramHeapGetSpinlockRouteId( programVar );
+	getSpinlockRouteId = program_getProgramHeapGetSpinlockRouteId(programVar);
  810425c:	623b      	str	r3, [r7, #32]
  810425e:	6a7b      	ldr	r3, [r7, #36]	; 0x24
  8104260:	617b      	str	r3, [r7, #20]
@@ -8782,7 +8782,7 @@ void free( void* ptr )
  8104262:	697b      	ldr	r3, [r7, #20]
  8104264:	681b      	ldr	r3, [r3, #0]
  8104266:	6a9b      	ldr	r3, [r3, #40]	; 0x28
-	releaseSpinlockRouteId = program_getProgramHeapReleaseSpinlockRouteId( programVar );
+	releaseSpinlockRouteId = program_getProgramHeapReleaseSpinlockRouteId(programVar);
  8104268:	61fb      	str	r3, [r7, #28]
 
 	spinlockState = (CosmOS_SpinlockStateType)sysCalls_bitWidthType_ret_bitWidthType(getSpinlockRouteId);
@@ -8796,13 +8796,13 @@ void free( void* ptr )
  8104276:	2b00      	cmp	r3, #0
  8104278:	d004      	beq.n	8104284 <free+0x50>
 	{
-		((CosmOS_MallocVariableType *)mallocVarToFree->prior)->next = \
+		((CosmOS_MallocVariableType *)mallocVarToFree->prior)->next =
  810427a:	6afb      	ldr	r3, [r7, #44]	; 0x2c
  810427c:	681b      	ldr	r3, [r3, #0]
-		mallocVarToFree->next ? mallocVarToFree->next : NULL;
+			mallocVarToFree->next ? mallocVarToFree->next : NULL;
  810427e:	6afa      	ldr	r2, [r7, #44]	; 0x2c
  8104280:	6852      	ldr	r2, [r2, #4]
-		((CosmOS_MallocVariableType *)mallocVarToFree->prior)->next = \
+		((CosmOS_MallocVariableType *)mallocVarToFree->prior)->next =
  8104282:	605a      	str	r2, [r3, #4]
 	}
 
@@ -8812,13 +8812,13 @@ void free( void* ptr )
  8104288:	2b00      	cmp	r3, #0
  810428a:	d004      	beq.n	8104296 <free+0x62>
 	{
-		((CosmOS_MallocVariableType *)mallocVarToFree->next)->prior = \
+		((CosmOS_MallocVariableType *)mallocVarToFree->next)->prior =
  810428c:	6afb      	ldr	r3, [r7, #44]	; 0x2c
  810428e:	685b      	ldr	r3, [r3, #4]
-		mallocVarToFree->prior ? mallocVarToFree->prior : NULL;
+			mallocVarToFree->prior ? mallocVarToFree->prior : NULL;
  8104290:	6afa      	ldr	r2, [r7, #44]	; 0x2c
  8104292:	6812      	ldr	r2, [r2, #0]
-		((CosmOS_MallocVariableType *)mallocVarToFree->next)->prior = \
+		((CosmOS_MallocVariableType *)mallocVarToFree->next)->prior =
  8104294:	601a      	str	r2, [r3, #0]
 	}
 

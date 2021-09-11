@@ -1,6 +1,6 @@
-../../../../../../Cosmos/generated/build/system/CM4/out/obj/blinking_led_CM4.o: \
- ../../../../../../Cosmos/generated/application/src/blinking_led_CM4.cpp \
- ../../../../../../Cosmos/generated/application/inc/blinking_led_CM4.h \
+../../../../../../Cosmos/generated/build/system/CM4/out/obj/blinking_led_CM7.o: \
+ ../../../../../../Cosmos/generated/application/src/blinking_led_CM7.cpp \
+ ../../../../../../Cosmos/generated/application/inc/blinking_led_CM7.h \
  ../../../../../../Cosmos/core/sysDefs/inc/sysDefs.h \
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsStacks.h \
  ../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesStd.h \
@@ -66,10 +66,9 @@
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
- ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
- ../../../../../../Cosmos/core/support/inc/new.h
+ ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
 
-../../../../../../Cosmos/generated/application/inc/blinking_led_CM4.h:
+../../../../../../Cosmos/generated/application/inc/blinking_led_CM7.h:
 
 ../../../../../../Cosmos/core/sysDefs/inc/sysDefs.h:
 
@@ -202,5 +201,3 @@
 ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 
 ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
-
-../../../../../../Cosmos/core/support/inc/new.h:

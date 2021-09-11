@@ -7,7 +7,6 @@
 	"CoreDir": "{workspace}/Cosmos/core",
 	"CoreGeneratedDir": "{Generated}/core",
 	"ApplicationGeneratedDir": "{Generated}/application",
-	"LinkerGeneratedDir": "{Generated}/linker",
 	"GeneratorConfig": "{workspace}/Cosmos/configuration/FileGeneration.json",
 	"TemplateDir": [
 		"{workspace}/Cosmos/customBox/python/Generator/templates"
