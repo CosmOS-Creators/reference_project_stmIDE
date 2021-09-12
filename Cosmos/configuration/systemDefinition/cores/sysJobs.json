@@ -1,5 +1,10 @@
 {
 	"version": "1.1.0",
+	"checksum": "7e7fc213312daf33b9e53fc115af4d83",
+	"ui": {
+		"use_page": "sys_jobs"
+	},
+	"attributes": {},
 	"elements": {
 		"sysJob_0": [
 			{
@@ -51,10 +56,5 @@
 				"target": "sysJobsAttributes/:groupId"
 			}
 		]
-	},
-	"attributes": {},
-	"checksum": "7e7fc213312daf33b9e53fc115af4d83",
-	"ui": {
-		"use_page": "sys_jobs"
 	}
 }

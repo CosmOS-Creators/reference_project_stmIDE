@@ -1,5 +1,10 @@
 {
 	"version": "1.1.0",
+	"checksum": "68cb70f334d2a179022045ec67664266",
+	"ui": {
+		"use_page": "sys_call_routes"
+	},
+	"attributes": {},
 	"elements": {
 		"route_0": [
 			{
@@ -376,10 +381,5 @@
 				"value": "void"
 			}
 		]
-	},
-	"attributes": {},
-	"checksum": "b06cc743c55129584a7a7c1611d10935",
-	"ui": {
-		"use_page": "sys_call_routes"
 	}
 }

@@ -1,5 +1,10 @@
 {
 	"version": "1.1.0",
+	"checksum": "36ec648f486fc72711944bf5fb9e8c51",
+	"ui": {
+		"use_page": "spinlocks"
+	},
+	"attributes": {},
 	"elements": {
 		"spinlock_0": [
 			{
@@ -19,10 +24,5 @@
 				"target": "spinlocksAttributes/:spinlockId"
 			}
 		]
-	},
-	"attributes": {},
-	"checksum": "36ec648f486fc72711944bf5fb9e8c51",
-	"ui": {
-		"use_page": "spinlocks"
 	}
 }

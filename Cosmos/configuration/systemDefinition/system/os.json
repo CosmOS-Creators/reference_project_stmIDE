@@ -1,5 +1,10 @@
 {
 	"version": "1.1.0",
+	"checksum": "10bf49734f9b8d6a2bcd7fffb3a7ff67",
+	"ui": {
+		"use_page": "os"
+	},
+	"attributes": {},
 	"elements": {
 		"os": [
 			{
@@ -12,10 +17,5 @@
 				"target": "osAttributes/:doubleBuffersNum"
 			}
 		]
-	},
-	"attributes": {},
-	"checksum": "10bf49734f9b8d6a2bcd7fffb3a7ff67",
-	"ui": {
-		"use_page": "os"
 	}
 }

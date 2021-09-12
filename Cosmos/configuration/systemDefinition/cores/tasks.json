@@ -1,5 +1,10 @@
 {
 	"version": "1.1.0",
+	"checksum": "0c243fd1d02ff8f05824025ffd01414b",
+	"ui": {
+		"use_page": "tasks"
+	},
+	"attributes": {},
 	"elements": {
 		"task_0": [
 			{
@@ -277,10 +282,5 @@
 				"target": "tasksAttributes/:taskId"
 			}
 		]
-	},
-	"attributes": {},
-	"checksum": "0c243fd1d02ff8f05824025ffd01414b",
-	"ui": {
-		"use_page": "tasks"
 	}
 }

@@ -1,5 +1,10 @@
 {
 	"version": "1.1.0",
+	"checksum": "77ef59ba022f3aec2f3a446489874684",
+	"ui": {
+		"use_page": "kernels"
+	},
+	"attributes": {},
 	"elements": {
 		"kernel_0": [
 			{
@@ -33,10 +38,5 @@
 				"target": "kernelsAttributes/:highAddress"
 			}
 		]
-	},
-	"attributes": {},
-	"checksum": "77ef59ba022f3aec2f3a446489874684",
-	"ui": {
-		"use_page": "kernels"
 	}
 }
