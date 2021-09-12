@@ -68,6 +68,9 @@ IS_INITIALIZED_TO
 const CosmOS_ThreadConfigurationType ThreadsProgram1Core0CfgConst[THREAD_PROGRAM_1_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
+		{
+        0,       /* const BitWidthType dummy                 */
+    },
 };
 const CosmOS_ThreadConfigurationType ThreadsProgram0Core1CfgConst[THREAD_PROGRAM_0_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
@@ -79,6 +82,9 @@ IS_INITIALIZED_TO
 const CosmOS_ThreadConfigurationType ThreadsProgram1Core1CfgConst[THREAD_PROGRAM_1_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
+		{
+        0,       /* const BitWidthType dummy                 */
+    },
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
@@ -98,6 +104,10 @@ IS_INITIALIZED_TO
 CosmOS_ThreadVariableType ThreadsProgram1Core0Var[THREAD_PROGRAM_1_CORE_0_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
+		{
+        &ThreadsProgram1Core0CfgConst[THREAD_0_PROGRAM_1_CORE_0_ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
+    },
 };
 CosmOS_ThreadVariableType ThreadsProgram0Core1Var[THREAD_PROGRAM_0_CORE_1_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
@@ -110,6 +120,10 @@ IS_INITIALIZED_TO
 CosmOS_ThreadVariableType ThreadsProgram1Core1Var[THREAD_PROGRAM_1_CORE_1_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
+		{
+        &ThreadsProgram1Core1CfgConst[THREAD_0_PROGRAM_1_CORE_1_ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
+    },
 };
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

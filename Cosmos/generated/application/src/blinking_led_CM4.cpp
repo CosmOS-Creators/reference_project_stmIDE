@@ -23,6 +23,7 @@
 ** start_name =blinking_led_CM4_includeFiles
 ********************************************************************************/
 #include "stm32h7xx_hal.h"
+#include "new.h"
 /********************************************************************************
 ** stop_name =blinking_led_CM4_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -34,6 +35,7 @@
 extern "C" void Task_0_Core_1_Handler(void);
 
 /* Threads in the program blinking_led_CM4 */
+extern "C" void Thread_Core_1(void);
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -84,8 +86,8 @@ __APPLICATION_FUNC_SECTION void Task_0_Core_1_Handler(void)
 ********************************************************************************/
 if (counter_cm4 > 100)
 {
-    CosmOS_SpinlockStateType spinlockState;
-    CosmOS_BufferStateType bufferState;
+	CosmOS_SpinlockStateType spinlockState;
+	CosmOS_BufferStateType bufferState;
 
 
 	bufferReader_cm4 = 100;
@@ -94,18 +96,20 @@ if (counter_cm4 > 100)
 	bufferReader_cm4 = 0;
 	bufferState = cosmosApi_read_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
 
-	//spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
+	spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
 	//spinlockState = cosmosApi_get_spinlock_uart_buffer_read();
-//
-	//spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
 
+	spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
 
-    counter_cm4 = 0;
-    cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
+	counter_cm4 = 0;
+	cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
+
+	__SUPRESS_UNUSED_VAR(spinlockState);
+	__SUPRESS_UNUSED_VAR(bufferState);
 }
 else
 {
-    counter_cm4++;
+	counter_cm4++;
 }
 /********************************************************************************
 ** stop_name =Task_0_Core_1_Handler
@@ -116,6 +120,33 @@ else
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
 /* @endcond*/
 
+/********************************************************************************
+** Thread ID macro = THREAD_0_PROGRAM_1_CORE_1_ID
+** Program ID macro = PROGRAM_1_CORE_1_ID
+********************************************************************************/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void Thread_Core_1(void)
+{
+/********************************************************************************
+** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
+** start_name =Thread_Core_1
+********************************************************************************/
+	int *integerPointer = new int(100);
+
+	int *integerPointer2 = new int(100);
+
+	delete integerPointer;
+	delete integerPointer2;
+/********************************************************************************
+** stop_name =Thread_Core_1
+** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
+********************************************************************************/
+};
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **
 ********************************************************************************/

@@ -21,6 +21,7 @@
 **                            Include Files | Start                            **
 ********************************************************************************/
 /* CORE interfaces */
+#include "spinlockCfg.h"
 #include "programCfg.h"
 #include "threadCfg.h"
 #include "taskCfg.h"
@@ -72,7 +73,9 @@ IS_INITIALIZED_TO
         PROGRAM_0_CORE_0_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
         PROGRAM_0_CORE_0_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
         PROGRAM_0_CORE_0_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
-    },
+		SYSCALL_GET_SPINLOCK_5_ID,                      /* const BitWidthType programHeapGetSpinlockRouteId                     */
+		SYSCALL_RELEASE_SPINLOCK_5_ID,                      /* const BitWidthType programHeapReleaseSpinlockRouteId                     */
+		},
 		{
         CORE_0_ID,                                      /* const BitWidthType coreId                            */
         TASK_PROGRAM_1_CORE_0_NUM,                      /* const BitWidthType numberOfTasks                     */
@@ -83,7 +86,9 @@ IS_INITIALIZED_TO
         PROGRAM_1_CORE_0_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
         PROGRAM_1_CORE_0_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
         PROGRAM_1_CORE_0_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
-    },
+		SYSCALL_GET_SPINLOCK_6_ID,                      /* const BitWidthType programHeapGetSpinlockRouteId                     */
+		SYSCALL_RELEASE_SPINLOCK_6_ID,                      /* const BitWidthType programHeapReleaseSpinlockRouteId                     */
+		},
 };
 const CosmOS_ProgramConfigurationType ProgramsCore1CfgConst[PROGRAM_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
@@ -98,7 +103,9 @@ IS_INITIALIZED_TO
         PROGRAM_0_CORE_1_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
         PROGRAM_0_CORE_1_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
         PROGRAM_0_CORE_1_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
-    },
+		SYSCALL_GET_SPINLOCK_7_ID,                      /* const BitWidthType programHeapGetSpinlockRouteId                     */
+		SYSCALL_RELEASE_SPINLOCK_7_ID,                      /* const BitWidthType programHeapReleaseSpinlockRouteId                     */
+		},
 		{
         CORE_1_ID,                                      /* const BitWidthType coreId                            */
         TASK_PROGRAM_1_CORE_1_NUM,                      /* const BitWidthType numberOfTasks                     */
@@ -109,7 +116,9 @@ IS_INITIALIZED_TO
         PROGRAM_1_CORE_1_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
         PROGRAM_1_CORE_1_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
         PROGRAM_1_CORE_1_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
-    },
+		SYSCALL_GET_SPINLOCK_8_ID,                      /* const BitWidthType programHeapGetSpinlockRouteId                     */
+		SYSCALL_RELEASE_SPINLOCK_8_ID,                      /* const BitWidthType programHeapReleaseSpinlockRouteId                     */
+		},
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
@@ -125,12 +134,14 @@ IS_INITIALIZED_TO
         &ProgramsCore0CfgConst[PROGRAM_0_CORE_0_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
         TasksProgram0Core0Var,                          /* CosmOS_TaskVariableType * taskVars                                */
         ThreadsProgram0Core0Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    },
+    	0,                      /* BitWidthType numberOfMallocVars                     */
+	},
 		{
         &ProgramsCore0CfgConst[PROGRAM_1_CORE_0_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
         TasksProgram1Core0Var,                          /* CosmOS_TaskVariableType * taskVars                                */
         ThreadsProgram1Core0Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    },
+    	0,                      /* BitWidthType numberOfMallocVars                     */
+	},
 };
 CosmOS_ProgramVariableType ProgramsCore1Var[PROGRAM_CORE_1_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
@@ -139,12 +150,14 @@ IS_INITIALIZED_TO
         &ProgramsCore1CfgConst[PROGRAM_0_CORE_1_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
         TasksProgram0Core1Var,                          /* CosmOS_TaskVariableType * taskVars                                */
         ThreadsProgram0Core1Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    },
+    	0,                      /* BitWidthType numberOfMallocVars                     */
+	},
 		{
         &ProgramsCore1CfgConst[PROGRAM_1_CORE_1_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
         TasksProgram1Core1Var,                          /* CosmOS_TaskVariableType * taskVars                                */
         ThreadsProgram1Core1Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
-    },
+    	0,                      /* BitWidthType numberOfMallocVars                     */
+	},
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)

@@ -34,6 +34,7 @@
 extern "C" void Task_0_Core_0_Handler(void);
 
 /* Threads in the program blinking_led_CM7 */
+extern "C" void Thread_Core_0(void);
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -84,12 +85,13 @@ __APPLICATION_FUNC_SECTION void Task_0_Core_0_Handler(void)
 ********************************************************************************/
 if (counter > 100)
 {
-    counter = 0;
-    cosmosApi_deviceIO_togglePin(GPIOE, GPIO_PIN_1); //ORANGE LED
+	counter = 0;
+	cosmosApi_deviceIO_togglePin(GPIOE, GPIO_PIN_1); //ORANGE LED
 
 	// cosmosApi_get_spinlock_uart_buffer_read();
 
 	// cosmosApi_release_spinlock_uart_buffer_read();
+
 }
 else
 {
@@ -105,6 +107,33 @@ __asm volatile ("VMUL.F32 s0, s0, s1"); //testing FPU context switch
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
 /* @endcond*/
 
+/********************************************************************************
+** Thread ID macro = THREAD_0_PROGRAM_1_CORE_0_ID
+** Program ID macro = PROGRAM_1_CORE_0_ID
+********************************************************************************/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION void Thread_Core_0(void)
+{
+/********************************************************************************
+** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
+** start_name =Thread_Core_0
+********************************************************************************/
+	//int * L = new int[10];
+	//delete[] L;
+
+	//int *integerPointer = new int(100);
+
+	//delete integerPointer;
+/********************************************************************************
+** stop_name =Thread_Core_0
+** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
+********************************************************************************/
+};
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+/* @endcond*/
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **
 ********************************************************************************/

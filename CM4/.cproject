@@ -54,6 +54,7 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>
@@ -120,6 +121,7 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>
@@ -289,6 +291,7 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>
@@ -351,6 +354,7 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>

@@ -68,9 +68,6 @@
     #define __APPLICATION_FUNC_SECTION_START
     #define __APPLICATION_FUNC_SECTION_STOP
 
-    #define __UNMAPPED_SECTION        __attribute__((section(".unmapped")))
-    #define __UNMAPPED_SECTION_START
-    #define __UNMAPPED_SECTION_STOP
 
     #define __OS_CONSTS_SECTION        __attribute__((section(".os_consts")))
     #define __OS_CONSTS_SECTION_START
@@ -120,9 +117,6 @@
     #define __APPLICATION_FUNC_SECTION_START
     #define __APPLICATION_FUNC_SECTION_STOP
 
-    #define __UNMAPPED__SECTION
-    #define __UNMAPPED__SECTION_START
-    #define __UNMAPPED__SECTION_STOP
 
     #define __OS_CONSTS_SECTION
     #define __OS_CONSTS_SECTION_START
