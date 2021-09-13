@@ -26,6 +26,8 @@
 #include "programCfg.h"
 #include "sysJobsCfg.h"
 #include "schedulerCfg.h"
+#include "userKernelPanicHook_CM7.h"
+#include "userKernelPanicHook_CM4.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -69,12 +71,22 @@ IS_INITIALIZED_TO
         PROGRAM_CORE_0_NUM,                         /* const BitWidthType numberOfPrograms              */
         &SchedulersCfgConst[SCHEDULER_CORE_0_ID],   /* CosmOS_SchedulerConfigurationType * scheduler       */
 		CORE_0_ID,		 /* const BitWidthType coreId       */
+		userKernelPanicHook_CM7,		/* const CosmOS_GenericVoidType kernelPanicHook   */
+		CORE_0_STACK_MEMORY_LOW_ADDRESS,		/* const AddressType stackMemoryLowAddress   */
+		CORE_0_STACK_MEMORY_HIGH_ADDRESS,		/* const AddressType stackMemoryHighAddress   */
+		CORE_0_CODE_MEMORY_LOW_ADDRESS,		/* const AddressType codeMemoryLowAddress   */
+		CORE_0_CODE_MEMORY_HIGH_ADDRESS,		/* const AddressType codeMemoryHighAddress   */
     },
 		{                                               /* CoresCfgConst[CORE_1_ID]                         */
         ProgramsCore1CfgConst,                      /* const CosmOS_ProgramConfigurationType * programs    */
         PROGRAM_CORE_1_NUM,                         /* const BitWidthType numberOfPrograms              */
         &SchedulersCfgConst[SCHEDULER_CORE_1_ID],   /* CosmOS_SchedulerConfigurationType * scheduler       */
 		CORE_1_ID,		 /* const BitWidthType coreId       */
+		userKernelPanicHook_CM4,		/* const CosmOS_GenericVoidType kernelPanicHook   */
+		CORE_1_STACK_MEMORY_LOW_ADDRESS,		/* const AddressType stackMemoryLowAddress   */
+		CORE_1_STACK_MEMORY_HIGH_ADDRESS,		/* const AddressType stackMemoryHighAddress   */
+		CORE_1_CODE_MEMORY_LOW_ADDRESS,		/* const AddressType codeMemoryLowAddress   */
+		CORE_1_CODE_MEMORY_HIGH_ADDRESS,		/* const AddressType codeMemoryHighAddress   */
     },
 };
 /* @cond S */
@@ -94,7 +106,7 @@ IS_INITIALIZED_TO
         ProgramsCore0Var,                           /* CosmOS_ProgramVariableType * programVars                */
         &SchedulersVar[SCHEDULER_CORE_0_ID],        /* CosmOS_SchedulerVariableType * scheduler                */
         BarriersCore0Var,                           /* CosmOS_BarrierVariableType * barrierVars                */
-        OS_STATE_ENUM__NOT_STARTED,                 /* CosmOS_OsState osState                                  */
+        OS_STATE_ENUM__NOT_INITIALIZED,                 /* CosmOS_OsState osState                                  */
         &SysJobsVar[CORE_0_ID],                 /* CosmOS_SysJobsVariableType * const sysJobs               */
     },
 		{                                               /* CoresVar[CORE_1_ID]                                  */
@@ -104,7 +116,7 @@ IS_INITIALIZED_TO
         ProgramsCore1Var,                           /* CosmOS_ProgramVariableType * programVars                */
         &SchedulersVar[SCHEDULER_CORE_1_ID],        /* CosmOS_SchedulerVariableType * scheduler                */
         BarriersCore1Var,                           /* CosmOS_BarrierVariableType * barrierVars                */
-        OS_STATE_ENUM__NOT_STARTED,                 /* CosmOS_OsState osState                                  */
+        OS_STATE_ENUM__NOT_INITIALIZED,                 /* CosmOS_OsState osState                                  */
         &SysJobsVar[CORE_1_ID],                 /* CosmOS_SysJobsVariableType * const sysJobs               */
     },
 };

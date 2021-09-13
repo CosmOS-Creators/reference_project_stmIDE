@@ -75,22 +75,23 @@ __SEC_STOP(__BLINKING_LED_CM7_INIT_SECTION_STOP)
 ** Period of task in ticks = 50
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START)
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION void Task_0_Core_0_Handler(void)
+__APPLICATION_FUNC_SECTION_CM7 void Task_0_Core_0_Handler(void)
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =Task_0_Core_0_Handler
 ********************************************************************************/
+cosmosApi_deviceIO_togglePin(GPIOF, GPIO_PIN_11); //Timing measurement with logic analyzer, pls dont remove
 if (counter > 100)
 {
 	counter = 0;
 	cosmosApi_deviceIO_togglePin(GPIOE, GPIO_PIN_1); //ORANGE LED
 
-	// cosmosApi_get_spinlock_uart_buffer_read();
+	cosmosApi_get_spinlock_uart_buffer_read();
 
-	// cosmosApi_release_spinlock_uart_buffer_read();
+	cosmosApi_release_spinlock_uart_buffer_read();
 
 }
 else
@@ -98,13 +99,14 @@ else
     counter++;
 }
 __asm volatile ("VMUL.F32 s0, s0, s1"); //testing FPU context switch
+cosmosApi_deviceIO_togglePin(GPIOF, GPIO_PIN_11); //Timing measurement with logic analyzer, pls dont remove
 /********************************************************************************
 ** stop_name =Task_0_Core_0_Handler
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
 /* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 /* @endcond*/
 
 /********************************************************************************
@@ -112,27 +114,27 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
 ** Program ID macro = PROGRAM_1_CORE_0_ID
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START)
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION void Thread_Core_0(void)
+__APPLICATION_FUNC_SECTION_CM7 void Thread_Core_0(void)
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =Thread_Core_0
 ********************************************************************************/
-	//int * L = new int[10];
-	//delete[] L;
+	int * L = new int[10];
+	delete[] L;
 
-	//int *integerPointer = new int(100);
+	int *integerPointer = new int(100);
 
-	//delete integerPointer;
+	delete integerPointer;
 /********************************************************************************
 ** stop_name =Thread_Core_0
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
 /* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 /* @endcond*/
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **

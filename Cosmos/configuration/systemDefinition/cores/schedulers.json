@@ -36,6 +36,9 @@
 			},
 			{
 				"target": "schedulersAttributes/:table"
+			},
+			{
+				"target": "schedulersAttributes/:maxTimerTick"
 			}
 		],
 		"scheduler_1":
@@ -70,6 +73,9 @@
 			},
 			{
 				"target": "schedulersAttributes/:table"
+			},
+			{
+				"target": "schedulersAttributes/:maxTimerTick"
 			}
 		]
 	}

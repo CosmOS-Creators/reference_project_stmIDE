@@ -165,7 +165,7 @@ OBJECTS+=$(addsuffix .o,$(addprefix $(OBJECT_DIR)/,$(notdir $(basename $(CXXSOUR
 ##################################################################
 MCFLAGS= -mcpu=cortex-m7 -mthumb -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -MMD -MP -MF --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -g3 -ffixed-r9
 OPTIMIZE = -O0
-DEFS= -D CORE_CM7=1 -D STM32H755xx=1 -D USE_HAL_DRIVER=1 -D ARCH_32BIT -D ADDR_32BIT
+DEFS= -D CORE_CM7=1 -D STM32H755xx=1 -D USE_HAL_DRIVER=1 -D ARCH_32BIT -D ADDR_32BIT -D USE_MULTI_CORE_SHARED_CODE=1
 CFLAGS=-c $(MCFLAGS) $(DEFS) $(OPTIMIZE) $(addprefix -I,$(INCLUDE_DIRS)) -std=gnu11
 CXXFLAGS=-c $(MCFLAGS) $(DEFS) $(OPTIMIZE) $(addprefix -I,$(INCLUDE_DIRS)) -std=c++14
 CXXFLAGS+=-U__STRICT_ANSI__

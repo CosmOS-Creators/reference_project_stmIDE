@@ -76,19 +76,18 @@ __SEC_STOP(__BLINKING_LED_CM4_INIT_SECTION_STOP)
 ** Period of task in ticks = 50
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START)
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION void Task_0_Core_1_Handler(void)
+__APPLICATION_FUNC_SECTION_CM4 void Task_0_Core_1_Handler(void)
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =Task_0_Core_1_Handler
 ********************************************************************************/
-if (counter_cm4 > 100)
-{
 	CosmOS_SpinlockStateType spinlockState;
 	CosmOS_BufferStateType bufferState;
 
+	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 
 	bufferReader_cm4 = 100;
 	bufferState = cosmosApi_write_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
@@ -97,27 +96,29 @@ if (counter_cm4 > 100)
 	bufferState = cosmosApi_read_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
 
 	spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
-	//spinlockState = cosmosApi_get_spinlock_uart_buffer_read();
 
 	spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
 
-	counter_cm4 = 0;
-	cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
+	if ( counter_cm4 > 100 )
+	{
+		cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
+		counter_cm4 = 0;
+	}
+	else
+	{
+		counter_cm4++;
+	}
+	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 
 	__SUPRESS_UNUSED_VAR(spinlockState);
 	__SUPRESS_UNUSED_VAR(bufferState);
-}
-else
-{
-	counter_cm4++;
-}
 /********************************************************************************
 ** stop_name =Task_0_Core_1_Handler
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
 /* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @endcond*/
 
 /********************************************************************************
@@ -125,9 +126,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
 ** Program ID macro = PROGRAM_1_CORE_1_ID
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START)
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION void Thread_Core_1(void)
+__APPLICATION_FUNC_SECTION_CM4 void Thread_Core_1(void)
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
@@ -145,7 +146,7 @@ __APPLICATION_FUNC_SECTION void Thread_Core_1(void)
 ********************************************************************************/
 };
 /* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @endcond*/
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **
