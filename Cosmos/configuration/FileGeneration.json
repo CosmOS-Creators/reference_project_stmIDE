@@ -17,7 +17,9 @@
 			"application/kernelPanic"
 		],
 		"outputDir": "{ApplicationGeneratedDir}",
-		"fileName": "userKernelPanicHook",
+		"loop": "cores/:CoreName",
+		"fileName": "userKernelPanicHook_{target}",
+		"target": "core",
 		"pattern": {
 			".h": "inc",
 			".c": "src"

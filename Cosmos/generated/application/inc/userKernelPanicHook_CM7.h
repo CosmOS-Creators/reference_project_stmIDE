@@ -5,7 +5,7 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file userKernelPanicHook.c
+** @file userKernelPanicHook_CM7.h
 *********************************************************************************
 <!--                           Version Information                            -->
 *********************************************************************************
@@ -17,48 +17,52 @@
 ** @warning Modifying user sections comments can lead to removing user code
 **          during generating of the new CosmOS configuration
 ********************************************************************************/
-#include "userKernelPanicHook.h"
 /********************************************************************************
-** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
-** start_name =userKernelPanicHook
+**                           START OF THE HEADER FILE                          **
 ********************************************************************************/
-
+#ifndef __USERKERNELPANICHOOK_CM7_H__
+#define __USERKERNELPANICHOOK_CM7_H__
 /********************************************************************************
-** stop_name =userKernelPanicHook
-** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
+**                         START OF C++ SUPPORT SECTION                        **
 ********************************************************************************/
+#ifdef __cplusplus
+ extern "C" {
+#endif
 /********************************************************************************
-**                         Function Prototypes | Start                         **
+**                            Include Files | Start                            **
 ********************************************************************************/
-
+#include "sysDefs.h"
+#include "cosmosApi.h"
+#include "memoryMapping.h"
+#include "cosmosTypesStd.h"
 /********************************************************************************
-**                         Function Prototypes | Stop                          **
+**                            Include Files | Stop                             **
 ********************************************************************************/
-/********************************************************************************
-**                           START OF THE SOURCE FILE                          **
-********************************************************************************/
-/********************************************************************************
-** userKernelPanicHook
-** function is called during os kernel panic
-********************************************************************************/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION void userKernelPanicHook(void)
-{
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =userKernelPanicHook
+** start_name =userKernelPanicHook_CM7.h_includeFiles
 ********************************************************************************/
 
 /********************************************************************************
-** stop_name =userKernelPanicHook
+** stop_name =userKernelPanicHook_CM7.h_includeFiles
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
-};
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP)
-/* @endcond*/
 /********************************************************************************
-**                           END OF THE SOURCE FILE                            **
+** DO NOT MODIFY THIS COMMENT !                 GENERATED SECTION | Start      **
+** FUNCTION DECLARATION
+********************************************************************************/
+__APPLICATION_FUNC_SECTION_CM7 void userKernelPanicHook_CM7(void);
+/********************************************************************************
+** DO NOT MODIFY THIS COMMENT !         	    GENERATED SECTION | Stop       **
+** FUNCTION DECLARATION
+********************************************************************************/
+#ifdef __cplusplus
+}
+#endif
+/********************************************************************************
+**                         END OF C++ SUPPORT SECTION                          **
+********************************************************************************/
+#endif
+/********************************************************************************
+**                           END OF THE HEADER FILE                            **
 ********************************************************************************/

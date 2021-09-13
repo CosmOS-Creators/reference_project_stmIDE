@@ -20,6 +20,34 @@
 				"value": true
 			},
 			{
+				"target": "coresAttributes/:userCodeSize",
+				"value": 2048
+			},
+			{
+				"target": "coresAttributes/:userCodeMemory",
+				"value": "Flash_bank_1"
+			},
+			{
+				"target": "coresAttributes/:userCodeLowAddress"
+			},
+			{
+				"target": "coresAttributes/:userCodeHighAddress"
+			},
+			{
+				"target": "coresAttributes/:staticDataSize",
+				"value": 524288
+			},
+			{
+				"target": "coresAttributes/:staticDataMemory",
+				"value": "Flash_bank_1"
+			},
+			{
+				"target": "coresAttributes/:staticDataLowAddress"
+			},
+			{
+				"target": "coresAttributes/:staticDataHighAddress"
+			},
+			{
 				"target": "coresAttributes/:unmappedDataMemory",
 				"value": "DTCM"
 			},
@@ -71,6 +99,34 @@
 			{
 				"target": "coresAttributes/:isCosmos",
 				"value": true
+			},
+			{
+				"target": "coresAttributes/:userCodeSize",
+				"value": 2048
+			},
+			{
+				"target": "coresAttributes/:userCodeMemory",
+				"value": "Flash_bank_2"
+			},
+			{
+				"target": "coresAttributes/:userCodeLowAddress"
+			},
+			{
+				"target": "coresAttributes/:userCodeHighAddress"
+			},
+			{
+				"target": "coresAttributes/:staticDataSize",
+				"value": 524288
+			},
+			{
+				"target": "coresAttributes/:staticDataMemory",
+				"value": "Flash_bank_2"
+			},
+			{
+				"target": "coresAttributes/:staticDataLowAddress"
+			},
+			{
+				"target": "coresAttributes/:staticDataHighAddress"
 			},
 			{
 				"target": "coresAttributes/:unmappedDataMemory",

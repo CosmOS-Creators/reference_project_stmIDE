@@ -73,6 +73,8 @@ IS_INITIALIZED_TO
         LAST_TO_FIRST_TASK_TICK_SCHEDULER_0,            /* const BitWidthType lastToFirstTaskTicks                         */
         SYNCTICKS_SCHEDULER_0,                          /* const BitWidthType syncTicks                                    */
         FIRST_SYNC_TASK_STARTTICK_SCHEDULER_0,          /* const BitWidthType firstSyncTaskStartTick                       */
+        MAX_TIMER_TICK_SCHEDULER_0,          			  /* const BitWidthType maxTimerTick                       			 */
+		TIMER_TICK_COUNT_SCHEDULER_0,					  /* const BitWidthType timerTickCount                    			 */
         &TasksProgram0Core0Var[TASK_0_PROGRAM_0_CORE_0_ID],                                   /* void * const                                                    */
     },
 		{                                                           /* SchedulersCfgConst[SCHEDULER_CORE_1_ID]           */
@@ -85,6 +87,8 @@ IS_INITIALIZED_TO
         LAST_TO_FIRST_TASK_TICK_SCHEDULER_1,            /* const BitWidthType lastToFirstTaskTicks                         */
         SYNCTICKS_SCHEDULER_1,                          /* const BitWidthType syncTicks                                    */
         FIRST_SYNC_TASK_STARTTICK_SCHEDULER_1,          /* const BitWidthType firstSyncTaskStartTick                       */
+        MAX_TIMER_TICK_SCHEDULER_1,          			  /* const BitWidthType maxTimerTick                       			 */
+		TIMER_TICK_COUNT_SCHEDULER_1,					  /* const BitWidthType timerTickCount                    			 */
         &TasksProgram0Core1Var[TASK_0_PROGRAM_0_CORE_1_ID],                                   /* void * const                                                    */
     },
 };

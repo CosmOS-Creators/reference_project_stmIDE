@@ -103,7 +103,11 @@
 			"xmemory": "cpp",
 			"xstddef": "cpp",
 			"xstring": "cpp",
-			"xtree": "cpp"
+			"xtree": "cpp",
+			"userkernelpanichook_cm7.h": "c",
+			"cilcore.h": "c",
+			"cilmemoryprotection.h": "c",
+			"cilspinlock.h": "c"
 		}
 	},
 }
