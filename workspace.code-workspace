@@ -17,7 +17,7 @@
 		"terminal.integrated.env.windows": {
 			"PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/Cosmos/customBox/generator;${workspaceFolder}/Cosmos/customBox;${workspaceFolder}/Cosmos/customBox/python"
 		},
-        "editor.detectIndentation": false,
+		"editor.detectIndentation": false,
 		"editor.insertSpaces": false,
 		"files.insertFinalNewline": true,
 		"files.trimFinalNewlines": true,
@@ -108,6 +108,8 @@
 			"cilcore.h": "c",
 			"cilmemoryprotection.h": "c",
 			"cilspinlock.h": "c"
-		}
+		},
+		"editor.formatOnSave": true,
+		"editor.formatOnType": true
 	},
 }
