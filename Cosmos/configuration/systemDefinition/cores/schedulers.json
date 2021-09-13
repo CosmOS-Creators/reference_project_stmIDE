@@ -1,11 +1,12 @@
 {
-	"version": "1.0.0",
-
+	"version": "1.1.0",
+	"checksum": "a77cd0658dde416118254e84fae785eb",
+	"ui": {
+		"use_page": "schedulers"
+	},
 	"attributes": {},
-
 	"elements": {
-		"scheduler_0":
-		[
+		"scheduler_0": [
 			{
 				"target": "schedulersAttributes/:core",
 				"value": "cores/core_0"
@@ -41,8 +42,7 @@
 				"target": "schedulersAttributes/:maxTimerTick"
 			}
 		],
-		"scheduler_1":
-		[
+		"scheduler_1": [
 			{
 				"target": "schedulersAttributes/:core",
 				"value": "cores/core_1"

@@ -1,11 +1,12 @@
 {
-	"version": "1.0.0",
-
+	"version": "1.1.0",
+	"checksum": "12f240ee042dba4d8355372355cc386d",
+	"ui": {
+		"use_page": "scheduler_entries"
+	},
 	"attributes": {},
-
 	"elements": {
-		"element_0":
-		[
+		"element_0": [
 			{
 				"target": "scheduleTableEntriesAttributes/:scheduler",
 				"value": "schedulers/scheduler_0"
@@ -22,8 +23,7 @@
 				"target": "scheduleTableEntriesAttributes/:entryId"
 			}
 		],
-		"element_1":
-		[
+		"element_1": [
 			{
 				"target": "scheduleTableEntriesAttributes/:scheduler",
 				"value": "schedulers/scheduler_0"
@@ -40,8 +40,7 @@
 				"target": "scheduleTableEntriesAttributes/:entryId"
 			}
 		],
-		"element_2":
-		[
+		"element_2": [
 			{
 				"target": "scheduleTableEntriesAttributes/:scheduler",
 				"value": "schedulers/scheduler_0"
@@ -58,8 +57,7 @@
 				"target": "scheduleTableEntriesAttributes/:entryId"
 			}
 		],
-		"element_3":
-		[
+		"element_3": [
 			{
 				"target": "scheduleTableEntriesAttributes/:scheduler",
 				"value": "schedulers/scheduler_1"
@@ -76,8 +74,7 @@
 				"target": "scheduleTableEntriesAttributes/:entryId"
 			}
 		],
-		"element_4":
-		[
+		"element_4": [
 			{
 				"target": "scheduleTableEntriesAttributes/:scheduler",
 				"value": "schedulers/scheduler_1"
@@ -94,8 +91,7 @@
 				"target": "scheduleTableEntriesAttributes/:entryId"
 			}
 		],
-		"element_5":
-		[
+		"element_5": [
 			{
 				"target": "scheduleTableEntriesAttributes/:scheduler",
 				"value": "schedulers/scheduler_1"

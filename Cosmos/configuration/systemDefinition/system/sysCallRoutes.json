@@ -1,11 +1,12 @@
 {
-	"version": "1.0.0",
-
+	"version": "1.1.0",
+	"checksum": "68cb70f334d2a179022045ec67664266",
+	"ui": {
+		"use_page": "sys_call_routes"
+	},
 	"attributes": {},
-
 	"elements": {
-		"route_0":
-		[
+		"route_0": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "buffer_readArray"
@@ -38,8 +39,7 @@
 				"value": "CosmOS_BufferStateType"
 			}
 		],
-		"route_1":
-		[
+		"route_1": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "buffer_writeArray"
@@ -72,8 +72,7 @@
 				"value": "CosmOS_BufferStateType"
 			}
 		],
-		"route_2":
-		[
+		"route_2": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "deviceIO_togglePin"
@@ -106,8 +105,7 @@
 				"value": "void"
 			}
 		],
-		"route_3":
-		[
+		"route_3": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "osInit_init"
@@ -137,8 +135,7 @@
 				"value": "void"
 			}
 		],
-		"route_4":
-		[
+		"route_4": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "os_start"
@@ -168,8 +165,7 @@
 				"value": "void"
 			}
 		],
-		"route_5":
-		[
+		"route_5": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "schedulable_setExecutionStateToFinished"
@@ -199,8 +195,7 @@
 				"value": "void"
 			}
 		],
-		"route_6":
-		[
+		"route_6": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "sysJobs_dispatcher"
@@ -230,8 +225,7 @@
 				"value": "void"
 			}
 		],
-		"route_7":
-		[
+		"route_7": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "spinlock_getSpinlock"
@@ -263,8 +257,7 @@
 				"value": "CosmOS_SpinlockStateType"
 			}
 		],
-		"route_8":
-		[
+		"route_8": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "spinlock_trySpinlock"
@@ -296,8 +289,7 @@
 				"value": "CosmOS_SpinlockStateType"
 			}
 		],
-		"route_9":
-		[
+		"route_9": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "spinlock_releaseSpinlock"
@@ -329,8 +321,7 @@
 				"value": "CosmOS_SpinlockStateType"
 			}
 		],
-		"route_10":
-		[
+		"route_10": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "interrupt_disableInterrupts"
@@ -360,8 +351,7 @@
 				"value": "void"
 			}
 		],
-		"route_11":
-		[
+		"route_11": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
 				"value": "interrupt_enableInterrupts"

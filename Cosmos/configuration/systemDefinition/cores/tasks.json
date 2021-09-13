@@ -1,11 +1,12 @@
 {
-	"version": "1.0.0",
-
+	"version": "1.1.0",
+	"checksum": "0c243fd1d02ff8f05824025ffd01414b",
+	"ui": {
+		"use_page": "tasks"
+	},
 	"attributes": {},
-
 	"elements": {
-		"task_0":
-		[
+		"task_0": [
 			{
 				"target": "tasksAttributes/:uniqueId"
 			},
@@ -51,8 +52,7 @@
 				"target": "tasksAttributes/:taskId"
 			}
 		],
-		"task_1":
-		[
+		"task_1": [
 			{
 				"target": "tasksAttributes/:uniqueId"
 			},
@@ -98,8 +98,7 @@
 				"target": "tasksAttributes/:taskId"
 			}
 		],
-		"task_2":
-		[
+		"task_2": [
 			{
 				"target": "tasksAttributes/:uniqueId"
 			},
@@ -145,8 +144,7 @@
 				"target": "tasksAttributes/:taskId"
 			}
 		],
-		"task_3":
-		[
+		"task_3": [
 			{
 				"target": "tasksAttributes/:uniqueId"
 			},
@@ -192,8 +190,7 @@
 				"target": "tasksAttributes/:taskId"
 			}
 		],
-		"task_4":
-		[
+		"task_4": [
 			{
 				"target": "tasksAttributes/:uniqueId"
 			},
@@ -239,8 +236,7 @@
 				"target": "tasksAttributes/:taskId"
 			}
 		],
-		"task_5":
-		[
+		"task_5": [
 			{
 				"target": "tasksAttributes/:uniqueId"
 			},

@@ -1,11 +1,12 @@
 {
-	"version": "1.0.0",
-
+	"version": "1.1.0",
+	"checksum": "ba3996ec30f5078c908c1fd620a44fc6",
+	"ui": {
+		"use_page": "threads"
+	},
 	"attributes": {},
-
 	"elements": {
-		"thread_0":
-		[
+		"thread_0": [
 			{
 				"target": "threadsAttributes/:uniqueId"
 			},
@@ -39,8 +40,7 @@
 				"target": "threadsAttributes/:threadId"
 			}
 		],
-		"thread_1":
-		[
+		"thread_1": [
 			{
 				"target": "threadsAttributes/:uniqueId"
 			},
@@ -74,8 +74,7 @@
 				"target": "threadsAttributes/:threadId"
 			}
 		],
-		"thread_2":
-		[
+		"thread_2": [
 			{
 				"target": "threadsAttributes/:uniqueId"
 			},
@@ -109,8 +108,7 @@
 				"target": "threadsAttributes/:threadId"
 			}
 		],
-		"thread_3":
-		[
+		"thread_3": [
 			{
 				"target": "threadsAttributes/:uniqueId"
 			},

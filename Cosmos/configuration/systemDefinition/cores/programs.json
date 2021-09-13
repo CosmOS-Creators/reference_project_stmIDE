@@ -1,11 +1,12 @@
 {
-	"version": "1.0.0",
-
+	"version": "1.1.0",
+	"checksum": "07b46e1ab3a89bf187da1f1f6a725ea7",
+	"ui": {
+		"use_page": "programs"
+	},
 	"attributes": {},
-
 	"elements": {
-		"program_0":
-		[
+		"program_0": [
 			{
 				"target": "programsAttributes/:core",
 				"value": "cores/core_0"
@@ -45,8 +46,7 @@
 				"target": "programsAttributes/:heapSpinlockId"
 			}
 		],
-		"program_1":
-		[
+		"program_1": [
 			{
 				"target": "programsAttributes/:core",
 				"value": "cores/core_0"
@@ -86,8 +86,7 @@
 				"target": "programsAttributes/:heapSpinlockId"
 			}
 		],
-		"program_2":
-		[
+		"program_2": [
 			{
 				"target": "programsAttributes/:core",
 				"value": "cores/core_1"
@@ -127,8 +126,7 @@
 				"target": "programsAttributes/:heapSpinlockId"
 			}
 		],
-		"program_3":
-		[
+		"program_3": [
 			{
 				"target": "programsAttributes/:core",
 				"value": "cores/core_1"
