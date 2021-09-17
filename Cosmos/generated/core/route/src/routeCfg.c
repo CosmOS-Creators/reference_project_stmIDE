@@ -35,6 +35,7 @@
 #include "spinlock.h"
 #include "interrupt.h"
 #include "interrupt.h"
+#include "schedulable.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -85,6 +86,7 @@ IS_INITIALIZED_TO
 		(CosmOS_GenericVoidType)spinlock_releaseSpinlock,
 		(CosmOS_GenericVoidType)interrupt_disableInterrupts,
 		(CosmOS_GenericVoidType)interrupt_enableInterrupts,
+		(CosmOS_GenericVoidType)schedulable_sleepMs,
 };
 
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
@@ -121,6 +123,7 @@ IS_INITIALIZED_TO
 		SYSJOBS_DISPATCHER,
 		INTERRUPT_DISABLEINTERRUPTS,
 		INTERRUPT_ENABLEINTERRUPTS,
+		SCHEDULABLE_SLEEPMS,
 };
 
 const BitWidthType RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
@@ -150,6 +153,7 @@ IS_INITIALIZED_TO
 		BUFFER_1_ID,
 		BUFFER_2_ID,
 		BUFFER_2_ID,
+		ROUTES_ID_TO_ENTITY_DUMMY,
 		ROUTES_ID_TO_ENTITY_DUMMY,
 		ROUTES_ID_TO_ENTITY_DUMMY,
 		ROUTES_ID_TO_ENTITY_DUMMY,

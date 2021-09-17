@@ -107,9 +107,10 @@
 			"userkernelpanichook_cm7.h": "c",
 			"cilcore.h": "c",
 			"cilmemoryprotection.h": "c",
-			"cilspinlock.h": "c"
+			"cilspinlock.h": "c",
+			"cosmostypesvar.h": "c",
+			"cilinterrupt.h": "c"
 		},
-		"editor.formatOnSave": true,
 		"editor.formatOnType": true
 	},
 }

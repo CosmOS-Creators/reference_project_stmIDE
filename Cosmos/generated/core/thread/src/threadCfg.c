@@ -62,28 +62,28 @@ const CosmOS_ThreadConfigurationType ThreadsProgram0Core0CfgConst[THREAD_PROGRAM
 IS_INITIALIZED_TO
 {
 		{
-        0,       /* const BitWidthType dummy                 */
+        THREAD_0_PROGRAM_0_CORE_0_PRIORITY,       /* const BitWidthType priority                 */
     },
 };
 const CosmOS_ThreadConfigurationType ThreadsProgram1Core0CfgConst[THREAD_PROGRAM_1_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
-        0,       /* const BitWidthType dummy                 */
+        THREAD_0_PROGRAM_1_CORE_0_PRIORITY,       /* const BitWidthType priority                 */
     },
 };
 const CosmOS_ThreadConfigurationType ThreadsProgram0Core1CfgConst[THREAD_PROGRAM_0_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
-        0,       /* const BitWidthType dummy                 */
+        THREAD_0_PROGRAM_0_CORE_1_PRIORITY,       /* const BitWidthType priority                 */
     },
 };
 const CosmOS_ThreadConfigurationType ThreadsProgram1Core1CfgConst[THREAD_PROGRAM_1_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
-        0,       /* const BitWidthType dummy                 */
+        THREAD_0_PROGRAM_1_CORE_1_PRIORITY,       /* const BitWidthType priority                 */
     },
 };
 /* @cond S */

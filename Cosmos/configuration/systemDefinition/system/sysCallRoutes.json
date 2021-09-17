@@ -380,6 +380,38 @@
 				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
 			}
+		],
+		"route_12": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "schedulable_sleepMs"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "schedulable.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"delay"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
 		]
 	}
 }

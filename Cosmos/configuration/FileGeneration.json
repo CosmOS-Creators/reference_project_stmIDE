@@ -47,6 +47,17 @@
 	},
 	{
 		"templates": [
+			"core/alarm/alarm"
+		],
+		"outputDir": "{CoreGeneratedDir}/alarm",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
 			"core/spinlock/spinlock"
 		],
 		"outputDir": "{CoreGeneratedDir}/spinlock",

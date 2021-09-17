@@ -5,13 +5,13 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file coreCfg.c
+** @file alarmCfg.c
 *********************************************************************************
-<!--                   coreCfg Unit Local Group Definition                    -->
+<!--                  alarmCfg Unit Local Group Definition                    -->
 *********************************************************************************
-** @defgroup Local_coreCfg Local
-** @ingroup coreCfg_unit
-** @brief coreCfg locals
+** @defgroup Local_alarmCfg Local
+** @ingroup alarmCfg_unit
+** @brief alarmCfg locals
 ** @details lorem
 ********************************************************************************/
 /********************************************************************************
@@ -21,14 +21,8 @@
 **                            Include Files | Start                            **
 ********************************************************************************/
 /* CORE interfaces */
-#include "coreCfg.h"
-#include "coreSyncCfg.h"
-#include "programCfg.h"
 #include "alarmCfg.h"
-#include "sysJobsCfg.h"
-#include "schedulerCfg.h"
-#include "userKernelPanicHook_CM7.h"
-#include "userKernelPanicHook_CM4.h"
+#include "schedulableCfg.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -38,15 +32,15 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Macros_coreCfg_c Macros
-  * @ingroup Local_coreCfg
+  * @defgroup Macros_alarmCfg_c Macros
+  * @ingroup Local_alarmCfg
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Macros_coreCfg_c
+  * Macros_alarmCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -57,41 +51,31 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_coreCfg_c Variables
-  * @ingroup Local_coreCfg
+  * @defgroup Variables_alarmCfg_c Variables
+  * @ingroup Local_alarmCfg
   * @{
 ********************************************************************************/
 /* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_CoreConfigurationType CoresCfgConst[CORE_NUM] __OS_CONSTS_SECTION
+const CosmOS_AlarmConfigurationType AlarmsCore0CfgConst[ALARM_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
-		{                                               /* CoresCfgConst[CORE_0_ID]                         */
-        ProgramsCore0CfgConst,                      /* const CosmOS_ProgramConfigurationType * programs    */
-        PROGRAM_CORE_0_NUM,                         /* const BitWidthType numberOfPrograms              */
-        &SchedulersCfgConst[SCHEDULER_CORE_0_ID],   /* CosmOS_SchedulerConfigurationType * scheduler       */
-		CORE_0_ID,		 /* const BitWidthType coreId       */
-		userKernelPanicHook_CM7,		/* const CosmOS_GenericVoidType kernelPanicHook   */
-		CORE_0_STACK_MEMORY_LOW_ADDRESS,		/* const AddressType stackMemoryLowAddress   */
-		CORE_0_STACK_MEMORY_HIGH_ADDRESS,		/* const AddressType stackMemoryHighAddress   */
-		CORE_0_CODE_MEMORY_LOW_ADDRESS,		/* const AddressType codeMemoryLowAddress   */
-		CORE_0_CODE_MEMORY_HIGH_ADDRESS,		/* const AddressType codeMemoryHighAddress   */
-		CORE_0_TICK_TO_MS,		/* const BitWidthType msToTicks   */
-		ALARM_CORE_0_NUM,		/* const BitWidthType numberOfAlarms   */
+		{
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulableVar                       */
     },
-		{                                               /* CoresCfgConst[CORE_1_ID]                         */
-        ProgramsCore1CfgConst,                      /* const CosmOS_ProgramConfigurationType * programs    */
-        PROGRAM_CORE_1_NUM,                         /* const BitWidthType numberOfPrograms              */
-        &SchedulersCfgConst[SCHEDULER_CORE_1_ID],   /* CosmOS_SchedulerConfigurationType * scheduler       */
-		CORE_1_ID,		 /* const BitWidthType coreId       */
-		userKernelPanicHook_CM4,		/* const CosmOS_GenericVoidType kernelPanicHook   */
-		CORE_1_STACK_MEMORY_LOW_ADDRESS,		/* const AddressType stackMemoryLowAddress   */
-		CORE_1_STACK_MEMORY_HIGH_ADDRESS,		/* const AddressType stackMemoryHighAddress   */
-		CORE_1_CODE_MEMORY_LOW_ADDRESS,		/* const AddressType codeMemoryLowAddress   */
-		CORE_1_CODE_MEMORY_HIGH_ADDRESS,		/* const AddressType codeMemoryHighAddress   */
-		CORE_1_TICK_TO_MS,		/* const BitWidthType msToTicks   */
-		ALARM_CORE_1_NUM,		/* const BitWidthType numberOfAlarms   */
+		{
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulableVar                       */
+    },
+};
+const CosmOS_AlarmConfigurationType AlarmsCore1CfgConst[ALARM_CORE_1_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO
+{
+		{
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulableVar                       */
+    },
+		{
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulableVar                       */
     },
 };
 /* @cond S */
@@ -101,40 +85,39 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @cond S */
 __SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_CoreVariableType CoresVar[CORE_NUM] __OS_VARS_SECTION
+CosmOS_AlarmVariableType AlarmsCore0Var[ALARM_CORE_0_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
-		{                                               /* CoresVar[CORE_0_ID]                                  */
-        &CoresCfgConst[CORE_0_ID],                  /* const CosmOS_CoreConfigurationType *cfg                 */
-        NULL,                                       /* CosmOS_SchedulableVariableType * schedulableInExecution    */
-        NULL,                                       /* CosmOS_ProgramVariableType * programInCurrentContext       */
-        ProgramsCore0Var,                           /* CosmOS_ProgramVariableType * programVars                */
-        &SchedulersVar[SCHEDULER_CORE_0_ID],        /* CosmOS_SchedulerVariableType * scheduler                */
-        BarriersCore0Var,                           /* CosmOS_BarrierVariableType * barrierVars                */
-        OS_STATE_ENUM__NOT_INITIALIZED,                 /* CosmOS_OsStateType osState                                  */
-        &SysJobsVar[CORE_0_ID],                 /* CosmOS_SysJobsVariableType * const sysJobs               */
-		AlarmsCore0Var,                 /* CosmOS_AlarmVariableType * const alarmVars               */
+		{
+		&AlarmsCore0CfgConst[ALARM_0_PROGRAM_0_CORE_0_ID],		/* const CosmOS_AlarmConfigurationType * const cfg                       */
+		ALARM_STATE_ENUM__DISABLED, /* CosmOS_AlarmStateType state                       */
+		0,            /* BitWidthType timer                       */
     },
-		{                                               /* CoresVar[CORE_1_ID]                                  */
-        &CoresCfgConst[CORE_1_ID],                  /* const CosmOS_CoreConfigurationType *cfg                 */
-        NULL,                                       /* CosmOS_SchedulableVariableType * schedulableInExecution    */
-        NULL,                                       /* CosmOS_ProgramVariableType * programInCurrentContext       */
-        ProgramsCore1Var,                           /* CosmOS_ProgramVariableType * programVars                */
-        &SchedulersVar[SCHEDULER_CORE_1_ID],        /* CosmOS_SchedulerVariableType * scheduler                */
-        BarriersCore1Var,                           /* CosmOS_BarrierVariableType * barrierVars                */
-        OS_STATE_ENUM__NOT_INITIALIZED,                 /* CosmOS_OsStateType osState                                  */
-        &SysJobsVar[CORE_1_ID],                 /* CosmOS_SysJobsVariableType * const sysJobs               */
-		AlarmsCore1Var,                 /* CosmOS_AlarmVariableType * const alarmVars               */
+		{
+		&AlarmsCore0CfgConst[ALARM_1_PROGRAM_1_CORE_0_ID],		/* const CosmOS_AlarmConfigurationType * const cfg                       */
+		ALARM_STATE_ENUM__DISABLED, /* CosmOS_AlarmStateType state                       */
+		0,            /* BitWidthType timer                       */
     },
 };
-/* @cond S */
-__SEC_STOP(__OS_VARS_SECTION_STOP)
-/* @endcond*/
+CosmOS_AlarmVariableType AlarmsCore1Var[ALARM_CORE_1_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO
+{
+		{
+		&AlarmsCore1CfgConst[ALARM_0_PROGRAM_0_CORE_1_ID],		/* const CosmOS_AlarmConfigurationType * const cfg                       */
+		ALARM_STATE_ENUM__DISABLED, /* CosmOS_AlarmStateType state                       */
+		0,            /* BitWidthType timer                       */
+    },
+		{
+		&AlarmsCore1CfgConst[ALARM_1_PROGRAM_1_CORE_1_ID],		/* const CosmOS_AlarmConfigurationType * const cfg                       */
+		ALARM_STATE_ENUM__DISABLED, /* CosmOS_AlarmStateType state                       */
+		0,            /* BitWidthType timer                       */
+    },
+};
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Variables_coreCfg_c
+  * Variables_alarmCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -145,47 +128,47 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_coreCfg_c API's
-  * @ingroup Local_coreCfg
+  * @defgroup Apis_alarmCfg_c API's
+  * @ingroup Local_alarmCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_coreCfg_c Getters
-  * @ingroup Apis_coreCfg_c
+  * @addtogroup Getters_alarmCfg_c Getters
+  * @ingroup Apis_alarmCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Getters_coreCfg_c
+  * Getters_alarmCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_coreCfg_c Setters
-  * @ingroup Apis_coreCfg_c
+  * @addtogroup Setters_alarmCfg_c Setters
+  * @ingroup Apis_alarmCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Setters_coreCfg_c
+  * Setters_alarmCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_coreCfg_c General
-  * @ingroup Apis_coreCfg_c
+  * @addtogroup General_alarmCfg_c General
+  * @ingroup Apis_alarmCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * General_coreCfg_c
+  * General_alarmCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **

@@ -12,6 +12,7 @@
  ../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILmacros.h \
  ../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesMacros.h \
  ../../../../../../Drivers/CMSIS/Include/cmsis_gcc.h \
+ ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsAlarms.h \
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsRoutes.h \
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsBuffers.h \
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsBarriers.h \
@@ -57,6 +58,8 @@
 ../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesMacros.h:
 
 ../../../../../../Drivers/CMSIS/Include/cmsis_gcc.h:
+
+../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsAlarms.h:
 
 ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsRoutes.h:
 

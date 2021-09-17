@@ -87,7 +87,7 @@ __APPLICATION_FUNC_SECTION_CM4 void Task_0_Core_1_Handler(void)
 	CosmOS_SpinlockStateType spinlockState;
 	CosmOS_BufferStateType bufferState;
 
-	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
+	//cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 
 	bufferReader_cm4 = 100;
 	bufferState = cosmosApi_write_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
@@ -108,7 +108,7 @@ __APPLICATION_FUNC_SECTION_CM4 void Task_0_Core_1_Handler(void)
 	{
 		counter_cm4++;
 	}
-	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
+	//cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 
 	__SUPRESS_UNUSED_VAR(spinlockState);
 	__SUPRESS_UNUSED_VAR(bufferState);
@@ -134,12 +134,14 @@ __APPLICATION_FUNC_SECTION_CM4 void Thread_Core_1(void)
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =Thread_Core_1
 ********************************************************************************/
-	int *integerPointer = new int(100);
-
-	int *integerPointer2 = new int(100);
-
-	delete integerPointer;
-	delete integerPointer2;
+	//int *integerPointer = new int(100);
+//
+	//int *integerPointer2 = new int(100);
+//
+	//delete integerPointer;
+	//delete integerPointer2;
+cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
+cosmosApi_schedulable_sleepMs(20);
 /********************************************************************************
 ** stop_name =Thread_Core_1
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **

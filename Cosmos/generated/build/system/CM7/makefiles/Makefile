@@ -108,6 +108,7 @@ INCLUDE_DIRS	 =	$(M7_CORE)/Core/Inc								\
 					$(SHARED_DRIVERS)/CMSIS/Include					\
 					$(OS_CORE)/cosmosTypes/inc 						\
 					$(OS_CORE)/os/inc								\
+					$(OS_CORE)/alarm/inc							\
 					$(OS_CORE)/switch/inc							\
 					$(OS_CORE)/permission/inc						\
 					$(OS_CORE)/sysDefs/inc							\
@@ -129,6 +130,7 @@ INCLUDE_DIRS	 =	$(M7_CORE)/Core/Inc								\
 					$(OS_CORE)/schedulable/inc						\
 					$(OS_CORE)/support/inc							\
 					$(OS_GENERATED_CORE)/os/inc						\
+					$(OS_GENERATED_CORE)/alarm/inc					\
 					$(OS_GENERATED_CORE)/cosmosApi/inc				\
 					$(OS_GENERATED_CORE)/switch/inc					\
 					$(OS_GENERATED_CORE)/permission/inc				\

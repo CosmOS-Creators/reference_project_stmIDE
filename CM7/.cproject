@@ -64,6 +64,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/program/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
@@ -83,6 +84,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/program/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>
@@ -132,6 +134,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/program/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/route/inc"/>
@@ -150,6 +153,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/program/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>
@@ -303,6 +307,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/program/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
@@ -322,6 +327,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/program/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>
@@ -367,6 +373,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/program/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/route/inc"/>
@@ -385,6 +392,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/os/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/permission/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/program/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>

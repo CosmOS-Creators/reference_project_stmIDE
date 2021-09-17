@@ -102,23 +102,27 @@ __SEC_START(__OS_VARS_SECTION_START)
 CosmOS_SchedulerVariableType SchedulersVar[SCHEDULER_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
-		{                                                   /* SchedulersCfgConst[SCHEDULER_CORE_0_ID]          */
-        &SchedulersCfgConst[SCHEDULER_CORE_0_ID],       /* CosmOS_SchedulerConfigurationType * cfg    */
-        0,                                              /* BitWidthType curentTick                          */
-        0,                                              /* BitWidthType scheduleTableIterator               */
-        0,                                              /* BitWidthType threadListIterator                  */
-        SCHEDULER_STATE_ENUM__NOT_STARTED,              /* CosmOS_SchedulerStateType schedulerState         */
-        0,                                              /* BitWidthType nextSyncTick                        */
-        False,                                          /* CosmOS_BooleanType syncInitState                 */
+		{                                                   		/* SchedulersCfgConst[SCHEDULER_CORE_0_ID]      		*/
+        &SchedulersCfgConst[SCHEDULER_CORE_0_ID],     /* CosmOS_SchedulerConfigurationType * cfg    						*/
+        0,                                              			/* BitWidthType curentTick                          				*/
+		0,                                              			/* BitWidthType priorTickStep                          				*/
+        0,                                              			/* BitWidthType scheduleTableIterator               				*/
+        0,                                              			/* BitWidthType threadListIterator                  				*/
+        SCHEDULER_STATE_ENUM__NOT_STARTED,              			/* CosmOS_SchedulerStateType schedulerState         				*/
+        0,                                              			/* BitWidthType nextSyncTick                        				*/
+        False,                                          			/* CosmOS_BooleanType syncInitState                 				*/
+		RESCHEDULE_TRIGGER_STATE_ENUM__SYSTEM,                      /* CosmOS_RescheduleTriggerStateType rescheduleTriggerState         */
     },
-		{                                                   /* SchedulersCfgConst[SCHEDULER_CORE_1_ID]          */
-        &SchedulersCfgConst[SCHEDULER_CORE_1_ID],       /* CosmOS_SchedulerConfigurationType * cfg    */
-        0,                                              /* BitWidthType curentTick                          */
-        0,                                              /* BitWidthType scheduleTableIterator               */
-        0,                                              /* BitWidthType threadListIterator                  */
-        SCHEDULER_STATE_ENUM__NOT_STARTED,              /* CosmOS_SchedulerStateType schedulerState         */
-        0,                                              /* BitWidthType nextSyncTick                        */
-        False,                                          /* CosmOS_BooleanType syncInitState                 */
+		{                                                   		/* SchedulersCfgConst[SCHEDULER_CORE_1_ID]      		*/
+        &SchedulersCfgConst[SCHEDULER_CORE_1_ID],     /* CosmOS_SchedulerConfigurationType * cfg    						*/
+        0,                                              			/* BitWidthType curentTick                          				*/
+		0,                                              			/* BitWidthType priorTickStep                          				*/
+        0,                                              			/* BitWidthType scheduleTableIterator               				*/
+        0,                                              			/* BitWidthType threadListIterator                  				*/
+        SCHEDULER_STATE_ENUM__NOT_STARTED,              			/* CosmOS_SchedulerStateType schedulerState         				*/
+        0,                                              			/* BitWidthType nextSyncTick                        				*/
+        False,                                          			/* CosmOS_BooleanType syncInitState                 				*/
+		RESCHEDULE_TRIGGER_STATE_ENUM__SYSTEM,                      /* CosmOS_RescheduleTriggerStateType rescheduleTriggerState         */
     },
 };
 /* @cond S */

@@ -85,6 +85,9 @@
 			},
 			{
 				"target": "coresAttributes/:coreNumberOfTasks"
+			},
+			{
+				"target": "coresAttributes/:prioSortedThreads"
 			}
 		],
 		"core_1": [
@@ -166,6 +169,9 @@
 			},
 			{
 				"target": "coresAttributes/:coreNumberOfTasks"
+			},
+			{
+				"target": "coresAttributes/:prioSortedThreads"
 			}
 		]
 	}

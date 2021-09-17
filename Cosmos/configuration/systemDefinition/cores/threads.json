@@ -20,7 +20,7 @@
 			},
 			{
 				"target": "threadsAttributes/:floatingPoint",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "threadsAttributes/:isIdle",
@@ -31,6 +31,10 @@
 				"value": 1024
 			},
 			{
+				"target": "threadsAttributes/:priority",
+				"value" : 0
+			},
+			{
 				"target": "threadsAttributes/:lowAddress"
 			},
 			{
@@ -38,6 +42,9 @@
 			},
 			{
 				"target": "threadsAttributes/:threadId"
+			},
+			{
+				"target": "threadsAttributes/:alarmId"
 			}
 		],
 		"thread_1": [
@@ -65,6 +72,10 @@
 				"value": 1024
 			},
 			{
+				"target": "threadsAttributes/:priority",
+				"value" : 0
+			},
+			{
 				"target": "threadsAttributes/:lowAddress"
 			},
 			{
@@ -72,6 +83,9 @@
 			},
 			{
 				"target": "threadsAttributes/:threadId"
+			},
+			{
+				"target": "threadsAttributes/:alarmId"
 			}
 		],
 		"thread_2": [
@@ -99,6 +113,10 @@
 				"value": 1024
 			},
 			{
+				"target": "threadsAttributes/:priority",
+				"value" : 1
+			},
+			{
 				"target": "threadsAttributes/:lowAddress"
 			},
 			{
@@ -106,6 +124,9 @@
 			},
 			{
 				"target": "threadsAttributes/:threadId"
+			},
+			{
+				"target": "threadsAttributes/:alarmId"
 			}
 		],
 		"thread_3": [
@@ -133,6 +154,10 @@
 				"value": 1024
 			},
 			{
+				"target": "threadsAttributes/:priority",
+				"value" : 1
+			},
+			{
 				"target": "threadsAttributes/:lowAddress"
 			},
 			{
@@ -140,6 +165,9 @@
 			},
 			{
 				"target": "threadsAttributes/:threadId"
+			},
+			{
+				"target": "threadsAttributes/:alarmId"
 			}
 		]
 	}
