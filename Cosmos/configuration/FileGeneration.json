@@ -58,6 +58,17 @@
 	},
 	{
 		"templates": [
+			"core/mutex/mutex"
+		],
+		"outputDir": "{CoreGeneratedDir}/mutex",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
 			"core/spinlock/spinlock"
 		],
 		"outputDir": "{CoreGeneratedDir}/spinlock",

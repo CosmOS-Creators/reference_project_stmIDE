@@ -41,9 +41,6 @@
 			},
 			{
 				"target": "programsAttributes/:programTasks"
-			},
-			{
-				"target": "programsAttributes/:heapSpinlockId"
 			}
 		],
 		"program_1": [
@@ -81,9 +78,6 @@
 			},
 			{
 				"target": "programsAttributes/:programTasks"
-			},
-			{
-				"target": "programsAttributes/:heapSpinlockId"
 			}
 		],
 		"program_2": [
@@ -121,9 +115,6 @@
 			},
 			{
 				"target": "programsAttributes/:programTasks"
-			},
-			{
-				"target": "programsAttributes/:heapSpinlockId"
 			}
 		],
 		"program_3": [
@@ -161,9 +152,6 @@
 			},
 			{
 				"target": "programsAttributes/:programTasks"
-			},
-			{
-				"target": "programsAttributes/:heapSpinlockId"
 			}
 		]
 	}

@@ -384,11 +384,11 @@
 		"route_12": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "schedulable_sleepMs"
+				"value": "thread_sleepMs"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:apiHeader",
-				"value": "schedulable.h"
+				"value": "thread.h"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
@@ -410,7 +410,202 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_SleepStateType"
+			}
+		],
+		"route_13": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "os_write32"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "os.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"uint32Ptr",
+					"uint32Val"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
+			}
+		],
+		"route_14": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "os_write16"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "os.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"uint16Ptr",
+					"uint16Val"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
+		],
+		"route_15": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "os_write8"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "os.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"uint8Ptr",
+					"uint8Val"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
+		],
+		"route_16": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "mutex_getMutex"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "mutex.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"mutexPtr"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_MutexStateType"
+			}
+		],
+		"route_17": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "mutex_tryMutex"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "mutex.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"mutexPtr"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_MutexStateType"
+			}
+		],
+		"route_18": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "mutex_releaseMutex"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "mutex.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"mutexPtr"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_MutexStateType"
 			}
 		]
 	}

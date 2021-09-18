@@ -5,13 +5,13 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file coreCfg.c
+** @file mutexCfg.c
 *********************************************************************************
-<!--                   coreCfg Unit Local Group Definition                    -->
+<!--                  mutexCfg Unit Local Group Definition                  -->
 *********************************************************************************
-** @defgroup Local_coreCfg Local
-** @ingroup coreCfg_unit
-** @brief coreCfg locals
+** @defgroup Local_mutexCfg Local
+** @ingroup mutexCfg_unit
+** @brief mutexCfg locals
 ** @details lorem
 ********************************************************************************/
 /********************************************************************************
@@ -21,14 +21,7 @@
 **                            Include Files | Start                            **
 ********************************************************************************/
 /* CORE interfaces */
-#include "coreCfg.h"
-#include "coreSyncCfg.h"
-#include "programCfg.h"
-#include "alarmCfg.h"
-#include "sysJobsCfg.h"
-#include "schedulerCfg.h"
-#include "userKernelPanicHook_CM7.h"
-#include "userKernelPanicHook_CM4.h"
+#include "mutexCfg.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -38,15 +31,15 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Macros_coreCfg_c Macros
-  * @ingroup Local_coreCfg
+  * @defgroup Macros_mutexCfg_c Macros
+  * @ingroup Local_mutexCfg
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Macros_coreCfg_c
+  * Macros_mutexCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -57,84 +50,63 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_coreCfg_c Variables
-  * @ingroup Local_coreCfg
+  * @defgroup Variables_mutexCfg_c Variables
+  * @ingroup Local_mutexCfg
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONSTS_SECTION_START)
+__SEC_START(__DEFAULT_CM7_INIT_SECTION_START)
 /* @endcond*/
-const CosmOS_CoreConfigurationType CoresCfgConst[CORE_NUM] __OS_CONSTS_SECTION
+CosmOS_MutexVariableType MutexForProgram0HeapCore0Var __DEFAULT_CM7_INIT_SECTION
 IS_INITIALIZED_TO
 {
-		{                                               /* CoresCfgConst[CORE_0_ID]                         */
-        ProgramsCore0CfgConst,                      /* const CosmOS_ProgramConfigurationType * programs    */
-        PROGRAM_CORE_0_NUM,                         /* const BitWidthType numberOfPrograms              */
-        &SchedulersCfgConst[SCHEDULER_CORE_0_ID],   /* CosmOS_SchedulerConfigurationType * scheduler       */
-		CORE_0_ID,		 /* const BitWidthType coreId       */
-		userKernelPanicHook_CM7,		/* const CosmOS_GenericVoidType kernelPanicHook   */
-		CORE_0_STACK_MEMORY_LOW_ADDRESS,		/* const AddressType stackMemoryLowAddress   */
-		CORE_0_STACK_MEMORY_HIGH_ADDRESS,		/* const AddressType stackMemoryHighAddress   */
-		CORE_0_CODE_MEMORY_LOW_ADDRESS,		/* const AddressType codeMemoryLowAddress   */
-		CORE_0_CODE_MEMORY_HIGH_ADDRESS,		/* const AddressType codeMemoryHighAddress   */
-		CORE_0_MS_TO_TICK,		/* const BitWidthType msToTicks   */
-		ALARM_CORE_0_NUM,		/* const BitWidthType numberOfAlarms   */
-    },
-		{                                               /* CoresCfgConst[CORE_1_ID]                         */
-        ProgramsCore1CfgConst,                      /* const CosmOS_ProgramConfigurationType * programs    */
-        PROGRAM_CORE_1_NUM,                         /* const BitWidthType numberOfPrograms              */
-        &SchedulersCfgConst[SCHEDULER_CORE_1_ID],   /* CosmOS_SchedulerConfigurationType * scheduler       */
-		CORE_1_ID,		 /* const BitWidthType coreId       */
-		userKernelPanicHook_CM4,		/* const CosmOS_GenericVoidType kernelPanicHook   */
-		CORE_1_STACK_MEMORY_LOW_ADDRESS,		/* const AddressType stackMemoryLowAddress   */
-		CORE_1_STACK_MEMORY_HIGH_ADDRESS,		/* const AddressType stackMemoryHighAddress   */
-		CORE_1_CODE_MEMORY_LOW_ADDRESS,		/* const AddressType codeMemoryLowAddress   */
-		CORE_1_CODE_MEMORY_HIGH_ADDRESS,		/* const AddressType codeMemoryHighAddress   */
-		CORE_1_MS_TO_TICK,		/* const BitWidthType msToTicks   */
-		ALARM_CORE_1_NUM,		/* const BitWidthType numberOfAlarms   */
-    },
+	0,			/* 	BitWidthType mutex 									*/
+	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
 };
 /* @cond S */
-__SEC_STOP(__OS_CONSTS_SECTION_STOP)
+__SEC_STOP(__DEFAULT_CM7_INIT_SECTION_STOP)
 /* @endcond*/
-
 /* @cond S */
-__SEC_START(__OS_VARS_SECTION_START)
+__SEC_START(__BLINKING_LED_CM7_INIT_SECTION_START)
 /* @endcond*/
-CosmOS_CoreVariableType CoresVar[CORE_NUM] __OS_VARS_SECTION
+CosmOS_MutexVariableType MutexForProgram1HeapCore0Var __BLINKING_LED_CM7_INIT_SECTION
 IS_INITIALIZED_TO
 {
-		{                                               /* CoresVar[CORE_0_ID]                                  */
-        &CoresCfgConst[CORE_0_ID],                  /* const CosmOS_CoreConfigurationType *cfg                 */
-        NULL,                                       /* CosmOS_SchedulableVariableType * schedulableInExecution    */
-        NULL,                                       /* CosmOS_ProgramVariableType * programInCurrentContext       */
-        ProgramsCore0Var,                           /* CosmOS_ProgramVariableType * programVars                */
-        &SchedulersVar[SCHEDULER_CORE_0_ID],        /* CosmOS_SchedulerVariableType * scheduler                */
-        BarriersCore0Var,                           /* CosmOS_BarrierVariableType * barrierVars                */
-        OS_STATE_ENUM__NOT_INITIALIZED,                 /* CosmOS_OsStateType osState                                  */
-        &SysJobsVar[CORE_0_ID],                 /* CosmOS_SysJobsVariableType * const sysJobs               */
-		AlarmsCore0Var,                 /* CosmOS_AlarmVariableType * const alarmVars               */
-    },
-		{                                               /* CoresVar[CORE_1_ID]                                  */
-        &CoresCfgConst[CORE_1_ID],                  /* const CosmOS_CoreConfigurationType *cfg                 */
-        NULL,                                       /* CosmOS_SchedulableVariableType * schedulableInExecution    */
-        NULL,                                       /* CosmOS_ProgramVariableType * programInCurrentContext       */
-        ProgramsCore1Var,                           /* CosmOS_ProgramVariableType * programVars                */
-        &SchedulersVar[SCHEDULER_CORE_1_ID],        /* CosmOS_SchedulerVariableType * scheduler                */
-        BarriersCore1Var,                           /* CosmOS_BarrierVariableType * barrierVars                */
-        OS_STATE_ENUM__NOT_INITIALIZED,                 /* CosmOS_OsStateType osState                                  */
-        &SysJobsVar[CORE_1_ID],                 /* CosmOS_SysJobsVariableType * const sysJobs               */
-		AlarmsCore1Var,                 /* CosmOS_AlarmVariableType * const alarmVars               */
-    },
+	0,			/* 	BitWidthType mutex 									*/
+	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
 };
 /* @cond S */
-__SEC_STOP(__OS_VARS_SECTION_STOP)
+__SEC_STOP(__BLINKING_LED_CM7_INIT_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__DEFAULT_CM4_INIT_SECTION_START)
+/* @endcond*/
+CosmOS_MutexVariableType MutexForProgram0HeapCore1Var __DEFAULT_CM4_INIT_SECTION
+IS_INITIALIZED_TO
+{
+	0,			/* 	BitWidthType mutex 									*/
+	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
+};
+/* @cond S */
+__SEC_STOP(__DEFAULT_CM4_INIT_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__BLINKING_LED_CM4_INIT_SECTION_START)
+/* @endcond*/
+CosmOS_MutexVariableType MutexForProgram1HeapCore1Var __BLINKING_LED_CM4_INIT_SECTION
+IS_INITIALIZED_TO
+{
+	0,			/* 	BitWidthType mutex 									*/
+	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
+};
+/* @cond S */
+__SEC_STOP(__BLINKING_LED_CM4_INIT_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Variables_coreCfg_c
+  * Variables_mutexCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -145,47 +117,47 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_coreCfg_c API's
-  * @ingroup Local_coreCfg
+  * @defgroup Apis_mutexCfg_c API's
+  * @ingroup Local_mutexCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_coreCfg_c Getters
-  * @ingroup Apis_coreCfg_c
+  * @addtogroup Getters_mutexCfg_c Getters
+  * @ingroup Apis_mutexCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Getters_coreCfg_c
+  * Getters_mutexCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_coreCfg_c Setters
-  * @ingroup Apis_coreCfg_c
+  * @addtogroup Setters_mutexCfg_c Setters
+  * @ingroup Apis_mutexCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * Setters_coreCfg_c
+  * Setters_mutexCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_coreCfg_c General
-  * @ingroup Apis_coreCfg_c
+  * @addtogroup General_mutexCfg_c General
+  * @ingroup Apis_mutexCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @}
-  * General_coreCfg_c
+  * General_mutexCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **

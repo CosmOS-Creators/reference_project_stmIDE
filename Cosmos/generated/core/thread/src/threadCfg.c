@@ -99,7 +99,8 @@ IS_INITIALIZED_TO
 		{
         &ThreadsProgram0Core0CfgConst[THREAD_0_PROGRAM_0_CORE_0_ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
-    },
+		NULL,		/* CosmOS_MutexVariableType *blockingMutexVar                       */
+	},
 };
 CosmOS_ThreadVariableType ThreadsProgram1Core0Var[THREAD_PROGRAM_1_CORE_0_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
@@ -107,7 +108,8 @@ IS_INITIALIZED_TO
 		{
         &ThreadsProgram1Core0CfgConst[THREAD_0_PROGRAM_1_CORE_0_ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
-    },
+		NULL,		/* CosmOS_MutexVariableType *blockingMutexVar                       */
+	},
 };
 CosmOS_ThreadVariableType ThreadsProgram0Core1Var[THREAD_PROGRAM_0_CORE_1_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
@@ -115,7 +117,8 @@ IS_INITIALIZED_TO
 		{
         &ThreadsProgram0Core1CfgConst[THREAD_0_PROGRAM_0_CORE_1_ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
-    },
+		NULL,		/* CosmOS_MutexVariableType *blockingMutexVar                       */
+	},
 };
 CosmOS_ThreadVariableType ThreadsProgram1Core1Var[THREAD_PROGRAM_1_CORE_1_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
@@ -123,7 +126,8 @@ IS_INITIALIZED_TO
 		{
         &ThreadsProgram1Core1CfgConst[THREAD_0_PROGRAM_1_CORE_1_ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
-    },
+		NULL,		/* CosmOS_MutexVariableType *blockingMutexVar                       */
+	},
 };
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

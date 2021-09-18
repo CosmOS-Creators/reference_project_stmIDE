@@ -80,22 +80,6 @@ IS_INITIALIZED_TO
         SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
         NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
     },
-	{
-        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
-        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
-    },
-	{
-        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
-        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
-    },
-	{
-        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
-        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
-    },
-	{
-        SPINLOCK_STATE_ENUM__RELEASED,		/* BitWidthType spinlock                                  */
-        NULL,									/* CosmOS_SchedulableVariableType * schedulableOwner                                  */
-    },
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)

@@ -61,8 +61,9 @@ __SEC_START(__BLINKING_LED_CM4_INIT_SECTION_START)
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =blinking_led_CM4_init
 ********************************************************************************/
-int counter_cm4 __BLINKING_LED_CM4_INIT_SECTION = 0;
-int bufferReader_cm4 __BLINKING_LED_CM4_INIT_SECTION = 0;
+int __BLINKING_LED_CM4_INIT_SECTION counter_cm4  = 0;
+int __BLINKING_LED_CM4_INIT_SECTION bufferReader_cm4  = 0;
+CosmOS_MutexVariableType resourcesMutex __BLINKING_LED_CM4_INIT_SECTION;
 /********************************************************************************
 ** stop_name =blinking_led_CM4_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -72,8 +73,8 @@ __SEC_STOP(__BLINKING_LED_CM4_INIT_SECTION_STOP)
 /********************************************************************************
 ** Task ID macro = TASK_0_PROGRAM_1_CORE_1_ID
 ** Program ID macro = PROGRAM_1_CORE_1_ID
-** WCET macro = TASK_0_PROGRAM_1_CORE_1_WCET
-** Period of task in ticks = 50
+** WCET of the task in microseconds = 500.0
+** Period of the task in milliseconds = 5.0
 ********************************************************************************/
 /* @cond S */
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
@@ -86,8 +87,9 @@ __APPLICATION_FUNC_SECTION_CM4 void Task_0_Core_1_Handler(void)
 ********************************************************************************/
 	CosmOS_SpinlockStateType spinlockState;
 	CosmOS_BufferStateType bufferState;
+	CosmOS_MutexStateType mutexState;
 
-	//cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
+	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 
 	bufferReader_cm4 = 100;
 	bufferState = cosmosApi_write_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
@@ -96,21 +98,23 @@ __APPLICATION_FUNC_SECTION_CM4 void Task_0_Core_1_Handler(void)
 	bufferState = cosmosApi_read_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
 
 	spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
-
 	spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
+
+	mutexState = cosmosApi_mutex_getMutex(&resourcesMutex);
+	mutexState = cosmosApi_mutex_releaseMutex(&resourcesMutex);
 
 	if ( counter_cm4 > 100 )
 	{
-		cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
 		counter_cm4 = 0;
 	}
 	else
 	{
 		counter_cm4++;
 	}
-	//cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
+	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 
 	__SUPRESS_UNUSED_VAR(spinlockState);
+	__SUPRESS_UNUSED_VAR(mutexState);
 	__SUPRESS_UNUSED_VAR(bufferState);
 /********************************************************************************
 ** stop_name =Task_0_Core_1_Handler
@@ -134,14 +138,22 @@ __APPLICATION_FUNC_SECTION_CM4 void Thread_Core_1(void)
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =Thread_Core_1
 ********************************************************************************/
-	//int *integerPointer = new int(100);
-//
-	//int *integerPointer2 = new int(100);
-//
-	//delete integerPointer;
-	//delete integerPointer2;
-cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
-cosmosApi_schedulable_sleepMs(20);
+	CosmOS_SleepStateType sleepState;
+	CosmOS_MutexStateType mutexState;
+
+	int *integerPointer = new int(100);
+	delete integerPointer;
+
+	sleepState = cosmosApi_thread_sleepMs(1000);
+
+	cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
+
+	mutexState = cosmosApi_mutex_getMutex(&resourcesMutex);
+	mutexState = cosmosApi_mutex_releaseMutex(&resourcesMutex);
+	mutexState = cosmosApi_mutex_tryMutex(&resourcesMutex);
+
+	__SUPRESS_UNUSED_VAR(mutexState);
+	__SUPRESS_UNUSED_VAR(sleepState);
 /********************************************************************************
 ** stop_name =Thread_Core_1
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
