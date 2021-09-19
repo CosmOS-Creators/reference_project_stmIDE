@@ -36,6 +36,7 @@ extern "C" void Task_0_Core_1_Handler(void);
 
 /* Threads in the program blinking_led_CM4 */
 extern "C" void Thread_Core_1(void);
+extern "C" void Thread_mutex_test_CM4(void);
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -89,7 +90,7 @@ __APPLICATION_FUNC_SECTION_CM4 void Task_0_Core_1_Handler(void)
 	CosmOS_BufferStateType bufferState;
 	CosmOS_MutexStateType mutexState;
 
-	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
+	//cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 
 	bufferReader_cm4 = 100;
 	bufferState = cosmosApi_write_buffer_x_core_buffer_1(&bufferReader_cm4,sizeof(bufferReader_cm4));
@@ -111,7 +112,7 @@ __APPLICATION_FUNC_SECTION_CM4 void Task_0_Core_1_Handler(void)
 	{
 		counter_cm4++;
 	}
-	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
+	//cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 
 	__SUPRESS_UNUSED_VAR(spinlockState);
 	__SUPRESS_UNUSED_VAR(mutexState);
@@ -144,18 +145,52 @@ __APPLICATION_FUNC_SECTION_CM4 void Thread_Core_1(void)
 	int *integerPointer = new int(100);
 	delete integerPointer;
 
-	sleepState = cosmosApi_thread_sleepMs(1000);
-
-	cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
+	//sleepState = cosmosApi_thread_sleepMs(1);
+	//cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
 
 	mutexState = mutex_getMutex(&resourcesMutex);
+	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
+	sleepState = cosmosApi_thread_sleepMs(10);
+	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 	mutexState = mutex_releaseMutex(&resourcesMutex);
-	mutexState = mutex_tryMutex(&resourcesMutex);
 
 	__SUPRESS_UNUSED_VAR(mutexState);
 	__SUPRESS_UNUSED_VAR(sleepState);
 /********************************************************************************
 ** stop_name =Thread_Core_1
+** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
+********************************************************************************/
+};
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
+/* @endcond*/
+/********************************************************************************
+** Thread ID macro = THREAD_1_PROGRAM_1_CORE_1_ID
+** Program ID macro = PROGRAM_1_CORE_1_ID
+********************************************************************************/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION_CM4 void Thread_mutex_test_CM4(void)
+{
+/********************************************************************************
+** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
+** start_name =Thread_mutex_test_CM4
+********************************************************************************/
+	CosmOS_MutexStateType mutexState;
+	CosmOS_SleepStateType sleepState;
+
+	mutexState = mutex_getMutex(&resourcesMutex);
+	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
+	sleepState = cosmosApi_thread_sleepMs(100);
+	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
+	mutexState = mutex_releaseMutex(&resourcesMutex);
+	sleepState = cosmosApi_thread_sleepMs(500);
+
+	__SUPRESS_UNUSED_VAR(mutexState);
+	__SUPRESS_UNUSED_VAR(sleepState);
+/********************************************************************************
+** stop_name =Thread_mutex_test_CM4
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };

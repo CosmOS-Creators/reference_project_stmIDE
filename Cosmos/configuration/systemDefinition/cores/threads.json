@@ -169,6 +169,47 @@
 			{
 				"target": "threadsAttributes/:alarmId"
 			}
+		],
+		"thread_4": [
+			{
+				"target": "threadsAttributes/:uniqueId"
+			},
+			{
+				"target": "threadsAttributes/:program",
+				"value": "programs/program_3"
+			},
+			{
+				"target": "threadsAttributes/:name",
+				"value": "Thread_mutex_test_CM4"
+			},
+			{
+				"target": "threadsAttributes/:floatingPoint",
+				"value": false
+			},
+			{
+				"target": "threadsAttributes/:isIdle",
+				"value": false
+			},
+			{
+				"target": "threadsAttributes/:stackSize",
+				"value": 1024
+			},
+			{
+				"target": "threadsAttributes/:priority",
+				"value" : 2
+			},
+			{
+				"target": "threadsAttributes/:lowAddress"
+			},
+			{
+				"target": "threadsAttributes/:highAddress"
+			},
+			{
+				"target": "threadsAttributes/:threadId"
+			},
+			{
+				"target": "threadsAttributes/:alarmId"
+			}
 		]
 	}
 }

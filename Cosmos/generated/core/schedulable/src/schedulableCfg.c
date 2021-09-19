@@ -177,6 +177,17 @@ IS_INITIALIZED_TO
         CORE_1_ID,                                                        /* const BitWidthType coreId                                                */
 		ALARM_1_PROGRAM_1_CORE_1_ID,                                                    /* const BitWidthType alarmId                                            */
 	},
+		{
+        &ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_1_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                              */
+        SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
+        wrapped_Thread_mutex_test_CM4,                                        /* const CosmOS_GenericVoidType handler                            */
+        False,                                                             /* const CosmOS_BooleanType fp                                              */
+        SCHEDULABLE_10_UNIQUE_ID,                                          /* const BitWidthType id                                         */
+        THREAD_1_PROGRAM_1_CORE_1_ID,                                     /* const BitWidthType instanceId                                                    */
+        PROGRAM_1_CORE_1_ID,                                              /* const BitWidthType programId                                             */
+        CORE_1_ID,                                                        /* const BitWidthType coreId                                                */
+		ALARM_2_PROGRAM_1_CORE_1_ID,                                                    /* const BitWidthType alarmId                                            */
+	},
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
@@ -242,6 +253,11 @@ IS_INITIALIZED_TO
         &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],       /* const CosmOS_SchedulableConfigurationType * const cfg                              */
         SCHEDULABLE_STATE_ENUM__READY,                                /* CosmOS_SchedulableStateType state                            */
         STACK_THREAD_0_PROGRAM_1_CORE_1_HIGH_ADDRESS,                                        /* StackPointerType stackPointer                            */
+    },
+		{
+        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_1_PROGRAM_1_CORE_1_ID],       /* const CosmOS_SchedulableConfigurationType * const cfg                              */
+        SCHEDULABLE_STATE_ENUM__READY,                                /* CosmOS_SchedulableStateType state                            */
+        STACK_THREAD_1_PROGRAM_1_CORE_1_HIGH_ADDRESS,                                        /* StackPointerType stackPointer                            */
     },
 };
 /* @cond S */
@@ -427,6 +443,19 @@ __APPLICATION_FUNC_SECTION_CM4 void wrapped_Thread_Core_1(void)
     while ( 1 )
     {
         Thread_Core_1();
+    }
+};
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION_CM4 void wrapped_Thread_mutex_test_CM4(void)
+{
+    while ( 1 )
+    {
+        Thread_mutex_test_CM4();
     }
 };
 /* @cond S */

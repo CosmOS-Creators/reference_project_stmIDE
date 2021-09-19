@@ -85,6 +85,9 @@ IS_INITIALIZED_TO
 		{
         THREAD_0_PROGRAM_1_CORE_1_PRIORITY,       /* const BitWidthType priority                 */
     },
+		{
+        THREAD_1_PROGRAM_1_CORE_1_PRIORITY,       /* const BitWidthType priority                 */
+    },
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
@@ -126,6 +129,11 @@ IS_INITIALIZED_TO
 		{
         &ThreadsProgram1Core1CfgConst[THREAD_0_PROGRAM_1_CORE_1_ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
+		NULL,		/* CosmOS_MutexVariableType *blockingMutexVar                       */
+	},
+		{
+        &ThreadsProgram1Core1CfgConst[THREAD_1_PROGRAM_1_CORE_1_ID],      /* const CosmOS_ThreadConfigurationType * const cfg                      */
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_1_PROGRAM_1_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
 		NULL,		/* CosmOS_MutexVariableType *blockingMutexVar                       */
 	},
 };
