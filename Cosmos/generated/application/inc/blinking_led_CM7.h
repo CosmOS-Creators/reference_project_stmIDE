@@ -31,10 +31,10 @@
 /********************************************************************************
 **                            Include Files | Start                            **
 ********************************************************************************/
-#include "sysDefs.h"
-#include "cosmosApi.h"
-#include "memoryMapping.h"
-#include "cosmosTypesStd.h"
+#include <sysDefs.h>
+#include <cosmosApi.h>
+#include <memoryMapping.h>
+#include <cosmosTypesStd.h>
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/

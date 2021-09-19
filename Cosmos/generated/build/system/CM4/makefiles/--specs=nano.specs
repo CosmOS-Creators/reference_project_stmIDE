@@ -1,6 +1,6 @@
-../../../../../../Cosmos/generated/build/system/CM4/out/obj/mutex.o: \
- ../../../../../../Cosmos/core/mutex/src/mutex.c \
- ../../../../../../Cosmos/core/core/inc/core.h \
+../../../../../../Cosmos/generated/build/system/CM4/out/obj/blinking_led_CM4.o: \
+ ../../../../../../Cosmos/generated/application/src/blinking_led_CM4.cpp \
+ ../../../../../../Cosmos/generated/application/inc/blinking_led_CM4.h \
  ../../../../../../Cosmos/core/sysDefs/inc/sysDefs.h \
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsStacks.h \
  ../../../../../../Cosmos/core/cosmosTypes/inc/cosmosTypesStd.h \
@@ -30,18 +30,10 @@
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSysJobs.h \
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSchedulerThreadLists.h \
  ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSpinlocks.h \
- ../../../../../../Cosmos/generated/core/memory/inc/memoryMapping.h \
- ../../../../../../Cosmos/core/mutex/inc/mutex.h \
- ../../../../../../Cosmos/core/program/inc/program.h \
- ../../../../../../Cosmos/core/cosmosAssert/inc/cosmosAssert.h \
- ../../../../../../Cosmos/core/os/inc/os.h \
- ../../../../../../Cosmos/generated/core/cosmosApi/inc/cosmosApiPrivate.h \
+ ../../../../../../Cosmos/generated/core/cosmosApi/inc/cosmosApi.h \
  ../../../../../../Cosmos/core/sysCalls/inc/sysCalls.h \
- ../../../../../../Cosmos/core/memory/inc/memoryProtection.h \
- ../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILcore.h \
- ../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILstdTypes.h \
- ../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILmutex.h \
- ../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILinterrupt.h \
+ ../../../../../../Cosmos/generated/core/memory/inc/memoryMapping.h \
+ ../../../../../../Cosmos/core/os/inc/osBoot.h \
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../../../../CM4/Core/Inc/stm32h7xx_hal_conf.h \
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
@@ -75,9 +67,10 @@
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
- ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
+ ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
+ ../../../../../../Cosmos/core/mutex/inc/mutex.h
 
-../../../../../../Cosmos/core/core/inc/core.h:
+../../../../../../Cosmos/generated/application/inc/blinking_led_CM4.h:
 
 ../../../../../../Cosmos/core/sysDefs/inc/sysDefs.h:
 
@@ -137,29 +130,13 @@
 
 ../../../../../../Cosmos/generated/core/sysDefs/inc/sysDefsSpinlocks.h:
 
-../../../../../../Cosmos/generated/core/memory/inc/memoryMapping.h:
-
-../../../../../../Cosmos/core/mutex/inc/mutex.h:
-
-../../../../../../Cosmos/core/program/inc/program.h:
-
-../../../../../../Cosmos/core/cosmosAssert/inc/cosmosAssert.h:
-
-../../../../../../Cosmos/core/os/inc/os.h:
-
-../../../../../../Cosmos/generated/core/cosmosApi/inc/cosmosApiPrivate.h:
+../../../../../../Cosmos/generated/core/cosmosApi/inc/cosmosApi.h:
 
 ../../../../../../Cosmos/core/sysCalls/inc/sysCalls.h:
 
-../../../../../../Cosmos/core/memory/inc/memoryProtection.h:
+../../../../../../Cosmos/generated/core/memory/inc/memoryMapping.h:
 
-../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILcore.h:
-
-../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILstdTypes.h:
-
-../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILmutex.h:
-
-../../../../../../Cosmos/stm32h755_integration/CIL/inc/CILinterrupt.h:
+../../../../../../Cosmos/core/os/inc/osBoot.h:
 
 ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 
@@ -228,3 +205,5 @@
 ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 
 ../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
+
+../../../../../../Cosmos/core/mutex/inc/mutex.h:

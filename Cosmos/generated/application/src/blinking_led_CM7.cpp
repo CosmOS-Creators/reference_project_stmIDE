@@ -22,8 +22,8 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =blinking_led_CM7_includeFiles
 ********************************************************************************/
-#include "stm32h7xx_hal.h"
-#include "mutex.h"
+#include <stm32h7xx_hal.h>
+#include <mutex.h>
 /********************************************************************************
 ** stop_name =blinking_led_CM7_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
