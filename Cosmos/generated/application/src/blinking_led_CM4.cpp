@@ -23,7 +23,7 @@
 ** start_name =blinking_led_CM4_includeFiles
 ********************************************************************************/
 #include "stm32h7xx_hal.h"
-#include "new.h"
+#include "mutex.h"
 /********************************************************************************
 ** stop_name =blinking_led_CM4_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -100,8 +100,8 @@ __APPLICATION_FUNC_SECTION_CM4 void Task_0_Core_1_Handler(void)
 	spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
 	spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
 
-	mutexState = cosmosApi_mutex_getMutex(&resourcesMutex);
-	mutexState = cosmosApi_mutex_releaseMutex(&resourcesMutex);
+	mutexState = mutex_getMutex(&resourcesMutex);
+	mutexState = mutex_releaseMutex(&resourcesMutex);
 
 	if ( counter_cm4 > 100 )
 	{
@@ -148,9 +148,9 @@ __APPLICATION_FUNC_SECTION_CM4 void Thread_Core_1(void)
 
 	cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
 
-	mutexState = cosmosApi_mutex_getMutex(&resourcesMutex);
-	mutexState = cosmosApi_mutex_releaseMutex(&resourcesMutex);
-	mutexState = cosmosApi_mutex_tryMutex(&resourcesMutex);
+	mutexState = mutex_getMutex(&resourcesMutex);
+	mutexState = mutex_releaseMutex(&resourcesMutex);
+	mutexState = mutex_tryMutex(&resourcesMutex);
 
 	__SUPRESS_UNUSED_VAR(mutexState);
 	__SUPRESS_UNUSED_VAR(sleepState);

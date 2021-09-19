@@ -22,7 +22,7 @@
 ********************************************************************************/
 /* CORE interfaces */
 #include "schedulableCfg.h"
-#include "sysCalls.h"
+#include "cosmosApiPrivate.h"
 #include "stackCfg.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
@@ -326,8 +326,8 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM7 void wrapped_sysJobs_CM7(void)
 {
-    sysCalls_bitWidthType_ret_void(SYSCALL_SYSJOBS_DISPATCHER);
-    sysCalls_bitWidthType_ret_void(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    cosmosApiPrivate_sysJobs_dispatcher();
+    cosmosApiPrivate_schedulable_setExecutionStateToFinished();
     for(;;);
 };
 /* @cond S */
@@ -339,7 +339,7 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 __APPLICATION_FUNC_SECTION_CM7 void wrapped_Task_0_Core_0_Handler(void)
 {
     Task_0_Core_0_Handler();
-    sysCalls_bitWidthType_ret_void(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    cosmosApiPrivate_schedulable_setExecutionStateToFinished();
     for(;;);
 };
 /* @cond S */
@@ -361,8 +361,8 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM4 void wrapped_sysJobs_CM4(void)
 {
-    sysCalls_bitWidthType_ret_void(SYSCALL_SYSJOBS_DISPATCHER);
-    sysCalls_bitWidthType_ret_void(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    cosmosApiPrivate_sysJobs_dispatcher();
+    cosmosApiPrivate_schedulable_setExecutionStateToFinished();
     for(;;);
 };
 /* @cond S */
@@ -374,7 +374,7 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 __APPLICATION_FUNC_SECTION_CM4 void wrapped_Task_0_Core_1_Handler(void)
 {
     Task_0_Core_1_Handler();
-    sysCalls_bitWidthType_ret_void(SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED);
+    cosmosApiPrivate_schedulable_setExecutionStateToFinished();
     for(;;);
 };
 /* @cond S */

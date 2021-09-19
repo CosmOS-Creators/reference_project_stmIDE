@@ -96,9 +96,9 @@ IS_INITIALIZED_TO
 		(CosmOS_GenericVoidType)os_write32,
 		(CosmOS_GenericVoidType)os_write16,
 		(CosmOS_GenericVoidType)os_write8,
-		(CosmOS_GenericVoidType)mutex_getMutex,
-		(CosmOS_GenericVoidType)mutex_tryMutex,
-		(CosmOS_GenericVoidType)mutex_releaseMutex,
+		(CosmOS_GenericVoidType)mutex_getMutexPrivileged,
+		(CosmOS_GenericVoidType)mutex_tryMutexPrivileged,
+		(CosmOS_GenericVoidType)mutex_releaseMutexPrivileged,
 };
 
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
@@ -127,9 +127,9 @@ IS_INITIALIZED_TO
 		OS_WRITE32,
 		OS_WRITE16,
 		OS_WRITE8,
-		MUTEX_GETMUTEX,
-		MUTEX_TRYMUTEX,
-		MUTEX_RELEASEMUTEX,
+		MUTEX_GETMUTEXPRIVILEGED,
+		MUTEX_TRYMUTEXPRIVILEGED,
+		MUTEX_RELEASEMUTEXPRIVILEGED,
 };
 
 const BitWidthType RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
