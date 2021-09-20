@@ -42,7 +42,13 @@
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =blinking_led_CM7
 ********************************************************************************/
-
+class GPIO
+{
+  void * address;
+  public:
+  GPIO(void * addr) { address = addr; }
+	void togglePin(BitWidthType pinNumber);
+};
 /********************************************************************************
 ** stop_name =blinking_led_CM7
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **

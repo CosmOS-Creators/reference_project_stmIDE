@@ -109,7 +109,8 @@
 			"cilmemoryprotection.h": "c",
 			"cilspinlock.h": "c",
 			"cosmostypesvar.h": "c",
-			"cilinterrupt.h": "c"
+			"cilinterrupt.h": "c",
+			"cosmosapiprivate.h": "c"
 		},
 		"editor.formatOnType": true
 	},
