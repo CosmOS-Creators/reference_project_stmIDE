@@ -22,6 +22,9 @@
 		"files.insertFinalNewline": true,
 		"files.trimFinalNewlines": true,
 		"files.trimTrailingWhitespace": true,
+		"[json]": {
+			"files.insertFinalNewline": false,
+		},
 		"[cpp]": {
 			"editor.tabSize": 2
 		},
