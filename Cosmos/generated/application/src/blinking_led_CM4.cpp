@@ -24,6 +24,7 @@
 ********************************************************************************/
 #include <stm32h7xx_hal.h>
 #include <mutex.h>
+#include <thread.h>
 /********************************************************************************
 ** stop_name =blinking_led_CM4_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -43,7 +44,9 @@ extern "C" void Thread_mutex_test_CM4(void);
 /********************************************************************************
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
+/* @cond S */
 __SEC_START(__BLINKING_LED_CM4_NOINIT_SECTION_START)
+/* @endcond*/
 // If your compiler does not support pragmas use __BLINKING_LED_CM4_NOINIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
@@ -54,9 +57,13 @@ __SEC_START(__BLINKING_LED_CM4_NOINIT_SECTION_START)
 ** stop_name =blinking_led_CM4_noInit
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
+/* @cond S */
 __SEC_STOP(__BLINKING_LED_CM4_NOINIT_SECTION_STOP)
+/* @endcond*/
 
+/* @cond S */
 __SEC_START(__BLINKING_LED_CM4_INIT_SECTION_START)
+/* @endcond*/
 // If your compiler does not support pragmas use __BLINKING_LED_CM4_INIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
@@ -69,7 +76,9 @@ CosmOS_MutexVariableType resourcesMutex __BLINKING_LED_CM4_INIT_SECTION;
 ** stop_name =blinking_led_CM4_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
+/* @cond S */
 __SEC_STOP(__BLINKING_LED_CM4_INIT_SECTION_STOP)
+/* @endcond*/
 
 /********************************************************************************
 ** Task ID macro = TASK_0_PROGRAM_1_CORE_1_ID
@@ -101,8 +110,7 @@ __APPLICATION_FUNC_SECTION_CM4 void Task_0_Core_1_Handler(void)
 	spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
 	spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
 
-	mutexState = mutex_getMutex(&resourcesMutex);
-	mutexState = mutex_releaseMutex(&resourcesMutex);
+	mutexState = mutex_getMutex(&resourcesMutex); //trying if kernel will return err cause task cannot use mutexes
 
 	if ( counter_cm4 > 100 )
 	{
@@ -145,12 +153,12 @@ __APPLICATION_FUNC_SECTION_CM4 void Thread_Core_1(void)
 	int *integerPointer = new int(100);
 	delete integerPointer;
 
-	//sleepState = cosmosApi_thread_sleepMs(1);
+	//sleepState = thread_sleepMs(1);
 	//cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
 
 	mutexState = mutex_getMutex(&resourcesMutex);
 	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
-	sleepState = cosmosApi_thread_sleepMs(10);
+	sleepState = thread_sleepMs(10);
 	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 	mutexState = mutex_releaseMutex(&resourcesMutex);
 
@@ -182,10 +190,10 @@ __APPLICATION_FUNC_SECTION_CM4 void Thread_mutex_test_CM4(void)
 
 	mutexState = mutex_getMutex(&resourcesMutex);
 	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
-	sleepState = cosmosApi_thread_sleepMs(100);
+	sleepState = thread_sleepMs(100);
 	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 	mutexState = mutex_releaseMutex(&resourcesMutex);
-	sleepState = cosmosApi_thread_sleepMs(500);
+	sleepState = thread_sleepMs(500);
 
 	__SUPRESS_UNUSED_VAR(mutexState);
 	__SUPRESS_UNUSED_VAR(sleepState);
@@ -194,6 +202,23 @@ __APPLICATION_FUNC_SECTION_CM4 void Thread_mutex_test_CM4(void)
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
+/* @endcond*/
+
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
+/* @endcond*/
+// If your compiler does not support pragmas use __APPLICATION_FUNC_SECTION_CM4
+/********************************************************************************
+** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Start      **
+** start_name =blinking_led_CM4_userCodeFree
+********************************************************************************/
+
+/********************************************************************************
+** stop_name =blinking_led_CM4_userCodeFree
+** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Stop       **
+********************************************************************************/
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @endcond*/

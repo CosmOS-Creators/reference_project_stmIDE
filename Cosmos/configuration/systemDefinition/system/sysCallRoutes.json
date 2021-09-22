@@ -384,7 +384,7 @@
 		"route_12": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "thread_sleepMs"
+				"value": "thread_sleepMsInternal"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:apiHeader",
@@ -392,11 +392,11 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_bitWidthType_ret_bitWidthType"
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "sysCallRoutesAttributes/:isMappedToEntity",
@@ -405,7 +405,8 @@
 			{
 				"target": "sysCallRoutesAttributes/:args",
 				"value": [
-					"delay"
+					"corePtr",
+					"tickCount"
 				]
 			},
 			{
@@ -515,7 +516,7 @@
 		"route_16": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "mutex_getMutexPrivileged"
+				"value": "mutex_getMutexInternal"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:apiHeader",
@@ -547,7 +548,7 @@
 		"route_17": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "mutex_tryMutexPrivileged"
+				"value": "mutex_tryMutexInternal"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:apiHeader",
@@ -579,7 +580,7 @@
 		"route_18": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "mutex_releaseMutexPrivileged"
+				"value": "mutex_releaseMutexInternal"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:apiHeader",

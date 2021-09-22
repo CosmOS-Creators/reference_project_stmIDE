@@ -92,13 +92,13 @@ IS_INITIALIZED_TO
 		(CosmOS_GenericVoidType)spinlock_releaseSpinlock,
 		(CosmOS_GenericVoidType)interrupt_disableInterrupts,
 		(CosmOS_GenericVoidType)interrupt_enableInterrupts,
-		(CosmOS_GenericVoidType)thread_sleepMs,
+		(CosmOS_GenericVoidType)thread_sleepMsInternal,
 		(CosmOS_GenericVoidType)os_write32,
 		(CosmOS_GenericVoidType)os_write16,
 		(CosmOS_GenericVoidType)os_write8,
-		(CosmOS_GenericVoidType)mutex_getMutexPrivileged,
-		(CosmOS_GenericVoidType)mutex_tryMutexPrivileged,
-		(CosmOS_GenericVoidType)mutex_releaseMutexPrivileged,
+		(CosmOS_GenericVoidType)mutex_getMutexInternal,
+		(CosmOS_GenericVoidType)mutex_tryMutexInternal,
+		(CosmOS_GenericVoidType)mutex_releaseMutexInternal,
 };
 
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
@@ -123,13 +123,13 @@ IS_INITIALIZED_TO
 		SYSJOBS_DISPATCHER,
 		INTERRUPT_DISABLEINTERRUPTS,
 		INTERRUPT_ENABLEINTERRUPTS,
-		THREAD_SLEEPMS,
+		THREAD_SLEEPMSINTERNAL,
 		OS_WRITE32,
 		OS_WRITE16,
 		OS_WRITE8,
-		MUTEX_GETMUTEXPRIVILEGED,
-		MUTEX_TRYMUTEXPRIVILEGED,
-		MUTEX_RELEASEMUTEXPRIVILEGED,
+		MUTEX_GETMUTEXINTERNAL,
+		MUTEX_TRYMUTEXINTERNAL,
+		MUTEX_RELEASEMUTEXINTERNAL,
 };
 
 const BitWidthType RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION

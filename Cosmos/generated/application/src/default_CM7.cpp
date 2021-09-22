@@ -39,7 +39,9 @@
 /********************************************************************************
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
+/* @cond S */
 __SEC_START(__DEFAULT_CM7_NOINIT_SECTION_START)
+/* @endcond*/
 // If your compiler does not support pragmas use __DEFAULT_CM7_NOINIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
@@ -50,9 +52,13 @@ __SEC_START(__DEFAULT_CM7_NOINIT_SECTION_START)
 ** stop_name =default_CM7_noInit
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
+/* @cond S */
 __SEC_STOP(__DEFAULT_CM7_NOINIT_SECTION_STOP)
+/* @endcond*/
 
+/* @cond S */
 __SEC_START(__DEFAULT_CM7_INIT_SECTION_START)
+/* @endcond*/
 // If your compiler does not support pragmas use __DEFAULT_CM7_INIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
@@ -63,9 +69,28 @@ __SEC_START(__DEFAULT_CM7_INIT_SECTION_START)
 ** stop_name =default_CM7_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
+/* @cond S */
 __SEC_STOP(__DEFAULT_CM7_INIT_SECTION_STOP)
+/* @endcond*/
 
 
+
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
+/* @endcond*/
+// If your compiler does not support pragmas use __APPLICATION_FUNC_SECTION_CM7
+/********************************************************************************
+** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Start      **
+** start_name =default_CM7_userCodeFree
+********************************************************************************/
+
+/********************************************************************************
+** stop_name =default_CM7_userCodeFree
+** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Stop       **
+********************************************************************************/
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
+/* @endcond*/
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **
 ********************************************************************************/

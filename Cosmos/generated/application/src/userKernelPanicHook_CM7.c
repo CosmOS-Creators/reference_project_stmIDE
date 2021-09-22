@@ -59,6 +59,23 @@ __APPLICATION_FUNC_SECTION_CM7 void userKernelPanicHook_CM7(void)
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 /* @endcond*/
+
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
+/* @endcond*/
+// If your compiler does not support pragmas use __APPLICATION_FUNC_SECTION_CM7
+/********************************************************************************
+** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Start      **
+** start_name =userKernelPanicHook_CM7.c_userCodeFree
+********************************************************************************/
+
+/********************************************************************************
+** stop_name =userKernelPanicHook_CM7.c_userCodeFree
+** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Stop       **
+********************************************************************************/
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
+/* @endcond*/
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **
 ********************************************************************************/
