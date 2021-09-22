@@ -246,7 +246,7 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Common"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/generated/application"/>
-						<entry excluding="stack/test|core/test|memory/test|os/test|_testing" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/core"/>
+						<entry excluding="stack/test|core/test|memory/test|os/test|_testing|scheduler/test" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/generated/core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/stm32h755_integration"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>

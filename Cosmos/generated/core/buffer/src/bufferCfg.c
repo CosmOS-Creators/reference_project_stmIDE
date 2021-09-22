@@ -103,6 +103,9 @@ IS_INITIALIZED_TO
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 
+/* @cond S */
+__SEC_START(__OS_VARS_SECTION_START)
+/* @endcond*/
 CosmOS_BufferVariableType BuffersVar[BUFFER_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {

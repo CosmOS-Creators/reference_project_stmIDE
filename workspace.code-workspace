@@ -110,7 +110,8 @@
 			"cilspinlock.h": "c",
 			"cosmostypesvar.h": "c",
 			"cilinterrupt.h": "c",
-			"cosmosapiprivate.h": "c"
+			"cosmosapiprivate.h": "c",
+			"future": "cpp"
 		},
 		"editor.formatOnType": true
 	},
