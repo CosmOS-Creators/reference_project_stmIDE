@@ -1,6 +1,6 @@
 {
 	"version": "1.1.0",
-	"checksum": "ba3996ec30f5078c908c1fd620a44fc6",
+	"checksum": "401b9ba0d7386c96a05a98a1aa7b90d8",
 	"ui": {
 		"use_page": "threads"
 	},
@@ -32,7 +32,7 @@
 			},
 			{
 				"target": "threadsAttributes/:priority",
-				"value" : 0
+				"value": 0
 			},
 			{
 				"target": "threadsAttributes/:lowAddress"
@@ -73,7 +73,7 @@
 			},
 			{
 				"target": "threadsAttributes/:priority",
-				"value" : 0
+				"value": 0
 			},
 			{
 				"target": "threadsAttributes/:lowAddress"
@@ -114,7 +114,7 @@
 			},
 			{
 				"target": "threadsAttributes/:priority",
-				"value" : 1
+				"value": 1
 			},
 			{
 				"target": "threadsAttributes/:lowAddress"
@@ -155,7 +155,7 @@
 			},
 			{
 				"target": "threadsAttributes/:priority",
-				"value" : 1
+				"value": 1
 			},
 			{
 				"target": "threadsAttributes/:lowAddress"
@@ -196,7 +196,7 @@
 			},
 			{
 				"target": "threadsAttributes/:priority",
-				"value" : 2
+				"value": 2
 			},
 			{
 				"target": "threadsAttributes/:lowAddress"
