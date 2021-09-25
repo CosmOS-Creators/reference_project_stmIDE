@@ -27,6 +27,13 @@
 	},
 	{
 		"templates": [
+			"middleware/stm32/tcpip/lwipopts"
+		],
+		"outputDir": "{workspace}/CM7/LWIP/Target",
+		"fileName": "lwipopts.h"
+	},
+	{
+		"templates": [
 			"linker/gnu/arm/linker"
 		],
 		"outputDir": "{workspace}/{target}",

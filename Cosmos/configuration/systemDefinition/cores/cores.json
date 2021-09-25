@@ -49,11 +49,15 @@
 			},
 			{
 				"target": "coresAttributes/:unmappedDataMemory",
-				"value": "DTCM"
+				"value": "SRAM2"
 			},
 			{
 				"target": "coresAttributes/:unmappedDataSize",
-				"value": 2048
+				"value": 65536
+			},
+			{
+				"target": "coresAttributes/:unmappedHeapSize",
+				"value": 32768
 			},
 			{
 				"target": "coresAttributes/:unmappedDataLowAddress"
@@ -133,11 +137,15 @@
 			},
 			{
 				"target": "coresAttributes/:unmappedDataMemory",
-				"value": "SRAM1"
+				"value": "SRAM3"
 			},
 			{
 				"target": "coresAttributes/:unmappedDataSize",
-				"value": 2048
+				"value": 32768
+			},
+			{
+				"target": "coresAttributes/:unmappedHeapSize",
+				"value": 16384
 			},
 			{
 				"target": "coresAttributes/:unmappedDataLowAddress"
