@@ -97,6 +97,11 @@ IS_INITIALIZED_TO
 {
 	0b00000000000000000000000010101000,
 };
+const BitWidthType BitLockBuffer3ReadCfgConst[BITLOCK_BUFFER_3_READ_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO
+{
+	0b00000000000000000000000000000000,
+};
 
 
 const BitWidthType BitLockBuffer0WriteCfgConst[BITLOCK_BUFFER_0_WRITE_ELEMENTS_NUM] __OS_CONSTS_SECTION
@@ -113,6 +118,11 @@ const BitWidthType BitLockBuffer2WriteCfgConst[BITLOCK_BUFFER_2_WRITE_ELEMENTS_N
 IS_INITIALIZED_TO
 {
 	0b00000000000000000000000001100001,
+};
+const BitWidthType BitLockBuffer3WriteCfgConst[BITLOCK_BUFFER_3_WRITE_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO
+{
+	0b00000000000000000000111111111111,
 };
 
 
@@ -131,6 +141,11 @@ IS_INITIALIZED_TO
 {
 	0b11111111111111111111111101010111,
 };
+const BitWidthType BitLockBuffer3ReadCfgInvertedConst[BITLOCK_BUFFER_3_READ_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO
+{
+	0b11111111111111111111111111111111,
+};
 
 
 const BitWidthType BitLockBuffer0WriteCfgInvertedConst[BITLOCK_BUFFER_0_WRITE_ELEMENTS_NUM] __OS_CONSTS_SECTION
@@ -147,6 +162,11 @@ const BitWidthType BitLockBuffer2WriteCfgInvertedConst[BITLOCK_BUFFER_2_WRITE_EL
 IS_INITIALIZED_TO
 {
 	0b11111111111111111111111110011110,
+};
+const BitWidthType BitLockBuffer3WriteCfgInvertedConst[BITLOCK_BUFFER_3_WRITE_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO
+{
+	0b11111111111111111111000000000000,
 };
 
 
@@ -168,6 +188,12 @@ IS_INITIALIZED_TO
 	BitLockBuffer2ReadCfgConst,
 	BitLockBuffer2ReadCfgInvertedConst,
 };
+const CosmOS_PermissionsConfigurationType PermissionsBuffer3ReadCfgConst __OS_CONSTS_SECTION
+IS_INITIALIZED_TO
+{
+	BitLockBuffer3ReadCfgConst,
+	BitLockBuffer3ReadCfgInvertedConst,
+};
 
 
 
@@ -188,6 +214,12 @@ IS_INITIALIZED_TO
 {
 	BitLockBuffer2WriteCfgConst,
 	BitLockBuffer2WriteCfgInvertedConst,
+};
+const CosmOS_PermissionsConfigurationType PermissionsBuffer3WriteCfgConst __OS_CONSTS_SECTION
+IS_INITIALIZED_TO
+{
+	BitLockBuffer3WriteCfgConst,
+	BitLockBuffer3WriteCfgInvertedConst,
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)

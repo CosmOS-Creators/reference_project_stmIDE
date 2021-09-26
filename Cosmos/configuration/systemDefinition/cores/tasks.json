@@ -43,6 +43,14 @@
 				"value": 1024
 			},
 			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
+			},
+			{
 				"target": "tasksAttributes/:lowAddress"
 			},
 			{
@@ -87,6 +95,14 @@
 			{
 				"target": "tasksAttributes/:stackSize",
 				"value": 256
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
 			},
 			{
 				"target": "tasksAttributes/:lowAddress"
@@ -135,6 +151,14 @@
 				"value": 1024
 			},
 			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
+			},
+			{
 				"target": "tasksAttributes/:lowAddress"
 			},
 			{
@@ -179,6 +203,14 @@
 			{
 				"target": "tasksAttributes/:stackSize",
 				"value": 1024
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
 			},
 			{
 				"target": "tasksAttributes/:lowAddress"
@@ -227,6 +259,14 @@
 				"value": 256
 			},
 			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
+			},
+			{
 				"target": "tasksAttributes/:lowAddress"
 			},
 			{
@@ -271,6 +311,14 @@
 			{
 				"target": "tasksAttributes/:stackSize",
 				"value": 1024
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
 			},
 			{
 				"target": "tasksAttributes/:lowAddress"

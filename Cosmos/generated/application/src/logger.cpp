@@ -5,7 +5,7 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file blinking_led_CM7.cpp
+** @file logger.cpp
 *********************************************************************************
 <!--                           Version Information                            -->
 *********************************************************************************
@@ -17,28 +17,26 @@
 ** @warning Modifying user sections comments can lead to removing user code
 **          during generating of the new CosmOS configuration
 ********************************************************************************/
-#include "blinking_led_CM7.h"
-/********************************************************************************
-** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
-** start_name =blinking_led_CM7_includeFiles
-********************************************************************************/
-#include <stm32h7xx_hal.h>
-#include <mutex.h>
-#include <thread.h>
-
 #include "logger.h"
 /********************************************************************************
-** stop_name =blinking_led_CM7_includeFiles
+** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
+** start_name =logger_includeFiles
+********************************************************************************/
+#include <stm32h7xx_hal.h>
+#include <os.h>
+#include <buffer.h>
+#include <thread.h>
+/********************************************************************************
+** stop_name =logger_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Start                         **
 ********************************************************************************/
-/* Task in the program blinking_led_CM7 */
-extern "C" void Task_0_Core_0_Handler(void);
+/* Task in the program logger */
 
-/* Threads in the program blinking_led_CM7 */
-extern "C" void Thread_Core_0(void);
+/* Threads in the program logger */
+extern "C" void Logger_thread(void);
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -46,134 +44,96 @@ extern "C" void Thread_Core_0(void);
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__BLINKING_LED_CM7_NOINIT_SECTION_START)
+__SEC_START(__LOGGER_NOINIT_SECTION_START)
 /* @endcond*/
-// If your compiler does not support pragmas use __BLINKING_LED_CM7_NOINIT_SECTION
+// If your compiler does not support pragmas use __LOGGER_NOINIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =blinking_led_CM7_noInit
+** start_name =logger_noInit
 ********************************************************************************/
-
+extern UART_HandleTypeDef huart3;
+extern "C" CosmOS_BufferStateType user_log(void * ptr, BitWidthType size);
+extern "C" void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart);
 /********************************************************************************
-** stop_name =blinking_led_CM7_noInit
+** stop_name =logger_noInit
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP(__BLINKING_LED_CM7_NOINIT_SECTION_STOP)
+__SEC_STOP(__LOGGER_NOINIT_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__BLINKING_LED_CM7_INIT_SECTION_START)
+__SEC_START(__LOGGER_INIT_SECTION_START)
 /* @endcond*/
-// If your compiler does not support pragmas use __BLINKING_LED_CM7_INIT_SECTION
+// If your compiler does not support pragmas use __LOGGER_INIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =blinking_led_CM7_init
+** start_name =logger_init
 ********************************************************************************/
-int __BLINKING_LED_CM7_INIT_SECTION counter =0;
-float __BLINKING_LED_CM7_INIT_SECTION floatTestTask = 0;
-int __BLINKING_LED_CM7_INIT_SECTION bufferReader_cm7 = 0;
-CosmOS_MutexVariableType gpio_e_mutex __BLINKING_LED_CM7_INIT_SECTION;
+
 /********************************************************************************
-** stop_name =blinking_led_CM7_init
+** stop_name =logger_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP(__BLINKING_LED_CM7_INIT_SECTION_STOP)
+__SEC_STOP(__LOGGER_INIT_SECTION_STOP)
 /* @endcond*/
 
+
 /********************************************************************************
-** Task ID macro = TASK_0_PROGRAM_1_CORE_0_ID
-** Program ID macro = PROGRAM_1_CORE_0_ID
-** WCET of the task in microseconds = 500.0
-** Period of the task in milliseconds = 5.0
+** Thread ID macro = THREAD_0_PROGRAM_2_CORE_0_ID
+** Program ID macro = PROGRAM_2_CORE_0_ID
 ********************************************************************************/
 /* @cond S */
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void Task_0_Core_0_Handler(void)
+__APPLICATION_FUNC_SECTION_CM7 void Logger_thread(void)
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =Task_0_Core_0_Handler
+** start_name =Logger_thread
 ********************************************************************************/
-	CosmOS_SpinlockStateType spinlockState;
-	CosmOS_BufferStateType bufferState;
-	CosmOS_MutexStateType mutexState;
+	BitWidthType bufferTail,
+		bufferFullCellsNum,
+		bufferSize,
+		sizeToSend;
 
-	cosmosApi_deviceIO_togglePin(GPIOF, GPIO_PIN_11); //Timing measurement with logic analyzer, pls dont remove
-	if (counter > 100)
+	unsigned char *bufferArr;
+
+	CosmOS_BufferVariableType *loggerBufferVar;
+	CosmOS_OsVariableType *osVar;
+
+	thread_sleepMs(10);
+
+	cosmosApi_interrupt_disableInterrupt(USART3_IRQn);
+	cosmosApi_interrupt_disableInterrupt(DMA1_Stream0_IRQn);
+
+	osVar = os_getOsVar();
+	loggerBufferVar = os_getOsBufferVar(osVar, logger_buffer_id);
+
+	bufferArr = buffer_getBuffer(loggerBufferVar);
+	bufferSize = buffer_getBufferSize(loggerBufferVar);
+	bufferTail = buffer_getBufferTail(loggerBufferVar);
+	bufferFullCellsNum = buffer_getFullCellsNum(loggerBufferVar);
+
+	if ( bufferFullCellsNum )
 	{
-		counter = 0;
+		if ((AddressType)bufferArr + bufferSize < ((AddressType)bufferArr + bufferTail + bufferFullCellsNum))
+		{
+			sizeToSend = bufferSize - bufferTail;
+		}
+		else
+		{
+			sizeToSend = bufferFullCellsNum;
+		}
 
-		bufferReader_cm7 = 100;
-		bufferState = cosmosApi_write_buffer_x_core_buffer_1(&bufferReader_cm7,sizeof(bufferReader_cm7));
-
-		bufferReader_cm7 = 0;
-		bufferState = cosmosApi_read_buffer_x_core_buffer_1(&bufferReader_cm7,sizeof(bufferReader_cm7));
-
-		spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
-		spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
-
-		mutexState = mutex_getMutex(&gpio_e_mutex); //trying if kernel will return err cause task cannot use mutexes
-
+		HAL_UART_Transmit_DMA(&huart3, (unsigned char *)((AddressType)bufferArr + (AddressType)bufferTail), sizeToSend);
 	}
-	else
-	{
-		counter++;
-	}
-	__asm volatile ("VMUL.F32 s0, s0, s1"); //testing FPU context switch
-	cosmosApi_deviceIO_togglePin(GPIOF, GPIO_PIN_11); //Timing measurement with logic analyzer, pls dont remove
 
-	__SUPRESS_UNUSED_VAR(spinlockState);
-	__SUPRESS_UNUSED_VAR(mutexState);
-	__SUPRESS_UNUSED_VAR(bufferState);
+	cosmosApi_interrupt_enableInterrupt(USART3_IRQn);
+	cosmosApi_interrupt_enableInterrupt(DMA1_Stream0_IRQn);
 /********************************************************************************
-** stop_name =Task_0_Core_0_Handler
-** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
-********************************************************************************/
-};
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
-/* @endcond*/
-
-/********************************************************************************
-** Thread ID macro = THREAD_0_PROGRAM_1_CORE_0_ID
-** Program ID macro = PROGRAM_1_CORE_0_ID
-********************************************************************************/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void Thread_Core_0(void)
-{
-/********************************************************************************
-** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =Thread_Core_0
-********************************************************************************/
-	CosmOS_MutexStateType mutexState;
-	CosmOS_SleepStateType sleepState;
-
-	uint8_t togglePinMessage[] = "Toggeling pin with thread 0 !!!\r\n"; //Data to send
-
-	int * integerArr = new int[10];
-	delete integerArr;
-
-	GPIO * gpio_e = new GPIO(GPIOE);
-
-	sleepState = thread_sleep(1);
-
-	mutexState = mutex_getMutex(&gpio_e_mutex);
-	gpio_e->togglePin(GPIO_PIN_1);
-	mutexState = mutex_releaseMutex(&gpio_e_mutex);
-
-	user_log(togglePinMessage, sizeof(togglePinMessage));
-
-	delete gpio_e;
-
-	__SUPRESS_UNUSED_VAR(mutexState);
-	__SUPRESS_UNUSED_VAR(sleepState);
-/********************************************************************************
-** stop_name =Thread_Core_0
+** stop_name =Logger_thread
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
@@ -187,14 +147,30 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 // If your compiler does not support pragmas use __APPLICATION_FUNC_SECTION_CM7
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Start      **
-** start_name =blinking_led_CM7_userCodeFree
+** start_name =logger_userCodeFree
 ********************************************************************************/
-__APPLICATION_FUNC_SECTION_CM7 void GPIO::togglePin(BitWidthType pinNumber)
+__APPLICATION_FUNC_SECTION_CM7 CosmOS_BufferStateType user_log(void * ptr, BitWidthType size)
 {
-	cosmosApi_deviceIO_togglePin(address, pinNumber);
-}
+	CosmOS_BufferStateType bufferState;
+	bufferState = cosmosApi_write_buffer_logger_buffer(ptr, size);
+	return bufferState;
+};
+
+__APPLICATION_FUNC_SECTION_CM7 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
+	__disable_irq();
+	CosmOS_BufferVariableType *loggerBufferVar;
+	CosmOS_OsVariableType *osVar;
+
+	osVar = os_getOsVar();
+	loggerBufferVar = os_getOsBufferVar(osVar, logger_buffer_id);
+
+	loggerBufferVar->fullCells = (loggerBufferVar->fullCells - huart->TxXferSize);
+	loggerBufferVar->tail = ( ( loggerBufferVar->tail + huart->TxXferSize ) % loggerBufferVar->cfg->size );
+	__enable_irq();
+};
 /********************************************************************************
-** stop_name =blinking_led_CM7_userCodeFree
+** stop_name =logger_userCodeFree
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */

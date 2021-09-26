@@ -608,6 +608,70 @@
 				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "CosmOS_MutexStateType"
 			}
+		],
+		"route_19": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "interrupt_disableInterrupt"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "interrupt.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"ISR"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
+		],
+		"route_20": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "interrupt_enableInterrupt"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "interrupt.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"ISR"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
 		]
 	}
 }

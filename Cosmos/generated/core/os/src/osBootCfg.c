@@ -58,18 +58,21 @@ extern unsigned char _s_program_default_CM7_section_init[];
 extern unsigned char _s_program_blinking_led_CM7_section_init[];
 extern unsigned char _s_program_default_CM4_section_init[];
 extern unsigned char _s_program_blinking_led_CM4_section_init[];
+extern unsigned char _s_program_logger_section_init[];
 extern unsigned char _s_os_section_consts[];
 extern unsigned char _s_os_section_vars[];
 extern unsigned char _e_program_default_CM7_section_init[];
 extern unsigned char _e_program_blinking_led_CM7_section_init[];
 extern unsigned char _e_program_default_CM4_section_init[];
 extern unsigned char _e_program_blinking_led_CM4_section_init[];
+extern unsigned char _e_program_logger_section_init[];
 extern unsigned char _e_os_section_consts[];
 extern unsigned char _e_os_section_vars[];
 extern unsigned char _flash_program_default_CM7_section_init[];
 extern unsigned char _flash_program_blinking_led_CM7_section_init[];
 extern unsigned char _flash_program_default_CM4_section_init[];
 extern unsigned char _flash_program_blinking_led_CM4_section_init[];
+extern unsigned char _flash_program_logger_section_init[];
 extern unsigned char _flash_os_section_consts_start[];
 extern unsigned char _flash_os_section_vars_start[];
 
@@ -85,6 +88,11 @@ IS_INITIALIZED_TO
         _s_program_blinking_led_CM7_section_init,
         _e_program_blinking_led_CM7_section_init,
         _flash_program_blinking_led_CM7_section_init,
+    },
+		{
+        _s_program_logger_section_init,
+        _e_program_logger_section_init,
+        _flash_program_logger_section_init,
     },
 };
 

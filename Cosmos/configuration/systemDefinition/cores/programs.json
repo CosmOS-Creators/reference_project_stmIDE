@@ -153,6 +153,43 @@
 			{
 				"target": "programsAttributes/:programTasks"
 			}
+		],
+		"program_4": [
+			{
+				"target": "programsAttributes/:core",
+				"value": "cores/core_0"
+			},
+			{
+				"target": "programsAttributes/:name",
+				"value": "logger"
+			},
+			{
+				"target": "programsAttributes/:size",
+				"value": 1024
+			},
+			{
+				"target": "programsAttributes/:heapSize",
+				"value": 256
+			},
+			{
+				"target": "programsAttributes/:memory",
+				"value": "DTCM"
+			},
+			{
+				"target": "programsAttributes/:lowAddress"
+			},
+			{
+				"target": "programsAttributes/:highAddress"
+			},
+			{
+				"target": "programsAttributes/:programId"
+			},
+			{
+				"target": "programsAttributes/:programThreads"
+			},
+			{
+				"target": "programsAttributes/:programTasks"
+			}
 		]
 	}
 }

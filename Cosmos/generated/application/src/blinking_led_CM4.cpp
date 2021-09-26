@@ -25,6 +25,7 @@
 #include <stm32h7xx_hal.h>
 #include <mutex.h>
 #include <thread.h>
+#include "logger.h"
 /********************************************************************************
 ** stop_name =blinking_led_CM4_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -194,6 +195,10 @@ __APPLICATION_FUNC_SECTION_CM4 void Thread_mutex_test_CM4(void)
 	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 	mutexState = mutex_releaseMutex(&resourcesMutex);
 	sleepState = thread_sleepMs(500);
+
+	uint8_t togglePinMessage[] = "Thread_mutex_test_CM4 released mutex for resources !!!\r\n"; //Data to send
+
+	user_log(togglePinMessage, sizeof(togglePinMessage));
 
 	__SUPRESS_UNUSED_VAR(mutexState);
 	__SUPRESS_UNUSED_VAR(sleepState);

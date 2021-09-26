@@ -72,9 +72,8 @@ ETH_TxPacketConfig TxConfig;
 
 ETH_HandleTypeDef heth;
 
-UART_HandleTypeDef huart3;
-DMA_HandleTypeDef hdma_usart3_rx;
-DMA_HandleTypeDef hdma_usart3_tx;
+UART_HandleTypeDef huart3 __LOGGER_NOINIT_SECTION;
+DMA_HandleTypeDef hdma_usart3_tx __LOGGER_NOINIT_SECTION;
 
 /* USER CODE BEGIN PV */
 

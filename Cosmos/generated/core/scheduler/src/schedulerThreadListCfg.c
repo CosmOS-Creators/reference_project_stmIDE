@@ -65,6 +65,9 @@ IS_INITIALIZED_TO
         &ThreadsProgram1Core0Var[THREAD_0_PROGRAM_1_CORE_0_ID],   /* CosmOS_ThreadVariableType * thread                  */
     },
 		{
+        &ThreadsProgram2Core0Var[THREAD_0_PROGRAM_2_CORE_0_ID],   /* CosmOS_ThreadVariableType * thread                  */
+    },
+		{
         &ThreadsProgram0Core0Var[THREAD_0_PROGRAM_0_CORE_0_ID],   /* CosmOS_ThreadVariableType * thread                  */
     },
 };

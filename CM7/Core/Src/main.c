@@ -28,7 +28,9 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+extern unsigned char _sidata[];
+extern unsigned char _sdata[];
+extern unsigned char _edata[];
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -41,7 +43,31 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
+/********************************************************************************
+  * DOXYGEN DOCUMENTATION INFORMATION                                          **
+  * *************************************************************************//**
+  * @fn bootSection( unsigned char * sectionStart, unsigned char * sectionEnd, unsigned char * sectionStartInFlash)
+  *
+  * @brief Boot of the section.
+  *
+  * @param[in]  unsigned char * sectionStart
+  * @param[in]  unsigned char * sectionEnd
+  * @param[in]  unsigned char * sectionStartInFlash
+  *
+  * @return none
+********************************************************************************/
+__STATIC_FORCEINLINE void bootSection( unsigned char * sectionStart, unsigned char * sectionEnd, unsigned char * sectionStartInFlash)
+{
+	BitWidthType size = (BitWidthType)(sectionEnd - sectionStart);
 
+	unsigned char *pDst = sectionStart;
+	unsigned char *pSrc = sectionStartInFlash;
+
+	for ( BitWidthType i = 0; i < (size * sizeof(unsigned char)); i++ )
+	{
+		*pDst++=*pSrc++;
+	}
+}
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -72,14 +98,12 @@ ETH_TxPacketConfig TxConfig;
 
 ETH_HandleTypeDef heth;
 
-UART_HandleTypeDef huart3;
-DMA_HandleTypeDef hdma_usart3_rx;
-DMA_HandleTypeDef hdma_usart3_tx;
+UART_HandleTypeDef huart3 __LOGGER_NOINIT_SECTION;
+DMA_HandleTypeDef hdma_usart3_tx __LOGGER_NOINIT_SECTION;
 
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
 /* USER CODE BEGIN PV */
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -123,7 +147,9 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+
   HAL_Init();
+
 
   /* USER CODE BEGIN Init */
 
@@ -131,6 +157,7 @@ int main(void)
 
   /* Configure the system clock */
   SystemClock_Config();
+
 /* USER CODE BEGIN Boot_Mode_Sequence_2 */
 /* When system initialization is finished, Cortex-M7 will release Cortex-M4 by means of
 HSEM notification */
@@ -150,6 +177,8 @@ Error_Handler();
 /* USER CODE END Boot_Mode_Sequence_2 */
 
   /* USER CODE BEGIN SysInit */
+
+memset((void*)0x20000000, 0, 0x20000);
 
   /* USER CODE END SysInit */
 
@@ -391,9 +420,6 @@ static void MX_DMA_Init(void)
   /* DMA1_Stream0_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
-  /* DMA1_Stream1_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream1_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Stream1_IRQn);
 
 }
 

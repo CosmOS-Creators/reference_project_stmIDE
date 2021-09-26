@@ -79,6 +79,18 @@ IS_INITIALIZED_TO
 __SEC_STOP(__BLINKING_LED_CM7_INIT_SECTION_STOP)
 /* @endcond*/
 /* @cond S */
+__SEC_START(__LOGGER_INIT_SECTION_START)
+/* @endcond*/
+CosmOS_MutexVariableType MutexForProgram2HeapCore0Var __LOGGER_INIT_SECTION
+IS_INITIALIZED_TO
+{
+	0,			/* 	BitWidthType mutex 									*/
+	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
+};
+/* @cond S */
+__SEC_STOP(__LOGGER_INIT_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
 __SEC_START(__DEFAULT_CM4_INIT_SECTION_START)
 /* @endcond*/
 CosmOS_MutexVariableType MutexForProgram0HeapCore1Var __DEFAULT_CM4_INIT_SECTION

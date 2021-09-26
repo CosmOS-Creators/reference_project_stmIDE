@@ -92,6 +92,10 @@ IS_INITIALIZED_TO
         TASK_0_PROGRAM_1_CORE_1_WCET,                                 /* const BitWidthType wcet                                  */
     },
 };
+const CosmOS_TaskConfigurationType TasksProgram2Core0CfgConst[TASK_PROGRAM_2_CORE_0_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO
+{
+};
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
@@ -138,6 +142,10 @@ IS_INITIALIZED_TO
         &TasksProgram1Core1CfgConst[TASK_0_PROGRAM_1_CORE_1_ID],      /* const CosmOS_TaskConfigurationType * cfg                    */
         &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_1_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
     },
+};
+CosmOS_TaskVariableType TasksProgram2Core0Var[TASK_PROGRAM_2_CORE_0_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO
+{
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
