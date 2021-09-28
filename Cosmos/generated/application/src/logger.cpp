@@ -22,13 +22,24 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =logger_includeFiles
 ********************************************************************************/
-#include <stm32h7xx_hal.h>
 #include <os.h>
 #include <buffer.h>
 #include <thread.h>
+#include <stm32h7xx_hal.h>
 /********************************************************************************
 ** stop_name =logger_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
+********************************************************************************/
+/********************************************************************************
+** DO NOT MODIFY THIS COMMENT ! Declarations         USER SECTION | Start      **
+** start_name =logger_userFreeDeclarations
+********************************************************************************/
+extern UART_HandleTypeDef huart3;
+extern "C" CosmOS_BufferStateType user_log(void * ptr, BitWidthType size);
+extern "C" void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart);
+/********************************************************************************
+** stop_name =logger_userFreeDeclarations
+** DO NOT MODIFY THIS COMMENT ! Declarations         USER SECTION | Stop       **
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Start                         **
@@ -51,9 +62,6 @@ __SEC_START(__LOGGER_NOINIT_SECTION_START)
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =logger_noInit
 ********************************************************************************/
-extern UART_HandleTypeDef huart3;
-extern "C" CosmOS_BufferStateType user_log(void * ptr, BitWidthType size);
-extern "C" void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart);
 /********************************************************************************
 ** stop_name =logger_noInit
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -81,13 +89,13 @@ __SEC_STOP(__LOGGER_INIT_SECTION_STOP)
 
 
 /********************************************************************************
-** Thread ID macro = THREAD_0_PROGRAM_2_CORE_0_ID
-** Program ID macro = PROGRAM_2_CORE_0_ID
+** Thread ID macro = THREAD_0_PROGRAM_2_CORE_1_ID
+** Program ID macro = PROGRAM_2_CORE_1_ID
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void Logger_thread(void)
+__APPLICATION_FUNC_SECTION_CM4 void Logger_thread(void)
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
@@ -138,25 +146,25 @@ __APPLICATION_FUNC_SECTION_CM7 void Logger_thread(void)
 ********************************************************************************/
 };
 /* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
-// If your compiler does not support pragmas use __APPLICATION_FUNC_SECTION_CM7
+// If your compiler does not support pragmas use __APPLICATION_FUNC_SECTION_CM4
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Start      **
 ** start_name =logger_userCodeFree
 ********************************************************************************/
-__APPLICATION_FUNC_SECTION_CM7 CosmOS_BufferStateType user_log(void * ptr, BitWidthType size)
+__APPLICATION_FUNC_SECTION_CM4 CosmOS_BufferStateType user_log(void * ptr, BitWidthType size)
 {
 	CosmOS_BufferStateType bufferState;
 	bufferState = cosmosApi_write_buffer_logger_buffer(ptr, size);
 	return bufferState;
 };
 
-__APPLICATION_FUNC_SECTION_CM7 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+__APPLICATION_FUNC_SECTION_CM4 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
 	__disable_irq();
 	CosmOS_BufferVariableType *loggerBufferVar;
@@ -174,7 +182,7 @@ __APPLICATION_FUNC_SECTION_CM7 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @endcond*/
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **

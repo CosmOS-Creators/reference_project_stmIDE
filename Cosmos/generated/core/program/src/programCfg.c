@@ -127,6 +127,18 @@ IS_INITIALIZED_TO
         PROGRAM_1_CORE_1_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
 		&MutexForProgram1HeapCore1Var,				/* void * const heapMutex			                     */
 	},
+		{
+        CORE_1_ID,                                      /* const BitWidthType coreId                            */
+        TASK_PROGRAM_2_CORE_1_NUM,                      /* const BitWidthType numberOfTasks                     */
+        THREAD_PROGRAM_2_CORE_1_NUM,                      /* const BitWidthType numberOfThreads                     */
+        PROGRAM_2_CORE_1_SIZE,                      /* const BitWidthType programMemorySize                     */
+        PROGRAM_2_CORE_1_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
+        PROGRAM_2_CORE_1_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
+        PROGRAM_2_CORE_1_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
+        PROGRAM_2_CORE_1_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
+        PROGRAM_2_CORE_1_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
+		&MutexForProgram2HeapCore1Var,				/* void * const heapMutex			                     */
+	},
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
@@ -170,6 +182,12 @@ IS_INITIALIZED_TO
         &ProgramsCore1CfgConst[PROGRAM_1_CORE_1_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
         TasksProgram1Core1Var,                          /* CosmOS_TaskVariableType * taskVars                                */
         ThreadsProgram1Core1Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
+    	0,                      /* BitWidthType numberOfMallocVars                     */
+	},
+		{
+        &ProgramsCore1CfgConst[PROGRAM_2_CORE_1_ID],    /* const CosmOS_ProgramConfigurationType * cfg                       */
+        TasksProgram2Core1Var,                          /* CosmOS_TaskVariableType * taskVars                                */
+        ThreadsProgram2Core1Var,                          /* CosmOS_ThreadVariableType * threadVars                                */
     	0,                      /* BitWidthType numberOfMallocVars                     */
 	},
 };

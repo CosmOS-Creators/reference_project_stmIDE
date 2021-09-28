@@ -114,7 +114,7 @@
 			},
 			{
 				"target": "threadsAttributes/:name",
-				"value": "Thread_Core_0"
+				"value": "Timing_measurement_thread_CM7"
 			},
 			{
 				"target": "threadsAttributes/:floatingPoint",
@@ -163,7 +163,7 @@
 			},
 			{
 				"target": "threadsAttributes/:name",
-				"value": "Thread_Core_1"
+				"value": "Timing_measurement_thread_CM4"
 			},
 			{
 				"target": "threadsAttributes/:floatingPoint",
@@ -212,7 +212,7 @@
 			},
 			{
 				"target": "threadsAttributes/:name",
-				"value": "Thread_mutex_test_CM4"
+				"value": "Mutex_test_thread_CM4"
 			},
 			{
 				"target": "threadsAttributes/:floatingPoint",
@@ -273,11 +273,60 @@
 			},
 			{
 				"target": "threadsAttributes/:stackSize",
-				"value": 2048
+				"value": 1024
 			},
 			{
 				"target": "threadsAttributes/:priority",
 				"value" : 1
+			},
+			{
+				"target": "threadsAttributes/:peripheralAccessLowAddress",
+				"value": "0x40000000"
+			},
+			{
+				"target": "threadsAttributes/:peripheralAccessSize",
+				"value" : 1048576
+			},
+			{
+				"target": "threadsAttributes/:lowAddress"
+			},
+			{
+				"target": "threadsAttributes/:highAddress"
+			},
+			{
+				"target": "threadsAttributes/:threadId"
+			},
+			{
+				"target": "threadsAttributes/:alarmId"
+			}
+		],
+		"thread_6": [
+			{
+				"target": "threadsAttributes/:uniqueId"
+			},
+			{
+				"target": "threadsAttributes/:program",
+				"value": "programs/program_5"
+			},
+			{
+				"target": "threadsAttributes/:name",
+				"value": "TCPIP_thread"
+			},
+			{
+				"target": "threadsAttributes/:floatingPoint",
+				"value": false
+			},
+			{
+				"target": "threadsAttributes/:isIdle",
+				"value": false
+			},
+			{
+				"target": "threadsAttributes/:stackSize",
+				"value": 2048
+			},
+			{
+				"target": "threadsAttributes/:priority",
+				"value" : 20
 			},
 			{
 				"target": "threadsAttributes/:peripheralAccessLowAddress",

@@ -124,7 +124,7 @@
 			},
 			{
 				"target": "tasksAttributes/:name",
-				"value": "Task_0_Core_0_Handler"
+				"value": "Timing_measurement_task_CM7"
 			},
 			{
 				"target": "tasksAttributes/:wcet",
@@ -286,7 +286,7 @@
 			},
 			{
 				"target": "tasksAttributes/:name",
-				"value": "Task_0_Core_1_Handler"
+				"value": "Timing_measurement_task_CM4"
 			},
 			{
 				"target": "tasksAttributes/:wcet",

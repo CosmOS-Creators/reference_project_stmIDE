@@ -42,7 +42,7 @@
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =logger
 ********************************************************************************/
-__APPLICATION_FUNC_SECTION_CM7 CosmOS_BufferStateType user_log(void *ptr, BitWidthType size);
+__APPLICATION_FUNC_SECTION_CM4 CosmOS_BufferStateType user_log(void *ptr, BitWidthType size);
 /********************************************************************************
 ** stop_name =logger
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **

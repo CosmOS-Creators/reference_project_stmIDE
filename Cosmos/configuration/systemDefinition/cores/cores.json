@@ -49,7 +49,7 @@
 			},
 			{
 				"target": "coresAttributes/:unmappedDataMemory",
-				"value": "SRAM2"
+				"value": "AXI_SRAM"
 			},
 			{
 				"target": "coresAttributes/:unmappedDataSize",
@@ -137,7 +137,7 @@
 			},
 			{
 				"target": "coresAttributes/:unmappedDataMemory",
-				"value": "SRAM3"
+				"value": "SRAM2"
 			},
 			{
 				"target": "coresAttributes/:unmappedDataSize",
