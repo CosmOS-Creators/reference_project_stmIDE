@@ -119,7 +119,7 @@
 			},
 			{
 				"target": "buffersAttributes/:size",
-				"value": 512
+				"value": 2048
 			},
 			{
 				"target": "buffersAttributes/:isDoubleBuffer",
@@ -144,6 +144,7 @@
 					"threads/thread_3",
 					"threads/thread_4",
 					"threads/thread_5",
+					"threads/thread_6",
 					"threads/thread_0"
 				]
 			},

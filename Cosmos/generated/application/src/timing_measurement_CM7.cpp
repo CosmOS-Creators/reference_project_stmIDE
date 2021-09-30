@@ -163,7 +163,7 @@ __APPLICATION_FUNC_SECTION_CM7 void Timing_measurement_thread_CM7(void)
 	CosmOS_MutexStateType mutexState;
 	CosmOS_SleepStateType sleepState;
 
-	uint8_t togglePinMessage[] = "Toggeling pin with thread 0 !!!\r\n"; //Data to send
+	uint8_t consoleOutput[] = "Toggeling pin with thread 0 !!!\r\n"; //Data to send
 
 	int * integerArr = new int[10];
 	delete integerArr;
@@ -176,7 +176,7 @@ __APPLICATION_FUNC_SECTION_CM7 void Timing_measurement_thread_CM7(void)
 	gpio_e->togglePin(GPIO_PIN_1);
 	mutexState = mutex_releaseMutex(&gpio_e_mutex);
 
-	user_log(togglePinMessage, sizeof(togglePinMessage));
+	user_log(consoleOutput, sizeof(consoleOutput));
 
 	delete gpio_e;
 

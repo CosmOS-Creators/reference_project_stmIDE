@@ -62,6 +62,7 @@ __SEC_START(__LOGGER_NOINIT_SECTION_START)
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =logger_noInit
 ********************************************************************************/
+
 /********************************************************************************
 ** stop_name =logger_noInit
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **

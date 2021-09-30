@@ -164,9 +164,6 @@ __APPLICATION_FUNC_SECTION_CM4 void Timing_measurement_thread_CM4(void)
 	int *integerPointer = new int(100);
 	delete integerPointer;
 
-	//sleepState = thread_sleepMs(1);
-	//cosmosApi_deviceIO_togglePin(GPIOB, GPIO_PIN_0); //GREEN LED
-
 	mutexState = mutex_getMutex(&resourcesMutex);
 	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 	sleepState = thread_sleepMs(10);
@@ -196,6 +193,8 @@ __APPLICATION_FUNC_SECTION_CM4 void Mutex_test_thread_CM4(void)
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =Mutex_test_thread_CM4
 ********************************************************************************/
+	unsigned char consoleOutput[] = "Mutex_test_thread_CM4 released mutex for resources !!!\r\n"; //Data to send
+
 	CosmOS_MutexStateType mutexState;
 	CosmOS_SleepStateType sleepState;
 
@@ -204,11 +203,10 @@ __APPLICATION_FUNC_SECTION_CM4 void Mutex_test_thread_CM4(void)
 	sleepState = thread_sleepMs(100);
 	cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4); //Timing measurement with logic analyzer, pls dont remove
 	mutexState = mutex_releaseMutex(&resourcesMutex);
+
 	sleepState = thread_sleepMs(500);
 
-	uint8_t togglePinMessage[] = "Thread_mutex_test_CM4 released mutex for resources !!!\r\n"; //Data to send
-
-	user_log(togglePinMessage, sizeof(togglePinMessage));
+	user_log(consoleOutput, sizeof(consoleOutput));
 
 	__SUPRESS_UNUSED_VAR(mutexState);
 	__SUPRESS_UNUSED_VAR(sleepState);

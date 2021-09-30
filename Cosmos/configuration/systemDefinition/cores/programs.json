@@ -206,7 +206,7 @@
 			},
 			{
 				"target": "programsAttributes/:heapSize",
-				"value": 256
+				"value": 512
 			},
 			{
 				"target": "programsAttributes/:memory",
