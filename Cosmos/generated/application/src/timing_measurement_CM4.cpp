@@ -83,6 +83,8 @@ __SEC_START(__TIMING_MEASUREMENT_CM4_INIT_SECTION_START)
 int __TIMING_MEASUREMENT_CM4_INIT_SECTION counter_cm4  = 0;
 int __TIMING_MEASUREMENT_CM4_INIT_SECTION bufferReader_cm4  = 0;
 CosmOS_MutexVariableType resourcesMutex __TIMING_MEASUREMENT_CM4_INIT_SECTION;
+char __TIMING_MEASUREMENT_CM4_INIT_SECTION timingMeasurementCM4[] = "\n**************************** CM4 TIMING LOG **************************** \r\n\
+Mutex_test_thread_CM4 released mutex for resources \r\n\n";
 /********************************************************************************
 ** stop_name =timing_measurement_CM4_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -193,8 +195,6 @@ __APPLICATION_FUNC_SECTION_CM4 void Mutex_test_thread_CM4(void)
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =Mutex_test_thread_CM4
 ********************************************************************************/
-	unsigned char consoleOutput[] = "Mutex_test_thread_CM4 released mutex for resources !!!\r\n"; //Data to send
-
 	CosmOS_MutexStateType mutexState;
 	CosmOS_SleepStateType sleepState;
 
@@ -206,7 +206,7 @@ __APPLICATION_FUNC_SECTION_CM4 void Mutex_test_thread_CM4(void)
 
 	sleepState = thread_sleepMs(500);
 
-	user_log(consoleOutput, sizeof(consoleOutput));
+	user_log(timingMeasurementCM4, sizeof(timingMeasurementCM4));
 
 	__SUPRESS_UNUSED_VAR(mutexState);
 	__SUPRESS_UNUSED_VAR(sleepState);

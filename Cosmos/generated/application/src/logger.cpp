@@ -112,7 +112,7 @@ __APPLICATION_FUNC_SECTION_CM4 void Logger_thread(void)
 	CosmOS_BufferVariableType *loggerBufferVar;
 	CosmOS_OsVariableType *osVar;
 
-	thread_sleepMs(10);
+	thread_sleepMs(5);
 
 	cosmosApi_interrupt_disableInterrupt(USART3_IRQn);
 	cosmosApi_interrupt_disableInterrupt(DMA1_Stream0_IRQn);

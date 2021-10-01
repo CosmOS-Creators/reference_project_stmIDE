@@ -84,6 +84,8 @@ int __TIMING_MEASUREMENT_CM7_INIT_SECTION counter =0;
 float __TIMING_MEASUREMENT_CM7_INIT_SECTION floatTestTask = 0;
 int __TIMING_MEASUREMENT_CM7_INIT_SECTION bufferReader_cm7 = 0;
 CosmOS_MutexVariableType gpio_e_mutex __TIMING_MEASUREMENT_CM7_INIT_SECTION;
+char __TIMING_MEASUREMENT_CM7_INIT_SECTION timingMeasurementCM7[] = "\n**************************** CM7 TIMING LOG **************************** \r\n\
+Timing_measurement_thread_CM7 toggled GPIOE PIN 1 \r\n\n";
 /********************************************************************************
 ** stop_name =timing_measurement_CM7_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -163,8 +165,6 @@ __APPLICATION_FUNC_SECTION_CM7 void Timing_measurement_thread_CM7(void)
 	CosmOS_MutexStateType mutexState;
 	CosmOS_SleepStateType sleepState;
 
-	uint8_t consoleOutput[] = "Toggeling pin with thread 0 !!!\r\n"; //Data to send
-
 	int * integerArr = new int[10];
 	delete integerArr;
 
@@ -176,7 +176,7 @@ __APPLICATION_FUNC_SECTION_CM7 void Timing_measurement_thread_CM7(void)
 	gpio_e->togglePin(GPIO_PIN_1);
 	mutexState = mutex_releaseMutex(&gpio_e_mutex);
 
-	user_log(consoleOutput, sizeof(consoleOutput));
+	user_log(timingMeasurementCM7, sizeof(timingMeasurementCM7));
 
 	delete gpio_e;
 
