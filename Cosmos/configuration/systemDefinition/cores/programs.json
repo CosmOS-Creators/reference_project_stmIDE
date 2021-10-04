@@ -5,6 +5,7 @@
 		"use_page": "programs"
 	},
 	"attributes": {},
+	"use_restriction": "program_restrictions",
 	"elements": {
 		"program_0": [
 			{
