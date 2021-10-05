@@ -4,8 +4,8 @@
 	"ui": {
 		"use_page": "programs"
 	},
-	"attributes": {},
 	"use_restriction": "program_restrictions",
+	"attributes": {},
 	"elements": {
 		"program_0": [
 			{
