@@ -672,6 +672,37 @@
 				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
 			}
+		],
+		"route_21": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "CILcore_getCoreId"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "CILcore.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": true
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "BitWidthType"
+			}
 		]
 	}
 }
