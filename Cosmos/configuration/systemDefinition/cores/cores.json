@@ -4,6 +4,7 @@
 	"ui": {
 		"use_page": "cores"
 	},
+	"use_restriction": "core_restrictions",
 	"attributes": {},
 	"elements": {
 		"core_0": [
