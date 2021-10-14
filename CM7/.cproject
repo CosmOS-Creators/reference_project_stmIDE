@@ -62,7 +62,6 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/mutex/inc"/>
@@ -74,6 +73,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/heap/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysCalls/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysDefs/inc"/>
@@ -94,6 +94,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>
@@ -151,7 +152,6 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/mutex/inc"/>
@@ -162,6 +162,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/heap/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysCalls/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysDefs/inc"/>
@@ -182,6 +183,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>
@@ -241,39 +243,6 @@
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog.709959557" name="MCU Output Converter Verilog" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog"/>
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec.1735928200" name="MCU Output Converter Motorola S-rec" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec"/>
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.1604190668" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec"/>
-						</toolChain>
-					</folderInfo>
-					<folderInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.224294325.283073421" name="/" resourcePath="Cosmos/core/stack/test">
-						<toolChain id="com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.debug.1194784307" name="MCU ARM GCC" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.debug" unusedChildren="">
-							<option id="com.st.stm32cube.ide.mcu.option.internal.toolchain.type.1016402597.2122057304" name="Internal Toolchain Type" superClass="com.st.stm32cube.ide.mcu.option.internal.toolchain.type.1016402597"/>
-							<option id="com.st.stm32cube.ide.mcu.option.internal.toolchain.version.343708303.870998944" name="Internal Toolchain Version" superClass="com.st.stm32cube.ide.mcu.option.internal.toolchain.version.343708303"/>
-							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.921084093.656428583" name="Mcu" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.921084093"/>
-							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.372598293.1626318220" name="CpuId" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.372598293"/>
-							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.260840582.1889598636" name="CpuCoreId" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.260840582"/>
-							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.1662834583.1220566789" name="Floating-point unit" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.1662834583"/>
-							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.1583064016.325528553" name="Floating-point ABI" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.1583064016"/>
-							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.1099394611.1210133042" name="Board" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.1099394611"/>
-							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1892681591.277413710" name="Defaults" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1892681591"/>
-							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.targetplatform" isAbstract="false" osList="all" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.targetplatform"/>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.989820050" name="MCU GCC Assembler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.803865163">
-								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1382843940" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
-							</tool>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1364006697" name="MCU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.903919380">
-								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.606285062" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
-							</tool>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.674006996" name="MCU G++ Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.759550354">
-								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.459741713" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
-							</tool>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.linker.571877369" name="MCU GCC Linker" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.linker.237160859"/>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.1776692670" name="MCU G++ Linker" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.1825661686"/>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.archiver.351191614" name="MCU GCC Archiver" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.archiver.263511085"/>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.size.212975443" name="MCU Size" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.size.214832276"/>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objdump.listfile.1101899236" name="MCU Output Converter list file" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objdump.listfile.429853562"/>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.hex.58933912" name="MCU Output Converter Hex" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.hex.1869190574"/>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.binary.892139451" name="MCU Output Converter Binary" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.binary.658582610"/>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog.282005760" name="MCU Output Converter Verilog" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog.709959557"/>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec.73963406" name="MCU Output Converter Motorola S-rec" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec.1735928200"/>
-							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.1053002213" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.1604190668"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
@@ -348,7 +317,6 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/mutex/inc"/>
@@ -360,6 +328,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/heap/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysCalls/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysDefs/inc"/>
@@ -380,6 +349,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>
@@ -433,7 +403,6 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/middleware/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/os/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/alarm/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/mutex/inc"/>
@@ -444,6 +413,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/core/heap/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysCalls/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/sysDefs/inc"/>
@@ -464,6 +434,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
+									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>

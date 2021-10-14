@@ -47,7 +47,7 @@
 **                            Include Files | Start                            **
 ********************************************************************************/
 /* CORE interfaces */
-#include "cosmosTypesStd.h"
+#include "cosmosTypes.h"
 #include "sysDefsBuffers.h"
 /********************************************************************************
 **                            Include Files | Stop                             **

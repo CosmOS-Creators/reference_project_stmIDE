@@ -1,6 +1,17 @@
 {
     "files.associations": {
-        "cilcore.h": "c"
+        "cilcore.h": "c",
+        "array": "c",
+        "deque": "c",
+        "initializer_list": "c",
+        "list": "c",
+        "type_traits": "c",
+        "vector": "c",
+        "xhash": "c",
+        "xstring": "c",
+        "xtree": "c",
+        "mutexcfg.h": "c",
+        "xutility": "c"
     }
 
 }

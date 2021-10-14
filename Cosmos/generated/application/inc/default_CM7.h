@@ -34,7 +34,7 @@
 #include <sysDefs.h>
 #include <cosmosApi.h>
 #include <memoryMapping.h>
-#include <cosmosTypesStd.h>
+#include <cosmosTypes.h>
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/

@@ -25,6 +25,7 @@
 #include "mutexCfg.h"
 #include "threadCfg.h"
 #include "taskCfg.h"
+#include "heapCfg.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -64,80 +65,68 @@ const CosmOS_ProgramConfigurationType ProgramsCore0CfgConst[PROGRAM_CORE_0_NUM] 
 IS_INITIALIZED_TO
 {
 		{
-        CORE_0_ID,                                      /* const BitWidthType coreId                            */
-        TASK_PROGRAM_0_CORE_0_NUM,                      /* const BitWidthType numberOfTasks                     */
-        THREAD_PROGRAM_0_CORE_0_NUM,                      /* const BitWidthType numberOfThreads                     */
-        PROGRAM_0_CORE_0_SIZE,                      /* const BitWidthType programMemorySize                     */
-        PROGRAM_0_CORE_0_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
-        PROGRAM_0_CORE_0_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
-        PROGRAM_0_CORE_0_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
-        PROGRAM_0_CORE_0_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
-        PROGRAM_0_CORE_0_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
-		&MutexForProgram0HeapCore0Var,				/* void * const heapMutex			                     */
+    CORE_0_ID,                                      /* const BitWidthType coreId                            */
+    TASK_PROGRAM_0_CORE_0_NUM,                      /* const BitWidthType numberOfTasks                     */
+    THREAD_PROGRAM_0_CORE_0_NUM,                      /* const BitWidthType numberOfThreads                     */
+    PROGRAM_0_CORE_0_SIZE,                      /* const BitWidthType programMemorySize                     */
+    PROGRAM_0_CORE_0_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
+    PROGRAM_0_CORE_0_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
+    &HeapsCore0CfgConst[PROGRAM_0_CORE_0_ID],     /* const CosmOS_HeapConfigurationType heap                     */
+    &MutexForProgram0HeapCore0Var,				/* void * const heapMutex			                     */
 	},
 		{
-        CORE_0_ID,                                      /* const BitWidthType coreId                            */
-        TASK_PROGRAM_1_CORE_0_NUM,                      /* const BitWidthType numberOfTasks                     */
-        THREAD_PROGRAM_1_CORE_0_NUM,                      /* const BitWidthType numberOfThreads                     */
-        PROGRAM_1_CORE_0_SIZE,                      /* const BitWidthType programMemorySize                     */
-        PROGRAM_1_CORE_0_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
-        PROGRAM_1_CORE_0_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
-        PROGRAM_1_CORE_0_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
-        PROGRAM_1_CORE_0_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
-        PROGRAM_1_CORE_0_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
-		&MutexForProgram1HeapCore0Var,				/* void * const heapMutex			                     */
+    CORE_0_ID,                                      /* const BitWidthType coreId                            */
+    TASK_PROGRAM_1_CORE_0_NUM,                      /* const BitWidthType numberOfTasks                     */
+    THREAD_PROGRAM_1_CORE_0_NUM,                      /* const BitWidthType numberOfThreads                     */
+    PROGRAM_1_CORE_0_SIZE,                      /* const BitWidthType programMemorySize                     */
+    PROGRAM_1_CORE_0_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
+    PROGRAM_1_CORE_0_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
+    &HeapsCore0CfgConst[PROGRAM_1_CORE_0_ID],     /* const CosmOS_HeapConfigurationType heap                     */
+    &MutexForProgram1HeapCore0Var,				/* void * const heapMutex			                     */
 	},
 		{
-        CORE_0_ID,                                      /* const BitWidthType coreId                            */
-        TASK_PROGRAM_2_CORE_0_NUM,                      /* const BitWidthType numberOfTasks                     */
-        THREAD_PROGRAM_2_CORE_0_NUM,                      /* const BitWidthType numberOfThreads                     */
-        PROGRAM_2_CORE_0_SIZE,                      /* const BitWidthType programMemorySize                     */
-        PROGRAM_2_CORE_0_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
-        PROGRAM_2_CORE_0_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
-        PROGRAM_2_CORE_0_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
-        PROGRAM_2_CORE_0_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
-        PROGRAM_2_CORE_0_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
-		&MutexForProgram2HeapCore0Var,				/* void * const heapMutex			                     */
+    CORE_0_ID,                                      /* const BitWidthType coreId                            */
+    TASK_PROGRAM_2_CORE_0_NUM,                      /* const BitWidthType numberOfTasks                     */
+    THREAD_PROGRAM_2_CORE_0_NUM,                      /* const BitWidthType numberOfThreads                     */
+    PROGRAM_2_CORE_0_SIZE,                      /* const BitWidthType programMemorySize                     */
+    PROGRAM_2_CORE_0_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
+    PROGRAM_2_CORE_0_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
+    &HeapsCore0CfgConst[PROGRAM_2_CORE_0_ID],     /* const CosmOS_HeapConfigurationType heap                     */
+    &MutexForProgram2HeapCore0Var,				/* void * const heapMutex			                     */
 	},
 };
 const CosmOS_ProgramConfigurationType ProgramsCore1CfgConst[PROGRAM_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
 		{
-        CORE_1_ID,                                      /* const BitWidthType coreId                            */
-        TASK_PROGRAM_0_CORE_1_NUM,                      /* const BitWidthType numberOfTasks                     */
-        THREAD_PROGRAM_0_CORE_1_NUM,                      /* const BitWidthType numberOfThreads                     */
-        PROGRAM_0_CORE_1_SIZE,                      /* const BitWidthType programMemorySize                     */
-        PROGRAM_0_CORE_1_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
-        PROGRAM_0_CORE_1_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
-        PROGRAM_0_CORE_1_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
-        PROGRAM_0_CORE_1_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
-        PROGRAM_0_CORE_1_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
-		&MutexForProgram0HeapCore1Var,				/* void * const heapMutex			                     */
+    CORE_1_ID,                                      /* const BitWidthType coreId                            */
+    TASK_PROGRAM_0_CORE_1_NUM,                      /* const BitWidthType numberOfTasks                     */
+    THREAD_PROGRAM_0_CORE_1_NUM,                      /* const BitWidthType numberOfThreads                     */
+    PROGRAM_0_CORE_1_SIZE,                      /* const BitWidthType programMemorySize                     */
+    PROGRAM_0_CORE_1_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
+    PROGRAM_0_CORE_1_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
+    &HeapsCore1CfgConst[PROGRAM_0_CORE_1_ID],     /* const CosmOS_HeapConfigurationType heap                     */
+    &MutexForProgram0HeapCore1Var,				/* void * const heapMutex			                     */
 	},
 		{
-        CORE_1_ID,                                      /* const BitWidthType coreId                            */
-        TASK_PROGRAM_1_CORE_1_NUM,                      /* const BitWidthType numberOfTasks                     */
-        THREAD_PROGRAM_1_CORE_1_NUM,                      /* const BitWidthType numberOfThreads                     */
-        PROGRAM_1_CORE_1_SIZE,                      /* const BitWidthType programMemorySize                     */
-        PROGRAM_1_CORE_1_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
-        PROGRAM_1_CORE_1_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
-        PROGRAM_1_CORE_1_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
-        PROGRAM_1_CORE_1_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
-        PROGRAM_1_CORE_1_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
-		&MutexForProgram1HeapCore1Var,				/* void * const heapMutex			                     */
+    CORE_1_ID,                                      /* const BitWidthType coreId                            */
+    TASK_PROGRAM_1_CORE_1_NUM,                      /* const BitWidthType numberOfTasks                     */
+    THREAD_PROGRAM_1_CORE_1_NUM,                      /* const BitWidthType numberOfThreads                     */
+    PROGRAM_1_CORE_1_SIZE,                      /* const BitWidthType programMemorySize                     */
+    PROGRAM_1_CORE_1_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
+    PROGRAM_1_CORE_1_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
+    &HeapsCore1CfgConst[PROGRAM_1_CORE_1_ID],     /* const CosmOS_HeapConfigurationType heap                     */
+    &MutexForProgram1HeapCore1Var,				/* void * const heapMutex			                     */
 	},
 		{
-        CORE_1_ID,                                      /* const BitWidthType coreId                            */
-        TASK_PROGRAM_2_CORE_1_NUM,                      /* const BitWidthType numberOfTasks                     */
-        THREAD_PROGRAM_2_CORE_1_NUM,                      /* const BitWidthType numberOfThreads                     */
-        PROGRAM_2_CORE_1_SIZE,                      /* const BitWidthType programMemorySize                     */
-        PROGRAM_2_CORE_1_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
-        PROGRAM_2_CORE_1_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
-        PROGRAM_2_CORE_1_HEAP_SIZE,                      /* const BitWidthType programHeapSize                     */
-        PROGRAM_2_CORE_1_HEAP_LOW_ADDRESS,                      /* const AddressType programHeapLowAddress                     */
-        PROGRAM_2_CORE_1_HEAP_HIGH_ADDRESS,                      /* const AddressType programHeapHighAddress                     */
-		&MutexForProgram2HeapCore1Var,				/* void * const heapMutex			                     */
+    CORE_1_ID,                                      /* const BitWidthType coreId                            */
+    TASK_PROGRAM_2_CORE_1_NUM,                      /* const BitWidthType numberOfTasks                     */
+    THREAD_PROGRAM_2_CORE_1_NUM,                      /* const BitWidthType numberOfThreads                     */
+    PROGRAM_2_CORE_1_SIZE,                      /* const BitWidthType programMemorySize                     */
+    PROGRAM_2_CORE_1_LOW_ADDRESS,                      /* const AddressType programMemoryLowAddress                     */
+    PROGRAM_2_CORE_1_HIGH_ADDRESS,                      /* const AddressType programMemoryHighAddress                     */
+    &HeapsCore1CfgConst[PROGRAM_2_CORE_1_ID],     /* const CosmOS_HeapConfigurationType heap                     */
+    &MutexForProgram2HeapCore1Var,				/* void * const heapMutex			                     */
 	},
 };
 /* @cond S */

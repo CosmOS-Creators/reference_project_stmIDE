@@ -133,6 +133,17 @@
 	},
 	{
 		"templates": [
+			"core/heap/heap"
+		],
+		"outputDir": "{CoreGeneratedDir}/heap",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
+	{
+		"templates": [
 			"core/scheduler/scheduler"
 		],
 		"outputDir": "{CoreGeneratedDir}/scheduler",
