@@ -67,16 +67,28 @@ IS_INITIALIZED_TO
 __SEC_STOP(__DEFAULT_CM7_INIT_SECTION_STOP)
 /* @endcond*/
 /* @cond S */
-__SEC_START(__BLINKING_LED_CM7_INIT_SECTION_START)
+__SEC_START(__TIMING_MEASUREMENT_CM7_INIT_SECTION_START)
 /* @endcond*/
-CosmOS_MutexVariableType MutexForProgram1HeapCore0Var __BLINKING_LED_CM7_INIT_SECTION
+CosmOS_MutexVariableType MutexForProgram1HeapCore0Var __TIMING_MEASUREMENT_CM7_INIT_SECTION
 IS_INITIALIZED_TO
 {
 	0,			/* 	BitWidthType mutex 									*/
 	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
 };
 /* @cond S */
-__SEC_STOP(__BLINKING_LED_CM7_INIT_SECTION_STOP)
+__SEC_STOP(__TIMING_MEASUREMENT_CM7_INIT_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__ETHERNET_COM_INIT_SECTION_START)
+/* @endcond*/
+CosmOS_MutexVariableType MutexForProgram2HeapCore0Var __ETHERNET_COM_INIT_SECTION
+IS_INITIALIZED_TO
+{
+	0,			/* 	BitWidthType mutex 									*/
+	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
+};
+/* @cond S */
+__SEC_STOP(__ETHERNET_COM_INIT_SECTION_STOP)
 /* @endcond*/
 /* @cond S */
 __SEC_START(__DEFAULT_CM4_INIT_SECTION_START)
@@ -91,16 +103,28 @@ IS_INITIALIZED_TO
 __SEC_STOP(__DEFAULT_CM4_INIT_SECTION_STOP)
 /* @endcond*/
 /* @cond S */
-__SEC_START(__BLINKING_LED_CM4_INIT_SECTION_START)
+__SEC_START(__TIMING_MEASUREMENT_CM4_INIT_SECTION_START)
 /* @endcond*/
-CosmOS_MutexVariableType MutexForProgram1HeapCore1Var __BLINKING_LED_CM4_INIT_SECTION
+CosmOS_MutexVariableType MutexForProgram1HeapCore1Var __TIMING_MEASUREMENT_CM4_INIT_SECTION
 IS_INITIALIZED_TO
 {
 	0,			/* 	BitWidthType mutex 									*/
 	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
 };
 /* @cond S */
-__SEC_STOP(__BLINKING_LED_CM4_INIT_SECTION_STOP)
+__SEC_STOP(__TIMING_MEASUREMENT_CM4_INIT_SECTION_STOP)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__LOGGER_INIT_SECTION_START)
+/* @endcond*/
+CosmOS_MutexVariableType MutexForProgram2HeapCore1Var __LOGGER_INIT_SECTION
+IS_INITIALIZED_TO
+{
+	0,			/* 	BitWidthType mutex 									*/
+	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
+};
+/* @cond S */
+__SEC_STOP(__LOGGER_INIT_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

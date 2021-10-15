@@ -77,6 +77,8 @@ IS_INITIALIZED_TO
 		CORE_0_STACK_MEMORY_HIGH_ADDRESS,		/* const AddressType stackMemoryHighAddress   */
 		CORE_0_CODE_MEMORY_LOW_ADDRESS,		/* const AddressType codeMemoryLowAddress   */
 		CORE_0_CODE_MEMORY_HIGH_ADDRESS,		/* const AddressType codeMemoryHighAddress   */
+		CORE_0_UNPROTECTED_MEMORY_LOW_ADDRESS,		/* const AddressType unprotectedMemoryLowAddress   */
+		CORE_0_UNPROTECTED_MEMORY_HIGH_ADDRESS,		/* const AddressType unprotectedMemoryHighAddress   */
 		CORE_0_MS_TO_TICK,		/* const BitWidthType msToTicks   */
 		ALARM_CORE_0_NUM,		/* const BitWidthType numberOfAlarms   */
     },
@@ -90,6 +92,8 @@ IS_INITIALIZED_TO
 		CORE_1_STACK_MEMORY_HIGH_ADDRESS,		/* const AddressType stackMemoryHighAddress   */
 		CORE_1_CODE_MEMORY_LOW_ADDRESS,		/* const AddressType codeMemoryLowAddress   */
 		CORE_1_CODE_MEMORY_HIGH_ADDRESS,		/* const AddressType codeMemoryHighAddress   */
+		CORE_1_UNPROTECTED_MEMORY_LOW_ADDRESS,		/* const AddressType unprotectedMemoryLowAddress   */
+		CORE_1_UNPROTECTED_MEMORY_HIGH_ADDRESS,		/* const AddressType unprotectedMemoryHighAddress   */
 		CORE_1_MS_TO_TICK,		/* const BitWidthType msToTicks   */
 		ALARM_CORE_1_NUM,		/* const BitWidthType numberOfAlarms   */
     },

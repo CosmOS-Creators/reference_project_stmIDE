@@ -28,6 +28,15 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
 ********************************************************************************/
 /********************************************************************************
+** DO NOT MODIFY THIS COMMENT ! Declarations         USER SECTION | Start      **
+** start_name =userKernelPanicHook_CM4.c_userFreeDeclarations
+********************************************************************************/
+
+/********************************************************************************
+** stop_name =userKernelPanicHook_CM4.c_userFreeDeclarations
+** DO NOT MODIFY THIS COMMENT ! Declarations         USER SECTION | Stop       **
+********************************************************************************/
+/********************************************************************************
 **                         Function Prototypes | Start                         **
 ********************************************************************************/
 

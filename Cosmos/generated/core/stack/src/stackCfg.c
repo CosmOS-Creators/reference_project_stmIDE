@@ -135,6 +135,16 @@ IS_INITIALIZED_TO
         STACK_THREAD_1_PROGRAM_1_CORE_1_LOW_ADDRESS,      /* const AddressType stackLowAddress                          */
         STACK_THREAD_1_PROGRAM_1_CORE_1_HIGH_ADDRESS,     /* const AddressType stackHighAddress                         */
     },
+		{                                                     /* ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_2_CORE_1_ID]  */
+        STACK_THREAD_0_PROGRAM_2_CORE_1_SIZE,             /* const BitWidthType stackSize                               */
+        STACK_THREAD_0_PROGRAM_2_CORE_1_LOW_ADDRESS,      /* const AddressType stackLowAddress                          */
+        STACK_THREAD_0_PROGRAM_2_CORE_1_HIGH_ADDRESS,     /* const AddressType stackHighAddress                         */
+    },
+		{                                                     /* ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_2_CORE_0_ID]  */
+        STACK_THREAD_0_PROGRAM_2_CORE_0_SIZE,             /* const BitWidthType stackSize                               */
+        STACK_THREAD_0_PROGRAM_2_CORE_0_LOW_ADDRESS,      /* const AddressType stackLowAddress                          */
+        STACK_THREAD_0_PROGRAM_2_CORE_0_HIGH_ADDRESS,     /* const AddressType stackHighAddress                         */
+    },
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)

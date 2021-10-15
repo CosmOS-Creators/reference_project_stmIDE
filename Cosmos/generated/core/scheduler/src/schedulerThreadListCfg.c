@@ -62,6 +62,9 @@ const CosmOS_ThreadListConfigurationType SchedulerThreadListScheduler0CfgConst[S
 IS_INITIALIZED_TO
 {
 		{
+        &ThreadsProgram2Core0Var[THREAD_0_PROGRAM_2_CORE_0_ID],   /* CosmOS_ThreadVariableType * thread                  */
+    },
+		{
         &ThreadsProgram1Core0Var[THREAD_0_PROGRAM_1_CORE_0_ID],   /* CosmOS_ThreadVariableType * thread                  */
     },
 		{
@@ -76,6 +79,9 @@ IS_INITIALIZED_TO
     },
 		{
         &ThreadsProgram1Core1Var[THREAD_0_PROGRAM_1_CORE_1_ID],   /* CosmOS_ThreadVariableType * thread                  */
+    },
+		{
+        &ThreadsProgram2Core1Var[THREAD_0_PROGRAM_2_CORE_1_ID],   /* CosmOS_ThreadVariableType * thread                  */
     },
 		{
         &ThreadsProgram0Core1Var[THREAD_0_PROGRAM_0_CORE_1_ID],   /* CosmOS_ThreadVariableType * thread                  */

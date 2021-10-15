@@ -42,6 +42,9 @@
 #include "mutex.h"
 #include "mutex.h"
 #include "mutex.h"
+#include "interrupt.h"
+#include "interrupt.h"
+#include "CILcore.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -99,6 +102,9 @@ IS_INITIALIZED_TO
 		(CosmOS_GenericVoidType)mutex_getMutexInternal,
 		(CosmOS_GenericVoidType)mutex_tryMutexInternal,
 		(CosmOS_GenericVoidType)mutex_releaseMutexInternal,
+		(CosmOS_GenericVoidType)interrupt_disableInterrupt,
+		(CosmOS_GenericVoidType)interrupt_enableInterrupt,
+		(CosmOS_GenericVoidType)CILcore_getCoreId,
 };
 
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
@@ -110,6 +116,8 @@ IS_INITIALIZED_TO
 		SPINLOCK_GETSPINLOCK,
 		SPINLOCK_TRYSPINLOCK,
 		SPINLOCK_RELEASESPINLOCK,
+		BUFFER_READARRAY,
+		BUFFER_WRITEARRAY,
 		BUFFER_READARRAY,
 		BUFFER_WRITEARRAY,
 		BUFFER_READARRAY,
@@ -130,6 +138,9 @@ IS_INITIALIZED_TO
 		MUTEX_GETMUTEXINTERNAL,
 		MUTEX_TRYMUTEXINTERNAL,
 		MUTEX_RELEASEMUTEXINTERNAL,
+		INTERRUPT_DISABLEINTERRUPT,
+		INTERRUPT_ENABLEINTERRUPT,
+		CILCORE_GETCOREID,
 };
 
 const BitWidthType RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
@@ -147,6 +158,11 @@ IS_INITIALIZED_TO
 		BUFFER_1_ID,
 		BUFFER_2_ID,
 		BUFFER_2_ID,
+		BUFFER_3_ID,
+		BUFFER_3_ID,
+		ROUTES_ID_TO_ENTITY_DUMMY,
+		ROUTES_ID_TO_ENTITY_DUMMY,
+		ROUTES_ID_TO_ENTITY_DUMMY,
 		ROUTES_ID_TO_ENTITY_DUMMY,
 		ROUTES_ID_TO_ENTITY_DUMMY,
 		ROUTES_ID_TO_ENTITY_DUMMY,

@@ -43,6 +43,14 @@
 				"value": 1024
 			},
 			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
+			},
+			{
 				"target": "tasksAttributes/:lowAddress"
 			},
 			{
@@ -89,6 +97,14 @@
 				"value": 256
 			},
 			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
+			},
+			{
 				"target": "tasksAttributes/:lowAddress"
 			},
 			{
@@ -108,7 +124,7 @@
 			},
 			{
 				"target": "tasksAttributes/:name",
-				"value": "Task_0_Core_0_Handler"
+				"value": "Timing_measurement_task_CM7"
 			},
 			{
 				"target": "tasksAttributes/:wcet",
@@ -133,6 +149,14 @@
 			{
 				"target": "tasksAttributes/:stackSize",
 				"value": 1024
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
 			},
 			{
 				"target": "tasksAttributes/:lowAddress"
@@ -181,6 +205,14 @@
 				"value": 1024
 			},
 			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
+			},
+			{
 				"target": "tasksAttributes/:lowAddress"
 			},
 			{
@@ -227,6 +259,14 @@
 				"value": 256
 			},
 			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
+			},
+			{
 				"target": "tasksAttributes/:lowAddress"
 			},
 			{
@@ -246,7 +286,7 @@
 			},
 			{
 				"target": "tasksAttributes/:name",
-				"value": "Task_0_Core_1_Handler"
+				"value": "Timing_measurement_task_CM4"
 			},
 			{
 				"target": "tasksAttributes/:wcet",
@@ -271,6 +311,14 @@
 			{
 				"target": "tasksAttributes/:stackSize",
 				"value": 1024
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "tasksAttributes/:peripheralAccessSize",
+				"value" : 0
 			},
 			{
 				"target": "tasksAttributes/:lowAddress"

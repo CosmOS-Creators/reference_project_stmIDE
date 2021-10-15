@@ -38,6 +38,7 @@ M4_CORE	 			= 	$(ROOT)/CM4
 M4_APP_LAYER		=	$(ROOT)/Cosmos/generated/application
 SHARED_DRIVERS		= 	$(ROOT)/Drivers
 COMMON				= 	$(ROOT)/Common
+MIDDLEWARES			= 	$(ROOT)/Middlewares
 OBJECT_DIR	 		= 	$(ROOT)/Cosmos/generated/build/system/CM4/out/obj
 BIN_DIR		 		= 	$(ROOT)/Cosmos/generated/build/system/CM4/bin
 MAP_FILE			= 	$(ROOT)/Cosmos/generated/build/system/CM4/map/m4core.map
@@ -60,6 +61,8 @@ M4_SRC	 			= $(shell find $(M4_CORE) -name \*.c)
 SHARED_DRIVERS_SRC	= $(shell find $(SHARED_DRIVERS) -name \*.c)
 # Source files for common sources
 COMMON_SRC	= $(shell find $(COMMON) -name \*.c)
+# Source files for common sources
+MIDDLEWARES_SRC	= $(shell find $(MIDDLEWARES) -name \*.c)
 ##################################################################
 ##					     C++ SOURCES FILES					    ##
 ##################################################################
@@ -74,6 +77,8 @@ M4_SRC_CPP	 			= $(shell find $(M4_CORE) -name \*.[c]pp)
 SHARED_DRIVERS_SRC_CPP	= $(shell find $(SHARED_DRIVERS) -name \*.[c]pp)
 # Source files for common sources
 COMMON_SRC_CPP	= $(shell find $(COMMON) -name \*.[c]pp)
+# Source files for common sources
+MIDDLEWARES_SRC_CPP	= $(shell find $(MIDDLEWARES) -name \*.[c]pp)
 ##################################################################
 ##					   C SOURCES FILES PATHS					##
 ##################################################################
@@ -83,7 +88,8 @@ CSOURCES =  	$(M4_SRC) 						\
 				$(OS_SRC_IL) 					\
 				$(OS_SRC_APP) 					\
 				$(SHARED_DRIVERS_SRC) 			\
-				$(COMMON_SRC)
+				$(COMMON_SRC)					\
+				$(MIDDLEWARES_SRC)
 ##################################################################
 ##					   C++ SOURCES FILES PATHS					##
 ##################################################################
@@ -93,7 +99,8 @@ CXXSOURCES = 	$(M4_SRC_CPP) 					\
 				$(OS_SRC_CPP) 					\
 				$(OS_SRC_APP_CPP) 				\
 				$(SHARED_DRIVERS_SRC_CPP)		\
-				$(COMMON_SRC_CPP)
+				$(COMMON_SRC_CPP)				\
+				$(MIDDLEWARES_SRC_CPP)
 ##################################################################
 ##					   LINKER SCRIPT PATH						##
 ##################################################################
@@ -103,6 +110,8 @@ LDSCRIPT=$(M4_CORE)/STM32H755ZITX_FLASH.ld
 ##################################################################
 INCLUDE_DIRS	 =	$(M4_CORE)/Core/Inc								\
 					$(M4_CORE)/Drivers/STM32H7xx_HAL_Driver/Inc		\
+					$(M4_CORE)/LWIP/App \
+					$(M4_CORE)/LWIP/Target \
 					$(SHARED_DRIVERS)/STM32H7xx_HAL_Driver/Inc		\
 					$(SHARED_DRIVERS)/CMSIS/Device/ST/STM32H7xx/Include	\
 					$(SHARED_DRIVERS)/CMSIS/Include					\
@@ -152,6 +161,19 @@ INCLUDE_DIRS	 =	$(M4_CORE)/Core/Inc								\
 					$(OS_GENERATED_CORE)/route/inc					\
 					$(OS_GENERATED_CORE)/schedulable/inc			\
 					$(M4_APP_LAYER)/inc								\
+					$(MIDDLEWARES)/Third_Party/LwIP/src/include/netif/ppp	\
+					$(MIDDLEWARES)/Third_Party/LwIP/src/include/lwip	\
+					$(MIDDLEWARES)/Third_Party/LwIP/src/include/lwip/apps	\
+					$(MIDDLEWARES)/Third_Party/LwIP/src/include/lwip/priv	\
+					$(MIDDLEWARES)/Third_Party/LwIP/src/include/lwip/prot	\
+					$(MIDDLEWARES)/Third_Party/LwIP/src/include/netif	\
+					$(MIDDLEWARES)/Third_Party/LwIP/src/include/compat/posix	\
+					$(MIDDLEWARES)/Third_Party/LwIP/src/include/compat/posix/arpa	\
+					$(MIDDLEWARES)/Third_Party/LwIP/src/include/compat/posix/net	\
+					$(MIDDLEWARES)/Third_Party/LwIP/src/include/compat/posix/sys	\
+					$(MIDDLEWARES)/Third_Party/LwIP/src/include/compat/stdc	\
+					$(MIDDLEWARES)/Third_Party/LwIP/system/arch	\
+					$(SHARED_DRIVERS)/BSP/Components/lan8742					\
 					$(OS_IL)/inc
 ##################################################################
 ##					       VPATH CONFIG					        ##

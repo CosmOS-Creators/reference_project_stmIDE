@@ -23,21 +23,21 @@ jobs:
           key: python-requirements-{{ checksum "/root/project/Cosmos/customBox/python/requirements.txt" }}
           paths:
             - "/usr/lib/python3.8/site-packages"
-      - run:
-          name: Building CM4 image with generated files on master
-          command: 'cd /root/project/Cosmos/generated/build/system/CM4/makefiles && make -j24'
-      - run:
-          name: Building CM7 image with generated files on master
-          command: 'cd /root/project/Cosmos/generated/build/system/CM7/makefiles && make -j24'
+      #- run:
+      #    name: Building CM4 image with generated files on master
+      #    command: 'cd /root/project/Cosmos/generated/build/system/CM4/makefiles && make -j24'
+      #- run:
+      #    name: Building CM7 image with generated files on master
+      #    command: 'cd /root/project/Cosmos/generated/build/system/CM7/makefiles && make -j24'
       - run:
           name: Generate code from configuration
           command: 'python3 /root/project/Cosmos/customBox/python/ConfigurationGenerator.py /root/project/Cosmos/configuration/workspace.json'
-      - run:
-          name: Building CM4 image with newly generated files
-          command: 'cd /root/project/Cosmos/generated/build/system/CM4/makefiles && make -j24'
-      - run:
-          name: Building CM7 image with newly generated files
-          command: 'cd /root/project/Cosmos/generated/build/system/CM7/makefiles && make -j24'
+      #- run:
+      #    name: Building CM4 image with newly generated files
+      #    command: 'cd /root/project/Cosmos/generated/build/system/CM4/makefiles && make -j24'
+      #- run:
+      #    name: Building CM7 image with newly generated files
+      #    command: 'cd /root/project/Cosmos/generated/build/system/CM7/makefiles && make -j24'
       - run:
           name: Run C code unit tests
           command: 'chmod +x /root/project/buildTests.sh && ./buildTests.sh'
@@ -52,7 +52,7 @@ jobs:
           path: /root/project/Cosmos/generated/python/tests
       - store_artifacts:
           path: /root/project/Cosmos/generated/build/tests/results
-      - store_artifacts:
-          path: /root/project/Cosmos/generated/build/system/CM4/bin/CM4.elf
-      - store_artifacts:
-          path: /root/project/Cosmos/generated/build/system/CM7/bin/CM7.elf
+      #- store_artifacts:
+      #    path: /root/project/Cosmos/generated/build/system/CM4/bin/CM4.elf
+      #- store_artifacts:
+      #    path: /root/project/Cosmos/generated/build/system/CM7/bin/CM7.elf

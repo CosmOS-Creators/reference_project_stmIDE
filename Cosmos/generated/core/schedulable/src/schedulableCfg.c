@@ -71,7 +71,10 @@ IS_INITIALIZED_TO
         TASK_0_PROGRAM_0_CORE_0_ID,                                   /* const BitWidthType instanceId                                                */
         PROGRAM_0_CORE_0_ID,                                          /* const BitWidthType programId                                         */
         CORE_0_ID,                                                    /* const BitWidthType coreId                                            */
-		0,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_NO_ALARM_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_0_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_0_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_0_PERIPHERAL_ACCESS_HIGH_SIZE,					/* const BitWidthType peripheralAccessSize                                            */
     },
 		{
         &TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_0_ID],       /* const CosmOS_StackConfigurationType * stack                 */
@@ -82,18 +85,24 @@ IS_INITIALIZED_TO
         TASK_1_PROGRAM_0_CORE_0_ID,                                   /* const BitWidthType instanceId                                                */
         PROGRAM_0_CORE_0_ID,                                          /* const BitWidthType programId                                         */
         CORE_0_ID,                                                    /* const BitWidthType coreId                                            */
-		0,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_NO_ALARM_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_1_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_1_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_1_PERIPHERAL_ACCESS_HIGH_SIZE,					/* const BitWidthType peripheralAccessSize                                            */
     },
 		{
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_1_CORE_0_ID],       /* const CosmOS_StackConfigurationType * stack                 */
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
-        wrapped_Task_0_Core_0_Handler,                                        /* const CosmOS_GenericVoidType handler                            */
+        wrapped_Timing_measurement_task_CM7,                                        /* const CosmOS_GenericVoidType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
         SCHEDULABLE_2_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_0_PROGRAM_1_CORE_0_ID,                                   /* const BitWidthType instanceId                                                */
         PROGRAM_1_CORE_0_ID,                                          /* const BitWidthType programId                                         */
         CORE_0_ID,                                                    /* const BitWidthType coreId                                            */
-		0,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_NO_ALARM_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_2_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_2_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_2_PERIPHERAL_ACCESS_HIGH_SIZE,					/* const BitWidthType peripheralAccessSize                                            */
     },
 		{
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_0_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                 */
@@ -104,7 +113,10 @@ IS_INITIALIZED_TO
         TASK_0_PROGRAM_0_CORE_1_ID,                                   /* const BitWidthType instanceId                                                */
         PROGRAM_0_CORE_1_ID,                                          /* const BitWidthType programId                                         */
         CORE_1_ID,                                                    /* const BitWidthType coreId                                            */
-		0,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_NO_ALARM_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_3_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_3_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_3_PERIPHERAL_ACCESS_HIGH_SIZE,					/* const BitWidthType peripheralAccessSize                                            */
     },
 		{
         &TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                 */
@@ -115,18 +127,24 @@ IS_INITIALIZED_TO
         TASK_1_PROGRAM_0_CORE_1_ID,                                   /* const BitWidthType instanceId                                                */
         PROGRAM_0_CORE_1_ID,                                          /* const BitWidthType programId                                         */
         CORE_1_ID,                                                    /* const BitWidthType coreId                                            */
-		0,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_NO_ALARM_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_4_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_4_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_4_PERIPHERAL_ACCESS_HIGH_SIZE,					/* const BitWidthType peripheralAccessSize                                            */
     },
 		{
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_1_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                 */
         SCHEDULABLE_INSTANCE_ENUM__TASK,                              /* const CosmOS_SchedulableInstanceType instance                        */
-        wrapped_Task_0_Core_1_Handler,                                        /* const CosmOS_GenericVoidType handler                            */
+        wrapped_Timing_measurement_task_CM4,                                        /* const CosmOS_GenericVoidType handler                            */
         False,                                                        /* const CosmOS_BooleanType fp                                          */
         SCHEDULABLE_5_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         TASK_0_PROGRAM_1_CORE_1_ID,                                   /* const BitWidthType instanceId                                                */
         PROGRAM_1_CORE_1_ID,                                          /* const BitWidthType programId                                         */
         CORE_1_ID,                                                    /* const BitWidthType coreId                                            */
-		0,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_NO_ALARM_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_5_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_5_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_5_PERIPHERAL_ACCESS_HIGH_SIZE,					/* const BitWidthType peripheralAccessSize                                            */
     },
 };
 
@@ -143,6 +161,9 @@ IS_INITIALIZED_TO
         PROGRAM_0_CORE_0_ID,                                              /* const BitWidthType programId                                             */
         CORE_0_ID,                                                        /* const BitWidthType coreId                                                */
 		ALARM_0_PROGRAM_0_CORE_0_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_6_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_6_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_6_PERIPHERAL_ACCESS_HIGH_SIZE,				/* const BitWidthType peripheralAccessSize                                            */
 	},
 		{
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_0_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                              */
@@ -154,39 +175,79 @@ IS_INITIALIZED_TO
         PROGRAM_0_CORE_1_ID,                                              /* const BitWidthType programId                                             */
         CORE_1_ID,                                                        /* const BitWidthType coreId                                                */
 		ALARM_0_PROGRAM_0_CORE_1_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_7_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_7_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_7_PERIPHERAL_ACCESS_HIGH_SIZE,				/* const BitWidthType peripheralAccessSize                                            */
 	},
 		{
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_0_ID],       /* const CosmOS_StackConfigurationType * stack                              */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
-        wrapped_Thread_Core_0,                                        /* const CosmOS_GenericVoidType handler                            */
+        wrapped_Timing_measurement_thread_CM7,                                        /* const CosmOS_GenericVoidType handler                            */
         True,                                                             /* const CosmOS_BooleanType fp                                              */
         SCHEDULABLE_8_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         THREAD_0_PROGRAM_1_CORE_0_ID,                                     /* const BitWidthType instanceId                                                    */
         PROGRAM_1_CORE_0_ID,                                              /* const BitWidthType programId                                             */
         CORE_0_ID,                                                        /* const BitWidthType coreId                                                */
 		ALARM_1_PROGRAM_1_CORE_0_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_8_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_8_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_8_PERIPHERAL_ACCESS_HIGH_SIZE,				/* const BitWidthType peripheralAccessSize                                            */
 	},
 		{
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                              */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
-        wrapped_Thread_Core_1,                                        /* const CosmOS_GenericVoidType handler                            */
+        wrapped_Timing_measurement_thread_CM4,                                        /* const CosmOS_GenericVoidType handler                            */
         True,                                                             /* const CosmOS_BooleanType fp                                              */
         SCHEDULABLE_9_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         THREAD_0_PROGRAM_1_CORE_1_ID,                                     /* const BitWidthType instanceId                                                    */
         PROGRAM_1_CORE_1_ID,                                              /* const BitWidthType programId                                             */
         CORE_1_ID,                                                        /* const BitWidthType coreId                                                */
 		ALARM_1_PROGRAM_1_CORE_1_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_9_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_9_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_9_PERIPHERAL_ACCESS_HIGH_SIZE,				/* const BitWidthType peripheralAccessSize                                            */
 	},
 		{
         &ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_1_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                              */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
-        wrapped_Thread_mutex_test_CM4,                                        /* const CosmOS_GenericVoidType handler                            */
+        wrapped_Mutex_test_thread_CM4,                                        /* const CosmOS_GenericVoidType handler                            */
         False,                                                             /* const CosmOS_BooleanType fp                                              */
         SCHEDULABLE_10_UNIQUE_ID,                                          /* const BitWidthType id                                         */
         THREAD_1_PROGRAM_1_CORE_1_ID,                                     /* const BitWidthType instanceId                                                    */
         PROGRAM_1_CORE_1_ID,                                              /* const BitWidthType programId                                             */
         CORE_1_ID,                                                        /* const BitWidthType coreId                                                */
 		ALARM_2_PROGRAM_1_CORE_1_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_10_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_10_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_10_PERIPHERAL_ACCESS_HIGH_SIZE,				/* const BitWidthType peripheralAccessSize                                            */
+	},
+		{
+        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_2_CORE_1_ID],       /* const CosmOS_StackConfigurationType * stack                              */
+        SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
+        wrapped_Logger_thread,                                        /* const CosmOS_GenericVoidType handler                            */
+        False,                                                             /* const CosmOS_BooleanType fp                                              */
+        SCHEDULABLE_11_UNIQUE_ID,                                          /* const BitWidthType id                                         */
+        THREAD_0_PROGRAM_2_CORE_1_ID,                                     /* const BitWidthType instanceId                                                    */
+        PROGRAM_2_CORE_1_ID,                                              /* const BitWidthType programId                                             */
+        CORE_1_ID,                                                        /* const BitWidthType coreId                                                */
+		ALARM_3_PROGRAM_2_CORE_1_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_11_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_11_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_11_PERIPHERAL_ACCESS_HIGH_SIZE,				/* const BitWidthType peripheralAccessSize                                            */
+	},
+		{
+        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_2_CORE_0_ID],       /* const CosmOS_StackConfigurationType * stack                              */
+        SCHEDULABLE_INSTANCE_ENUM__THREAD,                                /* const CosmOS_SchedulableInstanceType instance                            */
+        wrapped_TCPIP_thread,                                        /* const CosmOS_GenericVoidType handler                            */
+        False,                                                             /* const CosmOS_BooleanType fp                                              */
+        SCHEDULABLE_12_UNIQUE_ID,                                          /* const BitWidthType id                                         */
+        THREAD_0_PROGRAM_2_CORE_0_ID,                                     /* const BitWidthType instanceId                                                    */
+        PROGRAM_2_CORE_0_ID,                                              /* const BitWidthType programId                                             */
+        CORE_0_ID,                                                        /* const BitWidthType coreId                                                */
+		ALARM_2_PROGRAM_2_CORE_0_ID,                                                    /* const BitWidthType alarmId                                            */
+		SCHEDULABLE_12_PERIPHERAL_ACCESS_LOW_ADDRESS,			/* const BitWidthType peripheralAccessLowAddress                                            */
+		SCHEDULABLE_12_PERIPHERAL_ACCESS_HIGH_ADDRESS,			/* const BitWidthType peripheralAccessHighAddress                                            */
+		SCHEDULABLE_12_PERIPHERAL_ACCESS_HIGH_SIZE,				/* const BitWidthType peripheralAccessSize                                            */
 	},
 };
 /* @cond S */
@@ -258,6 +319,16 @@ IS_INITIALIZED_TO
         &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_1_PROGRAM_1_CORE_1_ID],       /* const CosmOS_SchedulableConfigurationType * const cfg                              */
         SCHEDULABLE_STATE_ENUM__READY,                                /* CosmOS_SchedulableStateType state                            */
         STACK_THREAD_1_PROGRAM_1_CORE_1_HIGH_ADDRESS,                                        /* StackPointerType stackPointer                            */
+    },
+		{
+        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_1_ID],       /* const CosmOS_SchedulableConfigurationType * const cfg                              */
+        SCHEDULABLE_STATE_ENUM__READY,                                /* CosmOS_SchedulableStateType state                            */
+        STACK_THREAD_0_PROGRAM_2_CORE_1_HIGH_ADDRESS,                                        /* StackPointerType stackPointer                            */
+    },
+		{
+        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_0_ID],       /* const CosmOS_SchedulableConfigurationType * const cfg                              */
+        SCHEDULABLE_STATE_ENUM__READY,                                /* CosmOS_SchedulableStateType state                            */
+        STACK_THREAD_0_PROGRAM_2_CORE_0_HIGH_ADDRESS,                                        /* StackPointerType stackPointer                            */
     },
 };
 /* @cond S */
@@ -352,9 +423,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 /* @cond S */
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void wrapped_Task_0_Core_0_Handler(void)
+__APPLICATION_FUNC_SECTION_CM7 void wrapped_Timing_measurement_task_CM7(void)
 {
-    Task_0_Core_0_Handler();
+    Timing_measurement_task_CM7();
     cosmosApiInternal_schedulable_setExecutionStateToFinished();
     for(;;);
 };
@@ -387,9 +458,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @cond S */
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM4 void wrapped_Task_0_Core_1_Handler(void)
+__APPLICATION_FUNC_SECTION_CM4 void wrapped_Timing_measurement_task_CM4(void)
 {
-    Task_0_Core_1_Handler();
+    Timing_measurement_task_CM4();
     cosmosApiInternal_schedulable_setExecutionStateToFinished();
     for(;;);
 };
@@ -412,11 +483,11 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 /* @cond S */
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void wrapped_Thread_Core_0(void)
+__APPLICATION_FUNC_SECTION_CM7 void wrapped_Timing_measurement_thread_CM7(void)
 {
     while ( 1 )
     {
-        Thread_Core_0();
+        Timing_measurement_thread_CM7();
     }
 };
 /* @cond S */
@@ -438,11 +509,11 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @cond S */
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM4 void wrapped_Thread_Core_1(void)
+__APPLICATION_FUNC_SECTION_CM4 void wrapped_Timing_measurement_thread_CM4(void)
 {
     while ( 1 )
     {
-        Thread_Core_1();
+        Timing_measurement_thread_CM4();
     }
 };
 /* @cond S */
@@ -451,15 +522,41 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @cond S */
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM4 void wrapped_Thread_mutex_test_CM4(void)
+__APPLICATION_FUNC_SECTION_CM4 void wrapped_Mutex_test_thread_CM4(void)
 {
     while ( 1 )
     {
-        Thread_mutex_test_CM4();
+        Mutex_test_thread_CM4();
     }
 };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION_CM4 void wrapped_Logger_thread(void)
+{
+    while ( 1 )
+    {
+        Logger_thread();
+    }
+};
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION_CM7 void wrapped_TCPIP_thread(void)
+{
+    while ( 1 )
+    {
+        TCPIP_thread();
+    }
+};
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 /* @endcond*/
 /********************************************************************************
 **                        Function Definitions | Stop                          **
