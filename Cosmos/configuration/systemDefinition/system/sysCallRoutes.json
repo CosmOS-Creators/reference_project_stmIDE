@@ -1,6 +1,6 @@
 {
 	"version": "1.1.0",
-	"checksum": "68cb70f334d2a179022045ec67664266",
+	"checksum": "8d7c6745b1bedea684ae3a59f3febb38",
 	"ui": {
 		"use_page": "sys_call_routes"
 	},
