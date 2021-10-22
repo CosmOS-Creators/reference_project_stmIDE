@@ -22,15 +22,15 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =ethernet_com_includeFiles
 ********************************************************************************/
-#include "debug.h"
-#include "stats.h"
-#include "tcp.h"
-#include "lwip.h"
-#include "logger.h"
-
-#include <thread.h>
 #include <stdio.h>
 #include <string.h>
+#include <thread.h>
+#include "debug.h"
+#include "logger.h"
+#include "lwip.h"
+#include "stats.h"
+#include "tcp.h"
+
 /********************************************************************************
 ** stop_name =ethernet_com_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -41,29 +41,37 @@
 ********************************************************************************/
 /* This file contains tcp echo example from
 https://github.com/dreamcat4/lwip/blob/master/contrib/apps/tcpecho_raw/echo.c */
-err_t echo_accept(void *arg, struct tcp_pcb *newpcb, err_t err);
-err_t echo_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err);
-void echo_error(void *arg, err_t err);
-err_t echo_poll(void *arg, struct tcp_pcb *tpcb);
-err_t echo_sent(void *arg, struct tcp_pcb *tpcb, u16_t len);
-void echo_send(struct tcp_pcb *tpcb, struct echo_state *es);
-void echo_close(struct tcp_pcb *tpcb, struct echo_state *es);
-void echo_init(void);
+err_t
+echo_accept( void * arg, struct tcp_pcb * newpcb, err_t err );
+err_t
+echo_recv( void * arg, struct tcp_pcb * tpcb, struct pbuf * p, err_t err );
+void
+echo_error( void * arg, err_t err );
+err_t
+echo_poll( void * arg, struct tcp_pcb * tpcb );
+err_t
+echo_sent( void * arg, struct tcp_pcb * tpcb, u16_t len );
+void
+echo_send( struct tcp_pcb * tpcb, struct echo_state * es );
+void
+echo_close( struct tcp_pcb * tpcb, struct echo_state * es );
+void
+echo_init( void );
 
 enum echo_states
 {
-	ES_NONE = 0,
-	ES_ACCEPTED,
-	ES_RECEIVED,
-	ES_CLOSING
+    ES_NONE = 0,
+    ES_ACCEPTED,
+    ES_RECEIVED,
+    ES_CLOSING
 };
 struct echo_state
 {
-	u8_t state;
-	u8_t retries;
-	struct tcp_pcb *pcb;
-	/* pbuf (chain) to recycle */
-	struct pbuf *p;
+    u8_t state;
+    u8_t retries;
+    struct tcp_pcb * pcb;
+    /* pbuf (chain) to recycle */
+    struct pbuf * p;
 };
 
 extern struct netif gnetif;
@@ -77,7 +85,8 @@ extern struct netif gnetif;
 /* Task in the program ethernet_com */
 
 /* Threads in the program ethernet_com */
-extern "C" void TCPIP_thread(void);
+extern "C" void
+TCPIP_thread( void );
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -85,24 +94,24 @@ extern "C" void TCPIP_thread(void);
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__ETHERNET_COM_NOINIT_SECTION_START)
+__SEC_START( __ETHERNET_COM_NOINIT_SECTION_START )
 /* @endcond*/
 // If your compiler does not support pragmas use __ETHERNET_COM_NOINIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =ethernet_com_noInit
 ********************************************************************************/
-static struct tcp_pcb *echo_pcb __ETHERNET_COM_NOINIT_SECTION;
+static struct tcp_pcb * echo_pcb __ETHERNET_COM_NOINIT_SECTION;
 /********************************************************************************
 ** stop_name =ethernet_com_noInit
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP(__ETHERNET_COM_NOINIT_SECTION_STOP)
+__SEC_STOP( __ETHERNET_COM_NOINIT_SECTION_STOP )
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__ETHERNET_COM_INIT_SECTION_START)
+__SEC_START( __ETHERNET_COM_INIT_SECTION_START )
 /* @endcond*/
 // If your compiler does not support pragmas use __ETHERNET_COM_INIT_SECTION
 /********************************************************************************
@@ -110,369 +119,385 @@ __SEC_START(__ETHERNET_COM_INIT_SECTION_START)
 ** start_name =ethernet_com_init
 ********************************************************************************/
 CosmOS_BooleanType __ETHERNET_COM_INIT_SECTION echo_initialized = False;
-char __ETHERNET_COM_INIT_SECTION acceptMessage[] = "\n**************************** ETHERNET LOG **************************** \r\n\
+char __ETHERNET_COM_INIT_SECTION acceptMessage[] =
+    "\n**************************** ETHERNET LOG **************************** \r\n\
 Handling echo for client with remote ip addess:                   \r\n\n";
 
-char __ETHERNET_COM_INIT_SECTION receiveMessage[] = "\n**************************** ETHERNET LOG **************************** \r\n\
+char __ETHERNET_COM_INIT_SECTION receiveMessage[] =
+    "\n**************************** ETHERNET LOG **************************** \r\n\
 Handling echo for client with payload message: ";
 /********************************************************************************
 ** stop_name =ethernet_com_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP(__ETHERNET_COM_INIT_SECTION_STOP)
+__SEC_STOP( __ETHERNET_COM_INIT_SECTION_STOP )
 /* @endcond*/
-
 
 /********************************************************************************
 ** Thread ID macro = THREAD_0_PROGRAM_2_CORE_0_ID
 ** Program ID macro = PROGRAM_2_CORE_0_ID
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
+__SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void TCPIP_thread(void)
+__APPLICATION_FUNC_SECTION_CM7 void
+TCPIP_thread( void )
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =TCPIP_thread
 ********************************************************************************/
-	if( IS_NOT(echo_initialized) )
-	{
-		echo_init();
-		echo_initialized = True;
-	}
+    if ( IS_NOT( echo_initialized ) )
+    {
+        echo_init();
+        echo_initialized = True;
+    }
 
-	ethernetif_input(&gnetif);
-	sys_check_timeouts();
+    ethernetif_input( &gnetif );
+    sys_check_timeouts();
 
-	thread_sleepMs(5);
+    thread_sleepMs( 5 );
 /********************************************************************************
 ** stop_name =TCPIP_thread
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
 /* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
+__SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM7 )
 /* @endcond*/
 
 /* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
+__SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
 /* @endcond*/
 // If your compiler does not support pragmas use __APPLICATION_FUNC_SECTION_CM7
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Start      **
 ** start_name =ethernet_com_userCodeFree
 ********************************************************************************/
-__APPLICATION_FUNC_SECTION_START_CM7 void echo_acceptLog(struct tcp_pcb *newpcb)
+__APPLICATION_FUNC_SECTION_START_CM7 void
+echo_acceptLog( struct tcp_pcb * newpcb )
 {
-	char ipAddress[16] = {" "};
+    char ipAddress[16] = { " " };
 
-	sprintf(ipAddress, "%d.%d.%d.%d",
-		ip4_addr1(&newpcb->remote_ip),
-		ip4_addr2(&newpcb->remote_ip),
-		ip4_addr3(&newpcb->remote_ip),
-		ip4_addr4(&newpcb->remote_ip));
+    sprintf(
+        ipAddress,
+        "%d.%d.%d.%d",
+        ip4_addr1( &newpcb->remote_ip ),
+        ip4_addr2( &newpcb->remote_ip ),
+        ip4_addr3( &newpcb->remote_ip ),
+        ip4_addr4( &newpcb->remote_ip ) );
 
-	memcpy(&acceptMessage[sizeof(acceptMessage)-21],ipAddress, sizeof(ipAddress));
+    memcpy(
+        &acceptMessage[sizeof( acceptMessage ) - 21],
+        ipAddress,
+        sizeof( ipAddress ) );
 
-	user_log(acceptMessage, sizeof(acceptMessage));
+    user_log( acceptMessage, sizeof( acceptMessage ) );
 }
 
-__APPLICATION_FUNC_SECTION_START_CM7 void echo_recvLog(struct pbuf *p)
+__APPLICATION_FUNC_SECTION_START_CM7 void
+echo_recvLog( struct pbuf * p )
 {
-	char consoleOutput[sizeof(receiveMessage) + p->len + 4] = {" "};
-	consoleOutput[sizeof(consoleOutput) - 1] = 10;
-	consoleOutput[sizeof(consoleOutput) - 2] = 10;
-	consoleOutput[sizeof(consoleOutput) - 3] = 13;
+    char consoleOutput[sizeof( receiveMessage ) + p->len + 4] = { " " };
+    consoleOutput[sizeof( consoleOutput ) - 1] = 10;
+    consoleOutput[sizeof( consoleOutput ) - 2] = 10;
+    consoleOutput[sizeof( consoleOutput ) - 3] = 13;
 
-	memcpy(consoleOutput,receiveMessage, sizeof(receiveMessage));
-	memcpy(&consoleOutput[sizeof(receiveMessage)],p->payload, p->len);
+    memcpy( consoleOutput, receiveMessage, sizeof( receiveMessage ) );
+    memcpy( &consoleOutput[sizeof( receiveMessage )], p->payload, p->len );
 
-	user_log(consoleOutput, sizeof(consoleOutput));
+    user_log( consoleOutput, sizeof( consoleOutput ) );
 }
 
-__APPLICATION_FUNC_SECTION_START_CM7 void echo_init(void)
+__APPLICATION_FUNC_SECTION_START_CM7 void
+echo_init( void )
 {
-	echo_pcb = tcp_new();
-	if (echo_pcb != NULL)
-	{
-		err_t err;
+    echo_pcb = tcp_new();
+    if ( echo_pcb != NULL )
+    {
+        err_t err;
 
-		err = tcp_bind(echo_pcb, IP_ADDR_ANY, 7);
-		if (err == ERR_OK)
-		{
-			echo_pcb = tcp_listen(echo_pcb);
-			tcp_accept(echo_pcb, echo_accept);
-		}
-		else
-		{
-			/* abort? output diagnostic? */
-		}
-	}
-	else
-	{
-		/* abort? output diagnostic? */
-	}
+        err = tcp_bind( echo_pcb, IP_ADDR_ANY, 7 );
+        if ( err == ERR_OK )
+        {
+            echo_pcb = tcp_listen( echo_pcb );
+            tcp_accept( echo_pcb, echo_accept );
+        }
+        else
+        {
+            /* abort? output diagnostic? */
+        }
+    }
+    else
+    {
+        /* abort? output diagnostic? */
+    }
 }
 
-__APPLICATION_FUNC_SECTION_START_CM7 err_t echo_accept(void *arg, struct tcp_pcb *newpcb, err_t err)
+__APPLICATION_FUNC_SECTION_START_CM7 err_t
+echo_accept( void * arg, struct tcp_pcb * newpcb, err_t err )
 {
-	err_t ret_err;
-	struct echo_state *es;
+    err_t ret_err;
+    struct echo_state * es;
 
-	LWIP_UNUSED_ARG(arg);
-	LWIP_UNUSED_ARG(err);
+    LWIP_UNUSED_ARG( arg );
+    LWIP_UNUSED_ARG( err );
 
-	/* commonly observed practive to call tcp_setprio(), why? */
-	tcp_setprio(newpcb, TCP_PRIO_MIN);
+    /* commonly observed practive to call tcp_setprio(), why? */
+    tcp_setprio( newpcb, TCP_PRIO_MIN );
 
-	echo_acceptLog(newpcb);
+    echo_acceptLog( newpcb );
 
-	es = (struct echo_state *)mem_malloc(sizeof(struct echo_state));
-	if (es != NULL)
-	{
-		es->state = ES_ACCEPTED;
-		es->pcb = newpcb;
-		es->retries = 0;
-		es->p = NULL;
-		/* pass newly allocated es to our callbacks */
-		tcp_arg(newpcb, es);
-		tcp_recv(newpcb, echo_recv);
-		tcp_err(newpcb, echo_error);
-		tcp_poll(newpcb, echo_poll, 0);
-		ret_err = ERR_OK;
-	}
-	else
-	{
-		ret_err = ERR_MEM;
-	}
-	return ret_err;
+    es = (struct echo_state *)mem_malloc( sizeof( struct echo_state ) );
+    if ( es != NULL )
+    {
+        es->state = ES_ACCEPTED;
+        es->pcb = newpcb;
+        es->retries = 0;
+        es->p = NULL;
+        /* pass newly allocated es to our callbacks */
+        tcp_arg( newpcb, es );
+        tcp_recv( newpcb, echo_recv );
+        tcp_err( newpcb, echo_error );
+        tcp_poll( newpcb, echo_poll, 0 );
+        ret_err = ERR_OK;
+    }
+    else
+    {
+        ret_err = ERR_MEM;
+    }
+    return ret_err;
 }
 
-__APPLICATION_FUNC_SECTION_START_CM7 err_t echo_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err)
+__APPLICATION_FUNC_SECTION_START_CM7 err_t
+echo_recv( void * arg, struct tcp_pcb * tpcb, struct pbuf * p, err_t err )
 {
-	struct echo_state *es;
-	err_t ret_err;
+    struct echo_state * es;
+    err_t ret_err;
 
-	LWIP_ASSERT("arg != NULL", arg != NULL);
-	es = (struct echo_state *)arg;
-	if (p == NULL)
-	{
-		/* remote host closed connection */
-		es->state = ES_CLOSING;
-		if (es->p == NULL)
-		{
-			/* we're done sending, close it */
-			echo_close(tpcb, es);
-		}
-		else
-		{
-			/* we're not done yet */
-			tcp_sent(tpcb, echo_sent);
-			echo_send(tpcb, es);
-		}
-		ret_err = ERR_OK;
-	}
-	else if (err != ERR_OK)
-	{
-		/* cleanup, for unkown reason */
-		if (p != NULL)
-		{
-			es->p = NULL;
-			pbuf_free(p);
-		}
-		ret_err = err;
-	}
-	else if (es->state == ES_ACCEPTED)
-	{
-		/* first data chunk in p->payload */
-		es->state = ES_RECEIVED;
-		/* store reference to incoming pbuf (chain) */
-		es->p = p;
-		/* install send completion notifier */
-		tcp_sent(tpcb, echo_sent);
-		echo_send(tpcb, es);
-		echo_recvLog(p);
-		ret_err = ERR_OK;
-	}
-	else if (es->state == ES_RECEIVED)
-	{
-		/* read some more data */
-		if (es->p == NULL)
-		{
-			es->p = p;
-			tcp_sent(tpcb, echo_sent);
-			echo_send(tpcb, es);
-		}
-		else
-		{
-			struct pbuf *ptr;
+    LWIP_ASSERT( "arg != NULL", arg != NULL );
+    es = (struct echo_state *)arg;
+    if ( p == NULL )
+    {
+        /* remote host closed connection */
+        es->state = ES_CLOSING;
+        if ( es->p == NULL )
+        {
+            /* we're done sending, close it */
+            echo_close( tpcb, es );
+        }
+        else
+        {
+            /* we're not done yet */
+            tcp_sent( tpcb, echo_sent );
+            echo_send( tpcb, es );
+        }
+        ret_err = ERR_OK;
+    }
+    else if ( err != ERR_OK )
+    {
+        /* cleanup, for unkown reason */
+        if ( p != NULL )
+        {
+            es->p = NULL;
+            pbuf_free( p );
+        }
+        ret_err = err;
+    }
+    else if ( es->state == ES_ACCEPTED )
+    {
+        /* first data chunk in p->payload */
+        es->state = ES_RECEIVED;
+        /* store reference to incoming pbuf (chain) */
+        es->p = p;
+        /* install send completion notifier */
+        tcp_sent( tpcb, echo_sent );
+        echo_send( tpcb, es );
+        echo_recvLog( p );
+        ret_err = ERR_OK;
+    }
+    else if ( es->state == ES_RECEIVED )
+    {
+        /* read some more data */
+        if ( es->p == NULL )
+        {
+            es->p = p;
+            tcp_sent( tpcb, echo_sent );
+            echo_send( tpcb, es );
+        }
+        else
+        {
+            struct pbuf * ptr;
 
-			/* chain pbufs to the end of what we recv'ed previously  */
-			ptr = es->p;
-			pbuf_chain(ptr, p);
-		}
-		ret_err = ERR_OK;
-	}
-	else if (es->state == ES_CLOSING)
-	{
-		/* odd case, remote side closing twice, trash data */
-		tcp_recved(tpcb, p->tot_len);
-		es->p = NULL;
-		pbuf_free(p);
-		ret_err = ERR_OK;
-	}
-	else
-	{
-		/* unkown es->state, trash data  */
-		tcp_recved(tpcb, p->tot_len);
-		es->p = NULL;
-		pbuf_free(p);
-		ret_err = ERR_OK;
-	}
-	return ret_err;
+            /* chain pbufs to the end of what we recv'ed previously  */
+            ptr = es->p;
+            pbuf_chain( ptr, p );
+        }
+        ret_err = ERR_OK;
+    }
+    else if ( es->state == ES_CLOSING )
+    {
+        /* odd case, remote side closing twice, trash data */
+        tcp_recved( tpcb, p->tot_len );
+        es->p = NULL;
+        pbuf_free( p );
+        ret_err = ERR_OK;
+    }
+    else
+    {
+        /* unkown es->state, trash data  */
+        tcp_recved( tpcb, p->tot_len );
+        es->p = NULL;
+        pbuf_free( p );
+        ret_err = ERR_OK;
+    }
+    return ret_err;
 }
 
-__APPLICATION_FUNC_SECTION_START_CM7 void echo_error(void *arg, err_t err)
+__APPLICATION_FUNC_SECTION_START_CM7 void
+echo_error( void * arg, err_t err )
 {
-	struct echo_state *es;
+    struct echo_state * es;
 
-	LWIP_UNUSED_ARG(err);
+    LWIP_UNUSED_ARG( err );
 
-	es = (struct echo_state *)arg;
-	if (es != NULL)
-	{
-		mem_free(es);
-	}
+    es = (struct echo_state *)arg;
+    if ( es != NULL )
+    {
+        mem_free( es );
+    }
 }
 
-__APPLICATION_FUNC_SECTION_START_CM7 err_t echo_poll(void *arg, struct tcp_pcb *tpcb)
+__APPLICATION_FUNC_SECTION_START_CM7 err_t
+echo_poll( void * arg, struct tcp_pcb * tpcb )
 {
-	err_t ret_err;
-	struct echo_state *es;
+    err_t ret_err;
+    struct echo_state * es;
 
-	es = (struct echo_state *)arg;
-	if (es != NULL)
-	{
-		if (es->p != NULL)
-		{
-			/* there is a remaining pbuf (chain)  */
-			tcp_sent(tpcb, echo_sent);
-			echo_send(tpcb, es);
-		}
-		else
-		{
-			/* no remaining pbuf (chain)  */
-			if (es->state == ES_CLOSING)
-			{
-				echo_close(tpcb, es);
-			}
-		}
-		ret_err = ERR_OK;
-	}
-	else
-	{
-		/* nothing to be done */
-		tcp_abort(tpcb);
-		ret_err = ERR_ABRT;
-	}
-	return ret_err;
+    es = (struct echo_state *)arg;
+    if ( es != NULL )
+    {
+        if ( es->p != NULL )
+        {
+            /* there is a remaining pbuf (chain)  */
+            tcp_sent( tpcb, echo_sent );
+            echo_send( tpcb, es );
+        }
+        else
+        {
+            /* no remaining pbuf (chain)  */
+            if ( es->state == ES_CLOSING )
+            {
+                echo_close( tpcb, es );
+            }
+        }
+        ret_err = ERR_OK;
+    }
+    else
+    {
+        /* nothing to be done */
+        tcp_abort( tpcb );
+        ret_err = ERR_ABRT;
+    }
+    return ret_err;
 }
 
-__APPLICATION_FUNC_SECTION_START_CM7 err_t echo_sent(void *arg, struct tcp_pcb *tpcb, u16_t len)
+__APPLICATION_FUNC_SECTION_START_CM7 err_t
+echo_sent( void * arg, struct tcp_pcb * tpcb, u16_t len )
 {
-	struct echo_state *es;
+    struct echo_state * es;
 
-	LWIP_UNUSED_ARG(len);
+    LWIP_UNUSED_ARG( len );
 
-	es = (struct echo_state *)arg;
-	es->retries = 0;
+    es = (struct echo_state *)arg;
+    es->retries = 0;
 
-	if (es->p != NULL)
-	{
-		/* still got pbufs to send */
-		tcp_sent(tpcb, echo_sent);
-		echo_send(tpcb, es);
-	}
-	else
-	{
-		/* no more pbufs to send */
-		if (es->state == ES_CLOSING)
-		{
-			echo_close(tpcb, es);
-		}
-	}
-	return ERR_OK;
+    if ( es->p != NULL )
+    {
+        /* still got pbufs to send */
+        tcp_sent( tpcb, echo_sent );
+        echo_send( tpcb, es );
+    }
+    else
+    {
+        /* no more pbufs to send */
+        if ( es->state == ES_CLOSING )
+        {
+            echo_close( tpcb, es );
+        }
+    }
+    return ERR_OK;
 }
 
-__APPLICATION_FUNC_SECTION_START_CM7 void echo_send(struct tcp_pcb *tpcb, struct echo_state *es)
+__APPLICATION_FUNC_SECTION_START_CM7 void
+echo_send( struct tcp_pcb * tpcb, struct echo_state * es )
 {
-	struct pbuf *ptr;
-	err_t wr_err = ERR_OK;
+    struct pbuf * ptr;
+    err_t wr_err = ERR_OK;
 
-	while ((wr_err == ERR_OK) &&
-		(es->p != NULL) &&
-		(es->p->len <= tcp_sndbuf(tpcb)))
-	{
-		ptr = es->p;
+    while ( ( wr_err == ERR_OK ) && ( es->p != NULL ) &&
+            ( es->p->len <= tcp_sndbuf( tpcb ) ) )
+    {
+        ptr = es->p;
 
-		/* enqueue data for transmission */
-		wr_err = tcp_write(tpcb, ptr->payload, ptr->len, 1);
-		if (wr_err == ERR_OK)
-		{
-			u16_t plen;
-			u8_t freed;
+        /* enqueue data for transmission */
+        wr_err = tcp_write( tpcb, ptr->payload, ptr->len, 1 );
+        if ( wr_err == ERR_OK )
+        {
+            u16_t plen;
+            u8_t freed;
 
-			plen = ptr->len;
-			/* continue with next pbuf in chain (if any) */
-			es->p = ptr->next;
-			if (es->p != NULL)
-			{
-				/* new reference! */
-				pbuf_ref(es->p);
-			}
-			/* chop first pbuf from chain */
-			do
-			{
-				/* try hard to free pbuf */
-				freed = pbuf_free(ptr);
-			} while (freed == 0);
-			/* we can read more data now */
-			tcp_recved(tpcb, plen);
-		}
-		else if (wr_err == ERR_MEM)
-		{
-			/* we are low on memory, try later / harder, defer to poll */
-			es->p = ptr;
-		}
-		else
-		{
-			/* other problem ?? */
-		}
-	}
+            plen = ptr->len;
+            /* continue with next pbuf in chain (if any) */
+            es->p = ptr->next;
+            if ( es->p != NULL )
+            {
+                /* new reference! */
+                pbuf_ref( es->p );
+            }
+            /* chop first pbuf from chain */
+            do
+            {
+                /* try hard to free pbuf */
+                freed = pbuf_free( ptr );
+            } while ( freed == 0 );
+            /* we can read more data now */
+            tcp_recved( tpcb, plen );
+        }
+        else if ( wr_err == ERR_MEM )
+        {
+            /* we are low on memory, try later / harder, defer to poll */
+            es->p = ptr;
+        }
+        else
+        {
+            /* other problem ?? */
+        }
+    }
 }
 
-__APPLICATION_FUNC_SECTION_START_CM7 void echo_close(struct tcp_pcb *tpcb, struct echo_state *es)
+__APPLICATION_FUNC_SECTION_START_CM7 void
+echo_close( struct tcp_pcb * tpcb, struct echo_state * es )
 {
-	tcp_arg(tpcb, NULL);
-	tcp_sent(tpcb, NULL);
-	tcp_recv(tpcb, NULL);
-	tcp_err(tpcb, NULL);
-	tcp_poll(tpcb, NULL, 0);
+    tcp_arg( tpcb, NULL );
+    tcp_sent( tpcb, NULL );
+    tcp_recv( tpcb, NULL );
+    tcp_err( tpcb, NULL );
+    tcp_poll( tpcb, NULL, 0 );
 
-	if (es != NULL)
-	{
-		mem_free(es);
-	}
-	tcp_close(tpcb);
+    if ( es != NULL )
+    {
+        mem_free( es );
+    }
+    tcp_close( tpcb );
 }
 /********************************************************************************
 ** stop_name =ethernet_com_userCodeFree
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
+__SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM7 )
 /* @endcond*/
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **

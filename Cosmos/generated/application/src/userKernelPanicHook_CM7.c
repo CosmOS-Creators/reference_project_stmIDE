@@ -53,7 +53,8 @@
 /* @cond S */
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void userKernelPanicHook_CM7(void)
+__APPLICATION_FUNC_SECTION_CM7 void
+userKernelPanicHook_CM7( void )
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **

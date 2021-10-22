@@ -53,7 +53,8 @@
 /* @cond S */
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM4 void userKernelPanicHook_CM4(void)
+__APPLICATION_FUNC_SECTION_CM4 void
+userKernelPanicHook_CM4( void )
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **

@@ -58,10 +58,9 @@
 __SEC_START(__DEFAULT_CM7_INIT_SECTION_START)
 /* @endcond*/
 CosmOS_MutexVariableType MutexForProgram0HeapCore0Var __DEFAULT_CM7_INIT_SECTION
-IS_INITIALIZED_TO
-{
-	0,			/* 	BitWidthType mutex 									*/
-	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
+IS_INITIALIZED_TO{
+    0,    /* BitWidthType mutex */
+    NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
 };
 /* @cond S */
 __SEC_STOP(__DEFAULT_CM7_INIT_SECTION_STOP)
@@ -70,10 +69,9 @@ __SEC_STOP(__DEFAULT_CM7_INIT_SECTION_STOP)
 __SEC_START(__TIMING_MEASUREMENT_CM7_INIT_SECTION_START)
 /* @endcond*/
 CosmOS_MutexVariableType MutexForProgram1HeapCore0Var __TIMING_MEASUREMENT_CM7_INIT_SECTION
-IS_INITIALIZED_TO
-{
-	0,			/* 	BitWidthType mutex 									*/
-	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
+IS_INITIALIZED_TO{
+    0,    /* BitWidthType mutex */
+    NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
 };
 /* @cond S */
 __SEC_STOP(__TIMING_MEASUREMENT_CM7_INIT_SECTION_STOP)
@@ -82,10 +80,9 @@ __SEC_STOP(__TIMING_MEASUREMENT_CM7_INIT_SECTION_STOP)
 __SEC_START(__ETHERNET_COM_INIT_SECTION_START)
 /* @endcond*/
 CosmOS_MutexVariableType MutexForProgram2HeapCore0Var __ETHERNET_COM_INIT_SECTION
-IS_INITIALIZED_TO
-{
-	0,			/* 	BitWidthType mutex 									*/
-	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
+IS_INITIALIZED_TO{
+    0,    /* BitWidthType mutex */
+    NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
 };
 /* @cond S */
 __SEC_STOP(__ETHERNET_COM_INIT_SECTION_STOP)
@@ -94,10 +91,9 @@ __SEC_STOP(__ETHERNET_COM_INIT_SECTION_STOP)
 __SEC_START(__DEFAULT_CM4_INIT_SECTION_START)
 /* @endcond*/
 CosmOS_MutexVariableType MutexForProgram0HeapCore1Var __DEFAULT_CM4_INIT_SECTION
-IS_INITIALIZED_TO
-{
-	0,			/* 	BitWidthType mutex 									*/
-	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
+IS_INITIALIZED_TO{
+    0,    /* BitWidthType mutex */
+    NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
 };
 /* @cond S */
 __SEC_STOP(__DEFAULT_CM4_INIT_SECTION_STOP)
@@ -106,10 +102,9 @@ __SEC_STOP(__DEFAULT_CM4_INIT_SECTION_STOP)
 __SEC_START(__TIMING_MEASUREMENT_CM4_INIT_SECTION_START)
 /* @endcond*/
 CosmOS_MutexVariableType MutexForProgram1HeapCore1Var __TIMING_MEASUREMENT_CM4_INIT_SECTION
-IS_INITIALIZED_TO
-{
-	0,			/* 	BitWidthType mutex 									*/
-	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
+IS_INITIALIZED_TO{
+    0,    /* BitWidthType mutex */
+    NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
 };
 /* @cond S */
 __SEC_STOP(__TIMING_MEASUREMENT_CM4_INIT_SECTION_STOP)
@@ -118,10 +113,9 @@ __SEC_STOP(__TIMING_MEASUREMENT_CM4_INIT_SECTION_STOP)
 __SEC_START(__LOGGER_INIT_SECTION_START)
 /* @endcond*/
 CosmOS_MutexVariableType MutexForProgram2HeapCore1Var __LOGGER_INIT_SECTION
-IS_INITIALIZED_TO
-{
-	0,			/* 	BitWidthType mutex 									*/
-	NULL,		/* 	CosmOS_SchedulableVariableType * schedulableOwner 	*/
+IS_INITIALIZED_TO{
+    0,    /* BitWidthType mutex */
+    NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
 };
 /* @cond S */
 __SEC_STOP(__LOGGER_INIT_SECTION_STOP)

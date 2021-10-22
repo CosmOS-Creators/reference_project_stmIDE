@@ -59,32 +59,37 @@
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
 const CosmOS_AlarmConfigurationType AlarmsCore0CfgConst[ALARM_CORE_0_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulableVar                       */
+IS_INITIALIZED_TO{
+    {
+        &ThreadsSchedulablesVar
+            [SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const schedulableVar */
     },
-		{
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulableVar                       */
+    {
+        &ThreadsSchedulablesVar
+            [SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const schedulableVar */
     },
-		{
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulableVar                       */
+    {
+        &ThreadsSchedulablesVar
+            [SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const schedulableVar */
     },
 };
 const CosmOS_AlarmConfigurationType AlarmsCore1CfgConst[ALARM_CORE_1_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulableVar                       */
+IS_INITIALIZED_TO{
+    {
+        &ThreadsSchedulablesVar
+            [SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const schedulableVar */
     },
-		{
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulableVar                       */
+    {
+        &ThreadsSchedulablesVar
+            [SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const schedulableVar */
     },
-		{
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_1_PROGRAM_1_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulableVar                       */
+    {
+        &ThreadsSchedulablesVar
+            [SCHEDULABLE_THREAD_1_PROGRAM_1_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const schedulableVar */
     },
-		{
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulableVar                       */
+    {
+        &ThreadsSchedulablesVar
+            [SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const schedulableVar */
     },
 };
 /* @cond S */
@@ -97,44 +102,51 @@ __SEC_START(__OS_VARS_SECTION_START)
 CosmOS_AlarmVariableType AlarmsCore0Var[ALARM_CORE_0_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
-		{
-		&AlarmsCore0CfgConst[ALARM_0_PROGRAM_0_CORE_0_ID],		/* const CosmOS_AlarmConfigurationType * const cfg                       */
-		ALARM_STATE_ENUM__DISABLED, /* CosmOS_AlarmStateType state                       */
-		0,            /* BitWidthType timer                       */
+    {
+        &AlarmsCore0CfgConst
+            [ALARM_0_PROGRAM_0_CORE_0_ID],    /* const CosmOS_AlarmConfigurationType * const cfg */
+        ALARM_STATE_ENUM__DISABLED,    /* CosmOS_AlarmStateType state */
+        0,    /* BitWidthType timer */
     },
-		{
-		&AlarmsCore0CfgConst[ALARM_1_PROGRAM_1_CORE_0_ID],		/* const CosmOS_AlarmConfigurationType * const cfg                       */
-		ALARM_STATE_ENUM__DISABLED, /* CosmOS_AlarmStateType state                       */
-		0,            /* BitWidthType timer                       */
+    {
+        &AlarmsCore0CfgConst
+            [ALARM_1_PROGRAM_1_CORE_0_ID],    /* const CosmOS_AlarmConfigurationType * const cfg */
+        ALARM_STATE_ENUM__DISABLED,    /* CosmOS_AlarmStateType state */
+        0,    /* BitWidthType timer */
     },
-		{
-		&AlarmsCore0CfgConst[ALARM_2_PROGRAM_2_CORE_0_ID],		/* const CosmOS_AlarmConfigurationType * const cfg                       */
-		ALARM_STATE_ENUM__DISABLED, /* CosmOS_AlarmStateType state                       */
-		0,            /* BitWidthType timer                       */
+    {
+        &AlarmsCore0CfgConst
+            [ALARM_2_PROGRAM_2_CORE_0_ID],    /* const CosmOS_AlarmConfigurationType * const cfg */
+        ALARM_STATE_ENUM__DISABLED,    /* CosmOS_AlarmStateType state */
+        0,    /* BitWidthType timer */
     },
 };
 CosmOS_AlarmVariableType AlarmsCore1Var[ALARM_CORE_1_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
 {
-		{
-		&AlarmsCore1CfgConst[ALARM_0_PROGRAM_0_CORE_1_ID],		/* const CosmOS_AlarmConfigurationType * const cfg                       */
-		ALARM_STATE_ENUM__DISABLED, /* CosmOS_AlarmStateType state                       */
-		0,            /* BitWidthType timer                       */
+    {
+        &AlarmsCore1CfgConst
+            [ALARM_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_AlarmConfigurationType * const cfg */
+        ALARM_STATE_ENUM__DISABLED,    /* CosmOS_AlarmStateType state */
+        0,    /* BitWidthType timer */
     },
-		{
-		&AlarmsCore1CfgConst[ALARM_1_PROGRAM_1_CORE_1_ID],		/* const CosmOS_AlarmConfigurationType * const cfg                       */
-		ALARM_STATE_ENUM__DISABLED, /* CosmOS_AlarmStateType state                       */
-		0,            /* BitWidthType timer                       */
+    {
+        &AlarmsCore1CfgConst
+            [ALARM_1_PROGRAM_1_CORE_1_ID],    /* const CosmOS_AlarmConfigurationType * const cfg */
+        ALARM_STATE_ENUM__DISABLED,    /* CosmOS_AlarmStateType state */
+        0,    /* BitWidthType timer */
     },
-		{
-		&AlarmsCore1CfgConst[ALARM_2_PROGRAM_1_CORE_1_ID],		/* const CosmOS_AlarmConfigurationType * const cfg                       */
-		ALARM_STATE_ENUM__DISABLED, /* CosmOS_AlarmStateType state                       */
-		0,            /* BitWidthType timer                       */
+    {
+        &AlarmsCore1CfgConst
+            [ALARM_2_PROGRAM_1_CORE_1_ID],    /* const CosmOS_AlarmConfigurationType * const cfg */
+        ALARM_STATE_ENUM__DISABLED,    /* CosmOS_AlarmStateType state */
+        0,    /* BitWidthType timer */
     },
-		{
-		&AlarmsCore1CfgConst[ALARM_3_PROGRAM_2_CORE_1_ID],		/* const CosmOS_AlarmConfigurationType * const cfg                       */
-		ALARM_STATE_ENUM__DISABLED, /* CosmOS_AlarmStateType state                       */
-		0,            /* BitWidthType timer                       */
+    {
+        &AlarmsCore1CfgConst
+            [ALARM_3_PROGRAM_2_CORE_1_ID],    /* const CosmOS_AlarmConfigurationType * const cfg */
+        ALARM_STATE_ENUM__DISABLED,    /* CosmOS_AlarmStateType state */
+        0,    /* BitWidthType timer */
     },
 };
 /********************************************************************************

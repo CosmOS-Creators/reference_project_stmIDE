@@ -26,15 +26,16 @@
 **                         START OF C++ SUPPORT SECTION                        **
 ********************************************************************************/
 #ifdef __cplusplus
- extern "C" {
+extern "C" {
 #endif
 /********************************************************************************
 **                            Include Files | Start                            **
 ********************************************************************************/
-#include <sysDefs.h>
 #include <cosmosApi.h>
-#include <memoryMapping.h>
 #include <cosmosTypes.h>
+#include <memoryMapping.h>
+#include <sysDefs.h>
+
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -51,9 +52,10 @@
 ** DO NOT MODIFY THIS COMMENT !                 GENERATED SECTION | Start      **
 ** FUNCTION DECLARATION
 ********************************************************************************/
-__APPLICATION_FUNC_SECTION_CM4 void userKernelPanicHook_CM4(void);
+__APPLICATION_FUNC_SECTION_CM4 void
+userKernelPanicHook_CM4( void );
 /********************************************************************************
-** DO NOT MODIFY THIS COMMENT !         	    GENERATED SECTION | Stop       **
+** DO NOT MODIFY THIS COMMENT !                 GENERATED SECTION | Stop       **
 ** FUNCTION DECLARATION
 ********************************************************************************/
 #ifdef __cplusplus
