@@ -58,35 +58,33 @@
 __SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
 CosmOS_BarrierVariableType BarriersCore0Var[BARRIERS_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO
-{
-    {                 /* BarriersCore0Var[OS_INIT_ID]                     */
-        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState                */
+IS_INITIALIZED_TO{
+    {                 /* BarriersCore0Var[OS_INIT_ID] */
+        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState */
     },
-    {                 /* BarriersCore0Var[OS_START_ID]                    */
-        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState                */
+    {                 /* BarriersCore0Var[OS_START_ID] */
+        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState */
     },
-    {                 /* BarriersCore0Var[OS_STOP_ID]                     */
-        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState                */
+    {                 /* BarriersCore0Var[OS_STOP_ID] */
+        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState */
     },
-    {                 /* BarriersCore0Var[SCHEDULERS_SYNC_ID]                     */
-        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState                */
+    {                 /* BarriersCore0Var[SCHEDULERS_SYNC_ID] */
+        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState */
     },
 };
 CosmOS_BarrierVariableType BarriersCore1Var[BARRIERS_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO
-{
-    {                 /* BarriersCore1Var[OS_INIT_ID]                     */
-        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState                */
+IS_INITIALIZED_TO{
+    {                 /* BarriersCore1Var[OS_INIT_ID] */
+        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState */
     },
-    {                 /* BarriersCore1Var[OS_START_ID]                    */
-        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState                */
+    {                 /* BarriersCore1Var[OS_START_ID] */
+        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState */
     },
-    {                 /* BarriersCore1Var[OS_STOP_ID]                     */
-        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState                */
+    {                 /* BarriersCore1Var[OS_STOP_ID] */
+        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState */
     },
-    {                 /* BarriersCore1Var[SCHEDULERS_SYNC_ID]                     */
-        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState                */
+    {                 /* BarriersCore1Var[SCHEDULERS_SYNC_ID] */
+        BARRIER_STATE_ENUM__ACTIVATED,    /* CosmOS_BarrierStateType barrierState */
     },
 };
 /* @cond S */

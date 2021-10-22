@@ -69,10 +69,10 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_BufferConfigurationType BuffersCfgConst[BUFFER_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
-		{
+const CosmOS_BufferConfigurationType
+    BuffersCfgConst[BUFFER_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    {
         buffer0Arr,
         BUFFER_0_ID,
         BUFFER_0_SIZE,
@@ -81,7 +81,7 @@ IS_INITIALIZED_TO
 		True,
 		2,
     },
-		{
+    {
         buffer1Arr,
         BUFFER_1_ID,
         BUFFER_1_SIZE,
@@ -90,7 +90,7 @@ IS_INITIALIZED_TO
 		True,
 		3,
     },
-		{
+    {
         buffer2Arr,
         BUFFER_2_ID,
         BUFFER_2_SIZE,
@@ -99,7 +99,7 @@ IS_INITIALIZED_TO
 		True,
 		4,
     },
-		{
+    {
         buffer3Arr,
         BUFFER_3_ID,
         BUFFER_3_SIZE,
@@ -117,27 +117,26 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 __SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
 CosmOS_BufferVariableType BuffersVar[BUFFER_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO
-{
-		{
+IS_INITIALIZED_TO{
+    {
         &BuffersCfgConst[BUFFER_0_ID],
         0,
         0,
         0,
     },
-		{
+    {
         &BuffersCfgConst[BUFFER_1_ID],
         0,
         0,
         0,
     },
-		{
+    {
         &BuffersCfgConst[BUFFER_2_ID],
         0,
         0,
         0,
     },
-		{
+    {
         &BuffersCfgConst[BUFFER_3_ID],
         0,
         0,

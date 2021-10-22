@@ -58,47 +58,47 @@
 /* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_TaskConfigurationType TasksProgram0Core0CfgConst[TASK_PROGRAM_0_CORE_0_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        TASK_0_PROGRAM_0_CORE_0_WCET,                                 /* const BitWidthType wcet                                  */
+const CosmOS_TaskConfigurationType
+    TasksProgram0Core0CfgConst[TASK_PROGRAM_0_CORE_0_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    {
+        TASK_0_PROGRAM_0_CORE_0_WCET,    /* const BitWidthType wcet */
     },
-		{
-        TASK_1_PROGRAM_0_CORE_0_WCET,                                 /* const BitWidthType wcet                                  */
-    },
-};
-const CosmOS_TaskConfigurationType TasksProgram1Core0CfgConst[TASK_PROGRAM_1_CORE_0_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        TASK_0_PROGRAM_1_CORE_0_WCET,                                 /* const BitWidthType wcet                                  */
+    {
+        TASK_1_PROGRAM_0_CORE_0_WCET,    /* const BitWidthType wcet */
     },
 };
-const CosmOS_TaskConfigurationType TasksProgram0Core1CfgConst[TASK_PROGRAM_0_CORE_1_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        TASK_0_PROGRAM_0_CORE_1_WCET,                                 /* const BitWidthType wcet                                  */
-    },
-		{
-        TASK_1_PROGRAM_0_CORE_1_WCET,                                 /* const BitWidthType wcet                                  */
+const CosmOS_TaskConfigurationType
+    TasksProgram1Core0CfgConst[TASK_PROGRAM_1_CORE_0_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    {
+        TASK_0_PROGRAM_1_CORE_0_WCET,    /* const BitWidthType wcet */
     },
 };
-const CosmOS_TaskConfigurationType TasksProgram1Core1CfgConst[TASK_PROGRAM_1_CORE_1_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        TASK_0_PROGRAM_1_CORE_1_WCET,                                 /* const BitWidthType wcet                                  */
+const CosmOS_TaskConfigurationType
+    TasksProgram0Core1CfgConst[TASK_PROGRAM_0_CORE_1_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    {
+        TASK_0_PROGRAM_0_CORE_1_WCET,    /* const BitWidthType wcet */
+    },
+    {
+        TASK_1_PROGRAM_0_CORE_1_WCET,    /* const BitWidthType wcet */
     },
 };
-const CosmOS_TaskConfigurationType TasksProgram2Core1CfgConst[TASK_PROGRAM_2_CORE_1_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
+const CosmOS_TaskConfigurationType
+    TasksProgram1Core1CfgConst[TASK_PROGRAM_1_CORE_1_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    {
+        TASK_0_PROGRAM_1_CORE_1_WCET,    /* const BitWidthType wcet */
+    },
 };
-const CosmOS_TaskConfigurationType TasksProgram2Core0CfgConst[TASK_PROGRAM_2_CORE_0_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO
-{
+const CosmOS_TaskConfigurationType
+    TasksProgram2Core1CfgConst[TASK_PROGRAM_2_CORE_1_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+};
+const CosmOS_TaskConfigurationType
+    TasksProgram2Core0CfgConst[TASK_PROGRAM_2_CORE_0_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
@@ -107,53 +107,53 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @cond S */
 __SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_TaskVariableType TasksProgram0Core0Var[TASK_PROGRAM_0_CORE_0_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        &TasksProgram0Core0CfgConst[TASK_0_PROGRAM_0_CORE_0_ID],      /* const CosmOS_TaskConfigurationType * cfg                    */
-        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_0_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
+CosmOS_TaskVariableType
+    TasksProgram0Core0Var[TASK_PROGRAM_0_CORE_0_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+    {
+        &TasksProgram0Core0CfgConst[TASK_0_PROGRAM_0_CORE_0_ID],    /* const CosmOS_TaskConfigurationType * cfg */
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_0_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const schedulable */
     },
-		{
-        &TasksProgram0Core0CfgConst[TASK_1_PROGRAM_0_CORE_0_ID],      /* const CosmOS_TaskConfigurationType * cfg                    */
-        &TasksSchedulablesVar[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
-    },
-};
-CosmOS_TaskVariableType TasksProgram1Core0Var[TASK_PROGRAM_1_CORE_0_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        &TasksProgram1Core0CfgConst[TASK_0_PROGRAM_1_CORE_0_ID],      /* const CosmOS_TaskConfigurationType * cfg                    */
-        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_1_CORE_0_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
+    {
+        &TasksProgram0Core0CfgConst[TASK_1_PROGRAM_0_CORE_0_ID],    /* const CosmOS_TaskConfigurationType * cfg */
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const schedulable */
     },
 };
-CosmOS_TaskVariableType TasksProgram0Core1Var[TASK_PROGRAM_0_CORE_1_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        &TasksProgram0Core1CfgConst[TASK_0_PROGRAM_0_CORE_1_ID],      /* const CosmOS_TaskConfigurationType * cfg                    */
-        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_0_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
-    },
-		{
-        &TasksProgram0Core1CfgConst[TASK_1_PROGRAM_0_CORE_1_ID],      /* const CosmOS_TaskConfigurationType * cfg                    */
-        &TasksSchedulablesVar[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
+CosmOS_TaskVariableType
+    TasksProgram1Core0Var[TASK_PROGRAM_1_CORE_0_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+    {
+        &TasksProgram1Core0CfgConst[TASK_0_PROGRAM_1_CORE_0_ID],    /* const CosmOS_TaskConfigurationType * cfg */
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_1_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const schedulable */
     },
 };
-CosmOS_TaskVariableType TasksProgram1Core1Var[TASK_PROGRAM_1_CORE_1_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO
-{
-		{
-        &TasksProgram1Core1CfgConst[TASK_0_PROGRAM_1_CORE_1_ID],      /* const CosmOS_TaskConfigurationType * cfg                    */
-        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_1_CORE_1_ID],            /* CosmOS_SchedulableVariableType * const schedulable                       */
+CosmOS_TaskVariableType
+    TasksProgram0Core1Var[TASK_PROGRAM_0_CORE_1_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+    {
+        &TasksProgram0Core1CfgConst[TASK_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_TaskConfigurationType * cfg */
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const schedulable */
+    },
+    {
+        &TasksProgram0Core1CfgConst[TASK_1_PROGRAM_0_CORE_1_ID],    /* const CosmOS_TaskConfigurationType * cfg */
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const schedulable */
     },
 };
-CosmOS_TaskVariableType TasksProgram2Core1Var[TASK_PROGRAM_2_CORE_1_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO
-{
+CosmOS_TaskVariableType
+    TasksProgram1Core1Var[TASK_PROGRAM_1_CORE_1_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+    {
+        &TasksProgram1Core1CfgConst[TASK_0_PROGRAM_1_CORE_1_ID],    /* const CosmOS_TaskConfigurationType * cfg */
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_1_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const schedulable */
+    },
 };
-CosmOS_TaskVariableType TasksProgram2Core0Var[TASK_PROGRAM_2_CORE_0_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO
-{
+CosmOS_TaskVariableType
+    TasksProgram2Core1Var[TASK_PROGRAM_2_CORE_1_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+};
+CosmOS_TaskVariableType
+    TasksProgram2Core0Var[TASK_PROGRAM_2_CORE_0_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
