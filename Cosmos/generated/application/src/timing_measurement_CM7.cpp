@@ -27,7 +27,6 @@
 #include <thread.h>
 #include "logger.h"
 #include "lwip.h"
-
 /********************************************************************************
 ** stop_name =timing_measurement_CM7_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -58,7 +57,7 @@ Timing_measurement_thread_CM7( void );
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /* @cond S */
-__SEC_START( __TIMING_MEASUREMENT_CM7_NOINIT_SECTION_START )
+__SEC_START( __TIMING_MEASUREMENT_CM7_NOINIT_SECTION_START)
 /* @endcond*/
 // If your compiler does not support pragmas use __TIMING_MEASUREMENT_CM7_NOINIT_SECTION
 /********************************************************************************
@@ -71,11 +70,11 @@ __SEC_START( __TIMING_MEASUREMENT_CM7_NOINIT_SECTION_START )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __TIMING_MEASUREMENT_CM7_NOINIT_SECTION_STOP )
+__SEC_STOP( __TIMING_MEASUREMENT_CM7_NOINIT_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START( __TIMING_MEASUREMENT_CM7_INIT_SECTION_START )
+__SEC_START( __TIMING_MEASUREMENT_CM7_INIT_SECTION_START)
 /* @endcond*/
 // If your compiler does not support pragmas use __TIMING_MEASUREMENT_CM7_INIT_SECTION
 /********************************************************************************
@@ -94,7 +93,7 @@ Timing_measurement_thread_CM7 toggled GPIOE PIN 1 \r\n\n";
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __TIMING_MEASUREMENT_CM7_INIT_SECTION_STOP )
+__SEC_STOP( __TIMING_MEASUREMENT_CM7_INIT_SECTION_STOP)
 /* @endcond*/
 
 /********************************************************************************

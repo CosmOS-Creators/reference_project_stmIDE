@@ -26,7 +26,6 @@
 #include <stm32h7xx_hal.h>
 #include <thread.h>
 #include "logger.h"
-
 /********************************************************************************
 ** stop_name =timing_measurement_CM4_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -59,7 +58,7 @@ Mutex_test_thread_CM4( void );
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /* @cond S */
-__SEC_START( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_START )
+__SEC_START( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_START)
 /* @endcond*/
 // If your compiler does not support pragmas use __TIMING_MEASUREMENT_CM4_NOINIT_SECTION
 /********************************************************************************
@@ -72,11 +71,11 @@ __SEC_START( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_START )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_STOP )
+__SEC_STOP( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START( __TIMING_MEASUREMENT_CM4_INIT_SECTION_START )
+__SEC_START( __TIMING_MEASUREMENT_CM4_INIT_SECTION_START)
 /* @endcond*/
 // If your compiler does not support pragmas use __TIMING_MEASUREMENT_CM4_INIT_SECTION
 /********************************************************************************
@@ -94,7 +93,7 @@ Mutex_test_thread_CM4 released mutex for resources \r\n\n";
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __TIMING_MEASUREMENT_CM4_INIT_SECTION_STOP )
+__SEC_STOP( __TIMING_MEASUREMENT_CM4_INIT_SECTION_STOP)
 /* @endcond*/
 
 /********************************************************************************

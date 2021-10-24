@@ -26,7 +26,6 @@
 #include <os.h>
 #include <stm32h7xx_hal.h>
 #include <thread.h>
-
 /********************************************************************************
 ** stop_name =logger_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -59,7 +58,7 @@ Logger_thread( void );
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /* @cond S */
-__SEC_START( __LOGGER_NOINIT_SECTION_START )
+__SEC_START( __LOGGER_NOINIT_SECTION_START)
 /* @endcond*/
 // If your compiler does not support pragmas use __LOGGER_NOINIT_SECTION
 /********************************************************************************
@@ -72,11 +71,11 @@ __SEC_START( __LOGGER_NOINIT_SECTION_START )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __LOGGER_NOINIT_SECTION_STOP )
+__SEC_STOP( __LOGGER_NOINIT_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START( __LOGGER_INIT_SECTION_START )
+__SEC_START( __LOGGER_INIT_SECTION_START)
 /* @endcond*/
 // If your compiler does not support pragmas use __LOGGER_INIT_SECTION
 /********************************************************************************
@@ -89,8 +88,9 @@ __SEC_START( __LOGGER_INIT_SECTION_START )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __LOGGER_INIT_SECTION_STOP )
+__SEC_STOP( __LOGGER_INIT_SECTION_STOP)
 /* @endcond*/
+
 
 /********************************************************************************
 ** Thread ID macro = THREAD_0_PROGRAM_2_CORE_1_ID

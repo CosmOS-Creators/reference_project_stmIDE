@@ -30,7 +30,6 @@
 #include "lwip.h"
 #include "stats.h"
 #include "tcp.h"
-
 /********************************************************************************
 ** stop_name =ethernet_com_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -94,7 +93,7 @@ TCPIP_thread( void );
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /* @cond S */
-__SEC_START( __ETHERNET_COM_NOINIT_SECTION_START )
+__SEC_START( __ETHERNET_COM_NOINIT_SECTION_START)
 /* @endcond*/
 // If your compiler does not support pragmas use __ETHERNET_COM_NOINIT_SECTION
 /********************************************************************************
@@ -107,11 +106,11 @@ static struct tcp_pcb * echo_pcb __ETHERNET_COM_NOINIT_SECTION;
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __ETHERNET_COM_NOINIT_SECTION_STOP )
+__SEC_STOP( __ETHERNET_COM_NOINIT_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START( __ETHERNET_COM_INIT_SECTION_START )
+__SEC_START( __ETHERNET_COM_INIT_SECTION_START)
 /* @endcond*/
 // If your compiler does not support pragmas use __ETHERNET_COM_INIT_SECTION
 /********************************************************************************
@@ -131,8 +130,9 @@ Handling echo for client with payload message: ";
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __ETHERNET_COM_INIT_SECTION_STOP )
+__SEC_STOP( __ETHERNET_COM_INIT_SECTION_STOP)
 /* @endcond*/
+
 
 /********************************************************************************
 ** Thread ID macro = THREAD_0_PROGRAM_2_CORE_0_ID
