@@ -26,7 +26,6 @@
 #include <stm32h7xx_hal.h>
 #include <thread.h>
 #include "logger.h"
-#include "lwip.h"
 /********************************************************************************
 ** stop_name =timing_measurement_CM7_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -116,10 +115,6 @@ Timing_measurement_task_CM7( void )
     CosmOS_BufferStateType bufferState;
     CosmOS_MutexStateType mutexState;
 
-    //Timing measurement with logic analyzer, pls dont remove
-    cosmosApi_deviceIO_togglePin(
-        GPIOF,
-        GPIO_PIN_11 );
     if ( counter > 100 )
     {
         counter = 0;
@@ -135,17 +130,13 @@ Timing_measurement_task_CM7( void )
         spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
         spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
         //trying if kernel will return err cause task cannot use mutexes
-        mutexState = mutex_getMutex(
-            &gpio_e_mutex );
+        mutexState = mutex_getMutex( &gpio_e_mutex );
     }
     else
     {
         counter++;
     }
     __asm volatile( "VMUL.F32 s0, s0, s1" );  //testing FPU context switch
-    cosmosApi_deviceIO_togglePin(
-        GPIOF,
-        GPIO_PIN_11 );  //Timing measurement with logic analyzer, pls dont remove
 
     __SUPRESS_UNUSED_VAR( spinlockState );
     __SUPRESS_UNUSED_VAR( mutexState );
@@ -213,7 +204,7 @@ __SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
 __APPLICATION_FUNC_SECTION_CM7 void
 GPIO::togglePin( BitWidthType pinNumber )
 {
-    cosmosApi_deviceIO_togglePin( address, pinNumber );
+    HAL_GPIO_TogglePin( (GPIO_TypeDef*)address, pinNumber );
 }
 /********************************************************************************
 ** stop_name =timing_measurement_CM7_userCodeFree

@@ -23,8 +23,8 @@
 /* CORE interfaces */
 #include "sysJobsCfg.h"
 /* GENERATED interfaces */
-#include "CILuart.h"
-#include "CILuart.h"
+#include "default_CM7.h"
+#include "default_CM4.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -63,12 +63,12 @@ __SEC_START(__OS_CONSTS_SECTION_START)
 const CosmOS_GenericVoidType
     SysJobsHandlersGroup0Core0Const[SYSJOBS_HANDLERS_GROUP_0_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
-    (CosmOS_GenericVoidType)CILuart_sysJob,
+    (CosmOS_GenericVoidType)sysJobsGroup_20ms_CM7,
 };
 const CosmOS_GenericVoidType
     SysJobsHandlersGroup0Core1Const[SYSJOBS_HANDLERS_GROUP_0_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
-    (CosmOS_GenericVoidType)CILuart_sysJob,
+    (CosmOS_GenericVoidType)sysJobsGroup_10ms_CM4,
 };
 const CosmOS_SysJobsGroupConfigurationType
     SysJobsGroupsCore0ConstCfg[SYSJOBS_GROUPS_CORE_0_NUM] __OS_CONSTS_SECTION

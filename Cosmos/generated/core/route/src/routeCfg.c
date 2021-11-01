@@ -25,7 +25,6 @@
 /* GENERATED interfaces */
 #include "buffer.h"
 #include "buffer.h"
-#include "deviceIO.h"
 #include "osInit.h"
 #include "os.h"
 #include "schedulable.h"
@@ -85,7 +84,6 @@ IS_INITIALIZED_TO
 {
     (CosmOS_GenericVoidType)buffer_readArray,
     (CosmOS_GenericVoidType)buffer_writeArray,
-    (CosmOS_GenericVoidType)deviceIO_togglePin,
     (CosmOS_GenericVoidType)osInit_init,
     (CosmOS_GenericVoidType)os_start,
     (CosmOS_GenericVoidType)schedulable_setExecutionStateToFinished,
@@ -124,7 +122,6 @@ IS_INITIALIZED_TO
     BUFFER_WRITEARRAY,
     BUFFER_READARRAY,
     BUFFER_WRITEARRAY,
-    DEVICEIO_TOGGLEPIN,
     OSINIT_INIT,
     OS_START,
     SCHEDULABLE_SETEXECUTIONSTATETOFINISHED,
@@ -161,7 +158,6 @@ IS_INITIALIZED_TO
     BUFFER_2_ID,
     BUFFER_3_ID,
     BUFFER_3_ID,
-    ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,

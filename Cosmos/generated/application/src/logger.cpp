@@ -26,6 +26,7 @@
 #include <os.h>
 #include <stm32h7xx_hal.h>
 #include <thread.h>
+
 /********************************************************************************
 ** stop_name =logger_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -58,7 +59,7 @@ Logger_thread( void );
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /* @cond S */
-__SEC_START( __LOGGER_NOINIT_SECTION_START)
+__SEC_START( __LOGGER_NOINIT_SECTION_START )
 /* @endcond*/
 // If your compiler does not support pragmas use __LOGGER_NOINIT_SECTION
 /********************************************************************************
@@ -71,26 +72,25 @@ __SEC_START( __LOGGER_NOINIT_SECTION_START)
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __LOGGER_NOINIT_SECTION_STOP)
+__SEC_STOP( __LOGGER_NOINIT_SECTION_STOP )
 /* @endcond*/
 
 /* @cond S */
-__SEC_START( __LOGGER_INIT_SECTION_START)
+__SEC_START( __LOGGER_INIT_SECTION_START )
 /* @endcond*/
 // If your compiler does not support pragmas use __LOGGER_INIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =logger_init
 ********************************************************************************/
-
+CosmOS_BooleanType __LOGGER_INIT_SECTION dma_tx_complete = True;
 /********************************************************************************
 ** stop_name =logger_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __LOGGER_INIT_SECTION_STOP)
+__SEC_STOP( __LOGGER_INIT_SECTION_STOP )
 /* @endcond*/
-
 
 /********************************************************************************
 ** Thread ID macro = THREAD_0_PROGRAM_2_CORE_1_ID
@@ -115,37 +115,41 @@ Logger_thread( void )
 
     thread_sleepMs( 5 );
 
-    cosmosApi_interrupt_disableInterrupt( USART3_IRQn );
-    cosmosApi_interrupt_disableInterrupt( DMA1_Stream0_IRQn );
-
-    osVar = os_getOsVar();
-    loggerBufferVar = os_getOsBufferVar( osVar, logger_buffer_id );
-
-    bufferArr = buffer_getBuffer( loggerBufferVar );
-    bufferSize = buffer_getBufferSize( loggerBufferVar );
-    bufferTail = buffer_getBufferTail( loggerBufferVar );
-    bufferFullCellsNum = buffer_getFullCellsNum( loggerBufferVar );
-
-    if ( bufferFullCellsNum )
+    if ( dma_tx_complete )
     {
-        if ( (AddressType)bufferArr + bufferSize <
-             ( (AddressType)bufferArr + bufferTail + bufferFullCellsNum ) )
+        cosmosApi_interrupt_disableInterrupt( USART3_IRQn );
+        cosmosApi_interrupt_disableInterrupt( DMA1_Stream0_IRQn );
+
+        osVar = os_getOsVar();
+        loggerBufferVar = os_getOsBufferVar( osVar, logger_buffer_id );
+
+        bufferArr = buffer_getBuffer( loggerBufferVar );
+        bufferSize = buffer_getBufferSize( loggerBufferVar );
+        bufferTail = buffer_getBufferTail( loggerBufferVar );
+        bufferFullCellsNum = buffer_getFullCellsNum( loggerBufferVar );
+
+        if ( bufferFullCellsNum )
         {
-            sizeToSend = bufferSize - bufferTail;
-        }
-        else
-        {
-            sizeToSend = bufferFullCellsNum;
+            if ( (AddressType)bufferArr + bufferSize <
+                 ( (AddressType)bufferArr + bufferTail + bufferFullCellsNum ) )
+            {
+                sizeToSend = bufferSize - bufferTail;
+            }
+            else
+            {
+                sizeToSend = bufferFullCellsNum;
+            }
+
+            HAL_UART_Transmit_DMA(
+                &huart3,
+                (unsigned char *)( (AddressType)bufferArr + (AddressType)bufferTail ),
+                sizeToSend );
+            dma_tx_complete = False;
         }
 
-        HAL_UART_Transmit_DMA(
-            &huart3,
-            (unsigned char *)( (AddressType)bufferArr + (AddressType)bufferTail ),
-            sizeToSend );
+        cosmosApi_interrupt_enableInterrupt( USART3_IRQn );
+        cosmosApi_interrupt_enableInterrupt( DMA1_Stream0_IRQn );
     }
-
-    cosmosApi_interrupt_enableInterrupt( USART3_IRQn );
-    cosmosApi_interrupt_enableInterrupt( DMA1_Stream0_IRQn );
 /********************************************************************************
 ** stop_name =Logger_thread
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -174,7 +178,7 @@ user_log( void * ptr, BitWidthType size )
 __APPLICATION_FUNC_SECTION_CM4 void
 HAL_UART_TxCpltCallback( UART_HandleTypeDef * huart )
 {
-    __disable_irq();
+    __disable_irq();  //api should not be used as its disable also system timer
     CosmOS_BufferVariableType * loggerBufferVar;
     CosmOS_OsVariableType * osVar;
 
@@ -186,7 +190,8 @@ HAL_UART_TxCpltCallback( UART_HandleTypeDef * huart )
     loggerBufferVar->tail =
         ( ( loggerBufferVar->tail + huart->TxXferSize ) %
           loggerBufferVar->cfg->size );
-    __enable_irq();
+    dma_tx_complete = True;
+    __enable_irq();  //api should not be used as its disable also system timer
 };
 /********************************************************************************
 ** stop_name =logger_userCodeFree

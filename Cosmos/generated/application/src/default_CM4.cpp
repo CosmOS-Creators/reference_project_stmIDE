@@ -22,7 +22,7 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =default_CM4_includeFiles
 ********************************************************************************/
-
+#include <stm32h7xx_hal.h>
 /********************************************************************************
 ** stop_name =default_CM4_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -92,7 +92,11 @@ __SEC_START( __APPLICATION_FUNC_SECTION_START_CM4 )
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Start      **
 ** start_name =default_CM4_userCodeFree
 ********************************************************************************/
-
+__APPLICATION_FUNC_SECTION_CM4 void
+sysJobsGroup_10ms_CM4( void )
+{
+    HAL_GPIO_TogglePin( GPIOA, GPIO_PIN_4 );
+}
 /********************************************************************************
 ** stop_name =default_CM4_userCodeFree
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Stop       **

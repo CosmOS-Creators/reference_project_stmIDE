@@ -22,7 +22,7 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =default_CM7_includeFiles
 ********************************************************************************/
-
+#include <stm32h7xx_hal.h>
 /********************************************************************************
 ** stop_name =default_CM7_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -92,7 +92,11 @@ __SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Start      **
 ** start_name =default_CM7_userCodeFree
 ********************************************************************************/
-
+__APPLICATION_FUNC_SECTION_CM7 void
+sysJobsGroup_20ms_CM7( void )
+{
+    HAL_GPIO_TogglePin( GPIOF, GPIO_PIN_11 );
+}
 /********************************************************************************
 ** stop_name =default_CM7_userCodeFree
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Stop       **
