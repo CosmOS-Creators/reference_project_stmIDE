@@ -116,6 +116,6 @@
 			"cosmosapiprivate.h": "c",
 			"future": "cpp"
 		},
-		"editor.formatOnType": true
+        "editor.formatOnType": true
 	},
 }
