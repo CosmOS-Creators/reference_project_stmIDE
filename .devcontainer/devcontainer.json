@@ -24,7 +24,8 @@
 	"extensions": [
 		"ms-python.python",
 		"ms-python.vscode-pylance",
-		"seanwu.vscode-qt-for-python"
+		"seanwu.vscode-qt-for-python",
+        "james-yu.latex-workshop"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
