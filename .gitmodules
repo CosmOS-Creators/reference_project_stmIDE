@@ -10,3 +10,6 @@
 	path = Cosmos/stm32h755_integration
 	url = https://github.com/CosmOS-Creators/stm32h755_integration
 	branch = master
+[submodule "Cosmos/docs"]
+	path = Cosmos/docs
+	url = https://github.com/CosmOS-Creators/docs.git
