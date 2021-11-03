@@ -1,37 +1,40 @@
 {
-  "files.associations": {
-    "cilcore.h": "c",
-    "array": "c",
-    "deque": "c",
-    "initializer_list": "c",
-    "list": "c",
-    "type_traits": "c",
-    "vector": "c",
-    "xhash": "c",
-    "xstring": "c",
-    "xtree": "c",
-    "mutexcfg.h": "c",
-    "xutility": "c"
-  },
-  "editor.tabSize": 4,
-  "clang-format.executable": "clang-format",
-  "clang-format.language.cpp.style": "file",
-  "[c]": {
-    "editor.defaultFormatter": "xaver.clang-format",
-    "editor.tabSize": 4
-  },
-  "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format",
-    "editor.tabSize": 4
-  },
-  "[python]": {
+    "files.associations": {
+        "cilcore.h": "c",
+        "array": "c",
+        "deque": "c",
+        "initializer_list": "c",
+        "list": "c",
+        "type_traits": "c",
+        "vector": "c",
+        "xhash": "c",
+        "xstring": "c",
+        "xtree": "c",
+        "mutexcfg.h": "c",
+        "xutility": "c"
+    },
     "editor.tabSize": 4,
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
-  },
-  "[json]": {
+    "clang-format.executable": "clang-format",
+    "clang-format.language.cpp.style": "file",
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.tabSize": 4
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.tabSize": 4
+    },
+
+    "[python]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true
+    },
+
+    "[json]": {
     "editor.tabSize": 4
-  },
-  "editor.insertSpaces": true,
-  "python.formatting.provider": "black"
+    },
+
+    "editor.insertSpaces": true,
+    "python.formatting.provider": "black",
+    "restructuredtext.confPath": "${workspaceFolder}\\Cosmos\\docs"
 }
