@@ -1,0 +1,10 @@
+version: "2.1"
+services:
+  cosmos:
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    image: florianl21/cosmos-workspace:latest
+    container_name: cosmos_workspace
+    volumes:
+      - cosmos_codebase:/workspace
+volumes:
+  cosmos_codebase:
