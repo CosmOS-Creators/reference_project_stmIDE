@@ -1,0 +1,13 @@
+version: "2.1"
+services:
+  cosmos:
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    image: florianl21/cosmos-workspace:latest
+    container_name: cosmos_workspace
+    environment:
+      - DISPLAY=:0
+    volumes:
+      - \\wsl.localhost\Ubuntu-20.04\mnt\wslg\.X11-unix:/tmp/.X11-unix
+      - cosmos_codebase:/workspace
+volumes:
+  cosmos_codebase:
