@@ -21,4 +21,4 @@ set(DRIVERS "${WORKSPACE}/Drivers")
 set(MIDDLEWARES "${WORKSPACE}/Middlewares")
 set(CORE "${COSMOS}/core")
 
-add_subdirectory(tests)
+add_subdirectory(system)
