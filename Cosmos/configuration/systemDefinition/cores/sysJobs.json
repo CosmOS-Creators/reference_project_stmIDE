@@ -13,18 +13,18 @@
 			},
 			{
 				"target": "sysJobsAttributes/:tickMultiplicator",
-				"value": 1
+				"value": 2
 			},
 			{
 				"target": "sysJobsAttributes/:handlers",
 				"value": [
-					"CILuart_sysJob"
+					"sysJobsGroup_20ms_CM7"
 				]
 			},
 			{
 				"target": "sysJobsAttributes/:apiHeaders",
 				"value": [
-					"CILuart.h"
+					"default_CM7.h"
 				]
 			},
 			{
@@ -43,13 +43,13 @@
 			{
 				"target": "sysJobsAttributes/:handlers",
 				"value": [
-					"CILuart_sysJob"
+					"sysJobsGroup_10ms_CM4"
 				]
 			},
 			{
 				"target": "sysJobsAttributes/:apiHeaders",
 				"value": [
-					"CILuart.h"
+					"default_CM4.h"
 				]
 			},
 			{

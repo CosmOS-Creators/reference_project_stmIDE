@@ -43,7 +43,8 @@ extern "C" {
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =default_CM4
 ********************************************************************************/
-
+__APPLICATION_FUNC_SECTION_CM4 void
+sysJobsGroup_10ms_CM4( void );
 /********************************************************************************
 ** stop_name =default_CM4
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **

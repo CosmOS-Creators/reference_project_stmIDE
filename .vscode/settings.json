@@ -13,20 +13,17 @@
         "mutexcfg.h": "c",
         "xutility": "c"
     },
-
     "editor.tabSize": 4,
-
     "clang-format.executable": "clang-format",
     "clang-format.language.cpp.style": "file",
-	"[c]": {
-		"editor.defaultFormatter": "xaver.clang-format",
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format",
         "editor.tabSize": 4
-	},
-
+    },
     "[cpp]": {
-		"editor.defaultFormatter": "xaver.clang-format",
+        "editor.defaultFormatter": "xaver.clang-format",
         "editor.tabSize": 4
-	},
+    },
 
     "[python]": {
     "editor.tabSize": 4,

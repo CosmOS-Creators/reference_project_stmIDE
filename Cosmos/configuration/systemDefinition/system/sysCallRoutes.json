@@ -72,39 +72,6 @@
 				"value": "CosmOS_BufferStateType"
 			}
 		],
-		"route_2": [
-			{
-				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "deviceIO_togglePin"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:apiHeader",
-				"value": "deviceIO.h"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
-			},
-			{
-				"target": "sysCallRoutesAttributes/:isMappedToEntity",
-				"value": false
-			},
-			{
-				"target": "sysCallRoutesAttributes/:args",
-				"value": [
-					"gpio",
-					"pin"
-				]
-			},
-			{
-				"target": "sysCallRoutesAttributes/:returnType",
-				"value": "void"
-			}
-		],
 		"route_3": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",

@@ -25,11 +25,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <thread.h>
-#include "debug.h"
 #include "logger.h"
 #include "lwip.h"
-#include "stats.h"
-#include "tcp.h"
+#include "lwip/debug.h"
+#include "lwip/stats.h"
+#include "lwip/tcp.h"
 
 /********************************************************************************
 ** stop_name =ethernet_com_includeFiles
@@ -144,7 +144,7 @@ __SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
 __APPLICATION_FUNC_SECTION_CM7 void
 TCPIP_thread( void )
 {
-/********************************************************************************
+    /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =TCPIP_thread
 ********************************************************************************/
@@ -158,7 +158,7 @@ TCPIP_thread( void )
     sys_check_timeouts();
 
     thread_sleepMs( 5 );
-/********************************************************************************
+    /********************************************************************************
 ** stop_name =TCPIP_thread
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/

@@ -26,7 +26,6 @@
 #include <stm32h7xx_hal.h>
 #include <thread.h>
 #include "logger.h"
-
 /********************************************************************************
 ** stop_name =timing_measurement_CM4_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -59,7 +58,7 @@ Mutex_test_thread_CM4( void );
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /* @cond S */
-__SEC_START( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_START )
+__SEC_START( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_START)
 /* @endcond*/
 // If your compiler does not support pragmas use __TIMING_MEASUREMENT_CM4_NOINIT_SECTION
 /********************************************************************************
@@ -72,11 +71,11 @@ __SEC_START( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_START )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_STOP )
+__SEC_STOP( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START( __TIMING_MEASUREMENT_CM4_INIT_SECTION_START )
+__SEC_START( __TIMING_MEASUREMENT_CM4_INIT_SECTION_START)
 /* @endcond*/
 // If your compiler does not support pragmas use __TIMING_MEASUREMENT_CM4_INIT_SECTION
 /********************************************************************************
@@ -94,7 +93,7 @@ Mutex_test_thread_CM4 released mutex for resources \r\n\n";
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __TIMING_MEASUREMENT_CM4_INIT_SECTION_STOP )
+__SEC_STOP( __TIMING_MEASUREMENT_CM4_INIT_SECTION_STOP)
 /* @endcond*/
 
 /********************************************************************************
@@ -117,9 +116,6 @@ Timing_measurement_task_CM4( void )
     CosmOS_BufferStateType bufferState;
     CosmOS_MutexStateType mutexState;
 
-    //cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4);
-    //Timing measurement with logic analyzer, pls dont remove
-
     bufferReader_cm4 = 100;
     bufferState = cosmosApi_write_buffer_x_core_buffer_1(
         &bufferReader_cm4, sizeof( bufferReader_cm4 ) );
@@ -132,8 +128,7 @@ Timing_measurement_task_CM4( void )
     spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
 
     //trying if kernel will return err cause task cannot use mutexes
-    mutexState = mutex_getMutex(
-        &resourcesMutex );
+    mutexState = mutex_getMutex( &resourcesMutex );
 
     if ( counter_cm4 > 100 )
     {
@@ -143,8 +138,6 @@ Timing_measurement_task_CM4( void )
     {
         counter_cm4++;
     }
-    //cosmosApi_deviceIO_togglePin(GPIOA, GPIO_PIN_4);
-    //Timing measurement with logic analyzer, pls dont remove
 
     __SUPRESS_UNUSED_VAR( spinlockState );
     __SUPRESS_UNUSED_VAR( mutexState );
@@ -179,13 +172,9 @@ Timing_measurement_thread_CM4( void )
     delete integerPointer;
 
     mutexState = mutex_getMutex( &resourcesMutex );
-    cosmosApi_deviceIO_togglePin(
-        GPIOA,
-        GPIO_PIN_4 );  //Timing measurement with logic analyzer, pls dont remove
+
     sleepState = thread_sleepMs( 10 );
-    cosmosApi_deviceIO_togglePin(
-        GPIOA,
-        GPIO_PIN_4 );  //Timing measurement with logic analyzer, pls dont remove
+
     mutexState = mutex_releaseMutex( &resourcesMutex );
 
     __SUPRESS_UNUSED_VAR( mutexState );
@@ -216,13 +205,9 @@ Mutex_test_thread_CM4( void )
     CosmOS_SleepStateType sleepState;
 
     mutexState = mutex_getMutex( &resourcesMutex );
-    cosmosApi_deviceIO_togglePin(
-        GPIOA,
-        GPIO_PIN_4 );  //Timing measurement with logic analyzer, pls dont remove
+
     sleepState = thread_sleepMs( 100 );
-    cosmosApi_deviceIO_togglePin(
-        GPIOA,
-        GPIO_PIN_4 );  //Timing measurement with logic analyzer, pls dont remove
+
     mutexState = mutex_releaseMutex( &resourcesMutex );
 
     sleepState = thread_sleepMs( 500 );

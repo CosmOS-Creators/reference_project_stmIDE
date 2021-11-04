@@ -58,7 +58,6 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
@@ -148,7 +147,6 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
@@ -281,7 +279,7 @@
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Common"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/generated/core"/>
-						<entry excluding="stack/test|core/test|memory/test|os/test|_testing|scheduler/test" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/core"/>
+						<entry excluding="stack/test|core/test|memory/test|os/test|_testing|scheduler/test|alarm/test|buffer/test|cosmosAssert/test|errorHandler/test|heap/test|interrupt/test|mutex/test|permission/test|program/test|route/test|schedulable/test|spinlock/test|support/test|sysCalls/test|sysJobs/test|task/test|thread/test" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Cosmos/stm32h755_integration/CIL"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="LWIP"/>
@@ -346,7 +344,6 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
@@ -432,7 +429,6 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
-									<listOptionValue builtIn="false" value="../../Cosmos/core/deviceIO/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>

@@ -134,11 +134,11 @@
 			},
 			{
 				"target": "threadsAttributes/:peripheralAccessLowAddress",
-				"value": "0x0"
+				"value": "0x58021000"
 			},
 			{
 				"target": "threadsAttributes/:peripheralAccessSize",
-				"value" : 0
+				"value" : 1024
 			},
 			{
 				"target": "threadsAttributes/:lowAddress"

@@ -25,7 +25,6 @@
 /* GENERATED interfaces */
 #include "buffer.h"
 #include "buffer.h"
-#include "deviceIO.h"
 #include "osInit.h"
 #include "os.h"
 #include "schedulable.h"
@@ -61,8 +60,8 @@
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}
-  * Macros_routeCfg
+  * @} */
+/*  Macros_routeCfg
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -85,7 +84,6 @@ IS_INITIALIZED_TO
 {
     (CosmOS_GenericVoidType)buffer_readArray,
     (CosmOS_GenericVoidType)buffer_writeArray,
-    (CosmOS_GenericVoidType)deviceIO_togglePin,
     (CosmOS_GenericVoidType)osInit_init,
     (CosmOS_GenericVoidType)os_start,
     (CosmOS_GenericVoidType)schedulable_setExecutionStateToFinished,
@@ -124,7 +122,6 @@ IS_INITIALIZED_TO
     BUFFER_WRITEARRAY,
     BUFFER_READARRAY,
     BUFFER_WRITEARRAY,
-    DEVICEIO_TOGGLEPIN,
     OSINIT_INIT,
     OS_START,
     SCHEDULABLE_SETEXECUTIONSTATETOFINISHED,
@@ -177,7 +174,6 @@ IS_INITIALIZED_TO
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
-    ROUTES_ID_TO_ENTITY_DUMMY,
 };
 
 const CosmOS_RoutesConfigurationType RoutesConstCfg __OS_CONSTS_SECTION
@@ -193,8 +189,8 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}
-  * Variables_routeCfg
+  * @} */
+/*  Variables_routeCfg
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -218,8 +214,8 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}
-  * Getters_routeCfg_c
+  * @} */
+/*  Getters_routeCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
@@ -231,8 +227,8 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}
-  * Setters_routeCfg_c
+  * @} */
+/*  Setters_routeCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
@@ -244,8 +240,8 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}
-  * General_routeCfg_c
+  * @} */
+/*  General_routeCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **

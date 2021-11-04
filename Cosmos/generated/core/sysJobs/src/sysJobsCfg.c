@@ -23,8 +23,8 @@
 /* CORE interfaces */
 #include "sysJobsCfg.h"
 /* GENERATED interfaces */
-#include "CILuart.h"
-#include "CILuart.h"
+#include "default_CM7.h"
+#include "default_CM4.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -41,8 +41,8 @@
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}
-  * Macros_sysJobsCfg
+  * @} */
+/*  Macros_sysJobsCfg
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -63,12 +63,12 @@ __SEC_START(__OS_CONSTS_SECTION_START)
 const CosmOS_GenericVoidType
     SysJobsHandlersGroup0Core0Const[SYSJOBS_HANDLERS_GROUP_0_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
-    (CosmOS_GenericVoidType)CILuart_sysJob,
+    (CosmOS_GenericVoidType)sysJobsGroup_20ms_CM7,
 };
 const CosmOS_GenericVoidType
     SysJobsHandlersGroup0Core1Const[SYSJOBS_HANDLERS_GROUP_0_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
-    (CosmOS_GenericVoidType)CILuart_sysJob,
+    (CosmOS_GenericVoidType)sysJobsGroup_10ms_CM4,
 };
 const CosmOS_SysJobsGroupConfigurationType
     SysJobsGroupsCore0ConstCfg[SYSJOBS_GROUPS_CORE_0_NUM] __OS_CONSTS_SECTION
@@ -126,8 +126,8 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}
-  * Variables_sysJobsCfg
+  * @} */
+/*  Variables_sysJobsCfg
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -151,8 +151,8 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}
-  * Getters_sysJobsCfg_c
+  * @} */
+/*  Getters_sysJobsCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
@@ -164,8 +164,8 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}
-  * Setters_sysJobsCfg_c
+  * @} */
+/*  Setters_sysJobsCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
@@ -177,8 +177,8 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
-  * @}
-  * General_sysJobsCfg_c
+  * @} */
+/*  General_sysJobsCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
