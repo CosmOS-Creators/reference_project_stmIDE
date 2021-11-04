@@ -25,16 +25,16 @@ jobs:
             - "/usr/lib/python3.8/site-packages"
       - run:
           name: Building system image with files on master
-          command: 'chmod +x /root/project/Cosmos/build/build.sh && ./build.sh --build SYSTEM'
+          command: 'chmod +x /root/project/Cosmos/build/build.sh && cd /root/project/Cosmos/build && ./build.sh --build SYSTEM'
       - run:
           name: Generate code from configuration
           command: 'python3 /root/project/Cosmos/customBox/python/ConfigurationGenerator.py /root/project/Cosmos/configuration/workspace.json'
       - run:
           name: Building system image with newly generated files
-          command: 'chmod +x /root/project/Cosmos/build/build.sh && ./build.sh --build SYSTEM'
+          command: 'chmod +x /root/project/Cosmos/build/build.sh && cd /root/project/Cosmos/build && ./build.sh --build SYSTEM'
       - run:
           name: Run C code unit tests
-          command: 'chmod +x /root/project/Cosmos/build/build.sh && ./build.sh --build TESTS'
+          command: 'chmod +x /root/project/Cosmos/build/build.sh && cd /root/project/Cosmos/build && ./build.sh --build TESTS'
       - run:
           name: Run Python code unit tests
           command: 'cd /root/project && python3 -m pytest'
