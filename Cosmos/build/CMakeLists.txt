@@ -1,13 +1,17 @@
-cmake_minimum_required(VERSION 3.15.3)
+#################################################################################
+##                                CMAKE SETTINGS                               ##
+#################################################################################
+cmake_minimum_required(VERSION 3.14)
 
 project(CosmOS)
 
 enable_language(C ASM)
+
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 11)
 
 #################################################################################
-##                                  DIRECTORIES                                ##
+##                              PROJECT STRUCTURE                              ##
 #################################################################################
 set(WORKSPACE "../../..")
 
@@ -21,4 +25,13 @@ set(DRIVERS "${WORKSPACE}/Drivers")
 set(MIDDLEWARES "${WORKSPACE}/Middlewares")
 set(CORE "${COSMOS}/core")
 
-add_subdirectory(system)
+#################################################################################
+##                                    BUILD                                    ##
+#################################################################################
+if( BUILD_TESTS )
+    add_subdirectory(tests)
+elseif( BUILD_SYSTEM )
+    add_subdirectory(system)
+else()
+    message(FATAL_ERROR "Please define the type of the build")
+endif()
