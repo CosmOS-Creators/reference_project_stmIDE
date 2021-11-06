@@ -111,7 +111,7 @@ Logger_thread( void )
     unsigned char * bufferArr;
 
     CosmOS_BufferConfigurationType * loggerBufferCfg;
-    CosmOS_OsVariableType * osVar;
+    CosmOS_OsConfigurationType * osCfg;
 
     thread_sleepMs( 5 );
 
@@ -120,8 +120,8 @@ Logger_thread( void )
         cosmosApi_interrupt_disableInterrupt( USART3_IRQn );
         cosmosApi_interrupt_disableInterrupt( DMA1_Stream0_IRQn );
 
-        osVar = os_getOsVar();
-        loggerBufferCfg = os_getOsBufferCfg( osVar, logger_buffer_id );
+        osCfg = os_getOsCfg();
+        loggerBufferCfg = os_getOsBufferCfg( osCfg, logger_buffer_id );
 
         bufferArr = buffer_getBuffer( loggerBufferCfg );
         bufferSize = buffer_getBufferSize( loggerBufferCfg );
@@ -180,10 +180,10 @@ HAL_UART_TxCpltCallback( UART_HandleTypeDef * huart )
 {
     __disable_irq();  //api should not be used as its disable also system timer
     CosmOS_BufferConfigurationType * loggerBufferCfg;
-    CosmOS_OsVariableType * osVar;
+    CosmOS_OsConfigurationType * osCfg;
 
-    osVar = os_getOsVar();
-    loggerBufferCfg = os_getOsBufferCfg( osVar, logger_buffer_id );
+    osCfg = os_getOsCfg();
+    loggerBufferCfg = os_getOsBufferCfg( osCfg, logger_buffer_id );
 
     loggerBufferCfg->var->fullCells =
         ( loggerBufferCfg->var->fullCells - huart->TxXferSize );

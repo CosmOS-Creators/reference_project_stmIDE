@@ -210,25 +210,25 @@ extern "C" {
 /********************************************************************************
   * DOXYGEN DOCUMENTATION INFORMATION                                          **
   * *************************************************************************//**
-  * @fn switchMemoryProtection_setMemoryProtection(coreVar,schedulable)
+  * @fn switchMemoryProtection_setMemoryProtection(coreCfg,schedulable)
   *
   * @brief Set memory protection for current execution context.
   *
-  * @param[in]  CosmOS_CoreVariableType * core
+  * @param[in]  CosmOS_CoreConfigurationType * core
   * @param[in]  CosmOS_SchedulableConfigurationType * schedulable
   *
   * @return none
 ********************************************************************************/
 #if ( MEMORY_PROTECTION IS_EQUAL_TO ON )
 #define switchMemoryProtection_setMemoryProtection(\
-    coreVar,\
+    coreCfg,\
     schedulable) \
 memoryProtection_setMemoryProtection(\
-    coreVar,\
+    coreCfg,\
     schedulable)
 #else
 #define switchMemoryProtection_setMemoryProtection(\
-    coreVar,\
+    coreCfg,\
     schedulable)
 #endif
 /********************************************************************************

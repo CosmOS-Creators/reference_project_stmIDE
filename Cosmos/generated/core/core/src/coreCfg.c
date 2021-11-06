@@ -62,11 +62,32 @@
   * @{
 ********************************************************************************/
 /* @cond S */
+__SEC_START(__OS_VARS_SECTION_START)
+/* @endcond*/
+CosmOS_CoreVariableType CoresVar[CORE_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+    {                                               /* CoresVar[CORE_0_ID] */
+        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableInExecution */
+        NULL,    /* CosmOS_ProgramVariableType * programInCurrentContext */
+        OS_STATE_ENUM__NOT_INITIALIZED,     /* CosmOS_OsStateType osState */
+    },
+    {                                               /* CoresVar[CORE_1_ID] */
+        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableInExecution */
+        NULL,    /* CosmOS_ProgramVariableType * programInCurrentContext */
+        OS_STATE_ENUM__NOT_INITIALIZED,     /* CosmOS_OsStateType osState */
+    },
+};
+/* @cond S */
+__SEC_STOP(__OS_VARS_SECTION_STOP)
+/* @endcond*/
+
+/* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
 const CosmOS_CoreConfigurationType CoresCfgConst[CORE_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
     {                                               /* CoresCfgConst[CORE_0_ID] */
+        &CoresVar[CORE_0_ID],    /* CosmOS_CoreVariableType * const var */
         ProgramsCore0CfgConst,    /* const CosmOS_ProgramConfigurationType * programs */
         PROGRAM_CORE_0_NUM,    /* const BitWidthType numberOfPrograms */
         &SchedulersCfgConst[SCHEDULER_CORE_0_ID],    /* CosmOS_SchedulerConfigurationType * scheduler */
@@ -80,8 +101,14 @@ IS_INITIALIZED_TO{
         CORE_0_UNPROTECTED_MEMORY_HIGH_ADDRESS,    /* const AddressType unprotectedMemoryHighAddress */
         CORE_0_MS_TO_TICK,    /* const BitWidthType msToTicks */
         ALARM_CORE_0_NUM,    /* const BitWidthType numberOfAlarms */
+        ProgramsCore0CfgConst,    /* CosmOS_ProgramVariableType * programCfgs */
+        &SchedulersCfgConst[SCHEDULER_CORE_0_ID],    /* CosmOS_SchedulerConfigurationType * schedulerCfg */
+        BarriersCore0Var,    /* CosmOS_BarrierVariableType * barrierVars */
+        &SysJobsCfgConst[CORE_0_ID],    /* CosmOS_SysJobsConfigurationType * const sysJobsCfg */
+        AlarmsCore0CfgConst,    /* CosmOS_AlarmConfigurationType * const alarmCfgs */
     },
     {                                               /* CoresCfgConst[CORE_1_ID] */
+        &CoresVar[CORE_1_ID],    /* CosmOS_CoreVariableType * const var */
         ProgramsCore1CfgConst,    /* const CosmOS_ProgramConfigurationType * programs */
         PROGRAM_CORE_1_NUM,    /* const BitWidthType numberOfPrograms */
         &SchedulersCfgConst[SCHEDULER_CORE_1_ID],    /* CosmOS_SchedulerConfigurationType * scheduler */
@@ -95,42 +122,15 @@ IS_INITIALIZED_TO{
         CORE_1_UNPROTECTED_MEMORY_HIGH_ADDRESS,    /* const AddressType unprotectedMemoryHighAddress */
         CORE_1_MS_TO_TICK,    /* const BitWidthType msToTicks */
         ALARM_CORE_1_NUM,    /* const BitWidthType numberOfAlarms */
+        ProgramsCore1CfgConst,    /* CosmOS_ProgramVariableType * programCfgs */
+        &SchedulersCfgConst[SCHEDULER_CORE_1_ID],    /* CosmOS_SchedulerConfigurationType * schedulerCfg */
+        BarriersCore1Var,    /* CosmOS_BarrierVariableType * barrierVars */
+        &SysJobsCfgConst[CORE_1_ID],    /* CosmOS_SysJobsConfigurationType * const sysJobsCfg */
+        AlarmsCore1CfgConst,    /* CosmOS_AlarmConfigurationType * const alarmCfgs */
     },
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
-/* @endcond*/
-
-/* @cond S */
-__SEC_START(__OS_VARS_SECTION_START)
-/* @endcond*/
-CosmOS_CoreVariableType CoresVar[CORE_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO{
-    {                                               /* CoresVar[CORE_0_ID] */
-        &CoresCfgConst[CORE_0_ID],    /* const CosmOS_CoreConfigurationType *cfg */
-        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableInExecution */
-        NULL,    /* CosmOS_ProgramVariableType * programInCurrentContext */
-        ProgramsCore0Var,    /* CosmOS_ProgramVariableType * programVars */
-        &SchedulersVar[SCHEDULER_CORE_0_ID],    /* CosmOS_SchedulerVariableType * scheduler */
-        BarriersCore0Var,    /* CosmOS_BarrierVariableType * barrierVars */
-        OS_STATE_ENUM__NOT_INITIALIZED,     /* CosmOS_OsStateType osState */
-        &SysJobsVar[CORE_0_ID],    /* CosmOS_SysJobsVariableType * const sysJobs */
-        AlarmsCore0Var,    /* CosmOS_AlarmVariableType * const alarmVars */
-    },
-    {                                               /* CoresVar[CORE_1_ID] */
-        &CoresCfgConst[CORE_1_ID],    /* const CosmOS_CoreConfigurationType *cfg */
-        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableInExecution */
-        NULL,    /* CosmOS_ProgramVariableType * programInCurrentContext */
-        ProgramsCore1Var,    /* CosmOS_ProgramVariableType * programVars */
-        &SchedulersVar[SCHEDULER_CORE_1_ID],    /* CosmOS_SchedulerVariableType * scheduler */
-        BarriersCore1Var,    /* CosmOS_BarrierVariableType * barrierVars */
-        OS_STATE_ENUM__NOT_INITIALIZED,     /* CosmOS_OsStateType osState */
-        &SysJobsVar[CORE_1_ID],    /* CosmOS_SysJobsVariableType * const sysJobs */
-        AlarmsCore1Var,    /* CosmOS_AlarmVariableType * const alarmVars */
-    },
-};
-/* @cond S */
-__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

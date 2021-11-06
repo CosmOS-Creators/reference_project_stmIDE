@@ -181,7 +181,7 @@ extern "C" {
 /********************************************************************************
   * DOXYGEN DOCUMENTATION INFORMATION                                          **
   * *************************************************************************//**
-  * @fn switchScheduler_classicScheduling(schedulerVar,
+  * @fn switchScheduler_classicScheduling(schedulerCfg,
   * schedulableCfg,
   * stackPointerRetVal,
   * timerTicks,
@@ -190,7 +190,7 @@ extern "C" {
   *
   * @brief Classic scheduling function. DEMO
   *
-  * @param[in]  CosmOS_SchedulerVariableType * schedulerVar
+  * @param[in]  CosmOS_SchedulerConfigurationType * schedulerCfg
   * @param[in]  CosmOS_SchedulableConfigurationType * schedulableCfg
   * @param[in]  StackPointerType * stackPointerRetVal
   * @param[in]  BitWidthType * timerTicks
@@ -201,14 +201,14 @@ extern "C" {
 ********************************************************************************/
 #if ( SCHEDULER_PERFORMANCE_SCHEDULING IS_EQUAL_TO OFF )
 #define switchScheduler_classicScheduling(\
-    schedulerVar,\
+    schedulerCfg,\
     schedulableCfg,\
     stackPointerRetVal,\
     timerTicks,\
     startTick,\
     currentTick) \
     scheduler_classicScheduling(\
-    schedulerVar,\
+    schedulerCfg,\
     schedulableCfg,\
     stackPointerRetVal,\
     timerTicks,\
@@ -216,7 +216,7 @@ extern "C" {
     currentTick)
 #else
 #define switchScheduler_classicScheduling(\
-    schedulerVar,\
+    schedulerCfg,\
     schedulableCfg,\
     stackPointerRetVal,\
     timerTicks,\
@@ -228,14 +228,14 @@ extern "C" {
   * DOXYGEN DOCUMENTATION INFORMATION                                          **
   * *************************************************************************//**
   * @fn  scheduler_performanceScheduling(
-  * CosmOS_SchedulerVariableType * schedulerVar,
+  * CosmOS_SchedulerConfigurationType * schedulerCfg,
   * CosmOS_SchedulableConfigurationType ** schedulableCfg,
   * StackPointerType * stackPointerRetVal,
   * BitWidthType * timerTicks)
   *
   * @brief Performance scheduling function. DEMO
   *
-  * @param[in]  CosmOS_SchedulerVariableType * schedulerVar
+  * @param[in]  CosmOS_SchedulerConfigurationType * schedulerCfg
   * @param[in]  CosmOS_SchedulableConfigurationType * schedulableCfg
   * @param[in]  StackPointerType * stackPointerRetVal
   * @param[in]  BitWidthType * timerTicks
@@ -244,18 +244,18 @@ extern "C" {
 ********************************************************************************/
 #if ( SCHEDULER_PERFORMANCE_SCHEDULING IS_EQUAL_TO ON )
 #define switchScheduler_performanceScheduling(\
-    schedulerVar,\
+    schedulerCfg,\
     schedulableCfg,\
     stackPointerRetVal,\
     timerTicks) \
     scheduler_performanceScheduling(\
-    schedulerVar,\
+    schedulerCfg,\
     schedulableCfg,\
     stackPointerRetVal,\
     timerTicks)
 #else
 #define switchScheduler_performanceScheduling(\
-    schedulerVar,\
+    schedulerCfg,\
     schedulableCfg,\
     stackPointerRetVal,\
     timerTicks)
@@ -264,7 +264,7 @@ extern "C" {
 /********************************************************************************
   * DOXYGEN DOCUMENTATION INFORMATION                                          **
   * *************************************************************************//**
-  * @fn switchScheduler_schedulable_setStackPointer(schedulerVar,
+  * @fn switchScheduler_schedulable_setStackPointer(schedulerCfg,
   * schedulableCfg,
   * stackPointerRetVal,
   * timerTicks,
@@ -294,13 +294,13 @@ extern "C" {
 /********************************************************************************
   * DOXYGEN DOCUMENTATION INFORMATION                                          **
   * *************************************************************************//**
-  * @fn  switchScheduler_updateAlarms(CosmOS_CoreVariableType * coreVar,
+  * @fn  switchScheduler_updateAlarms(CosmOS_CoreConfigurationType * coreCfg,
   * BitWidthType currentTick,
   * BitWidthType hyperTick)
   *
   * @brief Update alarms DEMO.
   *
-  * @param[in]  CosmOS_CoreVariableType * coreVar
+  * @param[in]  CosmOS_CoreConfigurationType * coreCfg
   * @param[in]  BitWidthType currentTick
   * @param[in]  BitWidthType hyperTick
   *
@@ -308,14 +308,14 @@ extern "C" {
 ********************************************************************************/
 #if ( SCHEDULER_PERFORMANCE_SCHEDULING IS_EQUAL_TO ON )
 #define switchScheduler_updateAlarms(\
-    coreVar,\
+    coreCfg,\
     priorTickStep) \
     scheduler_updateAlarms(\
-    coreVar,\
+    coreCfg,\
     priorTickStep)
 #else
 #define switchScheduler_updateAlarms(\
-    coreVar,\
+    coreCfg,\
     priorTickStep)
 #endif
 /********************************************************************************
