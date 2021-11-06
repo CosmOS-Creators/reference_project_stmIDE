@@ -30,7 +30,6 @@ ReflowComments: "false"
 DerivePointerAlignment: "false"
 IncludeBlocks: Merge
 IndentWidth: "4"
-IndentExternBlock: "false"
 BraceWrapping:
   AfterClass:      true
   AfterControlStatement: true

@@ -83,8 +83,8 @@ CosmOS_OsVariableType OsVar __OS_VARS_SECTION
 IS_INITIALIZED_TO{                       /* osVar */
     &OsCfg,    /* const CosmOS_OsConfigurationType * cfg */
     CoresVar,    /* CosmOS_CoreVariableType * coreVars */
-    BuffersVar,    /* CosmOS_BufferVariableType * bufferVars */
-    BuffersDoubleVar,    /* CosmOS_BufferDoubleVariableType * const bufferDoubleVars */
+    BuffersCfgConst,    /* CosmOS_BufferVariableType * bufferVars */
+    BuffersDoubleCfg,    /* CosmOS_BufferDoubleVariableType * const bufferDoubleVars */
     SpinlocksVar,    /* CosmOS_BufferDoubleVariableType * const spinlockVars */
 };
 /* @cond S */

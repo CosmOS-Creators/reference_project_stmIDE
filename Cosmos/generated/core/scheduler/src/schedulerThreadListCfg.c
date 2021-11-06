@@ -63,13 +63,13 @@ const CosmOS_ThreadListConfigurationType
 IS_INITIALIZED_TO
 {
     {
-        &ThreadsProgram2Core0Var[THREAD_0_PROGRAM_2_CORE_0_ID],    /* CosmOS_ThreadVariableType * thread */
+        &ThreadsProgram2Core0CfgConst[THREAD_0_PROGRAM_2_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
-        &ThreadsProgram1Core0Var[THREAD_0_PROGRAM_1_CORE_0_ID],    /* CosmOS_ThreadVariableType * thread */
+        &ThreadsProgram1Core0CfgConst[THREAD_0_PROGRAM_1_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
-        &ThreadsProgram0Core0Var[THREAD_0_PROGRAM_0_CORE_0_ID],    /* CosmOS_ThreadVariableType * thread */
+        &ThreadsProgram0Core0CfgConst[THREAD_0_PROGRAM_0_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
 };
 const CosmOS_ThreadListConfigurationType
@@ -77,16 +77,16 @@ const CosmOS_ThreadListConfigurationType
 IS_INITIALIZED_TO
 {
     {
-        &ThreadsProgram1Core1Var[THREAD_1_PROGRAM_1_CORE_1_ID],    /* CosmOS_ThreadVariableType * thread */
+        &ThreadsProgram1Core1CfgConst[THREAD_1_PROGRAM_1_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
-        &ThreadsProgram1Core1Var[THREAD_0_PROGRAM_1_CORE_1_ID],    /* CosmOS_ThreadVariableType * thread */
+        &ThreadsProgram1Core1CfgConst[THREAD_0_PROGRAM_1_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
-        &ThreadsProgram2Core1Var[THREAD_0_PROGRAM_2_CORE_1_ID],    /* CosmOS_ThreadVariableType * thread */
+        &ThreadsProgram2Core1CfgConst[THREAD_0_PROGRAM_2_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
-        &ThreadsProgram0Core1Var[THREAD_0_PROGRAM_0_CORE_1_ID],    /* CosmOS_ThreadVariableType * thread */
+        &ThreadsProgram0Core1CfgConst[THREAD_0_PROGRAM_0_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
 };
 /* @cond S */

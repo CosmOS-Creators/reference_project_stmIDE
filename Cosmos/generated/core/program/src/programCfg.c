@@ -141,20 +141,20 @@ CosmOS_ProgramVariableType
 IS_INITIALIZED_TO{
         {
         &ProgramsCore0CfgConst[PROGRAM_0_CORE_0_ID],    /* const CosmOS_ProgramConfigurationType * cfg */
-        TasksProgram0Core0Var,    /* CosmOS_TaskVariableType * taskVars */
-        ThreadsProgram0Core0Var,    /* CosmOS_ThreadVariableType * threadVars */
+        TasksProgram0Core0CfgConst,    /* CosmOS_TaskConfigurationType * taskCfgs */
+        ThreadsProgram0Core0CfgConst,    /* CosmOS_ThreadConfigurationType * threadCfgs */
         0,    /* BitWidthType numberOfMallocVars */
     },
         {
         &ProgramsCore0CfgConst[PROGRAM_1_CORE_0_ID],    /* const CosmOS_ProgramConfigurationType * cfg */
-        TasksProgram1Core0Var,    /* CosmOS_TaskVariableType * taskVars */
-        ThreadsProgram1Core0Var,    /* CosmOS_ThreadVariableType * threadVars */
+        TasksProgram1Core0CfgConst,    /* CosmOS_TaskConfigurationType * taskCfgs */
+        ThreadsProgram1Core0CfgConst,    /* CosmOS_ThreadConfigurationType * threadCfgs */
         0,    /* BitWidthType numberOfMallocVars */
     },
         {
         &ProgramsCore0CfgConst[PROGRAM_2_CORE_0_ID],    /* const CosmOS_ProgramConfigurationType * cfg */
-        TasksProgram2Core0Var,    /* CosmOS_TaskVariableType * taskVars */
-        ThreadsProgram2Core0Var,    /* CosmOS_ThreadVariableType * threadVars */
+        TasksProgram2Core0CfgConst,    /* CosmOS_TaskConfigurationType * taskCfgs */
+        ThreadsProgram2Core0CfgConst,    /* CosmOS_ThreadConfigurationType * threadCfgs */
         0,    /* BitWidthType numberOfMallocVars */
     },
 };
@@ -163,20 +163,20 @@ CosmOS_ProgramVariableType
 IS_INITIALIZED_TO{
         {
         &ProgramsCore1CfgConst[PROGRAM_0_CORE_1_ID],    /* const CosmOS_ProgramConfigurationType * cfg */
-        TasksProgram0Core1Var,    /* CosmOS_TaskVariableType * taskVars */
-        ThreadsProgram0Core1Var,    /* CosmOS_ThreadVariableType * threadVars */
+        TasksProgram0Core1CfgConst,    /* CosmOS_TaskConfigurationType * taskCfgs */
+        ThreadsProgram0Core1CfgConst,    /* CosmOS_ThreadConfigurationType * threadCfgs */
         0,    /* BitWidthType numberOfMallocVars */
     },
         {
         &ProgramsCore1CfgConst[PROGRAM_1_CORE_1_ID],    /* const CosmOS_ProgramConfigurationType * cfg */
-        TasksProgram1Core1Var,    /* CosmOS_TaskVariableType * taskVars */
-        ThreadsProgram1Core1Var,    /* CosmOS_ThreadVariableType * threadVars */
+        TasksProgram1Core1CfgConst,    /* CosmOS_TaskConfigurationType * taskCfgs */
+        ThreadsProgram1Core1CfgConst,    /* CosmOS_ThreadConfigurationType * threadCfgs */
         0,    /* BitWidthType numberOfMallocVars */
     },
         {
         &ProgramsCore1CfgConst[PROGRAM_2_CORE_1_ID],    /* const CosmOS_ProgramConfigurationType * cfg */
-        TasksProgram2Core1Var,    /* CosmOS_TaskVariableType * taskVars */
-        ThreadsProgram2Core1Var,    /* CosmOS_ThreadVariableType * threadVars */
+        TasksProgram2Core1CfgConst,    /* CosmOS_TaskConfigurationType * taskCfgs */
+        ThreadsProgram2Core1CfgConst,    /* CosmOS_ThreadConfigurationType * threadCfgs */
         0,    /* BitWidthType numberOfMallocVars */
     },
 };

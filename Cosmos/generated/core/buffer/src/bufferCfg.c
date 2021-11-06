@@ -67,12 +67,43 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
+__SEC_START(__OS_VARS_SECTION_START)
+/* @endcond*/
+CosmOS_BufferVariableType BuffersVar[BUFFER_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+    {
+        0,
+        0,
+        0,
+    },
+    {
+        0,
+        0,
+        0,
+    },
+    {
+        0,
+        0,
+        0,
+    },
+    {
+        0,
+        0,
+        0,
+    },
+};
+/* @cond S */
+__SEC_STOP(__OS_VARS_SECTION_STOP)
+/* @endcond*/
+
+/* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
 const CosmOS_BufferConfigurationType
     BuffersCfgConst[BUFFER_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
     {
+        &BuffersVar[BUFFER_0_ID],
         buffer0Arr,
         BUFFER_0_ID,
         BUFFER_0_SIZE,
@@ -82,6 +113,7 @@ IS_INITIALIZED_TO{
 		2,
     },
     {
+        &BuffersVar[BUFFER_1_ID],
         buffer1Arr,
         BUFFER_1_ID,
         BUFFER_1_SIZE,
@@ -91,6 +123,7 @@ IS_INITIALIZED_TO{
 		3,
     },
     {
+        &BuffersVar[BUFFER_2_ID],
         buffer2Arr,
         BUFFER_2_ID,
         BUFFER_2_SIZE,
@@ -100,6 +133,7 @@ IS_INITIALIZED_TO{
 		4,
     },
     {
+        &BuffersVar[BUFFER_3_ID],
         buffer3Arr,
         BUFFER_3_ID,
         BUFFER_3_SIZE,
@@ -111,40 +145,6 @@ IS_INITIALIZED_TO{
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
-/* @endcond*/
-
-/* @cond S */
-__SEC_START(__OS_VARS_SECTION_START)
-/* @endcond*/
-CosmOS_BufferVariableType BuffersVar[BUFFER_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO{
-    {
-        &BuffersCfgConst[BUFFER_0_ID],
-        0,
-        0,
-        0,
-    },
-    {
-        &BuffersCfgConst[BUFFER_1_ID],
-        0,
-        0,
-        0,
-    },
-    {
-        &BuffersCfgConst[BUFFER_2_ID],
-        0,
-        0,
-        0,
-    },
-    {
-        &BuffersCfgConst[BUFFER_3_ID],
-        0,
-        0,
-        0,
-    },
-};
-/* @cond S */
-__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

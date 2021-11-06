@@ -108,7 +108,7 @@ CosmOS_CoreVariableType CoresVar[CORE_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO{
     {                                               /* CoresVar[CORE_0_ID] */
         &CoresCfgConst[CORE_0_ID],    /* const CosmOS_CoreConfigurationType *cfg */
-        NULL,    /* CosmOS_SchedulableVariableType * schedulableInExecution */
+        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableInExecution */
         NULL,    /* CosmOS_ProgramVariableType * programInCurrentContext */
         ProgramsCore0Var,    /* CosmOS_ProgramVariableType * programVars */
         &SchedulersVar[SCHEDULER_CORE_0_ID],    /* CosmOS_SchedulerVariableType * scheduler */
@@ -119,7 +119,7 @@ IS_INITIALIZED_TO{
     },
     {                                               /* CoresVar[CORE_1_ID] */
         &CoresCfgConst[CORE_1_ID],    /* const CosmOS_CoreConfigurationType *cfg */
-        NULL,    /* CosmOS_SchedulableVariableType * schedulableInExecution */
+        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableInExecution */
         NULL,    /* CosmOS_ProgramVariableType * programInCurrentContext */
         ProgramsCore1Var,    /* CosmOS_ProgramVariableType * programVars */
         &SchedulersVar[SCHEDULER_CORE_1_ID],    /* CosmOS_SchedulerVariableType * scheduler */
