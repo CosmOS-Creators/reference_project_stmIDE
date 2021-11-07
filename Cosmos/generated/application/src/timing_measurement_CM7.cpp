@@ -23,6 +23,7 @@
 ** start_name =timing_measurement_CM7_includeFiles
 ********************************************************************************/
 #include <mutex.h>
+#include <buffer.h>
 #include <spinlock.h>
 #include <stm32h7xx_hal.h>
 #include <thread.h>
@@ -121,11 +122,11 @@ Timing_measurement_task_CM7( void )
         counter = 0;
 
         bufferReader_cm7 = 100;
-        bufferState = cosmosApi_write_buffer_x_core_buffer_1(
+        bufferState = buffer_writeArray( x_core_buffer_1_id,
             &bufferReader_cm7, sizeof( bufferReader_cm7 ) );
 
         bufferReader_cm7 = 0;
-        bufferState = cosmosApi_read_buffer_x_core_buffer_1(
+        bufferState = buffer_writeArray( x_core_buffer_1_id,
             &bufferReader_cm7, sizeof( bufferReader_cm7 ) );
 
     spinlockState = spinlock_trySpinlock( spinlock_test_0_id );

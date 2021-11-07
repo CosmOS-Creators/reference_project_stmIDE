@@ -171,7 +171,7 @@ __APPLICATION_FUNC_SECTION_CM4 CosmOS_BufferStateType
 user_log( void * ptr, BitWidthType size )
 {
     CosmOS_BufferStateType bufferState;
-    bufferState = cosmosApi_write_buffer_logger_buffer( ptr, size );
+    bufferState = buffer_writeArray( logger_buffer_id, ptr, size );
     return bufferState;
 };
 

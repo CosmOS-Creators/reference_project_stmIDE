@@ -249,56 +249,6 @@ extern "C" {
     SYSCALL_CILCORE_GETCOREID\
     )
 #define cosmosApi_boot() osBoot_boot()
-
-#define cosmosApi_read_doubleBuffer_x_core_buffer_0_instance_0(array, size) \
-(CosmOS_BufferStateType)sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType(\
-    SYSCALL_READ_BUFFER_0_ID,\
-    array,\
-    size\
-    )
-#define cosmosApi_write_doubleBuffer_x_core_buffer_0_instance_0(array, size) \
-(CosmOS_BufferStateType)sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType(\
-    SYSCALL_WRITE_BUFFER_0_ID,\
-    array,\
-    size\
-    )
-#define cosmosApi_read_doubleBuffer_x_core_buffer_0_instance_1(array, size) \
-(CosmOS_BufferStateType)sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType(\
-    SYSCALL_READ_BUFFER_1_ID,\
-    array,\
-    size\
-    )
-#define cosmosApi_write_doubleBuffer_x_core_buffer_0_instance_1(array, size) \
-(CosmOS_BufferStateType)sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType(\
-    SYSCALL_WRITE_BUFFER_1_ID,\
-    array,\
-    size\
-    )
-
-#define cosmosApi_read_buffer_x_core_buffer_1(array, size) \
-(CosmOS_BufferStateType)sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType(\
-    SYSCALL_READ_BUFFER_2_ID,\
-    array,\
-    size\
-    )
-#define cosmosApi_write_buffer_x_core_buffer_1(array, size) \
-(CosmOS_BufferStateType)sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType(\
-    SYSCALL_WRITE_BUFFER_2_ID,\
-    array,\
-    size\
-    )
-#define cosmosApi_read_buffer_logger_buffer(array, size) \
-(CosmOS_BufferStateType)sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType(\
-    SYSCALL_READ_BUFFER_3_ID,\
-    array,\
-    size\
-    )
-#define cosmosApi_write_buffer_logger_buffer(array, size) \
-(CosmOS_BufferStateType)sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType(\
-    SYSCALL_WRITE_BUFFER_3_ID,\
-    array,\
-    size\
-    )
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
