@@ -62,7 +62,7 @@
   * @ingroup Global_sysDefsRoutes
   * @{
 ********************************************************************************/
-#define ROUTES_FUNC_NUM (BitWidthType)24          /* Number of route RW */
+#define ROUTES_FUNC_NUM (BitWidthType)21          /* Number of route RW */
 
 #define ROUTES_ID_TO_ENTITY_DUMMY (BitWidthType)0     /* Dummy it to entity */
 
@@ -72,24 +72,21 @@
 #define OS_START (BitWidthType)3            /* identifier pointing on function pointer in array (Routes) */
 #define SCHEDULABLE_SETEXECUTIONSTATETOFINISHED (BitWidthType)4            /* identifier pointing on function pointer in array (Routes) */
 #define SYSJOBS_DISPATCHER (BitWidthType)5            /* identifier pointing on function pointer in array (Routes) */
-#define SPINLOCK_GETSPINLOCK (BitWidthType)6            /* identifier pointing on function pointer in array (Routes) */
-#define SPINLOCK_TRYSPINLOCK (BitWidthType)7            /* identifier pointing on function pointer in array (Routes) */
-#define SPINLOCK_RELEASESPINLOCK (BitWidthType)8            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_DISABLEINTERRUPTS (BitWidthType)9            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_ENABLEINTERRUPTS (BitWidthType)10            /* identifier pointing on function pointer in array (Routes) */
-#define THREAD_SLEEPMSINTERNAL (BitWidthType)11            /* identifier pointing on function pointer in array (Routes) */
-#define OS_WRITE32 (BitWidthType)12            /* identifier pointing on function pointer in array (Routes) */
-#define OS_WRITE16 (BitWidthType)13            /* identifier pointing on function pointer in array (Routes) */
-#define OS_WRITE8 (BitWidthType)14            /* identifier pointing on function pointer in array (Routes) */
-#define MUTEX_GETMUTEXINTERNAL (BitWidthType)15            /* identifier pointing on function pointer in array (Routes) */
-#define MUTEX_TRYMUTEXINTERNAL (BitWidthType)16            /* identifier pointing on function pointer in array (Routes) */
-#define MUTEX_RELEASEMUTEXINTERNAL (BitWidthType)17            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_DISABLEINTERRUPT (BitWidthType)18            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_ENABLEINTERRUPT (BitWidthType)19            /* identifier pointing on function pointer in array (Routes) */
-#define CILCORE_GETCOREID (BitWidthType)20            /* identifier pointing on function pointer in array (Routes) */
-#define SPINLOCK_GETSPINLOCKINTERNAL (BitWidthType)21            /* identifier pointing on function pointer in array (Routes) */
-#define SPINLOCK_TRYSPINLOCKINTERNAL (BitWidthType)22            /* identifier pointing on function pointer in array (Routes) */
-#define SPINLOCK_RELEASESPINLOCKINTERNAL (BitWidthType)23            /* identifier pointing on function pointer in array (Routes) */
+#define INTERRUPT_DISABLEINTERRUPTS (BitWidthType)6            /* identifier pointing on function pointer in array (Routes) */
+#define INTERRUPT_ENABLEINTERRUPTS (BitWidthType)7            /* identifier pointing on function pointer in array (Routes) */
+#define THREAD_SLEEPMSINTERNAL (BitWidthType)8            /* identifier pointing on function pointer in array (Routes) */
+#define OS_WRITE32 (BitWidthType)9            /* identifier pointing on function pointer in array (Routes) */
+#define OS_WRITE16 (BitWidthType)10            /* identifier pointing on function pointer in array (Routes) */
+#define OS_WRITE8 (BitWidthType)11            /* identifier pointing on function pointer in array (Routes) */
+#define MUTEX_GETMUTEXINTERNAL (BitWidthType)12            /* identifier pointing on function pointer in array (Routes) */
+#define MUTEX_TRYMUTEXINTERNAL (BitWidthType)13            /* identifier pointing on function pointer in array (Routes) */
+#define MUTEX_RELEASEMUTEXINTERNAL (BitWidthType)14            /* identifier pointing on function pointer in array (Routes) */
+#define INTERRUPT_DISABLEINTERRUPT (BitWidthType)15            /* identifier pointing on function pointer in array (Routes) */
+#define INTERRUPT_ENABLEINTERRUPT (BitWidthType)16            /* identifier pointing on function pointer in array (Routes) */
+#define CILCORE_GETCOREID (BitWidthType)17            /* identifier pointing on function pointer in array (Routes) */
+#define SPINLOCK_GETSPINLOCKINTERNAL (BitWidthType)18            /* identifier pointing on function pointer in array (Routes) */
+#define SPINLOCK_TRYSPINLOCKINTERNAL (BitWidthType)19            /* identifier pointing on function pointer in array (Routes) */
+#define SPINLOCK_RELEASESPINLOCKINTERNAL (BitWidthType)20            /* identifier pointing on function pointer in array (Routes) */
 #define SYSCALL_READ_BUFFER_0_ID (BitWidthType)0   /* identifier pointing on element in id array (RoutesIdToFuncConst) */
 #define SYSCALL_WRITE_BUFFER_0_ID (BitWidthType)1  /* identifier pointing on element in id array (RoutesIdToFuncConst) */
 #define SYSCALL_READ_BUFFER_1_ID (BitWidthType)2   /* identifier pointing on element in id array (RoutesIdToFuncConst) */

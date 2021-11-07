@@ -29,9 +29,6 @@
 #include "os.h"
 #include "schedulable.h"
 #include "sysJobs.h"
-#include "spinlock.h"
-#include "spinlock.h"
-#include "spinlock.h"
 #include "interrupt.h"
 #include "interrupt.h"
 #include "thread.h"
@@ -91,9 +88,6 @@ IS_INITIALIZED_TO
     (CosmOS_GenericVoidType)os_start,
     (CosmOS_GenericVoidType)schedulable_setExecutionStateToFinished,
     (CosmOS_GenericVoidType)sysJobs_dispatcher,
-    (CosmOS_GenericVoidType)spinlock_getSpinlock,
-    (CosmOS_GenericVoidType)spinlock_trySpinlock,
-    (CosmOS_GenericVoidType)spinlock_releaseSpinlock,
     (CosmOS_GenericVoidType)interrupt_disableInterrupts,
     (CosmOS_GenericVoidType)interrupt_enableInterrupts,
     (CosmOS_GenericVoidType)thread_sleepMsInternal,
