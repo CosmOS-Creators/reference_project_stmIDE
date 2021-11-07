@@ -61,27 +61,27 @@ CosmOS_SpinlockVariableType SpinlocksVar[SPINLOCK_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO{
     {
         SPINLOCK_STATE_ENUM__RELEASED,    /* BitWidthType spinlock */
-        NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
+        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableOwner */
     },
     {
         SPINLOCK_STATE_ENUM__RELEASED,    /* BitWidthType spinlock */
-        NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
+        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableOwner */
     },
     {
         SPINLOCK_STATE_ENUM__RELEASED,    /* BitWidthType spinlock */
-        NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
+        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableOwner */
     },
     {
         SPINLOCK_STATE_ENUM__RELEASED,    /* BitWidthType spinlock */
-        NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
+        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableOwner */
     },
     {
         SPINLOCK_STATE_ENUM__RELEASED,    /* BitWidthType spinlock */
-        NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
+        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableOwner */
     },
     {
         SPINLOCK_STATE_ENUM__RELEASED,    /* BitWidthType spinlock */
-        NULL,    /* CosmOS_SchedulableVariableType * schedulableOwner */
+        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableOwner */
     },
 };
 /* @cond S */

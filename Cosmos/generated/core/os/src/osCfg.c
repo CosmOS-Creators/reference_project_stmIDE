@@ -61,34 +61,35 @@
   * @{
 ********************************************************************************/
 /* @cond S */
+__SEC_START(__OS_VARS_SECTION_START)
+/* @endcond*/
+CosmOS_OsVariableType OsVar __OS_VARS_SECTION
+IS_INITIALIZED_TO{                       /* osVar */
+    0,    /* const BitWidthType dummy */
+};
+/* @cond S */
+__SEC_STOP(__OS_VARS_SECTION_STOP)
+/* @endcond*/
+
+/* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
 const CosmOS_OsConfigurationType OsCfg __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{                       /* osCfg */
+    &OsVar,    /* CosmOS_OsVariableType * const var */
     CoresCfgConst,    /* const CosmOS_CoreConfigurationType * cores */
     CORE_NUM,    /* const BitWidthType numberOfCores */
     BuffersCfgConst,    /* const CosmOS_BufferConfigurationType * buffers */
     BUFFER_NUM,    /* const BitWidthType numberOfBuffers */
     &RoutesConstCfg,    /* const CosmOS_RoutesConfigurationType route */
     SPINLOCK_NUM,    /* const BitWidthType numberOfSpinlocks */
-};
-/* @cond S */
-__SEC_STOP(__OS_CONSTS_SECTION_STOP)
-/* @endcond*/
-
-/* @cond S */
-__SEC_START(__OS_VARS_SECTION_START)
-/* @endcond*/
-CosmOS_OsVariableType OsVar __OS_VARS_SECTION
-IS_INITIALIZED_TO{                       /* osVar */
-    &OsCfg,    /* const CosmOS_OsConfigurationType * cfg */
-    CoresVar,    /* CosmOS_CoreVariableType * coreVars */
-    BuffersVar,    /* CosmOS_BufferVariableType * bufferVars */
-    BuffersDoubleVar,    /* CosmOS_BufferDoubleVariableType * const bufferDoubleVars */
+    CoresCfgConst,    /* CosmOS_CoreConfigurationType * coreCfgs */
+    BuffersCfgConst,    /* CosmOS_BufferVariableType * bufferVars */
+    BuffersDoubleCfg,    /* CosmOS_BufferDoubleVariableType * const bufferDoubleVars */
     SpinlocksVar,    /* CosmOS_BufferDoubleVariableType * const spinlockVars */
 };
 /* @cond S */
-__SEC_STOP(__OS_VARS_SECTION_STOP)
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

@@ -58,51 +58,11 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START(__OS_CONSTS_SECTION_START)
-/* @endcond*/
-const CosmOS_SchedulerConfigurationType
-    SchedulersCfgConst[SCHEDULER_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO{
-    {                                                           /* SchedulersCfgConst[SCHEDULER_CORE_0_ID] */
-        ScheduleTableScheduler0CfgConst,    /* const CosmOS_ScheduleTableConfigurationType * scheduleTable */
-        SchedulerThreadListScheduler0CfgConst,    /* const CosmOS_ThreadListConfigurationType * const threadList */
-        HYPERTICK_SCHEDULER_0,    /* const BitWidthType hyperTick */
-        PREEMPTTICK_SCHEDULER_0,    /* const BitWidthType preemptTick */
-        SCHEDULETABLE_SCHEDULER_0_ELEMENT_NUM,    /* const BitWidthType scheduleTableElementsNum */
-        SCHEDULERTHREADLIST_SCHEDULER_0_ELEMENT_NUM,    /* const BitWidthType threadListElementsNum */
-        LAST_TO_FIRST_TASK_TICK_SCHEDULER_0,    /* const BitWidthType lastToFirstTaskTicks */
-        SYNCTICKS_SCHEDULER_0,    /* const BitWidthType syncTicks */
-        FIRST_SYNC_TASK_STARTTICK_SCHEDULER_0,    /* const BitWidthType firstSyncTaskStartTick */
-        MAX_TIMER_TICK_SCHEDULER_0,    /* const BitWidthType maxTimerTick */
-        TIMER_TICK_COUNT_SCHEDULER_0,    /* const BitWidthType timerTickCount */
-        &TasksProgram0Core0Var[TASK_0_PROGRAM_0_CORE_0_ID],                                   /* void * const                                                    */
-    },
-    {                                                           /* SchedulersCfgConst[SCHEDULER_CORE_1_ID] */
-        ScheduleTableScheduler1CfgConst,    /* const CosmOS_ScheduleTableConfigurationType * scheduleTable */
-        SchedulerThreadListScheduler1CfgConst,    /* const CosmOS_ThreadListConfigurationType * const threadList */
-        HYPERTICK_SCHEDULER_1,    /* const BitWidthType hyperTick */
-        PREEMPTTICK_SCHEDULER_1,    /* const BitWidthType preemptTick */
-        SCHEDULETABLE_SCHEDULER_1_ELEMENT_NUM,    /* const BitWidthType scheduleTableElementsNum */
-        SCHEDULERTHREADLIST_SCHEDULER_1_ELEMENT_NUM,    /* const BitWidthType threadListElementsNum */
-        LAST_TO_FIRST_TASK_TICK_SCHEDULER_1,    /* const BitWidthType lastToFirstTaskTicks */
-        SYNCTICKS_SCHEDULER_1,    /* const BitWidthType syncTicks */
-        FIRST_SYNC_TASK_STARTTICK_SCHEDULER_1,    /* const BitWidthType firstSyncTaskStartTick */
-        MAX_TIMER_TICK_SCHEDULER_1,    /* const BitWidthType maxTimerTick */
-        TIMER_TICK_COUNT_SCHEDULER_1,    /* const BitWidthType timerTickCount */
-        &TasksProgram0Core1Var[TASK_0_PROGRAM_0_CORE_1_ID],                                   /* void * const                                                    */
-    },
-};
-/* @cond S */
-__SEC_STOP(__OS_CONSTS_SECTION_STOP)
-/* @endcond*/
-
-/* @cond S */
 __SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
 CosmOS_SchedulerVariableType SchedulersVar[SCHEDULER_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO{
     {                                                         /* SchedulersCfgConst[SCHEDULER_CORE_0_ID] */
-        &SchedulersCfgConst[SCHEDULER_CORE_0_ID],    /* CosmOS_SchedulerConfigurationType * cfg */
         0,    /* BitWidthType curentTick */
         0,    /* BitWidthType priorTickStep */
         0,    /* BitWidthType scheduleTableIterator */
@@ -113,7 +73,6 @@ IS_INITIALIZED_TO{
         RESCHEDULE_TRIGGER_STATE_ENUM__SYSTEM,    /* CosmOS_RescheduleTriggerStateType rescheduleTriggerState */
     },
     {                                                         /* SchedulersCfgConst[SCHEDULER_CORE_1_ID] */
-        &SchedulersCfgConst[SCHEDULER_CORE_1_ID],    /* CosmOS_SchedulerConfigurationType * cfg */
         0,    /* BitWidthType curentTick */
         0,    /* BitWidthType priorTickStep */
         0,    /* BitWidthType scheduleTableIterator */
@@ -126,6 +85,47 @@ IS_INITIALIZED_TO{
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
+/* @endcond*/
+
+/* @cond S */
+__SEC_START(__OS_CONSTS_SECTION_START)
+/* @endcond*/
+const CosmOS_SchedulerConfigurationType
+    SchedulersCfgConst[SCHEDULER_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    {                                                           /* SchedulersCfgConst[SCHEDULER_CORE_0_ID] */
+        &SchedulersVar[SCHEDULER_CORE_0_ID],    /* CosmOS_SchedulerVariableType * var */
+        ScheduleTableScheduler0CfgConst,    /* const CosmOS_ScheduleTableConfigurationType * scheduleTable */
+        SchedulerThreadListScheduler0CfgConst,    /* const CosmOS_ThreadListConfigurationType * const threadList */
+        HYPERTICK_SCHEDULER_0,    /* const BitWidthType hyperTick */
+        PREEMPTTICK_SCHEDULER_0,    /* const BitWidthType preemptTick */
+        SCHEDULETABLE_SCHEDULER_0_ELEMENT_NUM,    /* const BitWidthType scheduleTableElementsNum */
+        SCHEDULERTHREADLIST_SCHEDULER_0_ELEMENT_NUM,    /* const BitWidthType threadListElementsNum */
+        LAST_TO_FIRST_TASK_TICK_SCHEDULER_0,    /* const BitWidthType lastToFirstTaskTicks */
+        SYNCTICKS_SCHEDULER_0,    /* const BitWidthType syncTicks */
+        FIRST_SYNC_TASK_STARTTICK_SCHEDULER_0,    /* const BitWidthType firstSyncTaskStartTick */
+        MAX_TIMER_TICK_SCHEDULER_0,    /* const BitWidthType maxTimerTick */
+        TIMER_TICK_COUNT_SCHEDULER_0,    /* const BitWidthType timerTickCount */
+        &TasksProgram0Core0CfgConst[TASK_0_PROGRAM_0_CORE_0_ID],    /* const CosmOS_TaskConfigurationType * const idleTask */
+    },
+    {                                                           /* SchedulersCfgConst[SCHEDULER_CORE_1_ID] */
+        &SchedulersVar[SCHEDULER_CORE_1_ID],    /* CosmOS_SchedulerVariableType * var */
+        ScheduleTableScheduler1CfgConst,    /* const CosmOS_ScheduleTableConfigurationType * scheduleTable */
+        SchedulerThreadListScheduler1CfgConst,    /* const CosmOS_ThreadListConfigurationType * const threadList */
+        HYPERTICK_SCHEDULER_1,    /* const BitWidthType hyperTick */
+        PREEMPTTICK_SCHEDULER_1,    /* const BitWidthType preemptTick */
+        SCHEDULETABLE_SCHEDULER_1_ELEMENT_NUM,    /* const BitWidthType scheduleTableElementsNum */
+        SCHEDULERTHREADLIST_SCHEDULER_1_ELEMENT_NUM,    /* const BitWidthType threadListElementsNum */
+        LAST_TO_FIRST_TASK_TICK_SCHEDULER_1,    /* const BitWidthType lastToFirstTaskTicks */
+        SYNCTICKS_SCHEDULER_1,    /* const BitWidthType syncTicks */
+        FIRST_SYNC_TASK_STARTTICK_SCHEDULER_1,    /* const BitWidthType firstSyncTaskStartTick */
+        MAX_TIMER_TICK_SCHEDULER_1,    /* const BitWidthType maxTimerTick */
+        TIMER_TICK_COUNT_SCHEDULER_1,    /* const BitWidthType timerTickCount */
+        &TasksProgram0Core1CfgConst[TASK_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_TaskConfigurationType * const idleTask */
+    },
+};
+/* @cond S */
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

@@ -56,16 +56,33 @@
   * @{
 ********************************************************************************/
 /* @cond S */
+__SEC_START(__OS_VARS_SECTION_START)
+/* @endcond*/
+CosmOS_BufferDoubleVariableType
+    BuffersDoubleVar[BUFFER_DOUBLE_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO
+{
+    {
+        BUFFER_PAIR_BUFFER_0_ID,
+        BUFFER_PAIR_BUFFER_1_ID,
+    },
+};
+
+/* @cond S */
+__SEC_STOP(__OS_VARS_SECTION_STOP)
+/* @endcond*/
+
+/* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
 const CosmOS_BufferDoublePairConfigurationType
     BuffersDoublePair0Cfg[BUFFER_PAIR_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
     {
-        &BuffersVar[BUFFER_0_ID],
+        &BuffersCfgConst[BUFFER_0_ID],
     },
     {
-        &BuffersVar[BUFFER_1_ID],
+        &BuffersCfgConst[BUFFER_1_ID],
     },
 };
 
@@ -74,28 +91,12 @@ const CosmOS_BufferDoubleConfigurationType
 IS_INITIALIZED_TO
 {
     {
+        &BuffersDoubleVar[BUFFER_DOUBLE_0_ID],
         BuffersDoublePair0Cfg,
     },
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
-/* @endcond*/
-
-/* @cond S */
-__SEC_START(__OS_VARS_SECTION_START)
-/* @endcond*/
-CosmOS_BufferDoubleVariableType
-    BuffersDoubleVar[BUFFER_DOUBLE_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO
-{
-    {
-        &BuffersDoubleCfg[BUFFER_DOUBLE_0_ID],
-        BUFFER_PAIR_BUFFER_0_ID,
-        BUFFER_PAIR_BUFFER_1_ID,
-    },
-};
-/* @cond S */
-__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

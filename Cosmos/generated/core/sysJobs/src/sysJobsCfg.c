@@ -58,6 +58,22 @@
   * @{
 ********************************************************************************/
 /* @cond S */
+__SEC_START(__OS_VARS_SECTION_START)
+/* @endcond*/
+CosmOS_SysJobsVariableType SysJobsVar[CORE_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+    {
+        0,    /* BitWidthType currentTick */
+    },
+{
+        0,    /* BitWidthType currentTick */
+    },
+};
+/* @cond S */
+__SEC_STOP(__OS_VARS_SECTION_STOP)
+/* @endcond*/
+
+/* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
 const CosmOS_GenericVoidType
@@ -71,7 +87,7 @@ IS_INITIALIZED_TO{
     (CosmOS_GenericVoidType)sysJobsGroup_10ms_CM4,
 };
 const CosmOS_SysJobsGroupConfigurationType
-    SysJobsGroupsCore0ConstCfg[SYSJOBS_GROUPS_CORE_0_NUM] __OS_CONSTS_SECTION
+    SysJobsGroupsCore0CfgConst[SYSJOBS_GROUPS_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
     {
         SysJobsHandlersGroup0Core0Const,    /* const CosmOS_GenericVoidType * const handlers */
@@ -80,7 +96,7 @@ IS_INITIALIZED_TO{
     },
 };
 const CosmOS_SysJobsGroupConfigurationType
-    SysJobsGroupsCore1ConstCfg[SYSJOBS_GROUPS_CORE_1_NUM] __OS_CONSTS_SECTION
+    SysJobsGroupsCore1CfgConst[SYSJOBS_GROUPS_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
     {
         SysJobsHandlersGroup0Core1Const,    /* const CosmOS_GenericVoidType * const handlers */
@@ -89,39 +105,23 @@ IS_INITIALIZED_TO{
     },
 };
 const CosmOS_SysJobsConfigurationType
-    SysJobsConstCfg[CORE_NUM] __OS_CONSTS_SECTION
+    SysJobsCfgConst[CORE_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
     {
-        SysJobsGroupsCore0ConstCfg,    /* const CosmOS_SysJobsGroupConfigurationType * const groups */
+        &SysJobsVar[CORE_0_ID],    /* CosmOS_SysJobsVariableType * const var */
+        SysJobsGroupsCore0CfgConst,    /* const CosmOS_SysJobsGroupConfigurationType * const groups */
         SYSJOBS_GROUPS_CORE_0_NUM,    /* const BitWidthType numOfGroups */
         SYSJOBS_CORE_0_HYPERTICK     /* const BitWidthType hyperTick */
     },
 {
-        SysJobsGroupsCore1ConstCfg,    /* const CosmOS_SysJobsGroupConfigurationType * const groups */
+        &SysJobsVar[CORE_1_ID],    /* CosmOS_SysJobsVariableType * const var */
+        SysJobsGroupsCore1CfgConst,    /* const CosmOS_SysJobsGroupConfigurationType * const groups */
         SYSJOBS_GROUPS_CORE_1_NUM,    /* const BitWidthType numOfGroups */
         SYSJOBS_CORE_1_HYPERTICK     /* const BitWidthType hyperTick */
     },
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
-/* @endcond*/
-
-/* @cond S */
-__SEC_START(__OS_VARS_SECTION_START)
-/* @endcond*/
-CosmOS_SysJobsVariableType SysJobsVar[CORE_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO{
-    {
-        &SysJobsConstCfg[CORE_0_ID],    /* const CosmOS_SysJobsConfigurationType * const cfg */
-        0,    /* BitWidthType currentTick */
-    },
-{
-        &SysJobsConstCfg[CORE_1_ID],    /* const CosmOS_SysJobsConfigurationType * const cfg */
-        0,    /* BitWidthType currentTick */
-    },
-};
-/* @cond S */
-__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

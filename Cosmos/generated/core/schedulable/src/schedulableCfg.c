@@ -57,12 +57,80 @@
   * @{
 ********************************************************************************/
 /* @cond S */
+__SEC_START(__OS_VARS_SECTION_START)
+/* @endcond*/
+CosmOS_SchedulableVariableType TasksSchedulablesVar[TASK_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_TASK_0_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_TASK_1_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_TASK_0_PROGRAM_1_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_TASK_0_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_TASK_1_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_TASK_0_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+};
+
+CosmOS_SchedulableVariableType
+    ThreadsSchedulablesVar[THREAD_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_THREAD_0_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_THREAD_0_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_THREAD_0_PROGRAM_1_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_THREAD_0_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_THREAD_1_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_THREAD_0_PROGRAM_2_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_THREAD_0_PROGRAM_2_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+};
+/* @cond S */
+__SEC_STOP(__OS_VARS_SECTION_STOP)
+/* @endcond*/
+
+/* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
 const CosmOS_SchedulableConfigurationType
     TasksSchedulablesCfgConst[TASK_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
     {
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_0_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_0_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_Idle_CM7,    /* const CosmOS_GenericVoidType handler */
@@ -77,6 +145,7 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_0_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
         &TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_sysJobs_CM7,    /* const CosmOS_GenericVoidType handler */
@@ -91,6 +160,7 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_1_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_1_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_1_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_Timing_measurement_task_CM7,    /* const CosmOS_GenericVoidType handler */
@@ -105,6 +175,7 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_2_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_Idle_CM4,    /* const CosmOS_GenericVoidType handler */
@@ -119,6 +190,7 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_3_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
         &TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_sysJobs_CM4,    /* const CosmOS_GenericVoidType handler */
@@ -133,6 +205,7 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_4_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_1_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_1_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_Timing_measurement_task_CM4,    /* const CosmOS_GenericVoidType handler */
@@ -152,6 +225,7 @@ const CosmOS_SchedulableConfigurationType
     ThreadsSchedulablesCfgConst[THREAD_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
     {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_0_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_IdleThread_CM7,    /* const CosmOS_GenericVoidType handler */
@@ -166,6 +240,7 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_6_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_IdleThread_CM4,    /* const CosmOS_GenericVoidType handler */
@@ -180,6 +255,7 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_7_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_Timing_measurement_thread_CM7,    /* const CosmOS_GenericVoidType handler */
@@ -194,6 +270,7 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_8_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_Timing_measurement_thread_CM4,    /* const CosmOS_GenericVoidType handler */
@@ -208,6 +285,7 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_9_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_1_PROGRAM_1_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_1_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_Mutex_test_thread_CM4,    /* const CosmOS_GenericVoidType handler */
@@ -222,6 +300,7 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_10_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_2_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_Logger_thread,    /* const CosmOS_GenericVoidType handler */
@@ -236,6 +315,7 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_11_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_2_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
         wrapped_TCPIP_thread,    /* const CosmOS_GenericVoidType handler */
@@ -252,86 +332,6 @@ IS_INITIALIZED_TO{
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
-/* @endcond*/
-
-/* @cond S */
-__SEC_START(__OS_VARS_SECTION_START)
-/* @endcond*/
-CosmOS_SchedulableVariableType TasksSchedulablesVar[TASK_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO{
-    {
-        &TasksSchedulablesCfgConst[SCHEDULABLE_TASK_0_PROGRAM_0_CORE_0_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_TASK_0_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        &TasksSchedulablesCfgConst[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_0_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_TASK_1_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        &TasksSchedulablesCfgConst[SCHEDULABLE_TASK_0_PROGRAM_1_CORE_0_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_TASK_0_PROGRAM_1_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        &TasksSchedulablesCfgConst[SCHEDULABLE_TASK_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_TASK_0_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        &TasksSchedulablesCfgConst[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_1_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_TASK_1_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        &TasksSchedulablesCfgConst[SCHEDULABLE_TASK_0_PROGRAM_1_CORE_1_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_TASK_0_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-};
-
-CosmOS_SchedulableVariableType
-    ThreadsSchedulablesVar[THREAD_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO{
-    {
-        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_0_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_0_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_1_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_1_PROGRAM_1_CORE_1_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_1_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_1_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_2_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_0_ID],    /* const CosmOS_SchedulableConfigurationType * const cfg */
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_2_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-};
-/* @cond S */
-__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
