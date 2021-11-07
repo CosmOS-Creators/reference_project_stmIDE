@@ -187,6 +187,7 @@ HAL_UART_TxCpltCallback( UART_HandleTypeDef * huart )
 
     loggerBufferCfg->var->fullCells =
         ( loggerBufferCfg->var->fullCells - huart->TxXferSize );
+    //not necessary to obtain spinlock as this is only one directional buffer
     loggerBufferCfg->var->tail =
         ( ( loggerBufferCfg->var->tail + huart->TxXferSize ) %
           loggerBufferCfg->size );
