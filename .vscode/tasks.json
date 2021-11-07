@@ -102,6 +102,19 @@
         },
         {
             "type": "shell",
+            "label": "Build documentation",
+            "options": {
+                "cwd": "${workspaceFolder}/Cosmos/docs"
+            },
+            "command": "make",
+            "args":[
+                "html"
+            ],
+            "group": "none",
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
             "label": "Run generator",
             "options": {
                 "cwd": "${workspaceFolder}"
