@@ -23,6 +23,7 @@
 ** start_name =timing_measurement_CM7_includeFiles
 ********************************************************************************/
 #include <mutex.h>
+#include <spinlock.h>
 #include <stm32h7xx_hal.h>
 #include <thread.h>
 #include "logger.h"
@@ -127,8 +128,11 @@ Timing_measurement_task_CM7( void )
         bufferState = cosmosApi_read_buffer_x_core_buffer_1(
             &bufferReader_cm7, sizeof( bufferReader_cm7 ) );
 
-        spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
-        spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
+    spinlockState = spinlock_trySpinlock( spinlock_test_0_id );
+    if ( spinlockState IS_EQUAL_TO SPINLOCK_STATE_ENUM__SUCCESSFULLY_LOCKED )
+    {
+        spinlockState = spinlock_releaseSpinlock( spinlock_test_0_id );
+    }
         //trying if kernel will return err cause task cannot use mutexes
         mutexState = mutex_getMutex( &gpio_e_mutex );
     }

@@ -44,6 +44,9 @@
 #include "interrupt.h"
 #include "interrupt.h"
 #include "CILcore.h"
+#include "spinlock.h"
+#include "spinlock.h"
+#include "spinlock.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -103,17 +106,14 @@ IS_INITIALIZED_TO
     (CosmOS_GenericVoidType)interrupt_disableInterrupt,
     (CosmOS_GenericVoidType)interrupt_enableInterrupt,
     (CosmOS_GenericVoidType)CILcore_getCoreId,
+    (CosmOS_GenericVoidType)spinlock_getSpinlockInternal,
+    (CosmOS_GenericVoidType)spinlock_trySpinlockInternal,
+    (CosmOS_GenericVoidType)spinlock_releaseSpinlockInternal,
 };
 
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
-    SPINLOCK_GETSPINLOCK,
-    SPINLOCK_TRYSPINLOCK,
-    SPINLOCK_RELEASESPINLOCK,
-    SPINLOCK_GETSPINLOCK,
-    SPINLOCK_TRYSPINLOCK,
-    SPINLOCK_RELEASESPINLOCK,
     BUFFER_READARRAY,
     BUFFER_WRITEARRAY,
     BUFFER_READARRAY,
@@ -138,18 +138,15 @@ IS_INITIALIZED_TO
     INTERRUPT_DISABLEINTERRUPT,
     INTERRUPT_ENABLEINTERRUPT,
     CILCORE_GETCOREID,
+    SPINLOCK_GETSPINLOCKINTERNAL,
+    SPINLOCK_TRYSPINLOCKINTERNAL,
+    SPINLOCK_RELEASESPINLOCKINTERNAL,
 };
 
 const BitWidthType
     RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
-    SPINLOCK_0_ID,
-    SPINLOCK_0_ID,
-    SPINLOCK_0_ID,
-    SPINLOCK_1_ID,
-    SPINLOCK_1_ID,
-    SPINLOCK_1_ID,
     BUFFER_0_ID,
     BUFFER_0_ID,
     BUFFER_1_ID,
@@ -158,6 +155,9 @@ IS_INITIALIZED_TO
     BUFFER_2_ID,
     BUFFER_3_ID,
     BUFFER_3_ID,
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,

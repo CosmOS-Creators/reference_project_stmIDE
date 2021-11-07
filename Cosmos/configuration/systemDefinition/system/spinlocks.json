@@ -9,7 +9,7 @@
 		"spinlock_0": [
 			{
 				"target": "spinlocksAttributes/:name",
-				"value": "uart_buffer_read"
+				"value": "spinlock_test_0"
 			},
 			{
 				"target": "spinlocksAttributes/:spinlockId"
@@ -18,7 +18,7 @@
 		"spinlock_1": [
 			{
 				"target": "spinlocksAttributes/:name",
-				"value": "uart_buffer_write"
+				"value": "spinlock_test_1"
 			},
 			{
 				"target": "spinlocksAttributes/:spinlockId"
