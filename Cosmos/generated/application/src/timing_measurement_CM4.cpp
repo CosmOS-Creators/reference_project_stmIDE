@@ -88,8 +88,7 @@ int __TIMING_MEASUREMENT_CM4_INIT_SECTION counter_cm4 = 0;
 int __TIMING_MEASUREMENT_CM4_INIT_SECTION bufferReader_cm4 = 0;
 CosmOS_MutexVariableType resourcesMutex __TIMING_MEASUREMENT_CM4_INIT_SECTION;
 char __TIMING_MEASUREMENT_CM4_INIT_SECTION timingMeasurementCM4[] =
-    "\n**************************** CM4 TIMING LOG **************************** \r\n\
-Mutex_test_thread_CM4 released mutex for resources \r\n\n";
+    "\nMutex_test_thread_CM4 released mutex for resources \r\n\n";
 /********************************************************************************
 ** stop_name =timing_measurement_CM4_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -215,7 +214,7 @@ Mutex_test_thread_CM4( void )
 
     mutexState = mutex_releaseMutex( &resourcesMutex );
 
-    sleepState = thread_sleepMs( 500 );
+    sleepState = thread_sleep( 1 );
 
     user_log( timingMeasurementCM4, sizeof( timingMeasurementCM4 ) );
 

@@ -87,8 +87,7 @@ float __TIMING_MEASUREMENT_CM7_INIT_SECTION floatTestTask = 0;
 int __TIMING_MEASUREMENT_CM7_INIT_SECTION bufferReader_cm7 = 0;
 CosmOS_MutexVariableType gpio_e_mutex __TIMING_MEASUREMENT_CM7_INIT_SECTION;
 char __TIMING_MEASUREMENT_CM7_INIT_SECTION timingMeasurementCM7[] =
-    "\n**************************** CM7 TIMING LOG **************************** \r\n\
-Timing_measurement_thread_CM7 toggled GPIOE PIN 1 \r\n\n";
+    "\nTiming_measurement_thread_CM7 toggled GPIOE PIN 1 \r\n\n";
 /********************************************************************************
 ** stop_name =timing_measurement_CM7_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
