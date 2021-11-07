@@ -66,8 +66,8 @@
 
 #define ROUTES_ID_TO_ENTITY_DUMMY (BitWidthType)0     /* Dummy it to entity */
 
-#define BUFFER_READARRAY (BitWidthType)0            /* identifier pointing on function pointer in array (Routes) */
-#define BUFFER_WRITEARRAY (BitWidthType)1            /* identifier pointing on function pointer in array (Routes) */
+#define BUFFER_READARRAYINTERNAL (BitWidthType)0            /* identifier pointing on function pointer in array (Routes) */
+#define BUFFER_WRITEARRAYINTERNAL (BitWidthType)1            /* identifier pointing on function pointer in array (Routes) */
 #define OSINIT_INIT (BitWidthType)2            /* identifier pointing on function pointer in array (Routes) */
 #define OS_START (BitWidthType)3            /* identifier pointing on function pointer in array (Routes) */
 #define SCHEDULABLE_SETEXECUTIONSTATETOFINISHED (BitWidthType)4            /* identifier pointing on function pointer in array (Routes) */
@@ -95,28 +95,30 @@
 #define SYSCALL_WRITE_BUFFER_2_ID (BitWidthType)5  /* identifier pointing on element in id array (RoutesIdToFuncConst) */
 #define SYSCALL_READ_BUFFER_3_ID (BitWidthType)6   /* identifier pointing on element in id array (RoutesIdToFuncConst) */
 #define SYSCALL_WRITE_BUFFER_3_ID (BitWidthType)7  /* identifier pointing on element in id array (RoutesIdToFuncConst) */
-#define SYSCALL_OSINIT_INIT (BitWidthType)8            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OS_START (BitWidthType)9            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED (BitWidthType)10            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SYSJOBS_DISPATCHER (BitWidthType)11            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_DISABLEINTERRUPTS (BitWidthType)12            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_ENABLEINTERRUPTS (BitWidthType)13            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_THREAD_SLEEPMSINTERNAL (BitWidthType)14            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OS_WRITE32 (BitWidthType)15            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OS_WRITE16 (BitWidthType)16            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OS_WRITE8 (BitWidthType)17            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_MUTEX_GETMUTEXINTERNAL (BitWidthType)18            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_MUTEX_TRYMUTEXINTERNAL (BitWidthType)19            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_MUTEX_RELEASEMUTEXINTERNAL (BitWidthType)20            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_DISABLEINTERRUPT (BitWidthType)21            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_ENABLEINTERRUPT (BitWidthType)22            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_CILCORE_GETCOREID (BitWidthType)23            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SPINLOCK_GETSPINLOCKINTERNAL (BitWidthType)24            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SPINLOCK_TRYSPINLOCKINTERNAL (BitWidthType)25            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SPINLOCK_RELEASESPINLOCKINTERNAL (BitWidthType)26            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_BUFFER_READARRAYINTERNAL (BitWidthType)8            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_BUFFER_WRITEARRAYINTERNAL (BitWidthType)9            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_OSINIT_INIT (BitWidthType)10            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_OS_START (BitWidthType)11            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED (BitWidthType)12            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_SYSJOBS_DISPATCHER (BitWidthType)13            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_INTERRUPT_DISABLEINTERRUPTS (BitWidthType)14            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_INTERRUPT_ENABLEINTERRUPTS (BitWidthType)15            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_THREAD_SLEEPMSINTERNAL (BitWidthType)16            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_OS_WRITE32 (BitWidthType)17            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_OS_WRITE16 (BitWidthType)18            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_OS_WRITE8 (BitWidthType)19            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_MUTEX_GETMUTEXINTERNAL (BitWidthType)20            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_MUTEX_TRYMUTEXINTERNAL (BitWidthType)21            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_MUTEX_RELEASEMUTEXINTERNAL (BitWidthType)22            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_INTERRUPT_DISABLEINTERRUPT (BitWidthType)23            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_INTERRUPT_ENABLEINTERRUPT (BitWidthType)24            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_CILCORE_GETCOREID (BitWidthType)25            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_SPINLOCK_GETSPINLOCKINTERNAL (BitWidthType)26            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_SPINLOCK_TRYSPINLOCKINTERNAL (BitWidthType)27            /* identifier pointing on function pointer in array (Routes) */
+#define SYSCALL_SPINLOCK_RELEASESPINLOCKINTERNAL (BitWidthType)28            /* identifier pointing on function pointer in array (Routes) */
 
-#define ROUTES_ID_TO_FUNC_NUM (BitWidthType)27    /* Number of route identifiers */
-#define ROUTES_ID_TO_ENTITY_NUM (BitWidthType)27     /* Number of route identifiers */
+#define ROUTES_ID_TO_FUNC_NUM (BitWidthType)29    /* Number of route identifiers */
+#define ROUTES_ID_TO_ENTITY_NUM (BitWidthType)29     /* Number of route identifiers */
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**

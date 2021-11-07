@@ -182,6 +182,20 @@ extern "C" {
   * @ingroup Apis_cosmosApiInternal_h
   * @{
 ********************************************************************************/
+#define cosmosApiInternal_buffer_readArrayInternal(arrayPointer,bufferCfgPointer,size) \
+(CosmOS_BufferStateType)sysCalls_bitWidthType_voidPtr_voidPtr_bitWidthType_ret_bitWidthType(\
+    SYSCALL_BUFFER_READARRAYINTERNAL\
+    ,arrayPointer\
+    ,bufferCfgPointer\
+    ,size\
+    )
+#define cosmosApiInternal_buffer_writeArrayInternal(arrayPointer,bufferCfgPointer,size) \
+(CosmOS_BufferStateType)sysCalls_bitWidthType_voidPtr_voidPtr_bitWidthType_ret_bitWidthType(\
+    SYSCALL_BUFFER_WRITEARRAYINTERNAL\
+    ,arrayPointer\
+    ,bufferCfgPointer\
+    ,size\
+    )
 #define cosmosApiInternal_schedulable_setExecutionStateToFinished() \
 (void)sysCalls_bitWidthType_ret_void(\
     SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED\

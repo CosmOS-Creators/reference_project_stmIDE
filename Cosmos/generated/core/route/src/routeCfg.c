@@ -82,8 +82,8 @@ __SEC_START(__OS_CONSTS_SECTION_START)
 const CosmOS_GenericVoidType RoutesFuncConst[ROUTES_FUNC_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
-    (CosmOS_GenericVoidType)buffer_readArray,
-    (CosmOS_GenericVoidType)buffer_writeArray,
+    (CosmOS_GenericVoidType)buffer_readArrayInternal,
+    (CosmOS_GenericVoidType)buffer_writeArrayInternal,
     (CosmOS_GenericVoidType)osInit_init,
     (CosmOS_GenericVoidType)os_start,
     (CosmOS_GenericVoidType)schedulable_setExecutionStateToFinished,
@@ -108,14 +108,8 @@ IS_INITIALIZED_TO
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
-    BUFFER_READARRAY,
-    BUFFER_WRITEARRAY,
-    BUFFER_READARRAY,
-    BUFFER_WRITEARRAY,
-    BUFFER_READARRAY,
-    BUFFER_WRITEARRAY,
-    BUFFER_READARRAY,
-    BUFFER_WRITEARRAY,
+    BUFFER_READARRAYINTERNAL,
+    BUFFER_WRITEARRAYINTERNAL,
     OSINIT_INIT,
     OS_START,
     SCHEDULABLE_SETEXECUTIONSTATETOFINISHED,
@@ -141,14 +135,8 @@ const BitWidthType
     RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
-    BUFFER_0_ID,
-    BUFFER_0_ID,
-    BUFFER_1_ID,
-    BUFFER_1_ID,
-    BUFFER_2_ID,
-    BUFFER_2_ID,
-    BUFFER_3_ID,
-    BUFFER_3_ID,
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,

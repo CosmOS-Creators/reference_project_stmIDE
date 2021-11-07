@@ -9,7 +9,7 @@
 		"route_0": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "buffer_readArray"
+				"value": "buffer_readArrayInternal"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:apiHeader",
@@ -17,20 +17,21 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+				"value": "sysCalls_bitWidthType_voidPtr_voidPtr_bitWidthType_ret_bitWidthType"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "sysCallRoutesAttributes/:isMappedToEntity",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "sysCallRoutesAttributes/:args",
 				"value": [
 					"arrayPointer",
+                    "bufferCfgPointer",
 					"size"
 				]
 			},
@@ -42,7 +43,7 @@
 		"route_1": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "buffer_writeArray"
+				"value": "buffer_writeArrayInternal"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:apiHeader",
@@ -50,20 +51,21 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+				"value": "sysCalls_bitWidthType_voidPtr_voidPtr_bitWidthType_ret_bitWidthType"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "sysCallRoutesAttributes/:isMappedToEntity",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "sysCallRoutesAttributes/:args",
 				"value": [
 					"arrayPointer",
+                    "bufferCfgPointer",
 					"size"
 				]
 			},
