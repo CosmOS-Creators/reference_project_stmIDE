@@ -36,5 +36,5 @@
 
     "editor.insertSpaces": true,
     "python.formatting.provider": "black",
-    "restructuredtext.confPath": "${workspaceFolder}\\Cosmos\\docs"
+    "restructuredtext.confPath": "${workspaceFolder}/Cosmos/docs"
 }

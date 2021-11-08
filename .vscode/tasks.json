@@ -11,7 +11,7 @@
                 "Configure system"
             ],
             "command": "make",
-            "args":[
+            "args": [
                 "-j${input:core_num}"
             ],
             "group": {
@@ -34,7 +34,7 @@
             ],
             "dependsOrder": "sequence",
             "command": "make",
-            "args":[
+            "args": [
                 "-j${input:core_num}"
             ],
             "group": "build",
@@ -49,7 +49,7 @@
                 "cwd": "${workspaceFolder}/Cosmos/generated/build/system"
             },
             "command": "make",
-            "args":[
+            "args": [
                 "clean"
             ],
             "group": "build",
@@ -64,10 +64,10 @@
                 "cwd": "${workspaceFolder}/Cosmos/build",
                 "env": {
                     "tmp": "${input:core_num}"
-                },
+                }
             },
             "command": "cmake",
-            "args":[
+            "args": [
                 "-G",
                 "\"Unix Makefiles\"",
                 "-DCMAKE_TOOLCHAIN_FILE=toolchain/arm-none-eabi-gcc.cmake",
@@ -88,7 +88,7 @@
                 "cwd": "${workspaceFolder}/Cosmos/build"
             },
             "command": "./build.sh",
-            "args":[
+            "args": [
                 "-b",
                 "TESTS"
             ],
@@ -107,7 +107,7 @@
                 "cwd": "${workspaceFolder}/Cosmos/docs"
             },
             "command": "make",
-            "args":[
+            "args": [
                 "html"
             ],
             "group": "none",
