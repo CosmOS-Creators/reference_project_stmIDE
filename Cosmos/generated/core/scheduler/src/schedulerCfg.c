@@ -22,6 +22,7 @@
 ********************************************************************************/
 /* CORE interfaces */
 #include "taskCfg.h"
+#include "alarmCfg.h"
 #include "schedulerCfg.h"
 #include "schedulerScheduleTableCfg.h"
 #include "schedulerThreadListCfg.h"
@@ -107,6 +108,7 @@ IS_INITIALIZED_TO{
         MAX_TIMER_TICK_SCHEDULER_0,    /* const BitWidthType maxTimerTick */
         TIMER_TICK_COUNT_SCHEDULER_0,    /* const BitWidthType timerTickCount */
         &TasksProgram0Core0CfgConst[TASK_0_PROGRAM_0_CORE_0_ID],    /* const CosmOS_TaskConfigurationType * const idleTask */
+        AlarmsCore0CfgConst,    /* CosmOS_AlarmConfigurationType * const alarmCfgs */
     },
     {                                                           /* SchedulersCfgConst[SCHEDULER_CORE_1_ID] */
         &SchedulersVar[SCHEDULER_CORE_1_ID],    /* CosmOS_SchedulerVariableType * var */
@@ -122,6 +124,7 @@ IS_INITIALIZED_TO{
         MAX_TIMER_TICK_SCHEDULER_1,    /* const BitWidthType maxTimerTick */
         TIMER_TICK_COUNT_SCHEDULER_1,    /* const BitWidthType timerTickCount */
         &TasksProgram0Core1CfgConst[TASK_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_TaskConfigurationType * const idleTask */
+        AlarmsCore1CfgConst,    /* CosmOS_AlarmConfigurationType * const alarmCfgs */
     },
 };
 /* @cond S */

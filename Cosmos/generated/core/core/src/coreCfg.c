@@ -24,7 +24,6 @@
 #include "coreCfg.h"
 #include "coreSyncCfg.h"
 #include "programCfg.h"
-#include "alarmCfg.h"
 #include "sysJobsCfg.h"
 #include "schedulerCfg.h"
 #include "userKernelPanicHook_CM7.h"
@@ -105,7 +104,6 @@ IS_INITIALIZED_TO{
         &SchedulersCfgConst[SCHEDULER_CORE_0_ID],    /* CosmOS_SchedulerConfigurationType * schedulerCfg */
         BarriersCore0Var,    /* CosmOS_BarrierVariableType * barrierVars */
         &SysJobsCfgConst[CORE_0_ID],    /* CosmOS_SysJobsConfigurationType * const sysJobsCfg */
-        AlarmsCore0CfgConst,    /* CosmOS_AlarmConfigurationType * const alarmCfgs */
     },
     {                                               /* CoresCfgConst[CORE_1_ID] */
         &CoresVar[CORE_1_ID],    /* CosmOS_CoreVariableType * const var */
@@ -126,7 +124,6 @@ IS_INITIALIZED_TO{
         &SchedulersCfgConst[SCHEDULER_CORE_1_ID],    /* CosmOS_SchedulerConfigurationType * schedulerCfg */
         BarriersCore1Var,    /* CosmOS_BarrierVariableType * barrierVars */
         &SysJobsCfgConst[CORE_1_ID],    /* CosmOS_SysJobsConfigurationType * const sysJobsCfg */
-        AlarmsCore1CfgConst,    /* CosmOS_AlarmConfigurationType * const alarmCfgs */
     },
 };
 /* @cond S */
