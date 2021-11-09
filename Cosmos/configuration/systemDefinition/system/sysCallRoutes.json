@@ -9,7 +9,7 @@
 		"route_0": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "buffer_readArray"
+				"value": "buffer_readArrayInternal"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:apiHeader",
@@ -17,20 +17,21 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+				"value": "sysCalls_bitWidthType_voidPtr_voidPtr_bitWidthType_ret_bitWidthType"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "sysCallRoutesAttributes/:isMappedToEntity",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "sysCallRoutesAttributes/:args",
 				"value": [
 					"arrayPointer",
+                    "bufferCfgPointer",
 					"size"
 				]
 			},
@@ -42,7 +43,7 @@
 		"route_1": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "buffer_writeArray"
+				"value": "buffer_writeArrayInternal"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:apiHeader",
@@ -50,20 +51,21 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+				"value": "sysCalls_bitWidthType_voidPtr_voidPtr_bitWidthType_ret_bitWidthType"
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "sysCallRoutesAttributes/:isMappedToEntity",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "sysCallRoutesAttributes/:args",
 				"value": [
 					"arrayPointer",
+                    "bufferCfgPointer",
 					"size"
 				]
 			},
@@ -190,102 +192,6 @@
 			{
 				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
-			}
-		],
-		"route_7": [
-			{
-				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "spinlock_getSpinlock"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:apiHeader",
-				"value": "spinlock.h"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
-			},
-			{
-				"target": "sysCallRoutesAttributes/:isMappedToEntity",
-				"value": true
-			},
-			{
-				"target": "sysCallRoutesAttributes/:args",
-				"value": [
-					"id"
-				]
-			},
-			{
-				"target": "sysCallRoutesAttributes/:returnType",
-				"value": "CosmOS_SpinlockStateType"
-			}
-		],
-		"route_8": [
-			{
-				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "spinlock_trySpinlock"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:apiHeader",
-				"value": "spinlock.h"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
-			},
-			{
-				"target": "sysCallRoutesAttributes/:isMappedToEntity",
-				"value": true
-			},
-			{
-				"target": "sysCallRoutesAttributes/:args",
-				"value": [
-					"id"
-				]
-			},
-			{
-				"target": "sysCallRoutesAttributes/:returnType",
-				"value": "CosmOS_SpinlockStateType"
-			}
-		],
-		"route_9": [
-			{
-				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "spinlock_releaseSpinlock"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:apiHeader",
-				"value": "spinlock.h"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
-			},
-			{
-				"target": "sysCallRoutesAttributes/:isMappedToEntity",
-				"value": true
-			},
-			{
-				"target": "sysCallRoutesAttributes/:args",
-				"value": [
-					"id"
-				]
-			},
-			{
-				"target": "sysCallRoutesAttributes/:returnType",
-				"value": "CosmOS_SpinlockStateType"
 			}
 		],
 		"route_10": [
@@ -669,6 +575,105 @@
 			{
 				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "BitWidthType"
+			}
+		],
+		"route_22": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "spinlock_getSpinlockInternal"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "spinlock.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"spinlockVarPtr",
+					"spinlockId"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_MutexStateType"
+			}
+		],
+		"route_23": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "spinlock_trySpinlockInternal"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "spinlock.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"spinlockVarPtr",
+					"spinlockId"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_MutexStateType"
+			}
+		],
+		"route_24": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "spinlock_releaseSpinlockInternal"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "spinlock.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"spinlockVarPtr",
+					"spinlockId"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_MutexStateType"
 			}
 		]
 	}

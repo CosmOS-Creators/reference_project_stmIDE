@@ -14,9 +14,15 @@
         "xutility": "c"
     },
     "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "clang-format.executable": "clang-format",
     "clang-format.language.cpp.style": "file",
     "[c]": {
+        "editor.formatOnSave": true,
         "editor.defaultFormatter": "xaver.clang-format",
         "editor.tabSize": 4
     },

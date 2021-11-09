@@ -23,6 +23,8 @@
 ** start_name =timing_measurement_CM7_includeFiles
 ********************************************************************************/
 #include <mutex.h>
+#include <buffer.h>
+#include <spinlock.h>
 #include <stm32h7xx_hal.h>
 #include <thread.h>
 #include "logger.h"
@@ -85,8 +87,7 @@ float __TIMING_MEASUREMENT_CM7_INIT_SECTION floatTestTask = 0;
 int __TIMING_MEASUREMENT_CM7_INIT_SECTION bufferReader_cm7 = 0;
 CosmOS_MutexVariableType gpio_e_mutex __TIMING_MEASUREMENT_CM7_INIT_SECTION;
 char __TIMING_MEASUREMENT_CM7_INIT_SECTION timingMeasurementCM7[] =
-    "\n**************************** CM7 TIMING LOG **************************** \r\n\
-Timing_measurement_thread_CM7 toggled GPIOE PIN 1 \r\n\n";
+    "\nTiming_measurement_thread_CM7 toggled GPIOE PIN 1 \r\n\n";
 /********************************************************************************
 ** stop_name =timing_measurement_CM7_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -120,15 +121,18 @@ Timing_measurement_task_CM7( void )
         counter = 0;
 
         bufferReader_cm7 = 100;
-        bufferState = cosmosApi_write_buffer_x_core_buffer_1(
+        bufferState = buffer_writeArray( x_core_buffer_1_id,
             &bufferReader_cm7, sizeof( bufferReader_cm7 ) );
 
         bufferReader_cm7 = 0;
-        bufferState = cosmosApi_read_buffer_x_core_buffer_1(
+        bufferState = buffer_writeArray( x_core_buffer_1_id,
             &bufferReader_cm7, sizeof( bufferReader_cm7 ) );
 
-        spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
-        spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
+    spinlockState = spinlock_trySpinlock( spinlock_test_0_id );
+    if ( spinlockState IS_EQUAL_TO SPINLOCK_STATE_ENUM__SUCCESSFULLY_LOCKED )
+    {
+        spinlockState = spinlock_releaseSpinlock( spinlock_test_0_id );
+    }
         //trying if kernel will return err cause task cannot use mutexes
         mutexState = mutex_getMutex( &gpio_e_mutex );
     }

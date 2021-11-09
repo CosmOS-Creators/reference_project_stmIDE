@@ -23,6 +23,8 @@
 ** start_name =timing_measurement_CM4_includeFiles
 ********************************************************************************/
 #include <mutex.h>
+#include <buffer.h>
+#include <spinlock.h>
 #include <stm32h7xx_hal.h>
 #include <thread.h>
 #include "logger.h"
@@ -86,8 +88,7 @@ int __TIMING_MEASUREMENT_CM4_INIT_SECTION counter_cm4 = 0;
 int __TIMING_MEASUREMENT_CM4_INIT_SECTION bufferReader_cm4 = 0;
 CosmOS_MutexVariableType resourcesMutex __TIMING_MEASUREMENT_CM4_INIT_SECTION;
 char __TIMING_MEASUREMENT_CM4_INIT_SECTION timingMeasurementCM4[] =
-    "\n**************************** CM4 TIMING LOG **************************** \r\n\
-Mutex_test_thread_CM4 released mutex for resources \r\n\n";
+    "\nMutex_test_thread_CM4 released mutex for resources \r\n\n";
 /********************************************************************************
 ** stop_name =timing_measurement_CM4_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -117,15 +118,18 @@ Timing_measurement_task_CM4( void )
     CosmOS_MutexStateType mutexState;
 
     bufferReader_cm4 = 100;
-    bufferState = cosmosApi_write_buffer_x_core_buffer_1(
+    bufferState = buffer_writeArray( x_core_buffer_1_id,
         &bufferReader_cm4, sizeof( bufferReader_cm4 ) );
 
     bufferReader_cm4 = 0;
-    bufferState = cosmosApi_read_buffer_x_core_buffer_1(
+    bufferState = buffer_writeArray( x_core_buffer_1_id,
         &bufferReader_cm4, sizeof( bufferReader_cm4 ) );
 
-    spinlockState = cosmosApi_try_spinlock_uart_buffer_read();
-    spinlockState = cosmosApi_release_spinlock_uart_buffer_read();
+    spinlockState = spinlock_trySpinlock( spinlock_test_0_id );
+    if ( spinlockState IS_EQUAL_TO SPINLOCK_STATE_ENUM__SUCCESSFULLY_LOCKED )
+    {
+        spinlockState = spinlock_releaseSpinlock( spinlock_test_0_id );
+    }
 
     //trying if kernel will return err cause task cannot use mutexes
     mutexState = mutex_getMutex( &resourcesMutex );
@@ -210,7 +214,7 @@ Mutex_test_thread_CM4( void )
 
     mutexState = mutex_releaseMutex( &resourcesMutex );
 
-    sleepState = thread_sleepMs( 500 );
+    sleepState = thread_sleep( 1 );
 
     user_log( timingMeasurementCM4, sizeof( timingMeasurementCM4 ) );
 

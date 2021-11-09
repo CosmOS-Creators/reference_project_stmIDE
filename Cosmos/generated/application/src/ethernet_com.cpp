@@ -119,12 +119,10 @@ __SEC_START( __ETHERNET_COM_INIT_SECTION_START)
 ********************************************************************************/
 CosmOS_BooleanType __ETHERNET_COM_INIT_SECTION echo_initialized = False;
 char __ETHERNET_COM_INIT_SECTION acceptMessage[] =
-    "\n**************************** ETHERNET LOG **************************** \r\n\
-Handling echo for client with remote ip addess:                   \r\n\n";
+    "\nHandling echo for client with remote ip addess:                   \r\n\n";
 
 char __ETHERNET_COM_INIT_SECTION receiveMessage[] =
-    "\n**************************** ETHERNET LOG **************************** \r\n\
-Handling echo for client with payload message: ";
+    "\nHandling echo for client with payload message: ";
 /********************************************************************************
 ** stop_name =ethernet_com_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
