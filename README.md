@@ -1,4 +1,4 @@
-# reference_project_stmIDE
+# Rerefence project
 The reference project consists of all CosmOS submodules (core, customBox, integration, docs). It uses STM IDE project structure, and it is possible to open, compile and debug in it. To be able to test all features of the CosmOS, the stm32h755 was chosen as reference hardware.
 
 
