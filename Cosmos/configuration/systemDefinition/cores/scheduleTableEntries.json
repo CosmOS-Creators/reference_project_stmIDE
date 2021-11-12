@@ -4,6 +4,7 @@
 	"ui": {
 		"use_page": "scheduler_entries"
 	},
+    "use_restriction": "scheduler_entries_restrictions",
 	"attributes": {},
 	"elements": {
 		"element_0": [
