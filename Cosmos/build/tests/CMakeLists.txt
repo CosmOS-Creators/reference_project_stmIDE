@@ -22,6 +22,7 @@ enable_testing()
 
 set(UNIT_TEST_SOURCE_WILDCARD "ut.cpp")
 set(UNIT_TEST_DIRECTORY_WILDCARD "test/ut")
+set(TEST_RESULTS_DIRECTORY ${COSMOS}/generated/build/tests/results)
 
 #################################################################################
 ##                       COLLECTING INCLUDE DIRECTORIES                        ##
@@ -59,5 +60,5 @@ add_definitions(
 #################################################################################
 ##                         COLLECTING ALL TARGETS/TEST                         ##
 #################################################################################
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../.. 
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../..
                 ${CMAKE_CURRENT_BINARY_DIR}/Cosmos)
