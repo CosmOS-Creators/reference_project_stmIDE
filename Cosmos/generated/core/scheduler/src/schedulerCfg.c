@@ -72,6 +72,7 @@ IS_INITIALIZED_TO{
         0,    /* BitWidthType nextSyncTick */
         False,    /* CosmOS_BooleanType syncInitState */
         RESCHEDULE_TRIGGER_STATE_ENUM__SYSTEM,    /* CosmOS_RescheduleTriggerStateType rescheduleTriggerState */
+        0,    /* BitWidthType timerOffset */
     },
     {                                                         /* SchedulersCfgConst[SCHEDULER_CORE_1_ID] */
         0,    /* BitWidthType curentTick */
@@ -82,6 +83,7 @@ IS_INITIALIZED_TO{
         0,    /* BitWidthType nextSyncTick */
         False,    /* CosmOS_BooleanType syncInitState */
         RESCHEDULE_TRIGGER_STATE_ENUM__SYSTEM,    /* CosmOS_RescheduleTriggerStateType rescheduleTriggerState */
+        0,    /* BitWidthType timerOffset */
     },
 };
 /* @cond S */
