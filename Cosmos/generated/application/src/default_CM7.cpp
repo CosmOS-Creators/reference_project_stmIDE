@@ -95,7 +95,7 @@ __SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
 __APPLICATION_FUNC_SECTION_CM7 void
 sysJobsGroup_20ms_CM7( void )
 {
-    HAL_GPIO_TogglePin( GPIOF, GPIO_PIN_11 );
+    //HAL_GPIO_TogglePin( GPIOF, GPIO_PIN_11 );
 }
 /********************************************************************************
 ** stop_name =default_CM7_userCodeFree

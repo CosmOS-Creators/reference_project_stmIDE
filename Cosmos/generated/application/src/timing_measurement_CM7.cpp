@@ -116,6 +116,8 @@ Timing_measurement_task_CM7( void )
     CosmOS_BufferStateType bufferState;
     CosmOS_MutexStateType mutexState;
 
+    HAL_GPIO_TogglePin( GPIOF, GPIO_PIN_11 );
+
     if ( counter > 100 )
     {
         counter = 0;
