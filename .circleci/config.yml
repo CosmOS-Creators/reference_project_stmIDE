@@ -20,7 +20,7 @@ jobs:
       - run: git submodule foreach git pull
       - run:
           name: Checkout submodules to the reference project branch, if does not exist master branch is used
-          command: 'referenceBranch=$(git branch | sed -n -e "s/^\* \(.*\)/\1/p") && git submodule foreach git pull origin $referenceBranch'
+          command: 'referenceBranch=$(git branch | sed -n -e "s/^\* \(.*\)/\1/p") && git submodule foreach git checkout $referenceBranch && git submodule foreach git pull'
       - restore_cache:
           key: python-requirements-{{ checksum "/root/project/Cosmos/customBox/python/requirements.txt" }}
       - run:
