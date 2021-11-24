@@ -12,6 +12,8 @@ jobs:
       BUILD_OUTPUT_DIR: "/root/project/Cosmos/generated/build"
     steps:
       - checkout
+      - run: git config --global user.email "cosmos.creators.official@gmail.com"
+      - run: git config --global user.name "CosmOS Builder"
       - run: git submodule sync
       - run: git submodule update --init
       - run: git submodule foreach git checkout master
