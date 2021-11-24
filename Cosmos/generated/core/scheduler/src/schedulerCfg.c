@@ -64,6 +64,7 @@ __SEC_START(__OS_VARS_SECTION_START)
 CosmOS_SchedulerVariableType SchedulersVar[SCHEDULER_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO{
     {                                                         /* SchedulersCfgConst[SCHEDULER_CORE_0_ID] */
+        RESCHEDULE_TRIGGER_STATE_ENUM__SYSTEM,    /* CosmOS_RescheduleTriggerStateType rescheduleTriggerState */
         0,    /* BitWidthType curentTick */
         0,    /* BitWidthType priorTickStep */
         0,    /* BitWidthType scheduleTableIterator */
@@ -71,10 +72,10 @@ IS_INITIALIZED_TO{
         SCHEDULER_STATE_ENUM__NOT_STARTED,    /* CosmOS_SchedulerStateType schedulerState */
         0,    /* BitWidthType nextSyncTick */
         False,    /* CosmOS_BooleanType syncInitState */
-        RESCHEDULE_TRIGGER_STATE_ENUM__SYSTEM,    /* CosmOS_RescheduleTriggerStateType rescheduleTriggerState */
         0,    /* BitWidthType timerOffset */
     },
     {                                                         /* SchedulersCfgConst[SCHEDULER_CORE_1_ID] */
+        RESCHEDULE_TRIGGER_STATE_ENUM__SYSTEM,    /* CosmOS_RescheduleTriggerStateType rescheduleTriggerState */
         0,    /* BitWidthType curentTick */
         0,    /* BitWidthType priorTickStep */
         0,    /* BitWidthType scheduleTableIterator */
@@ -82,7 +83,6 @@ IS_INITIALIZED_TO{
         SCHEDULER_STATE_ENUM__NOT_STARTED,    /* CosmOS_SchedulerStateType schedulerState */
         0,    /* BitWidthType nextSyncTick */
         False,    /* CosmOS_BooleanType syncInitState */
-        RESCHEDULE_TRIGGER_STATE_ENUM__SYSTEM,    /* CosmOS_RescheduleTriggerStateType rescheduleTriggerState */
         0,    /* BitWidthType timerOffset */
     },
 };

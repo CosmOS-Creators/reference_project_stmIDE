@@ -152,11 +152,11 @@
 			},
 			{
 				"target": "tasksAttributes/:peripheralAccessLowAddress",
-				"value": "0x0"
+				"value": "0x58021400"
 			},
 			{
 				"target": "tasksAttributes/:peripheralAccessSize",
-				"value" : 0
+				"value" : 1024
 			},
 			{
 				"target": "tasksAttributes/:lowAddress"

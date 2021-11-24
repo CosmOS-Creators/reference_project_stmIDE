@@ -117,6 +117,8 @@ Timing_measurement_task_CM4( void )
     CosmOS_BufferStateType bufferState;
     CosmOS_MutexStateType mutexState;
 
+    //HAL_GPIO_TogglePin( GPIOA, GPIO_PIN_4 );
+
     bufferReader_cm4 = 100;
     bufferState = buffer_writeArray( x_core_buffer_1_id,
         &bufferReader_cm4, sizeof( bufferReader_cm4 ) );
