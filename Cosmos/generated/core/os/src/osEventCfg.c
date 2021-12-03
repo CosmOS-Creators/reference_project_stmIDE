@@ -5,13 +5,13 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file bufferCfg.c
+** @file osEventCfg.c
 *********************************************************************************
-<!--                  bufferCfg Unit Local Group Definition                   -->
+<!--                  osEventCfg Unit Local Group Definition                  -->
 *********************************************************************************
-** @defgroup Local_bufferCfg Local
-** @ingroup bufferCfg_unit
-** @brief bufferCfg locals
+** @defgroup Local_osEventCfg Local
+** @ingroup osEventCfg_unit
+** @brief osEventCfg locals
 ** @details lorem
 ********************************************************************************/
 /********************************************************************************
@@ -21,8 +21,7 @@
 **                            Include Files | Start                            **
 ********************************************************************************/
 /* CORE interfaces */
-#include "bufferCfg.h"
-#include "permissionCfg.h"
+#include "osEventCfg.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -32,15 +31,15 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Macros_bufferCfg Macros
-  * @ingroup Local_bufferCfg
+  * @defgroup Macros_osEventCfg_c Macros
+  * @ingroup Local_osEventCfg
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Macros_bufferCfg
+/*  Macros_osEventCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -51,17 +50,14 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_bufferCfg Variables
-  * @ingroup Local_bufferCfg
+  * @defgroup Variables_osEventCfg_c Variables
+  * @ingroup Local_osEventCfg
   * @{
 ********************************************************************************/
 /* @cond S */
 __SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-unsigned char buffer0Arr[BUFFER_0_SIZE] __OS_VARS_SECTION;
-unsigned char buffer1Arr[BUFFER_1_SIZE] __OS_VARS_SECTION;
-unsigned char buffer2Arr[BUFFER_2_SIZE] __OS_VARS_SECTION;
-unsigned char buffer3Arr[BUFFER_3_SIZE] __OS_VARS_SECTION;
+CosmOS_BooleanType __OS_VARS_SECTION handleCoresArr[CORE_NUM] IS_INITIALIZED_TO { False };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
@@ -69,28 +65,10 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @cond S */
 __SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_BufferVariableType BuffersVar[BUFFER_NUM] __OS_VARS_SECTION
-IS_INITIALIZED_TO{
-    {
-        0,
-        0,
-        0,
-    },
-    {
-        0,
-        0,
-        0,
-    },
-    {
-        0,
-        0,
-        0,
-    },
-    {
-        0,
-        0,
-        0,
-    },
+CosmOS_OsEventVariableType OsEventVar __OS_VARS_SECTION
+IS_INITIALIZED_TO{                       /* osEventVar */
+    0,    /* CosmOS_OsEventStateType event */
+    NULL,    /* AddressType * data */
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
@@ -99,49 +77,11 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_BufferConfigurationType
-    BuffersCfgConst[BUFFER_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO{
-    {
-        &BuffersVar[BUFFER_0_ID],
-        buffer0Arr,
-        BUFFER_0_ID,
-        BUFFER_0_SIZE,
-        &PermissionsBuffer0ReadCfgConst,
-        &PermissionsBuffer0WriteCfgConst,
-		True,
-		SPINLOCK_2_ID,
-    },
-    {
-        &BuffersVar[BUFFER_1_ID],
-        buffer1Arr,
-        BUFFER_1_ID,
-        BUFFER_1_SIZE,
-        &PermissionsBuffer1ReadCfgConst,
-        &PermissionsBuffer1WriteCfgConst,
-		True,
-		SPINLOCK_3_ID,
-    },
-    {
-        &BuffersVar[BUFFER_2_ID],
-        buffer2Arr,
-        BUFFER_2_ID,
-        BUFFER_2_SIZE,
-        &PermissionsBuffer2ReadCfgConst,
-        &PermissionsBuffer2WriteCfgConst,
-		True,
-		SPINLOCK_4_ID,
-    },
-    {
-        &BuffersVar[BUFFER_3_ID],
-        buffer3Arr,
-        BUFFER_3_ID,
-        BUFFER_3_SIZE,
-        &PermissionsBuffer3ReadCfgConst,
-        &PermissionsBuffer3WriteCfgConst,
-		True,
-		SPINLOCK_5_ID,
-    },
+const CosmOS_OsEventConfigurationType OsEventCfg __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{                       /* osEventCfg */
+    &OsEventVar,    /* CosmOS_OsVariableType * const var */
+    handleCoresArr,    /* CosmOS_BooleanType * const handleCores */
+    SPINLOCK_6_ID,    /* const BitWidthType spinlockId */
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
@@ -150,7 +90,7 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Variables_bufferCfg
+/*  Variables_osEventCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -161,47 +101,47 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_bufferCfg_c API's
-  * @ingroup Local_bufferCfg
+  * @defgroup Apis_osEventCfg_c API's
+  * @ingroup Local_osEventCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_bufferCfg_c Getters
-  * @ingroup Apis_bufferCfg_c
+  * @addtogroup Getters_osEventCfg_c Getters
+  * @ingroup Apis_osEventCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Getters_bufferCfg_c
+/*  Getters_osEventCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_bufferCfg_c Setters
-  * @ingroup Apis_bufferCfg_c
+  * @addtogroup Setters_osEventCfg_c Setters
+  * @ingroup Apis_osEventCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Setters_bufferCfg_c
+/*  Setters_osEventCfg_c
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_bufferCfg_c General
-  * @ingroup Apis_bufferCfg_c
+  * @addtogroup General_osEventCfg_c General
+  * @ingroup Apis_osEventCfg_c
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  General_bufferCfg_c
+/*  General_osEventCfg_c
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **

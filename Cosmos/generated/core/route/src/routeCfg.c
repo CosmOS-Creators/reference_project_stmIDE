@@ -32,9 +32,6 @@
 #include "interrupt.h"
 #include "interrupt.h"
 #include "thread.h"
-#include "os.h"
-#include "os.h"
-#include "os.h"
 #include "mutex.h"
 #include "mutex.h"
 #include "mutex.h"
@@ -44,6 +41,8 @@
 #include "spinlock.h"
 #include "spinlock.h"
 #include "spinlock.h"
+#include "osEvent.h"
+#include "os.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -91,9 +90,6 @@ IS_INITIALIZED_TO
     (CosmOS_GenericVoidType)interrupt_disableInterrupts,
     (CosmOS_GenericVoidType)interrupt_enableInterrupts,
     (CosmOS_GenericVoidType)thread_sleepMsInternal,
-    (CosmOS_GenericVoidType)os_write32,
-    (CosmOS_GenericVoidType)os_write16,
-    (CosmOS_GenericVoidType)os_write8,
     (CosmOS_GenericVoidType)mutex_getMutexInternal,
     (CosmOS_GenericVoidType)mutex_tryMutexInternal,
     (CosmOS_GenericVoidType)mutex_releaseMutexInternal,
@@ -103,6 +99,8 @@ IS_INITIALIZED_TO
     (CosmOS_GenericVoidType)spinlock_getSpinlockInternal,
     (CosmOS_GenericVoidType)spinlock_trySpinlockInternal,
     (CosmOS_GenericVoidType)spinlock_releaseSpinlockInternal,
+    (CosmOS_GenericVoidType)osEvent_triggerEventInternal,
+    (CosmOS_GenericVoidType)os_kernelPanicInternal,
 };
 
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
@@ -117,9 +115,6 @@ IS_INITIALIZED_TO
     INTERRUPT_DISABLEINTERRUPTS,
     INTERRUPT_ENABLEINTERRUPTS,
     THREAD_SLEEPMSINTERNAL,
-    OS_WRITE32,
-    OS_WRITE16,
-    OS_WRITE8,
     MUTEX_GETMUTEXINTERNAL,
     MUTEX_TRYMUTEXINTERNAL,
     MUTEX_RELEASEMUTEXINTERNAL,
@@ -129,13 +124,14 @@ IS_INITIALIZED_TO
     SPINLOCK_GETSPINLOCKINTERNAL,
     SPINLOCK_TRYSPINLOCKINTERNAL,
     SPINLOCK_RELEASESPINLOCKINTERNAL,
+    OSEVENT_TRIGGEREVENTINTERNAL,
+    OS_KERNELPANICINTERNAL,
 };
 
 const BitWidthType
     RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
-    ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,

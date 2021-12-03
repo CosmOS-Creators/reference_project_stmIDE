@@ -15,6 +15,9 @@
 			},
 			{
 				"target": "osAttributes/:doubleBuffersNum"
+			},
+            {
+				"target": "osAttributes/:eventSpinlockId"
 			}
 		]
 	}

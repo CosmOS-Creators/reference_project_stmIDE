@@ -287,105 +287,6 @@
 				"value": "CosmOS_SleepStateType"
 			}
 		],
-		"route_13": [
-			{
-				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "os_write32"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:apiHeader",
-				"value": "os.h"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
-			},
-			{
-				"target": "sysCallRoutesAttributes/:isMappedToEntity",
-				"value": false
-			},
-			{
-				"target": "sysCallRoutesAttributes/:args",
-				"value": [
-					"uint32Ptr",
-					"uint32Val"
-				]
-			},
-			{
-				"target": "sysCallRoutesAttributes/:returnType",
-				"value": "void"
-			}
-		],
-		"route_14": [
-			{
-				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "os_write16"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:apiHeader",
-				"value": "os.h"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
-			},
-			{
-				"target": "sysCallRoutesAttributes/:isMappedToEntity",
-				"value": false
-			},
-			{
-				"target": "sysCallRoutesAttributes/:args",
-				"value": [
-					"uint16Ptr",
-					"uint16Val"
-				]
-			},
-			{
-				"target": "sysCallRoutesAttributes/:returnType",
-				"value": "void"
-			}
-		],
-		"route_15": [
-			{
-				"target": "sysCallRoutesAttributes/:routedFuncName",
-				"value": "os_write8"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:apiHeader",
-				"value": "os.h"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:sysCall",
-				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
-			},
-			{
-				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
-			},
-			{
-				"target": "sysCallRoutesAttributes/:isMappedToEntity",
-				"value": false
-			},
-			{
-				"target": "sysCallRoutesAttributes/:args",
-				"value": [
-					"uint8Ptr",
-					"uint8Val"
-				]
-			},
-			{
-				"target": "sysCallRoutesAttributes/:returnType",
-				"value": "void"
-			}
-		],
 		"route_16": [
 			{
 				"target": "sysCallRoutesAttributes/:routedFuncName",
@@ -561,7 +462,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:userVisible",
-				"value": true
+				"value": false
 			},
 			{
 				"target": "sysCallRoutesAttributes/:isMappedToEntity",
@@ -674,6 +575,70 @@
 			{
 				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "CosmOS_MutexStateType"
+			}
+		],
+        "route_25": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "osEvent_triggerEventInternal"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "osEvent.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_voidPtr_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"handleCoresPointer",
+                    "dataPointer",
+					"event"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
+		],
+        "route_26": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "os_kernelPanicInternal"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "os.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_ret_void"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": []
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
 			}
 		]
 	}

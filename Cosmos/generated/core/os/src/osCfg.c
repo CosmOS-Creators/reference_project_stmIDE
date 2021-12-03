@@ -24,6 +24,7 @@
 #include "osCfg.h"
 #include "coreCfg.h"
 #include "bufferCfg.h"
+#include "osEventCfg.h"
 #include "bufferDoubleCfg.h"
 #include "routeCfg.h"
 #include "sysJobsCfg.h"
@@ -87,6 +88,7 @@ IS_INITIALIZED_TO{                       /* osCfg */
     BuffersCfgConst,    /* CosmOS_BufferVariableType * bufferVars */
     BuffersDoubleCfg,    /* CosmOS_BufferDoubleVariableType * const bufferDoubleVars */
     SpinlocksVar,    /* CosmOS_BufferDoubleVariableType * const spinlockVars */
+    &OsEventCfg,    /* const CosmOS_OsEventConfigurationType * const osEventCfg */
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
