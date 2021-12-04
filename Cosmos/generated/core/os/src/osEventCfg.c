@@ -57,38 +57,38 @@
   * @{
 ********************************************************************************/
 /* @cond S */
-__SEC_START( __OS_VARS_SECTION_START )
+__SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-CosmOS_BooleanType __OS_VARS_SECTION handleCoresArr[CORE_NUM] IS_INITIALIZED_TO{
-    False };
+CosmOS_BooleanType __OS_VARS_SECTION handleCoresArr[CORE_NUM] IS_INITIALIZED_TO { False };
 
-CosmOS_OsEventVariableType OsEventVar __OS_VARS_SECTION IS_INITIALIZED_TO{
-    /* osEventVar */
-    0, /* CosmOS_OsEventStateType event */
-    NULL, /* AddressType * data */
+CosmOS_OsEventVariableType OsEventVar __OS_VARS_SECTION
+IS_INITIALIZED_TO{                       /* osEventVar */
+    0,    /* BitWidthType event */
+    NULL,    /* AddressType * data */
 };
 /* @cond S */
-__SEC_STOP( __OS_VARS_SECTION_STOP )
+__SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START( __OS_CONSTS_SECTION_START )
+__SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
 const CosmOS_GenericVoidType EventsFuncConst[EVENTS_FUNC_NUM] __OS_CONSTS_SECTION
-    IS_INITIALIZED_TO{
-        (CosmOS_GenericVoidType)CILinterrupt_contextSwitchRoutineTrigger,
-    };
+IS_INITIALIZED_TO
+{
+    (CosmOS_GenericVoidType)CILinterrupt_contextSwitchRoutineTrigger,
+};
 
 const CosmOS_OsEventConfigurationType OsEventCfg __OS_CONSTS_SECTION
-    IS_INITIALIZED_TO{
-        /* osEventCfg */
-        &OsEventVar, /* CosmOS_OsVariableType * const var */
-        handleCoresArr, /* CosmOS_BooleanType * const handleCores */
-        SPINLOCK_6_ID, /* const BitWidthType spinlockId */
-        EventsFuncConst, /* const CosmOS_GenericVoidType * const eventFuncs */
-    };
+IS_INITIALIZED_TO{                       /* osEventCfg */
+    &OsEventVar,    /* CosmOS_OsVariableType * const var */
+    handleCoresArr,    /* CosmOS_BooleanType * const handleCores */
+    SPINLOCK_6_ID,    /* const BitWidthType spinlockId */
+    EventsFuncConst,    /* const CosmOS_GenericVoidType * const eventFuncs */
+    EVENTS_FUNC_NUM,    /* const BitWidthType numberOfEventFuncs */
+};
 /* @cond S */
-__SEC_STOP( __OS_CONSTS_SECTION_STOP )
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **

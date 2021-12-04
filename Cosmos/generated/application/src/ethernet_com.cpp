@@ -25,6 +25,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <thread.h>
+#include <osEvent.h>
 #include "logger.h"
 #include "lwip.h"
 #include "lwip/debug.h"
@@ -206,6 +207,10 @@ echo_recvLog( struct pbuf * p )
     memcpy( &consoleOutput[sizeof( receiveMessage )], p->payload, p->len );
 
     user_log( consoleOutput, sizeof( consoleOutput ) );
+
+    // CosmOS_BooleanType rescheduleCore[CORE_NUM] = {False,True};
+
+    // osEvent_triggerEvent(OS_EVENT_RESCHEDULE,rescheduleCore,NULL);
 }
 
 __APPLICATION_FUNC_SECTION_START_CM7 void
