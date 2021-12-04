@@ -5,13 +5,13 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file sysDefsRoutes.h
+** @file sysDefsOsEvents.h
 *********************************************************************************
-<!--                    sysDefsRoutes Unit Group Definition                   -->
+<!--                   sysDefsOsEvents Unit Group Definition                  -->
 *********************************************************************************
-** @defgroup sysDefsRoutes_unit sysDefsRoutes Unit
+** @defgroup sysDefsOsEvents_unit sysDefsOsEvents Unit
 ** @ingroup sysDefs_module
-** @brief sysDefsRoutes Unit
+** @brief sysDefsOsEvents Unit
 ** @details lorem
 *********************************************************************************
 <!--                           Version Information                            -->
@@ -25,18 +25,18 @@
 ** @warning Modifying code can lead to unexpected behaviour of the whole system
 ** @copyright MIT License
 *********************************************************************************
-<!--                sysDefsRoutes Unit Global Group Definition                -->
+<!--               sysDefsOsEvents Unit Global Group Definition               -->
 *********************************************************************************
-** @defgroup Global_sysDefsRoutes Global
-** @ingroup sysDefsRoutes_unit
-** @brief sysDefsRoutes globals
+** @defgroup Global_sysDefsOsEvents Global
+** @ingroup sysDefsOsEvents_unit
+** @brief sysDefsOsEvents globals
 ** @details lorem
 ********************************************************************************/
 /********************************************************************************
 **                           START OF THE HEADER FILE                          **
 ********************************************************************************/
-#ifndef __SYSDEFSROUTES_H__
-#define __SYSDEFSROUTES_H__
+#ifndef __SYSDEFSOSEVENTS_H__
+#define __SYSDEFSOSEVENTS_H__
 /********************************************************************************
 **                         START OF C++ SUPPORT SECTION                        **
 ********************************************************************************/
@@ -57,62 +57,18 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Macros_sysDefsRoutes_h Macros
-  * @ingroup Global_sysDefsRoutes
+  * @defgroup Macros_sysDefsOsEvents_h Macros
+  * @ingroup Global_sysDefsOsEvents
   * @{
 ********************************************************************************/
-#define ROUTES_FUNC_NUM (BitWidthType)20          /* Number of route RW */
+#define EVENTS_FUNC_NUM (BitWidthType)1          /* Number of event handler */
 
-#define ROUTES_ID_TO_ENTITY_DUMMY (BitWidthType)0     /* Dummy it to entity */
-
-#define BUFFER_READARRAYINTERNAL (BitWidthType)0            /* identifier pointing on function pointer in array (Routes) */
-#define BUFFER_WRITEARRAYINTERNAL (BitWidthType)1            /* identifier pointing on function pointer in array (Routes) */
-#define OSINIT_INIT (BitWidthType)2            /* identifier pointing on function pointer in array (Routes) */
-#define OS_START (BitWidthType)3            /* identifier pointing on function pointer in array (Routes) */
-#define SCHEDULABLE_SETEXECUTIONSTATETOFINISHED (BitWidthType)4            /* identifier pointing on function pointer in array (Routes) */
-#define SYSJOBS_DISPATCHER (BitWidthType)5            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_DISABLEINTERRUPTS (BitWidthType)6            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_ENABLEINTERRUPTS (BitWidthType)7            /* identifier pointing on function pointer in array (Routes) */
-#define THREAD_SLEEPMSINTERNAL (BitWidthType)8            /* identifier pointing on function pointer in array (Routes) */
-#define MUTEX_GETMUTEXINTERNAL (BitWidthType)9            /* identifier pointing on function pointer in array (Routes) */
-#define MUTEX_TRYMUTEXINTERNAL (BitWidthType)10            /* identifier pointing on function pointer in array (Routes) */
-#define MUTEX_RELEASEMUTEXINTERNAL (BitWidthType)11            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_DISABLEINTERRUPT (BitWidthType)12            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_ENABLEINTERRUPT (BitWidthType)13            /* identifier pointing on function pointer in array (Routes) */
-#define CILCORE_GETCOREID (BitWidthType)14            /* identifier pointing on function pointer in array (Routes) */
-#define SPINLOCK_GETSPINLOCKINTERNAL (BitWidthType)15            /* identifier pointing on function pointer in array (Routes) */
-#define SPINLOCK_TRYSPINLOCKINTERNAL (BitWidthType)16            /* identifier pointing on function pointer in array (Routes) */
-#define SPINLOCK_RELEASESPINLOCKINTERNAL (BitWidthType)17            /* identifier pointing on function pointer in array (Routes) */
-#define OSEVENT_TRIGGEREVENTINTERNAL (BitWidthType)18            /* identifier pointing on function pointer in array (Routes) */
-#define OS_KERNELPANICINTERNAL (BitWidthType)19            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_BUFFER_READARRAYINTERNAL (BitWidthType)0            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_BUFFER_WRITEARRAYINTERNAL (BitWidthType)1            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OSINIT_INIT (BitWidthType)2            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OS_START (BitWidthType)3            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED (BitWidthType)4            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SYSJOBS_DISPATCHER (BitWidthType)5            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_DISABLEINTERRUPTS (BitWidthType)6            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_ENABLEINTERRUPTS (BitWidthType)7            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_THREAD_SLEEPMSINTERNAL (BitWidthType)8            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_MUTEX_GETMUTEXINTERNAL (BitWidthType)9            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_MUTEX_TRYMUTEXINTERNAL (BitWidthType)10            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_MUTEX_RELEASEMUTEXINTERNAL (BitWidthType)11            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_DISABLEINTERRUPT (BitWidthType)12            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_ENABLEINTERRUPT (BitWidthType)13            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_CILCORE_GETCOREID (BitWidthType)14            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SPINLOCK_GETSPINLOCKINTERNAL (BitWidthType)15            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SPINLOCK_TRYSPINLOCKINTERNAL (BitWidthType)16            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SPINLOCK_RELEASESPINLOCKINTERNAL (BitWidthType)17            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OSEVENT_TRIGGEREVENTINTERNAL (BitWidthType)18            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OS_KERNELPANICINTERNAL (BitWidthType)19            /* identifier pointing on function pointer in array (Routes) */
-
-#define ROUTES_ID_TO_FUNC_NUM (BitWidthType)20    /* Number of route identifiers */
-#define ROUTES_ID_TO_ENTITY_NUM (BitWidthType)20     /* Number of route identifiers */
+#define OS_EVENT_RESCHEDULE (BitWidthType)0            /* identifier pointing on function CILinterrupt_contextSwitchRoutineTrigger in event handler function array */
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Macros_sysDefsRoutes_h
+/*  Macros_sysDefsOsEvents_h
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -123,15 +79,15 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_sysDefsRoutes_h Variables
-  * @ingroup Global_sysDefsRoutes
+  * @defgroup Variables_sysDefsOsEvents_h Variables
+  * @ingroup Global_sysDefsOsEvents
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Variables_sysDefsRoutes_h
+/*  Variables_sysDefsOsEvents_h
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -142,47 +98,47 @@
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_sysDefsRoutes_h API's
-  * @ingroup Global_sysDefsRoutes
+  * @defgroup Apis_sysDefsOsEvents_h API's
+  * @ingroup Global_sysDefsOsEvents
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_sysDefsRoutes_h Getters
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup Getters_sysDefsOsEvents_h Getters
+  * @ingroup Apis_sysDefsOsEvents_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Getters_sysDefsRoutes_h
+/*  Getters_sysDefsOsEvents_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_sysDefsRoutes_h Setters
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup Setters_sysDefsOsEvents_h Setters
+  * @ingroup Apis_sysDefsOsEvents_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Setters_sysDefsRoutes_h
+/*  Setters_sysDefsOsEvents_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_sysDefsRoutes_h General
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup General_sysDefsOsEvents_h General
+  * @ingroup Apis_sysDefsOsEvents_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  General_sysDefsRoutes_h
+/*  General_sysDefsOsEvents_h
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
@@ -193,41 +149,41 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_sysDefsRoutes_h Getters
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup Getters_sysDefsOsEvents_h Getters
+  * @ingroup Apis_sysDefsOsEvents_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Getters_sysDefsRoutes_h
+/*  Getters_sysDefsOsEvents_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_sysDefsRoutes_h Setters
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup Setters_sysDefsOsEvents_h Setters
+  * @ingroup Apis_sysDefsOsEvents_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Setters_sysDefsRoutes_h
+/*  Setters_sysDefsOsEvents_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_sysDefsRoutes_h General
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup General_sysDefsOsEvents_h General
+  * @ingroup Apis_sysDefsOsEvents_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  General_sysDefsRoutes_h
+/*  General_sysDefsOsEvents_h
 ********************************************************************************/
 /********************************************************************************
 **                        Function Definitions | Stop                          **

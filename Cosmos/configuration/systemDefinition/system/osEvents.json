@@ -1,0 +1,24 @@
+{
+	"version": "1.1.0",
+	"checksum": "8d7c6745b1bedea684ae3a59f3febb38",
+	"ui": {
+		"use_page": "os_events"
+	},
+	"attributes": {},
+	"elements": {
+		"route_0": [
+			{
+				"target": "osEventsAttributes/:eventHandlerFunc",
+				"value": "CILinterrupt_contextSwitchRoutineTrigger"
+			},
+			{
+				"target": "osEventsAttributes/:apiHeader",
+				"value": "CILinterrupt.h"
+			},
+            {
+				"target": "osEventsAttributes/:eventName",
+				"value": "reschedule"
+			}
+		]
+    }
+}
