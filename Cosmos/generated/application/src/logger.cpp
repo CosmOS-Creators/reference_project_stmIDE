@@ -113,42 +113,45 @@ Logger_thread( void )
     CosmOS_BufferConfigurationType * loggerBufferCfg;
     CosmOS_OsConfigurationType * osCfg;
 
-    thread_sleepMs( 5 );
-
-    if ( dma_tx_complete )
+    for( ;; )
     {
-        cosmosApi_interrupt_disableInterrupt( USART3_IRQn );
-        cosmosApi_interrupt_disableInterrupt( DMA1_Stream0_IRQn );
+        thread_sleepMs( 5 );
 
-        osCfg = os_getOsCfg();
-        loggerBufferCfg = os_getOsBufferCfg( osCfg, logger_buffer_id );
-
-        bufferArr = buffer_getBuffer( loggerBufferCfg );
-        bufferSize = buffer_getBufferSize( loggerBufferCfg );
-        bufferTail = buffer_getBufferTail( loggerBufferCfg );
-        bufferFullCellsNum = buffer_getFullCellsNum( loggerBufferCfg );
-
-        if ( bufferFullCellsNum )
+        if ( dma_tx_complete )
         {
-            if ( (AddressType)bufferArr + bufferSize <
-                 ( (AddressType)bufferArr + bufferTail + bufferFullCellsNum ) )
+            cosmosApi_interrupt_disableInterrupt( USART3_IRQn );
+            cosmosApi_interrupt_disableInterrupt( DMA1_Stream0_IRQn );
+
+            osCfg = os_getOsCfg();
+            loggerBufferCfg = os_getOsBufferCfg( osCfg, logger_buffer_id );
+
+            bufferArr = buffer_getBuffer( loggerBufferCfg );
+            bufferSize = buffer_getBufferSize( loggerBufferCfg );
+            bufferTail = buffer_getBufferTail( loggerBufferCfg );
+            bufferFullCellsNum = buffer_getFullCellsNum( loggerBufferCfg );
+
+            if ( bufferFullCellsNum )
             {
-                sizeToSend = bufferSize - bufferTail;
-            }
-            else
-            {
-                sizeToSend = bufferFullCellsNum;
+                if ( (AddressType)bufferArr + bufferSize <
+                    ( (AddressType)bufferArr + bufferTail + bufferFullCellsNum ) )
+                {
+                    sizeToSend = bufferSize - bufferTail;
+                }
+                else
+                {
+                    sizeToSend = bufferFullCellsNum;
+                }
+
+                HAL_UART_Transmit_DMA(
+                    &huart3,
+                    (unsigned char *)( (AddressType)bufferArr + (AddressType)bufferTail ),
+                    sizeToSend );
+                dma_tx_complete = False;
             }
 
-            HAL_UART_Transmit_DMA(
-                &huart3,
-                (unsigned char *)( (AddressType)bufferArr + (AddressType)bufferTail ),
-                sizeToSend );
-            dma_tx_complete = False;
+            cosmosApi_interrupt_enableInterrupt( USART3_IRQn );
+            cosmosApi_interrupt_enableInterrupt( DMA1_Stream0_IRQn );
         }
-
-        cosmosApi_interrupt_enableInterrupt( USART3_IRQn );
-        cosmosApi_interrupt_enableInterrupt( DMA1_Stream0_IRQn );
     }
 /********************************************************************************
 ** stop_name =Logger_thread

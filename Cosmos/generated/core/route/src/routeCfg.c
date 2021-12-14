@@ -43,6 +43,11 @@
 #include "spinlock.h"
 #include "osEvent.h"
 #include "os.h"
+#include "osEvent.h"
+#include "channel.h"
+#include "channel.h"
+#include "channel.h"
+#include "channel.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -101,6 +106,11 @@ IS_INITIALIZED_TO
     (CosmOS_GenericVoidType)spinlock_releaseSpinlockInternal,
     (CosmOS_GenericVoidType)osEvent_triggerEventInternal,
     (CosmOS_GenericVoidType)os_kernelPanicInternal,
+    (CosmOS_GenericVoidType)osEvent_triggerEventDataPoolCopyInternal,
+    (CosmOS_GenericVoidType)channel_sendReplyObtainedInternal,
+    (CosmOS_GenericVoidType)channel_sendConfigureChannelInternal,
+    (CosmOS_GenericVoidType)channel_dataPoolCopyInternal,
+    (CosmOS_GenericVoidType)channel_setChannelSendPoolPayloadLengthInternal,
 };
 
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
@@ -126,12 +136,22 @@ IS_INITIALIZED_TO
     SPINLOCK_RELEASESPINLOCKINTERNAL,
     OSEVENT_TRIGGEREVENTINTERNAL,
     OS_KERNELPANICINTERNAL,
+    OSEVENT_TRIGGEREVENTDATAPOOLCOPYINTERNAL,
+    CHANNEL_SENDREPLYOBTAINEDINTERNAL,
+    CHANNEL_SENDCONFIGURECHANNELINTERNAL,
+    CHANNEL_DATAPOOLCOPYINTERNAL,
+    CHANNEL_SETCHANNELSENDPOOLPAYLOADLENGTHINTERNAL,
 };
 
 const BitWidthType
     RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,

@@ -11,7 +11,12 @@
         "xstring": "c",
         "xtree": "c",
         "mutexcfg.h": "c",
-        "xutility": "c"
+        "xutility": "c",
+        "thread": "cpp",
+        "string_view": "c",
+        "utility": "c",
+        "string": "c",
+        "cosmosapiinternal.h": "c"
     },
     "editor.tabSize": 4,
     "editor.detectIndentation": false,

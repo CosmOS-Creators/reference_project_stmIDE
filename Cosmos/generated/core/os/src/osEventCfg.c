@@ -24,6 +24,8 @@
 #include "osEventCfg.h"
 /* GENERATED interfaces */
 #include "CILinterrupt.h"
+#include "channel.h"
+#include "channel.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -59,12 +61,13 @@
 /* @cond S */
 __SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
+unsigned char osEventDataPool[OS_EVENT_DATAPOOL_SIZE] __OS_VARS_SECTION;
+
 CosmOS_BooleanType __OS_VARS_SECTION handleCoresArr[CORE_NUM] IS_INITIALIZED_TO { False };
 
 CosmOS_OsEventVariableType OsEventVar __OS_VARS_SECTION
 IS_INITIALIZED_TO{                       /* osEventVar */
     0,    /* BitWidthType event */
-    NULL,    /* AddressType * data */
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
@@ -77,15 +80,19 @@ const CosmOS_GenericVoidType EventsFuncConst[EVENTS_FUNC_NUM] __OS_CONSTS_SECTIO
 IS_INITIALIZED_TO
 {
     (CosmOS_GenericVoidType)CILinterrupt_contextSwitchRoutineTrigger,
+    (CosmOS_GenericVoidType)channel_signalizeServer,
+    (CosmOS_GenericVoidType)channel_signalizeClient,
 };
 
 const CosmOS_OsEventConfigurationType OsEventCfg __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{                       /* osEventCfg */
     &OsEventVar,    /* CosmOS_OsVariableType * const var */
     handleCoresArr,    /* CosmOS_BooleanType * const handleCores */
-    SPINLOCK_6_ID,    /* const BitWidthType spinlockId */
+    SPINLOCK_8_ID,    /* const BitWidthType spinlockId */
     EventsFuncConst,    /* const CosmOS_GenericVoidType * const eventFuncs */
     EVENTS_FUNC_NUM,    /* const BitWidthType numberOfEventFuncs */
+    osEventDataPool,    /* unsigned char * const dataPool */
+    OS_EVENT_DATAPOOL_SIZE,    /* const BitWidthType dataPoolSize */
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)

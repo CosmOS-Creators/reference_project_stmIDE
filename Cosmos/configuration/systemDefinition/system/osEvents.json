@@ -19,6 +19,34 @@
 				"target": "osEventsAttributes/:eventName",
 				"value": "reschedule"
 			}
+		],
+        "event_1": [
+			{
+				"target": "osEventsAttributes/:eventHandlerFunc",
+				"value": "channel_signalizeServer"
+			},
+			{
+				"target": "osEventsAttributes/:apiHeader",
+				"value": "channel.h"
+			},
+            {
+				"target": "osEventsAttributes/:eventName",
+				"value": "channel_signalizeServer"
+			}
+		],
+        "event_2": [
+			{
+				"target": "osEventsAttributes/:eventHandlerFunc",
+				"value": "channel_signalizeClient"
+			},
+			{
+				"target": "osEventsAttributes/:apiHeader",
+				"value": "channel.h"
+			},
+            {
+				"target": "osEventsAttributes/:eventName",
+				"value": "channel_signalizeClient"
+			}
 		]
     }
 }

@@ -174,15 +174,17 @@ Timing_measurement_thread_CM4( void )
     CosmOS_SleepStateType sleepState;
     CosmOS_MutexStateType mutexState;
 
-    int * integerPointer = new int( 100 );
-    delete integerPointer;
+    for( ;; )
+    {
+        int * integerPointer = new int( 100 );
+        delete integerPointer;
 
-    mutexState = mutex_getMutex( &resourcesMutex );
+        mutexState = mutex_getMutex( &resourcesMutex );
 
-    sleepState = thread_sleepMs( 10 );
+        sleepState = thread_sleepMs( 10 );
 
-    mutexState = mutex_releaseMutex( &resourcesMutex );
-
+        mutexState = mutex_releaseMutex( &resourcesMutex );
+    }
     __SUPRESS_UNUSED_VAR( mutexState );
     __SUPRESS_UNUSED_VAR( sleepState );
 /********************************************************************************
@@ -210,18 +212,21 @@ Mutex_test_thread_CM4( void )
     CosmOS_MutexStateType mutexState;
     CosmOS_SleepStateType sleepState;
 
-    mutexState = mutex_getMutex( &resourcesMutex );
+    for( ;; )
+    {
+        mutexState = mutex_getMutex( &resourcesMutex );
 
-    sleepState = thread_sleepMs( 100 );
+        sleepState = thread_sleepMs( 100 );
 
-    mutexState = mutex_releaseMutex( &resourcesMutex );
+        mutexState = mutex_releaseMutex( &resourcesMutex );
 
-    sleepState = thread_sleep( 1 );
+        sleepState = thread_sleep( 1 );
 
-    user_log( timingMeasurementCM4, sizeof( timingMeasurementCM4 ) );
+        user_log( timingMeasurementCM4, sizeof( timingMeasurementCM4 ) );
 
-    __SUPRESS_UNUSED_VAR( mutexState );
-    __SUPRESS_UNUSED_VAR( sleepState );
+        __SUPRESS_UNUSED_VAR( mutexState );
+        __SUPRESS_UNUSED_VAR( sleepState );
+    }
 /********************************************************************************
 ** stop_name =Mutex_test_thread_CM4
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **

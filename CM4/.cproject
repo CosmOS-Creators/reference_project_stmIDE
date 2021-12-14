@@ -54,6 +54,7 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/channel/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
@@ -80,6 +81,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/buffer/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/channel/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/core/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>
@@ -143,6 +145,7 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/channel/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
@@ -168,6 +171,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/buffer/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/channel/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/core/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>
@@ -340,6 +344,7 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/channel/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
@@ -366,6 +371,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/buffer/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/channel/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/core/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>
@@ -425,6 +431,7 @@
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
 									<listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/buffer/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/channel/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/core/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
@@ -450,6 +457,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/task/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/thread/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/buffer/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/channel/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/core/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/cosmosApi/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/memory/inc"/>

@@ -228,6 +228,87 @@ IS_INITIALIZED_TO{
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /* @endcond*/
+
+const BitWidthType
+    BitLockChannel0ReplyCfgConst[BITLOCK_CHANNEL_0_REPLY_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+	0b00000000000000000010000000000000,
+};
+const BitWidthType
+    BitLockChannel1ReplyCfgConst[BITLOCK_CHANNEL_1_REPLY_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+	0b00000000000000001000000000000000,
+};
+
+
+const BitWidthType
+    BitLockChannel0SendCfgConst[BITLOCK_CHANNEL_0_SEND_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+	0b00000000000000000100000000000000,
+};
+const BitWidthType
+    BitLockChannel1SendCfgConst[BITLOCK_CHANNEL_1_SEND_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+	0b00000000000000010000000000000000,
+};
+
+
+const BitWidthType
+    BitLockChannel0ReplyCfgInvertedConst[BITLOCK_CHANNEL_0_REPLY_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+	0b11111111111111111101111111111111,
+};
+const BitWidthType
+    BitLockChannel1ReplyCfgInvertedConst[BITLOCK_CHANNEL_1_REPLY_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+	0b11111111111111110111111111111111,
+};
+
+
+const BitWidthType
+    BitLockChannel0SendCfgInvertedConst[BITLOCK_CHANNEL_0_SEND_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO
+{
+	0b11111111111111111011111111111111,
+};
+const BitWidthType
+    BitLockChannel1SendCfgInvertedConst[BITLOCK_CHANNEL_1_SEND_ELEMENTS_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO
+{
+	0b11111111111111101111111111111111,
+};
+
+
+const CosmOS_PermissionsConfigurationType
+    PermissionsChannel0ReplyCfgConst __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    BitLockChannel0ReplyCfgConst,
+    BitLockChannel0ReplyCfgInvertedConst,
+};
+const CosmOS_PermissionsConfigurationType
+    PermissionsChannel1ReplyCfgConst __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    BitLockChannel1ReplyCfgConst,
+    BitLockChannel1ReplyCfgInvertedConst,
+};
+
+
+
+const CosmOS_PermissionsConfigurationType
+    PermissionsChannel0SendCfgConst __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    BitLockChannel0SendCfgConst,
+    BitLockChannel0SendCfgInvertedConst,
+};
+const CosmOS_PermissionsConfigurationType
+    PermissionsChannel1SendCfgConst __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    BitLockChannel1SendCfgConst,
+    BitLockChannel1SendCfgInvertedConst,
+};
+/* @cond S */
+__SEC_STOP(__OS_CONSTS_SECTION_STOP)
+/* @endcond*/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**

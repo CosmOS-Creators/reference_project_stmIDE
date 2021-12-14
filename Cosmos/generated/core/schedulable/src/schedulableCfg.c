@@ -118,6 +118,22 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
         STACK_THREAD_0_PROGRAM_2_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
     },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_THREAD_0_PROGRAM_3_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_THREAD_0_PROGRAM_3_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_THREAD_1_PROGRAM_3_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
+    {
+        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
+        STACK_THREAD_2_PROGRAM_3_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+    },
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
@@ -329,6 +345,66 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_12_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
         SCHEDULABLE_12_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
+    {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_3_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
+        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_3_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
+        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
+        wrapped_channel_xCore_server_CM7,    /* const CosmOS_GenericVoidType handler */
+        False,    /* const CosmOS_BooleanType fp */
+        SCHEDULABLE_13_UNIQUE_ID,    /* const BitWidthType id */
+        THREAD_0_PROGRAM_3_CORE_0_ID,    /* const BitWidthType instanceId */
+        PROGRAM_3_CORE_0_ID,    /* const BitWidthType programId */
+        CORE_0_ID,    /* const BitWidthType coreId */
+        ALARM_3_PROGRAM_3_CORE_0_ID,    /* const BitWidthType alarmId */
+        SCHEDULABLE_13_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
+        SCHEDULABLE_13_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
+        SCHEDULABLE_13_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
+    },
+    {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_3_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
+        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_3_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
+        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
+        wrapped_channel_xCore_client_CM4,    /* const CosmOS_GenericVoidType handler */
+        False,    /* const CosmOS_BooleanType fp */
+        SCHEDULABLE_14_UNIQUE_ID,    /* const BitWidthType id */
+        THREAD_0_PROGRAM_3_CORE_1_ID,    /* const BitWidthType instanceId */
+        PROGRAM_3_CORE_1_ID,    /* const BitWidthType programId */
+        CORE_1_ID,    /* const BitWidthType coreId */
+        ALARM_4_PROGRAM_3_CORE_1_ID,    /* const BitWidthType alarmId */
+        SCHEDULABLE_14_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
+        SCHEDULABLE_14_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
+        SCHEDULABLE_14_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
+    },
+    {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_1_PROGRAM_3_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
+        &ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_3_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
+        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
+        wrapped_channel_sameCore_server_CM7,    /* const CosmOS_GenericVoidType handler */
+        False,    /* const CosmOS_BooleanType fp */
+        SCHEDULABLE_15_UNIQUE_ID,    /* const BitWidthType id */
+        THREAD_1_PROGRAM_3_CORE_0_ID,    /* const BitWidthType instanceId */
+        PROGRAM_3_CORE_0_ID,    /* const BitWidthType programId */
+        CORE_0_ID,    /* const BitWidthType coreId */
+        ALARM_4_PROGRAM_3_CORE_0_ID,    /* const BitWidthType alarmId */
+        SCHEDULABLE_15_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
+        SCHEDULABLE_15_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
+        SCHEDULABLE_15_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
+    },
+    {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_2_PROGRAM_3_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
+        &ThreadsStacksCfgConst[STACK_THREAD_2_PROGRAM_3_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
+        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
+        wrapped_channel_sameCore_client_CM7,    /* const CosmOS_GenericVoidType handler */
+        False,    /* const CosmOS_BooleanType fp */
+        SCHEDULABLE_16_UNIQUE_ID,    /* const BitWidthType id */
+        THREAD_2_PROGRAM_3_CORE_0_ID,    /* const BitWidthType instanceId */
+        PROGRAM_3_CORE_0_ID,    /* const BitWidthType programId */
+        CORE_0_ID,    /* const BitWidthType coreId */
+        ALARM_5_PROGRAM_3_CORE_0_ID,    /* const BitWidthType alarmId */
+        SCHEDULABLE_16_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
+        SCHEDULABLE_16_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
+        SCHEDULABLE_16_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
+    },
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
@@ -478,11 +554,10 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 __APPLICATION_FUNC_SECTION_CM7 void
 wrapped_IdleThread_CM7( void )
 {
-    while ( 1 )
-    {
-        IdleThread_CM7();
-    }
-};
+    IdleThread_CM7();
+    for( ;; )
+    {}
+    };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 /* @endcond*/
@@ -492,11 +567,8 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 __APPLICATION_FUNC_SECTION_CM7 void
 wrapped_Timing_measurement_thread_CM7( void )
 {
-    while ( 1 )
-    {
-        Timing_measurement_thread_CM7();
-    }
-};
+    Timing_measurement_thread_CM7();
+    };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 /* @endcond*/
@@ -506,11 +578,10 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 __APPLICATION_FUNC_SECTION_CM4 void
 wrapped_IdleThread_CM4( void )
 {
-    while ( 1 )
-    {
-        IdleThread_CM4();
-    }
-};
+    IdleThread_CM4();
+    for( ;; )
+    {}
+    };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @endcond*/
@@ -520,11 +591,8 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 __APPLICATION_FUNC_SECTION_CM4 void
 wrapped_Timing_measurement_thread_CM4( void )
 {
-    while ( 1 )
-    {
-        Timing_measurement_thread_CM4();
-    }
-};
+    Timing_measurement_thread_CM4();
+    };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @endcond*/
@@ -534,11 +602,8 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 __APPLICATION_FUNC_SECTION_CM4 void
 wrapped_Mutex_test_thread_CM4( void )
 {
-    while ( 1 )
-    {
-        Mutex_test_thread_CM4();
-    }
-};
+    Mutex_test_thread_CM4();
+    };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @endcond*/
@@ -548,11 +613,8 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 __APPLICATION_FUNC_SECTION_CM4 void
 wrapped_Logger_thread( void )
 {
-    while ( 1 )
-    {
-        Logger_thread();
-    }
-};
+    Logger_thread();
+    };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @endcond*/
@@ -562,13 +624,54 @@ __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 __APPLICATION_FUNC_SECTION_CM7 void
 wrapped_TCPIP_thread( void )
 {
-    while ( 1 )
-    {
-        TCPIP_thread();
-    }
-};
+    TCPIP_thread();
+    };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION_CM7 void
+wrapped_channel_xCore_server_CM7( void )
+{
+    channel_xCore_server_CM7();
+    };
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION_CM7 void
+wrapped_channel_sameCore_server_CM7( void )
+{
+    channel_sameCore_server_CM7();
+    };
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION_CM7 void
+wrapped_channel_sameCore_client_CM7( void )
+{
+    channel_sameCore_client_CM7();
+    };
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
+/* @endcond*/
+/* @cond S */
+__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
+/* @endcond*/
+__APPLICATION_FUNC_SECTION_CM4 void
+wrapped_channel_xCore_client_CM4( void )
+{
+    channel_xCore_client_CM4();
+    };
+/* @cond S */
+__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 /* @endcond*/
 /********************************************************************************
 **                        Function Definitions | Stop                          **

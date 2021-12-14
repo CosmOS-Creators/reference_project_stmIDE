@@ -147,16 +147,20 @@ TCPIP_thread( void )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =TCPIP_thread
 ********************************************************************************/
-    if ( IS_NOT( echo_initialized ) )
+
+    for( ;; )
     {
-        echo_init();
-        echo_initialized = True;
+        if ( IS_NOT( echo_initialized ) )
+        {
+            echo_init();
+            echo_initialized = True;
+        }
+
+        ethernetif_input( &gnetif );
+        sys_check_timeouts();
+
+        thread_sleepMs( 5 );
     }
-
-    ethernetif_input( &gnetif );
-    sys_check_timeouts();
-
-    thread_sleepMs( 5 );
 /********************************************************************************
 ** stop_name =TCPIP_thread
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -210,7 +214,9 @@ echo_recvLog( struct pbuf * p )
 
     // CosmOS_BooleanType rescheduleCore[CORE_NUM] = {False,True};
 
-    // osEvent_triggerEvent(OS_EVENT_RESCHEDULE,rescheduleCore,NULL);
+    // unsigned char eventData[] = "recvLog";
+
+    // osEvent_triggerEvent(OS_EVENT_RESCHEDULE,rescheduleCore,(AddressType *)eventData,sizeof(eventData));
 }
 
 __APPLICATION_FUNC_SECTION_START_CM7 void
