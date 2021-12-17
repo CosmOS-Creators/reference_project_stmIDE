@@ -24,8 +24,9 @@
 ********************************************************************************/
 #include <buffer.h>
 #include <os.h>
-#include <stm32h7xx_hal.h>
 #include <thread.h>
+#include <errorHandler.h>
+#include <stm32h7xx_hal.h>
 /********************************************************************************
 ** stop_name =logger_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -91,7 +92,6 @@ CosmOS_BooleanType __LOGGER_INIT_SECTION dma_tx_complete = True;
 __SEC_STOP( __LOGGER_INIT_SECTION_STOP)
 /* @endcond*/
 
-
 /********************************************************************************
 ** Thread ID macro = THREAD_0_PROGRAM_2_CORE_1_ID
 ** Program ID macro = PROGRAM_2_CORE_1_ID
@@ -108,6 +108,8 @@ Logger_thread( void )
 ********************************************************************************/
     BitWidthType bufferTail, bufferFullCellsNum, bufferSize, sizeToSend;
 
+    CosmOS_SleepStateType sleepState;
+
     unsigned char * bufferArr;
 
     CosmOS_BufferConfigurationType * loggerBufferCfg;
@@ -115,7 +117,12 @@ Logger_thread( void )
 
     for( ;; )
     {
-        thread_sleepMs( 5 );
+        sleepState = thread_sleepMs( 5 );
+
+        if( errorHandler_isError( sleepState ) )
+        {
+            //error was returned, check its value
+        }
 
         if ( dma_tx_complete )
         {

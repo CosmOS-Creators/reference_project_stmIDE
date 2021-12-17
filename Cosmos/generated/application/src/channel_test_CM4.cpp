@@ -22,8 +22,9 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =channel_test_CM4_includeFiles
 ********************************************************************************/
-#include "channel.h"
-#include "thread.h"
+#include <channel.h>
+#include <thread.h>
+#include <errorHandler.h>
 /********************************************************************************
 ** stop_name =channel_test_CM4_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -101,6 +102,7 @@ channel_xCore_client_CM4( void )
 ** start_name =channel_xCore_client_CM4
 ********************************************************************************/
     CosmOS_ChannelStateType channelState;
+    CosmOS_SleepStateType sleepState;
 
     unsigned char replyPool[XCORE_CLIENT_REPLY_POOL_SIZE] = {0};
     unsigned char sendPool[] = "request";
@@ -113,7 +115,17 @@ channel_xCore_client_CM4( void )
                                     (AddressType *)replyPool,
                                     sizeof(replyPool));
 
-        thread_sleepMs( 500 );
+        if( errorHandler_isError( channelState ) )
+        {
+            //error was returned, check its value
+        }
+
+        sleepState = thread_sleepMs( 500 );
+
+        if( errorHandler_isError( sleepState ) )
+        {
+            //error was returned, check its value
+        }
 
     }
 /********************************************************************************

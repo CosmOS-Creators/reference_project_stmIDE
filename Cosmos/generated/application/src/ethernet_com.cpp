@@ -25,7 +25,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <thread.h>
-#include <osEvent.h>
+#include <errorHandler.h>
 #include "logger.h"
 #include "lwip.h"
 #include "lwip/debug.h"
@@ -147,6 +147,7 @@ TCPIP_thread( void )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =TCPIP_thread
 ********************************************************************************/
+    CosmOS_SleepStateType sleepState;
 
     for( ;; )
     {
@@ -159,7 +160,12 @@ TCPIP_thread( void )
         ethernetif_input( &gnetif );
         sys_check_timeouts();
 
-        thread_sleepMs( 5 );
+        sleepState = thread_sleepMs( 5 );
+
+        if( errorHandler_isError( sleepState ) )
+        {
+            //error was returned, check its value
+        }
     }
 /********************************************************************************
 ** stop_name =TCPIP_thread
@@ -211,12 +217,6 @@ echo_recvLog( struct pbuf * p )
     memcpy( &consoleOutput[sizeof( receiveMessage )], p->payload, p->len );
 
     user_log( consoleOutput, sizeof( consoleOutput ) );
-
-    // CosmOS_BooleanType rescheduleCore[CORE_NUM] = {False,True};
-
-    // unsigned char eventData[] = "recvLog";
-
-    // osEvent_triggerEvent(OS_EVENT_RESCHEDULE,rescheduleCore,(AddressType *)eventData,sizeof(eventData));
 }
 
 __APPLICATION_FUNC_SECTION_START_CM7 void

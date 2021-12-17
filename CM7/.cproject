@@ -59,6 +59,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/errorHandler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
@@ -150,6 +151,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/errorHandler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
@@ -316,6 +318,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/errorHandler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>
@@ -403,6 +406,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/support/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosAssert/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/cosmosTypes/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/errorHandler/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/LICENSE/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/memory/inc"/>

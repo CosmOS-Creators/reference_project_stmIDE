@@ -22,8 +22,9 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =channel_test_CM7_includeFiles
 ********************************************************************************/
-#include "channel.h"
-#include "thread.h"
+#include <channel.h>
+#include <thread.h>
+#include <errorHandler.h>
 /********************************************************************************
 ** stop_name =channel_test_CM7_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -112,17 +113,31 @@ channel_xCore_server_CM7( void )
     unsigned char receivePool[XCORE_SERVER_REPLY_POOL_SIZE] = {0};
     unsigned char replyPool[] = "reply";
 
-    channelState = channel_initialize(xCore_channel_id);
+    channelState = channel_initialize( xCore_channel_id );
+    if( errorHandler_isError( channelState ) )
+    {
+        //error was returned, check its value
+    }
 
     for(;;)
     {
         channelState = channel_receive( xCore_channel_id,
                                     (AddressType *)receivePool,
-                                    sizeof(receivePool));
+                                    sizeof(receivePool) );
+
+        if( errorHandler_isError( channelState ) )
+        {
+            //error was returned, check its value
+        }
 
         channelState = channel_reply( xCore_channel_id,
                                     (AddressType *)replyPool,
-                                    sizeof(replyPool));
+                                    sizeof(replyPool) );
+
+        if( errorHandler_isError( channelState ) )
+        {
+            //error was returned, check its value
+        }
 
     }
 /********************************************************************************
@@ -152,18 +167,31 @@ channel_sameCore_server_CM7( void )
     unsigned char receivePool[SAMECORE_SERVER_REPLY_POOL_SIZE] = {0};
     unsigned char replyPool[] = "reply";
 
-    channelState = channel_initialize(sameCore_channel_id);
+    channelState = channel_initialize( sameCore_channel_id );
+    if( errorHandler_isError( channelState ) )
+    {
+        //error was returned, check its value
+    }
 
     for(;;)
     {
         channelState = channel_receive( sameCore_channel_id,
                                     (AddressType *)receivePool,
-                                    sizeof(receivePool));
+                                    sizeof(receivePool) );
+
+        if( errorHandler_isError( channelState ) )
+        {
+            //error was returned, check its value
+        }
 
         channelState = channel_reply( sameCore_channel_id,
                                     (AddressType *)replyPool,
-                                    sizeof(replyPool));
+                                    sizeof(replyPool) );
 
+        if( errorHandler_isError( channelState ) )
+        {
+            //error was returned, check its value
+        }
     }
 /********************************************************************************
 ** stop_name =channel_sameCore_server_CM7
@@ -188,6 +216,7 @@ channel_sameCore_client_CM7( void )
 ** start_name =channel_sameCore_client_CM7
 ********************************************************************************/
     CosmOS_ChannelStateType channelState;
+    CosmOS_SleepStateType sleepState;
 
     unsigned char replyPool[SAMECORE_CLIENT_REPLY_POOL_SIZE] = {0};
     unsigned char sendPool[] = "request";
@@ -198,10 +227,19 @@ channel_sameCore_client_CM7( void )
                                     (AddressType *)sendPool,
                                     sizeof(sendPool),
                                     (AddressType *)replyPool,
-                                    sizeof(replyPool));
+                                    sizeof(replyPool) );
 
-        thread_sleepMs( 500 );
+        if( errorHandler_isError( channelState ) )
+        {
+            //error was returned, check its value
+        }
 
+        sleepState = thread_sleepMs( 500 );
+
+        if( errorHandler_isError( sleepState ) )
+        {
+            //error was returned, check its value
+        }
     }
 /********************************************************************************
 ** stop_name =channel_sameCore_client_CM7

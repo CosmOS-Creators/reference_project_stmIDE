@@ -27,6 +27,7 @@
 #include <spinlock.h>
 #include <stm32h7xx_hal.h>
 #include <thread.h>
+#include <errorHandler.h>
 #include "logger.h"
 /********************************************************************************
 ** stop_name =timing_measurement_CM4_includeFiles
@@ -87,6 +88,8 @@ __SEC_START( __TIMING_MEASUREMENT_CM4_INIT_SECTION_START)
 int __TIMING_MEASUREMENT_CM4_INIT_SECTION counter_cm4 = 0;
 int __TIMING_MEASUREMENT_CM4_INIT_SECTION bufferReader_cm4 = 0;
 CosmOS_MutexVariableType resourcesMutex __TIMING_MEASUREMENT_CM4_INIT_SECTION;
+CosmOS_MutexStateType resourcesMutex0 __TIMING_MEASUREMENT_CM4_INIT_SECTION;
+
 char __TIMING_MEASUREMENT_CM4_INIT_SECTION timingMeasurementCM4[] =
     "\nMutex_test_thread_CM4 released mutex for resources \r\n\n";
 /********************************************************************************
@@ -123,18 +126,39 @@ Timing_measurement_task_CM4( void )
     bufferState = buffer_writeArray( x_core_buffer_1_id,
         &bufferReader_cm4, sizeof( bufferReader_cm4 ) );
 
+    if( errorHandler_isError( bufferState ) )
+    {
+        //error was returned, check its value
+    }
+
     bufferReader_cm4 = 0;
     bufferState = buffer_writeArray( x_core_buffer_1_id,
         &bufferReader_cm4, sizeof( bufferReader_cm4 ) );
+
+    if( errorHandler_isError( bufferState ) )
+    {
+        //error was returned, check its value
+    }
 
     spinlockState = spinlock_trySpinlock( spinlock_test_0_id );
     if ( spinlockState IS_EQUAL_TO SPINLOCK_STATE_ENUM__SUCCESSFULLY_LOCKED )
     {
         spinlockState = spinlock_releaseSpinlock( spinlock_test_0_id );
     }
+    else
+    {
+        if( errorHandler_isError( spinlockState ) )
+        {
+            //error was returned, check its value
+        }
+    }
 
     //trying if kernel will return err cause task cannot use mutexes
     mutexState = mutex_getMutex( &resourcesMutex );
+    if( errorHandler_isError( mutexState ) )
+    {
+        //error was returned, check its value
+    }
 
     if ( counter_cm4 > 100 )
     {
@@ -144,10 +168,6 @@ Timing_measurement_task_CM4( void )
     {
         counter_cm4++;
     }
-
-    __SUPRESS_UNUSED_VAR( spinlockState );
-    __SUPRESS_UNUSED_VAR( mutexState );
-    __SUPRESS_UNUSED_VAR( bufferState );
 /********************************************************************************
 ** stop_name =Timing_measurement_task_CM4
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -180,13 +200,23 @@ Timing_measurement_thread_CM4( void )
         delete integerPointer;
 
         mutexState = mutex_getMutex( &resourcesMutex );
+        if( errorHandler_isError( mutexState ) )
+        {
+            //error was returned, check its value
+        }
 
         sleepState = thread_sleepMs( 10 );
+        if( errorHandler_isError( sleepState ) )
+        {
+            //error was returned, check its value
+        }
 
         mutexState = mutex_releaseMutex( &resourcesMutex );
+        if( errorHandler_isError( mutexState ) )
+        {
+            //error was returned, check its value
+        }
     }
-    __SUPRESS_UNUSED_VAR( mutexState );
-    __SUPRESS_UNUSED_VAR( sleepState );
 /********************************************************************************
 ** stop_name =Timing_measurement_thread_CM4
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -211,21 +241,40 @@ Mutex_test_thread_CM4( void )
 ********************************************************************************/
     CosmOS_MutexStateType mutexState;
     CosmOS_SleepStateType sleepState;
+    CosmOS_BufferStateType bufferState;
+
 
     for( ;; )
     {
         mutexState = mutex_getMutex( &resourcesMutex );
+        if( errorHandler_isError( mutexState ) )
+        {
+            //error was returned, check its value
+        }
 
         sleepState = thread_sleepMs( 100 );
+        if( errorHandler_isError( sleepState ) )
+        {
+            //error was returned, check its value
+        }
 
         mutexState = mutex_releaseMutex( &resourcesMutex );
+        if( errorHandler_isError( mutexState ) )
+        {
+            //error was returned, check its value
+        }
 
         sleepState = thread_sleep( 1 );
+        if( errorHandler_isError( sleepState ) )
+        {
+            //error was returned, check its value
+        }
 
-        user_log( timingMeasurementCM4, sizeof( timingMeasurementCM4 ) );
-
-        __SUPRESS_UNUSED_VAR( mutexState );
-        __SUPRESS_UNUSED_VAR( sleepState );
+        bufferState = user_log( timingMeasurementCM4, sizeof( timingMeasurementCM4 ) );
+        if( errorHandler_isError( bufferState ) )
+        {
+            //error was returned, check its value
+        }
     }
 /********************************************************************************
 ** stop_name =Mutex_test_thread_CM4
