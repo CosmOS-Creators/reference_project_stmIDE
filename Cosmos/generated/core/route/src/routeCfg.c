@@ -40,11 +40,11 @@
 #include "CILcore.h"
 #include "spinlock.h"
 #include "spinlock.h"
-#include "spinlock.h"
 #include "osEvent.h"
 #include "os.h"
-#include "osEvent.h"
 #include "channel.h"
+#include "channel.h"
+#include "supportStdio.h"
 #include "channel.h"
 #include "channel.h"
 #include "channel.h"
@@ -101,16 +101,16 @@ IS_INITIALIZED_TO
     (CosmOS_GenericVoidType)interrupt_disableInterrupt,
     (CosmOS_GenericVoidType)interrupt_enableInterrupt,
     (CosmOS_GenericVoidType)CILcore_getCoreId,
-    (CosmOS_GenericVoidType)spinlock_getSpinlockInternal,
     (CosmOS_GenericVoidType)spinlock_trySpinlockInternal,
     (CosmOS_GenericVoidType)spinlock_releaseSpinlockInternal,
     (CosmOS_GenericVoidType)osEvent_triggerEventInternal,
     (CosmOS_GenericVoidType)os_kernelPanicInternal,
-    (CosmOS_GenericVoidType)osEvent_triggerEventDataPoolCopyInternal,
+    (CosmOS_GenericVoidType)channel_sendInternal,
     (CosmOS_GenericVoidType)channel_sendReplyObtainedInternal,
-    (CosmOS_GenericVoidType)channel_sendConfigureChannelInternal,
-    (CosmOS_GenericVoidType)channel_dataPoolCopyInternal,
-    (CosmOS_GenericVoidType)channel_setChannelSendPoolPayloadLengthInternal,
+    (CosmOS_GenericVoidType)supportStdio_memcpyInternal,
+    (CosmOS_GenericVoidType)channel_replyInternal,
+    (CosmOS_GenericVoidType)channel_receiveInternal,
+    (CosmOS_GenericVoidType)channel_initializeInternal,
 };
 
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
@@ -131,16 +131,16 @@ IS_INITIALIZED_TO
     INTERRUPT_DISABLEINTERRUPT,
     INTERRUPT_ENABLEINTERRUPT,
     CILCORE_GETCOREID,
-    SPINLOCK_GETSPINLOCKINTERNAL,
     SPINLOCK_TRYSPINLOCKINTERNAL,
     SPINLOCK_RELEASESPINLOCKINTERNAL,
     OSEVENT_TRIGGEREVENTINTERNAL,
     OS_KERNELPANICINTERNAL,
-    OSEVENT_TRIGGEREVENTDATAPOOLCOPYINTERNAL,
+    CHANNEL_SENDINTERNAL,
     CHANNEL_SENDREPLYOBTAINEDINTERNAL,
-    CHANNEL_SENDCONFIGURECHANNELINTERNAL,
-    CHANNEL_DATAPOOLCOPYINTERNAL,
-    CHANNEL_SETCHANNELSENDPOOLPAYLOADLENGTHINTERNAL,
+    SUPPORTSTDIO_MEMCPYINTERNAL,
+    CHANNEL_REPLYINTERNAL,
+    CHANNEL_RECEIVEINTERNAL,
+    CHANNEL_INITIALIZEINTERNAL,
 };
 
 const BitWidthType

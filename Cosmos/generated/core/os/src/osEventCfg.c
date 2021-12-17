@@ -80,8 +80,8 @@ const CosmOS_GenericVoidType EventsFuncConst[EVENTS_FUNC_NUM] __OS_CONSTS_SECTIO
 IS_INITIALIZED_TO
 {
     (CosmOS_GenericVoidType)CILinterrupt_contextSwitchRoutineTrigger,
-    (CosmOS_GenericVoidType)channel_signalizeServer,
-    (CosmOS_GenericVoidType)channel_signalizeClient,
+    (CosmOS_GenericVoidType)channel_signalizeReply,
+    (CosmOS_GenericVoidType)channel_signalizeSend,
 };
 
 const CosmOS_OsEventConfigurationType OsEventCfg __OS_CONSTS_SECTION

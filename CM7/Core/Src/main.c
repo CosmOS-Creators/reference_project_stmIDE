@@ -142,10 +142,10 @@ int main(void) {
   HAL_NVIC_DisableIRQ(TIM1_UP_IRQn);
   /* USER CODE BEGIN 2 */
   SET_BIT(RCC->D3AMR, RCC_D3AMR_SRAM4AMEN);
-  NVIC_SetPriority(SVCall_IRQn, 3);
+  NVIC_SetPriority(SVCall_IRQn, 1);
   NVIC_SetPriority(PendSV_IRQn, 4);
   NVIC_SetPriority(SysTick_IRQn, 0); /* set Priority for Systick Interrupt */
-  NVIC_SetPriority(CM4_SEV_IRQn, 0);
+  NVIC_SetPriority(CM4_SEV_IRQn, 2);
   NVIC_EnableIRQ(CM4_SEV_IRQn);
   cosmosApi_os_start();
   /* USER CODE END 2 */

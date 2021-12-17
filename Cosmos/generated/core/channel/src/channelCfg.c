@@ -74,20 +74,20 @@ CosmOS_ChannelVariableType ChannelsVar[CHANNEL_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO{
     {
         False,
-        CHANNEL_POOL_STATE_ENUM__READY,
+        CHANNEL_POOL_STATE_ENUM__WAITING_TO_BE_PROCESSED,
         0,
         NULL,
         False,
-        CHANNEL_POOL_STATE_ENUM__READY,
+        CHANNEL_POOL_STATE_ENUM__EMPTY,
         0,
     },
     {
         False,
-        CHANNEL_POOL_STATE_ENUM__READY,
+        CHANNEL_POOL_STATE_ENUM__WAITING_TO_BE_PROCESSED,
         0,
         NULL,
         False,
-        CHANNEL_POOL_STATE_ENUM__READY,
+        CHANNEL_POOL_STATE_ENUM__EMPTY,
         0,
     },
 };

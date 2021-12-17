@@ -23,7 +23,7 @@
         "event_1": [
 			{
 				"target": "osEventsAttributes/:eventHandlerFunc",
-				"value": "channel_signalizeServer"
+				"value": "channel_signalizeReply"
 			},
 			{
 				"target": "osEventsAttributes/:apiHeader",
@@ -31,13 +31,13 @@
 			},
             {
 				"target": "osEventsAttributes/:eventName",
-				"value": "channel_signalizeServer"
+				"value": "channel_signalizeReply"
 			}
 		],
         "event_2": [
 			{
 				"target": "osEventsAttributes/:eventHandlerFunc",
-				"value": "channel_signalizeClient"
+				"value": "channel_signalizeSend"
 			},
 			{
 				"target": "osEventsAttributes/:apiHeader",
@@ -45,7 +45,7 @@
 			},
             {
 				"target": "osEventsAttributes/:eventName",
-				"value": "channel_signalizeClient"
+				"value": "channel_signalizeSend"
 			}
 		]
     }

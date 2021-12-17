@@ -33,6 +33,9 @@
 ** start_name =channel_test_CM7_userFreeDeclarations
 ********************************************************************************/
 #define SAMECORE_CLIENT_REPLY_POOL_SIZE 32
+#define SAMECORE_SERVER_REPLY_POOL_SIZE 32
+
+#define XCORE_SERVER_REPLY_POOL_SIZE 32
 /********************************************************************************
 ** stop_name =channel_test_CM7_userFreeDeclarations
 ** DO NOT MODIFY THIS COMMENT ! Declarations         USER SECTION | Stop       **
@@ -104,9 +107,23 @@ channel_xCore_server_CM7( void )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =channel_xCore_server_CM7
 ********************************************************************************/
+    CosmOS_ChannelStateType channelState;
+
+    unsigned char receivePool[XCORE_SERVER_REPLY_POOL_SIZE] = {0};
+    unsigned char replyPool[] = "reply";
+
+    channelState = channel_initialize(xCore_channel_id);
+
     for(;;)
     {
-        thread_sleepMs( 5 );
+        channelState = channel_receive( xCore_channel_id,
+                                    (AddressType *)receivePool,
+                                    sizeof(receivePool));
+
+        channelState = channel_reply( xCore_channel_id,
+                                    (AddressType *)replyPool,
+                                    sizeof(replyPool));
+
     }
 /********************************************************************************
 ** stop_name =channel_xCore_server_CM7
@@ -130,9 +147,23 @@ channel_sameCore_server_CM7( void )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =channel_sameCore_server_CM7
 ********************************************************************************/
+    CosmOS_ChannelStateType channelState;
+
+    unsigned char receivePool[SAMECORE_SERVER_REPLY_POOL_SIZE] = {0};
+    unsigned char replyPool[] = "reply";
+
+    channelState = channel_initialize(sameCore_channel_id);
+
     for(;;)
     {
-        thread_sleepMs( 5 );
+        channelState = channel_receive( sameCore_channel_id,
+                                    (AddressType *)receivePool,
+                                    sizeof(receivePool));
+
+        channelState = channel_reply( sameCore_channel_id,
+                                    (AddressType *)replyPool,
+                                    sizeof(replyPool));
+
     }
 /********************************************************************************
 ** stop_name =channel_sameCore_server_CM7
@@ -159,7 +190,7 @@ channel_sameCore_client_CM7( void )
     CosmOS_ChannelStateType channelState;
 
     unsigned char replyPool[SAMECORE_CLIENT_REPLY_POOL_SIZE] = {0};
-    unsigned char sendPool[] = "message";
+    unsigned char sendPool[] = "request";
 
     for(;;)
     {
@@ -167,7 +198,9 @@ channel_sameCore_client_CM7( void )
                                     (AddressType *)sendPool,
                                     sizeof(sendPool),
                                     (AddressType *)replyPool,
-                                    SAMECORE_CLIENT_REPLY_POOL_SIZE);
+                                    sizeof(replyPool));
+
+        thread_sleepMs( 500 );
 
     }
 /********************************************************************************

@@ -473,7 +473,7 @@
 			},
 			{
 				"target": "threadsAttributes/:priority",
-				"value" : 6
+				"value" : 7
 			},
 			{
 				"target": "threadsAttributes/:peripheralAccessLowAddress",
@@ -522,7 +522,7 @@
 			},
 			{
 				"target": "threadsAttributes/:priority",
-				"value" : 7
+				"value" : 6
 			},
 			{
 				"target": "threadsAttributes/:peripheralAccessLowAddress",

@@ -66,10 +66,10 @@ IS_INITIALIZED_TO
         &ThreadsProgram2Core0CfgConst[THREAD_0_PROGRAM_2_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
-        &ThreadsProgram3Core0CfgConst[THREAD_2_PROGRAM_3_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
+        &ThreadsProgram3Core0CfgConst[THREAD_1_PROGRAM_3_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
-        &ThreadsProgram3Core0CfgConst[THREAD_1_PROGRAM_3_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
+        &ThreadsProgram3Core0CfgConst[THREAD_2_PROGRAM_3_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
         &ThreadsProgram3Core0CfgConst[THREAD_0_PROGRAM_3_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */

@@ -72,10 +72,10 @@ static void MX_USART3_UART_Init(void);
 int main(void) {
   /* USER CODE BEGIN 1 */
   cosmosApi_boot();
-  NVIC_SetPriority(SVCall_IRQn, 3);
+  NVIC_SetPriority(SVCall_IRQn, 1);
   NVIC_SetPriority(PendSV_IRQn, 4);
   NVIC_SetPriority(SysTick_IRQn, 0); /* set Priority for Systick Interrupt */
-  NVIC_SetPriority(CM7_SEV_IRQn, 0);
+  NVIC_SetPriority(CM7_SEV_IRQn, 2);
   NVIC_EnableIRQ(CM7_SEV_IRQn);
   cosmosApi_osInit_init();
   /* USER CODE END 1 */

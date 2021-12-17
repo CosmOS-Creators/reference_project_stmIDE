@@ -32,7 +32,7 @@
 ** DO NOT MODIFY THIS COMMENT ! Declarations         USER SECTION | Start      **
 ** start_name =channel_test_CM4_userFreeDeclarations
 ********************************************************************************/
-
+#define XCORE_CLIENT_REPLY_POOL_SIZE 32
 /********************************************************************************
 ** stop_name =channel_test_CM4_userFreeDeclarations
 ** DO NOT MODIFY THIS COMMENT ! Declarations         USER SECTION | Stop       **
@@ -100,9 +100,21 @@ channel_xCore_client_CM4( void )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =channel_xCore_client_CM4
 ********************************************************************************/
+    CosmOS_ChannelStateType channelState;
+
+    unsigned char replyPool[XCORE_CLIENT_REPLY_POOL_SIZE] = {0};
+    unsigned char sendPool[] = "request";
+
     for(;;)
     {
-        thread_sleepMs( 5 );
+        channelState = channel_send( xCore_channel_id,
+                                    (AddressType *)sendPool,
+                                    sizeof(sendPool),
+                                    (AddressType *)replyPool,
+                                    sizeof(replyPool));
+
+        thread_sleepMs( 500 );
+
     }
 /********************************************************************************
 ** stop_name =channel_xCore_client_CM4
