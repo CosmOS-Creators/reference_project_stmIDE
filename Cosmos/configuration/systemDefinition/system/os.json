@@ -13,8 +13,22 @@
 			{
 				"target": "osAttributes/:buffersNum"
 			},
+            {
+				"target": "osAttributes/:channelsNum"
+			},
 			{
 				"target": "osAttributes/:doubleBuffersNum"
+			},
+            {
+				"target": "osAttributes/:eventSpinlockId"
+			},
+            {
+				"target": "osAttributes/:sysCallBytesChunk",
+				"value": 16
+			},
+            {
+				"target": "osAttributes/:osEventDataPoolSize",
+				"value": 32
 			}
 		]
 	}

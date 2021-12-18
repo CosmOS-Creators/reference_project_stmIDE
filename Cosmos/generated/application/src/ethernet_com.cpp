@@ -25,6 +25,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <thread.h>
+#include <errorHandler.h>
 #include "logger.h"
 #include "lwip.h"
 #include "lwip/debug.h"
@@ -146,16 +147,26 @@ TCPIP_thread( void )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =TCPIP_thread
 ********************************************************************************/
-    if ( IS_NOT( echo_initialized ) )
+    CosmOS_SleepStateType sleepState;
+
+    for( ;; )
     {
-        echo_init();
-        echo_initialized = True;
+        if ( IS_NOT( echo_initialized ) )
+        {
+            echo_init();
+            echo_initialized = True;
+        }
+
+        ethernetif_input( &gnetif );
+        sys_check_timeouts();
+
+        sleepState = thread_sleepMs( 5 );
+
+        if( errorHandler_isError( sleepState ) )
+        {
+            //error was returned, check its value
+        }
     }
-
-    ethernetif_input( &gnetif );
-    sys_check_timeouts();
-
-    thread_sleepMs( 5 );
 /********************************************************************************
 ** stop_name =TCPIP_thread
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **

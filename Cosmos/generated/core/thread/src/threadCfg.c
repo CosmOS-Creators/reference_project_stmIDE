@@ -103,6 +103,26 @@ IS_INITIALIZED_TO{
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
     },
 };
+CosmOS_ThreadVariableType
+    ThreadsProgram3Core0Var[THREAD_PROGRAM_3_CORE_0_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+    {
+        NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+    },
+    {
+        NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+    },
+    {
+        NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+    },
+};
+CosmOS_ThreadVariableType
+    ThreadsProgram3Core1Var[THREAD_PROGRAM_3_CORE_1_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+    {
+        NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+    },
+};
 /* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
@@ -163,6 +183,34 @@ IS_INITIALIZED_TO{
         &ThreadsProgram2Core0Var[THREAD_0_PROGRAM_2_CORE_0_ID],    /* const CosmOS_ThreadVariableType * const cfg */
         &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_0_ID],    /* const CosmOS_SchedulableConfigurationType * const schedulable */
         THREAD_0_PROGRAM_2_CORE_0_PRIORITY,    /* const BitWidthType priority */
+    },
+};
+const CosmOS_ThreadConfigurationType
+    ThreadsProgram3Core0CfgConst[THREAD_PROGRAM_3_CORE_0_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    {
+        &ThreadsProgram3Core0Var[THREAD_0_PROGRAM_3_CORE_0_ID],    /* const CosmOS_ThreadVariableType * const cfg */
+        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_3_CORE_0_ID],    /* const CosmOS_SchedulableConfigurationType * const schedulable */
+        THREAD_0_PROGRAM_3_CORE_0_PRIORITY,    /* const BitWidthType priority */
+    },
+    {
+        &ThreadsProgram3Core0Var[THREAD_1_PROGRAM_3_CORE_0_ID],    /* const CosmOS_ThreadVariableType * const cfg */
+        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_1_PROGRAM_3_CORE_0_ID],    /* const CosmOS_SchedulableConfigurationType * const schedulable */
+        THREAD_1_PROGRAM_3_CORE_0_PRIORITY,    /* const BitWidthType priority */
+    },
+    {
+        &ThreadsProgram3Core0Var[THREAD_2_PROGRAM_3_CORE_0_ID],    /* const CosmOS_ThreadVariableType * const cfg */
+        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_2_PROGRAM_3_CORE_0_ID],    /* const CosmOS_SchedulableConfigurationType * const schedulable */
+        THREAD_2_PROGRAM_3_CORE_0_PRIORITY,    /* const BitWidthType priority */
+    },
+};
+const CosmOS_ThreadConfigurationType
+    ThreadsProgram3Core1CfgConst[THREAD_PROGRAM_3_CORE_1_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+    {
+        &ThreadsProgram3Core1Var[THREAD_0_PROGRAM_3_CORE_1_ID],    /* const CosmOS_ThreadVariableType * const cfg */
+        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_3_CORE_1_ID],    /* const CosmOS_SchedulableConfigurationType * const schedulable */
+        THREAD_0_PROGRAM_3_CORE_1_PRIORITY,    /* const BitWidthType priority */
     },
 };
 /* @cond S */

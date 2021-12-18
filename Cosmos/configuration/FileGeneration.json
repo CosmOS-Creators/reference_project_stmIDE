@@ -251,5 +251,16 @@
 			".h": "inc",
 			".c": "src"
 		}
+	},
+    {
+		"templates": [
+			"core/channel/channel"
+		],
+		"outputDir": "{CoreGeneratedDir}/channel",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
 	}
 ]

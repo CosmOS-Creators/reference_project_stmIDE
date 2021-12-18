@@ -27,6 +27,7 @@
 #include <spinlock.h>
 #include <stm32h7xx_hal.h>
 #include <thread.h>
+#include <errorHandler.h>
 #include "logger.h"
 /********************************************************************************
 ** stop_name =timing_measurement_CM7_includeFiles
@@ -125,28 +126,43 @@ Timing_measurement_task_CM7( void )
         bufferReader_cm7 = 100;
         bufferState = buffer_writeArray( x_core_buffer_1_id,
             &bufferReader_cm7, sizeof( bufferReader_cm7 ) );
+        if( errorHandler_isError( bufferState ) )
+        {
+            //error was returned, check its value
+        }
 
         bufferReader_cm7 = 0;
         bufferState = buffer_writeArray( x_core_buffer_1_id,
             &bufferReader_cm7, sizeof( bufferReader_cm7 ) );
+        if( errorHandler_isError( bufferState ) )
+        {
+            //error was returned, check its value
+        }
 
-    spinlockState = spinlock_trySpinlock( spinlock_test_0_id );
-    if ( spinlockState IS_EQUAL_TO SPINLOCK_STATE_ENUM__SUCCESSFULLY_LOCKED )
-    {
-        spinlockState = spinlock_releaseSpinlock( spinlock_test_0_id );
-    }
+        spinlockState = spinlock_trySpinlock( spinlock_test_0_id );
+        if ( spinlockState IS_EQUAL_TO SPINLOCK_STATE_ENUM__SUCCESSFULLY_LOCKED )
+        {
+            spinlockState = spinlock_releaseSpinlock( spinlock_test_0_id );
+        }
+        else
+        {
+            if( errorHandler_isError( spinlockState ) )
+            {
+                //error was returned, check its value
+            }
+        }
         //trying if kernel will return err cause task cannot use mutexes
         mutexState = mutex_getMutex( &gpio_e_mutex );
+        if( errorHandler_isError( mutexState ) )
+        {
+            //error was returned, check its value
+        }
     }
     else
     {
         counter++;
     }
     __asm volatile( "VMUL.F32 s0, s0, s1" );  //testing FPU context switch
-
-    __SUPRESS_UNUSED_VAR( spinlockState );
-    __SUPRESS_UNUSED_VAR( mutexState );
-    __SUPRESS_UNUSED_VAR( bufferState );
 /********************************************************************************
 ** stop_name =Timing_measurement_task_CM7
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
@@ -172,24 +188,43 @@ Timing_measurement_thread_CM7( void )
 ********************************************************************************/
     CosmOS_MutexStateType mutexState;
     CosmOS_SleepStateType sleepState;
+    CosmOS_BufferStateType bufferState;
 
-    int * integerArr = new int[10];
-    delete integerArr;
+    for( ;; )
+    {
+        int * integerArr = new int[10];
+        delete integerArr;
 
-    GPIO * gpio_e = new GPIO( GPIOE );
+        GPIO * gpio_e = new GPIO( GPIOE );
 
-    sleepState = thread_sleep( 1 );
+        sleepState = thread_sleep( 1 );
+        if( errorHandler_isError( sleepState ) )
+        {
+            //error was returned, check its value
+        }
 
-    mutexState = mutex_getMutex( &gpio_e_mutex );
-    gpio_e->togglePin( GPIO_PIN_1 );
-    mutexState = mutex_releaseMutex( &gpio_e_mutex );
+        mutexState = mutex_getMutex( &gpio_e_mutex );
+        if( errorHandler_isError( mutexState ) )
+        {
+            //error was returned, check its value
+        }
 
-    user_log( timingMeasurementCM7, sizeof( timingMeasurementCM7 ) );
+        gpio_e->togglePin( GPIO_PIN_1 );
 
-    delete gpio_e;
+        mutexState = mutex_releaseMutex( &gpio_e_mutex );
+        if( errorHandler_isError( mutexState ) )
+        {
+            //error was returned, check its value
+        }
 
-    __SUPRESS_UNUSED_VAR( mutexState );
-    __SUPRESS_UNUSED_VAR( sleepState );
+        bufferState = user_log( timingMeasurementCM7, sizeof( timingMeasurementCM7 ) );
+        if( errorHandler_isError( bufferState ) )
+        {
+            //error was returned, check its value
+        }
+
+        delete gpio_e;
+    }
 /********************************************************************************
 ** stop_name =Timing_measurement_thread_CM7
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **

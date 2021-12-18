@@ -66,6 +66,15 @@ IS_INITIALIZED_TO
         &ThreadsProgram2Core0CfgConst[THREAD_0_PROGRAM_2_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
+        &ThreadsProgram3Core0CfgConst[THREAD_1_PROGRAM_3_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
+    },
+    {
+        &ThreadsProgram3Core0CfgConst[THREAD_2_PROGRAM_3_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
+    },
+    {
+        &ThreadsProgram3Core0CfgConst[THREAD_0_PROGRAM_3_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
+    },
+    {
         &ThreadsProgram1Core0CfgConst[THREAD_0_PROGRAM_1_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
@@ -76,6 +85,9 @@ const CosmOS_ThreadListConfigurationType
     SchedulerThreadListScheduler1CfgConst[SCHEDULERTHREADLIST_SCHEDULER_1_ELEMENT_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
+    {
+        &ThreadsProgram3Core1CfgConst[THREAD_0_PROGRAM_3_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
+    },
     {
         &ThreadsProgram1Core1CfgConst[THREAD_1_PROGRAM_1_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },

@@ -32,9 +32,6 @@
 #include "interrupt.h"
 #include "interrupt.h"
 #include "thread.h"
-#include "os.h"
-#include "os.h"
-#include "os.h"
 #include "mutex.h"
 #include "mutex.h"
 #include "mutex.h"
@@ -43,7 +40,14 @@
 #include "CILcore.h"
 #include "spinlock.h"
 #include "spinlock.h"
-#include "spinlock.h"
+#include "osEvent.h"
+#include "os.h"
+#include "channel.h"
+#include "channel.h"
+#include "supportStdio.h"
+#include "channel.h"
+#include "channel.h"
+#include "channel.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -91,18 +95,22 @@ IS_INITIALIZED_TO
     (CosmOS_GenericVoidType)interrupt_disableInterrupts,
     (CosmOS_GenericVoidType)interrupt_enableInterrupts,
     (CosmOS_GenericVoidType)thread_sleepMsInternal,
-    (CosmOS_GenericVoidType)os_write32,
-    (CosmOS_GenericVoidType)os_write16,
-    (CosmOS_GenericVoidType)os_write8,
     (CosmOS_GenericVoidType)mutex_getMutexInternal,
     (CosmOS_GenericVoidType)mutex_tryMutexInternal,
     (CosmOS_GenericVoidType)mutex_releaseMutexInternal,
     (CosmOS_GenericVoidType)interrupt_disableInterrupt,
     (CosmOS_GenericVoidType)interrupt_enableInterrupt,
     (CosmOS_GenericVoidType)CILcore_getCoreId,
-    (CosmOS_GenericVoidType)spinlock_getSpinlockInternal,
     (CosmOS_GenericVoidType)spinlock_trySpinlockInternal,
     (CosmOS_GenericVoidType)spinlock_releaseSpinlockInternal,
+    (CosmOS_GenericVoidType)osEvent_triggerEventInternal,
+    (CosmOS_GenericVoidType)os_kernelPanicInternal,
+    (CosmOS_GenericVoidType)channel_sendInternal,
+    (CosmOS_GenericVoidType)channel_sendReplyObtainedInternal,
+    (CosmOS_GenericVoidType)supportStdio_memcpyInternal,
+    (CosmOS_GenericVoidType)channel_replyInternal,
+    (CosmOS_GenericVoidType)channel_receiveInternal,
+    (CosmOS_GenericVoidType)channel_initializeInternal,
 };
 
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
@@ -117,24 +125,32 @@ IS_INITIALIZED_TO
     INTERRUPT_DISABLEINTERRUPTS,
     INTERRUPT_ENABLEINTERRUPTS,
     THREAD_SLEEPMSINTERNAL,
-    OS_WRITE32,
-    OS_WRITE16,
-    OS_WRITE8,
     MUTEX_GETMUTEXINTERNAL,
     MUTEX_TRYMUTEXINTERNAL,
     MUTEX_RELEASEMUTEXINTERNAL,
     INTERRUPT_DISABLEINTERRUPT,
     INTERRUPT_ENABLEINTERRUPT,
     CILCORE_GETCOREID,
-    SPINLOCK_GETSPINLOCKINTERNAL,
     SPINLOCK_TRYSPINLOCKINTERNAL,
     SPINLOCK_RELEASESPINLOCKINTERNAL,
+    OSEVENT_TRIGGEREVENTINTERNAL,
+    OS_KERNELPANICINTERNAL,
+    CHANNEL_SENDINTERNAL,
+    CHANNEL_SENDREPLYOBTAINEDINTERNAL,
+    SUPPORTSTDIO_MEMCPYINTERNAL,
+    CHANNEL_REPLYINTERNAL,
+    CHANNEL_RECEIVEINTERNAL,
+    CHANNEL_INITIALIZEINTERNAL,
 };
 
 const BitWidthType
     RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,

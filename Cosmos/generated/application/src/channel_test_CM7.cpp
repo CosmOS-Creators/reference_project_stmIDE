@@ -5,7 +5,7 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file timing_measurement_CM4.cpp
+** @file channel_test_CM7.cpp
 *********************************************************************************
 <!--                           Version Information                            -->
 *********************************************************************************
@@ -17,43 +17,42 @@
 ** @warning Modifying user sections comments can lead to removing user code
 **          during generating of the new CosmOS configuration
 ********************************************************************************/
-#include "timing_measurement_CM4.h"
+#include "channel_test_CM7.h"
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
-** start_name =timing_measurement_CM4_includeFiles
+** start_name =channel_test_CM7_includeFiles
 ********************************************************************************/
-#include <mutex.h>
-#include <buffer.h>
-#include <spinlock.h>
-#include <stm32h7xx_hal.h>
+#include <channel.h>
 #include <thread.h>
 #include <errorHandler.h>
-#include "logger.h"
 /********************************************************************************
-** stop_name =timing_measurement_CM4_includeFiles
+** stop_name =channel_test_CM7_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
 ********************************************************************************/
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT ! Declarations         USER SECTION | Start      **
-** start_name =timing_measurement_CM4_userFreeDeclarations
+** start_name =channel_test_CM7_userFreeDeclarations
 ********************************************************************************/
+#define SAMECORE_CLIENT_REPLY_POOL_SIZE 32
+#define SAMECORE_SERVER_REPLY_POOL_SIZE 32
 
+#define XCORE_SERVER_REPLY_POOL_SIZE 32
 /********************************************************************************
-** stop_name =timing_measurement_CM4_userFreeDeclarations
+** stop_name =channel_test_CM7_userFreeDeclarations
 ** DO NOT MODIFY THIS COMMENT ! Declarations         USER SECTION | Stop       **
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Start                         **
 ********************************************************************************/
-/* Task in the program timing_measurement_CM4 */
-extern "C" void
-Timing_measurement_task_CM4( void );
+/* Task in the program channel_test_CM7 */
 
-/* Threads in the program timing_measurement_CM4 */
+/* Threads in the program channel_test_CM7 */
 extern "C" void
-Timing_measurement_thread_CM4( void );
+channel_xCore_server_CM7( void );
 extern "C" void
-Mutex_test_thread_CM4( void );
+channel_sameCore_server_CM7( void );
+extern "C" void
+channel_sameCore_client_CM7( void );
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -61,245 +60,211 @@ Mutex_test_thread_CM4( void );
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /* @cond S */
-__SEC_START( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_START)
+__SEC_START( __CHANNEL_TEST_CM7_NOINIT_SECTION_START)
 /* @endcond*/
-// If your compiler does not support pragmas use __TIMING_MEASUREMENT_CM4_NOINIT_SECTION
+// If your compiler does not support pragmas use __CHANNEL_TEST_CM7_NOINIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =timing_measurement_CM4_noInit
+** start_name =channel_test_CM7_noInit
 ********************************************************************************/
 
 /********************************************************************************
-** stop_name =timing_measurement_CM4_noInit
+** stop_name =channel_test_CM7_noInit
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __TIMING_MEASUREMENT_CM4_NOINIT_SECTION_STOP)
+__SEC_STOP( __CHANNEL_TEST_CM7_NOINIT_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START( __TIMING_MEASUREMENT_CM4_INIT_SECTION_START)
+__SEC_START( __CHANNEL_TEST_CM7_INIT_SECTION_START)
 /* @endcond*/
-// If your compiler does not support pragmas use __TIMING_MEASUREMENT_CM4_INIT_SECTION
+// If your compiler does not support pragmas use __CHANNEL_TEST_CM7_INIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =timing_measurement_CM4_init
+** start_name =channel_test_CM7_init
 ********************************************************************************/
-int __TIMING_MEASUREMENT_CM4_INIT_SECTION counter_cm4 = 0;
-int __TIMING_MEASUREMENT_CM4_INIT_SECTION bufferReader_cm4 = 0;
-CosmOS_MutexVariableType resourcesMutex __TIMING_MEASUREMENT_CM4_INIT_SECTION;
-CosmOS_MutexStateType resourcesMutex0 __TIMING_MEASUREMENT_CM4_INIT_SECTION;
 
-char __TIMING_MEASUREMENT_CM4_INIT_SECTION timingMeasurementCM4[] =
-    "\nMutex_test_thread_CM4 released mutex for resources \r\n\n";
 /********************************************************************************
-** stop_name =timing_measurement_CM4_init
+** stop_name =channel_test_CM7_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __TIMING_MEASUREMENT_CM4_INIT_SECTION_STOP)
+__SEC_STOP( __CHANNEL_TEST_CM7_INIT_SECTION_STOP)
 /* @endcond*/
 
+
 /********************************************************************************
-** Task ID macro = TASK_0_PROGRAM_1_CORE_1_ID
-** Program ID macro = PROGRAM_1_CORE_1_ID
-** WCET of the task in microseconds = 500.0
-** Period of the task in milliseconds = 5.0
+** Thread ID macro = THREAD_0_PROGRAM_3_CORE_0_ID
+** Program ID macro = PROGRAM_3_CORE_0_ID
 ********************************************************************************/
 /* @cond S */
-__SEC_START( __APPLICATION_FUNC_SECTION_START_CM4 )
+__SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM4 void
-Timing_measurement_task_CM4( void )
+__APPLICATION_FUNC_SECTION_CM7 void
+channel_xCore_server_CM7( void )
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =Timing_measurement_task_CM4
+** start_name =channel_xCore_server_CM7
 ********************************************************************************/
-    CosmOS_SpinlockStateType spinlockState;
-    CosmOS_BufferStateType bufferState;
-    CosmOS_MutexStateType mutexState;
+    CosmOS_ChannelStateType channelState;
 
-    //HAL_GPIO_TogglePin( GPIOA, GPIO_PIN_4 );
+    unsigned char receivePool[XCORE_SERVER_REPLY_POOL_SIZE] = {0};
+    unsigned char replyPool[] = "reply";
 
-    bufferReader_cm4 = 100;
-    bufferState = buffer_writeArray( x_core_buffer_1_id,
-        &bufferReader_cm4, sizeof( bufferReader_cm4 ) );
-
-    if( errorHandler_isError( bufferState ) )
+    channelState = channel_initialize( xCore_channel_id );
+    if( errorHandler_isError( channelState ) )
     {
         //error was returned, check its value
     }
 
-    bufferReader_cm4 = 0;
-    bufferState = buffer_writeArray( x_core_buffer_1_id,
-        &bufferReader_cm4, sizeof( bufferReader_cm4 ) );
+    for(;;)
+    {
+        channelState = channel_receive( xCore_channel_id,
+                                    (AddressType *)receivePool,
+                                    sizeof(receivePool) );
 
-    if( errorHandler_isError( bufferState ) )
-    {
-        //error was returned, check its value
-    }
-
-    spinlockState = spinlock_trySpinlock( spinlock_test_0_id );
-    if ( spinlockState IS_EQUAL_TO SPINLOCK_STATE_ENUM__SUCCESSFULLY_LOCKED )
-    {
-        spinlockState = spinlock_releaseSpinlock( spinlock_test_0_id );
-    }
-    else
-    {
-        if( errorHandler_isError( spinlockState ) )
+        if( errorHandler_isError( channelState ) )
         {
             //error was returned, check its value
         }
-    }
 
-    //trying if kernel will return err cause task cannot use mutexes
-    mutexState = mutex_getMutex( &resourcesMutex );
-    if( errorHandler_isError( mutexState ) )
-    {
-        //error was returned, check its value
-    }
+        channelState = channel_reply( xCore_channel_id,
+                                    (AddressType *)replyPool,
+                                    sizeof(replyPool) );
 
-    if ( counter_cm4 > 100 )
-    {
-        counter_cm4 = 0;
-    }
-    else
-    {
-        counter_cm4++;
+        if( errorHandler_isError( channelState ) )
+        {
+            //error was returned, check its value
+        }
+
     }
 /********************************************************************************
-** stop_name =Timing_measurement_task_CM4
+** stop_name =channel_xCore_server_CM7
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
 /* @cond S */
-__SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM4 )
+__SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM7 )
 /* @endcond*/
-
 /********************************************************************************
-** Thread ID macro = THREAD_0_PROGRAM_1_CORE_1_ID
-** Program ID macro = PROGRAM_1_CORE_1_ID
+** Thread ID macro = THREAD_1_PROGRAM_3_CORE_0_ID
+** Program ID macro = PROGRAM_3_CORE_0_ID
 ********************************************************************************/
 /* @cond S */
-__SEC_START( __APPLICATION_FUNC_SECTION_START_CM4 )
+__SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
 /* @endcond*/
-__APPLICATION_FUNC_SECTION_CM4 void
-Timing_measurement_thread_CM4( void )
+__APPLICATION_FUNC_SECTION_CM7 void
+channel_sameCore_server_CM7( void )
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =Timing_measurement_thread_CM4
+** start_name =channel_sameCore_server_CM7
 ********************************************************************************/
+    CosmOS_ChannelStateType channelState;
+
+    unsigned char receivePool[SAMECORE_SERVER_REPLY_POOL_SIZE] = {0};
+    unsigned char replyPool[] = "reply";
+
+    channelState = channel_initialize( sameCore_channel_id );
+    if( errorHandler_isError( channelState ) )
+    {
+        //error was returned, check its value
+    }
+
+    for(;;)
+    {
+        channelState = channel_receive( sameCore_channel_id,
+                                    (AddressType *)receivePool,
+                                    sizeof(receivePool) );
+
+        if( errorHandler_isError( channelState ) )
+        {
+            //error was returned, check its value
+        }
+
+        channelState = channel_reply( sameCore_channel_id,
+                                    (AddressType *)replyPool,
+                                    sizeof(replyPool) );
+
+        if( errorHandler_isError( channelState ) )
+        {
+            //error was returned, check its value
+        }
+    }
+/********************************************************************************
+** stop_name =channel_sameCore_server_CM7
+** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
+********************************************************************************/
+};
+/* @cond S */
+__SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM7 )
+/* @endcond*/
+/********************************************************************************
+** Thread ID macro = THREAD_2_PROGRAM_3_CORE_0_ID
+** Program ID macro = PROGRAM_3_CORE_0_ID
+********************************************************************************/
+/* @cond S */
+__SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
+/* @endcond*/
+__APPLICATION_FUNC_SECTION_CM7 void
+channel_sameCore_client_CM7( void )
+{
+/********************************************************************************
+** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
+** start_name =channel_sameCore_client_CM7
+********************************************************************************/
+    CosmOS_ChannelStateType channelState;
     CosmOS_SleepStateType sleepState;
-    CosmOS_MutexStateType mutexState;
 
-    for( ;; )
+    unsigned char replyPool[SAMECORE_CLIENT_REPLY_POOL_SIZE] = {0};
+    unsigned char sendPool[] = "request";
+
+    for(;;)
     {
-        int * integerPointer = new int( 100 );
-        delete integerPointer;
+        channelState = channel_send( sameCore_channel_id,
+                                    (AddressType *)sendPool,
+                                    sizeof(sendPool),
+                                    (AddressType *)replyPool,
+                                    sizeof(replyPool) );
 
-        mutexState = mutex_getMutex( &resourcesMutex );
-        if( errorHandler_isError( mutexState ) )
+        if( errorHandler_isError( channelState ) )
         {
             //error was returned, check its value
         }
 
-        sleepState = thread_sleepMs( 10 );
+        sleepState = thread_sleepMs( 500 );
+
         if( errorHandler_isError( sleepState ) )
-        {
-            //error was returned, check its value
-        }
-
-        mutexState = mutex_releaseMutex( &resourcesMutex );
-        if( errorHandler_isError( mutexState ) )
         {
             //error was returned, check its value
         }
     }
 /********************************************************************************
-** stop_name =Timing_measurement_thread_CM4
+** stop_name =channel_sameCore_client_CM7
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
 /* @cond S */
-__SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM4 )
-/* @endcond*/
-/********************************************************************************
-** Thread ID macro = THREAD_1_PROGRAM_1_CORE_1_ID
-** Program ID macro = PROGRAM_1_CORE_1_ID
-********************************************************************************/
-/* @cond S */
-__SEC_START( __APPLICATION_FUNC_SECTION_START_CM4 )
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM4 void
-Mutex_test_thread_CM4( void )
-{
-/********************************************************************************
-** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =Mutex_test_thread_CM4
-********************************************************************************/
-    CosmOS_MutexStateType mutexState;
-    CosmOS_SleepStateType sleepState;
-    CosmOS_BufferStateType bufferState;
-
-
-    for( ;; )
-    {
-        mutexState = mutex_getMutex( &resourcesMutex );
-        if( errorHandler_isError( mutexState ) )
-        {
-            //error was returned, check its value
-        }
-
-        sleepState = thread_sleepMs( 100 );
-        if( errorHandler_isError( sleepState ) )
-        {
-            //error was returned, check its value
-        }
-
-        mutexState = mutex_releaseMutex( &resourcesMutex );
-        if( errorHandler_isError( mutexState ) )
-        {
-            //error was returned, check its value
-        }
-
-        sleepState = thread_sleep( 1 );
-        if( errorHandler_isError( sleepState ) )
-        {
-            //error was returned, check its value
-        }
-
-        bufferState = user_log( timingMeasurementCM4, sizeof( timingMeasurementCM4 ) );
-        if( errorHandler_isError( bufferState ) )
-        {
-            //error was returned, check its value
-        }
-    }
-/********************************************************************************
-** stop_name =Mutex_test_thread_CM4
-** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
-********************************************************************************/
-};
-/* @cond S */
-__SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM4 )
+__SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM7 )
 /* @endcond*/
 
 /* @cond S */
-__SEC_START( __APPLICATION_FUNC_SECTION_START_CM4 )
+__SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
 /* @endcond*/
-// If your compiler does not support pragmas use __APPLICATION_FUNC_SECTION_CM4
+// If your compiler does not support pragmas use __APPLICATION_FUNC_SECTION_CM7
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Start      **
-** start_name =timing_measurement_CM4_userCodeFree
+** start_name =channel_test_CM7_userCodeFree
 ********************************************************************************/
 
 /********************************************************************************
-** stop_name =timing_measurement_CM4_userCodeFree
+** stop_name =channel_test_CM7_userCodeFree
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM4 )
+__SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM7 )
 /* @endcond*/
 /********************************************************************************
 **                           END OF THE SOURCE FILE                            **

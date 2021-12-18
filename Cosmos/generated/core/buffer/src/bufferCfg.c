@@ -110,7 +110,7 @@ IS_INITIALIZED_TO{
         &PermissionsBuffer0ReadCfgConst,
         &PermissionsBuffer0WriteCfgConst,
 		True,
-		2,
+		SPINLOCK_2_ID,
     },
     {
         &BuffersVar[BUFFER_1_ID],
@@ -120,7 +120,7 @@ IS_INITIALIZED_TO{
         &PermissionsBuffer1ReadCfgConst,
         &PermissionsBuffer1WriteCfgConst,
 		True,
-		3,
+		SPINLOCK_3_ID,
     },
     {
         &BuffersVar[BUFFER_2_ID],
@@ -130,7 +130,7 @@ IS_INITIALIZED_TO{
         &PermissionsBuffer2ReadCfgConst,
         &PermissionsBuffer2WriteCfgConst,
 		True,
-		4,
+		SPINLOCK_4_ID,
     },
     {
         &BuffersVar[BUFFER_3_ID],
@@ -140,7 +140,7 @@ IS_INITIALIZED_TO{
         &PermissionsBuffer3ReadCfgConst,
         &PermissionsBuffer3WriteCfgConst,
 		True,
-		5,
+		SPINLOCK_5_ID,
     },
 };
 /* @cond S */

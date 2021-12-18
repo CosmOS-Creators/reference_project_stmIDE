@@ -5,7 +5,7 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file logger.cpp
+** @file channel_test_CM4.cpp
 *********************************************************************************
 <!--                           Version Information                            -->
 *********************************************************************************
@@ -17,41 +17,35 @@
 ** @warning Modifying user sections comments can lead to removing user code
 **          during generating of the new CosmOS configuration
 ********************************************************************************/
-#include "logger.h"
+#include "channel_test_CM4.h"
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
-** start_name =logger_includeFiles
+** start_name =channel_test_CM4_includeFiles
 ********************************************************************************/
-#include <buffer.h>
-#include <os.h>
+#include <channel.h>
 #include <thread.h>
 #include <errorHandler.h>
-#include <stm32h7xx_hal.h>
 /********************************************************************************
-** stop_name =logger_includeFiles
+** stop_name =channel_test_CM4_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
 ********************************************************************************/
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT ! Declarations         USER SECTION | Start      **
-** start_name =logger_userFreeDeclarations
+** start_name =channel_test_CM4_userFreeDeclarations
 ********************************************************************************/
-extern UART_HandleTypeDef huart3;
-extern "C" CosmOS_BufferStateType
-user_log( void * ptr, BitWidthType size );
-extern "C" void
-HAL_UART_TxCpltCallback( UART_HandleTypeDef * huart );
+#define XCORE_CLIENT_REPLY_POOL_SIZE 32
 /********************************************************************************
-** stop_name =logger_userFreeDeclarations
+** stop_name =channel_test_CM4_userFreeDeclarations
 ** DO NOT MODIFY THIS COMMENT ! Declarations         USER SECTION | Stop       **
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Start                         **
 ********************************************************************************/
-/* Task in the program logger */
+/* Task in the program channel_test_CM4 */
 
-/* Threads in the program logger */
+/* Threads in the program channel_test_CM4 */
 extern "C" void
-Logger_thread( void );
+channel_xCore_client_CM4( void );
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -59,109 +53,83 @@ Logger_thread( void );
 **                           START OF THE SOURCE FILE                          **
 ********************************************************************************/
 /* @cond S */
-__SEC_START( __LOGGER_NOINIT_SECTION_START)
+__SEC_START( __CHANNEL_TEST_CM4_NOINIT_SECTION_START)
 /* @endcond*/
-// If your compiler does not support pragmas use __LOGGER_NOINIT_SECTION
+// If your compiler does not support pragmas use __CHANNEL_TEST_CM4_NOINIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =logger_noInit
+** start_name =channel_test_CM4_noInit
 ********************************************************************************/
 
 /********************************************************************************
-** stop_name =logger_noInit
+** stop_name =channel_test_CM4_noInit
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __LOGGER_NOINIT_SECTION_STOP)
+__SEC_STOP( __CHANNEL_TEST_CM4_NOINIT_SECTION_STOP)
 /* @endcond*/
 
 /* @cond S */
-__SEC_START( __LOGGER_INIT_SECTION_START)
+__SEC_START( __CHANNEL_TEST_CM4_INIT_SECTION_START)
 /* @endcond*/
-// If your compiler does not support pragmas use __LOGGER_INIT_SECTION
+// If your compiler does not support pragmas use __CHANNEL_TEST_CM4_INIT_SECTION
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =logger_init
+** start_name =channel_test_CM4_init
 ********************************************************************************/
-CosmOS_BooleanType __LOGGER_INIT_SECTION dma_tx_complete = True;
+
 /********************************************************************************
-** stop_name =logger_init
+** stop_name =channel_test_CM4_init
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
-__SEC_STOP( __LOGGER_INIT_SECTION_STOP)
+__SEC_STOP( __CHANNEL_TEST_CM4_INIT_SECTION_STOP)
 /* @endcond*/
 
+
 /********************************************************************************
-** Thread ID macro = THREAD_0_PROGRAM_2_CORE_1_ID
-** Program ID macro = PROGRAM_2_CORE_1_ID
+** Thread ID macro = THREAD_0_PROGRAM_3_CORE_1_ID
+** Program ID macro = PROGRAM_3_CORE_1_ID
 ********************************************************************************/
 /* @cond S */
 __SEC_START( __APPLICATION_FUNC_SECTION_START_CM4 )
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM4 void
-Logger_thread( void )
+channel_xCore_client_CM4( void )
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =Logger_thread
+** start_name =channel_xCore_client_CM4
 ********************************************************************************/
-    BitWidthType bufferTail, bufferFullCellsNum, bufferSize, sizeToSend;
-
+    CosmOS_ChannelStateType channelState;
     CosmOS_SleepStateType sleepState;
 
-    unsigned char * bufferArr;
+    unsigned char replyPool[XCORE_CLIENT_REPLY_POOL_SIZE] = {0};
+    unsigned char sendPool[] = "request";
 
-    CosmOS_BufferConfigurationType * loggerBufferCfg;
-    CosmOS_OsConfigurationType * osCfg;
-
-    for( ;; )
+    for(;;)
     {
-        sleepState = thread_sleepMs( 5 );
+        channelState = channel_send( xCore_channel_id,
+                                    (AddressType *)sendPool,
+                                    sizeof(sendPool),
+                                    (AddressType *)replyPool,
+                                    sizeof(replyPool));
+
+        if( errorHandler_isError( channelState ) )
+        {
+            //error was returned, check its value
+        }
+
+        sleepState = thread_sleepMs( 500 );
 
         if( errorHandler_isError( sleepState ) )
         {
             //error was returned, check its value
         }
 
-        if ( dma_tx_complete )
-        {
-            cosmosApi_interrupt_disableInterrupt( USART3_IRQn );
-            cosmosApi_interrupt_disableInterrupt( DMA1_Stream0_IRQn );
-
-            osCfg = os_getOsCfg();
-            loggerBufferCfg = os_getOsBufferCfg( osCfg, logger_buffer_id );
-
-            bufferArr = buffer_getBuffer( loggerBufferCfg );
-            bufferSize = buffer_getBufferSize( loggerBufferCfg );
-            bufferTail = buffer_getBufferTail( loggerBufferCfg );
-            bufferFullCellsNum = buffer_getFullCellsNum( loggerBufferCfg );
-
-            if ( bufferFullCellsNum )
-            {
-                if ( (AddressType)bufferArr + bufferSize <
-                    ( (AddressType)bufferArr + bufferTail + bufferFullCellsNum ) )
-                {
-                    sizeToSend = bufferSize - bufferTail;
-                }
-                else
-                {
-                    sizeToSend = bufferFullCellsNum;
-                }
-
-                HAL_UART_Transmit_DMA(
-                    &huart3,
-                    (unsigned char *)( (AddressType)bufferArr + (AddressType)bufferTail ),
-                    sizeToSend );
-                dma_tx_complete = False;
-            }
-
-            cosmosApi_interrupt_enableInterrupt( USART3_IRQn );
-            cosmosApi_interrupt_enableInterrupt( DMA1_Stream0_IRQn );
-        }
     }
 /********************************************************************************
-** stop_name =Logger_thread
+** stop_name =channel_xCore_client_CM4
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
@@ -175,37 +143,11 @@ __SEC_START( __APPLICATION_FUNC_SECTION_START_CM4 )
 // If your compiler does not support pragmas use __APPLICATION_FUNC_SECTION_CM4
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Start      **
-** start_name =logger_userCodeFree
+** start_name =channel_test_CM4_userCodeFree
 ********************************************************************************/
-__APPLICATION_FUNC_SECTION_CM4 CosmOS_BufferStateType
-user_log( void * ptr, BitWidthType size )
-{
-    CosmOS_BufferStateType bufferState;
-    bufferState = buffer_writeArray( logger_buffer_id, ptr, size );
-    return bufferState;
-};
 
-__APPLICATION_FUNC_SECTION_CM4 void
-HAL_UART_TxCpltCallback( UART_HandleTypeDef * huart )
-{
-    __disable_irq();  //api should not be used as its disable also system timer
-    CosmOS_BufferConfigurationType * loggerBufferCfg;
-    CosmOS_OsConfigurationType * osCfg;
-
-    osCfg = os_getOsCfg();
-    loggerBufferCfg = os_getOsBufferCfg( osCfg, logger_buffer_id );
-
-    loggerBufferCfg->var->fullCells =
-        ( loggerBufferCfg->var->fullCells - huart->TxXferSize );
-    //not necessary to obtain spinlock as this is only one directional buffer
-    loggerBufferCfg->var->tail =
-        ( ( loggerBufferCfg->var->tail + huart->TxXferSize ) %
-          loggerBufferCfg->size );
-    dma_tx_complete = True;
-    __enable_irq();  //api should not be used as its disable also system timer
-};
 /********************************************************************************
-** stop_name =logger_userCodeFree
+** stop_name =channel_test_CM4_userCodeFree
 ** DO NOT MODIFY THIS COMMENT ! Code                 USER SECTION | Stop       **
 ********************************************************************************/
 /* @cond S */
