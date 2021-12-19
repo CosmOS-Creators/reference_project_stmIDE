@@ -22,6 +22,7 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =channel_test_CM4_includeFiles
 ********************************************************************************/
+#include <semaphore.h>
 #include <channel.h>
 #include <thread.h>
 #include <errorHandler.h>
@@ -106,6 +107,10 @@ channel_xCore_client_CM4( void )
 
     unsigned char replyPool[XCORE_CLIENT_REPLY_POOL_SIZE] = {0};
     unsigned char sendPool[] = "request";
+
+    semaphore_getSemaphore(semaphore_test_0_id);
+
+    semaphore_releaseSemaphore(semaphore_test_0_id);
 
     for(;;)
     {

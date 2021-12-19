@@ -72,6 +72,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/semaphore/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/heap/inc"/>
@@ -94,6 +95,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/semaphore/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>
@@ -163,6 +165,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/semaphore/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/heap/inc"/>
@@ -185,6 +188,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/semaphore/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>
@@ -331,6 +335,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/semaphore/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/heap/inc"/>
@@ -353,6 +358,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/semaphore/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>
@@ -418,6 +424,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/scheduler/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/core/semaphore/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/core/heap/inc"/>
@@ -440,6 +447,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/route/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/schedulable/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/scheduler/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/semaphore/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>

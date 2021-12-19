@@ -110,7 +110,7 @@ IS_INITIALIZED_TO{
         CHANNEL_0_REPLY_POOL_SIZE,
         &PermissionsChannel0SendCfgConst,
         &PermissionsChannel0ReplyCfgConst,
-		SPINLOCK_6_ID,
+		SEMAPHORE_2_ID,
         &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_3_CORE_0_ID],
     },
     {
@@ -122,7 +122,7 @@ IS_INITIALIZED_TO{
         CHANNEL_1_REPLY_POOL_SIZE,
         &PermissionsChannel1SendCfgConst,
         &PermissionsChannel1ReplyCfgConst,
-		SPINLOCK_7_ID,
+		SEMAPHORE_3_ID,
         &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_1_PROGRAM_3_CORE_0_ID],
     },
 };

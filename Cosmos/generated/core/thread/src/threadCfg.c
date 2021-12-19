@@ -63,6 +63,7 @@ CosmOS_ThreadVariableType
 IS_INITIALIZED_TO{
     {
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+        NULL,    /* CosmOS_MutexVariableType *blockingSemaphoreVar */
     },
 };
 CosmOS_ThreadVariableType
@@ -70,6 +71,7 @@ CosmOS_ThreadVariableType
 IS_INITIALIZED_TO{
     {
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+        NULL,    /* CosmOS_MutexVariableType *blockingSemaphoreVar */
     },
 };
 CosmOS_ThreadVariableType
@@ -77,6 +79,7 @@ CosmOS_ThreadVariableType
 IS_INITIALIZED_TO{
     {
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+        NULL,    /* CosmOS_MutexVariableType *blockingSemaphoreVar */
     },
 };
 CosmOS_ThreadVariableType
@@ -84,9 +87,11 @@ CosmOS_ThreadVariableType
 IS_INITIALIZED_TO{
     {
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+        NULL,    /* CosmOS_MutexVariableType *blockingSemaphoreVar */
     },
     {
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+        NULL,    /* CosmOS_MutexVariableType *blockingSemaphoreVar */
     },
 };
 CosmOS_ThreadVariableType
@@ -94,6 +99,7 @@ CosmOS_ThreadVariableType
 IS_INITIALIZED_TO{
     {
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+        NULL,    /* CosmOS_MutexVariableType *blockingSemaphoreVar */
     },
 };
 CosmOS_ThreadVariableType
@@ -101,6 +107,7 @@ CosmOS_ThreadVariableType
 IS_INITIALIZED_TO{
     {
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+        NULL,    /* CosmOS_MutexVariableType *blockingSemaphoreVar */
     },
 };
 CosmOS_ThreadVariableType
@@ -108,12 +115,15 @@ CosmOS_ThreadVariableType
 IS_INITIALIZED_TO{
     {
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+        NULL,    /* CosmOS_MutexVariableType *blockingSemaphoreVar */
     },
     {
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+        NULL,    /* CosmOS_MutexVariableType *blockingSemaphoreVar */
     },
     {
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+        NULL,    /* CosmOS_MutexVariableType *blockingSemaphoreVar */
     },
 };
 CosmOS_ThreadVariableType
@@ -121,6 +131,7 @@ CosmOS_ThreadVariableType
 IS_INITIALIZED_TO{
     {
         NULL,    /* CosmOS_MutexVariableType *blockingMutexVar */
+        NULL,    /* CosmOS_MutexVariableType *blockingSemaphoreVar */
     },
 };
 /* @cond S */

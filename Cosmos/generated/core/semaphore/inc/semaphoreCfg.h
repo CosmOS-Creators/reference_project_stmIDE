@@ -5,13 +5,13 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file sysDefsRoutes.h
+** @file semaphoreCfg.h
 *********************************************************************************
-<!--                    sysDefsRoutes Unit Group Definition                   -->
+<!--                    semaphoreCfg Unit Group Definition                    -->
 *********************************************************************************
-** @defgroup sysDefsRoutes_unit sysDefsRoutes Unit
-** @ingroup sysDefs_module
-** @brief sysDefsRoutes Unit
+** @defgroup semaphoreCfg_unit semaphoreCfg Unit
+** @ingroup os_module
+** @brief semaphoreCfg Unit
 ** @details lorem
 *********************************************************************************
 <!--                           Version Information                            -->
@@ -25,29 +25,31 @@
 ** @warning Modifying code can lead to unexpected behaviour of the whole system
 ** @copyright MIT License
 *********************************************************************************
-<!--                sysDefsRoutes Unit Global Group Definition                -->
+<!--                semaphoreCfg Unit Global Group Definition                 -->
 *********************************************************************************
-** @defgroup Global_sysDefsRoutes Global
-** @ingroup sysDefsRoutes_unit
-** @brief sysDefsRoutes globals
+** @defgroup Global_semaphoreCfg Global
+** @ingroup semaphoreCfg_unit
+** @brief semaphoreCfg globals
 ** @details lorem
 ********************************************************************************/
 /********************************************************************************
 **                           START OF THE HEADER FILE                          **
 ********************************************************************************/
-#ifndef __SYSDEFSROUTES_H__
-#define __SYSDEFSROUTES_H__
+#ifndef __SEMAPHORECFG_H__
+#define __SEMAPHORECFG_H__
 /********************************************************************************
 **                         START OF C++ SUPPORT SECTION                        **
 ********************************************************************************/
 #ifdef __cplusplus
- extern "C" {
+extern "C" {
 #endif
 /********************************************************************************
 **                            Include Files | Start                            **
 ********************************************************************************/
 /* CORE interfaces */
+#include "sysDefs.h"
 #include "cosmosTypes.h"
+#include "memoryMapping.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -57,80 +59,15 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Macros_sysDefsRoutes_h Macros
-  * @ingroup Global_sysDefsRoutes
+  * @defgroup Macros_semaphoreCfg_h Macros
+  * @ingroup Global_semaphoreCfg
   * @{
 ********************************************************************************/
-#define ROUTES_FUNC_NUM (BitWidthType)28          /* Number of route RW */
-
-#define SYCALL_BYTES_CHUNK  (BitWidthType)16          /* Number of bytes allowed to be copied in one system call */
-
-#define ROUTES_ID_TO_ENTITY_DUMMY (BitWidthType)0     /* Dummy it to entity */
-
-#define BUFFER_READARRAYINTERNAL (BitWidthType)0            /* identifier pointing on function pointer in array (Routes) */
-#define BUFFER_WRITEARRAYINTERNAL (BitWidthType)1            /* identifier pointing on function pointer in array (Routes) */
-#define OSINIT_INIT (BitWidthType)2            /* identifier pointing on function pointer in array (Routes) */
-#define OS_START (BitWidthType)3            /* identifier pointing on function pointer in array (Routes) */
-#define SCHEDULABLE_SETEXECUTIONSTATETOFINISHED (BitWidthType)4            /* identifier pointing on function pointer in array (Routes) */
-#define SYSJOBS_DISPATCHER (BitWidthType)5            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_DISABLEINTERRUPTS (BitWidthType)6            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_ENABLEINTERRUPTS (BitWidthType)7            /* identifier pointing on function pointer in array (Routes) */
-#define THREAD_SLEEPMSINTERNAL (BitWidthType)8            /* identifier pointing on function pointer in array (Routes) */
-#define MUTEX_GETMUTEXINTERNAL (BitWidthType)9            /* identifier pointing on function pointer in array (Routes) */
-#define MUTEX_TRYMUTEXINTERNAL (BitWidthType)10            /* identifier pointing on function pointer in array (Routes) */
-#define MUTEX_RELEASEMUTEXINTERNAL (BitWidthType)11            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_DISABLEINTERRUPT (BitWidthType)12            /* identifier pointing on function pointer in array (Routes) */
-#define INTERRUPT_ENABLEINTERRUPT (BitWidthType)13            /* identifier pointing on function pointer in array (Routes) */
-#define CILCORE_GETCOREID (BitWidthType)14            /* identifier pointing on function pointer in array (Routes) */
-#define SPINLOCK_TRYSPINLOCKINTERNAL (BitWidthType)15            /* identifier pointing on function pointer in array (Routes) */
-#define SPINLOCK_RELEASESPINLOCKINTERNAL (BitWidthType)16            /* identifier pointing on function pointer in array (Routes) */
-#define OSEVENT_TRIGGEREVENTINTERNAL (BitWidthType)17            /* identifier pointing on function pointer in array (Routes) */
-#define OS_KERNELPANICINTERNAL (BitWidthType)18            /* identifier pointing on function pointer in array (Routes) */
-#define CHANNEL_SENDINTERNAL (BitWidthType)19            /* identifier pointing on function pointer in array (Routes) */
-#define CHANNEL_SENDREPLYOBTAINEDINTERNAL (BitWidthType)20            /* identifier pointing on function pointer in array (Routes) */
-#define SUPPORTSTDIO_MEMCPYINTERNAL (BitWidthType)21            /* identifier pointing on function pointer in array (Routes) */
-#define CHANNEL_REPLYINTERNAL (BitWidthType)22            /* identifier pointing on function pointer in array (Routes) */
-#define CHANNEL_RECEIVEINTERNAL (BitWidthType)23            /* identifier pointing on function pointer in array (Routes) */
-#define CHANNEL_INITIALIZEINTERNAL (BitWidthType)24            /* identifier pointing on function pointer in array (Routes) */
-#define SEMAPHORE_TRYSEMAPHOREINTERNAL (BitWidthType)25            /* identifier pointing on function pointer in array (Routes) */
-#define SEMAPHORE_RELEASESEMAPHOREINTERNAL (BitWidthType)26            /* identifier pointing on function pointer in array (Routes) */
-#define SEMAPHORE_GETSEMAPHOREINTERNAL (BitWidthType)27            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_BUFFER_READARRAYINTERNAL (BitWidthType)0            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_BUFFER_WRITEARRAYINTERNAL (BitWidthType)1            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OSINIT_INIT (BitWidthType)2            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OS_START (BitWidthType)3            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SCHEDULABLE_SETEXECUTIONSTATETOFINISHED (BitWidthType)4            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SYSJOBS_DISPATCHER (BitWidthType)5            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_DISABLEINTERRUPTS (BitWidthType)6            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_ENABLEINTERRUPTS (BitWidthType)7            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_THREAD_SLEEPMSINTERNAL (BitWidthType)8            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_MUTEX_GETMUTEXINTERNAL (BitWidthType)9            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_MUTEX_TRYMUTEXINTERNAL (BitWidthType)10            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_MUTEX_RELEASEMUTEXINTERNAL (BitWidthType)11            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_DISABLEINTERRUPT (BitWidthType)12            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_INTERRUPT_ENABLEINTERRUPT (BitWidthType)13            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_CILCORE_GETCOREID (BitWidthType)14            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SPINLOCK_TRYSPINLOCKINTERNAL (BitWidthType)15            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SPINLOCK_RELEASESPINLOCKINTERNAL (BitWidthType)16            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OSEVENT_TRIGGEREVENTINTERNAL (BitWidthType)17            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_OS_KERNELPANICINTERNAL (BitWidthType)18            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_CHANNEL_SENDINTERNAL (BitWidthType)19            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_CHANNEL_SENDREPLYOBTAINEDINTERNAL (BitWidthType)20            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SUPPORTSTDIO_MEMCPYINTERNAL (BitWidthType)21            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_CHANNEL_REPLYINTERNAL (BitWidthType)22            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_CHANNEL_RECEIVEINTERNAL (BitWidthType)23            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_CHANNEL_INITIALIZEINTERNAL (BitWidthType)24            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SEMAPHORE_TRYSEMAPHOREINTERNAL (BitWidthType)25            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SEMAPHORE_RELEASESEMAPHOREINTERNAL (BitWidthType)26            /* identifier pointing on function pointer in array (Routes) */
-#define SYSCALL_SEMAPHORE_GETSEMAPHOREINTERNAL (BitWidthType)27            /* identifier pointing on function pointer in array (Routes) */
-
-#define ROUTES_ID_TO_FUNC_NUM (BitWidthType)28    /* Number of route identifiers */
-#define ROUTES_ID_TO_ENTITY_NUM (BitWidthType)28     /* Number of route identifiers */
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Macros_sysDefsRoutes_h
+/*  Macros_semaphoreCfg_h
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -141,15 +78,16 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_sysDefsRoutes_h Variables
-  * @ingroup Global_sysDefsRoutes
+  * @defgroup Variables_semaphoreCfg_h Variables
+  * @ingroup Global_semaphoreCfg
   * @{
 ********************************************************************************/
+extern CosmOS_SemaphoreVariableType SemaphoresVar[SEMAPHORE_NUM];
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Variables_sysDefsRoutes_h
+/*  Variables_semaphoreCfg_h
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -160,47 +98,47 @@
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_sysDefsRoutes_h API's
-  * @ingroup Global_sysDefsRoutes
+  * @defgroup Apis_semaphoreCfg_h API's
+  * @ingroup Global_semaphoreCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_sysDefsRoutes_h Getters
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup Getters_semaphoreCfg_h Getters
+  * @ingroup Apis_semaphoreCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Getters_sysDefsRoutes_h
+/*  Getters_semaphoreCfg_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_sysDefsRoutes_h Setters
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup Setters_semaphoreCfg_h Setters
+  * @ingroup Apis_semaphoreCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Setters_sysDefsRoutes_h
+/*  Setters_semaphoreCfg_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_sysDefsRoutes_h General
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup General_semaphoreCfg_h General
+  * @ingroup Apis_semaphoreCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  General_sysDefsRoutes_h
+/*  General_semaphoreCfg_h
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
@@ -211,41 +149,41 @@
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_sysDefsRoutes_h Getters
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup Getters_semaphoreCfg_h Getters
+  * @ingroup Apis_semaphoreCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Getters_sysDefsRoutes_h
+/*  Getters_semaphoreCfg_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_sysDefsRoutes_h Setters
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup Setters_semaphoreCfg_h Setters
+  * @ingroup Apis_semaphoreCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Setters_sysDefsRoutes_h
+/*  Setters_semaphoreCfg_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_sysDefsRoutes_h General
-  * @ingroup Apis_sysDefsRoutes_h
+  * @addtogroup General_semaphoreCfg_h General
+  * @ingroup Apis_semaphoreCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  General_sysDefsRoutes_h
+/*  General_semaphoreCfg_h
 ********************************************************************************/
 /********************************************************************************
 **                        Function Definitions | Stop                          **

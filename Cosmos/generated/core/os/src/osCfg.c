@@ -30,6 +30,7 @@
 #include "routeCfg.h"
 #include "sysJobsCfg.h"
 #include "spinlockCfg.h"
+#include "semaphoreCfg.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -91,6 +92,8 @@ IS_INITIALIZED_TO{                       /* osCfg */
     &OsEventCfg,    /* const CosmOS_OsEventConfigurationType * const osEventCfg */
     ChannelsCfgConst,    /* const CosmOS_ChannelConfigurationType * const channels */
     CHANNEL_NUM,    /* const BitWidthType numberOfChannels */
+    SemaphoresVar,    /* CosmOS_SemaphoreVariableType * const semaphoreVars */
+    SEMAPHORE_NUM,    /* const BitWidthType numberOfSemaphores */
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)

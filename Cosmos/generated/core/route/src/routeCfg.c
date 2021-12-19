@@ -48,6 +48,9 @@
 #include "channel.h"
 #include "channel.h"
 #include "channel.h"
+#include "semaphore.h"
+#include "semaphore.h"
+#include "semaphore.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -111,6 +114,9 @@ IS_INITIALIZED_TO
     (CosmOS_GenericVoidType)channel_replyInternal,
     (CosmOS_GenericVoidType)channel_receiveInternal,
     (CosmOS_GenericVoidType)channel_initializeInternal,
+    (CosmOS_GenericVoidType)semaphore_trySemaphoreInternal,
+    (CosmOS_GenericVoidType)semaphore_releaseSemaphoreInternal,
+    (CosmOS_GenericVoidType)semaphore_getSemaphoreInternal,
 };
 
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
@@ -141,12 +147,18 @@ IS_INITIALIZED_TO
     CHANNEL_REPLYINTERNAL,
     CHANNEL_RECEIVEINTERNAL,
     CHANNEL_INITIALIZEINTERNAL,
+    SEMAPHORE_TRYSEMAPHOREINTERNAL,
+    SEMAPHORE_RELEASESEMAPHOREINTERNAL,
+    SEMAPHORE_GETSEMAPHOREINTERNAL,
 };
 
 const BitWidthType
     RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
+    ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,

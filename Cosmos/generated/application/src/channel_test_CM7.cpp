@@ -22,6 +22,7 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =channel_test_CM7_includeFiles
 ********************************************************************************/
+#include <semaphore.h>
 #include <channel.h>
 #include <thread.h>
 #include <errorHandler.h>
@@ -112,6 +113,10 @@ channel_xCore_server_CM7( void )
 
     unsigned char receivePool[XCORE_SERVER_REPLY_POOL_SIZE] = {0};
     unsigned char replyPool[] = "reply";
+
+    semaphore_getSemaphore(semaphore_test_0_id);
+
+    semaphore_releaseSemaphore(semaphore_test_0_id);
 
     channelState = channel_initialize( xCore_channel_id );
     if( errorHandler_isError( channelState ) )
