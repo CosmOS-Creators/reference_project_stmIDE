@@ -274,7 +274,7 @@ IS_INITIALIZED_TO{
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_Timing_measurement_thread_CM7,    /* const CosmOS_GenericVoidType handler */
+        wrapped_Synchronization_and_dynamicAllocation_test_thread_CM7,    /* const CosmOS_GenericVoidType handler */
         True,    /* const CosmOS_BooleanType fp */
         SCHEDULABLE_8_UNIQUE_ID,    /* const BitWidthType id */
         THREAD_0_PROGRAM_1_CORE_0_ID,    /* const BitWidthType instanceId */
@@ -289,7 +289,7 @@ IS_INITIALIZED_TO{
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_Timing_measurement_thread_CM4,    /* const CosmOS_GenericVoidType handler */
+        wrapped_Synchronization_and_dynamicAllocation_test_thread_CM4,    /* const CosmOS_GenericVoidType handler */
         True,    /* const CosmOS_BooleanType fp */
         SCHEDULABLE_9_UNIQUE_ID,    /* const BitWidthType id */
         THREAD_0_PROGRAM_1_CORE_1_ID,    /* const BitWidthType instanceId */
@@ -304,7 +304,7 @@ IS_INITIALIZED_TO{
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_1_PROGRAM_1_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_1_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_Mutex_test_thread_CM4,    /* const CosmOS_GenericVoidType handler */
+        wrapped_Synchronization_test_thread_CM4,    /* const CosmOS_GenericVoidType handler */
         False,    /* const CosmOS_BooleanType fp */
         SCHEDULABLE_10_UNIQUE_ID,    /* const BitWidthType id */
         THREAD_1_PROGRAM_1_CORE_1_ID,    /* const BitWidthType instanceId */
@@ -565,9 +565,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM7 void
-wrapped_Timing_measurement_thread_CM7( void )
+wrapped_Synchronization_and_dynamicAllocation_test_thread_CM7( void )
 {
-    Timing_measurement_thread_CM7();
+    Synchronization_and_dynamicAllocation_test_thread_CM7();
     };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
@@ -589,9 +589,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM4 void
-wrapped_Timing_measurement_thread_CM4( void )
+wrapped_Synchronization_and_dynamicAllocation_test_thread_CM4( void )
 {
-    Timing_measurement_thread_CM4();
+    Synchronization_and_dynamicAllocation_test_thread_CM4();
     };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
@@ -600,9 +600,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM4 void
-wrapped_Mutex_test_thread_CM4( void )
+wrapped_Synchronization_test_thread_CM4( void )
 {
-    Mutex_test_thread_CM4();
+    Synchronization_test_thread_CM4();
     };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)

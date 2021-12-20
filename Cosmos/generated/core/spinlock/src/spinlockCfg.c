@@ -83,6 +83,10 @@ IS_INITIALIZED_TO{
         SPINLOCK_STATE_ENUM__RELEASED,    /* BitWidthType spinlock */
         NULL,    /* CosmOS_SchedulableConfigurationType * schedulableOwner */
     },
+    {
+        SPINLOCK_STATE_ENUM__RELEASED,    /* BitWidthType spinlock */
+        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableOwner */
+    },
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
