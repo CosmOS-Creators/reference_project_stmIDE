@@ -508,7 +508,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:returnType",
-				"value": "CosmOS_MutexStateType"
+				"value": "CosmOS_SpinlockStateType"
 			}
 		],
 		"route_24": [
@@ -541,7 +541,7 @@
 			},
 			{
 				"target": "sysCallRoutesAttributes/:returnType",
-				"value": "CosmOS_MutexStateType"
+				"value": "CosmOS_SpinlockStateType"
 			}
 		],
         "route_25": [
@@ -802,6 +802,105 @@
 			{
 				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "void"
+			}
+		],
+		"route_34": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "semaphore_trySemaphoreInternal"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "semaphore.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"semaphoreVarPtr",
+					"semaphoreId"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_SemaphoreStateType"
+			}
+		],
+		"route_35": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "semaphore_releaseSemaphoreInternal"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "semaphore.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"semaphoreVarPtr",
+					"semaphoreId"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_SemaphoreStateType"
+			}
+		],
+		"route_36": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "semaphore_getSemaphoreInternal"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "semaphore.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_bitWidthType_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"semaphoreVarPtr",
+					"semaphoreId"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "CosmOS_SemaphoreStateType"
 			}
 		]
 	}

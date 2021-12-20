@@ -114,7 +114,7 @@
 			},
 			{
 				"target": "threadsAttributes/:name",
-				"value": "Timing_measurement_thread_CM7"
+				"value": "Synchronization_and_dynamicAllocation_test_thread_CM7"
 			},
 			{
 				"target": "threadsAttributes/:floatingPoint",
@@ -163,7 +163,7 @@
 			},
 			{
 				"target": "threadsAttributes/:name",
-				"value": "Timing_measurement_thread_CM4"
+				"value": "Synchronization_and_dynamicAllocation_test_thread_CM4"
 			},
 			{
 				"target": "threadsAttributes/:floatingPoint",
@@ -212,7 +212,7 @@
 			},
 			{
 				"target": "threadsAttributes/:name",
-				"value": "Mutex_test_thread_CM4"
+				"value": "Synchronization_test_thread_CM4"
 			},
 			{
 				"target": "threadsAttributes/:floatingPoint",

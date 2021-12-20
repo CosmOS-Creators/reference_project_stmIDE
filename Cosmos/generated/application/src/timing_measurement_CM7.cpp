@@ -22,6 +22,7 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =timing_measurement_CM7_includeFiles
 ********************************************************************************/
+#include <semaphore.h>
 #include <mutex.h>
 #include <buffer.h>
 #include <spinlock.h>
@@ -51,7 +52,7 @@ Timing_measurement_task_CM7( void );
 
 /* Threads in the program timing_measurement_CM7 */
 extern "C" void
-Timing_measurement_thread_CM7( void );
+Synchronization_and_dynamicAllocation_test_thread_CM7( void );
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -151,7 +152,7 @@ Timing_measurement_task_CM7( void )
                 //error was returned, check its value
             }
         }
-        //trying if kernel will return err cause task cannot use mutexes
+        //trying if kernel will return error cause task cannot use mutexes
         mutexState = mutex_getMutex( &gpio_e_mutex );
         if( errorHandler_isError( mutexState ) )
         {
@@ -180,15 +181,16 @@ __SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM7 )
 __SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM7 void
-Timing_measurement_thread_CM7( void )
+Synchronization_and_dynamicAllocation_test_thread_CM7( void )
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =Timing_measurement_thread_CM7
+** start_name =Synchronization_and_dynamicAllocation_test_thread_CM7
 ********************************************************************************/
     CosmOS_MutexStateType mutexState;
     CosmOS_SleepStateType sleepState;
     CosmOS_BufferStateType bufferState;
+    CosmOS_SemaphoreStateType semaphoreState;
 
     for( ;; )
     {
@@ -209,6 +211,8 @@ Timing_measurement_thread_CM7( void )
             //error was returned, check its value
         }
 
+        //Critical code section (safe in intra-program synchronization)
+
         gpio_e->togglePin( GPIO_PIN_1 );
 
         mutexState = mutex_releaseMutex( &gpio_e_mutex );
@@ -217,8 +221,23 @@ Timing_measurement_thread_CM7( void )
             //error was returned, check its value
         }
 
-        bufferState = user_log( timingMeasurementCM7, sizeof( timingMeasurementCM7 ) );
+        bufferState = user_log( timingMeasurementCM7,
+        sizeof( timingMeasurementCM7 ) );
         if( errorHandler_isError( bufferState ) )
+        {
+            //error was returned, check its value
+        }
+
+        semaphoreState = semaphore_getSemaphore( semaphore_test_0_id );
+        if( errorHandler_isError( semaphoreState ) )
+        {
+            //error was returned, check its value
+        }
+
+        //Critical code section (safe in inter-program synchronization)
+
+        semaphoreState = semaphore_releaseSemaphore( semaphore_test_0_id );
+        if( errorHandler_isError( semaphoreState ) )
         {
             //error was returned, check its value
         }
@@ -226,7 +245,7 @@ Timing_measurement_thread_CM7( void )
         delete gpio_e;
     }
 /********************************************************************************
-** stop_name =Timing_measurement_thread_CM7
+** stop_name =Synchronization_and_dynamicAllocation_test_thread_CM7
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };

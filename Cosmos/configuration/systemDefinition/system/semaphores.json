@@ -1,0 +1,28 @@
+{
+	"version": "1.1.0",
+	"checksum": "36ec648f486fc72711944bf5fb9e8c51",
+	"ui": {
+		"use_page": "semaphores"
+	},
+	"attributes": {},
+	"elements": {
+		"semaphore_0": [
+			{
+				"target": "semaphoresAttributes/:name",
+				"value": "semaphore_test_0"
+			},
+			{
+				"target": "semaphoresAttributes/:semaphoreId"
+			}
+		],
+		"semaphore_1": [
+			{
+				"target": "semaphoresAttributes/:name",
+				"value": "semaphore_test_1"
+			},
+			{
+				"target": "semaphoresAttributes/:semaphoreId"
+			}
+		]
+	}
+}

@@ -92,6 +92,7 @@ CosmOS_BooleanType __LOGGER_INIT_SECTION dma_tx_complete = True;
 __SEC_STOP( __LOGGER_INIT_SECTION_STOP)
 /* @endcond*/
 
+
 /********************************************************************************
 ** Thread ID macro = THREAD_0_PROGRAM_2_CORE_1_ID
 ** Program ID macro = PROGRAM_2_CORE_1_ID

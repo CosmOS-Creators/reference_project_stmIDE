@@ -5,19 +5,13 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file cosmosApi.h
+** @file sysDefsSemaphores.h
 *********************************************************************************
-<!--                     cosmosApi Module Group Definition                    -->
+<!--                  sysDefsSemaphores Unit Group Definition                 -->
 *********************************************************************************
-** @defgroup cosmosApi_module cosmosApi
-** @brief cosmosApi Module
-** @details lorem
-*********************************************************************************
-<!--                      cosmosApi Unit Group Definition                     -->
-*********************************************************************************
-** @defgroup cosmosApi_unit cosmosApi Unit
-** @ingroup cosmosApi_module
-** @brief cosmosApi Unit
+** @defgroup sysDefsSemaphores_unit sysDefsSemaphores Unit
+** @ingroup sysDefs_module
+** @brief sysDefsSemaphores Unit
 ** @details lorem
 *********************************************************************************
 <!--                           Version Information                            -->
@@ -31,30 +25,29 @@
 ** @warning Modifying code can lead to unexpected behaviour of the whole system
 ** @copyright MIT License
 *********************************************************************************
-<!--                  cosmosApi Unit Global Group Definition                  -->
+<!--               sysDefsSemaphores Unit Global Group Definition             -->
 *********************************************************************************
-** @defgroup Global_cosmosApi Global
-** @ingroup cosmosApi_unit
-** @brief cosmosApi globals
+** @defgroup Global_sysDefsSemaphores Global
+** @ingroup sysDefsSemaphores_unit
+** @brief sysDefsSemaphores globals
 ** @details lorem
 ********************************************************************************/
 /********************************************************************************
 **                           START OF THE HEADER FILE                          **
 ********************************************************************************/
-#ifndef __COSMOSAPI_H__
-#define __COSMOSAPI_H__
+#ifndef __SYSDEFSSEMAPHORES_H__
+#define __SYSDEFSSEMAPHORES_H__
 /********************************************************************************
 **                         START OF C++ SUPPORT SECTION                        **
 ********************************************************************************/
 #ifdef __cplusplus
-extern "C" {
+ extern "C" {
 #endif
 /********************************************************************************
 **                            Include Files | Start                            **
 ********************************************************************************/
 /* CORE interfaces */
-#include "sysCalls.h"
-#include "osBoot.h"
+#include "cosmosTypes.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -64,40 +57,24 @@ extern "C" {
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Macros_cosmosApi_h Macros
-  * @ingroup Global_cosmosApi
+  * @defgroup Macros_sysDefsSemaphores_h Macros
+  * @ingroup Global_sysDefsSemaphores
   * @{
 ********************************************************************************/
-#define IdleThread_CM7_id SCHEDULABLE_6_UNIQUE_ID
-#define IdleThread_CM4_id SCHEDULABLE_7_UNIQUE_ID
-#define Synchronization_and_dynamicAllocation_test_thread_CM7_id SCHEDULABLE_8_UNIQUE_ID
-#define Synchronization_and_dynamicAllocation_test_thread_CM4_id SCHEDULABLE_9_UNIQUE_ID
-#define Synchronization_test_thread_CM4_id SCHEDULABLE_10_UNIQUE_ID
-#define Logger_thread_id SCHEDULABLE_11_UNIQUE_ID
-#define TCPIP_thread_id SCHEDULABLE_12_UNIQUE_ID
-#define channel_xCore_server_CM7_id SCHEDULABLE_13_UNIQUE_ID
-#define channel_xCore_client_CM4_id SCHEDULABLE_14_UNIQUE_ID
-#define channel_sameCore_server_CM7_id SCHEDULABLE_15_UNIQUE_ID
-#define channel_sameCore_client_CM7_id SCHEDULABLE_16_UNIQUE_ID
-#define Idle_CM7_id SCHEDULABLE_0_UNIQUE_ID
-#define sysJobs_CM7_id SCHEDULABLE_1_UNIQUE_ID
-#define Timing_measurement_task_CM7_id SCHEDULABLE_2_UNIQUE_ID
-#define Idle_CM4_id SCHEDULABLE_3_UNIQUE_ID
-#define sysJobs_CM4_id SCHEDULABLE_4_UNIQUE_ID
-#define Timing_measurement_task_CM4_id SCHEDULABLE_5_UNIQUE_ID
-#define x_core_buffer_1_id BUFFER_2_ID
-#define logger_buffer_id BUFFER_3_ID
-#define spinlock_test_0_id SPINLOCK_0_ID
-#define spinlock_test_1_id SPINLOCK_1_ID
-#define semaphore_test_0_id SEMAPHORE_0_ID
-#define semaphore_test_1_id SEMAPHORE_1_ID
-#define xCore_channel_id CHANNEL_0_ID
-#define sameCore_channel_id CHANNEL_1_ID
+
+#define SEMAPHORE_0_ID                      (BitWidthType)0    /* Semaphore identifier semaphore_test_0 */
+#define SEMAPHORE_1_ID                      (BitWidthType)1    /* Semaphore identifier semaphore_test_1 */
+#define SEMAPHORE_2_ID                      (BitWidthType)2    /* Semaphore identifier for channel xCore_channel */
+#define SEMAPHORE_3_ID                      (BitWidthType)3    /* Semaphore identifier for channel sameCore_channel */
+
+#define SEMAPHORE_NUM                                    (BitWidthType)4    /* Number of configured semaphores */
+
+#define SEMAPHORE_NUM_PREPROCESSOR                                    4    /* Number of configured semaphores without a specific type cast */
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Macros_cosmosApi_h
+/*  Macros_sysDefsSemaphores_h
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -108,15 +85,15 @@ extern "C" {
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_cosmosApi_h Variables
-  * @ingroup Global_cosmosApi
+  * @defgroup Variables_sysDefsSemaphores_h Variables
+  * @ingroup Global_sysDefsSemaphores
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Variables_cosmosApi_h
+/*  Variables_sysDefsSemaphores_h
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -127,47 +104,47 @@ extern "C" {
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_cosmosApi_h API's
-  * @ingroup Global_cosmosApi
+  * @defgroup Apis_sysDefsSemaphores_h API's
+  * @ingroup Global_sysDefsSemaphores
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_cosmosApi_h Getters
-  * @ingroup Apis_cosmosApi_h
+  * @addtogroup Getters_sysDefsSemaphores_h Getters
+  * @ingroup Apis_sysDefsSemaphores_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Getters_cosmosApi_h
+/*  Getters_sysDefsSemaphores_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_cosmosApi_h Setters
-  * @ingroup Apis_cosmosApi_h
+  * @addtogroup Setters_sysDefsSemaphores_h Setters
+  * @ingroup Apis_sysDefsSemaphores_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Setters_cosmosApi_h
+/*  Setters_sysDefsSemaphores_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_cosmosApi_h General
-  * @ingroup Apis_cosmosApi_h
+  * @addtogroup General_sysDefsSemaphores_h General
+  * @ingroup Apis_sysDefsSemaphores_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  General_cosmosApi_h
+/*  General_sysDefsSemaphores_h
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
@@ -178,68 +155,41 @@ extern "C" {
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_cosmosApi_h Getters
-  * @ingroup Apis_cosmosApi_h
+  * @addtogroup Getters_sysDefsSemaphores_h Getters
+  * @ingroup Apis_sysDefsSemaphores_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Getters_cosmosApi_h
+/*  Getters_sysDefsSemaphores_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_cosmosApi_h Setters
-  * @ingroup Apis_cosmosApi_h
+  * @addtogroup Setters_sysDefsSemaphores_h Setters
+  * @ingroup Apis_sysDefsSemaphores_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Setters_cosmosApi_h
+/*  Setters_sysDefsSemaphores_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_cosmosApi_h General
-  * @ingroup Apis_cosmosApi_h
+  * @addtogroup General_sysDefsSemaphores_h General
+  * @ingroup Apis_sysDefsSemaphores_h
   * @{
 ********************************************************************************/
-#define cosmosApi_osInit_init() \
-(void)sysCalls_bitWidthType_ret_void(\
-    SYSCALL_OSINIT_INIT\
-    )
-#define cosmosApi_os_start() \
-(void)sysCalls_bitWidthType_ret_void(\
-    SYSCALL_OS_START\
-    )
-#define cosmosApi_interrupt_disableInterrupts() \
-(void)sysCalls_bitWidthType_ret_void(\
-    SYSCALL_INTERRUPT_DISABLEINTERRUPTS\
-    )
-#define cosmosApi_interrupt_enableInterrupts() \
-(void)sysCalls_bitWidthType_ret_void(\
-    SYSCALL_INTERRUPT_ENABLEINTERRUPTS\
-    )
-#define cosmosApi_interrupt_disableInterrupt(ISR) \
-(void)sysCalls_bitWidthType_bitWidthType_ret_bitWidthType(\
-    SYSCALL_INTERRUPT_DISABLEINTERRUPT\
-    ,ISR\
-    )
-#define cosmosApi_interrupt_enableInterrupt(ISR) \
-(void)sysCalls_bitWidthType_bitWidthType_ret_bitWidthType(\
-    SYSCALL_INTERRUPT_ENABLEINTERRUPT\
-    ,ISR\
-    )
-#define cosmosApi_boot() osBoot_boot()
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  General_cosmosApi_h
+/*  General_sysDefsSemaphores_h
 ********************************************************************************/
 /********************************************************************************
 **                        Function Definitions | Stop                          **

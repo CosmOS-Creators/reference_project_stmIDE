@@ -47,7 +47,7 @@
 				"target": "channelsAttributes/:channelId"
 			},
 			{
-				"target": "channelsAttributes/:spinlockId"
+				"target": "channelsAttributes/:semaphoreId"
 			}
 		],
 		"channel_1": [
@@ -91,7 +91,7 @@
 				"target": "channelsAttributes/:channelId"
 			},
 			{
-				"target": "channelsAttributes/:spinlockId"
+				"target": "channelsAttributes/:semaphoreId"
 			}
 		]
 	}

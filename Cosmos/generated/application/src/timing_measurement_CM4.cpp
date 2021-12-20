@@ -22,6 +22,7 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =timing_measurement_CM4_includeFiles
 ********************************************************************************/
+#include <semaphore.h>
 #include <mutex.h>
 #include <buffer.h>
 #include <spinlock.h>
@@ -51,9 +52,9 @@ Timing_measurement_task_CM4( void );
 
 /* Threads in the program timing_measurement_CM4 */
 extern "C" void
-Timing_measurement_thread_CM4( void );
+Synchronization_and_dynamicAllocation_test_thread_CM4( void );
 extern "C" void
-Mutex_test_thread_CM4( void );
+Synchronization_test_thread_CM4( void );
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -153,7 +154,7 @@ Timing_measurement_task_CM4( void )
         }
     }
 
-    //trying if kernel will return err cause task cannot use mutexes
+    //trying if kernel will return error cause task cannot use mutexes
     mutexState = mutex_getMutex( &resourcesMutex );
     if( errorHandler_isError( mutexState ) )
     {
@@ -185,11 +186,11 @@ __SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM4 )
 __SEC_START( __APPLICATION_FUNC_SECTION_START_CM4 )
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM4 void
-Timing_measurement_thread_CM4( void )
+Synchronization_and_dynamicAllocation_test_thread_CM4( void )
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =Timing_measurement_thread_CM4
+** start_name =Synchronization_and_dynamicAllocation_test_thread_CM4
 ********************************************************************************/
     CosmOS_SleepStateType sleepState;
     CosmOS_MutexStateType mutexState;
@@ -205,6 +206,8 @@ Timing_measurement_thread_CM4( void )
             //error was returned, check its value
         }
 
+        //Critical code section (safe in intra-program synchronization)
+
         sleepState = thread_sleepMs( 10 );
         if( errorHandler_isError( sleepState ) )
         {
@@ -218,7 +221,7 @@ Timing_measurement_thread_CM4( void )
         }
     }
 /********************************************************************************
-** stop_name =Timing_measurement_thread_CM4
+** stop_name =Synchronization_and_dynamicAllocation_test_thread_CM4
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };
@@ -233,15 +236,16 @@ __SEC_STOP( __APPLICATION_FUNC_SECTION_STOP_CM4 )
 __SEC_START( __APPLICATION_FUNC_SECTION_START_CM4 )
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM4 void
-Mutex_test_thread_CM4( void )
+Synchronization_test_thread_CM4( void )
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =Mutex_test_thread_CM4
+** start_name =Synchronization_test_thread_CM4
 ********************************************************************************/
     CosmOS_MutexStateType mutexState;
     CosmOS_SleepStateType sleepState;
     CosmOS_BufferStateType bufferState;
+    CosmOS_SemaphoreStateType semaphoreState;
 
 
     for( ;; )
@@ -251,6 +255,8 @@ Mutex_test_thread_CM4( void )
         {
             //error was returned, check its value
         }
+
+        //Critical code section (safe in intra-program synchronization)
 
         sleepState = thread_sleepMs( 100 );
         if( errorHandler_isError( sleepState ) )
@@ -275,9 +281,24 @@ Mutex_test_thread_CM4( void )
         {
             //error was returned, check its value
         }
+
+        semaphoreState = semaphore_getSemaphore( semaphore_test_0_id );
+        if( errorHandler_isError( semaphoreState ) )
+        {
+            //error was returned, check its value
+        }
+
+        //Critical code section (safe in inter-program synchronization)
+
+        semaphoreState = semaphore_releaseSemaphore( semaphore_test_0_id );
+        if( errorHandler_isError( semaphoreState ) )
+        {
+            //error was returned, check its value
+        }
+
     }
 /********************************************************************************
-** stop_name =Mutex_test_thread_CM4
+** stop_name =Synchronization_test_thread_CM4
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };

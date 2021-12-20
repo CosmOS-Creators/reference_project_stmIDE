@@ -78,6 +78,17 @@
 			".c": "src"
 		}
 	},
+    {
+		"templates": [
+			"core/semaphore/semaphore"
+		],
+		"outputDir": "{CoreGeneratedDir}/semaphore",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
+	},
 	{
 		"templates": [
 			"core/task/task"
