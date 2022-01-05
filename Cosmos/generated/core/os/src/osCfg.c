@@ -25,6 +25,7 @@
 #include "coreCfg.h"
 #include "channelCfg.h"
 #include "bufferCfg.h"
+#include "interruptCfg.h"
 #include "osEventCfg.h"
 #include "bufferDoubleCfg.h"
 #include "routeCfg.h"
@@ -94,6 +95,8 @@ IS_INITIALIZED_TO{                       /* osCfg */
     CHANNEL_NUM,    /* const BitWidthType numberOfChannels */
     SemaphoresVar,    /* CosmOS_SemaphoreVariableType * const semaphoreVars */
     SEMAPHORE_NUM,    /* const BitWidthType numberOfSemaphores */
+    InterruptsCfgConst,    /* CosmOS_SemaphoreVariableType * const interrupts */
+    INTERRUPT_NUM,    /* const BitWidthType numberOfInterrupts */
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)

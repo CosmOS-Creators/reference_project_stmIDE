@@ -85,6 +85,10 @@ IS_INITIALIZED_TO
         ALARM_STATE_ENUM__DISABLED,    /* CosmOS_AlarmStateType state */
         0,    /* BitWidthType timer */
     },
+    {
+        ALARM_STATE_ENUM__DISABLED,    /* CosmOS_AlarmStateType state */
+        0,    /* BitWidthType timer */
+    },
 };
 CosmOS_AlarmVariableType AlarmsCore1Var[ALARM_CORE_1_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO
@@ -150,6 +154,12 @@ IS_INITIALIZED_TO{
             [ALARM_5_PROGRAM_3_CORE_0_ID],    /* CosmOS_AlarmVariableType * const var */
         &ThreadsSchedulablesCfgConst
             [SCHEDULABLE_THREAD_2_PROGRAM_3_CORE_0_ID],    /* CosmOS_SchedulableConfigurationType * const schedulableCfg */
+    },
+    {
+        &AlarmsCore0Var
+            [ALARM_6_PROGRAM_4_CORE_0_ID],    /* CosmOS_AlarmVariableType * const var */
+        &ThreadsSchedulablesCfgConst
+            [SCHEDULABLE_THREAD_0_PROGRAM_4_CORE_0_ID],    /* CosmOS_SchedulableConfigurationType * const schedulableCfg */
     },
 };
 const CosmOS_AlarmConfigurationType AlarmsCore1CfgConst[ALARM_CORE_1_NUM] __OS_CONSTS_SECTION

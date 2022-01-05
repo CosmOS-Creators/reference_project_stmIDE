@@ -273,5 +273,16 @@
 			".h": "inc",
 			".c": "src"
 		}
+	},
+    {
+		"templates": [
+			"core/interrupt/interrupt"
+		],
+		"outputDir": "{CoreGeneratedDir}/interrupt",
+		"fileName": "{template}",
+		"pattern": {
+			".h": "inc",
+			".c": "src"
+		}
 	}
 ]

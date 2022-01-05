@@ -51,6 +51,7 @@
 #include "semaphore.h"
 #include "semaphore.h"
 #include "semaphore.h"
+#include "interrupt.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -117,6 +118,7 @@ IS_INITIALIZED_TO
     (CosmOS_GenericVoidType)semaphore_trySemaphoreInternal,
     (CosmOS_GenericVoidType)semaphore_releaseSemaphoreInternal,
     (CosmOS_GenericVoidType)semaphore_getSemaphoreInternal,
+    (CosmOS_GenericVoidType)interrupt_handleInternal,
 };
 
 const BitWidthType RoutesIdToFuncConst[ROUTES_ID_TO_FUNC_NUM] __OS_CONSTS_SECTION
@@ -150,12 +152,14 @@ IS_INITIALIZED_TO
     SEMAPHORE_TRYSEMAPHOREINTERNAL,
     SEMAPHORE_RELEASESEMAPHOREINTERNAL,
     SEMAPHORE_GETSEMAPHOREINTERNAL,
+    INTERRUPT_HANDLEINTERNAL,
 };
 
 const BitWidthType
     RoutesIdToEntityConst[ROUTES_ID_TO_ENTITY_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO
 {
+    ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,
     ROUTES_ID_TO_ENTITY_DUMMY,

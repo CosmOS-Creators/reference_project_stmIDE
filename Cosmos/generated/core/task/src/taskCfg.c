@@ -108,6 +108,10 @@ CosmOS_TaskVariableType
     TasksProgram3Core1Var[TASK_PROGRAM_3_CORE_1_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO{
 };
+CosmOS_TaskVariableType
+    TasksProgram4Core0Var[TASK_PROGRAM_4_CORE_0_NUM] __OS_VARS_SECTION
+IS_INITIALIZED_TO{
+};
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
@@ -175,6 +179,10 @@ IS_INITIALIZED_TO{
 };
 const CosmOS_TaskConfigurationType
     TasksProgram3Core1CfgConst[TASK_PROGRAM_3_CORE_1_NUM] __OS_CONSTS_SECTION
+IS_INITIALIZED_TO{
+};
+const CosmOS_TaskConfigurationType
+    TasksProgram4Core0CfgConst[TASK_PROGRAM_4_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
 };
 /* @cond S */

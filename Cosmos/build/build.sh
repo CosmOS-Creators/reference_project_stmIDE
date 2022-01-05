@@ -24,7 +24,7 @@ done
 if [ $build == "TESTS" ]
 then
     cmake -G "Unix Makefiles" -S . -B ../generated/build/tests -DBUILD_TESTS=1
-    cd ../generated/build/tests && make -j32 CPPUTEST_USE_GCOV=Y
+    cd ../generated/build/tests && make -j24 CPPUTEST_USE_GCOV=Y
     cd tests && ctest -V
     find . -type d -wholename "*/__/__/__/src*" > tmp.txt
     args="--capture"
@@ -45,7 +45,7 @@ then
 elif [ $build == "SYSTEM" ]
 then
     cmake -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=toolchain/arm-none-eabi-gcc.cmake -DCMAKE_BUILD_TYPE=Debug -B ../generated/build/system -DBUILD_SYSTEM=1
-    cd ../generated/build/system && make -j32
+    cd ../generated/build/system && make -j24
 else
     echo "Please define the build type with -b/--build option either as SYSTEM build or TESTS build"
 fi

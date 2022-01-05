@@ -544,6 +544,55 @@
 			{
 				"target": "threadsAttributes/:alarmId"
 			}
+		],
+        "thread_11": [
+			{
+				"target": "threadsAttributes/:uniqueId"
+			},
+			{
+				"target": "threadsAttributes/:program",
+				"value": "programs/program_8"
+			},
+			{
+				"target": "threadsAttributes/:name",
+				"value": "SPI3_IRQHandler_Thread_CM7"
+			},
+			{
+				"target": "threadsAttributes/:floatingPoint",
+				"value": false
+			},
+			{
+				"target": "threadsAttributes/:isIdle",
+				"value": false
+			},
+			{
+				"target": "threadsAttributes/:stackSize",
+				"value": 1024
+			},
+			{
+				"target": "threadsAttributes/:priority",
+				"value" : 100
+			},
+			{
+				"target": "threadsAttributes/:peripheralAccessLowAddress",
+				"value": "0x0"
+			},
+			{
+				"target": "threadsAttributes/:peripheralAccessSize",
+				"value" : 0
+			},
+			{
+				"target": "threadsAttributes/:lowAddress"
+			},
+			{
+				"target": "threadsAttributes/:highAddress"
+			},
+			{
+				"target": "threadsAttributes/:threadId"
+			},
+			{
+				"target": "threadsAttributes/:alarmId"
+			}
 		]
 	}
 }
