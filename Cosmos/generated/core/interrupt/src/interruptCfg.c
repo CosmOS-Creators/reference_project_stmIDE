@@ -21,6 +21,7 @@
 **                            Include Files | Start                            **
 ********************************************************************************/
 /* CORE interfaces */
+#include "interrupt.h"
 #include "interruptCfg.h"
 #include "threadCfg.h"
 /********************************************************************************
@@ -146,6 +147,17 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /********************************************************************************
 **                        Function Definitions | Start                         **
 ********************************************************************************/
+/* @cond S */
+__SEC_START(__OS_FUNC_SECTION_START)
+/* @endcond*/
+__OS_FUNC_SECTION void
+SPI3_IRQHandler( void )
+{
+    interrupt_trigger( INTERRUPT_0_ID );
+};
+/* @cond S */
+__SEC_STOP(__OS_FUNC_SECTION_STOP)
+/* @endcond*/
 /********************************************************************************
 **                        Function Definitions | Stop                          **
 ********************************************************************************/

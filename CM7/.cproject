@@ -99,6 +99,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>
@@ -192,6 +193,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>
@@ -362,6 +364,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>
@@ -451,6 +454,7 @@
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/spinlock/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/stack/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/heap/inc"/>
+                                    <listOptionValue builtIn="false" value="../../Cosmos/generated/core/interrupt/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/switch/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysDefs/inc"/>
 									<listOptionValue builtIn="false" value="../../Cosmos/generated/core/sysJobs/inc"/>
