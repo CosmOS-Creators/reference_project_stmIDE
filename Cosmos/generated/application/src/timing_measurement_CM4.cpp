@@ -198,7 +198,10 @@ Synchronization_and_dynamicAllocation_test_thread_CM4( void )
     for( ;; )
     {
         int * integerPointer = new int( 100 );
-        delete integerPointer;
+        if( integerPointer )
+        {
+            delete integerPointer;
+        }
 
         mutexState = mutex_getMutex( &resourcesMutex );
         if( errorHandler_isError( mutexState ) )
