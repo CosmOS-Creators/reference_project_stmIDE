@@ -47,6 +47,20 @@
 				"target": "osEventsAttributes/:eventName",
 				"value": "channel_signalizeSend"
 			}
+		],
+        "event_3": [
+			{
+				"target": "osEventsAttributes/:eventHandlerFunc",
+				"value": "interrupt_signalizeThread"
+			},
+			{
+				"target": "osEventsAttributes/:apiHeader",
+				"value": "interrupt.h"
+			},
+            {
+				"target": "osEventsAttributes/:eventName",
+				"value": "interrupt_signalizeThread"
+			}
 		]
     }
 }

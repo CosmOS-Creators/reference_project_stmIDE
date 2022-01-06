@@ -195,9 +195,10 @@ Synchronization_and_dynamicAllocation_test_thread_CM7( void )
     for( ;; )
     {
         int * integerArr = new int[10];
-        delete integerArr;
-
-        GPIO * gpio_e = new GPIO( GPIOE );
+        if( integerArr )
+        {
+            delete integerArr;
+        }
 
         sleepState = thread_sleep( 1 );
         if( errorHandler_isError( sleepState ) )
@@ -213,7 +214,13 @@ Synchronization_and_dynamicAllocation_test_thread_CM7( void )
 
         //Critical code section (safe in intra-program synchronization)
 
-        gpio_e->togglePin( GPIO_PIN_1 );
+        GPIO * gpio_e = new GPIO( GPIOE );
+        if( gpio_e )
+        {
+            gpio_e->togglePin( GPIO_PIN_1 );
+            delete gpio_e;
+        }
+
 
         mutexState = mutex_releaseMutex( &gpio_e_mutex );
         if( errorHandler_isError( mutexState ) )
@@ -242,7 +249,7 @@ Synchronization_and_dynamicAllocation_test_thread_CM7( void )
             //error was returned, check its value
         }
 
-        delete gpio_e;
+
     }
 /********************************************************************************
 ** stop_name =Synchronization_and_dynamicAllocation_test_thread_CM7

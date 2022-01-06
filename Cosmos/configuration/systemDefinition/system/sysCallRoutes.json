@@ -902,6 +902,38 @@
 				"target": "sysCallRoutesAttributes/:returnType",
 				"value": "CosmOS_SemaphoreStateType"
 			}
+		],
+        "route_37": [
+			{
+				"target": "sysCallRoutesAttributes/:routedFuncName",
+				"value": "interrupt_handleInternal"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:apiHeader",
+				"value": "interrupt.h"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:sysCall",
+				"value": "sysCalls_bitWidthType_voidPtr_ret_bitWidthType"
+			},
+			{
+				"target": "sysCallRoutesAttributes/:userVisible",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:isMappedToEntity",
+				"value": false
+			},
+			{
+				"target": "sysCallRoutesAttributes/:args",
+				"value": [
+					"interruptCfg"
+				]
+			},
+			{
+				"target": "sysCallRoutesAttributes/:returnType",
+				"value": "void"
+			}
 		]
 	}
 }

@@ -86,6 +86,10 @@ extern unsigned char
     _s_program_channel_test_CM4_section_init[];
 extern unsigned char
     _s_program_channel_test_CM4_section_noInit[];
+extern unsigned char
+    _s_program_interrupt_handlers_CM7_section_init[];
+extern unsigned char
+    _s_program_interrupt_handlers_CM7_section_noInit[];
 extern unsigned char _s_os_section_consts[];
 extern unsigned char _s_os_section_vars[];
 extern unsigned char
@@ -121,6 +125,10 @@ extern unsigned char
 extern unsigned char
     _e_program_channel_test_CM4_section_noInit[];
 extern unsigned char
+    _e_program_interrupt_handlers_CM7_section_init[];
+extern unsigned char
+    _e_program_interrupt_handlers_CM7_section_noInit[];
+extern unsigned char
     _e_os_section_consts[];
 extern unsigned char
     _e_os_section_vars[];
@@ -140,6 +148,8 @@ extern unsigned char
     _flash_program_channel_test_CM7_section_init[];
 extern unsigned char
     _flash_program_channel_test_CM4_section_init[];
+extern unsigned char
+    _flash_program_interrupt_handlers_CM7_section_init[];
 extern unsigned char
     _flash_os_section_consts_start[];
 extern unsigned char
@@ -166,6 +176,11 @@ IS_INITIALIZED_TO{
     {
         _s_program_channel_test_CM7_section_noInit,
         _e_program_channel_test_CM7_section_noInit,
+        0,
+    },
+    {
+        _s_program_interrupt_handlers_CM7_section_noInit,
+        _e_program_interrupt_handlers_CM7_section_noInit,
         0,
     },
 };
@@ -218,6 +233,11 @@ IS_INITIALIZED_TO{
         _s_program_channel_test_CM7_section_init,
         _e_program_channel_test_CM7_section_init,
         _flash_program_channel_test_CM7_section_init,
+    },
+    {
+        _s_program_interrupt_handlers_CM7_section_init,
+        _e_program_interrupt_handlers_CM7_section_init,
+        _flash_program_interrupt_handlers_CM7_section_init,
     },
 };
 

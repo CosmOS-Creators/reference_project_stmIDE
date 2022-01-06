@@ -5,13 +5,13 @@
 *********************************************************************************
 **                       DOXYGEN DOCUMENTATION INFORMATION                     **
 *****************************************************************************//**
-** @file threadCfg.h
+** @file interruptCfg.h
 *********************************************************************************
-<!--                     threadCfg Unit Group Definition                      -->
+<!--                    interruptCfg Unit Group Definition                    -->
 *********************************************************************************
-** @defgroup threadCfg_unit threadCfg Unit
-** @ingroup thread_module
-** @brief threadCfg Unit
+** @defgroup interruptCfg_unit interruptCfg Unit
+** @ingroup interrupt_module
+** @brief interruptCfg Unit
 ** @details lorem
 *********************************************************************************
 <!--                           Version Information                            -->
@@ -25,18 +25,18 @@
 ** @warning Modifying code can lead to unexpected behaviour of the whole system
 ** @copyright MIT License
 *********************************************************************************
-<!--                   threadCfg Unit Global Group Definition                 -->
+<!--                interruptCfg Unit Global Group Definition                 -->
 *********************************************************************************
-** @defgroup Global_threadCfg Global
-** @ingroup threadCfg_unit
-** @brief threadCfg globals
+** @defgroup Global_interruptCfg Global
+** @ingroup interruptCfg_unit
+** @brief interruptCfg globals
 ** @details lorem
 ********************************************************************************/
 /********************************************************************************
 **                           START OF THE HEADER FILE                          **
 ********************************************************************************/
-#ifndef __THREADCFG_H__
-#define __THREADCFG_H__
+#ifndef __INTERRUPTCFG_H__
+#define __INTERRUPTCFG_H__
 /********************************************************************************
 **                         START OF C++ SUPPORT SECTION                        **
 ********************************************************************************/
@@ -59,15 +59,15 @@ extern "C" {
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Macros_threadCfg_h Macros
-  * @ingroup Global_threadCfg
+  * @defgroup Macros_interruptCfg_h Macros
+  * @ingroup Global_interruptCfg
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Macros_threadCfg_h
+/*  Macros_interruptCfg_h
 ********************************************************************************/
 /********************************************************************************
 **                          Macro Definitions | Stop                           **
@@ -78,51 +78,18 @@ extern "C" {
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @defgroup Variables_threadCfg_h Variables
-  * @ingroup Global_threadCfg
+  * @defgroup Variables_interruptCfg_h Variables
+  * @ingroup Global_interruptCfg
   * @{
 ********************************************************************************/
-extern const CosmOS_ThreadConfigurationType
-    ThreadsProgram0Core0CfgConst[THREAD_PROGRAM_0_CORE_0_NUM];
-extern const CosmOS_ThreadConfigurationType
-    ThreadsProgram1Core0CfgConst[THREAD_PROGRAM_1_CORE_0_NUM];
-extern const CosmOS_ThreadConfigurationType
-    ThreadsProgram0Core1CfgConst[THREAD_PROGRAM_0_CORE_1_NUM];
-extern const CosmOS_ThreadConfigurationType
-    ThreadsProgram1Core1CfgConst[THREAD_PROGRAM_1_CORE_1_NUM];
-extern const CosmOS_ThreadConfigurationType
-    ThreadsProgram2Core1CfgConst[THREAD_PROGRAM_2_CORE_1_NUM];
-extern const CosmOS_ThreadConfigurationType
-    ThreadsProgram2Core0CfgConst[THREAD_PROGRAM_2_CORE_0_NUM];
-extern const CosmOS_ThreadConfigurationType
-    ThreadsProgram3Core0CfgConst[THREAD_PROGRAM_3_CORE_0_NUM];
-extern const CosmOS_ThreadConfigurationType
-    ThreadsProgram3Core1CfgConst[THREAD_PROGRAM_3_CORE_1_NUM];
-extern const CosmOS_ThreadConfigurationType
-    ThreadsProgram4Core0CfgConst[THREAD_PROGRAM_4_CORE_0_NUM];
-extern CosmOS_ThreadVariableType
-    ThreadsProgram0Core0Var[THREAD_PROGRAM_0_CORE_0_NUM];
-extern CosmOS_ThreadVariableType
-    ThreadsProgram1Core0Var[THREAD_PROGRAM_1_CORE_0_NUM];
-extern CosmOS_ThreadVariableType
-    ThreadsProgram0Core1Var[THREAD_PROGRAM_0_CORE_1_NUM];
-extern CosmOS_ThreadVariableType
-    ThreadsProgram1Core1Var[THREAD_PROGRAM_1_CORE_1_NUM];
-extern CosmOS_ThreadVariableType
-    ThreadsProgram2Core1Var[THREAD_PROGRAM_2_CORE_1_NUM];
-extern CosmOS_ThreadVariableType
-    ThreadsProgram2Core0Var[THREAD_PROGRAM_2_CORE_0_NUM];
-extern CosmOS_ThreadVariableType
-    ThreadsProgram3Core0Var[THREAD_PROGRAM_3_CORE_0_NUM];
-extern CosmOS_ThreadVariableType
-    ThreadsProgram3Core1Var[THREAD_PROGRAM_3_CORE_1_NUM];
-extern CosmOS_ThreadVariableType
-    ThreadsProgram4Core0Var[THREAD_PROGRAM_4_CORE_0_NUM];
+extern const CosmOS_InterruptConfigurationType InterruptsCfgConst[INTERRUPT_NUM];
+
+extern CosmOS_InterruptVariableType InterruptsVar[INTERRUPT_NUM];
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Variables_threadCfg_h
+/*  Variables_interruptCfg_h
 ********************************************************************************/
 /********************************************************************************
 **                              Variables | Stop                               **
@@ -133,47 +100,47 @@ extern CosmOS_ThreadVariableType
 /********************************************************************************
   * DOXYGEN DEF GROUP                                                          **
   * *************************************************************************//**
-  * @defgroup Apis_threadCfg_h API's
-  * @ingroup Global_threadCfg
+  * @defgroup Apis_interruptCfg_h API's
+  * @ingroup Global_interruptCfg
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_threadCfg_h Getters
-  * @ingroup Apis_threadCfg_h
+  * @addtogroup Getters_interruptCfg_h Getters
+  * @ingroup Apis_interruptCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Getters_threadCfg_h
+/*  Getters_interruptCfg_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_threadCfg_h Setters
-  * @ingroup Apis_threadCfg_h
+  * @addtogroup Setters_interruptCfg_h Setters
+  * @ingroup Apis_interruptCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Setters_threadCfg_h
+/*  Setters_interruptCfg_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_threadCfg_h General
-  * @ingroup Apis_threadCfg_h
+  * @addtogroup General_interruptCfg_h General
+  * @ingroup Apis_interruptCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  General_threadCfg_h
+/*  General_interruptCfg_h
 ********************************************************************************/
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
@@ -184,41 +151,41 @@ extern CosmOS_ThreadVariableType
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Getters_threadCfg_h Getters
-  * @ingroup Apis_threadCfg_h
+  * @addtogroup Getters_interruptCfg_h Getters
+  * @ingroup Apis_interruptCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Getters_threadCfg_h
+/*  Getters_interruptCfg_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup Setters_threadCfg_h Setters
-  * @ingroup Apis_threadCfg_h
+  * @addtogroup Setters_interruptCfg_h Setters
+  * @ingroup Apis_interruptCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  Setters_threadCfg_h
+/*  Setters_interruptCfg_h
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN START GROUP                                                        **
   * *************************************************************************//**
-  * @addtogroup General_threadCfg_h General
-  * @ingroup Apis_threadCfg_h
+  * @addtogroup General_interruptCfg_h General
+  * @ingroup Apis_interruptCfg_h
   * @{
 ********************************************************************************/
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
   * @} */
-/*  General_threadCfg_h
+/*  General_interruptCfg_h
 ********************************************************************************/
 /********************************************************************************
 **                        Function Definitions | Stop                          **

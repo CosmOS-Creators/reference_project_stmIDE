@@ -26,6 +26,7 @@
 #include "CILinterrupt.h"
 #include "channel.h"
 #include "channel.h"
+#include "interrupt.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -82,6 +83,7 @@ IS_INITIALIZED_TO
     (CosmOS_GenericVoidType)CILinterrupt_contextSwitchRoutineTrigger,
     (CosmOS_GenericVoidType)channel_signalizeReply,
     (CosmOS_GenericVoidType)channel_signalizeSend,
+    (CosmOS_GenericVoidType)interrupt_signalizeThread,
 };
 
 const CosmOS_OsEventConfigurationType OsEventCfg __OS_CONSTS_SECTION
