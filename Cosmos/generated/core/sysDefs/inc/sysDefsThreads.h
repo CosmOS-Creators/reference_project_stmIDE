@@ -93,8 +93,8 @@
 #define THREAD_1_PROGRAM_3_CORE_0_PRIORITY   (BitWidthType)7    /* Thread channel_sameCore_server_CM7 priority */
 #define THREAD_2_PROGRAM_3_CORE_0_ID   (BitWidthType)2    /* Thread channel_sameCore_client_CM7 identifier */
 #define THREAD_2_PROGRAM_3_CORE_0_PRIORITY   (BitWidthType)6    /* Thread channel_sameCore_client_CM7 priority */
-#define THREAD_0_PROGRAM_4_CORE_0_ID   (BitWidthType)0    /* Thread SPI3_IRQHandler_Thread_CM7 identifier */
-#define THREAD_0_PROGRAM_4_CORE_0_PRIORITY   (BitWidthType)100    /* Thread SPI3_IRQHandler_Thread_CM7 priority */
+#define THREAD_0_PROGRAM_4_CORE_0_ID   (BitWidthType)0    /* Thread TIM2_xCore_IRQHandler_Thread_CM7 identifier */
+#define THREAD_0_PROGRAM_4_CORE_0_PRIORITY   (BitWidthType)100    /* Thread TIM2_xCore_IRQHandler_Thread_CM7 priority */
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**

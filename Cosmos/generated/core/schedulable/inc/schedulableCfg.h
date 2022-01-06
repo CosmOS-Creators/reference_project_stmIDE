@@ -209,9 +209,9 @@ channel_xCore_client_CM4( void );
 __APPLICATION_FUNC_SECTION_CM4 void
 wrapped_channel_xCore_client_CM4( void );
 __APPLICATION_FUNC_SECTION_CM7 void
-SPI3_IRQHandler_Thread_CM7( void );
+TIM2_xCore_IRQHandler_Thread_CM7( void );
 __APPLICATION_FUNC_SECTION_CM7 void
-wrapped_SPI3_IRQHandler_Thread_CM7( void );
+wrapped_TIM2_xCore_IRQHandler_Thread_CM7( void );
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**
@@ -397,7 +397,7 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM7 __WEAK void
-SPI3_IRQHandler_Thread_CM7( void ){};
+TIM2_xCore_IRQHandler_Thread_CM7( void ){};
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 /* @endcond*/

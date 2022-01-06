@@ -24,6 +24,12 @@
 #include "interrupt.h"
 #include "interruptCfg.h"
 #include "threadCfg.h"
+#include "core.h"
+#include "os.h"
+
+/* CIL interfaces */
+#include "CILcore.h"
+#include "CILinterrupt.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -151,9 +157,24 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 __SEC_START(__OS_FUNC_SECTION_START)
 /* @endcond*/
 __OS_FUNC_SECTION void
-SPI3_IRQHandler( void )
+TIM2_IRQ_Callback( void )
 {
-    interrupt_trigger( INTERRUPT_0_ID );
+    BitWidthType coreId;
+    CosmOS_OsStateType osState;
+
+    CosmOS_OsConfigurationType * osCfg;
+    CosmOS_CoreConfigurationType * coreCfg;
+
+    coreId = CILcore_getCoreId();
+
+    osCfg = os_getOsCfg();
+    coreCfg = os_getCore( osCfg, coreId );
+    osState = core_getCoreOsState( coreCfg );
+
+    if ( osState IS_EQUAL_TO OS_STATE_ENUM__STARTED )
+    {
+        interrupt_trigger( INTERRUPT_0_ID );
+    }
 };
 /* @cond S */
 __SEC_STOP(__OS_FUNC_SECTION_STOP)

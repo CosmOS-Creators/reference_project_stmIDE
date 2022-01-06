@@ -413,7 +413,7 @@ IS_INITIALIZED_TO{
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_4_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_4_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_SPI3_IRQHandler_Thread_CM7,    /* const CosmOS_GenericVoidType handler */
+        wrapped_TIM2_xCore_IRQHandler_Thread_CM7,    /* const CosmOS_GenericVoidType handler */
         False,    /* const CosmOS_BooleanType fp */
         SCHEDULABLE_17_UNIQUE_ID,    /* const BitWidthType id */
         THREAD_0_PROGRAM_4_CORE_0_ID,    /* const BitWidthType instanceId */
@@ -696,9 +696,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM7 void
-wrapped_SPI3_IRQHandler_Thread_CM7( void )
+wrapped_TIM2_xCore_IRQHandler_Thread_CM7( void )
 {
-    SPI3_IRQHandler_Thread_CM7();
+    TIM2_xCore_IRQHandler_Thread_CM7();
     };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)

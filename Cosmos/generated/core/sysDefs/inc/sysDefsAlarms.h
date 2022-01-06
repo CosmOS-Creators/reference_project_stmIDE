@@ -75,7 +75,7 @@
 #define ALARM_4_PROGRAM_3_CORE_1_ID   (BitWidthType)4    /* Alarm for thread channel_xCore_client_CM4 identifier */
 #define ALARM_4_PROGRAM_3_CORE_0_ID   (BitWidthType)4    /* Alarm for thread channel_sameCore_server_CM7 identifier */
 #define ALARM_5_PROGRAM_3_CORE_0_ID   (BitWidthType)5    /* Alarm for thread channel_sameCore_client_CM7 identifier */
-#define ALARM_6_PROGRAM_4_CORE_0_ID   (BitWidthType)6    /* Alarm for thread SPI3_IRQHandler_Thread_CM7 identifier */
+#define ALARM_6_PROGRAM_4_CORE_0_ID   (BitWidthType)6    /* Alarm for thread TIM2_xCore_IRQHandler_Thread_CM7 identifier */
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**

@@ -139,8 +139,8 @@ int main(void) {
   MX_DMA_Init();
   MX_USB_OTG_FS_PCD_Init();
   MX_LWIP_Init();
-  HAL_NVIC_DisableIRQ(TIM1_UP_IRQn);
   /* USER CODE BEGIN 2 */
+  HAL_NVIC_DisableIRQ(TIM1_UP_IRQn);
   SET_BIT(RCC->D3AMR, RCC_D3AMR_SRAM4AMEN);
   NVIC_SetPriority(SVCall_IRQn, 1);
   NVIC_SetPriority(PendSV_IRQn, 4);

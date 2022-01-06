@@ -555,7 +555,7 @@
 			},
 			{
 				"target": "threadsAttributes/:name",
-				"value": "SPI3_IRQHandler_Thread_CM7"
+				"value": "TIM2_xCore_IRQHandler_Thread_CM7"
 			},
 			{
 				"target": "threadsAttributes/:floatingPoint",

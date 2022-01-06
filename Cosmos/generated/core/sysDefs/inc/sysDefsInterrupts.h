@@ -63,7 +63,7 @@
 ********************************************************************************/
 #define INTERRUPT_NUM (BitWidthType)1          /* Number of interrupts */
 
-#define INTERRUPT_0_ID (BitWidthType)0          /* Interrupt SPI3_interrupt identifier */
+#define INTERRUPT_0_ID (BitWidthType)0          /* Interrupt TIM2_interrupt identifier */
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**

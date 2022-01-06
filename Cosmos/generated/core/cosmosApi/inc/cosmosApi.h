@@ -79,7 +79,7 @@ extern "C" {
 #define channel_xCore_client_CM4_id SCHEDULABLE_14_UNIQUE_ID
 #define channel_sameCore_server_CM7_id SCHEDULABLE_15_UNIQUE_ID
 #define channel_sameCore_client_CM7_id SCHEDULABLE_16_UNIQUE_ID
-#define SPI3_IRQHandler_Thread_CM7_id SCHEDULABLE_17_UNIQUE_ID
+#define TIM2_xCore_IRQHandler_Thread_CM7_id SCHEDULABLE_17_UNIQUE_ID
 #define Idle_CM7_id SCHEDULABLE_0_UNIQUE_ID
 #define sysJobs_CM7_id SCHEDULABLE_1_UNIQUE_ID
 #define Timing_measurement_task_CM7_id SCHEDULABLE_2_UNIQUE_ID
@@ -94,6 +94,7 @@ extern "C" {
 #define semaphore_test_1_id SEMAPHORE_1_ID
 #define xCore_channel_id CHANNEL_0_ID
 #define sameCore_channel_id CHANNEL_1_ID
+#define TIM2_interrupt_id INTERRUPT_0_ID
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**

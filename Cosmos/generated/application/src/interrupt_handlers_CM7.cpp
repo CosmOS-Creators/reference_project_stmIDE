@@ -22,7 +22,8 @@
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Start      **
 ** start_name =interrupt_handlers_CM7_includeFiles
 ********************************************************************************/
-
+#include <interrupt.h>
+#include <errorHandler.h>
 /********************************************************************************
 ** stop_name =interrupt_handlers_CM7_includeFiles
 ** DO NOT MODIFY THIS COMMENT ! Include Files        USER SECTION | Stop       **
@@ -43,7 +44,7 @@
 
 /* Threads in the program interrupt_handlers_CM7 */
 extern "C" void
-SPI3_IRQHandler_Thread_CM7( void );
+TIM2_xCore_IRQHandler_Thread_CM7( void );
 /********************************************************************************
 **                         Function Prototypes | Stop                          **
 ********************************************************************************/
@@ -93,15 +94,28 @@ __SEC_STOP( __INTERRUPT_HANDLERS_CM7_INIT_SECTION_STOP)
 __SEC_START( __APPLICATION_FUNC_SECTION_START_CM7 )
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM7 void
-SPI3_IRQHandler_Thread_CM7( void )
+TIM2_xCore_IRQHandler_Thread_CM7( void )
 {
 /********************************************************************************
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
-** start_name =SPI3_IRQHandler_Thread_CM7
+** start_name =TIM2_xCore_IRQHandler_Thread_CM7
 ********************************************************************************/
+    CosmOS_InterruptStateType interruptState;
 
+    for ( ;; )
+    {
+        interruptState = interrupt_handle( TIM2_interrupt_id );
+        if( errorHandler_isError( interruptState ) )
+        {
+            //error was returned, check its value
+        }
+        else
+        {
+            //process interrupt
+        }
+    }
 /********************************************************************************
-** stop_name =SPI3_IRQHandler_Thread_CM7
+** stop_name =TIM2_xCore_IRQHandler_Thread_CM7
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
 ********************************************************************************/
 };

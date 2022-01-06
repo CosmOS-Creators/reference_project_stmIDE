@@ -85,7 +85,7 @@
 #define SCHEDULABLE_THREAD_0_PROGRAM_3_CORE_1_ID            (BitWidthType)8   /* Thread channel_xCore_client_CM4 schedulable identifier */
 #define SCHEDULABLE_THREAD_1_PROGRAM_3_CORE_0_ID            (BitWidthType)9   /* Thread channel_sameCore_server_CM7 schedulable identifier */
 #define SCHEDULABLE_THREAD_2_PROGRAM_3_CORE_0_ID            (BitWidthType)10   /* Thread channel_sameCore_client_CM7 schedulable identifier */
-#define SCHEDULABLE_THREAD_0_PROGRAM_4_CORE_0_ID            (BitWidthType)11   /* Thread SPI3_IRQHandler_Thread_CM7 schedulable identifier */
+#define SCHEDULABLE_THREAD_0_PROGRAM_4_CORE_0_ID            (BitWidthType)11   /* Thread TIM2_xCore_IRQHandler_Thread_CM7 schedulable identifier */
 
 #define SCHEDULABLE_0_UNIQUE_ID            (BitWidthType)0   /* Schedulable Idle_CM7 unique identifier */
 #define SCHEDULABLE_0_PERIPHERAL_ACCESS_LOW_ADDRESS            (AddressType)0x0000   /* Schedulable Idle_CM7 peripheralAccessLowAddress */
@@ -155,10 +155,10 @@
 #define SCHEDULABLE_16_PERIPHERAL_ACCESS_LOW_ADDRESS            (AddressType)0x0000   /* Schedulable channel_sameCore_client_CM7 peripheralAccessLowAddress */
 #define SCHEDULABLE_16_PERIPHERAL_ACCESS_HIGH_ADDRESS            (AddressType)0x0000   /* Schedulable channel_sameCore_client_CM7 peripheralAccessHighAddress */
 #define SCHEDULABLE_16_PERIPHERAL_ACCESS_HIGH_SIZE            (BitWidthType)0   /* Schedulable channel_sameCore_client_CM7 peripheralAccessSize */
-#define SCHEDULABLE_17_UNIQUE_ID            (BitWidthType)17   /* Schedulable SPI3_IRQHandler_Thread_CM7 unique identifier */
-#define SCHEDULABLE_17_PERIPHERAL_ACCESS_LOW_ADDRESS            (AddressType)0x0000   /* Schedulable SPI3_IRQHandler_Thread_CM7 peripheralAccessLowAddress */
-#define SCHEDULABLE_17_PERIPHERAL_ACCESS_HIGH_ADDRESS            (AddressType)0x0000   /* Schedulable SPI3_IRQHandler_Thread_CM7 peripheralAccessHighAddress */
-#define SCHEDULABLE_17_PERIPHERAL_ACCESS_HIGH_SIZE            (BitWidthType)0   /* Schedulable SPI3_IRQHandler_Thread_CM7 peripheralAccessSize */
+#define SCHEDULABLE_17_UNIQUE_ID            (BitWidthType)17   /* Schedulable TIM2_xCore_IRQHandler_Thread_CM7 unique identifier */
+#define SCHEDULABLE_17_PERIPHERAL_ACCESS_LOW_ADDRESS            (AddressType)0x0000   /* Schedulable TIM2_xCore_IRQHandler_Thread_CM7 peripheralAccessLowAddress */
+#define SCHEDULABLE_17_PERIPHERAL_ACCESS_HIGH_ADDRESS            (AddressType)0x0000   /* Schedulable TIM2_xCore_IRQHandler_Thread_CM7 peripheralAccessHighAddress */
+#define SCHEDULABLE_17_PERIPHERAL_ACCESS_HIGH_SIZE            (BitWidthType)0   /* Schedulable TIM2_xCore_IRQHandler_Thread_CM7 peripheralAccessSize */
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**

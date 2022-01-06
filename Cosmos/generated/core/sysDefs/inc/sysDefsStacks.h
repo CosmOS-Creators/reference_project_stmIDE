@@ -162,10 +162,10 @@
 #define STACK_THREAD_2_PROGRAM_3_CORE_0_LOW_ADDRESS   (AddressType)0x20002000    /* Thread channel_sameCore_client_CM7 stack low address configuration */
 #define STACK_THREAD_2_PROGRAM_3_CORE_0_SIZE          (BitWidthType)0x0400   /* Thread channel_sameCore_client_CM7 stack size configuration */
 
-#define STACK_THREAD_0_PROGRAM_4_CORE_0_ID            (BitWidthType)11   /* Thread SPI3_IRQHandler_Thread_CM7 stack identifier */
-#define STACK_THREAD_0_PROGRAM_4_CORE_0_HIGH_ADDRESS  (AddressType)0x20002800    /* Thread SPI3_IRQHandler_Thread_CM7 stack high address configuration */
-#define STACK_THREAD_0_PROGRAM_4_CORE_0_LOW_ADDRESS   (AddressType)0x20002400    /* Thread SPI3_IRQHandler_Thread_CM7 stack low address configuration */
-#define STACK_THREAD_0_PROGRAM_4_CORE_0_SIZE          (BitWidthType)0x0400   /* Thread SPI3_IRQHandler_Thread_CM7 stack size configuration */
+#define STACK_THREAD_0_PROGRAM_4_CORE_0_ID            (BitWidthType)11   /* Thread TIM2_xCore_IRQHandler_Thread_CM7 stack identifier */
+#define STACK_THREAD_0_PROGRAM_4_CORE_0_HIGH_ADDRESS  (AddressType)0x20002800    /* Thread TIM2_xCore_IRQHandler_Thread_CM7 stack high address configuration */
+#define STACK_THREAD_0_PROGRAM_4_CORE_0_LOW_ADDRESS   (AddressType)0x20002400    /* Thread TIM2_xCore_IRQHandler_Thread_CM7 stack low address configuration */
+#define STACK_THREAD_0_PROGRAM_4_CORE_0_SIZE          (BitWidthType)0x0400   /* Thread TIM2_xCore_IRQHandler_Thread_CM7 stack size configuration */
 /********************************************************************************
   * DOXYGEN STOP GROUP                                                         **
   * *************************************************************************//**

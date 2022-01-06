@@ -9,15 +9,15 @@
 		"interrupt_0": [
             {
 				"target": "interruptsAttributes/:name",
-				"value": "SPI3_interrupt"
+				"value": "TIM2_interrupt"
 			},
 			{
 				"target": "interruptsAttributes/:interruptHandlerFunc",
-				"value": "SPI3_IRQHandler"
+				"value": "TIM2_IRQ_Callback"
 			},
             {
 				"target": "interruptsAttributes/:thread",
-				"value": "SPI3_IRQHandler_Thread_CM7"
+				"value": "TIM2_xCore_IRQHandler_Thread_CM7"
 			},
             {
 				"target": "interruptsAttributes/:interruptId"
