@@ -1,98 +1,98 @@
 {
-	"version": "1.1.0",
-	"checksum": "57d0945290b0b0655540bd948783ae99",
-	"ui": {
-		"use_page": "channels"
-	},
-	"attributes": {},
-	"elements": {
-		"channel_0": [
-			{
-				"target": "channelsAttributes/:name",
-				"value": "xCore_channel"
-			},
-			{
-				"target": "channelsAttributes/:sendPoolSize",
-				"value": 32
-			},
+    "version": "1.1.0",
+    "checksum": "9d36bdf673457ee9cb6e2d3e5d03da55",
+    "ui": {
+        "use_page": "channels"
+    },
+    "attributes": {},
+    "elements": {
+        "channel_0": [
             {
-				"target": "channelsAttributes/:replyPoolSize",
-				"value": 32
-			},
-			{
-				"target": "channelsAttributes/:replyPermissions",
-				"value": [
-					"threads/thread_7"
-				]
-			},
-			{
-				"target": "channelsAttributes/:sendPermissions",
-				"value": [
-					"threads/thread_8"
-				]
-			},
-			{
-				"target": "channelsAttributes/:compressedReplyPermission"
-			},
-			{
-				"target": "channelsAttributes/:compressedSendPermission"
-			},
-			{
-				"target": "channelsAttributes/:compressedReplyPermissionInverted"
-			},
-			{
-				"target": "channelsAttributes/:compressedSendPermissionInverted"
-			},
-			{
-				"target": "channelsAttributes/:channelId"
-			},
-			{
-				"target": "channelsAttributes/:semaphoreId"
-			}
-		],
-		"channel_1": [
-			{
-				"target": "channelsAttributes/:name",
-				"value": "sameCore_channel"
-			},
-			{
-				"target": "channelsAttributes/:sendPoolSize",
-				"value": 32
-			},
+                "target": "channelsAttributes/:name",
+                "value": "xCore_channel"
+            },
             {
-				"target": "channelsAttributes/:replyPoolSize",
-				"value": 32
-			},
-			{
-				"target": "channelsAttributes/:replyPermissions",
-				"value": [
-					"threads/thread_9"
-				]
-			},
-			{
-				"target": "channelsAttributes/:sendPermissions",
-				"value": [
-					"threads/thread_10"
-				]
-			},
-			{
-				"target": "channelsAttributes/:compressedReplyPermission"
-			},
-			{
-				"target": "channelsAttributes/:compressedSendPermission"
-			},
-			{
-				"target": "channelsAttributes/:compressedReplyPermissionInverted"
-			},
-			{
-				"target": "channelsAttributes/:compressedSendPermissionInverted"
-			},
-			{
-				"target": "channelsAttributes/:channelId"
-			},
-			{
-				"target": "channelsAttributes/:semaphoreId"
-			}
-		]
-	}
+                "target": "channelsAttributes/:sendPoolSize",
+                "value": 32
+            },
+            {
+                "target": "channelsAttributes/:replyPoolSize",
+                "value": 32
+            },
+            {
+                "target": "channelsAttributes/:replyPermissions",
+                "value": [
+                    "threads/thread_7"
+                ]
+            },
+            {
+                "target": "channelsAttributes/:sendPermissions",
+                "value": [
+                    "threads/thread_8"
+                ]
+            },
+            {
+                "target": "channelsAttributes/:compressedReplyPermission"
+            },
+            {
+                "target": "channelsAttributes/:compressedSendPermission"
+            },
+            {
+                "target": "channelsAttributes/:compressedReplyPermissionInverted"
+            },
+            {
+                "target": "channelsAttributes/:compressedSendPermissionInverted"
+            },
+            {
+                "target": "channelsAttributes/:channelId"
+            },
+            {
+                "target": "channelsAttributes/:semaphoreId"
+            }
+        ],
+        "channel_1": [
+            {
+                "target": "channelsAttributes/:name",
+                "value": "sameCore_channel"
+            },
+            {
+                "target": "channelsAttributes/:sendPoolSize",
+                "value": 32
+            },
+            {
+                "target": "channelsAttributes/:replyPoolSize",
+                "value": 32
+            },
+            {
+                "target": "channelsAttributes/:replyPermissions",
+                "value": [
+                    "threads/thread_9"
+                ]
+            },
+            {
+                "target": "channelsAttributes/:sendPermissions",
+                "value": [
+                    "threads/thread_10"
+                ]
+            },
+            {
+                "target": "channelsAttributes/:compressedReplyPermission"
+            },
+            {
+                "target": "channelsAttributes/:compressedSendPermission"
+            },
+            {
+                "target": "channelsAttributes/:compressedReplyPermissionInverted"
+            },
+            {
+                "target": "channelsAttributes/:compressedSendPermissionInverted"
+            },
+            {
+                "target": "channelsAttributes/:channelId"
+            },
+            {
+                "target": "channelsAttributes/:semaphoreId"
+            }
+        ]
+    }
 }

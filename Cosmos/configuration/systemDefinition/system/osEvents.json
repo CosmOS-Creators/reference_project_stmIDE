@@ -1,66 +1,66 @@
 {
-	"version": "1.1.0",
-	"checksum": "8d7c6745b1bedea684ae3a59f3febb38",
-	"ui": {
-		"use_page": "os_events"
-	},
-	"attributes": {},
-	"elements": {
-		"event_0": [
-			{
-				"target": "osEventsAttributes/:eventHandlerFunc",
-				"value": "CILinterrupt_contextSwitchRoutineTrigger"
-			},
-			{
-				"target": "osEventsAttributes/:apiHeader",
-				"value": "CILinterrupt.h"
-			},
+    "version": "1.1.0",
+    "checksum": "f3a1caa1acc59f4877e3584c5fa3fca7",
+    "ui": {
+        "use_page": "os_events"
+    },
+    "attributes": {},
+    "elements": {
+        "event_0": [
             {
-				"target": "osEventsAttributes/:eventName",
-				"value": "reschedule"
-			}
-		],
+                "target": "osEventsAttributes/:eventHandlerFunc",
+                "value": "CILinterrupt_contextSwitchRoutineTrigger"
+            },
+            {
+                "target": "osEventsAttributes/:apiHeader",
+                "value": "CILinterrupt.h"
+            },
+            {
+                "target": "osEventsAttributes/:eventName",
+                "value": "reschedule"
+            }
+        ],
         "event_1": [
-			{
-				"target": "osEventsAttributes/:eventHandlerFunc",
-				"value": "channel_signalizeReply"
-			},
-			{
-				"target": "osEventsAttributes/:apiHeader",
-				"value": "channel.h"
-			},
             {
-				"target": "osEventsAttributes/:eventName",
-				"value": "channel_signalizeReply"
-			}
-		],
+                "target": "osEventsAttributes/:eventHandlerFunc",
+                "value": "channel_signalizeReply"
+            },
+            {
+                "target": "osEventsAttributes/:apiHeader",
+                "value": "channel.h"
+            },
+            {
+                "target": "osEventsAttributes/:eventName",
+                "value": "channel_signalizeReply"
+            }
+        ],
         "event_2": [
-			{
-				"target": "osEventsAttributes/:eventHandlerFunc",
-				"value": "channel_signalizeSend"
-			},
-			{
-				"target": "osEventsAttributes/:apiHeader",
-				"value": "channel.h"
-			},
             {
-				"target": "osEventsAttributes/:eventName",
-				"value": "channel_signalizeSend"
-			}
-		],
+                "target": "osEventsAttributes/:eventHandlerFunc",
+                "value": "channel_signalizeSend"
+            },
+            {
+                "target": "osEventsAttributes/:apiHeader",
+                "value": "channel.h"
+            },
+            {
+                "target": "osEventsAttributes/:eventName",
+                "value": "channel_signalizeSend"
+            }
+        ],
         "event_3": [
-			{
-				"target": "osEventsAttributes/:eventHandlerFunc",
-				"value": "interrupt_signalizeThread"
-			},
-			{
-				"target": "osEventsAttributes/:apiHeader",
-				"value": "interrupt.h"
-			},
             {
-				"target": "osEventsAttributes/:eventName",
-				"value": "interrupt_signalizeThread"
-			}
-		]
+                "target": "osEventsAttributes/:eventHandlerFunc",
+                "value": "interrupt_signalizeThread"
+            },
+            {
+                "target": "osEventsAttributes/:apiHeader",
+                "value": "interrupt.h"
+            },
+            {
+                "target": "osEventsAttributes/:eventName",
+                "value": "interrupt_signalizeThread"
+            }
+        ]
     }
 }

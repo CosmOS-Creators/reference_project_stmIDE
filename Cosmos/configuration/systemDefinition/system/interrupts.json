@@ -1,27 +1,27 @@
 {
-	"version": "1.1.0",
-	"checksum": "8d7c6745b1bedea684ae3a59f3febb38",
-	"ui": {
-		"use_page": "interrupts"
-	},
-	"attributes": {},
-	"elements": {
-		"interrupt_0": [
+    "version": "1.1.0",
+    "checksum": "4106e333c7d6c4d30587deb48910e51e",
+    "ui": {
+        "use_page": "interrupts"
+    },
+    "attributes": {},
+    "elements": {
+        "interrupt_0": [
             {
-				"target": "interruptsAttributes/:name",
-				"value": "TIM2_interrupt"
-			},
-			{
-				"target": "interruptsAttributes/:interruptHandlerFunc",
-				"value": "TIM2_IRQ_Callback"
-			},
+                "target": "interruptsAttributes/:name",
+                "value": "TIM2_interrupt"
+            },
             {
-				"target": "interruptsAttributes/:thread",
-				"value": "TIM2_xCore_IRQHandler_Thread_CM7"
-			},
+                "target": "interruptsAttributes/:interruptHandlerFunc",
+                "value": "TIM2_IRQ_Callback"
+            },
             {
-				"target": "interruptsAttributes/:interruptId"
-			}
-		]
+                "target": "interruptsAttributes/:thread",
+                "value": "TIM2_xCore_IRQHandler_Thread_CM7"
+            },
+            {
+                "target": "interruptsAttributes/:interruptId"
+            }
+        ]
     }
 }

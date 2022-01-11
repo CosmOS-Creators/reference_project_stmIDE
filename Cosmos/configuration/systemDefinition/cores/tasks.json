@@ -1,334 +1,334 @@
 {
-	"version": "1.1.0",
-	"checksum": "0c243fd1d02ff8f05824025ffd01414b",
-	"ui": {
-		"use_page": "tasks"
-	},
-	"attributes": {},
-	"elements": {
-		"task_0": [
-			{
-				"target": "tasksAttributes/:uniqueId"
-			},
-			{
-				"target": "tasksAttributes/:program",
-				"value": "programs/program_0"
-			},
-			{
-				"target": "tasksAttributes/:name",
-				"value": "Idle_CM7"
-			},
-			{
-				"target": "tasksAttributes/:wcet",
-				"value": 0
-			},
-			{
-				"target": "tasksAttributes/:period",
-				"value": 0
-			},
-			{
-				"target": "tasksAttributes/:floatingPoint",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:isIdle",
-				"value": true
-			},
-			{
-				"target": "tasksAttributes/:isSysJob",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:stackSize",
-				"value": 1024
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessLowAddress",
-				"value": "0x0"
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessSize",
-				"value" : 0
-			},
-			{
-				"target": "tasksAttributes/:lowAddress"
-			},
-			{
-				"target": "tasksAttributes/:highAddress"
-			},
-			{
-				"target": "tasksAttributes/:taskId"
-			}
-		],
-		"task_1": [
-			{
-				"target": "tasksAttributes/:uniqueId"
-			},
-			{
-				"target": "tasksAttributes/:program",
-				"value": "programs/program_0"
-			},
-			{
-				"target": "tasksAttributes/:name",
-				"value": "sysJobs_CM7"
-			},
-			{
-				"target": "tasksAttributes/:wcet",
-				"value": 5
-			},
-			{
-				"target": "tasksAttributes/:period",
-				"value": 100
-			},
-			{
-				"target": "tasksAttributes/:floatingPoint",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:isIdle",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:isSysJob",
-				"value": true
-			},
-			{
-				"target": "tasksAttributes/:stackSize",
-				"value": 256
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessLowAddress",
-				"value": "0x0"
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessSize",
-				"value" : 0
-			},
-			{
-				"target": "tasksAttributes/:lowAddress"
-			},
-			{
-				"target": "tasksAttributes/:highAddress"
-			},
-			{
-				"target": "tasksAttributes/:taskId"
-			}
-		],
-		"task_2": [
-			{
-				"target": "tasksAttributes/:uniqueId"
-			},
-			{
-				"target": "tasksAttributes/:program",
-				"value": "programs/program_1"
-			},
-			{
-				"target": "tasksAttributes/:name",
-				"value": "Timing_measurement_task_CM7"
-			},
-			{
-				"target": "tasksAttributes/:wcet",
-				"value": 5
-			},
-			{
-				"target": "tasksAttributes/:period",
-				"value": 50
-			},
-			{
-				"target": "tasksAttributes/:floatingPoint",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:isIdle",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:isSysJob",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:stackSize",
-				"value": 1024
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessLowAddress",
-				"value": "0x58021400"
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessSize",
-				"value" : 1024
-			},
-			{
-				"target": "tasksAttributes/:lowAddress"
-			},
-			{
-				"target": "tasksAttributes/:highAddress"
-			},
-			{
-				"target": "tasksAttributes/:taskId"
-			}
-		],
-		"task_3": [
-			{
-				"target": "tasksAttributes/:uniqueId"
-			},
-			{
-				"target": "tasksAttributes/:program",
-				"value": "programs/program_2"
-			},
-			{
-				"target": "tasksAttributes/:name",
-				"value": "Idle_CM4"
-			},
-			{
-				"target": "tasksAttributes/:wcet",
-				"value": 0
-			},
-			{
-				"target": "tasksAttributes/:period",
-				"value": 0
-			},
-			{
-				"target": "tasksAttributes/:floatingPoint",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:isIdle",
-				"value": true
-			},
-			{
-				"target": "tasksAttributes/:isSysJob",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:stackSize",
-				"value": 1024
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessLowAddress",
-				"value": "0x0"
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessSize",
-				"value" : 0
-			},
-			{
-				"target": "tasksAttributes/:lowAddress"
-			},
-			{
-				"target": "tasksAttributes/:highAddress"
-			},
-			{
-				"target": "tasksAttributes/:taskId"
-			}
-		],
-		"task_4": [
-			{
-				"target": "tasksAttributes/:uniqueId"
-			},
-			{
-				"target": "tasksAttributes/:program",
-				"value": "programs/program_2"
-			},
-			{
-				"target": "tasksAttributes/:name",
-				"value": "sysJobs_CM4"
-			},
-			{
-				"target": "tasksAttributes/:wcet",
-				"value": 5
-			},
-			{
-				"target": "tasksAttributes/:period",
-				"value": 100
-			},
-			{
-				"target": "tasksAttributes/:floatingPoint",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:isIdle",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:isSysJob",
-				"value": true
-			},
-			{
-				"target": "tasksAttributes/:stackSize",
-				"value": 256
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessLowAddress",
-				"value": "0x0"
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessSize",
-				"value" : 0
-			},
-			{
-				"target": "tasksAttributes/:lowAddress"
-			},
-			{
-				"target": "tasksAttributes/:highAddress"
-			},
-			{
-				"target": "tasksAttributes/:taskId"
-			}
-		],
-		"task_5": [
-			{
-				"target": "tasksAttributes/:uniqueId"
-			},
-			{
-				"target": "tasksAttributes/:program",
-				"value": "programs/program_3"
-			},
-			{
-				"target": "tasksAttributes/:name",
-				"value": "Timing_measurement_task_CM4"
-			},
-			{
-				"target": "tasksAttributes/:wcet",
-				"value": 5
-			},
-			{
-				"target": "tasksAttributes/:period",
-				"value": 50
-			},
-			{
-				"target": "tasksAttributes/:floatingPoint",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:isIdle",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:isSysJob",
-				"value": false
-			},
-			{
-				"target": "tasksAttributes/:stackSize",
-				"value": 1024
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessLowAddress",
-				"value": "0x0"
-			},
-			{
-				"target": "tasksAttributes/:peripheralAccessSize",
-				"value" : 0
-			},
-			{
-				"target": "tasksAttributes/:lowAddress"
-			},
-			{
-				"target": "tasksAttributes/:highAddress"
-			},
-			{
-				"target": "tasksAttributes/:taskId"
-			}
-		]
-	}
+    "version": "1.1.0",
+    "checksum": "62da128ec6b188360a7e893816a01477",
+    "ui": {
+        "use_page": "tasks"
+    },
+    "attributes": {},
+    "elements": {
+        "task_0": [
+            {
+                "target": "tasksAttributes/:uniqueId"
+            },
+            {
+                "target": "tasksAttributes/:program",
+                "value": "programs/program_0"
+            },
+            {
+                "target": "tasksAttributes/:name",
+                "value": "Idle_CM7"
+            },
+            {
+                "target": "tasksAttributes/:wcet",
+                "value": 0
+            },
+            {
+                "target": "tasksAttributes/:period",
+                "value": 0
+            },
+            {
+                "target": "tasksAttributes/:floatingPoint",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:isIdle",
+                "value": true
+            },
+            {
+                "target": "tasksAttributes/:isSysJob",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:stackSize",
+                "value": 1024
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessLowAddress",
+                "value": "0x0"
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessSize",
+                "value": 0
+            },
+            {
+                "target": "tasksAttributes/:lowAddress"
+            },
+            {
+                "target": "tasksAttributes/:highAddress"
+            },
+            {
+                "target": "tasksAttributes/:taskId"
+            }
+        ],
+        "task_1": [
+            {
+                "target": "tasksAttributes/:uniqueId"
+            },
+            {
+                "target": "tasksAttributes/:program",
+                "value": "programs/program_0"
+            },
+            {
+                "target": "tasksAttributes/:name",
+                "value": "sysJobs_CM7"
+            },
+            {
+                "target": "tasksAttributes/:wcet",
+                "value": 5
+            },
+            {
+                "target": "tasksAttributes/:period",
+                "value": 100
+            },
+            {
+                "target": "tasksAttributes/:floatingPoint",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:isIdle",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:isSysJob",
+                "value": true
+            },
+            {
+                "target": "tasksAttributes/:stackSize",
+                "value": 256
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessLowAddress",
+                "value": "0x0"
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessSize",
+                "value": 0
+            },
+            {
+                "target": "tasksAttributes/:lowAddress"
+            },
+            {
+                "target": "tasksAttributes/:highAddress"
+            },
+            {
+                "target": "tasksAttributes/:taskId"
+            }
+        ],
+        "task_2": [
+            {
+                "target": "tasksAttributes/:uniqueId"
+            },
+            {
+                "target": "tasksAttributes/:program",
+                "value": "programs/program_1"
+            },
+            {
+                "target": "tasksAttributes/:name",
+                "value": "Timing_measurement_task_CM7"
+            },
+            {
+                "target": "tasksAttributes/:wcet",
+                "value": 5
+            },
+            {
+                "target": "tasksAttributes/:period",
+                "value": 50
+            },
+            {
+                "target": "tasksAttributes/:floatingPoint",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:isIdle",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:isSysJob",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:stackSize",
+                "value": 1024
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessLowAddress",
+                "value": "0x58021400"
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessSize",
+                "value": 1024
+            },
+            {
+                "target": "tasksAttributes/:lowAddress"
+            },
+            {
+                "target": "tasksAttributes/:highAddress"
+            },
+            {
+                "target": "tasksAttributes/:taskId"
+            }
+        ],
+        "task_3": [
+            {
+                "target": "tasksAttributes/:uniqueId"
+            },
+            {
+                "target": "tasksAttributes/:program",
+                "value": "programs/program_2"
+            },
+            {
+                "target": "tasksAttributes/:name",
+                "value": "Idle_CM4"
+            },
+            {
+                "target": "tasksAttributes/:wcet",
+                "value": 0
+            },
+            {
+                "target": "tasksAttributes/:period",
+                "value": 0
+            },
+            {
+                "target": "tasksAttributes/:floatingPoint",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:isIdle",
+                "value": true
+            },
+            {
+                "target": "tasksAttributes/:isSysJob",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:stackSize",
+                "value": 1024
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessLowAddress",
+                "value": "0x0"
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessSize",
+                "value": 0
+            },
+            {
+                "target": "tasksAttributes/:lowAddress"
+            },
+            {
+                "target": "tasksAttributes/:highAddress"
+            },
+            {
+                "target": "tasksAttributes/:taskId"
+            }
+        ],
+        "task_4": [
+            {
+                "target": "tasksAttributes/:uniqueId"
+            },
+            {
+                "target": "tasksAttributes/:program",
+                "value": "programs/program_2"
+            },
+            {
+                "target": "tasksAttributes/:name",
+                "value": "sysJobs_CM4"
+            },
+            {
+                "target": "tasksAttributes/:wcet",
+                "value": 5
+            },
+            {
+                "target": "tasksAttributes/:period",
+                "value": 100
+            },
+            {
+                "target": "tasksAttributes/:floatingPoint",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:isIdle",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:isSysJob",
+                "value": true
+            },
+            {
+                "target": "tasksAttributes/:stackSize",
+                "value": 256
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessLowAddress",
+                "value": "0x0"
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessSize",
+                "value": 0
+            },
+            {
+                "target": "tasksAttributes/:lowAddress"
+            },
+            {
+                "target": "tasksAttributes/:highAddress"
+            },
+            {
+                "target": "tasksAttributes/:taskId"
+            }
+        ],
+        "task_5": [
+            {
+                "target": "tasksAttributes/:uniqueId"
+            },
+            {
+                "target": "tasksAttributes/:program",
+                "value": "programs/program_3"
+            },
+            {
+                "target": "tasksAttributes/:name",
+                "value": "Timing_measurement_task_CM4"
+            },
+            {
+                "target": "tasksAttributes/:wcet",
+                "value": 5
+            },
+            {
+                "target": "tasksAttributes/:period",
+                "value": 50
+            },
+            {
+                "target": "tasksAttributes/:floatingPoint",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:isIdle",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:isSysJob",
+                "value": false
+            },
+            {
+                "target": "tasksAttributes/:stackSize",
+                "value": 1024
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessLowAddress",
+                "value": "0x0"
+            },
+            {
+                "target": "tasksAttributes/:peripheralAccessSize",
+                "value": 0
+            },
+            {
+                "target": "tasksAttributes/:lowAddress"
+            },
+            {
+                "target": "tasksAttributes/:highAddress"
+            },
+            {
+                "target": "tasksAttributes/:taskId"
+            }
+        ]
+    }
 }

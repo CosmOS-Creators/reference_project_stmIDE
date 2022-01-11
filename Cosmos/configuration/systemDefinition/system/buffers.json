@@ -1,177 +1,176 @@
 {
-	"version": "1.1.0",
-	"checksum": "57d0945290b0b0655540bd948783ae99",
-	"ui": {
-		"use_page": "buffers"
-	},
-	"attributes": {},
-	"elements": {
-		"buffer_0": [
-			{
-				"target": "buffersAttributes/:name",
-				"value": "x_core_buffer_0"
-			},
-			{
-				"target": "buffersAttributes/:size",
-				"value": 32
-			},
-			{
-				"target": "buffersAttributes/:isDoubleBuffer",
-				"value": true
-			},
-			{
-				"target": "buffersAttributes/:readPermissions",
-				"value": [
-					"tasks/task_3",
-					"threads/thread_1"
-				]
-			},
-			{
-				"target": "buffersAttributes/:writePermissions",
-				"value": [
-					"tasks/task_0",
-					"threads/thread_0"
-				]
-			},
-			{
-				"target": "buffersAttributes/:compressedReadPermission"
-			},
-			{
-				"target": "buffersAttributes/:compressedWritePermission"
-			},
-			{
-				"target": "buffersAttributes/:compressedReadPermissionInverted"
-			},
-			{
-				"target": "buffersAttributes/:compressedWritePermissionInverted"
-			},
-			{
-				"target": "buffersAttributes/:bufferId"
-			},
-			{
-				"target": "buffersAttributes/:doubleBufferId"
-			},
-			{
-				"target": "buffersAttributes/:spinlockId"
-			},
-			{
-				"target": "buffersAttributes/:isInterCore"
-			}
-		],
-		"buffer_1": [
-			{
-				"target": "buffersAttributes/:name",
-				"value": "x_core_buffer_1"
-			},
-			{
-				"target": "buffersAttributes/:size",
-				"value": 32
-			},
-			{
-				"target": "buffersAttributes/:isDoubleBuffer",
-				"value": false
-			},
-			{
-				"target": "buffersAttributes/:readPermissions",
-				"value": [
-					"tasks/task_3",
-					"tasks/task_5",
-					"threads/thread_1"
-				]
-			},
-			{
-				"target": "buffersAttributes/:writePermissions",
-				"value": [
-					"tasks/task_0",
-					"tasks/task_5",
-					"threads/thread_0"
-				]
-			},
-			{
-				"target": "buffersAttributes/:compressedReadPermission"
-			},
-			{
-				"target": "buffersAttributes/:compressedWritePermission"
-			},
-			{
-				"target": "buffersAttributes/:compressedReadPermissionInverted"
-			},
-			{
-				"target": "buffersAttributes/:compressedWritePermissionInverted"
-			},
-			{
-				"target": "buffersAttributes/:bufferId"
-			},
-			{
-				"target": "buffersAttributes/:doubleBufferId"
-			},
-			{
-				"target": "buffersAttributes/:spinlockId"
-			},
-			{
-				"target": "buffersAttributes/:isInterCore"
-			}
-		],
-		"buffer_2": [
-			{
-				"target": "buffersAttributes/:name",
-				"value": "logger_buffer"
-			},
-			{
-				"target": "buffersAttributes/:size",
-				"value": 2048
-			},
-			{
-				"target": "buffersAttributes/:isDoubleBuffer",
-				"value": false
-			},
-			{
-				"target": "buffersAttributes/:readPermissions",
-				"value": [
-				]
-			},
-			{
-				"target": "buffersAttributes/:writePermissions",
-				"value": [
-					"tasks/task_0",
-					"tasks/task_1",
-					"tasks/task_2",
-					"tasks/task_3",
-					"tasks/task_4",
-					"tasks/task_5",
-					"threads/thread_1",
-					"threads/thread_2",
-					"threads/thread_3",
-					"threads/thread_4",
-					"threads/thread_5",
-					"threads/thread_6",
-					"threads/thread_0"
-				]
-			},
-			{
-				"target": "buffersAttributes/:compressedReadPermission"
-			},
-			{
-				"target": "buffersAttributes/:compressedWritePermission"
-			},
-			{
-				"target": "buffersAttributes/:compressedReadPermissionInverted"
-			},
-			{
-				"target": "buffersAttributes/:compressedWritePermissionInverted"
-			},
-			{
-				"target": "buffersAttributes/:bufferId"
-			},
-			{
-				"target": "buffersAttributes/:doubleBufferId"
-			},
-			{
-				"target": "buffersAttributes/:spinlockId"
-			},
-			{
-				"target": "buffersAttributes/:isInterCore"
-			}
-		]
-	}
+    "version": "1.1.0",
+    "checksum": "f5344d69424ffa18c45cecad51013728",
+    "ui": {
+        "use_page": "buffers"
+    },
+    "attributes": {},
+    "elements": {
+        "buffer_0": [
+            {
+                "target": "buffersAttributes/:name",
+                "value": "x_core_buffer_0"
+            },
+            {
+                "target": "buffersAttributes/:size",
+                "value": 32
+            },
+            {
+                "target": "buffersAttributes/:isDoubleBuffer",
+                "value": true
+            },
+            {
+                "target": "buffersAttributes/:readPermissions",
+                "value": [
+                    "tasks/task_3",
+                    "threads/thread_1"
+                ]
+            },
+            {
+                "target": "buffersAttributes/:writePermissions",
+                "value": [
+                    "tasks/task_0",
+                    "threads/thread_0"
+                ]
+            },
+            {
+                "target": "buffersAttributes/:compressedReadPermission"
+            },
+            {
+                "target": "buffersAttributes/:compressedWritePermission"
+            },
+            {
+                "target": "buffersAttributes/:compressedReadPermissionInverted"
+            },
+            {
+                "target": "buffersAttributes/:compressedWritePermissionInverted"
+            },
+            {
+                "target": "buffersAttributes/:bufferId"
+            },
+            {
+                "target": "buffersAttributes/:doubleBufferId"
+            },
+            {
+                "target": "buffersAttributes/:spinlockId"
+            },
+            {
+                "target": "buffersAttributes/:isInterCore"
+            }
+        ],
+        "buffer_1": [
+            {
+                "target": "buffersAttributes/:name",
+                "value": "x_core_buffer_1"
+            },
+            {
+                "target": "buffersAttributes/:size",
+                "value": 32
+            },
+            {
+                "target": "buffersAttributes/:isDoubleBuffer",
+                "value": false
+            },
+            {
+                "target": "buffersAttributes/:readPermissions",
+                "value": [
+                    "tasks/task_3",
+                    "tasks/task_5",
+                    "threads/thread_1"
+                ]
+            },
+            {
+                "target": "buffersAttributes/:writePermissions",
+                "value": [
+                    "tasks/task_0",
+                    "tasks/task_5",
+                    "threads/thread_0"
+                ]
+            },
+            {
+                "target": "buffersAttributes/:compressedReadPermission"
+            },
+            {
+                "target": "buffersAttributes/:compressedWritePermission"
+            },
+            {
+                "target": "buffersAttributes/:compressedReadPermissionInverted"
+            },
+            {
+                "target": "buffersAttributes/:compressedWritePermissionInverted"
+            },
+            {
+                "target": "buffersAttributes/:bufferId"
+            },
+            {
+                "target": "buffersAttributes/:doubleBufferId"
+            },
+            {
+                "target": "buffersAttributes/:spinlockId"
+            },
+            {
+                "target": "buffersAttributes/:isInterCore"
+            }
+        ],
+        "buffer_2": [
+            {
+                "target": "buffersAttributes/:name",
+                "value": "logger_buffer"
+            },
+            {
+                "target": "buffersAttributes/:size",
+                "value": 2048
+            },
+            {
+                "target": "buffersAttributes/:isDoubleBuffer",
+                "value": false
+            },
+            {
+                "target": "buffersAttributes/:readPermissions",
+                "value": []
+            },
+            {
+                "target": "buffersAttributes/:writePermissions",
+                "value": [
+                    "tasks/task_0",
+                    "tasks/task_1",
+                    "tasks/task_2",
+                    "tasks/task_3",
+                    "tasks/task_4",
+                    "tasks/task_5",
+                    "threads/thread_1",
+                    "threads/thread_2",
+                    "threads/thread_3",
+                    "threads/thread_4",
+                    "threads/thread_5",
+                    "threads/thread_6",
+                    "threads/thread_0"
+                ]
+            },
+            {
+                "target": "buffersAttributes/:compressedReadPermission"
+            },
+            {
+                "target": "buffersAttributes/:compressedWritePermission"
+            },
+            {
+                "target": "buffersAttributes/:compressedReadPermissionInverted"
+            },
+            {
+                "target": "buffersAttributes/:compressedWritePermissionInverted"
+            },
+            {
+                "target": "buffersAttributes/:bufferId"
+            },
+            {
+                "target": "buffersAttributes/:doubleBufferId"
+            },
+            {
+                "target": "buffersAttributes/:spinlockId"
+            },
+            {
+                "target": "buffersAttributes/:isInterCore"
+            }
+        ]
+    }
 }
