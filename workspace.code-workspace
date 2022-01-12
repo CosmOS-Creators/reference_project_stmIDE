@@ -15,7 +15,7 @@
             "./Cosmos/customBox/python"
         ],
         "terminal.integrated.env.windows": {
-            "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/Cosmos/customBox/generator;${workspaceFolder}/Cosmos/customBox;${workspaceFolder}/Cosmos/customBox/python"
+            "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/Cosmos/customBox/python"
         },
         "terminal.integrated.env.linux": {
             "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/Cosmos/customBox/python"

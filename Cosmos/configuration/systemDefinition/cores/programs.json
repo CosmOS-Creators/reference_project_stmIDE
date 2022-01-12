@@ -1,344 +1,344 @@
 {
-	"version": "1.1.0",
-	"checksum": "1a601f829c755584842aac38f59bb91c",
-	"ui": {
-		"use_page": "programs"
-	},
-	"use_restriction": "program_restrictions",
-	"attributes": {},
-	"elements": {
-		"program_0": [
-			{
-				"target": "programsAttributes/:core",
-				"value": "cores/core_0"
-			},
-			{
-				"target": "programsAttributes/:name",
-				"value": "default_CM7"
-			},
-			{
-				"target": "programsAttributes/:size",
-				"value": 1024
-			},
-			{
-				"target": "programsAttributes/:heapSize",
-				"value": 256
-			},
-			{
-				"target": "programsAttributes/:memory",
-				"value": "DTCM"
-			},
-			{
-				"target": "programsAttributes/:lowAddress"
-			},
-			{
-				"target": "programsAttributes/:highAddress"
-			},
-			{
-				"target": "programsAttributes/:programId"
-			},
-			{
-				"target": "programsAttributes/:programThreads"
-			},
-			{
-				"target": "programsAttributes/:programTasks"
-			}
-		],
-		"program_1": [
-			{
-				"target": "programsAttributes/:core",
-				"value": "cores/core_0"
-			},
-			{
-				"target": "programsAttributes/:name",
-				"value": "timing_measurement_CM7"
-			},
-			{
-				"target": "programsAttributes/:size",
-				"value": 1024
-			},
-			{
-				"target": "programsAttributes/:heapSize",
-				"value": 256
-			},
-			{
-				"target": "programsAttributes/:memory",
-				"value": "DTCM"
-			},
-			{
-				"target": "programsAttributes/:lowAddress"
-			},
-			{
-				"target": "programsAttributes/:highAddress"
-			},
-			{
-				"target": "programsAttributes/:programId"
-			},
-			{
-				"target": "programsAttributes/:programThreads"
-			},
-			{
-				"target": "programsAttributes/:programTasks"
-			}
-		],
-		"program_2": [
-			{
-				"target": "programsAttributes/:core",
-				"value": "cores/core_1"
-			},
-			{
-				"target": "programsAttributes/:name",
-				"value": "default_CM4"
-			},
-			{
-				"target": "programsAttributes/:size",
-				"value": 1024
-			},
-			{
-				"target": "programsAttributes/:heapSize",
-				"value": 256
-			},
-			{
-				"target": "programsAttributes/:memory",
-				"value": "SRAM1"
-			},
-			{
-				"target": "programsAttributes/:lowAddress"
-			},
-			{
-				"target": "programsAttributes/:highAddress"
-			},
-			{
-				"target": "programsAttributes/:programId"
-			},
-			{
-				"target": "programsAttributes/:programThreads"
-			},
-			{
-				"target": "programsAttributes/:programTasks"
-			}
-		],
-		"program_3": [
-			{
-				"target": "programsAttributes/:core",
-				"value": "cores/core_1"
-			},
-			{
-				"target": "programsAttributes/:name",
-				"value": "timing_measurement_CM4"
-			},
-			{
-				"target": "programsAttributes/:size",
-				"value": 1024
-			},
-			{
-				"target": "programsAttributes/:heapSize",
-				"value": 256
-			},
-			{
-				"target": "programsAttributes/:memory",
-				"value": "SRAM1"
-			},
-			{
-				"target": "programsAttributes/:lowAddress"
-			},
-			{
-				"target": "programsAttributes/:highAddress"
-			},
-			{
-				"target": "programsAttributes/:programId"
-			},
-			{
-				"target": "programsAttributes/:programThreads"
-			},
-			{
-				"target": "programsAttributes/:programTasks"
-			}
-		],
-		"program_4": [
-			{
-				"target": "programsAttributes/:core",
-				"value": "cores/core_1"
-			},
-			{
-				"target": "programsAttributes/:name",
-				"value": "logger"
-			},
-			{
-				"target": "programsAttributes/:size",
-				"value": 1024
-			},
-			{
-				"target": "programsAttributes/:heapSize",
-				"value": 256
-			},
-			{
-				"target": "programsAttributes/:memory",
-				"value": "SRAM1"
-			},
-			{
-				"target": "programsAttributes/:lowAddress"
-			},
-			{
-				"target": "programsAttributes/:highAddress"
-			},
-			{
-				"target": "programsAttributes/:programId"
-			},
-			{
-				"target": "programsAttributes/:programThreads"
-			},
-			{
-				"target": "programsAttributes/:programTasks"
-			}
-		],
-		"program_5": [
-			{
-				"target": "programsAttributes/:core",
-				"value": "cores/core_0"
-			},
-			{
-				"target": "programsAttributes/:name",
-				"value": "ethernet_com"
-			},
-			{
-				"target": "programsAttributes/:size",
-				"value": 1024
-			},
-			{
-				"target": "programsAttributes/:heapSize",
-				"value": 512
-			},
-			{
-				"target": "programsAttributes/:memory",
-				"value": "DTCM"
-			},
-			{
-				"target": "programsAttributes/:lowAddress"
-			},
-			{
-				"target": "programsAttributes/:highAddress"
-			},
-			{
-				"target": "programsAttributes/:programId"
-			},
-			{
-				"target": "programsAttributes/:programThreads"
-			},
-			{
-				"target": "programsAttributes/:programTasks"
-			}
-		],
-		"program_6": [
-			{
-				"target": "programsAttributes/:core",
-				"value": "cores/core_0"
-			},
-			{
-				"target": "programsAttributes/:name",
-				"value": "channel_test_CM7"
-			},
-			{
-				"target": "programsAttributes/:size",
-				"value": 1024
-			},
-			{
-				"target": "programsAttributes/:heapSize",
-				"value": 512
-			},
-			{
-				"target": "programsAttributes/:memory",
-				"value": "DTCM"
-			},
-			{
-				"target": "programsAttributes/:lowAddress"
-			},
-			{
-				"target": "programsAttributes/:highAddress"
-			},
-			{
-				"target": "programsAttributes/:programId"
-			},
-			{
-				"target": "programsAttributes/:programThreads"
-			},
-			{
-				"target": "programsAttributes/:programTasks"
-			}
-		],
-		"program_7": [
-			{
-				"target": "programsAttributes/:core",
-				"value": "cores/core_1"
-			},
-			{
-				"target": "programsAttributes/:name",
-				"value": "channel_test_CM4"
-			},
-			{
-				"target": "programsAttributes/:size",
-				"value": 1024
-			},
-			{
-				"target": "programsAttributes/:heapSize",
-				"value": 512
-			},
-			{
-				"target": "programsAttributes/:memory",
-				"value": "SRAM1"
-			},
-			{
-				"target": "programsAttributes/:lowAddress"
-			},
-			{
-				"target": "programsAttributes/:highAddress"
-			},
-			{
-				"target": "programsAttributes/:programId"
-			},
-			{
-				"target": "programsAttributes/:programThreads"
-			},
-			{
-				"target": "programsAttributes/:programTasks"
-			}
-		],
-		"program_8": [
-			{
-				"target": "programsAttributes/:core",
-				"value": "cores/core_0"
-			},
-			{
-				"target": "programsAttributes/:name",
-				"value": "interrupt_handlers_CM7"
-			},
-			{
-				"target": "programsAttributes/:size",
-				"value": 1024
-			},
-			{
-				"target": "programsAttributes/:heapSize",
-				"value": 512
-			},
-			{
-				"target": "programsAttributes/:memory",
-				"value": "DTCM"
-			},
-			{
-				"target": "programsAttributes/:lowAddress"
-			},
-			{
-				"target": "programsAttributes/:highAddress"
-			},
-			{
-				"target": "programsAttributes/:programId"
-			},
-			{
-				"target": "programsAttributes/:programThreads"
-			},
-			{
-				"target": "programsAttributes/:programTasks"
-			}
-		]
-	}
+    "version": "1.1.0",
+    "checksum": "0be87eefc6f755741591b826c5070c04",
+    "ui": {
+        "use_page": "programs"
+    },
+    "use_restriction": "program_restrictions",
+    "attributes": {},
+    "elements": {
+        "program_0": [
+            {
+                "target": "programsAttributes/:core",
+                "value": "cores/core_0"
+            },
+            {
+                "target": "programsAttributes/:name",
+                "value": "default_CM7"
+            },
+            {
+                "target": "programsAttributes/:size",
+                "value": 1024
+            },
+            {
+                "target": "programsAttributes/:heapSize",
+                "value": 256
+            },
+            {
+                "target": "programsAttributes/:memory",
+                "value": "DTCM"
+            },
+            {
+                "target": "programsAttributes/:lowAddress"
+            },
+            {
+                "target": "programsAttributes/:highAddress"
+            },
+            {
+                "target": "programsAttributes/:programId"
+            },
+            {
+                "target": "programsAttributes/:programThreads"
+            },
+            {
+                "target": "programsAttributes/:programTasks"
+            }
+        ],
+        "program_1": [
+            {
+                "target": "programsAttributes/:core",
+                "value": "cores/core_0"
+            },
+            {
+                "target": "programsAttributes/:name",
+                "value": "timing_measurement_CM7"
+            },
+            {
+                "target": "programsAttributes/:size",
+                "value": 1024
+            },
+            {
+                "target": "programsAttributes/:heapSize",
+                "value": 256
+            },
+            {
+                "target": "programsAttributes/:memory",
+                "value": "DTCM"
+            },
+            {
+                "target": "programsAttributes/:lowAddress"
+            },
+            {
+                "target": "programsAttributes/:highAddress"
+            },
+            {
+                "target": "programsAttributes/:programId"
+            },
+            {
+                "target": "programsAttributes/:programThreads"
+            },
+            {
+                "target": "programsAttributes/:programTasks"
+            }
+        ],
+        "program_2": [
+            {
+                "target": "programsAttributes/:core",
+                "value": "cores/core_1"
+            },
+            {
+                "target": "programsAttributes/:name",
+                "value": "default_CM4"
+            },
+            {
+                "target": "programsAttributes/:size",
+                "value": 1024
+            },
+            {
+                "target": "programsAttributes/:heapSize",
+                "value": 256
+            },
+            {
+                "target": "programsAttributes/:memory",
+                "value": "SRAM1"
+            },
+            {
+                "target": "programsAttributes/:lowAddress"
+            },
+            {
+                "target": "programsAttributes/:highAddress"
+            },
+            {
+                "target": "programsAttributes/:programId"
+            },
+            {
+                "target": "programsAttributes/:programThreads"
+            },
+            {
+                "target": "programsAttributes/:programTasks"
+            }
+        ],
+        "program_3": [
+            {
+                "target": "programsAttributes/:core",
+                "value": "cores/core_1"
+            },
+            {
+                "target": "programsAttributes/:name",
+                "value": "timing_measurement_CM4"
+            },
+            {
+                "target": "programsAttributes/:size",
+                "value": 1024
+            },
+            {
+                "target": "programsAttributes/:heapSize",
+                "value": 256
+            },
+            {
+                "target": "programsAttributes/:memory",
+                "value": "SRAM1"
+            },
+            {
+                "target": "programsAttributes/:lowAddress"
+            },
+            {
+                "target": "programsAttributes/:highAddress"
+            },
+            {
+                "target": "programsAttributes/:programId"
+            },
+            {
+                "target": "programsAttributes/:programThreads"
+            },
+            {
+                "target": "programsAttributes/:programTasks"
+            }
+        ],
+        "program_4": [
+            {
+                "target": "programsAttributes/:core",
+                "value": "cores/core_1"
+            },
+            {
+                "target": "programsAttributes/:name",
+                "value": "logger"
+            },
+            {
+                "target": "programsAttributes/:size",
+                "value": 1024
+            },
+            {
+                "target": "programsAttributes/:heapSize",
+                "value": 256
+            },
+            {
+                "target": "programsAttributes/:memory",
+                "value": "SRAM1"
+            },
+            {
+                "target": "programsAttributes/:lowAddress"
+            },
+            {
+                "target": "programsAttributes/:highAddress"
+            },
+            {
+                "target": "programsAttributes/:programId"
+            },
+            {
+                "target": "programsAttributes/:programThreads"
+            },
+            {
+                "target": "programsAttributes/:programTasks"
+            }
+        ],
+        "program_5": [
+            {
+                "target": "programsAttributes/:core",
+                "value": "cores/core_0"
+            },
+            {
+                "target": "programsAttributes/:name",
+                "value": "ethernet_com"
+            },
+            {
+                "target": "programsAttributes/:size",
+                "value": 1024
+            },
+            {
+                "target": "programsAttributes/:heapSize",
+                "value": 512
+            },
+            {
+                "target": "programsAttributes/:memory",
+                "value": "DTCM"
+            },
+            {
+                "target": "programsAttributes/:lowAddress"
+            },
+            {
+                "target": "programsAttributes/:highAddress"
+            },
+            {
+                "target": "programsAttributes/:programId"
+            },
+            {
+                "target": "programsAttributes/:programThreads"
+            },
+            {
+                "target": "programsAttributes/:programTasks"
+            }
+        ],
+        "program_6": [
+            {
+                "target": "programsAttributes/:core",
+                "value": "cores/core_0"
+            },
+            {
+                "target": "programsAttributes/:name",
+                "value": "channel_test_CM7"
+            },
+            {
+                "target": "programsAttributes/:size",
+                "value": 1024
+            },
+            {
+                "target": "programsAttributes/:heapSize",
+                "value": 512
+            },
+            {
+                "target": "programsAttributes/:memory",
+                "value": "DTCM"
+            },
+            {
+                "target": "programsAttributes/:lowAddress"
+            },
+            {
+                "target": "programsAttributes/:highAddress"
+            },
+            {
+                "target": "programsAttributes/:programId"
+            },
+            {
+                "target": "programsAttributes/:programThreads"
+            },
+            {
+                "target": "programsAttributes/:programTasks"
+            }
+        ],
+        "program_7": [
+            {
+                "target": "programsAttributes/:core",
+                "value": "cores/core_1"
+            },
+            {
+                "target": "programsAttributes/:name",
+                "value": "channel_test_CM4"
+            },
+            {
+                "target": "programsAttributes/:size",
+                "value": 1024
+            },
+            {
+                "target": "programsAttributes/:heapSize",
+                "value": 512
+            },
+            {
+                "target": "programsAttributes/:memory",
+                "value": "SRAM1"
+            },
+            {
+                "target": "programsAttributes/:lowAddress"
+            },
+            {
+                "target": "programsAttributes/:highAddress"
+            },
+            {
+                "target": "programsAttributes/:programId"
+            },
+            {
+                "target": "programsAttributes/:programThreads"
+            },
+            {
+                "target": "programsAttributes/:programTasks"
+            }
+        ],
+        "program_8": [
+            {
+                "target": "programsAttributes/:core",
+                "value": "cores/core_0"
+            },
+            {
+                "target": "programsAttributes/:name",
+                "value": "interrupt_handlers_CM7"
+            },
+            {
+                "target": "programsAttributes/:size",
+                "value": 1024
+            },
+            {
+                "target": "programsAttributes/:heapSize",
+                "value": 512
+            },
+            {
+                "target": "programsAttributes/:memory",
+                "value": "DTCM"
+            },
+            {
+                "target": "programsAttributes/:lowAddress"
+            },
+            {
+                "target": "programsAttributes/:highAddress"
+            },
+            {
+                "target": "programsAttributes/:programId"
+            },
+            {
+                "target": "programsAttributes/:programThreads"
+            },
+            {
+                "target": "programsAttributes/:programTasks"
+            }
+        ]
+    }
 }

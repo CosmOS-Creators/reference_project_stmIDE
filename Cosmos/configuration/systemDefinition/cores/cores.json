@@ -1,187 +1,187 @@
 {
-	"version": "1.1.0",
-	"checksum": "09bbd1be4081a33621fbde82fb2f7c04",
-	"ui": {
-		"use_page": "cores"
-	},
-	"use_restriction": "core_restrictions",
-	"attributes": {},
-	"elements": {
-		"core_0": [
-			{
-				"target": "coresAttributes/:CoreName",
-				"value": "CM7"
-			},
-			{
-				"target": "coresAttributes/:bootOs",
-				"value": false
-			},
-			{
-				"target": "coresAttributes/:isCosmos",
-				"value": true
-			},
-			{
-				"target": "coresAttributes/:userCodeSize",
-				"value": 2048
-			},
-			{
-				"target": "coresAttributes/:userCodeMemory",
-				"value": "Flash_bank_1"
-			},
-			{
-				"target": "coresAttributes/:userCodeLowAddress"
-			},
-			{
-				"target": "coresAttributes/:userCodeHighAddress"
-			},
-			{
-				"target": "coresAttributes/:staticDataSize",
-				"value": 524288
-			},
-			{
-				"target": "coresAttributes/:staticDataMemory",
-				"value": "Flash_bank_1"
-			},
-			{
-				"target": "coresAttributes/:staticDataLowAddress"
-			},
-			{
-				"target": "coresAttributes/:staticDataHighAddress"
-			},
-			{
-				"target": "coresAttributes/:unmappedDataMemory",
-				"value": "AXI_SRAM"
-			},
-			{
-				"target": "coresAttributes/:unmappedDataSize",
-				"value": 65536
-			},
-			{
-				"target": "coresAttributes/:unmappedHeapSize",
-				"value": 32768
-			},
-			{
-				"target": "coresAttributes/:unmappedDataLowAddress"
-			},
-			{
-				"target": "coresAttributes/:unmappedDataHighAddress"
-			},
-			{
-				"target": "coresAttributes/:cpu",
-				"value": "cpu/CM7"
-			},
-			{
-				"target": "coresAttributes/:coreId"
-			},
-			{
-				"target": "coresAttributes/:corePrograms"
-			},
-			{
-				"target": "coresAttributes/:coreSysJobGroups"
-			},
-			{
-				"target": "coresAttributes/:coreSysJobHyperTick"
-			},
-			{
-				"target": "coresAttributes/:coreScheduler"
-			},
-			{
-				"target": "coresAttributes/:coreNumberOfThreads"
-			},
-			{
-				"target": "coresAttributes/:coreNumberOfTasks"
-			},
-			{
-				"target": "coresAttributes/:prioSortedThreads"
-			}
-		],
-		"core_1": [
-			{
-				"target": "coresAttributes/:CoreName",
-				"value": "CM4"
-			},
-			{
-				"target": "coresAttributes/:bootOs",
-				"value": true
-			},
-			{
-				"target": "coresAttributes/:isCosmos",
-				"value": true
-			},
-			{
-				"target": "coresAttributes/:userCodeSize",
-				"value": 2048
-			},
-			{
-				"target": "coresAttributes/:userCodeMemory",
-				"value": "Flash_bank_2"
-			},
-			{
-				"target": "coresAttributes/:userCodeLowAddress"
-			},
-			{
-				"target": "coresAttributes/:userCodeHighAddress"
-			},
-			{
-				"target": "coresAttributes/:staticDataSize",
-				"value": 524288
-			},
-			{
-				"target": "coresAttributes/:staticDataMemory",
-				"value": "Flash_bank_2"
-			},
-			{
-				"target": "coresAttributes/:staticDataLowAddress"
-			},
-			{
-				"target": "coresAttributes/:staticDataHighAddress"
-			},
-			{
-				"target": "coresAttributes/:unmappedDataMemory",
-				"value": "SRAM2"
-			},
-			{
-				"target": "coresAttributes/:unmappedDataSize",
-				"value": 32768
-			},
-			{
-				"target": "coresAttributes/:unmappedHeapSize",
-				"value": 16384
-			},
-			{
-				"target": "coresAttributes/:unmappedDataLowAddress"
-			},
-			{
-				"target": "coresAttributes/:unmappedDataHighAddress"
-			},
-			{
-				"target": "coresAttributes/:cpu",
-				"value": "cpu/CM4"
-			},
-			{
-				"target": "coresAttributes/:coreId"
-			},
-			{
-				"target": "coresAttributes/:corePrograms"
-			},
-			{
-				"target": "coresAttributes/:coreSysJobGroups"
-			},
-			{
-				"target": "coresAttributes/:coreSysJobHyperTick"
-			},
-			{
-				"target": "coresAttributes/:coreScheduler"
-			},
-			{
-				"target": "coresAttributes/:coreNumberOfThreads"
-			},
-			{
-				"target": "coresAttributes/:coreNumberOfTasks"
-			},
-			{
-				"target": "coresAttributes/:prioSortedThreads"
-			}
-		]
-	}
+    "version": "1.1.0",
+    "checksum": "a4599485c8a522dfe5200dbb44408a69",
+    "ui": {
+        "use_page": "cores"
+    },
+    "use_restriction": "core_restrictions",
+    "attributes": {},
+    "elements": {
+        "core_0": [
+            {
+                "target": "coresAttributes/:CoreName",
+                "value": "CM7"
+            },
+            {
+                "target": "coresAttributes/:bootOs",
+                "value": false
+            },
+            {
+                "target": "coresAttributes/:isCosmos",
+                "value": true
+            },
+            {
+                "target": "coresAttributes/:userCodeSize",
+                "value": 2048
+            },
+            {
+                "target": "coresAttributes/:userCodeMemory",
+                "value": "Flash_bank_1"
+            },
+            {
+                "target": "coresAttributes/:userCodeLowAddress"
+            },
+            {
+                "target": "coresAttributes/:userCodeHighAddress"
+            },
+            {
+                "target": "coresAttributes/:staticDataSize",
+                "value": 524288
+            },
+            {
+                "target": "coresAttributes/:staticDataMemory",
+                "value": "Flash_bank_1"
+            },
+            {
+                "target": "coresAttributes/:staticDataLowAddress"
+            },
+            {
+                "target": "coresAttributes/:staticDataHighAddress"
+            },
+            {
+                "target": "coresAttributes/:unmappedDataMemory",
+                "value": "AXI_SRAM"
+            },
+            {
+                "target": "coresAttributes/:unmappedDataSize",
+                "value": 65536
+            },
+            {
+                "target": "coresAttributes/:unmappedHeapSize",
+                "value": 32768
+            },
+            {
+                "target": "coresAttributes/:unmappedDataLowAddress"
+            },
+            {
+                "target": "coresAttributes/:unmappedDataHighAddress"
+            },
+            {
+                "target": "coresAttributes/:cpu",
+                "value": "cpu/CM7"
+            },
+            {
+                "target": "coresAttributes/:coreId"
+            },
+            {
+                "target": "coresAttributes/:corePrograms"
+            },
+            {
+                "target": "coresAttributes/:coreSysJobGroups"
+            },
+            {
+                "target": "coresAttributes/:coreSysJobHyperTick"
+            },
+            {
+                "target": "coresAttributes/:coreScheduler"
+            },
+            {
+                "target": "coresAttributes/:coreNumberOfThreads"
+            },
+            {
+                "target": "coresAttributes/:coreNumberOfTasks"
+            },
+            {
+                "target": "coresAttributes/:prioSortedThreads"
+            }
+        ],
+        "core_1": [
+            {
+                "target": "coresAttributes/:CoreName",
+                "value": "CM4"
+            },
+            {
+                "target": "coresAttributes/:bootOs",
+                "value": true
+            },
+            {
+                "target": "coresAttributes/:isCosmos",
+                "value": true
+            },
+            {
+                "target": "coresAttributes/:userCodeSize",
+                "value": 2048
+            },
+            {
+                "target": "coresAttributes/:userCodeMemory",
+                "value": "Flash_bank_2"
+            },
+            {
+                "target": "coresAttributes/:userCodeLowAddress"
+            },
+            {
+                "target": "coresAttributes/:userCodeHighAddress"
+            },
+            {
+                "target": "coresAttributes/:staticDataSize",
+                "value": 524288
+            },
+            {
+                "target": "coresAttributes/:staticDataMemory",
+                "value": "Flash_bank_2"
+            },
+            {
+                "target": "coresAttributes/:staticDataLowAddress"
+            },
+            {
+                "target": "coresAttributes/:staticDataHighAddress"
+            },
+            {
+                "target": "coresAttributes/:unmappedDataMemory",
+                "value": "SRAM2"
+            },
+            {
+                "target": "coresAttributes/:unmappedDataSize",
+                "value": 32768
+            },
+            {
+                "target": "coresAttributes/:unmappedHeapSize",
+                "value": 16384
+            },
+            {
+                "target": "coresAttributes/:unmappedDataLowAddress"
+            },
+            {
+                "target": "coresAttributes/:unmappedDataHighAddress"
+            },
+            {
+                "target": "coresAttributes/:cpu",
+                "value": "cpu/CM4"
+            },
+            {
+                "target": "coresAttributes/:coreId"
+            },
+            {
+                "target": "coresAttributes/:corePrograms"
+            },
+            {
+                "target": "coresAttributes/:coreSysJobGroups"
+            },
+            {
+                "target": "coresAttributes/:coreSysJobHyperTick"
+            },
+            {
+                "target": "coresAttributes/:coreScheduler"
+            },
+            {
+                "target": "coresAttributes/:coreNumberOfThreads"
+            },
+            {
+                "target": "coresAttributes/:coreNumberOfTasks"
+            },
+            {
+                "target": "coresAttributes/:prioSortedThreads"
+            }
+        ]
+    }
 }

@@ -1,42 +1,42 @@
 {
-	"version": "1.1.0",
-	"checksum": "77ef59ba022f3aec2f3a446489874684",
-	"ui": {
-		"use_page": "kernels"
-	},
-	"attributes": {},
-	"elements": {
-		"kernel_0": [
-			{
-				"target": "kernelsAttributes/:core",
-				"value": "cores/core_0"
-			},
-			{
-				"target": "kernelsAttributes/:stackSize",
-				"value": 1024
-			},
-			{
-				"target": "kernelsAttributes/:lowAddress"
-			},
-			{
-				"target": "kernelsAttributes/:highAddress"
-			}
-		],
-		"kernel_1": [
-			{
-				"target": "kernelsAttributes/:core",
-				"value": "cores/core_1"
-			},
-			{
-				"target": "kernelsAttributes/:stackSize",
-				"value": 1024
-			},
-			{
-				"target": "kernelsAttributes/:lowAddress"
-			},
-			{
-				"target": "kernelsAttributes/:highAddress"
-			}
-		]
-	}
+    "version": "1.1.0",
+    "checksum": "77ef59ba022f3aec2f3a446489874684",
+    "ui": {
+        "use_page": "kernels"
+    },
+    "attributes": {},
+    "elements": {
+        "kernel_0": [
+            {
+                "target": "kernelsAttributes/:core",
+                "value": "cores/core_0"
+            },
+            {
+                "target": "kernelsAttributes/:stackSize",
+                "value": 1024
+            },
+            {
+                "target": "kernelsAttributes/:lowAddress"
+            },
+            {
+                "target": "kernelsAttributes/:highAddress"
+            }
+        ],
+        "kernel_1": [
+            {
+                "target": "kernelsAttributes/:core",
+                "value": "cores/core_1"
+            },
+            {
+                "target": "kernelsAttributes/:stackSize",
+                "value": 1024
+            },
+            {
+                "target": "kernelsAttributes/:lowAddress"
+            },
+            {
+                "target": "kernelsAttributes/:highAddress"
+            }
+        ]
+    }
 }

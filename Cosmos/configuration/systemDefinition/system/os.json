@@ -1,35 +1,35 @@
 {
-	"version": "1.1.0",
-	"checksum": "10bf49734f9b8d6a2bcd7fffb3a7ff67",
-	"ui": {
-		"use_page": "os"
-	},
-	"attributes": {},
-	"elements": {
-		"os": [
-			{
-				"target": "osAttributes/:schedulableNum"
-			},
-			{
-				"target": "osAttributes/:buffersNum"
-			},
+    "version": "1.1.0",
+    "checksum": "f5a7500bc91a6cc80a406df95bb74ac0",
+    "ui": {
+        "use_page": "os"
+    },
+    "attributes": {},
+    "elements": {
+        "os": [
             {
-				"target": "osAttributes/:channelsNum"
-			},
-			{
-				"target": "osAttributes/:doubleBuffersNum"
-			},
+                "target": "osAttributes/:schedulableNum"
+            },
             {
-				"target": "osAttributes/:eventSpinlockId"
-			},
+                "target": "osAttributes/:buffersNum"
+            },
             {
-				"target": "osAttributes/:sysCallBytesChunk",
-				"value": 16
-			},
+                "target": "osAttributes/:channelsNum"
+            },
             {
-				"target": "osAttributes/:osEventDataPoolSize",
-				"value": 32
-			}
-		]
-	}
+                "target": "osAttributes/:doubleBuffersNum"
+            },
+            {
+                "target": "osAttributes/:eventSpinlockId"
+            },
+            {
+                "target": "osAttributes/:sysCallBytesChunk",
+                "value": 16
+            },
+            {
+                "target": "osAttributes/:osEventDataPoolSize",
+                "value": 32
+            }
+        ]
+    }
 }
