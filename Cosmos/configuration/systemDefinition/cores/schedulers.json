@@ -12,8 +12,7 @@
                 "value": "cores/core_0"
             },
             {
-                "target": "schedulersAttributes/:hyperTick",
-                "value": 100
+                "target": "schedulersAttributes/:hyperTick"
             },
             {
                 "target": "schedulersAttributes/:sync",
@@ -48,8 +47,7 @@
                 "value": "cores/core_1"
             },
             {
-                "target": "schedulersAttributes/:hyperTick",
-                "value": 100
+                "target": "schedulersAttributes/:hyperTick"
             },
             {
                 "target": "schedulersAttributes/:sync",
