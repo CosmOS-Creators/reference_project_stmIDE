@@ -67,23 +67,15 @@ IS_INITIALIZED_TO{
     },
     {
         SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_TASK_1_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_TASK_0_PROGRAM_1_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
         STACK_TASK_0_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
     },
     {
         SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_TASK_1_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+        STACK_TASK_1_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
     },
     {
         SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_TASK_0_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+        STACK_TASK_1_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
     },
 };
 
@@ -100,43 +92,11 @@ IS_INITIALIZED_TO{
     },
     {
         SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_1_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+        STACK_THREAD_1_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
     },
     {
         SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_1_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_2_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_2_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_3_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_3_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_1_PROGRAM_3_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_2_PROGRAM_3_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
-    },
-    {
-        SCHEDULABLE_STATE_ENUM__READY,    /* CosmOS_SchedulableStateType state */
-        STACK_THREAD_0_PROGRAM_4_CORE_0_HIGH_ADDRESS,    /* StackPointerType stackPointer */
+        STACK_THREAD_1_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* StackPointerType stackPointer */
     },
 };
 /* @cond S */
@@ -153,7 +113,7 @@ IS_INITIALIZED_TO{
         &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_0_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
         &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_0_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_Idle_CM7,    /* const CosmOS_GenericVoidType handler */
+        wrapped_demo_task_togglePin_CM7,    /* const CosmOS_GenericVoidType handler */
         False,    /* const CosmOS_BooleanType fp */
         SCHEDULABLE_0_UNIQUE_ID,    /* const BitWidthType id */
         TASK_0_PROGRAM_0_CORE_0_ID,    /* const BitWidthType instanceId */
@@ -165,29 +125,29 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_0_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
-        &TasksSchedulablesVar[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
+        &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_sysJobs_CM7,    /* const CosmOS_GenericVoidType handler */
+        wrapped_demo_task_togglePin_CM4,    /* const CosmOS_GenericVoidType handler */
         False,    /* const CosmOS_BooleanType fp */
         SCHEDULABLE_1_UNIQUE_ID,    /* const BitWidthType id */
-        TASK_1_PROGRAM_0_CORE_0_ID,    /* const BitWidthType instanceId */
-        PROGRAM_0_CORE_0_ID,    /* const BitWidthType programId */
-        CORE_0_ID,    /* const BitWidthType coreId */
+        TASK_0_PROGRAM_0_CORE_1_ID,    /* const BitWidthType instanceId */
+        PROGRAM_0_CORE_1_ID,    /* const BitWidthType programId */
+        CORE_1_ID,    /* const BitWidthType coreId */
         SCHEDULABLE_NO_ALARM_ID,    /* const BitWidthType alarmId */
         SCHEDULABLE_1_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
         SCHEDULABLE_1_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
         SCHEDULABLE_1_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
-        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_1_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_1_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
+        &TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_Timing_measurement_task_CM7,    /* const CosmOS_GenericVoidType handler */
+        wrapped_idle_CM7,    /* const CosmOS_GenericVoidType handler */
         False,    /* const CosmOS_BooleanType fp */
         SCHEDULABLE_2_UNIQUE_ID,    /* const BitWidthType id */
-        TASK_0_PROGRAM_1_CORE_0_ID,    /* const BitWidthType instanceId */
-        PROGRAM_1_CORE_0_ID,    /* const BitWidthType programId */
+        TASK_1_PROGRAM_0_CORE_0_ID,    /* const BitWidthType instanceId */
+        PROGRAM_0_CORE_0_ID,    /* const BitWidthType programId */
         CORE_0_ID,    /* const BitWidthType coreId */
         SCHEDULABLE_NO_ALARM_ID,    /* const BitWidthType alarmId */
         SCHEDULABLE_2_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
@@ -195,49 +155,19 @@ IS_INITIALIZED_TO{
         SCHEDULABLE_2_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
-        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
+        &TasksSchedulablesVar[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
+        &TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_Idle_CM4,    /* const CosmOS_GenericVoidType handler */
+        wrapped_idle_CM4,    /* const CosmOS_GenericVoidType handler */
         False,    /* const CosmOS_BooleanType fp */
         SCHEDULABLE_3_UNIQUE_ID,    /* const BitWidthType id */
-        TASK_0_PROGRAM_0_CORE_1_ID,    /* const BitWidthType instanceId */
+        TASK_1_PROGRAM_0_CORE_1_ID,    /* const BitWidthType instanceId */
         PROGRAM_0_CORE_1_ID,    /* const BitWidthType programId */
         CORE_1_ID,    /* const BitWidthType coreId */
         SCHEDULABLE_NO_ALARM_ID,    /* const BitWidthType alarmId */
         SCHEDULABLE_3_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
         SCHEDULABLE_3_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
         SCHEDULABLE_3_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &TasksSchedulablesVar[SCHEDULABLE_TASK_1_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_sysJobs_CM4,    /* const CosmOS_GenericVoidType handler */
-        False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_4_UNIQUE_ID,    /* const BitWidthType id */
-        TASK_1_PROGRAM_0_CORE_1_ID,    /* const BitWidthType instanceId */
-        PROGRAM_0_CORE_1_ID,    /* const BitWidthType programId */
-        CORE_1_ID,    /* const BitWidthType coreId */
-        SCHEDULABLE_NO_ALARM_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_4_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_4_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_4_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &TasksSchedulablesVar[SCHEDULABLE_TASK_0_PROGRAM_1_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &TasksStacksCfgConst[STACK_TASK_0_PROGRAM_1_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__TASK,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_Timing_measurement_task_CM4,    /* const CosmOS_GenericVoidType handler */
-        False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_5_UNIQUE_ID,    /* const BitWidthType id */
-        TASK_0_PROGRAM_1_CORE_1_ID,    /* const BitWidthType instanceId */
-        PROGRAM_1_CORE_1_ID,    /* const BitWidthType programId */
-        CORE_1_ID,    /* const BitWidthType coreId */
-        SCHEDULABLE_NO_ALARM_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_5_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_5_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_5_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
 };
 
@@ -248,181 +178,61 @@ IS_INITIALIZED_TO{
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_0_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_IdleThread_CM7,    /* const CosmOS_GenericVoidType handler */
+        wrapped_idleThread_CM7,    /* const CosmOS_GenericVoidType handler */
         False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_6_UNIQUE_ID,    /* const BitWidthType id */
+        SCHEDULABLE_4_UNIQUE_ID,    /* const BitWidthType id */
         THREAD_0_PROGRAM_0_CORE_0_ID,    /* const BitWidthType instanceId */
         PROGRAM_0_CORE_0_ID,    /* const BitWidthType programId */
         CORE_0_ID,    /* const BitWidthType coreId */
         ALARM_0_PROGRAM_0_CORE_0_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_6_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_6_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_6_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
+        SCHEDULABLE_4_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
+        SCHEDULABLE_4_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
+        SCHEDULABLE_4_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
     {
         &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
         &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
         SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_IdleThread_CM4,    /* const CosmOS_GenericVoidType handler */
+        wrapped_idleThread_CM4,    /* const CosmOS_GenericVoidType handler */
         False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_7_UNIQUE_ID,    /* const BitWidthType id */
+        SCHEDULABLE_5_UNIQUE_ID,    /* const BitWidthType id */
         THREAD_0_PROGRAM_0_CORE_1_ID,    /* const BitWidthType instanceId */
         PROGRAM_0_CORE_1_ID,    /* const BitWidthType programId */
         CORE_1_ID,    /* const BitWidthType coreId */
         ALARM_0_PROGRAM_0_CORE_1_ID,    /* const BitWidthType alarmId */
+        SCHEDULABLE_5_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
+        SCHEDULABLE_5_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
+        SCHEDULABLE_5_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
+    },
+    {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_1_PROGRAM_0_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
+        &ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_0_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
+        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
+        wrapped_demo_thread_dynamicAllocation_toggleLed_CM7,    /* const CosmOS_GenericVoidType handler */
+        True,    /* const CosmOS_BooleanType fp */
+        SCHEDULABLE_6_UNIQUE_ID,    /* const BitWidthType id */
+        THREAD_1_PROGRAM_0_CORE_0_ID,    /* const BitWidthType instanceId */
+        PROGRAM_0_CORE_0_ID,    /* const BitWidthType programId */
+        CORE_0_ID,    /* const BitWidthType coreId */
+        ALARM_1_PROGRAM_0_CORE_0_ID,    /* const BitWidthType alarmId */
+        SCHEDULABLE_6_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
+        SCHEDULABLE_6_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
+        SCHEDULABLE_6_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
+    },
+    {
+        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_1_PROGRAM_0_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
+        &ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_0_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
+        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
+        wrapped_demo_thread_dynamicAllocation_toggleLed_CM4,    /* const CosmOS_GenericVoidType handler */
+        True,    /* const CosmOS_BooleanType fp */
+        SCHEDULABLE_7_UNIQUE_ID,    /* const BitWidthType id */
+        THREAD_1_PROGRAM_0_CORE_1_ID,    /* const BitWidthType instanceId */
+        PROGRAM_0_CORE_1_ID,    /* const BitWidthType programId */
+        CORE_1_ID,    /* const BitWidthType coreId */
+        ALARM_1_PROGRAM_0_CORE_1_ID,    /* const BitWidthType alarmId */
         SCHEDULABLE_7_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
         SCHEDULABLE_7_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
         SCHEDULABLE_7_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_Synchronization_and_dynamicAllocation_test_thread_CM7,    /* const CosmOS_GenericVoidType handler */
-        True,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_8_UNIQUE_ID,    /* const BitWidthType id */
-        THREAD_0_PROGRAM_1_CORE_0_ID,    /* const BitWidthType instanceId */
-        PROGRAM_1_CORE_0_ID,    /* const BitWidthType programId */
-        CORE_0_ID,    /* const BitWidthType coreId */
-        ALARM_1_PROGRAM_1_CORE_0_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_8_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_8_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_8_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_1_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_Synchronization_and_dynamicAllocation_test_thread_CM4,    /* const CosmOS_GenericVoidType handler */
-        True,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_9_UNIQUE_ID,    /* const BitWidthType id */
-        THREAD_0_PROGRAM_1_CORE_1_ID,    /* const BitWidthType instanceId */
-        PROGRAM_1_CORE_1_ID,    /* const BitWidthType programId */
-        CORE_1_ID,    /* const BitWidthType coreId */
-        ALARM_1_PROGRAM_1_CORE_1_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_9_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_9_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_9_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_1_PROGRAM_1_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_1_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_Synchronization_test_thread_CM4,    /* const CosmOS_GenericVoidType handler */
-        False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_10_UNIQUE_ID,    /* const BitWidthType id */
-        THREAD_1_PROGRAM_1_CORE_1_ID,    /* const BitWidthType instanceId */
-        PROGRAM_1_CORE_1_ID,    /* const BitWidthType programId */
-        CORE_1_ID,    /* const BitWidthType coreId */
-        ALARM_2_PROGRAM_1_CORE_1_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_10_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_10_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_10_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_2_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_Logger_thread,    /* const CosmOS_GenericVoidType handler */
-        False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_11_UNIQUE_ID,    /* const BitWidthType id */
-        THREAD_0_PROGRAM_2_CORE_1_ID,    /* const BitWidthType instanceId */
-        PROGRAM_2_CORE_1_ID,    /* const BitWidthType programId */
-        CORE_1_ID,    /* const BitWidthType coreId */
-        ALARM_3_PROGRAM_2_CORE_1_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_11_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_11_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_11_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_2_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_2_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_TCPIP_thread,    /* const CosmOS_GenericVoidType handler */
-        False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_12_UNIQUE_ID,    /* const BitWidthType id */
-        THREAD_0_PROGRAM_2_CORE_0_ID,    /* const BitWidthType instanceId */
-        PROGRAM_2_CORE_0_ID,    /* const BitWidthType programId */
-        CORE_0_ID,    /* const BitWidthType coreId */
-        ALARM_2_PROGRAM_2_CORE_0_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_12_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_12_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_12_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_3_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_3_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_channel_xCore_server_CM7,    /* const CosmOS_GenericVoidType handler */
-        False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_13_UNIQUE_ID,    /* const BitWidthType id */
-        THREAD_0_PROGRAM_3_CORE_0_ID,    /* const BitWidthType instanceId */
-        PROGRAM_3_CORE_0_ID,    /* const BitWidthType programId */
-        CORE_0_ID,    /* const BitWidthType coreId */
-        ALARM_3_PROGRAM_3_CORE_0_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_13_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_13_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_13_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_3_CORE_1_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_3_CORE_1_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_channel_xCore_client_CM4,    /* const CosmOS_GenericVoidType handler */
-        False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_14_UNIQUE_ID,    /* const BitWidthType id */
-        THREAD_0_PROGRAM_3_CORE_1_ID,    /* const BitWidthType instanceId */
-        PROGRAM_3_CORE_1_ID,    /* const BitWidthType programId */
-        CORE_1_ID,    /* const BitWidthType coreId */
-        ALARM_4_PROGRAM_3_CORE_1_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_14_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_14_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_14_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_1_PROGRAM_3_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_3_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_channel_sameCore_server_CM7,    /* const CosmOS_GenericVoidType handler */
-        False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_15_UNIQUE_ID,    /* const BitWidthType id */
-        THREAD_1_PROGRAM_3_CORE_0_ID,    /* const BitWidthType instanceId */
-        PROGRAM_3_CORE_0_ID,    /* const BitWidthType programId */
-        CORE_0_ID,    /* const BitWidthType coreId */
-        ALARM_4_PROGRAM_3_CORE_0_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_15_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_15_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_15_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_2_PROGRAM_3_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &ThreadsStacksCfgConst[STACK_THREAD_2_PROGRAM_3_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_channel_sameCore_client_CM7,    /* const CosmOS_GenericVoidType handler */
-        False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_16_UNIQUE_ID,    /* const BitWidthType id */
-        THREAD_2_PROGRAM_3_CORE_0_ID,    /* const BitWidthType instanceId */
-        PROGRAM_3_CORE_0_ID,    /* const BitWidthType programId */
-        CORE_0_ID,    /* const BitWidthType coreId */
-        ALARM_5_PROGRAM_3_CORE_0_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_16_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_16_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_16_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
-    },
-    {
-        &ThreadsSchedulablesVar[SCHEDULABLE_THREAD_0_PROGRAM_4_CORE_0_ID],    /* CosmOS_SchedulableVariableType * const var */
-        &ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_4_CORE_0_ID],    /* const CosmOS_StackConfigurationType * stack */
-        SCHEDULABLE_INSTANCE_ENUM__THREAD,    /* const CosmOS_SchedulableInstanceType instance */
-        wrapped_TIM2_xCore_IRQHandler_Thread_CM7,    /* const CosmOS_GenericVoidType handler */
-        False,    /* const CosmOS_BooleanType fp */
-        SCHEDULABLE_17_UNIQUE_ID,    /* const BitWidthType id */
-        THREAD_0_PROGRAM_4_CORE_0_ID,    /* const BitWidthType instanceId */
-        PROGRAM_4_CORE_0_ID,    /* const BitWidthType programId */
-        CORE_0_ID,    /* const BitWidthType coreId */
-        ALARM_6_PROGRAM_4_CORE_0_ID,    /* const BitWidthType alarmId */
-        SCHEDULABLE_17_PERIPHERAL_ACCESS_LOW_ADDRESS,    /* const BitWidthType peripheralAccessLowAddress */
-        SCHEDULABLE_17_PERIPHERAL_ACCESS_HIGH_ADDRESS,    /* const BitWidthType peripheralAccessHighAddress */
-        SCHEDULABLE_17_PERIPHERAL_ACCESS_HIGH_SIZE,    /* const BitWidthType peripheralAccessSize */
     },
 };
 /* @cond S */
@@ -495,21 +305,9 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM7 void
-wrapped_Idle_CM7( void )
+wrapped_demo_task_togglePin_CM7( void )
 {
-    Idle_CM7();
-    for(;;);
-};
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
-/* @endcond*/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void
-wrapped_sysJobs_CM7( void )
-{
-    cosmosApiInternal_sysJobs_dispatcher();
+    demo_task_togglePin_CM7();
     cosmosApiInternal_schedulable_setExecutionStateToFinished();
     for(;;);
 };
@@ -520,10 +318,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM7 void
-wrapped_Timing_measurement_task_CM7( void )
+wrapped_idle_CM7( void )
 {
-    Timing_measurement_task_CM7();
-    cosmosApiInternal_schedulable_setExecutionStateToFinished();
+    idle_CM7();
     for(;;);
 };
 /* @cond S */
@@ -533,21 +330,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM4 void
-wrapped_Idle_CM4( void )
+wrapped_demo_task_togglePin_CM4( void )
 {
-    Idle_CM4();
-    for(;;);
-};
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
-/* @endcond*/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM4 void
-wrapped_sysJobs_CM4( void )
-{
-    cosmosApiInternal_sysJobs_dispatcher();
+    demo_task_togglePin_CM4();
     cosmosApiInternal_schedulable_setExecutionStateToFinished();
     for(;;);
 };
@@ -558,10 +343,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM4 void
-wrapped_Timing_measurement_task_CM4( void )
+wrapped_idle_CM4( void )
 {
-    Timing_measurement_task_CM4();
-    cosmosApiInternal_schedulable_setExecutionStateToFinished();
+    idle_CM4();
     for(;;);
 };
 /* @cond S */
@@ -571,9 +355,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM7 void
-wrapped_IdleThread_CM7( void )
+wrapped_idleThread_CM7( void )
 {
-    IdleThread_CM7();
+    idleThread_CM7();
     for( ;; )
     {}
     };
@@ -584,9 +368,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM7 void
-wrapped_Synchronization_and_dynamicAllocation_test_thread_CM7( void )
+wrapped_demo_thread_dynamicAllocation_toggleLed_CM7( void )
 {
-    Synchronization_and_dynamicAllocation_test_thread_CM7();
+    demo_thread_dynamicAllocation_toggleLed_CM7();
     };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
@@ -595,9 +379,9 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM4 void
-wrapped_IdleThread_CM4( void )
+wrapped_idleThread_CM4( void )
 {
-    IdleThread_CM4();
+    idleThread_CM4();
     for( ;; )
     {}
     };
@@ -608,100 +392,12 @@ __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
 __SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
 /* @endcond*/
 __APPLICATION_FUNC_SECTION_CM4 void
-wrapped_Synchronization_and_dynamicAllocation_test_thread_CM4( void )
+wrapped_demo_thread_dynamicAllocation_toggleLed_CM4( void )
 {
-    Synchronization_and_dynamicAllocation_test_thread_CM4();
+    demo_thread_dynamicAllocation_toggleLed_CM4();
     };
 /* @cond S */
 __SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
-/* @endcond*/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM4 void
-wrapped_Synchronization_test_thread_CM4( void )
-{
-    Synchronization_test_thread_CM4();
-    };
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
-/* @endcond*/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM4 void
-wrapped_Logger_thread( void )
-{
-    Logger_thread();
-    };
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
-/* @endcond*/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void
-wrapped_TCPIP_thread( void )
-{
-    TCPIP_thread();
-    };
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
-/* @endcond*/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void
-wrapped_channel_xCore_server_CM7( void )
-{
-    channel_xCore_server_CM7();
-    };
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
-/* @endcond*/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void
-wrapped_channel_sameCore_server_CM7( void )
-{
-    channel_sameCore_server_CM7();
-    };
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
-/* @endcond*/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void
-wrapped_channel_sameCore_client_CM7( void )
-{
-    channel_sameCore_client_CM7();
-    };
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
-/* @endcond*/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM4)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM4 void
-wrapped_channel_xCore_client_CM4( void )
-{
-    channel_xCore_client_CM4();
-    };
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM4)
-/* @endcond*/
-/* @cond S */
-__SEC_START(__APPLICATION_FUNC_SECTION_START_CM7)
-/* @endcond*/
-__APPLICATION_FUNC_SECTION_CM7 void
-wrapped_TIM2_xCore_IRQHandler_Thread_CM7( void )
-{
-    TIM2_xCore_IRQHandler_Thread_CM7();
-    };
-/* @cond S */
-__SEC_STOP(__APPLICATION_FUNC_SECTION_STOP_CM7)
 /* @endcond*/
 /********************************************************************************
 **                        Function Definitions | Stop                          **

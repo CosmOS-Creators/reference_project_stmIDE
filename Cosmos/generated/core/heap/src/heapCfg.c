@@ -66,26 +66,6 @@ IS_INITIALIZED_TO
         HEAP_PROGRAM_0_CORE_0_LOW_ADDRESS,    /* const AddressType heapLowAddress */
         HEAP_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* const AddressType heapHighAddress */
     },
-    {                                                     /* HeapsCore0CfgConst[PROGRAM_1_CORE_0_ID] */
-        HEAP_PROGRAM_1_CORE_0_SIZE,    /* const BitWidthType heapSize */
-        HEAP_PROGRAM_1_CORE_0_LOW_ADDRESS,    /* const AddressType heapLowAddress */
-        HEAP_PROGRAM_1_CORE_0_HIGH_ADDRESS,    /* const AddressType heapHighAddress */
-    },
-    {                                                     /* HeapsCore0CfgConst[PROGRAM_2_CORE_0_ID] */
-        HEAP_PROGRAM_2_CORE_0_SIZE,    /* const BitWidthType heapSize */
-        HEAP_PROGRAM_2_CORE_0_LOW_ADDRESS,    /* const AddressType heapLowAddress */
-        HEAP_PROGRAM_2_CORE_0_HIGH_ADDRESS,    /* const AddressType heapHighAddress */
-    },
-    {                                                     /* HeapsCore0CfgConst[PROGRAM_3_CORE_0_ID] */
-        HEAP_PROGRAM_3_CORE_0_SIZE,    /* const BitWidthType heapSize */
-        HEAP_PROGRAM_3_CORE_0_LOW_ADDRESS,    /* const AddressType heapLowAddress */
-        HEAP_PROGRAM_3_CORE_0_HIGH_ADDRESS,    /* const AddressType heapHighAddress */
-    },
-    {                                                     /* HeapsCore0CfgConst[PROGRAM_4_CORE_0_ID] */
-        HEAP_PROGRAM_4_CORE_0_SIZE,    /* const BitWidthType heapSize */
-        HEAP_PROGRAM_4_CORE_0_LOW_ADDRESS,    /* const AddressType heapLowAddress */
-        HEAP_PROGRAM_4_CORE_0_HIGH_ADDRESS,    /* const AddressType heapHighAddress */
-    },
 };
 /* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
@@ -98,21 +78,6 @@ IS_INITIALIZED_TO
         HEAP_PROGRAM_0_CORE_1_SIZE,    /* const BitWidthType heapSize */
         HEAP_PROGRAM_0_CORE_1_LOW_ADDRESS,    /* const AddressType heapLowAddress */
         HEAP_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* const AddressType heapHighAddress */
-    },
-    {                                                     /* HeapsCore1CfgConst[PROGRAM_1_CORE_1_ID] */
-        HEAP_PROGRAM_1_CORE_1_SIZE,    /* const BitWidthType heapSize */
-        HEAP_PROGRAM_1_CORE_1_LOW_ADDRESS,    /* const AddressType heapLowAddress */
-        HEAP_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* const AddressType heapHighAddress */
-    },
-    {                                                     /* HeapsCore1CfgConst[PROGRAM_2_CORE_1_ID] */
-        HEAP_PROGRAM_2_CORE_1_SIZE,    /* const BitWidthType heapSize */
-        HEAP_PROGRAM_2_CORE_1_LOW_ADDRESS,    /* const AddressType heapLowAddress */
-        HEAP_PROGRAM_2_CORE_1_HIGH_ADDRESS,    /* const AddressType heapHighAddress */
-    },
-    {                                                     /* HeapsCore1CfgConst[PROGRAM_3_CORE_1_ID] */
-        HEAP_PROGRAM_3_CORE_1_SIZE,    /* const BitWidthType heapSize */
-        HEAP_PROGRAM_3_CORE_1_LOW_ADDRESS,    /* const AddressType heapLowAddress */
-        HEAP_PROGRAM_3_CORE_1_HIGH_ADDRESS,    /* const AddressType heapHighAddress */
     },
 };
 /* @cond S */

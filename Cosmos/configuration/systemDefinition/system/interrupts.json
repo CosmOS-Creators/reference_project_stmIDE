@@ -5,23 +5,5 @@
         "use_page": "interrupts"
     },
     "attributes": {},
-    "elements": {
-        "interrupt_0": [
-            {
-                "target": "interruptsAttributes/:name",
-                "value": "TIM2_interrupt"
-            },
-            {
-                "target": "interruptsAttributes/:interruptHandlerFunc",
-                "value": "TIM2_IRQ_Callback"
-            },
-            {
-                "target": "interruptsAttributes/:thread",
-                "value": "TIM2_xCore_IRQHandler_Thread_CM7"
-            },
-            {
-                "target": "interruptsAttributes/:interruptId"
-            }
-        ]
-    }
+    "elements": {}
 }

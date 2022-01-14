@@ -45,8 +45,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 
-UART_HandleTypeDef huart3 __LOGGER_NOINIT_SECTION;
-DMA_HandleTypeDef hdma_usart3_tx __LOGGER_NOINIT_SECTION;
+UART_HandleTypeDef huart3 __DEMO_PROGRAM_CM4_INIT_SECTION;
+DMA_HandleTypeDef hdma_usart3_tx __DEMO_PROGRAM_CM4_INIT_SECTION;
 
 /* USER CODE BEGIN PV */
 

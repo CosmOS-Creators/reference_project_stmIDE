@@ -5,56 +5,5 @@
         "use_page": "sys_jobs"
     },
     "attributes": {},
-    "elements": {
-        "sysJob_0": [
-            {
-                "target": "sysJobsAttributes/:core",
-                "value": "cores/core_0"
-            },
-            {
-                "target": "sysJobsAttributes/:tickMultiplicator",
-                "value": 2
-            },
-            {
-                "target": "sysJobsAttributes/:handlers",
-                "value": [
-                    "sysJobsGroup_20ms_CM7"
-                ]
-            },
-            {
-                "target": "sysJobsAttributes/:apiHeaders",
-                "value": [
-                    "default_CM7.h"
-                ]
-            },
-            {
-                "target": "sysJobsAttributes/:groupId"
-            }
-        ],
-        "sysJob_1": [
-            {
-                "target": "sysJobsAttributes/:core",
-                "value": "cores/core_1"
-            },
-            {
-                "target": "sysJobsAttributes/:tickMultiplicator",
-                "value": 1
-            },
-            {
-                "target": "sysJobsAttributes/:handlers",
-                "value": [
-                    "sysJobsGroup_10ms_CM4"
-                ]
-            },
-            {
-                "target": "sysJobsAttributes/:apiHeaders",
-                "value": [
-                    "default_CM4.h"
-                ]
-            },
-            {
-                "target": "sysJobsAttributes/:groupId"
-            }
-        ]
-    }
+    "elements": {}
 }

@@ -63,22 +63,7 @@ const CosmOS_ThreadListConfigurationType
 IS_INITIALIZED_TO
 {
     {
-        &ThreadsProgram4Core0CfgConst[THREAD_0_PROGRAM_4_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
-    },
-    {
-        &ThreadsProgram2Core0CfgConst[THREAD_0_PROGRAM_2_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
-    },
-    {
-        &ThreadsProgram3Core0CfgConst[THREAD_1_PROGRAM_3_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
-    },
-    {
-        &ThreadsProgram3Core0CfgConst[THREAD_2_PROGRAM_3_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
-    },
-    {
-        &ThreadsProgram3Core0CfgConst[THREAD_0_PROGRAM_3_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
-    },
-    {
-        &ThreadsProgram1Core0CfgConst[THREAD_0_PROGRAM_1_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
+        &ThreadsProgram0Core0CfgConst[THREAD_1_PROGRAM_0_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
         &ThreadsProgram0Core0CfgConst[THREAD_0_PROGRAM_0_CORE_0_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
@@ -89,16 +74,7 @@ const CosmOS_ThreadListConfigurationType
 IS_INITIALIZED_TO
 {
     {
-        &ThreadsProgram3Core1CfgConst[THREAD_0_PROGRAM_3_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
-    },
-    {
-        &ThreadsProgram1Core1CfgConst[THREAD_1_PROGRAM_1_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
-    },
-    {
-        &ThreadsProgram1Core1CfgConst[THREAD_0_PROGRAM_1_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
-    },
-    {
-        &ThreadsProgram2Core1CfgConst[THREAD_0_PROGRAM_2_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
+        &ThreadsProgram0Core1CfgConst[THREAD_1_PROGRAM_0_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */
     },
     {
         &ThreadsProgram0Core1CfgConst[THREAD_0_PROGRAM_0_CORE_1_ID],    /* CosmOS_ThreadConfigurationType * threadCfg */

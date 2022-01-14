@@ -90,7 +90,7 @@ const CosmOS_OsEventConfigurationType OsEventCfg __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{                       /* osEventCfg */
     &OsEventVar,    /* CosmOS_OsVariableType * const var */
     handleCoresArr,    /* CosmOS_BooleanType * const handleCores */
-    SPINLOCK_6_ID,    /* const BitWidthType spinlockId */
+    SPINLOCK_2_ID,    /* const BitWidthType spinlockId */
     EventsFuncConst,    /* const CosmOS_GenericVoidType * const eventFuncs */
     EVENTS_FUNC_NUM,    /* const BitWidthType numberOfEventFuncs */
     osEventDataPool,    /* unsigned char * const dataPool */

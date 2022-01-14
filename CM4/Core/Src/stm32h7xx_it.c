@@ -63,7 +63,7 @@ extern UART_HandleTypeDef huart3;
 extern TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN EV */
-__OS_FUNC_SECTION void TIM2_IRQ_Callback(void);
+
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -171,13 +171,7 @@ void DMA1_Stream0_IRQHandler(void) {
  */
 void TIM2_IRQHandler(void) {
   /* USER CODE BEGIN TIM2_IRQn 0 */
-  // lets trigger it with lower frequency
-  if (timerCount > 10000) {
-    TIM2_IRQ_Callback();
-    timerCount = 0;
-  } else {
-    timerCount++;
-  }
+
   /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
   /* USER CODE BEGIN TIM2_IRQn 1 */

@@ -59,10 +59,6 @@
 /* @cond S */
 __SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
-unsigned char channel0SendPool[CHANNEL_0_SEND_POOL_SIZE] __OS_VARS_SECTION;
-unsigned char channel0ReplyPool[CHANNEL_0_REPLY_POOL_SIZE] __OS_VARS_SECTION;
-unsigned char channel1SendPool[CHANNEL_1_SEND_POOL_SIZE] __OS_VARS_SECTION;
-unsigned char channel1ReplyPool[CHANNEL_1_REPLY_POOL_SIZE] __OS_VARS_SECTION;
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @endcond*/
@@ -72,24 +68,6 @@ __SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
 CosmOS_ChannelVariableType ChannelsVar[CHANNEL_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO{
-    {
-        False,
-        CHANNEL_POOL_STATE_ENUM__WAITING_TO_BE_PROCESSED,
-        0,
-        NULL,
-        False,
-        CHANNEL_POOL_STATE_ENUM__EMPTY,
-        0,
-    },
-    {
-        False,
-        CHANNEL_POOL_STATE_ENUM__WAITING_TO_BE_PROCESSED,
-        0,
-        NULL,
-        False,
-        CHANNEL_POOL_STATE_ENUM__EMPTY,
-        0,
-    },
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
@@ -101,30 +79,6 @@ __SEC_START(__OS_CONSTS_SECTION_START)
 const CosmOS_ChannelConfigurationType
     ChannelsCfgConst[CHANNEL_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
-    {
-        &ChannelsVar[CHANNEL_0_ID],
-        CHANNEL_0_ID,
-        channel0SendPool,
-        channel0ReplyPool,
-        CHANNEL_0_SEND_POOL_SIZE,
-        CHANNEL_0_REPLY_POOL_SIZE,
-        &PermissionsChannel0SendCfgConst,
-        &PermissionsChannel0ReplyCfgConst,
-		SEMAPHORE_2_ID,
-        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_0_PROGRAM_3_CORE_0_ID],
-    },
-    {
-        &ChannelsVar[CHANNEL_1_ID],
-        CHANNEL_1_ID,
-        channel1SendPool,
-        channel1ReplyPool,
-        CHANNEL_1_SEND_POOL_SIZE,
-        CHANNEL_1_REPLY_POOL_SIZE,
-        &PermissionsChannel1SendCfgConst,
-        &PermissionsChannel1ReplyCfgConst,
-		SEMAPHORE_3_ID,
-        &ThreadsSchedulablesCfgConst[SCHEDULABLE_THREAD_1_PROGRAM_3_CORE_0_ID],
-    },
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)

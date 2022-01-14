@@ -67,9 +67,6 @@ __SEC_START(__OS_VARS_SECTION_START)
 /* @endcond*/
 CosmOS_InterruptVariableType InterruptsVar[INTERRUPT_NUM] __OS_VARS_SECTION
 IS_INITIALIZED_TO{
-    {
-        0,    /* BitWidthType numberOfRequests */
-    },
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)
@@ -81,11 +78,6 @@ __SEC_START(__OS_CONSTS_SECTION_START)
 const CosmOS_InterruptConfigurationType
     InterruptsCfgConst[INTERRUPT_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
-    {
-        &InterruptsVar[INTERRUPT_0_ID],
-        INTERRUPT_0_ID,
-        &ThreadsProgram4Core0CfgConst[THREAD_0_PROGRAM_4_CORE_0_ID],
-    },
 };
 /* @cond S */
 __SEC_STOP(__OS_CONSTS_SECTION_STOP)
@@ -153,32 +145,6 @@ __SEC_STOP(__OS_CONSTS_SECTION_STOP)
 /********************************************************************************
 **                        Function Definitions | Start                         **
 ********************************************************************************/
-/* @cond S */
-__SEC_START(__OS_FUNC_SECTION_START)
-/* @endcond*/
-__OS_FUNC_SECTION void
-TIM2_IRQ_Callback( void )
-{
-    BitWidthType coreId;
-    CosmOS_OsStateType osState;
-
-    CosmOS_OsConfigurationType * osCfg;
-    CosmOS_CoreConfigurationType * coreCfg;
-
-    coreId = CILcore_getCoreId();
-
-    osCfg = os_getOsCfg();
-    coreCfg = os_getCore( osCfg, coreId );
-    osState = core_getCoreOsState( coreCfg );
-
-    if ( osState IS_EQUAL_TO OS_STATE_ENUM__STARTED )
-    {
-        interrupt_trigger( INTERRUPT_0_ID );
-    }
-};
-/* @cond S */
-__SEC_STOP(__OS_FUNC_SECTION_STOP)
-/* @endcond*/
 /********************************************************************************
 **                        Function Definitions | Stop                          **
 ********************************************************************************/

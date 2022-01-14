@@ -80,30 +80,20 @@ IS_INITIALIZED_TO{
         STACK_TASK_0_PROGRAM_0_CORE_0_LOW_ADDRESS,    /* const AddressType stackLowAddress */
         STACK_TASK_0_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
     },
-    {                                                     /* TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_0_ID] */
-        STACK_TASK_1_PROGRAM_0_CORE_0_SIZE,    /* const BitWidthType stackSize */
-        STACK_TASK_1_PROGRAM_0_CORE_0_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_TASK_1_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
-    },
-    {                                                     /* TasksStacksCfgConst[STACK_TASK_0_PROGRAM_1_CORE_0_ID] */
-        STACK_TASK_0_PROGRAM_1_CORE_0_SIZE,    /* const BitWidthType stackSize */
-        STACK_TASK_0_PROGRAM_1_CORE_0_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_TASK_0_PROGRAM_1_CORE_0_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
-    },
     {                                                     /* TasksStacksCfgConst[STACK_TASK_0_PROGRAM_0_CORE_1_ID] */
         STACK_TASK_0_PROGRAM_0_CORE_1_SIZE,    /* const BitWidthType stackSize */
         STACK_TASK_0_PROGRAM_0_CORE_1_LOW_ADDRESS,    /* const AddressType stackLowAddress */
         STACK_TASK_0_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
     },
+    {                                                     /* TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_0_ID] */
+        STACK_TASK_1_PROGRAM_0_CORE_0_SIZE,    /* const BitWidthType stackSize */
+        STACK_TASK_1_PROGRAM_0_CORE_0_LOW_ADDRESS,    /* const AddressType stackLowAddress */
+        STACK_TASK_1_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
+    },
     {                                                     /* TasksStacksCfgConst[STACK_TASK_1_PROGRAM_0_CORE_1_ID] */
         STACK_TASK_1_PROGRAM_0_CORE_1_SIZE,    /* const BitWidthType stackSize */
         STACK_TASK_1_PROGRAM_0_CORE_1_LOW_ADDRESS,    /* const AddressType stackLowAddress */
         STACK_TASK_1_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
-    },
-    {                                                     /* TasksStacksCfgConst[STACK_TASK_0_PROGRAM_1_CORE_1_ID] */
-        STACK_TASK_0_PROGRAM_1_CORE_1_SIZE,    /* const BitWidthType stackSize */
-        STACK_TASK_0_PROGRAM_1_CORE_1_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_TASK_0_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
     },
 };
 
@@ -120,55 +110,15 @@ IS_INITIALIZED_TO{
         STACK_THREAD_0_PROGRAM_0_CORE_1_LOW_ADDRESS,    /* const AddressType stackLowAddress */
         STACK_THREAD_0_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
     },
-    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_0_ID] */
-        STACK_THREAD_0_PROGRAM_1_CORE_0_SIZE,    /* const BitWidthType stackSize */
-        STACK_THREAD_0_PROGRAM_1_CORE_0_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_THREAD_0_PROGRAM_1_CORE_0_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
+    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_0_CORE_0_ID] */
+        STACK_THREAD_1_PROGRAM_0_CORE_0_SIZE,    /* const BitWidthType stackSize */
+        STACK_THREAD_1_PROGRAM_0_CORE_0_LOW_ADDRESS,    /* const AddressType stackLowAddress */
+        STACK_THREAD_1_PROGRAM_0_CORE_0_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
     },
-    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_1_CORE_1_ID] */
-        STACK_THREAD_0_PROGRAM_1_CORE_1_SIZE,    /* const BitWidthType stackSize */
-        STACK_THREAD_0_PROGRAM_1_CORE_1_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_THREAD_0_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
-    },
-    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_1_CORE_1_ID] */
-        STACK_THREAD_1_PROGRAM_1_CORE_1_SIZE,    /* const BitWidthType stackSize */
-        STACK_THREAD_1_PROGRAM_1_CORE_1_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_THREAD_1_PROGRAM_1_CORE_1_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
-    },
-    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_2_CORE_1_ID] */
-        STACK_THREAD_0_PROGRAM_2_CORE_1_SIZE,    /* const BitWidthType stackSize */
-        STACK_THREAD_0_PROGRAM_2_CORE_1_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_THREAD_0_PROGRAM_2_CORE_1_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
-    },
-    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_2_CORE_0_ID] */
-        STACK_THREAD_0_PROGRAM_2_CORE_0_SIZE,    /* const BitWidthType stackSize */
-        STACK_THREAD_0_PROGRAM_2_CORE_0_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_THREAD_0_PROGRAM_2_CORE_0_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
-    },
-    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_3_CORE_0_ID] */
-        STACK_THREAD_0_PROGRAM_3_CORE_0_SIZE,    /* const BitWidthType stackSize */
-        STACK_THREAD_0_PROGRAM_3_CORE_0_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_THREAD_0_PROGRAM_3_CORE_0_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
-    },
-    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_3_CORE_1_ID] */
-        STACK_THREAD_0_PROGRAM_3_CORE_1_SIZE,    /* const BitWidthType stackSize */
-        STACK_THREAD_0_PROGRAM_3_CORE_1_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_THREAD_0_PROGRAM_3_CORE_1_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
-    },
-    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_3_CORE_0_ID] */
-        STACK_THREAD_1_PROGRAM_3_CORE_0_SIZE,    /* const BitWidthType stackSize */
-        STACK_THREAD_1_PROGRAM_3_CORE_0_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_THREAD_1_PROGRAM_3_CORE_0_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
-    },
-    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_2_PROGRAM_3_CORE_0_ID] */
-        STACK_THREAD_2_PROGRAM_3_CORE_0_SIZE,    /* const BitWidthType stackSize */
-        STACK_THREAD_2_PROGRAM_3_CORE_0_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_THREAD_2_PROGRAM_3_CORE_0_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
-    },
-    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_0_PROGRAM_4_CORE_0_ID] */
-        STACK_THREAD_0_PROGRAM_4_CORE_0_SIZE,    /* const BitWidthType stackSize */
-        STACK_THREAD_0_PROGRAM_4_CORE_0_LOW_ADDRESS,    /* const AddressType stackLowAddress */
-        STACK_THREAD_0_PROGRAM_4_CORE_0_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
+    {                                                     /* ThreadsStacksCfgConst[STACK_THREAD_1_PROGRAM_0_CORE_1_ID] */
+        STACK_THREAD_1_PROGRAM_0_CORE_1_SIZE,    /* const BitWidthType stackSize */
+        STACK_THREAD_1_PROGRAM_0_CORE_1_LOW_ADDRESS,    /* const AddressType stackLowAddress */
+        STACK_THREAD_1_PROGRAM_0_CORE_1_HIGH_ADDRESS,    /* const AddressType stackHighAddress */
     },
 };
 /* @cond S */

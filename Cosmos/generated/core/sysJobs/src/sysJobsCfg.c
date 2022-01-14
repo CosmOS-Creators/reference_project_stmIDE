@@ -23,8 +23,6 @@
 /* CORE interfaces */
 #include "sysJobsCfg.h"
 /* GENERATED interfaces */
-#include "default_CM7.h"
-#include "default_CM4.h"
 /********************************************************************************
 **                            Include Files | Stop                             **
 ********************************************************************************/
@@ -76,34 +74,14 @@ __SEC_STOP(__OS_VARS_SECTION_STOP)
 /* @cond S */
 __SEC_START(__OS_CONSTS_SECTION_START)
 /* @endcond*/
-const CosmOS_GenericVoidType
-    SysJobsHandlersGroup0Core0Const[SYSJOBS_HANDLERS_GROUP_0_CORE_0_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO{
-    (CosmOS_GenericVoidType)sysJobsGroup_20ms_CM7,
-};
-const CosmOS_GenericVoidType
-    SysJobsHandlersGroup0Core1Const[SYSJOBS_HANDLERS_GROUP_0_CORE_1_NUM] __OS_CONSTS_SECTION
-IS_INITIALIZED_TO{
-    (CosmOS_GenericVoidType)sysJobsGroup_10ms_CM4,
-};
 const CosmOS_SysJobsGroupConfigurationType
     SysJobsGroupsCore0CfgConst[SYSJOBS_GROUPS_CORE_0_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
-    {
-        SysJobsHandlersGroup0Core0Const,    /* const CosmOS_GenericVoidType * const handlers */
-        SYSJOBS_HANDLERS_GROUP_0_CORE_0_NUM,    /* const BitWidthType numOfHandlers */
-        SYSJOBS_GROUP_0_CORE_0_TICK_MULTIPLICATOR,    /* const BitWidthType tickMultiplicator */
-    },
-};
+    };
 const CosmOS_SysJobsGroupConfigurationType
     SysJobsGroupsCore1CfgConst[SYSJOBS_GROUPS_CORE_1_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{
-    {
-        SysJobsHandlersGroup0Core1Const,    /* const CosmOS_GenericVoidType * const handlers */
-        SYSJOBS_HANDLERS_GROUP_0_CORE_1_NUM,    /* const BitWidthType numOfHandlers */
-        SYSJOBS_GROUP_0_CORE_1_TICK_MULTIPLICATOR,    /* const BitWidthType tickMultiplicator */
-    },
-};
+    };
 const CosmOS_SysJobsConfigurationType
     SysJobsCfgConst[CORE_NUM] __OS_CONSTS_SECTION
 IS_INITIALIZED_TO{

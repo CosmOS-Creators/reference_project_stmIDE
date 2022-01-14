@@ -67,14 +67,6 @@ IS_INITIALIZED_TO{
         SEMAPHORE_STATE_ENUM__RELEASED,    /* BitWidthType semaphore */
         NULL,    /* CosmOS_SchedulableConfigurationType * schedulableOwner */
     },
-    {
-        SEMAPHORE_STATE_ENUM__RELEASED,    /* BitWidthType semaphore */
-        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableOwner */
-    },
-    {
-        SEMAPHORE_STATE_ENUM__RELEASED,    /* BitWidthType semaphore */
-        NULL,    /* CosmOS_SchedulableConfigurationType * schedulableOwner */
-    },
 };
 /* @cond S */
 __SEC_STOP(__OS_VARS_SECTION_STOP)

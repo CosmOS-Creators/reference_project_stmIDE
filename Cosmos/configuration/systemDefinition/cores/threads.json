@@ -16,7 +16,7 @@
             },
             {
                 "target": "threadsAttributes/:name",
-                "value": "IdleThread_CM7"
+                "value": "idleThread_CM7"
             },
             {
                 "target": "threadsAttributes/:floatingPoint",
@@ -61,11 +61,11 @@
             },
             {
                 "target": "threadsAttributes/:program",
-                "value": "programs/program_2"
+                "value": "programs/program_1"
             },
             {
                 "target": "threadsAttributes/:name",
-                "value": "IdleThread_CM4"
+                "value": "idleThread_CM4"
             },
             {
                 "target": "threadsAttributes/:floatingPoint",
@@ -110,11 +110,11 @@
             },
             {
                 "target": "threadsAttributes/:program",
-                "value": "programs/program_1"
+                "value": "programs/program_0"
             },
             {
                 "target": "threadsAttributes/:name",
-                "value": "Synchronization_and_dynamicAllocation_test_thread_CM7"
+                "value": "demo_thread_dynamicAllocation_toggleLed_CM7"
             },
             {
                 "target": "threadsAttributes/:floatingPoint",
@@ -159,11 +159,11 @@
             },
             {
                 "target": "threadsAttributes/:program",
-                "value": "programs/program_3"
+                "value": "programs/program_1"
             },
             {
                 "target": "threadsAttributes/:name",
-                "value": "Synchronization_and_dynamicAllocation_test_thread_CM4"
+                "value": "demo_thread_dynamicAllocation_toggleLed_CM4"
             },
             {
                 "target": "threadsAttributes/:floatingPoint",
@@ -183,403 +183,11 @@
             },
             {
                 "target": "threadsAttributes/:peripheralAccessLowAddress",
-                "value": "0x0"
+                "value": "0x58020400"
             },
             {
                 "target": "threadsAttributes/:peripheralAccessSize",
-                "value": 0
-            },
-            {
-                "target": "threadsAttributes/:lowAddress"
-            },
-            {
-                "target": "threadsAttributes/:highAddress"
-            },
-            {
-                "target": "threadsAttributes/:threadId"
-            },
-            {
-                "target": "threadsAttributes/:alarmId"
-            }
-        ],
-        "thread_4": [
-            {
-                "target": "threadsAttributes/:uniqueId"
-            },
-            {
-                "target": "threadsAttributes/:program",
-                "value": "programs/program_3"
-            },
-            {
-                "target": "threadsAttributes/:name",
-                "value": "Synchronization_test_thread_CM4"
-            },
-            {
-                "target": "threadsAttributes/:floatingPoint",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:isIdle",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:stackSize",
                 "value": 1024
-            },
-            {
-                "target": "threadsAttributes/:priority",
-                "value": 3
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessLowAddress",
-                "value": "0x0"
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessSize",
-                "value": 0
-            },
-            {
-                "target": "threadsAttributes/:lowAddress"
-            },
-            {
-                "target": "threadsAttributes/:highAddress"
-            },
-            {
-                "target": "threadsAttributes/:threadId"
-            },
-            {
-                "target": "threadsAttributes/:alarmId"
-            }
-        ],
-        "thread_5": [
-            {
-                "target": "threadsAttributes/:uniqueId"
-            },
-            {
-                "target": "threadsAttributes/:program",
-                "value": "programs/program_4"
-            },
-            {
-                "target": "threadsAttributes/:name",
-                "value": "Logger_thread"
-            },
-            {
-                "target": "threadsAttributes/:floatingPoint",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:isIdle",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:stackSize",
-                "value": 1024
-            },
-            {
-                "target": "threadsAttributes/:priority",
-                "value": 1
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessLowAddress",
-                "value": "0x40000000"
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessSize",
-                "value": 1048576
-            },
-            {
-                "target": "threadsAttributes/:lowAddress"
-            },
-            {
-                "target": "threadsAttributes/:highAddress"
-            },
-            {
-                "target": "threadsAttributes/:threadId"
-            },
-            {
-                "target": "threadsAttributes/:alarmId"
-            }
-        ],
-        "thread_6": [
-            {
-                "target": "threadsAttributes/:uniqueId"
-            },
-            {
-                "target": "threadsAttributes/:program",
-                "value": "programs/program_5"
-            },
-            {
-                "target": "threadsAttributes/:name",
-                "value": "TCPIP_thread"
-            },
-            {
-                "target": "threadsAttributes/:floatingPoint",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:isIdle",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:stackSize",
-                "value": 2048
-            },
-            {
-                "target": "threadsAttributes/:priority",
-                "value": 20
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessLowAddress",
-                "value": "0x40000000"
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessSize",
-                "value": 1048576
-            },
-            {
-                "target": "threadsAttributes/:lowAddress"
-            },
-            {
-                "target": "threadsAttributes/:highAddress"
-            },
-            {
-                "target": "threadsAttributes/:threadId"
-            },
-            {
-                "target": "threadsAttributes/:alarmId"
-            }
-        ],
-        "thread_7": [
-            {
-                "target": "threadsAttributes/:uniqueId"
-            },
-            {
-                "target": "threadsAttributes/:program",
-                "value": "programs/program_6"
-            },
-            {
-                "target": "threadsAttributes/:name",
-                "value": "channel_xCore_server_CM7"
-            },
-            {
-                "target": "threadsAttributes/:floatingPoint",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:isIdle",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:stackSize",
-                "value": 1024
-            },
-            {
-                "target": "threadsAttributes/:priority",
-                "value": 4
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessLowAddress",
-                "value": "0x0"
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessSize",
-                "value": 0
-            },
-            {
-                "target": "threadsAttributes/:lowAddress"
-            },
-            {
-                "target": "threadsAttributes/:highAddress"
-            },
-            {
-                "target": "threadsAttributes/:threadId"
-            },
-            {
-                "target": "threadsAttributes/:alarmId"
-            }
-        ],
-        "thread_8": [
-            {
-                "target": "threadsAttributes/:uniqueId"
-            },
-            {
-                "target": "threadsAttributes/:program",
-                "value": "programs/program_7"
-            },
-            {
-                "target": "threadsAttributes/:name",
-                "value": "channel_xCore_client_CM4"
-            },
-            {
-                "target": "threadsAttributes/:floatingPoint",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:isIdle",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:stackSize",
-                "value": 1024
-            },
-            {
-                "target": "threadsAttributes/:priority",
-                "value": 4
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessLowAddress",
-                "value": "0x0"
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessSize",
-                "value": 0
-            },
-            {
-                "target": "threadsAttributes/:lowAddress"
-            },
-            {
-                "target": "threadsAttributes/:highAddress"
-            },
-            {
-                "target": "threadsAttributes/:threadId"
-            },
-            {
-                "target": "threadsAttributes/:alarmId"
-            }
-        ],
-        "thread_9": [
-            {
-                "target": "threadsAttributes/:uniqueId"
-            },
-            {
-                "target": "threadsAttributes/:program",
-                "value": "programs/program_6"
-            },
-            {
-                "target": "threadsAttributes/:name",
-                "value": "channel_sameCore_server_CM7"
-            },
-            {
-                "target": "threadsAttributes/:floatingPoint",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:isIdle",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:stackSize",
-                "value": 1024
-            },
-            {
-                "target": "threadsAttributes/:priority",
-                "value": 7
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessLowAddress",
-                "value": "0x0"
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessSize",
-                "value": 0
-            },
-            {
-                "target": "threadsAttributes/:lowAddress"
-            },
-            {
-                "target": "threadsAttributes/:highAddress"
-            },
-            {
-                "target": "threadsAttributes/:threadId"
-            },
-            {
-                "target": "threadsAttributes/:alarmId"
-            }
-        ],
-        "thread_10": [
-            {
-                "target": "threadsAttributes/:uniqueId"
-            },
-            {
-                "target": "threadsAttributes/:program",
-                "value": "programs/program_6"
-            },
-            {
-                "target": "threadsAttributes/:name",
-                "value": "channel_sameCore_client_CM7"
-            },
-            {
-                "target": "threadsAttributes/:floatingPoint",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:isIdle",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:stackSize",
-                "value": 1024
-            },
-            {
-                "target": "threadsAttributes/:priority",
-                "value": 6
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessLowAddress",
-                "value": "0x0"
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessSize",
-                "value": 0
-            },
-            {
-                "target": "threadsAttributes/:lowAddress"
-            },
-            {
-                "target": "threadsAttributes/:highAddress"
-            },
-            {
-                "target": "threadsAttributes/:threadId"
-            },
-            {
-                "target": "threadsAttributes/:alarmId"
-            }
-        ],
-        "thread_11": [
-            {
-                "target": "threadsAttributes/:uniqueId"
-            },
-            {
-                "target": "threadsAttributes/:program",
-                "value": "programs/program_8"
-            },
-            {
-                "target": "threadsAttributes/:name",
-                "value": "TIM2_xCore_IRQHandler_Thread_CM7"
-            },
-            {
-                "target": "threadsAttributes/:floatingPoint",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:isIdle",
-                "value": false
-            },
-            {
-                "target": "threadsAttributes/:stackSize",
-                "value": 1024
-            },
-            {
-                "target": "threadsAttributes/:priority",
-                "value": 100
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessLowAddress",
-                "value": "0x0"
-            },
-            {
-                "target": "threadsAttributes/:peripheralAccessSize",
-                "value": 0
             },
             {
                 "target": "threadsAttributes/:lowAddress"

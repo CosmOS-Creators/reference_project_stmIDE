@@ -109,7 +109,7 @@ IS_INITIALIZED_TO{
         FIRST_SYNC_TASK_STARTTICK_SCHEDULER_0,    /* const BitWidthType firstSyncTaskStartTick */
         MAX_TIMER_TICK_SCHEDULER_0,    /* const BitWidthType maxTimerTick */
         TIMER_TICK_COUNT_SCHEDULER_0,    /* const BitWidthType timerTickCount */
-        &TasksProgram0Core0CfgConst[TASK_0_PROGRAM_0_CORE_0_ID],    /* const CosmOS_TaskConfigurationType * const idleTask */
+        &TasksProgram0Core0CfgConst[TASK_1_PROGRAM_0_CORE_0_ID],    /* const CosmOS_TaskConfigurationType * const idleTask */
         AlarmsCore0CfgConst,    /* CosmOS_AlarmConfigurationType * const alarmCfgs */
     },
     {                                                           /* SchedulersCfgConst[SCHEDULER_CORE_1_ID] */
@@ -125,7 +125,7 @@ IS_INITIALIZED_TO{
         FIRST_SYNC_TASK_STARTTICK_SCHEDULER_1,    /* const BitWidthType firstSyncTaskStartTick */
         MAX_TIMER_TICK_SCHEDULER_1,    /* const BitWidthType maxTimerTick */
         TIMER_TICK_COUNT_SCHEDULER_1,    /* const BitWidthType timerTickCount */
-        &TasksProgram0Core1CfgConst[TASK_0_PROGRAM_0_CORE_1_ID],    /* const CosmOS_TaskConfigurationType * const idleTask */
+        &TasksProgram0Core1CfgConst[TASK_1_PROGRAM_0_CORE_1_ID],    /* const CosmOS_TaskConfigurationType * const idleTask */
         AlarmsCore1CfgConst,    /* CosmOS_AlarmConfigurationType * const alarmCfgs */
     },
 };
