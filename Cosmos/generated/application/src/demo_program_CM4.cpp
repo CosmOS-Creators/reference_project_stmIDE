@@ -104,7 +104,7 @@ demo_task_togglePin_CM4( void )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =demo_task_togglePin_CM4
 ********************************************************************************/
-
+    HAL_GPIO_TogglePin( GPIOA, GPIO_PIN_4 );
 /********************************************************************************
 ** stop_name =demo_task_togglePin_CM4
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **

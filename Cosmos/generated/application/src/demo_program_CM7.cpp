@@ -105,7 +105,7 @@ demo_task_togglePin_CM7( void )
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Start      **
 ** start_name =demo_task_togglePin_CM7
 ********************************************************************************/
-
+    HAL_GPIO_TogglePin( GPIOF, GPIO_PIN_11 );
 /********************************************************************************
 ** stop_name =demo_task_togglePin_CM7
 ** DO NOT MODIFY THIS COMMENT !                      USER SECTION | Stop       **
