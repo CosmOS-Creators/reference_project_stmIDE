@@ -4,6 +4,7 @@
     "ui": {
         "use_page": "threads"
     },
+    "use_restriction": "threads_restrictions",
     "attributes": {},
     "elements": {
         "thread_0": [

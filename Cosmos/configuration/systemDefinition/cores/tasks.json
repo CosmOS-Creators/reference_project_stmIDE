@@ -4,6 +4,7 @@
     "ui": {
         "use_page": "tasks"
     },
+    "use_restriction": "tasks_restrictions",
     "attributes": {},
     "elements": {
         "task_0": [
