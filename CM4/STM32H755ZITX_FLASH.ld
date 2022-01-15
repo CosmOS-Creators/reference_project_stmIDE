@@ -28,7 +28,6 @@ _end = 0x30024000;
 
 MEMORY
 {
-    LWIP_SRAM3_PATCH (xrw)      : ORIGIN = 0x30040000, LENGTH = 32K
     FLASH_USER_CODE_CM7 (rx)      : ORIGIN = 0x8080000, LENGTH = 0x0800
     FLASH_LOCAL (rx)      : ORIGIN = 0x8100000, LENGTH = 0x80000
     FLASH_USER_CODE_CM4 (rx)      : ORIGIN = 0x8180000, LENGTH = 0x0800
@@ -51,16 +50,6 @@ SECTIONS
         KEEP(*(.isr_vector)) /* Startup code */
         . = ALIGN(4);
     } >FLASH_LOCAL
-
-    .lwip_section :
-    {
-        . = ABSOLUTE(0x30040000);
-        *(.RxDecripSection)
-        . = ABSOLUTE(0x30040060);
-        *(.TxDecripSection)
-        . = ABSOLUTE(0x30040200);
-        *(.RxArraySection)
-    } > LWIP_SRAM3_PATCH
 
     _flash_program_demo_program_CM7_section_init = LOADADDR(.program_demo_program_CM7_section_init);
 
