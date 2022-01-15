@@ -1,6 +1,6 @@
 {
     "version": "1.1.0",
-    "checksum": "a77cd0658dde416118254e84fae785eb",
+    "checksum": "ddace3a100875016932da98cead435b9",
     "ui": {
         "use_page": "schedulers"
     },
@@ -12,8 +12,7 @@
                 "value": "cores/core_0"
             },
             {
-                "target": "schedulersAttributes/:hyperTick",
-                "value": 100
+                "target": "schedulersAttributes/:hyperTick"
             },
             {
                 "target": "schedulersAttributes/:sync",
@@ -48,8 +47,7 @@
                 "value": "cores/core_1"
             },
             {
-                "target": "schedulersAttributes/:hyperTick",
-                "value": 100
+                "target": "schedulersAttributes/:hyperTick"
             },
             {
                 "target": "schedulersAttributes/:sync",
