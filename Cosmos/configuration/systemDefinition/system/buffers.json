@@ -1,9 +1,10 @@
 {
     "version": "1.1.0",
-    "checksum": "e2dd78b9e83e11bc4d957d41e70c775e",
+    "checksum": "99914b932bd37a50b983c5e7c90ae93b",
     "ui": {
         "use_page": "buffers"
     },
+    "use_restriction": "buffer_restrictions",
     "attributes": {},
     "elements": {}
 }

@@ -1,9 +1,10 @@
 {
     "version": "1.1.0",
-    "checksum": "9d36bdf673457ee9cb6e2d3e5d03da55",
+    "checksum": "99914b932bd37a50b983c5e7c90ae93b",
     "ui": {
         "use_page": "channels"
     },
+    "use_restriction": "channel_restrictions",
     "attributes": {},
     "elements": {}
 }

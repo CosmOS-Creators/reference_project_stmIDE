@@ -4,6 +4,7 @@
     "ui": {
         "use_page": "semaphores"
     },
+    "use_restriction": "semaphore_restrictions",
     "attributes": {},
     "elements": {
         "semaphore_0": [

@@ -1,13 +1,12 @@
 {
     "version": "1.1.0",
-    "checksum": "0be87eefc6f755741591b826c5070c04",
+    "checksum": "ce9f827ac6275ed2ffadfc61806a8134",
     "ui": {
         "use_page": "programs"
     },
     "use_restriction": "program_restrictions",
     "attributes": {},
     "elements": {
-
         "program_0": [
             {
                 "target": "programsAttributes/:core",
@@ -23,7 +22,7 @@
             },
             {
                 "target": "programsAttributes/:heapSize",
-                "value": 256
+                "value": 512
             },
             {
                 "target": "programsAttributes/:memory",
@@ -60,7 +59,7 @@
             },
             {
                 "target": "programsAttributes/:heapSize",
-                "value": 256
+                "value": 512
             },
             {
                 "target": "programsAttributes/:memory",

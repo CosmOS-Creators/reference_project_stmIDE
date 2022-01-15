@@ -4,6 +4,7 @@
     "ui": {
         "use_page": "spinlocks"
     },
+    "use_restriction": "spinlock_restrictions",
     "attributes": {},
     "elements": {
         "spinlock_0": [

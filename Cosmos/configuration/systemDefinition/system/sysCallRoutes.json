@@ -4,6 +4,7 @@
     "ui": {
         "use_page": "sys_call_routes"
     },
+    "use_restriction": "sysCallRoute_restrictions",
     "attributes": {},
     "elements": {
         "route_0": [
