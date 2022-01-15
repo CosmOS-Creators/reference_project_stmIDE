@@ -4,6 +4,7 @@
     "ui": {
         "use_page": "buffers"
     },
+    "use_restriction": "buffer_restrictions",
     "attributes": {},
     "elements": {
         "buffer_0": [

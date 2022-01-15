@@ -4,6 +4,7 @@
     "ui": {
         "use_page": "interrupts"
     },
+    "use_restriction": "interrupt_restrictions",
     "attributes": {},
     "elements": {
         "interrupt_0": [

@@ -4,6 +4,7 @@
     "ui": {
         "use_page": "sys_jobs"
     },
+    "use_restriction": "sysJobs_restrictions",
     "attributes": {},
     "elements": {
         "sysJob_0": [

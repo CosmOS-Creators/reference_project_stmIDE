@@ -4,6 +4,7 @@
     "ui": {
         "use_page": "channels"
     },
+    "use_restriction": "channel_restrictions",
     "attributes": {},
     "elements": {
         "channel_0": [

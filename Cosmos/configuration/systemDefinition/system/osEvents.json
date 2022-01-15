@@ -4,6 +4,7 @@
     "ui": {
         "use_page": "os_events"
     },
+    "use_restriction": "osEvent_restrictions",
     "attributes": {},
     "elements": {
         "event_0": [
