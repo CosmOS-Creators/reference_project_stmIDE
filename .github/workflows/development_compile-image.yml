@@ -16,6 +16,7 @@ jobs:
           SCRIPT_URL: ${{secrets.COSMOS_CHECKOUT_SCRIPT_URL}}
           BRANCH_NAME: ${{ github.event.client_payload.branch }}
         run: |
+          pip3 install GitPython
           mkdir /tools
           cd /tools
           wget $SCRIPT_URL
