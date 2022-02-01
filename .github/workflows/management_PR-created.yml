@@ -1,4 +1,4 @@
-name: Build CM4 and CM7 image
+name: Trigger a build for a specific branch
 
 on:
   pull_request:
@@ -15,4 +15,4 @@ jobs:
           PAT_TOKEN: ${{secrets.COSMOS_BUILDER_PAT}}
           BRANCH_NAME: ${{github.head_ref}}
         run: |
-          curl -X POST -u "cosmos-helper:$PAT_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/CosmOS-Creators/reference_project_stmIDE/dispatches -d '{"event_type":"trigger_build", "client_payload": { "branch": $BRANCH_NAME }}'
+          curl -X POST -u "cosmos-helper:$PAT_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/CosmOS-Creators/reference_project_stmIDE/dispatches -d '{"event_type":"trigger_build", "client_payload": { "branch": '"$BRANCH_NAME"' }}'
