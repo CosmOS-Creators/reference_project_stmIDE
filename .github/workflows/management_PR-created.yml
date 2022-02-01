@@ -1,9 +1,8 @@
-name: Trigger a build for a specific branch
+name: PR created handler
 
 on:
   pull_request:
     branches: [ master ]
-  workflow_dispatch:
 
 jobs:
   trigger_build:
