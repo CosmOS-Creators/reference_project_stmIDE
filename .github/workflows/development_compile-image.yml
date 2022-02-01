@@ -1,0 +1,23 @@
+name: Build CM4 and CM7 image
+
+on:
+  repository_dispatch:
+    types: [trigger_build]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: florianl21/cosmos-build-image:0.0.3
+
+    steps:
+      - name: Checkout master branches for all submodules
+        env:
+          SCRIPT_URL: ${{secrets.COSMOS_CHECKOUT_SCRIPT_URL}}
+          BRANCH_NAME: ${{ github.event.client_payload.branch }}
+        run: |
+          mkdir /tools
+          cd /tools
+          wget $SCRIPT_URL
+          cd $GITHUB_WORKSPACE
+          python3 /tools/try_submodule_checkout.py $GITHUB_WORKSPACE https://github.com/CosmOS-Creators/reference_project_stmIDE.git $BRANCH_NAME
