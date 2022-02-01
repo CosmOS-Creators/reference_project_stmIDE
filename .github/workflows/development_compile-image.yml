@@ -38,8 +38,8 @@ jobs:
         with:
           name: system-images
           path: |
-            $GITHUB_WORKSPACE/Cosmos/generated/build/system/system/CM4.elf
-            $GITHUB_WORKSPACE/Cosmos/generated/build/system/system/CM4.map
-            $GITHUB_WORKSPACE/Cosmos/generated/build/system/system/CM7.elf
-            $GITHUB_WORKSPACE/Cosmos/generated/build/system/system/CM7.map
+            Cosmos/generated/build/system/system/CM4.elf
+            Cosmos/generated/build/system/system/CM4.map
+            Cosmos/generated/build/system/system/CM7.elf
+            Cosmos/generated/build/system/system/CM7.map
           retention-days: 10
