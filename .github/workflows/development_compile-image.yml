@@ -25,7 +25,6 @@ jobs:
           cd /tools
           wget $SCRIPT_URL
           python3 /tools/try_submodule_checkout.py $GITHUB_WORKSPACE https://github.com/CosmOS-Creators/reference_project_stmIDE.git $BRANCH_NAME
-            - name: Installing required pip packages
       - name: Installing required pip packages
         run: pip3 install -r $GITHUB_WORKSPACE/Cosmos/customBox/python/requirements.txt
       - name: Building system image with files on master
