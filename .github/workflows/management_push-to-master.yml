@@ -1,0 +1,25 @@
+name: Push to master handler
+
+on:
+  push:
+    branches: [ master ]
+
+env:
+  PAT_TOKEN: ${{secrets.COSMOS_BUILDER_PAT}}
+  BRANCH_NAME: master
+
+
+jobs:
+  trigger_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger the system build
+        run: |
+          curl -X POST -u "cosmos-helper:$PAT_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/CosmOS-Creators/reference_project_stmIDE/dispatches -d '{"event_type":"trigger_build", "client_payload": { "branch": "'"$BRANCH_NAME"'" }}'
+
+  trigger_unit_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger the unit tests
+        run: |
+          curl -X POST -u "cosmos-helper:$PAT_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/CosmOS-Creators/reference_project_stmIDE/dispatches -d '{"event_type":"trigger_tests", "client_payload": { "branch": "'"$BRANCH_NAME"'" }}'
