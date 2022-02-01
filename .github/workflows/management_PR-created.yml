@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger documentation build
+      - name: Trigger the system build
         env:
           PAT_TOKEN: ${{secrets.COSMOS_BUILDER_PAT}}
           BRANCH_NAME: ${{github.head_ref}}
