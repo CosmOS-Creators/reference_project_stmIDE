@@ -47,7 +47,7 @@ jobs:
           retention-days: 10
       - uses: codecov/codecov-action@v2
         with:
-          files: $GITHUB_WORKSPACE/Cosmos/generated/python/tests/coverage/coverage.xml
+          files: Cosmos/generated/python/tests/coverage/coverage.xml
           flags: python
           # name: python unit test coverage
           fail_ci_if_error: true
