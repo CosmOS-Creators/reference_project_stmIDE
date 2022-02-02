@@ -8,10 +8,32 @@ jobs:
   trigger_build:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Trigger the system build
-        env:
-          PAT_TOKEN: ${{secrets.COSMOS_BUILDER_PAT}}
+    - uses: felixp8/dispatch-and-wait@v0.1.0
+      env:
           BRANCH_NAME: ${{github.head_ref}}
-        run: |
-          curl -X POST -u "cosmos-helper:$PAT_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/CosmOS-Creators/reference_project_stmIDE/dispatches -d '{"event_type":"trigger_build", "client_payload": { "branch": "'"$BRANCH_NAME"'" }}'
+      with:
+        owner: CosmOS-Creators
+        repo: reference_project_stmIDE
+        token: ${{secrets.COSMOS_BUILDER_PAT}}
+        event_type: trigger_build
+        client_payload: '{ "branch": "'"$BRANCH_NAME"'" }'
+  trigger_tests:
+    runs-on: ubuntu-latest
+
+    - uses: felixp8/dispatch-and-wait@v0.1.0
+      env:
+          BRANCH_NAME: ${{github.head_ref}}
+      with:
+        owner: CosmOS-Creators
+        repo: reference_project_stmIDE
+        token: ${{secrets.COSMOS_BUILDER_PAT}}
+        event_type: trigger_tests
+        client_payload: '{ "branch": "'"$BRANCH_NAME"'" }'
+
+    # steps:
+    #   - name: Trigger the system build
+    #     env:
+    #       PAT_TOKEN: ${{secrets.COSMOS_BUILDER_PAT}}
+    #       BRANCH_NAME: ${{github.head_ref}}
+    #     run: |
+    #       curl -X POST -u "cosmos-helper:$PAT_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/CosmOS-Creators/reference_project_stmIDE/dispatches -d '{"event_type":"trigger_build", "client_payload": { "branch": "'"$BRANCH_NAME"'" }}'

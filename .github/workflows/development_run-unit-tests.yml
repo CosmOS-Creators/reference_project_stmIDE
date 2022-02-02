@@ -37,7 +37,7 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: system-images
+          name: test-results
           path: |
             Cosmos/generated/build/tests/tests/results
             Cosmos/generated/python/tests
@@ -45,3 +45,9 @@ jobs:
             Cosmos/generated/build/tests/tests/results
             Cosmos/generated/build/tests/tests/coverage
           retention-days: 10
+      - uses: codecov/codecov-action@v2
+        with:
+          files: $GITHUB_WORKSPACE/Cosmos/generated/python/tests/coverage/coverage.xml
+          flags: python
+          # name: python unit test coverage
+          fail_ci_if_error: true
