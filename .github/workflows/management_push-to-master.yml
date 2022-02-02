@@ -21,6 +21,7 @@ jobs:
           token: ${{secrets.COSMOS_BUILDER_PAT}}
           event_type: trigger_build
           client_payload: '{ "branch": "master" }'
+          max_time: 1200
   trigger_tests:
     runs-on: ubuntu-latest
 
@@ -32,3 +33,4 @@ jobs:
           token: ${{secrets.COSMOS_BUILDER_PAT}}
           event_type: trigger_tests
           client_payload: '{ "branch": "master" }'
+          max_time: 1200
