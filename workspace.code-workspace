@@ -5,7 +5,7 @@
         }
     ],
     "settings": {
-        "python.testing.pytestArgs": [],
+        "python.testing.pytestArgs": ["Cosmos"],
         "python.testing.unittestEnabled": false,
         "python.testing.nosetestsEnabled": false,
         "python.testing.pytestEnabled": true,
