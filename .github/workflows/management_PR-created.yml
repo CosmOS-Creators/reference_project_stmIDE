@@ -8,27 +8,29 @@ jobs:
   trigger_build:
     runs-on: ubuntu-latest
 
-    - uses: felixp8/dispatch-and-wait@v0.1.0
-      env:
-          BRANCH_NAME: ${{github.head_ref}}
-      with:
-        owner: CosmOS-Creators
-        repo: reference_project_stmIDE
-        token: ${{secrets.COSMOS_BUILDER_PAT}}
-        event_type: trigger_build
-        client_payload: '{ "branch": "'"$BRANCH_NAME"'" }'
+    steps:
+      - uses: felixp8/dispatch-and-wait@v0.1.0
+        env:
+            BRANCH_NAME: ${{github.head_ref}}
+        with:
+          owner: CosmOS-Creators
+          repo: reference_project_stmIDE
+          token: ${{secrets.COSMOS_BUILDER_PAT}}
+          event_type: trigger_build
+          client_payload: '{ "branch": "'"$BRANCH_NAME"'" }'
   trigger_tests:
     runs-on: ubuntu-latest
 
-    - uses: felixp8/dispatch-and-wait@v0.1.0
-      env:
-          BRANCH_NAME: ${{github.head_ref}}
-      with:
-        owner: CosmOS-Creators
-        repo: reference_project_stmIDE
-        token: ${{secrets.COSMOS_BUILDER_PAT}}
-        event_type: trigger_tests
-        client_payload: '{ "branch": "'"$BRANCH_NAME"'" }'
+    steps:
+      - uses: felixp8/dispatch-and-wait@v0.1.0
+        env:
+            BRANCH_NAME: ${{github.head_ref}}
+        with:
+          owner: CosmOS-Creators
+          repo: reference_project_stmIDE
+          token: ${{secrets.COSMOS_BUILDER_PAT}}
+          event_type: trigger_tests
+          client_payload: '{ "branch": "'"$BRANCH_NAME"'" }'
 
     # steps:
     #   - name: Trigger the system build
