@@ -122,7 +122,7 @@
             "command": "python",
             "args": [
                 "${workspaceFolder}/Cosmos/customBox/generator/generator.py",
-                "-w=Cosmos/generated/customBox/configuration/workspace.json"
+                "-w=Cosmos/generated/customBox/configuration/environment.json"
             ],
             "problemMatcher": []
         },
@@ -135,7 +135,7 @@
             "command": "python",
             "args": [
                 "${workspaceFolder}/Cosmos/customBox/injectors/eclipseInjector.py",
-                "-w=Cosmos/generated/customBox/configuration/workspace.json"
+                "-w=Cosmos/generated/customBox/configuration/environment.json"
             ],
             "problemMatcher": []
         },
@@ -148,7 +148,7 @@
             "command": "python",
             "args": [
                 "${workspaceFolder}/Cosmos/customBox/python/CustomBox.py",
-                "${workspaceFolder}/Cosmos/configuration/workspace.json"
+                "${workspaceFolder}/Cosmos/configuration/environment.json"
             ],
             "problemMatcher": []
         }

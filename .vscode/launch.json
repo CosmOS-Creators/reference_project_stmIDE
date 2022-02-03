@@ -17,18 +17,7 @@
 			"request": "launch",
 			"program": "${workspaceFolder}/Cosmos/customBox/python/Parser/ConfigParser.py",
 			"args": [
-				"${workspaceFolder}/Cosmos/configuration/workspace.json"
-			],
-			"console": "integratedTerminal"
-		},
-		{
-			"name": "Debug Default config generator",
-			"type": "python",
-			"request": "launch",
-			"program": "${workspaceFolder}/Cosmos/customBox/python/DefaultConfig.py",
-			"args": [
-				"-g",
-				"${workspaceFolder}/Cosmos/configuration/workspace.json"
+				"${workspaceFolder}/Cosmos/configuration/environment.json"
 			],
 			"console": "integratedTerminal"
 		},
@@ -38,7 +27,7 @@
 			"request": "launch",
 			"program": "${workspaceFolder}/Cosmos/customBox/python/ConfigurationGenerator.py",
 			"args": [
-				"${workspaceFolder}/Cosmos/configuration/workspace.json"
+				"${workspaceFolder}/Cosmos/configuration/environment.json"
 			],
 			"console": "integratedTerminal"
 		},
@@ -48,7 +37,7 @@
 			"request": "launch",
 			"program": "${workspaceFolder}/Cosmos/customBox/python/CustomBox.py",
 			"args": [
-				"${workspaceFolder}/Cosmos/configuration/workspace.json"
+				"${workspaceFolder}/Cosmos/configuration/environment.json"
 			],
 			"console": "integratedTerminal"
 		},

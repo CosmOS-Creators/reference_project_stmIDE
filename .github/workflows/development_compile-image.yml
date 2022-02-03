@@ -43,7 +43,7 @@ jobs:
       - name: Building system image with files from the repository
         run: chmod +x $GITHUB_WORKSPACE/Cosmos/build/build.sh && cd $GITHUB_WORKSPACE/Cosmos/build && ./build.sh --build SYSTEM
       - name: Generate code from configuration
-        run: python3 $GITHUB_WORKSPACE/Cosmos/customBox/python/ConfigurationGenerator.py $GITHUB_WORKSPACE/Cosmos/configuration/workspace.json
+        run: python3 $GITHUB_WORKSPACE/Cosmos/customBox/python/ConfigurationGenerator.py $GITHUB_WORKSPACE/Cosmos/configuration/environment.json
       - name: Building system image with generated files
         run: chmod +x $GITHUB_WORKSPACE/Cosmos/build/build.sh && cd $GITHUB_WORKSPACE/Cosmos/build && ./build.sh --build SYSTEM
       - name: Upload Artifacts
