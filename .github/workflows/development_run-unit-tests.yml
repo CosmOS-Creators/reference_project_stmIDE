@@ -3,6 +3,11 @@ name: Run unit tests
 on:
   repository_dispatch:
     types: [trigger_tests]
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: Which branch to build for
+        required: true
 
 jobs:
   run_c_tests:
@@ -13,16 +18,24 @@ jobs:
       PYTHONPATH: "$GITHUB_WORKSPACE/Cosmos/customBox/python"
 
     steps:
-      - name: Checkout master branches for all submodules
+      - name: Download branch checkout script
         env:
           SCRIPT_URL: ${{secrets.COSMOS_CHECKOUT_SCRIPT_URL}}
-          BRANCH_NAME: ${{ github.event.client_payload.branch }}
         run: |
           pip3 install GitPython
           mkdir /tools
           cd /tools
           wget $SCRIPT_URL
-          python3 /tools/try_submodule_checkout.py $GITHUB_WORKSPACE https://github.com/CosmOS-Creators/reference_project_stmIDE.git $BRANCH_NAME
+      - name: Use branch from workflow_dispatch
+        if: ${{ github.event.client_payload.branch == '' }}
+        run: python3 /tools/try_submodule_checkout.py $GITHUB_WORKSPACE https://github.com/CosmOS-Creators/reference_project_stmIDE.git $BRANCH_NAME
+        env:
+          BRANCH_NAME: ${{ github.event.inputs.branch }}
+      - name: Use branch from repository_dispatch
+        if: ${{ github.event.inputs.branch == '' }}
+        run: python3 /tools/try_submodule_checkout.py $GITHUB_WORKSPACE https://github.com/CosmOS-Creators/reference_project_stmIDE.git $BRANCH_NAME
+        env:
+          BRANCH_NAME: ${{ github.event.client_payload.branch }}
       - name: Run C code unit tests
         run: |
           chmod +x $GITHUB_WORKSPACE/Cosmos/build/build.sh
