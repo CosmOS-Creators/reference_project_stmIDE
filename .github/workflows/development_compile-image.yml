@@ -24,12 +24,12 @@ jobs:
         if: ${{ github.event.client_payload.branch == '' }}
         run: export BRANCH_NAME=$branch
         env:
-          branch: ${{ github.event.inputs.branch }}
+          BRANCH_NAME: ${{ github.event.inputs.branch }}
       - name: Figure out which input to use
         if: ${{ github.event.inputs.branch == '' }}
         run: export BRANCH_NAME=$branch
         env:
-          branch: ${{ github.event.client_payload.branch }}
+          BRANCH_NAME: ${{ github.event.client_payload.branch }}
       - name: Checkout requested branches for all submodules
         env:
           SCRIPT_URL: ${{secrets.COSMOS_CHECKOUT_SCRIPT_URL}}
