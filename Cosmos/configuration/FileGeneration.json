@@ -29,7 +29,7 @@
 		"templates": [
 			"linker/gnu/arm/linker"
 		],
-		"outputDir": "{workspace}/{target}",
+		"outputDir": "{environment}/{target}",
 		"loop": "cores/:CoreName",
 		"fileName": "STM32H755ZITX_FLASH",
 		"target": "core"

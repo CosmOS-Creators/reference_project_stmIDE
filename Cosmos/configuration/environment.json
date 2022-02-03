@@ -1,0 +1,19 @@
+{
+	"HWConfig": "{environment}/Cosmos/stm32h755_integration/configuration",
+	"CoreConfig": "{environment}/Cosmos/configuration/systemDefinition",
+	"DefaultConfig": "{environment}/Cosmos/customBox/defaultConfig",
+	"DefaultAttributes": "{environment}/Cosmos/customBox/defaultConfig/attributes",
+	"Generated": "{environment}/Cosmos/generated",
+	"CoreDir": "{environment}/Cosmos/core",
+	"CoreGeneratedDir": "{Generated}/core",
+	"ApplicationGeneratedDir": "{Generated}/application",
+	"GeneratorConfig": "{environment}/Cosmos/configuration/FileGeneration.json",
+	"TemplateDir": [
+		"{environment}/Cosmos/customBox/python/Generator/templates"
+	],
+    "config": [
+		"{DefaultAttributes}",
+		"{CoreConfig}",
+		"{HWConfig}"
+	]
+}
