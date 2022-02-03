@@ -3,6 +3,11 @@ name: Build CM4 and CM7 image
 on:
   repository_dispatch:
     types: [trigger_build]
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: Which branch to build for
+        required: true
 
 
 
@@ -15,10 +20,19 @@ jobs:
       PYTHONPATH: "$GITHUB_WORKSPACE/Cosmos/customBox/python"
 
     steps:
+      - name: Figure out which input to use
+        if: ${{ github.event.client_payload.branch == '' }}
+        run: export BRANCH_NAME=$branch
+        env:
+          branch: ${{ github.event.inputs.branch }}
+      - name: Figure out which input to use
+        if: ${{ github.event.inputs.branch == '' }}
+        run: export BRANCH_NAME=$branch
+        env:
+          branch: ${{ github.event.client_payload.branch }}
       - name: Checkout requested branches for all submodules
         env:
           SCRIPT_URL: ${{secrets.COSMOS_CHECKOUT_SCRIPT_URL}}
-          BRANCH_NAME: ${{ github.event.client_payload.branch }}
         run: |
           pip3 install GitPython
           mkdir /tools
