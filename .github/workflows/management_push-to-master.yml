@@ -31,7 +31,6 @@ jobs:
           owner: CosmOS-Creators
           repo: reference_project_stmIDE
           github_token: ${{secrets.COSMOS_BUILDER_PAT}}
-          github_user: cosmos-helper
           workflow_file_name: development_run-unit-tests.yml
           inputs: >
             { "branch": "master" }

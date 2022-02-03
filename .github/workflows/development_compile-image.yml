@@ -20,17 +20,7 @@ jobs:
       PYTHONPATH: "$GITHUB_WORKSPACE/Cosmos/customBox/python"
 
     steps:
-      - name: Figure out which input to use
-        if: ${{ github.event.client_payload.branch == '' }}
-        run: export BRANCH_NAME=$branch
-        env:
-          BRANCH_NAME: ${{ github.event.inputs.branch }}
-      - name: Figure out which input to use
-        if: ${{ github.event.inputs.branch == '' }}
-        run: export BRANCH_NAME=$branch
-        env:
-          BRANCH_NAME: ${{ github.event.client_payload.branch }}
-      - name: Checkout requested branches for all submodules
+      - name: Download branch checkout script
         env:
           SCRIPT_URL: ${{secrets.COSMOS_CHECKOUT_SCRIPT_URL}}
         run: |
@@ -38,7 +28,16 @@ jobs:
           mkdir /tools
           cd /tools
           wget $SCRIPT_URL
-          python3 /tools/try_submodule_checkout.py $GITHUB_WORKSPACE https://github.com/CosmOS-Creators/reference_project_stmIDE.git $BRANCH_NAME
+      - name: Use branch from workflow_dispatch
+        if: ${{ github.event.client_payload.branch == '' }}
+        run: python3 /tools/try_submodule_checkout.py $GITHUB_WORKSPACE https://github.com/CosmOS-Creators/reference_project_stmIDE.git $BRANCH_NAME
+        env:
+          BRANCH_NAME: ${{ github.event.inputs.branch }}
+      - name: Use branch from repository_dispatch
+        if: ${{ github.event.inputs.branch == '' }}
+        run: python3 /tools/try_submodule_checkout.py $GITHUB_WORKSPACE https://github.com/CosmOS-Creators/reference_project_stmIDE.git $BRANCH_NAME
+        env:
+          BRANCH_NAME: ${{ github.event.client_payload.branch }}
       - name: Installing required pip packages
         run: pip3 install -r $GITHUB_WORKSPACE/Cosmos/customBox/python/requirements.txt
       - name: Building system image with files from the repository
