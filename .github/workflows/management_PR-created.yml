@@ -10,23 +10,26 @@ env:
 jobs:
   trigger_build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: felixp8/dispatch-and-wait@v0.1.0
+      - uses: convictional/trigger-workflow-and-wait@v1.5.0
         with:
           owner: CosmOS-Creators
           repo: reference_project_stmIDE
-          token: ${{secrets.COSMOS_BUILDER_PAT}}
-          event_type: trigger_build
-          client_payload: '{ "branch": "'"$BRANCH_NAME"'" }'
+          github_token: ${{secrets.COSMOS_BUILDER_PAT}}
+          ref: master
+          workflow_file_name: development_compile-image.yml
+          inputs: >
+            { "branch": "'"$BRANCH_NAME"'" }
+
   trigger_tests:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: felixp8/dispatch-and-wait@v0.1.0
+      - uses: convictional/trigger-workflow-and-wait@v1.5.0
         with:
           owner: CosmOS-Creators
           repo: reference_project_stmIDE
-          token: ${{secrets.COSMOS_BUILDER_PAT}}
-          event_type: trigger_tests
-          client_payload: '{ "branch": "'"$BRANCH_NAME"'" }'
+          github_token: ${{secrets.COSMOS_BUILDER_PAT}}
+          ref: master
+          workflow_file_name: development_run-unit-tests.yml
+          inputs: >
+            { "branch": "'"$BRANCH_NAME"'" }
