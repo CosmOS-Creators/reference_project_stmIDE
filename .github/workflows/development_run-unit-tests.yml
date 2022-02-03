@@ -36,12 +36,12 @@ jobs:
             Cosmos/generated/build/tests/tests/results
             Cosmos/generated/build/tests/tests/coverage
           retention-days: 10
-      - uses: codecov/codecov-action@v2
-        with:
-          files: Cosmos/generated/python/tests/coverage/coverage.xml
-          flags: c
-          # name: c unit test coverage
-          fail_ci_if_error: true
+      # - uses: codecov/codecov-action@v2
+      #   with:
+      #     files: Cosmos/generated/python/tests/coverage/coverage.xml
+      #     flags: c
+      #     # name: c unit test coverage
+      #     fail_ci_if_error: true
   run_python_tests:
     runs-on: ubuntu-latest
     container:
