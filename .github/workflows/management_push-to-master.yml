@@ -20,7 +20,6 @@ jobs:
           github_token: ${{secrets.COSMOS_BUILDER_PAT}}
           ref: master
           workflow_file_name: development_compile-image.yml
-          wait_interval: 30
           inputs: >
             { "branch": "master" }
 
@@ -34,6 +33,5 @@ jobs:
           github_token: ${{secrets.COSMOS_BUILDER_PAT}}
           ref: master
           workflow_file_name: development_run-unit-tests.yml
-          wait_interval: 30
           inputs: >
             { "branch": "master" }
